@@ -45,8 +45,10 @@ export const RoomsSection = () => {
             Chambres & Suites
           </h2>
           <p className="text-muted-foreground">
-            70 chambres confortables et modernes, dont 3 accessibles PMR, 
-            pour un séjour parfait au cœur de Paris.
+            Installez-vous confortablement dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées. Chaque chambre offre un confort optimal grâce à des équipements complets : climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux et plateau de courtoisie.
+          </p>
+          <p className="text-muted-foreground mt-4">
+            Pour répondre à tous les besoins, l'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille.
           </p>
         </div>
 
