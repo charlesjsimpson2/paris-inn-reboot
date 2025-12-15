@@ -37,7 +37,7 @@ export const RoomsSection = () => {
     <section id="chambres" className="py-24 bg-charcoal">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
             Nos Hébergements
           </p>
