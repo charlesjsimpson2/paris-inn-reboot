@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Users, Wifi, Coffee, Car } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
+import chambreTwin from "@/assets/chambre-twin.jpg";
 
 const rooms = [
   {
@@ -11,10 +12,10 @@ const rooms = [
     features: ["Wi-Fi gratuit", "Climatisation", "TV écran plat"],
   },
   {
-    name: "Chambre Double",
-    description: "Parfaite pour les couples, avec lit double confortable.",
+    name: "Chambre Double / Chambre Twin",
+    description: "2 lits de 100×200 cm",
     capacity: "2 personnes",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&h=400&fit=crop",
+    image: chambreTwin,
     features: ["Wi-Fi gratuit", "Climatisation", "Minibar"],
   },
   {
