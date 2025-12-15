@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Wifi, Coffee, Car } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
+import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
 
 const rooms = [
   {
@@ -19,11 +20,11 @@ const rooms = [
     features: ["Wi-Fi gratuit", "Climatisation", "Minibar"],
   },
   {
-    name: "Chambre Twin",
-    description: "Deux lits simples pour voyager entre amis ou collègues.",
+    name: "Chambre supérieure avec balcon",
+    description: "Profitez d'un espace extérieur privé avec vue.",
     capacity: "2 personnes",
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&h=400&fit=crop",
-    features: ["Wi-Fi gratuit", "Bureau", "Coffre-fort"],
+    image: chambreSuperieureBalcon,
+    features: [],
   },
   {
     name: "Chambre PMR",
