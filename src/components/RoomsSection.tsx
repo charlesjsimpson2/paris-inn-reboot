@@ -12,7 +12,7 @@ const rooms = [
     features: ["Wi-Fi gratuit", "Climatisation", "TV écran plat"],
   },
   {
-    name: "Chambre Double / Chambre Twin",
+    name: "Chambre Twin",
     description: "2 lits de 100×200 cm",
     capacity: "2 personnes",
     image: chambreTwin,
