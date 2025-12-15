@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import hotelReception from "@/assets/hotel-reception.jpg";
@@ -19,10 +19,16 @@ const heroImages = [
 export const HeroSection = () => {
   const [current, setCurrent] = useState(0);
 
+  const goToPrev = () => {
+    setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
+
+  const goToNext = () => {
+    setCurrent((prev) => (prev + 1) % heroImages.length);
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    const interval = setInterval(goToNext, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -43,7 +49,21 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-tr from-background/90 via-background/30 to-transparent" />
       </div>
 
-      {/* Content - positioned bottom left */}
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
+        aria-label="Image précédente"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
+        aria-label="Image suivante"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
       <div className="absolute bottom-20 left-0 z-10 px-6 md:px-12 lg:px-20 max-w-2xl">
         <p className="text-primary font-body uppercase tracking-[0.3em] text-xs mb-4 animate-fade-in [animation-delay:200ms]">
           Bienvenue à Paris
