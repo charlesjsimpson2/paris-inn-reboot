@@ -1,16 +1,87 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-hotel.jpg";
+import { useEffect, useState } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
+import hotelReception from "@/assets/hotel-reception.jpg";
+import hotelChambre from "@/assets/hotel-chambre.jpg";
+import hotelSalleDeBain from "@/assets/hotel-salle-de-bain.jpg";
+import hotelSalon from "@/assets/hotel-salon.jpg";
+import hotelSeminaire from "@/assets/hotel-seminaire.jpg";
+
+const heroImages = [
+  { src: hotelReception, alt: "Réception de l'hôtel" },
+  { src: hotelChambre, alt: "Chambre confortable" },
+  { src: hotelSalleDeBain, alt: "Salle de bain moderne" },
+  { src: hotelSalon, alt: "Espace détente" },
+  { src: hotelSeminaire, alt: "Salle de séminaire" },
+];
 
 export const HeroSection = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
+      {/* Background Carousel */}
+      <div className="absolute inset-0">
+        <Carousel
+          setApi={setApi}
+          opts={{
+            loop: true,
+            align: "start",
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: false,
+            }),
+          ]}
+          className="h-full w-full"
+        >
+          <CarouselContent className="h-full -ml-0">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full pl-0">
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+                  style={{ backgroundImage: `url(${image.src})` }}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+      </div>
+
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              current === index
+                ? "bg-primary w-8"
+                : "bg-foreground/40 hover:bg-foreground/60"
+            }`}
+            aria-label={`Aller à l'image ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Content */}
@@ -39,7 +110,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
         <a href="#about" className="flex flex-col items-center gap-2 text-foreground/60 hover:text-primary transition-colors">
           <span className="text-xs uppercase tracking-widest">Découvrir</span>
           <ChevronDown className="w-5 h-5" />
