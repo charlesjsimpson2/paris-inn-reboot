@@ -61,35 +61,35 @@ export const AboutSection = () => {
 
           {/* Destinations grid */}
           <div>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 gap-2 mb-4">
               {destinations.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors"
+                  className="flex items-center gap-2 p-2 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-4 h-4 text-primary" />
                   </div>
                   <div>
-                    <p className="font-display text-xl text-primary">{item.time}</p>
-                    <p className="text-muted-foreground text-sm">{item.label}</p>
+                    <p className="font-display text-sm text-primary">{item.time}</p>
+                    <p className="text-muted-foreground text-xs">{item.label}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Metro line */}
-            <div className="flex items-center justify-center gap-4 p-6 rounded-xl bg-card border border-border">
-              <div className="flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-sm">5</span>
-                <span className="w-8 h-8 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-sm">6</span>
-                <span className="w-8 h-8 rounded-full bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-sm">7</span>
+            <div className="flex items-center justify-center gap-3 p-3 rounded-lg bg-card border border-border">
+              <div className="flex items-center gap-1">
+                <span className="w-6 h-6 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-xs">5</span>
+                <span className="w-6 h-6 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-xs">6</span>
+                <span className="w-6 h-6 rounded-full bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-xs">7</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Train className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-2">
+                <Train className="w-4 h-4 text-primary" />
                 <div>
-                  <p className="font-display text-xl text-primary">2 min</p>
-                  <p className="text-muted-foreground text-sm">Accès métro (sortie 3)</p>
+                  <p className="font-display text-sm text-primary">2 min</p>
+                  <p className="text-muted-foreground text-xs">Accès métro (sortie 3)</p>
                 </div>
               </div>
             </div>
