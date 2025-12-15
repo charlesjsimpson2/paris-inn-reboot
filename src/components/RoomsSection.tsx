@@ -27,11 +27,11 @@ const rooms = [
     features: [],
   },
   {
-    name: "Chambre PMR",
-    description: "Accessible aux personnes à mobilité réduite.",
-    capacity: "2 personnes",
+    name: "Chambres Communicantes",
+    description: "2 chambres modulables portes communicantes",
+    capacity: "4 personnes",
     image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
-    features: ["Accessibilité totale", "Salle de bain adaptée", "Wi-Fi gratuit"],
+    features: [],
   },
 ];
 
