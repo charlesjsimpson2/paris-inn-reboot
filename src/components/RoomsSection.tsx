@@ -60,7 +60,7 @@ export const RoomsSection = () => {
           {rooms.map((room, index) => (
             <div
               key={index}
-              className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300"
+              className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
@@ -72,7 +72,7 @@ export const RoomsSection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                   <Users className="w-4 h-4" />
                   {room.capacity}
@@ -80,10 +80,10 @@ export const RoomsSection = () => {
                 <h3 className="font-display text-xl text-foreground mb-2">
                   {room.name}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4 flex-1">
                   {room.description}
                 </p>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button variant="outline" size="sm" className="w-full mt-auto">
                   Voir les détails
                 </Button>
               </div>
