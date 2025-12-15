@@ -73,10 +73,6 @@ export const RoomsSection = () => {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                  <Users className="w-4 h-4" />
-                  {room.capacity}
-                </div>
                 <h3 className="font-display text-xl text-foreground mb-2">
                   {room.name}
                 </h3>
