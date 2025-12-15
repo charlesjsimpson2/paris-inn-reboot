@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Users, Wifi, Coffee, Car } from "lucide-react";
+import { Wifi, Coffee, Car, Users, Tv, Briefcase, Snowflake, Bath, CupSoda } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
@@ -85,6 +85,39 @@ export const RoomsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Equipment Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
+              Le confort avant tout
+            </p>
+            <h3 className="font-display text-3xl md:text-4xl text-foreground">
+              Nos Équipements
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { icon: Bath, label: "Salle d'eau privative" },
+              { icon: Tv, label: "TV écran plat" },
+              { icon: Briefcase, label: "Espace bureau" },
+              { icon: Wifi, label: "Wi-Fi gratuit" },
+              { icon: CupSoda, label: "Plateau de courtoisie" },
+              { icon: Snowflake, label: "Climatisation" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="group flex flex-col items-center text-center p-6 rounded-xl bg-background/50 border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
+              >
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <p className="text-sm font-medium text-foreground">{item.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Features Bar */}
