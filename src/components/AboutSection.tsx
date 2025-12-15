@@ -1,6 +1,5 @@
 import { Plane, Building2, Landmark, MapPin, Train } from "lucide-react";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
-import hotelBalcon from "@/assets/hotel-balcon-paris.jpg";
 
 const destinations = [
   {
@@ -51,22 +50,13 @@ export const AboutSection = () => {
 
         {/* Main content grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative group rounded-xl overflow-hidden">
-              <img
-                src={proximiteMetro}
-                alt="Hôtel Inn Design près du métro Place d'Italie"
-                className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative group rounded-xl overflow-hidden mt-8">
-              <img
-                src={hotelBalcon}
-                alt="Petit-déjeuner avec vue sur Paris"
-                className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
+          {/* Single image */}
+          <div className="relative group rounded-xl overflow-hidden">
+            <img
+              src={proximiteMetro}
+              alt="Hôtel Inn Design près du métro Place d'Italie"
+              className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500"
+            />
           </div>
 
           {/* Destinations grid */}
