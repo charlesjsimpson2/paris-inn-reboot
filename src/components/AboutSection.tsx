@@ -1,4 +1,8 @@
 import { Plane, Clock, MapPin, Building2 } from "lucide-react";
+import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
+import hotelBalcon from "@/assets/hotel-balcon-paris.jpg";
+import hotelChambre from "@/assets/hotel-chambre.jpg";
+import hotelSalon from "@/assets/hotel-salon.jpg";
 
 const highlights = [
   {
@@ -77,14 +81,14 @@ export const AboutSection = () => {
             <div className="space-y-4">
               <div className="aspect-[3/4] rounded-lg bg-charcoal-light overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=800&fit=crop"
-                  alt="Façade de l'hôtel"
+                  src={proximiteMetro}
+                  alt="Hôtel Inn Design près du métro Place d'Italie"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="aspect-square rounded-lg bg-charcoal-light overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=400&fit=crop"
+                  src={hotelChambre}
                   alt="Chambre d'hôtel"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -93,15 +97,15 @@ export const AboutSection = () => {
             <div className="space-y-4 pt-8">
               <div className="aspect-square rounded-lg bg-charcoal-light overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=400&fit=crop"
-                  alt="Vue de Paris"
+                  src={hotelBalcon}
+                  alt="Petit-déjeuner avec vue sur Paris"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="aspect-[3/4] rounded-lg bg-charcoal-light overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h=800&fit=crop"
-                  alt="Salle de bain"
+                  src={hotelSalon}
+                  alt="Salon de l'hôtel"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
