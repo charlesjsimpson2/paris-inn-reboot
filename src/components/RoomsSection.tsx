@@ -82,16 +82,6 @@ export const RoomsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {room.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {room.features.map((feature, i) => (
-                    <span
-                      key={i}
-                      className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
                 <Button variant="outline" size="sm" className="w-full">
                   Voir les détails
                 </Button>
