@@ -1,8 +1,6 @@
 import { Plane, Clock, MapPin, Building2 } from "lucide-react";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
 import hotelBalcon from "@/assets/hotel-balcon-paris.jpg";
-import hotelChambre from "@/assets/hotel-chambre.jpg";
-import hotelSalon from "@/assets/hotel-salon.jpg";
 
 const highlights = [
   {
@@ -78,37 +76,19 @@ export const AboutSection = () => {
 
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="aspect-[3/4] rounded-lg bg-charcoal-light overflow-hidden">
-                <img
-                  src={proximiteMetro}
-                  alt="Hôtel Inn Design près du métro Place d'Italie"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="aspect-square rounded-lg bg-charcoal-light overflow-hidden">
-                <img
-                  src={hotelChambre}
-                  alt="Chambre d'hôtel"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+            <div className="aspect-[4/3] rounded-lg bg-charcoal-light overflow-hidden">
+              <img
+                src={proximiteMetro}
+                alt="Hôtel Inn Design près du métro Place d'Italie"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <div className="space-y-4 pt-8">
-              <div className="aspect-square rounded-lg bg-charcoal-light overflow-hidden">
-                <img
-                  src={hotelBalcon}
-                  alt="Petit-déjeuner avec vue sur Paris"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="aspect-[3/4] rounded-lg bg-charcoal-light overflow-hidden">
-                <img
-                  src={hotelSalon}
-                  alt="Salon de l'hôtel"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+            <div className="aspect-[4/3] rounded-lg bg-charcoal-light overflow-hidden">
+              <img
+                src={hotelBalcon}
+                alt="Petit-déjeuner avec vue sur Paris"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
