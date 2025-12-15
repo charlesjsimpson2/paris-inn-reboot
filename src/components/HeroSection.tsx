@@ -1,13 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
 
 import hotelReception from "@/assets/hotel-reception.jpg";
 import hotelChambre from "@/assets/hotel-chambre.jpg";
@@ -24,47 +17,28 @@ const heroImages = [
 ];
 
 export const HeroSection = () => {
-  const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    if (!api) return;
-
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Carousel */}
       <div className="absolute inset-0">
-        <Carousel
-          setApi={setApi}
-          opts={{
-            loop: true,
-            align: "start",
-          }}
-          plugins={[
-            Autoplay({
-              delay: 5000,
-              stopOnInteraction: false,
-            }),
-          ]}
-          className="h-full w-full"
-        >
-          <CarouselContent className="h-full -ml-0">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full pl-0">
-                <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
-                  style={{ backgroundImage: `url(${image.src})` }}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              current === index ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${image.src})` }}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
 
@@ -73,7 +47,7 @@ export const HeroSection = () => {
         {heroImages.map((_, index) => (
           <button
             key={index}
-            onClick={() => api?.scrollTo(index)}
+            onClick={() => setCurrent(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               current === index
                 ? "bg-primary w-8"
