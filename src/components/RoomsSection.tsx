@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight } from "lucide-react";
+import { Tv, Briefcase, Bath, CupSoda, ChevronLeft, ChevronRight } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
@@ -177,14 +177,12 @@ export const RoomsSection = () => {
 
         {/* Bottom: Equipment */}
         <div className="border-t border-border/30 pt-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {[
               { icon: Bath, label: "Salle d'eau privative" },
               { icon: Tv, label: "TV écran plat" },
               { icon: Briefcase, label: "Espace bureau" },
-              { icon: Wifi, label: "Wi-Fi gratuit" },
               { icon: CupSoda, label: "Plateau de courtoisie" },
-              { icon: Snowflake, label: "Climatisation" },
             ].map((item, index) => (
               <div
                 key={index}
