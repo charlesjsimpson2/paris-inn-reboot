@@ -67,13 +67,6 @@ export const Header = () => {
                   </div>
                   <span className="text-sm font-medium hidden sm:inline">hid.paris13@gmail.com</span>
                 </a>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="bg-burgundy hover:bg-burgundy/90 text-white border-burgundy px-4"
-                >
-                  Contactez-nous
-                </Button>
               </div>
             </div>
           </div>
