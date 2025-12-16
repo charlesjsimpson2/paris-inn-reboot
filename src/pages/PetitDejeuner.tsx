@@ -5,9 +5,9 @@ import { Coffee, Croissant, Apple, Egg, Clock, Users } from "lucide-react";
 import salle1 from "@/assets/breakfast/salle-1.jpg";
 import salle2 from "@/assets/breakfast/salle-2.jpg";
 import buffet1 from "@/assets/breakfast/buffet-1.jpg";
-import buffet2 from "@/assets/breakfast/buffet-2.jpg";
 import balcon from "@/assets/breakfast/balcon.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
+import tablePetitDejeuner from "@/assets/breakfast/table-petit-dejeuner.jpg";
 
 const features = [
   { icon: Coffee, label: "Boissons chaudes" },
@@ -17,8 +17,7 @@ const features = [
 ];
 
 const galleryImages = [
-  { src: buffet1, alt: "Petit déjeuner complet" },
-  { src: buffet2, alt: "Buffet petit déjeuner" },
+  { src: tablePetitDejeuner, alt: "Petit déjeuner complet" },
   { src: salle1, alt: "Salle petit déjeuner" },
   { src: salle2, alt: "Espace petit déjeuner" },
   { src: balcon, alt: "Petit déjeuner sur balcon" },
