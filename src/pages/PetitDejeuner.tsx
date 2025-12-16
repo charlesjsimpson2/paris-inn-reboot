@@ -9,6 +9,7 @@ import buffet1 from "@/assets/breakfast/buffet-1.jpg";
 import balcon from "@/assets/breakfast/balcon.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import tablePetitDejeuner from "@/assets/breakfast/table-petit-dejeuner.jpg";
+import heroPetitDejeuner from "@/assets/breakfast/hero-petit-dejeuner.jpg";
 
 const features = [
   { icon: Coffee, label: "Boissons chaudes" },
@@ -75,8 +76,8 @@ const PetitDejeuner = () => {
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={balcon}
-            alt="Petit déjeuner avec vue sur Paris"
+            src={heroPetitDejeuner}
+            alt="Petit déjeuner à l'hôtel"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
