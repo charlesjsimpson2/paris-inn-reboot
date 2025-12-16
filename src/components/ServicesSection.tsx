@@ -60,7 +60,7 @@ export const ServicesSection = () => {
             <img 
               src={receptionHotel} 
               alt="Réception de l'hôtel" 
-              className="w-full h-40 object-cover"
+              className="w-full h-52 object-cover"
             />
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
@@ -99,7 +99,7 @@ export const ServicesSection = () => {
             <img 
               src={restaurantPlat} 
               alt="Plat gastronomique" 
-              className="w-full h-40 object-cover"
+              className="w-full h-52 object-cover"
             />
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
@@ -119,7 +119,7 @@ export const ServicesSection = () => {
             <img 
               src={tourEiffel} 
               alt="Tour Eiffel Paris" 
-              className="w-full h-40 object-cover"
+              className="w-full h-52 object-cover"
             />
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
