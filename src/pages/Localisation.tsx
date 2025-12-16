@@ -23,100 +23,97 @@ const Localisation = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Map Section - Side by side */}
-      <section className="pt-32 md:pt-40 pb-20 bg-gradient-to-b from-charcoal to-background">
-        <div className="container mx-auto px-4">
-          {/* Section Header */}
-          <div className="text-center mb-12 animate-fade-in">
-            <span className="text-burgundy font-medium text-sm uppercase tracking-[0.3em] mb-4 block">
-              Nous trouver
-            </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground">
-              Notre emplacement
-            </h1>
-          </div>
+      {/* Hero Map Section - Full width with overlay */}
+      <section className="pt-20 relative">
+        {/* Full width map */}
+        <div className="h-[60vh] min-h-[500px] w-full relative">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3586!3d48.8282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6721c7c1b1c1b%3A0x123456789abcdef!2s178%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localisation Hôtel Inn Design Paris"
+          />
+          
+          {/* Gradient overlay at bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-charcoal to-transparent" />
+        </div>
 
-          <div className="grid lg:grid-cols-5 gap-10 items-start">
-            {/* Map - Takes 3 columns */}
-            <div className="lg:col-span-3 relative group">
-              <div className="absolute -inset-2 bg-gradient-to-br from-burgundy/20 to-transparent rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
-              <div className="relative h-[400px] lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3586!3d48.8282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6721c7c1b1c1b%3A0x123456789abcdef!2s178%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Localisation Hôtel Inn Design Paris"
-                />
-              </div>
+        {/* Floating Card - overlapping map */}
+        <div className="container mx-auto px-4 relative -mt-28 z-10">
+          <div className="bg-charcoal rounded-3xl shadow-2xl border border-border/50 p-8 md:p-12 max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-10">
+              <span className="text-burgundy font-medium text-base uppercase tracking-[0.3em] mb-4 block">
+                Nous trouver
+              </span>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
+                Notre emplacement
+              </h1>
             </div>
 
-            {/* Location Info - Takes 2 columns */}
-            <div className="lg:col-span-2 flex flex-col gap-5">
-              {/* Address Card */}
-              <div className="bg-charcoal rounded-2xl p-6 border border-border/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-burgundy flex items-center justify-center shrink-0 shadow-lg">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="font-display text-lg text-foreground mb-2">
-                      Hôtel Inn Design Paris
-                    </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      178 boulevard Vincent Auriol<br />
-                      75013 Paris, France
-                    </p>
-                    <a 
-                      href="https://maps.google.com/?q=178+Boulevard+Vincent+Auriol,+75013+Paris" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-burgundy hover:text-burgundy/80 transition-colors font-medium text-sm group"
-                    >
-                      Ouvrir dans Google Maps 
-                      <span className="group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
-                  </div>
-                </div>
+            {/* Address */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10 p-6 bg-background/30 rounded-2xl">
+              <div className="w-16 h-16 rounded-2xl bg-burgundy flex items-center justify-center shrink-0 shadow-lg">
+                <MapPin className="w-8 h-8 text-white" />
               </div>
-
-              {/* Transport Cards */}
-              <div className="space-y-3">
-                {transports.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-md group"
-                  >
-                    <div className={`w-10 h-10 rounded-lg ${item.color} flex items-center justify-center shrink-0 shadow-md`}>
-                      <span className="text-white font-bold text-sm">{item.time}</span>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-foreground font-medium text-sm">{item.type}</p>
-                      <p className="text-muted-foreground text-xs">{item.lines} • {item.stop}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="text-center md:text-left">
+                <h2 className="font-display text-2xl md:text-3xl text-foreground mb-2">
+                  Hôtel Inn Design Paris
+                </h2>
+                <p className="text-muted-foreground text-lg md:text-xl">
+                  178 boulevard Vincent Auriol, 75013 Paris
+                </p>
               </div>
+              <a 
+                href="https://maps.google.com/?q=178+Boulevard+Vincent+Auriol,+75013+Paris" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-burgundy text-white rounded-xl hover:bg-burgundy/90 transition-colors font-medium text-base group shrink-0"
+              >
+                Itinéraire
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
 
-              {/* Metro Lines */}
-              <div className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-charcoal to-background border border-border/50">
-                <div className="flex items-center gap-2">
-                  <span className="w-9 h-9 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-sm shadow-md hover:scale-110 transition-transform cursor-default">5</span>
-                  <span className="w-9 h-9 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-sm shadow-md hover:scale-110 transition-transform cursor-default">6</span>
-                  <span className="w-9 h-9 rounded-full bg-[#F3A4BA] flex items-center justify-center text-charcoal font-bold text-sm shadow-md hover:scale-110 transition-transform cursor-default">7</span>
+            {/* Transport Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {transports.map((item, index) => (
+                <div
+                  key={index}
+                  className="text-center p-6 rounded-2xl bg-background/20 border border-border/30 hover:border-burgundy/40 transition-all duration-300 hover:bg-background/30"
+                >
+                  <div className={`w-14 h-14 rounded-2xl ${item.color} flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                    <span className="text-white font-bold text-xl">{item.time}</span>
+                  </div>
+                  <p className="text-foreground font-display text-xl mb-1">{item.type}</p>
+                  <p className="text-muted-foreground text-base">{item.lines}</p>
+                  <p className="text-muted-foreground/70 text-sm mt-1">{item.stop}</p>
                 </div>
-                <div className="flex items-center gap-2 flex-1">
-                  <Train className="w-5 h-5 text-burgundy" />
-                  <span className="text-muted-foreground text-sm">Place d'Italie <span className="text-foreground/60">(sortie 3)</span></span>
-                </div>
+              ))}
+            </div>
+
+            {/* Metro Lines */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 pt-8 border-t border-border/30">
+              <div className="flex items-center gap-3">
+                <span className="w-11 h-11 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-lg shadow-lg hover:scale-110 transition-transform cursor-default">5</span>
+                <span className="w-11 h-11 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-lg shadow-lg hover:scale-110 transition-transform cursor-default">6</span>
+                <span className="w-11 h-11 rounded-full bg-[#F3A4BA] flex items-center justify-center text-charcoal font-bold text-lg shadow-lg hover:scale-110 transition-transform cursor-default">7</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Train className="w-6 h-6 text-burgundy" />
+                <span className="text-foreground text-lg">Métro Place d'Italie <span className="text-muted-foreground">(sortie 3)</span></span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Spacer */}
+      <div className="h-20 bg-charcoal" />
 
       {/* Au cœur de Paris - Image + Text */}
       <section className="py-24 bg-charcoal">
