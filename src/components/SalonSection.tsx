@@ -99,7 +99,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
         <div className={`w-full lg:w-[50%] bg-background/95 backdrop-blur-sm lg:bg-background p-8 lg:p-10 ${reverse ? 'lg:ml-8' : 'lg:mr-8'} lg:my-12 lg:shadow-2xl lg:rounded-sm relative`}>
           
           {/* Burgundy accent line */}
-          <div className={`absolute top-0 bottom-0 w-1 bg-primary ${reverse ? 'right-0 lg:-right-0' : 'left-0 lg:-left-0'}`} />
+          <div className={`absolute top-0 bottom-0 w-1.5 bg-primary ${reverse ? 'right-0' : 'left-0'}`} />
           
           <div className={`${reverse ? 'lg:pr-6' : 'lg:pl-6'}`}>
             {/* Surface */}
@@ -121,18 +121,18 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
 
             {/* Capacity Section */}
             {salon.capacities.length > 0 && (
-              <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-border/50">
+              <div className="flex flex-wrap items-center gap-6 pt-8 border-t border-border/50">
                 {salon.capacities.map((capacity, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
+                  <div key={idx} className="flex items-center gap-3 bg-muted/30 px-5 py-4 rounded-lg">
                     <img 
                       src={capacityIcons[capacity.icon]} 
                       alt={capacity.label}
-                      className="w-7 h-7 object-contain"
+                      className="w-12 h-12 object-contain"
                       style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(1500%) hue-rotate(330deg) brightness(85%)' }}
                     />
-                    <div className="flex items-baseline gap-1">
-                      <span className="font-display text-lg text-primary">{capacity.count}</span>
-                      <span className="text-xs text-muted-foreground">{capacity.label}</span>
+                    <div>
+                      <span className="font-display text-2xl text-primary block leading-none">{capacity.count}</span>
+                      <span className="text-sm text-muted-foreground">{capacity.label}</span>
                     </div>
                   </div>
                 ))}
