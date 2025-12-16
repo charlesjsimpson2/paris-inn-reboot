@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { RoomSection } from "@/components/RoomSection";
 import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda, X } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
@@ -31,26 +32,43 @@ const galleryImages = [
   { src: gallery9, alt: "Coin salon" },
 ];
 
-const rooms = [
+const roomsData = [
   {
     name: "Chambre Double",
-    description: "Lit de 160×200 cm. Profitez d'un espace élégant et confortable, idéal pour un séjour en couple ou en solo.",
-    image: chambreDouble,
+    details: "Lit de 160×200 cm",
+    description: "Profitez d'un espace élégant et confortable, idéal pour un séjour en couple ou en solo. Équipée de tout le confort moderne, cette chambre vous offre un havre de paix au cœur de Paris.",
+    images: [
+      { src: chambreDouble, alt: "Chambre Double - Vue d'ensemble" },
+      { src: gallery2, alt: "Chambre Double - Détail" },
+    ],
   },
   {
     name: "Chambre Twin",
-    description: "2 lits de 100×200 cm. Parfaite pour les voyages entre amis ou collègues, avec tout le confort nécessaire.",
-    image: chambreTwin,
+    details: "2 lits de 100×200 cm",
+    description: "Parfaite pour les voyages entre amis ou collègues, avec tout le confort nécessaire. Deux lits séparés dans un espace optimisé pour un séjour agréable.",
+    images: [
+      { src: chambreTwin, alt: "Chambre Twin - Vue d'ensemble" },
+      { src: gallery4, alt: "Chambre Twin - Détail" },
+    ],
   },
   {
     name: "Chambre Supérieure avec Balcon",
-    description: "Profitez d'un espace extérieur privé avec vue sur Paris. Une expérience unique au cœur de la ville.",
-    image: chambreSuperieureBalcon,
+    details: "Vue sur Paris",
+    description: "Profitez d'un espace extérieur privé avec vue sur Paris. Une expérience unique au cœur de la ville. Idéale pour savourer votre petit-déjeuner en admirant les toits parisiens.",
+    images: [
+      { src: chambreSuperieureBalcon, alt: "Chambre Supérieure - Vue balcon" },
+      { src: gallery3, alt: "Chambre Supérieure - Balcon" },
+      { src: gallery1, alt: "Chambre Supérieure - Intérieur" },
+    ],
   },
   {
     name: "Chambres Communicantes",
-    description: "2 chambres modulables avec portes communicantes. La solution idéale pour les familles ou groupes.",
-    image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
+    details: "2 chambres modulables",
+    description: "Deux chambres avec portes communicantes, la solution idéale pour les familles ou groupes. Profitez de l'intimité de chambres séparées tout en restant connectés.",
+    images: [
+      { src: gallery6, alt: "Chambres Communicantes - Vue" },
+      { src: gallery7, alt: "Chambres Communicantes - Détail" },
+    ],
   },
 ];
 
@@ -64,13 +82,10 @@ const equipments = [
 ];
 
 const NosChambres = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const galleryRef = useRef<HTMLDivElement>(null);
-
-  const maxIndex = Math.max(0, rooms.length - 2); // Show 2 at a time
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -92,14 +107,6 @@ const NosChambres = () => {
     return () => observer.disconnect();
   }, []);
 
-  const goToPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
-
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
@@ -114,8 +121,6 @@ const NosChambres = () => {
   const nextImage = () => {
     setLightboxIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
   };
-
-  const currentRoom = rooms[currentIndex];
 
   return (
     <div className="min-h-screen bg-background">
@@ -170,111 +175,30 @@ const NosChambres = () => {
         </div>
       </section>
 
-      {/* Room Carousel - Cards Layout */}
-      <section className="py-20 bg-background overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-              Découvrez nos chambres
-            </h2>
-            <p className="text-muted-foreground">
-              Faites défiler pour voir toutes nos catégories
-            </p>
+      {/* Nos Chambres - Layout style Séminaires */}
+      <section className="bg-background">
+        {/* Section header */}
+        <div className="py-16 bg-charcoal">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">Nos hébergements</span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mt-3">
+                Découvrez nos chambres
+              </h2>
+            </div>
           </div>
-
-          <div className="relative">
-            {/* Navigation arrows */}
-            <button
-              onClick={goToPrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground hover:bg-primary/90 p-4 rounded-full transition-all shadow-xl -translate-x-1/2 hidden md:flex"
-              aria-label="Chambres précédentes"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={goToNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground hover:bg-primary/90 p-4 rounded-full transition-all shadow-xl translate-x-1/2 hidden md:flex"
-              aria-label="Chambres suivantes"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-
-            {/* Cards container */}
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-500 ease-out gap-6"
-                style={{ transform: `translateX(-${currentIndex * 50}%)` }}
-              >
-                {rooms.map((room, index) => (
-                  <div
-                    key={index}
-                    className="w-full md:w-[calc(50%-12px)] flex-shrink-0 group"
-                  >
-                    <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                      {/* Image */}
-                      <div className="relative aspect-[4/3] overflow-hidden">
-                        <img
-                          src={room.image}
-                          alt={room.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="p-6">
-                        <h3 className="font-display text-2xl text-foreground mb-3 group-hover:text-primary transition-colors">
-                          {room.name}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed mb-6">
-                          {room.description}
-                        </p>
-                        <Button variant="gold" className="w-full" asChild>
-                          <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                            Réserver
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+        </div>
+        
+        {/* Rooms list with alternating backgrounds */}
+        <div className="space-y-12 py-12">
+          {roomsData.map((room, index) => {
+            const bgColors = ['bg-muted/30', 'bg-charcoal', 'bg-muted/50', 'bg-charcoal/80'];
+            return (
+              <div key={index} className={`${bgColors[index % bgColors.length]} rounded-lg mx-4 lg:mx-8`}>
+                <RoomSection room={room} reverse={index % 2 === 1} />
               </div>
-            </div>
-
-            {/* Mobile navigation */}
-            <div className="flex justify-center gap-4 mt-8 md:hidden">
-              <button
-                onClick={goToPrev}
-                className="bg-primary text-primary-foreground p-3 rounded-full"
-                aria-label="Précédent"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={goToNext}
-                className="bg-primary text-primary-foreground p-3 rounded-full"
-                aria-label="Suivant"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Progress indicators */}
-            <div className="flex justify-center gap-2 mt-8">
-              {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? "bg-primary w-8"
-                      : "bg-muted hover:bg-primary/50 w-2"
-                  }`}
-                  aria-label={`Aller à la position ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+            );
+          })}
         </div>
       </section>
 
