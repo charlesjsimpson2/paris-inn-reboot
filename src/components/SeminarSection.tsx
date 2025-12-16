@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Monitor, Wifi, Mic, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 import seminaire1 from "@/assets/seminaire-1.jpg";
 import seminaire2 from "@/assets/seminaire-2.jpg";
@@ -128,11 +129,11 @@ export const SeminarSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="gold" size="lg">
-                Demander un devis
+              <Button variant="gold" size="lg" asChild>
+                <Link to="/reservation-seminaire">Demander un devis</Link>
               </Button>
-              <Button variant="elegant" size="lg">
-                Découvrir nos salles
+              <Button variant="elegant" size="lg" asChild>
+                <Link to="/seminaires">Découvrir nos salles</Link>
               </Button>
             </div>
           </div>
