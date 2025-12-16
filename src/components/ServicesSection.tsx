@@ -1,6 +1,7 @@
 import { Clock, Car, Wifi, Wind, Briefcase, Plane, Utensils, MapPin } from "lucide-react";
 import receptionHotel from "@/assets/reception-hotel.jpg";
 import restaurantPlat from "@/assets/restaurant-plat.jpg";
+import tourEiffel from "@/assets/tour-eiffel.jpg";
 
 const services = [
   {
@@ -114,16 +115,23 @@ export const ServicesSection = () => {
           </div>
 
           {/* Tourisme */}
-          <div className="bg-secondary/30 p-8 border border-border/30">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10">
-                <MapPin className="w-5 h-5 text-primary" />
+          <div className="bg-secondary/30 border border-border/30 overflow-hidden">
+            <img 
+              src={tourEiffel} 
+              alt="Tour Eiffel Paris" 
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-primary/10">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="font-display text-xl text-foreground">Tourisme</h3>
               </div>
-              <h3 className="font-display text-xl text-foreground">Tourisme</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {services[3].description}
+              </p>
             </div>
-            <p className="text-muted-foreground leading-relaxed text-sm">
-              {services[3].description}
-            </p>
           </div>
         </div>
       </div>
