@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Star, BedDouble, Car, Wine } from "lucide-react";
+import { Star, BedDouble, Car, Wine, Wifi, Snowflake } from "lucide-react";
 import vueBalcon from "@/assets/vue-balcon-paris.jpg";
 
 const features = [
   { icon: Star, label: "3 étoiles", stars: true },
   { icon: BedDouble, label: "70 chambres" },
+  { icon: Wifi, label: "Wifi gratuit" },
+  { icon: Snowflake, label: "Climatisation" },
   { icon: Car, label: "Parking privé" },
   { icon: Wine, label: "Bar convivial" },
 ];
