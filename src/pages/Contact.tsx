@@ -72,17 +72,7 @@ const Contact = () => {
           alt="Contactez-nous - Hôtel Inn Design Paris" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-          <div className="container mx-auto">
-            <span className="inline-block bg-burgundy text-white font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
-              Contact
-            </span>
-            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
-              Contactez-nous
-            </h1>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
       </section>
 
       {/* Contact Content */}
