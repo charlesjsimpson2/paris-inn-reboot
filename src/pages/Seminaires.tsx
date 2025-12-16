@@ -1,8 +1,13 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { SalonCard } from "@/components/SalonCard";
 import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide-react";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import salonBose1 from "@/assets/salon-bose-1.jpg";
+import salonBose2 from "@/assets/salon-bose-2.jpg";
+import salonBose3 from "@/assets/salon-bose-3.jpg";
+import salonBose4 from "@/assets/salon-bose-4.jpg";
 
 const equipments = [
   { icon: Projector, label: "Vidéoprojecteur" },
@@ -72,6 +77,24 @@ const Seminaires = () => {
           </div>
         </div>
       </section>
+
+      {/* Salon BOSE */}
+      <SalonCard
+        name="Salon BOSE"
+        description="Découvrez notre nouvelle salle de séminaire BOSE, conçue pour allier confort et haute technologie. Écrans interactifs, système audio-vidéo de pointe et connexion wifi ultra-rapide : tout est là pour vos réunions, formations ou conférences, sur place ou en lien avec l'international. Avec ses 40 m², cet espace garantit le succès de vos événements dans un cadre moderne et performant."
+        surface="40 m²"
+        images={[
+          { src: salonBose1, alt: "Salon BOSE - Vue d'ensemble" },
+          { src: salonBose2, alt: "Salon BOSE - Détail des sièges" },
+          { src: salonBose3, alt: "Salon BOSE - Configuration classe" },
+          { src: salonBose4, alt: "Salon BOSE - Vue avec écran" },
+        ]}
+        capacities={[
+          { icon: "u-shape", count: 20, label: "Disposition en U" },
+          { icon: "classe", count: 30, label: "Disposition Classe" },
+          { icon: "theatre", count: 40, label: "Disposition Théâtre" },
+        ]}
+      />
 
       {/* Video Section */}
       <section className="py-20 bg-background">
