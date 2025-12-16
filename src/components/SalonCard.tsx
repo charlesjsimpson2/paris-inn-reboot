@@ -147,9 +147,9 @@ export const SalonCard = ({
           {/* Content */}
           <div className={`space-y-6 ${reversed ? 'lg:order-1' : ''}`}>
             <div>
-              <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
-                {surface}
-              </span>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+                {name}
+              </h2>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
                 {name}
               </h2>
