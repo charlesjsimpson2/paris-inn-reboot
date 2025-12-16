@@ -1,4 +1,4 @@
-import { Clock, Car, Wifi, Wind, Briefcase, Plane, Utensils, MapPin } from "lucide-react";
+import { Clock, Car, Briefcase, Plane, Utensils, MapPin } from "lucide-react";
 import receptionHotel from "@/assets/reception-hotel.jpg";
 import restaurantPlat from "@/assets/restaurant-plat.jpg";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
@@ -16,10 +16,8 @@ const services = [
   },
   {
     title: "Infos pratiques",
-    icon: Wifi,
+    icon: Briefcase,
     items: [
-      { icon: Wifi, text: "Wifi gratuit" },
-      { icon: Wind, text: "Climatisation" },
       { icon: Briefcase, text: "Bagagerie gratuite" },
       { icon: Plane, text: "Taxi – Tarif unique aéroport" },
     ],
