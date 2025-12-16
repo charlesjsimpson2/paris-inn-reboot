@@ -64,24 +64,29 @@ export const HeroSection = () => {
       >
         <ChevronRight className="w-6 h-6" />
       </button>
-      <div className="absolute bottom-20 left-0 z-10 px-6 md:px-12 lg:px-20 max-w-2xl">
-        <p className="text-primary font-body uppercase tracking-[0.3em] text-xs mb-4 animate-fade-in [animation-delay:200ms]">
-          Bienvenue à Paris
-        </p>
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 animate-fade-in [animation-delay:400ms]">
-          Hôtel Inn Design
-          <span className="block text-primary italic mt-1">Place d'Italie</span>
-        </h1>
-        <p className="font-body text-sm md:text-base text-foreground/80 mb-6 animate-fade-in [animation-delay:600ms]">
-          Un havre de paix et d'élégance au cœur du 13ème arrondissement.
-        </p>
-        <div className="flex flex-wrap gap-3 animate-fade-in [animation-delay:800ms]">
-          <Button variant="gold" size="lg">
-            Réserver
-          </Button>
-          <Button variant="elegant" size="lg">
-            Découvrir
-          </Button>
+      <div className="absolute bottom-20 left-0 z-10 px-6 md:px-12 lg:px-20 max-w-3xl">
+        {/* Glass card for better readability */}
+        <div className="bg-background/70 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-2xl border border-foreground/10">
+          <p className="text-primary font-body uppercase tracking-[0.4em] text-sm md:text-base mb-4 animate-fade-in [animation-delay:200ms] font-semibold">
+            Bienvenue à Paris
+          </p>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-2 animate-fade-in [animation-delay:400ms] leading-tight">
+            Hôtel Inn Design
+          </h1>
+          <p className="text-2xl md:text-3xl text-primary font-serif italic mb-6 animate-fade-in [animation-delay:500ms]">
+            Place d'Italie
+          </p>
+          <p className="font-body text-base md:text-lg text-foreground/90 mb-8 animate-fade-in [animation-delay:600ms] leading-relaxed">
+            Un havre de paix et d'élégance au cœur du 13ème arrondissement.
+          </p>
+          <div className="flex flex-wrap gap-4 animate-fade-in [animation-delay:800ms]">
+            <Button variant="gold" size="lg" className="px-8 py-6 text-base font-bold">
+              Réserver
+            </Button>
+            <Button variant="elegant" size="lg" className="px-8 py-6 text-base font-bold">
+              Découvrir
+            </Button>
+          </div>
         </div>
       </div>
 
