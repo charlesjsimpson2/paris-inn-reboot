@@ -63,12 +63,12 @@ export const Header = () => {
         <nav className="flex items-center justify-between relative">
           {/* Burger Menu - Left */}
           <button
-            className="text-foreground p-3 rounded-lg hover:bg-muted/50 transition-colors flex items-center gap-2 z-10"
+            className="group text-foreground px-4 py-2.5 rounded-full border-2 border-primary/80 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center gap-3 z-10 shadow-sm hover:shadow-md"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
-            <Menu className="w-6 h-6" />
-            <span className="hidden md:inline text-sm font-medium uppercase tracking-wider">Menu</span>
+            <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+            <span className="text-sm font-semibold uppercase tracking-widest">Menu</span>
           </button>
 
           {/* Logo - Center */}
