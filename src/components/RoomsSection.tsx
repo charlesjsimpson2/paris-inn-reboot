@@ -63,63 +63,69 @@ export const RoomsSection = () => {
           </div>
         </div>
 
-        {/* Rooms Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {rooms.map((room, index) => (
-            <div
-              key={index}
-              className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
-            >
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={room.image}
-                  alt={room.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+        {/* Main Content - Two columns layout */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Left Column - Rooms Grid */}
+          <div className="lg:col-span-2">
+            <div className="grid md:grid-cols-2 gap-6">
+              {rooms.map((room, index) => (
+                <div
+                  key={index}
+                  className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
+                >
+                  {/* Image */}
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={room.image}
+                      alt={room.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
 
-              {/* Content */}
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-display text-xl text-foreground mb-2">
-                  {room.name}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 flex-1">
-                  {room.description}
-                </p>
-                <Button variant="outline" size="sm" className="w-full mt-auto">
-                  Voir les détails
-                </Button>
+                  {/* Content */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-display text-xl text-foreground mb-2">
+                      {room.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 flex-1">
+                      {room.description}
+                    </p>
+                    <Button variant="outline" size="sm" className="w-full mt-auto">
+                      Voir les détails
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column - Equipment */}
+          <div className="lg:col-span-1">
+            <div className="bg-background/50 rounded-2xl p-8 border border-border/50 h-full">
+              <h3 className="font-display text-2xl text-foreground mb-8">
+                Nos Équipements
+              </h3>
+              <div className="space-y-6">
+                {[
+                  { icon: Bath, label: "Salle d'eau privative" },
+                  { icon: Tv, label: "TV écran plat" },
+                  { icon: Briefcase, label: "Espace bureau" },
+                  { icon: Wifi, label: "Wi-Fi gratuit" },
+                  { icon: CupSoda, label: "Plateau de courtoisie" },
+                  { icon: Snowflake, label: "Climatisation" },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <p className="text-foreground font-medium">{item.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Equipment Section */}
-        <div className="mt-20 pt-16 border-t border-border/30">
-          <h3 className="font-display text-2xl md:text-3xl text-foreground text-center mb-12">
-            Nos Équipements
-          </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[
-              { icon: Bath, label: "Salle d'eau privative" },
-              { icon: Tv, label: "TV écran plat" },
-              { icon: Briefcase, label: "Espace bureau" },
-              { icon: Wifi, label: "Wi-Fi gratuit" },
-              { icon: CupSoda, label: "Plateau de courtoisie" },
-              { icon: Snowflake, label: "Climatisation" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group flex flex-col items-center text-center p-6 rounded-xl bg-background/50 border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <item.icon className="w-6 h-6 text-primary" />
-                </div>
-                <p className="text-sm font-medium text-foreground">{item.label}</p>
-              </div>
-            ))}
           </div>
         </div>
 
