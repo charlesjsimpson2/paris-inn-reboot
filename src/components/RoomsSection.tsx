@@ -71,43 +71,97 @@ export const RoomsSection = () => {
           </p>
         </div>
 
-        {/* Carousel - larger */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          {rooms.map((room, index) => (
-            <div 
-              key={index}
-              className="relative group cursor-pointer overflow-hidden"
-              onClick={() => setCurrentIndex(index)}
-            >
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={room.image}
-                  alt={room.name}
-                  className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
-                    index === currentIndex ? "brightness-100" : "brightness-75"
-                  }`}
-                />
-              </div>
-              
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              
-              {/* Text overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h3 className="font-display text-lg text-white mb-1">
-                  {room.name}
-                </h3>
-                <p className="text-white/80 text-sm line-clamp-2">
-                  {room.description}
-                </p>
-              </div>
+        {/* Carousel with navigation */}
+        <div className="relative mb-12">
+          {/* Navigation arrows */}
+          <button
+            onClick={goToPrev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground hover:bg-primary/90 p-3 md:p-4 transition-all shadow-xl -translate-x-1/2 hidden md:flex"
+            aria-label="Chambres précédentes"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground hover:bg-primary/90 p-3 md:p-4 transition-all shadow-xl translate-x-1/2 hidden md:flex"
+            aria-label="Chambres suivantes"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
 
-              {/* Active indicator */}
-              {index === currentIndex && (
-                <div className="absolute top-4 left-4 w-2 h-2 bg-primary" />
-              )}
+          {/* Cards container */}
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-out gap-6"
+              style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
+            >
+              {rooms.map((room, index) => (
+                <div
+                  key={index}
+                  className="w-full md:w-[calc(50%-12px)] flex-shrink-0 group"
+                >
+                  {/* Image with overlay description */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={room.image}
+                      alt={room.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    
+                    {/* Text overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="font-display text-xl md:text-2xl text-white mb-2 group-hover:text-primary transition-colors">
+                        {room.name}
+                      </h3>
+                      <p className="text-white/90 leading-relaxed text-sm md:text-base line-clamp-2 mb-4">
+                        {room.description}
+                      </p>
+                      <Button variant="gold" size="sm" asChild>
+                        <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+                          Réserver
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Mobile navigation */}
+          <div className="flex justify-center gap-4 mt-6 md:hidden">
+            <button
+              onClick={goToPrev}
+              className="bg-primary text-primary-foreground p-3"
+              aria-label="Précédent"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="bg-primary text-primary-foreground p-3"
+              aria-label="Suivant"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Progress indicator */}
+          <div className="flex justify-center gap-2 mt-6">
+            {rooms.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-1 transition-all ${
+                  index === currentIndex 
+                    ? "bg-primary w-8" 
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-4"
+                }`}
+                aria-label={`Voir chambre ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Description + CTA */}
@@ -119,11 +173,6 @@ export const RoomsSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" asChild>
               <a href="/nos-chambres">Voir toutes nos chambres</a>
-            </Button>
-            <Button variant="gold" size="lg" asChild>
-              <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                Réserver une chambre
-              </a>
             </Button>
           </div>
         </div>
