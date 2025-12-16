@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MapPin, Plane, Building2, Landmark, Train, Car, Clock, Phone } from "lucide-react";
+import { MapPin, Plane, Building2, Landmark, Train, Car, Clock, Phone, TrainFront, Bus, TramFront } from "lucide-react";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
 
 const destinations = [
@@ -13,9 +13,9 @@ const destinations = [
 ];
 
 const transports = [
-  { type: "Métro", lines: "Lignes 5, 6 & 7", stop: "Place d'Italie", time: "2 min", color: "bg-burgundy" },
-  { type: "Bus", lines: "Lignes 27, 47, 83", stop: "Vincent Auriol", time: "1 min", color: "bg-primary" },
-  { type: "Tramway", lines: "T3a", stop: "Porte d'Italie", time: "10 min", color: "bg-muted-foreground" },
+  { type: "Métro", lines: "Lignes 5, 6 & 7", stop: "Place d'Italie", time: "2 min", icon: TrainFront },
+  { type: "Bus", lines: "Lignes 27, 47, 83", stop: "Vincent Auriol", time: "1 min", icon: Bus },
+  { type: "Tramway", lines: "T3a", stop: "Porte d'Italie", time: "10 min", icon: TramFront },
 ];
 
 const Localisation = () => {
@@ -96,9 +96,12 @@ const Localisation = () => {
                         <span className="text-burgundy/70 text-[10px] uppercase tracking-wide">min</span>
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-foreground font-medium text-base mb-1">{item.type}</p>
-                      <p className="text-muted-foreground text-sm">{item.lines} • {item.stop}</p>
+                    <div className="flex-1 flex items-center gap-3">
+                      <item.icon className="w-5 h-5 text-burgundy shrink-0" />
+                      <div>
+                        <p className="text-foreground font-medium text-base mb-0.5">{item.type}</p>
+                        <p className="text-muted-foreground text-sm">{item.lines} • {item.stop}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -128,11 +131,11 @@ const Localisation = () => {
             {/* Image */}
             <div className="relative group order-2 lg:order-1">
               <div className="absolute -inset-4 bg-burgundy/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <img
                   src={proximiteMetro}
                   alt="Hôtel Inn Design près du métro Place d'Italie"
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
