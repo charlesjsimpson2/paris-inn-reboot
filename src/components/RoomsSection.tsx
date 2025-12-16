@@ -176,10 +176,7 @@ export const RoomsSection = () => {
         </div>
 
         {/* Bottom: Equipment */}
-        <div className="border-t border-border/30 pt-10">
-          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-6 text-center">
-            Équipements inclus
-          </p>
+        <div className="border-t border-border/30 pt-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             {[
               { icon: Bath, label: "Salle d'eau privative" },
