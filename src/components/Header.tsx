@@ -21,7 +21,7 @@ export const Header = () => {
   
   // Check if we're on homepage or a page with hero image
   const isHomePage = location.pathname === "/";
-  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires";
+  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires" || location.pathname === "/contact";
 
   useEffect(() => {
     const handleScroll = () => {
