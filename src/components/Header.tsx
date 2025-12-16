@@ -78,15 +78,15 @@ export const Header = () => {
       <div
         className={`transition-all duration-500 ${
           isScrolled || isHeroPage
-            ? "bg-background/95 backdrop-blur-md shadow-elegant py-4"
-            : "bg-transparent py-6"
+            ? "bg-background/95 backdrop-blur-md shadow-elegant py-2"
+            : "bg-transparent py-4"
         }`}
       >
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between relative">
-            {/* Burger Menu - Left - LARGER */}
+            {/* Burger Menu - Left */}
             <button
-              className={`group px-8 py-4 rounded-full border-2 transition-all duration-300 flex items-center gap-4 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
+              className={`group px-5 py-2.5 rounded-full border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
                 isHeroPage || isScrolled
                   ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
                   : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
@@ -94,30 +94,30 @@ export const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Menu"
             >
-              <Menu className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-              <span className="text-base font-bold uppercase tracking-widest">Menu</span>
+              <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+              <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
             </button>
 
-            {/* Logo - Center - LARGER */}
+            {/* Logo - Center */}
             <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
               <img 
                 src={logoHotel} 
                 alt="Hotel Inn Paris" 
-                className="h-14 md:h-16 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
             </Link>
 
-            {/* Réserver Button - Right - LARGER */}
+            {/* Réserver Button - Right */}
             <Button 
               variant="gold" 
-              size="xl" 
-              className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy"
+              size="lg" 
+              className="z-10 px-6 py-4 text-sm font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy"
               asChild
             >
               <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-2">
                   Réserver
-                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">-10%</span>
+                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">-10%</span>
                 </span>
               </a>
             </Button>
