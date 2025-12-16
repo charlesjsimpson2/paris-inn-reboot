@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -67,8 +67,30 @@ const NosChambres = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   const maxIndex = Math.max(0, rooms.length - 2); // Show 2 at a time
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.getAttribute('data-index') || '0');
+            setVisibleItems((prev) => [...new Set([...prev, index])]);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    const items = galleryRef.current?.querySelectorAll('[data-index]');
+    items?.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
 
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
@@ -255,26 +277,32 @@ const NosChambres = () => {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-20 bg-charcoal">
+      <section className="py-20 bg-charcoal overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4 animate-fade-in">
               Galerie Photo
             </span>
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+            <h2 className="font-display text-3xl md:text-4xl text-foreground animate-fade-in">
               Découvrez nos espaces
             </h2>
           </div>
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
               <button
                 key={index}
+                data-index={index}
                 onClick={() => openLightbox(index)}
-                className={`relative overflow-hidden rounded-xl group cursor-pointer ${
+                className={`relative overflow-hidden rounded-xl group cursor-pointer transition-all duration-700 ${
                   index === 0 ? "col-span-2 row-span-2" : ""
+                } ${
+                  visibleItems.includes(index)
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 translate-y-8 scale-95"
                 }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className={`${index === 0 ? "aspect-square" : "aspect-[4/3]"}`}>
                   <img
@@ -284,7 +312,7 @@ const NosChambres = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-lg">
                     Voir
                   </span>
                 </div>
