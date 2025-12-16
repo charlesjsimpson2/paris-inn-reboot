@@ -114,14 +114,9 @@ export const RoomsSection = () => {
                       <h3 className="font-display text-xl md:text-2xl text-white mb-2 group-hover:text-primary transition-colors">
                         {room.name}
                       </h3>
-                      <p className="text-white/90 leading-relaxed text-sm md:text-base line-clamp-2 mb-4">
+                      <p className="text-white/90 leading-relaxed text-sm md:text-base line-clamp-2">
                         {room.description}
                       </p>
-                      <Button variant="gold" size="sm" asChild>
-                        <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                          Réserver
-                        </a>
-                      </Button>
                     </div>
                   </div>
                 </div>
