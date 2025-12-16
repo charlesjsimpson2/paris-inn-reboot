@@ -37,23 +37,23 @@ const rooms = [
 
 export const RoomsSection = () => {
   return (
-    <section id="chambres" className="py-24 bg-charcoal">
+    <section id="chambres" className="py-16 bg-charcoal">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
+        <div className="text-center max-w-4xl mx-auto mb-10">
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
             Nos Hébergements
           </p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
+          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             Chambres & Suites
           </h2>
           <p className="text-muted-foreground">
             Installez-vous confortablement dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées. Chaque chambre offre un confort optimal grâce à des équipements complets : climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux et plateau de courtoisie.
           </p>
-          <p className="text-muted-foreground mt-4">
+          <p className="text-muted-foreground mt-3">
             Pour répondre à tous les besoins, l'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <Button variant="outline" size="lg">
               En savoir plus
             </Button>
@@ -64,7 +64,7 @@ export const RoomsSection = () => {
         </div>
 
         {/* Equipment Strip */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-16 pb-16 border-b border-border/30">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 pb-10 border-b border-border/30">
           {[
             { icon: Bath, label: "Salle d'eau privative" },
             { icon: Tv, label: "TV écran plat" },
