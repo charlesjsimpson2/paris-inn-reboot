@@ -39,9 +39,9 @@ export const HeroSection = () => {
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${
               current === index ? "opacity-100" : "opacity-0"
-            }`}
+            } ${[1, 2, 3].includes(index) ? "bg-bottom" : "bg-center"}`}
             style={{ backgroundImage: `url(${image.src})` }}
           />
         ))}
