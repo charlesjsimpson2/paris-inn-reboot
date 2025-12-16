@@ -126,15 +126,40 @@ export const RoomsSection = () => {
                     <Users className="w-5 h-5 text-primary" />
                     <span>{room.capacity}</span>
                   </div>
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                     {room.description}
                   </p>
-
-                  <Button variant="gold" size="lg">
-                    Réserver cette chambre
-                  </Button>
                 </div>
               ))}
+
+              {/* Navigation and button in same row */}
+              <div className="flex items-center justify-between">
+                <Button variant="gold" size="lg">
+                  Réserver cette chambre
+                </Button>
+
+                <div className="flex items-center gap-3">
+                  <span className="text-foreground font-display text-lg">
+                    {currentIndex + 1}<span className="text-muted-foreground">/{rooms.length}</span>
+                  </span>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={goToPrev}
+                      className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
+                      aria-label="Chambre précédente"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={goToNext}
+                      className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
+                      aria-label="Chambre suivante"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Image Side - Right */}
@@ -149,34 +174,8 @@ export const RoomsSection = () => {
                   }`}
                 />
               ))}
-              
-              {/* Pagination overlay */}
-              <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                <span className="text-foreground font-semibold">
-                  {currentIndex + 1} <span className="text-muted-foreground">/ {rooms.length}</span>
-                </span>
-              </div>
             </div>
           </div>
-
-          {/* Navigation arrows - below */}
-          <div className="flex justify-center gap-4 mt-8">
-            <button
-              onClick={goToPrev}
-              className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-4 rounded-full transition-all shadow-md border border-primary/30"
-              aria-label="Chambre précédente"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={goToNext}
-              className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-4 rounded-full transition-all shadow-md border border-primary/30"
-              aria-label="Chambre suivante"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
         </div>
       </div>
     </section>
