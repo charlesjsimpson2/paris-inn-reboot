@@ -36,24 +36,24 @@ export const Header = () => {
     >
       {/* Top bar */}
       <div
-        className={`container mx-auto px-4 mb-2 transition-all duration-300 ${
+        className={`container mx-auto px-4 mb-3 transition-all duration-300 ${
           isScrolled ? "hidden" : "block"
         }`}
       >
-        <div className="flex items-center justify-end gap-6 text-sm text-muted-foreground">
+        <div className="flex items-center justify-end gap-4">
           <a
             href="tel:+33144240101"
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-foreground font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
           >
             <Phone className="w-4 h-4" />
-            +33 (0)1 44 24 01 01
+            <span className="text-sm">+33 (0)1 44 24 01 01</span>
           </a>
           <a
             href="mailto:hid.paris13@gmail.com"
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-foreground font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
           >
             <Mail className="w-4 h-4" />
-            hid.paris13@gmail.com
+            <span className="text-sm">hid.paris13@gmail.com</span>
           </a>
         </div>
       </div>
@@ -81,8 +81,11 @@ export const Header = () => {
           </Link>
 
           {/* Réserver Button - Right */}
-          <Button variant="gold" size="lg" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-            Réserver
+          <Button variant="gold" size="lg" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-pulse hover:animate-none">
+            <span className="flex items-center gap-2">
+              Réserver
+              <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">-10%</span>
+            </span>
           </Button>
         </nav>
       </div>
