@@ -154,18 +154,30 @@ const Seminaires = () => {
         </div>
       </section>
 
-      {/* Nos Salons - Card Layout */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              Nos salles de réunion
-            </h2>
+      {/* Nos Salons - Elegant Layout */}
+      <section className="bg-background relative">
+        {/* Section header */}
+        <div className="pt-20 pb-12">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="h-px w-16 bg-primary/40" />
+                <span className="text-primary font-medium text-sm uppercase tracking-widest">Nos espaces</span>
+                <div className="h-px w-16 bg-primary/40" />
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
+                Salles de réunion
+              </h2>
+            </div>
           </div>
         </div>
-        <div className="space-y-0">
+        
+        {/* Salons list with alternating backgrounds */}
+        <div className="divide-y divide-primary/5">
           {salonsData.map((salon, index) => (
-            <SalonSection key={index} salon={salon} reverse={index % 2 === 1} />
+            <div key={index} className={index % 2 === 1 ? 'bg-charcoal/30' : ''}>
+              <SalonSection salon={salon} reverse={index % 2 === 1} />
+            </div>
           ))}
         </div>
       </section>
