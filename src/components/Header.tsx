@@ -63,12 +63,12 @@ export const Header = () => {
         <nav className="flex items-center justify-between relative">
           {/* Burger Menu - Left */}
           <button
-            className="group text-foreground px-4 py-2.5 rounded-full border-2 border-primary/80 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center gap-3 z-10 shadow-sm hover:shadow-md"
+            className="group text-foreground px-6 py-3.5 rounded-full border-2 border-primary bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
-            <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
-            <span className="text-sm font-semibold uppercase tracking-widest">Menu</span>
+            <Menu className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+            <span className="text-base font-bold uppercase tracking-widest">Menu</span>
           </button>
 
           {/* Logo - Center */}
@@ -81,7 +81,7 @@ export const Header = () => {
           </Link>
 
           {/* Réserver Button - Right */}
-          <Button variant="gold" size="default" className="z-10">
+          <Button variant="gold" size="lg" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             Réserver
           </Button>
         </nav>
