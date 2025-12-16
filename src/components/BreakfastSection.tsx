@@ -11,10 +11,11 @@ const features = [
 
 export const BreakfastSection = () => {
   return (
-    <section id="petit-dejeuner" className="py-16 lg:py-24 bg-secondary/30">
+    <section id="petit-dejeuner" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
-        {/* Section Title */}
-        <div className="text-center mb-16">
+        {/* Section Title with vertical line */}
+        <div className="text-center mb-16 relative">
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-6 bg-primary/40" />
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
             À votre service
           </p>

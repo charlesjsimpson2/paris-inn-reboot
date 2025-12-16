@@ -40,9 +40,10 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-background">
+    <section id="services" className="py-16 lg:py-24 bg-secondary/20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative">
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-6 bg-primary/40" />
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
             À votre service
           </p>
