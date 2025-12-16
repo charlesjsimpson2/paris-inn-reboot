@@ -59,7 +59,7 @@ export const RoomsSection = () => {
     <section id="chambres" className="py-20 bg-charcoal">
       <div className="container mx-auto px-4">
         {/* Header centered */}
-        <div className="text-center mb-12 max-w-3xl mx-auto">
+        <div className="text-center mb-12 max-w-5xl mx-auto">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
             Nos Hébergements
           </p>
@@ -70,9 +70,8 @@ export const RoomsSection = () => {
             Posez vos valises et profitez !
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort.
-            <br />
-            Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
+            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort.<br />
+            Climatisation, TV écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour vous.
           </p>
         </div>
 
