@@ -8,6 +8,10 @@ import salonBose1 from "@/assets/salon-bose-1.jpg";
 import salonBose2 from "@/assets/salon-bose-2.jpg";
 import salonBose3 from "@/assets/salon-bose-3.jpg";
 import salonBose4 from "@/assets/salon-bose-4.jpg";
+import salonFender1 from "@/assets/salon-fender-1.jpg";
+import salonFender2 from "@/assets/salon-fender-2.jpg";
+import salonFender3 from "@/assets/salon-fender-3.jpg";
+import salonFender4 from "@/assets/salon-fender-4.jpg";
 
 const equipments = [
   { icon: Projector, label: "Vidéoprojecteur" },
@@ -96,7 +100,25 @@ const Seminaires = () => {
         ]}
       />
 
-      {/* Video Section */}
+      {/* Salon FENDER */}
+      <SalonCard
+        name="Salon FENDER"
+        description="Spacieuse et baignée de lumière naturelle, notre salle FENDER de 70 m² est parfaite pour vos réunions et événements professionnels. Équipée d'un écran HD, d'un rétroprojecteur, d'un système vidéo performant et du Wi-Fi haut débit, elle combine confort et technologie pour des présentations réussies. Un espace lumineux et convivial qui favorise la concentration et la collaboration de tous vos participants."
+        surface="70 m²"
+        images={[
+          { src: salonFender1, alt: "Salon FENDER - Vue en U" },
+          { src: salonFender2, alt: "Salon FENDER - Vue avec écran" },
+          { src: salonFender3, alt: "Salon FENDER - Configuration classe" },
+          { src: salonFender4, alt: "Salon FENDER - Vue d'ensemble" },
+        ]}
+        capacities={[
+          { icon: "u-shape", count: 33, label: "Disposition en U" },
+          { icon: "classe", count: 50, label: "Disposition Classe" },
+          { icon: "theatre", count: 70, label: "Disposition Théâtre" },
+        ]}
+        reversed
+      />
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
