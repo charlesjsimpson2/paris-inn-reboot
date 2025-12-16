@@ -63,70 +63,56 @@ export const RoomsSection = () => {
           </div>
         </div>
 
-        {/* Main Content - Two columns layout */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left Column - Rooms Grid */}
-          <div className="lg:col-span-2">
-            <div className="grid md:grid-cols-2 gap-6">
-              {rooms.map((room, index) => (
-                <div
-                  key={index}
-                  className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
-                >
-                  {/* Image */}
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={room.image}
-                      alt={room.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display text-xl text-foreground mb-2">
-                      {room.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4 flex-1">
-                      {room.description}
-                    </p>
-                    <Button variant="outline" size="sm" className="w-full mt-auto">
-                      Voir les détails
-                    </Button>
-                  </div>
-                </div>
-              ))}
+        {/* Equipment Strip */}
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-16 pb-16 border-b border-border/30">
+          {[
+            { icon: Bath, label: "Salle d'eau privative" },
+            { icon: Tv, label: "TV écran plat" },
+            { icon: Briefcase, label: "Espace bureau" },
+            { icon: Wifi, label: "Wi-Fi gratuit" },
+            { icon: CupSoda, label: "Plateau de courtoisie" },
+            { icon: Snowflake, label: "Climatisation" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-2 text-muted-foreground"
+            >
+              <item.icon className="w-5 h-5 text-primary" />
+              <span className="text-sm">{item.label}</span>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Right Column - Equipment */}
-          <div className="lg:col-span-1">
-            <div className="bg-background/50 rounded-2xl p-8 border border-border/50 h-full">
-              <h3 className="font-display text-2xl text-foreground mb-8">
-                Nos Équipements
-              </h3>
-              <div className="space-y-6">
-                {[
-                  { icon: Bath, label: "Salle d'eau privative" },
-                  { icon: Tv, label: "TV écran plat" },
-                  { icon: Briefcase, label: "Espace bureau" },
-                  { icon: Wifi, label: "Wi-Fi gratuit" },
-                  { icon: CupSoda, label: "Plateau de courtoisie" },
-                  { icon: Snowflake, label: "Climatisation" },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-4"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <p className="text-foreground font-medium">{item.label}</p>
-                  </div>
-                ))}
+        {/* Rooms Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {rooms.map((room, index) => (
+            <div
+              key={index}
+              className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 flex flex-col h-full"
+            >
+              {/* Image */}
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={room.image}
+                  alt={room.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-display text-xl text-foreground mb-2">
+                  {room.name}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4 flex-1">
+                  {room.description}
+                </p>
+                <Button variant="outline" size="sm" className="w-full mt-auto">
+                  Voir les détails
+                </Button>
               </div>
             </div>
-          </div>
+          ))}
         </div>
 
       </div>
