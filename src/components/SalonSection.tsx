@@ -109,32 +109,39 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
           </div>
 
           {/* Content */}
-          <div className={`${reverse ? "lg:order-1 lg:pr-8" : "lg:order-2 lg:pl-8"}`}>
-            {/* Decorative line */}
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-px w-12 bg-primary" />
+          <div className={`${reverse ? "lg:order-1 lg:pr-8" : "lg:order-2 lg:pl-8"} relative`}>
+            {/* Vertical decorative line */}
+            <div className={`absolute top-0 bottom-0 ${reverse ? 'right-0 lg:-right-4' : 'left-0 lg:-left-4'} hidden lg:block`}>
+              <div className="h-full w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
+              <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary/40" />
+            </div>
+
+            {/* Surface badge */}
+            <div className="inline-flex items-center gap-3 mb-6 bg-primary/5 border border-primary/10 rounded-full px-4 py-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
               <span className="text-primary font-medium text-sm uppercase tracking-widest">{salon.surface}</span>
             </div>
 
-            <h3 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+            <h3 className="font-display text-3xl md:text-4xl text-foreground mb-3">
               {salon.name}
             </h3>
             
             {salon.capacities.length > 0 && (
-              <p className="text-muted-foreground mb-6">
-                Capacité jusqu'à <span className="text-primary font-semibold">{Math.max(...salon.capacities.map(c => c.count))}</span> personnes
+              <p className="text-muted-foreground mb-6 flex items-center gap-2">
+                <span className="w-8 h-px bg-primary/30" />
+                Jusqu'à <span className="text-primary font-semibold">{Math.max(...salon.capacities.map(c => c.count))}</span> personnes
               </p>
             )}
 
-            <p className="text-muted-foreground leading-relaxed mb-8 text-[15px]">
+            <p className="text-muted-foreground leading-relaxed mb-8 text-[15px] border-l-2 border-primary/20 pl-4">
               {salon.description}
             </p>
 
             {/* Capacity Section */}
             {salon.capacities.length > 0 && (
-              <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-primary/10">
+              <div className="flex flex-wrap items-center gap-4">
                 {salon.capacities.map((capacity, idx) => (
-                  <div key={idx} className="flex items-center gap-3 bg-primary/5 px-4 py-3 rounded-lg">
+                  <div key={idx} className="flex items-center gap-3 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/10 px-5 py-3 rounded-xl hover:border-primary/30 transition-colors">
                     <img 
                       src={capacityIcons[capacity.icon]} 
                       alt={capacity.label}
@@ -142,8 +149,8 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
                       style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(1500%) hue-rotate(330deg) brightness(85%)' }}
                     />
                     <div>
-                      <div className="font-display text-lg text-primary leading-none">{capacity.count}</div>
-                      <div className="text-xs text-muted-foreground">{capacity.label}</div>
+                      <div className="font-display text-xl text-primary leading-none">{capacity.count}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{capacity.label}</div>
                     </div>
                   </div>
                 ))}
