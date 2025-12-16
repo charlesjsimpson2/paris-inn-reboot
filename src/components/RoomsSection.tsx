@@ -107,9 +107,25 @@ export const RoomsSection = () => {
 
         {/* Carousel */}
         <div className="relative">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Navigation arrows on sides */}
+          <button
+            onClick={goToPrev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30 -translate-x-1/2 hidden lg:flex"
+            aria-label="Chambre précédente"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30 translate-x-1/2 hidden lg:flex"
+            aria-label="Chambre suivante"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          <div className="grid lg:grid-cols-2 gap-6 items-center">
             {/* Content Side - Left */}
-            <div className="relative min-h-[300px] order-2 lg:order-1">
+            <div className="relative order-2 lg:order-1">
               {rooms.map((room, index) => (
                 <div
                   key={index}
@@ -119,46 +135,44 @@ export const RoomsSection = () => {
                       : "opacity-0 translate-y-4 absolute inset-0 pointer-events-none"
                   }`}
                 >
-                  <h3 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground mb-2">
                     {room.name}
                   </h3>
-                  <div className="flex items-center gap-2 text-muted-foreground mb-4">
-                    <Users className="w-5 h-5 text-primary" />
-                    <span>{room.capacity}</span>
+                  <div className="flex items-center gap-2 text-muted-foreground mb-3">
+                    <Users className="w-4 h-4 text-primary" />
+                    <span className="text-sm">{room.capacity}</span>
                   </div>
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     {room.description}
                   </p>
                 </div>
               ))}
 
-              {/* Navigation and button in same row */}
               <div className="flex items-center justify-between">
                 <Button variant="gold" size="lg">
                   Réserver cette chambre
                 </Button>
+                <span className="text-foreground font-display text-lg">
+                  {currentIndex + 1}<span className="text-muted-foreground">/{rooms.length}</span>
+                </span>
+              </div>
 
-                <div className="flex items-center gap-3">
-                  <span className="text-foreground font-display text-lg">
-                    {currentIndex + 1}<span className="text-muted-foreground">/{rooms.length}</span>
-                  </span>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={goToPrev}
-                      className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
-                      aria-label="Chambre précédente"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={goToNext}
-                      className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
-                      aria-label="Chambre suivante"
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </button>
-                  </div>
-                </div>
+              {/* Mobile navigation */}
+              <div className="flex justify-center gap-3 mt-6 lg:hidden">
+                <button
+                  onClick={goToPrev}
+                  className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
+                  aria-label="Chambre précédente"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
+                  aria-label="Chambre suivante"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
             </div>
 
