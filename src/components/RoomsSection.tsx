@@ -92,7 +92,7 @@ export const RoomsSection = () => {
 
           {/* Right: Carousel */}
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl">
+            <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
               {rooms.map((room, index) => (
                 <img
                   key={index}
@@ -131,14 +131,14 @@ export const RoomsSection = () => {
               {/* Navigation arrows */}
               <button
                 onClick={goToPrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-2.5 rounded-full transition-all backdrop-blur-sm"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-2.5 transition-all backdrop-blur-sm"
                 aria-label="Chambre précédente"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-2.5 rounded-full transition-all backdrop-blur-sm"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-2.5 transition-all backdrop-blur-sm"
                 aria-label="Chambre suivante"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -158,10 +158,10 @@ export const RoomsSection = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className={`h-1 transition-all ${
                     index === currentIndex 
-                      ? "bg-primary w-6" 
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                      ? "bg-primary w-8" 
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-4"
                   }`}
                   aria-label={`Voir chambre ${index + 1}`}
                 />
@@ -188,7 +188,7 @@ export const RoomsSection = () => {
                 key={index}
                 className="flex flex-col items-center gap-3 text-center group"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <item.icon className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-sm text-muted-foreground">{item.label}</span>

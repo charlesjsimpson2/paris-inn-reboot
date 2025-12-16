@@ -49,7 +49,7 @@ export const BreakfastSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center gap-2 p-4 bg-background rounded-xl border border-border/50"
+                  className="flex flex-col items-center gap-2 p-4 bg-background border border-border/50"
                 >
                   <feature.icon className="w-6 h-6 text-primary" />
                   <span className="text-sm text-muted-foreground text-center">
@@ -62,15 +62,13 @@ export const BreakfastSection = () => {
 
           {/* Image Side - Right */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <div className="aspect-[4/3] overflow-hidden shadow-xl">
               <img
                 src={breakfastImage}
                 alt="Petit déjeuner buffet à l'hôtel"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
           </div>
         </div>
 
@@ -78,21 +76,19 @@ export const BreakfastSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Side - Left */}
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <div className="aspect-[4/3] overflow-hidden shadow-xl">
               <img
                 src={barImage}
                 alt="Bar convivial de l'hôtel"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
           </div>
 
           {/* Content Side - Right */}
           <div className="space-y-6 order-1 lg:order-2">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-primary/10 flex items-center justify-center">
                 <Wine className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-display text-2xl md:text-3xl text-foreground">

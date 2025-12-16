@@ -36,7 +36,7 @@ export const IntroSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-charcoal/50 border border-border/30"
+                  className="flex items-center gap-2 px-4 py-2 bg-charcoal/50 border border-border/30"
                 >
                   {feature.stars ? (
                     <div className="flex items-center gap-0.5 text-primary">
@@ -55,7 +55,7 @@ export const IntroSection = () => {
 
           {/* Right: Image */}
           <div className="relative group">
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="overflow-hidden shadow-xl">
               <img
                 src={vueBalcon}
                 alt="Vue depuis le balcon de l'hôtel sur Paris"
