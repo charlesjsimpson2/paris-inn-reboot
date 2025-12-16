@@ -13,20 +13,7 @@ export const BreakfastSection = () => {
     <section id="petit-dejeuner" className="py-16 lg:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image Side */}
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={breakfastImage}
-                alt="Petit déjeuner buffet à l'hôtel"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
-          </div>
-
-          {/* Content Side */}
+          {/* Content Side - Left */}
           <div className="space-y-6">
             <div>
               <span className="text-primary font-medium text-sm uppercase tracking-wider">
@@ -67,6 +54,19 @@ export const BreakfastSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Image Side - Right */}
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={breakfastImage}
+                alt="Petit déjeuner buffet à l'hôtel"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Decorative element */}
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
           </div>
         </div>
       </div>
