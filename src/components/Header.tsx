@@ -6,7 +6,7 @@ import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
 const navItems = [
   { name: "Accueil", href: "/" },
-  { name: "Nos Chambres", href: "#chambres" },
+  { name: "Nos Chambres", href: "/nos-chambres" },
   { name: "Séminaires", href: "#seminaire" },
   { name: "Petit Déjeuner", href: "#services" },
   { name: "Localisation", href: "#localisation" },
