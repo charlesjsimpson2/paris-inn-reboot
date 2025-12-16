@@ -1,5 +1,6 @@
-import { Coffee, Croissant, Apple, Egg } from "lucide-react";
+import { Coffee, Croissant, Apple, Egg, Wine } from "lucide-react";
 import breakfastImage from "@/assets/petit-dejeuner.jpg";
+import barImage from "@/assets/bar-hotel.jpg";
 
 const features = [
   { icon: Coffee, label: "Boissons chaudes" },
@@ -12,17 +13,23 @@ export const BreakfastSection = () => {
   return (
     <section id="petit-dejeuner" className="py-16 lg:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+            À votre service
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground">
+            Petit-déjeuner & Bar
+          </h2>
+        </div>
+
+        {/* Petit-déjeuner */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Content Side - Left */}
           <div className="space-y-6">
-            <div>
-              <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-                Chaque matin
-              </p>
-              <h2 className="font-display text-4xl md:text-5xl text-foreground">
-                Le petit déjeuner qui donne le sourire !
-              </h2>
-            </div>
+            <h3 className="font-display text-2xl md:text-3xl text-foreground">
+              Le petit déjeuner qui donne le sourire !
+            </h3>
 
             <p className="text-muted-foreground leading-relaxed">
               Chaque matin, faites le plein d'énergie avec notre petit déjeuner complet, 
@@ -67,6 +74,44 @@ export const BreakfastSection = () => {
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
+          </div>
+        </div>
+
+        {/* Bar */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image Side - Left */}
+          <div className="relative order-2 lg:order-1">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={barImage}
+                alt="Bar convivial de l'hôtel"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Decorative element */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
+          </div>
+
+          {/* Content Side - Right */}
+          <div className="space-y-6 order-1 lg:order-2">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Wine className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl text-foreground">
+                Un bar convivial pour se détendre
+              </h3>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed">
+              À tout moment de la journée, installez-vous au bar de l'hôtel pour partager 
+              un verre, échanger ou simplement faire une pause.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              Dans une ambiance accueillante et décontractée, c'est l'endroit idéal pour 
+              se retrouver après une journée bien remplie.
+            </p>
           </div>
         </div>
       </div>
