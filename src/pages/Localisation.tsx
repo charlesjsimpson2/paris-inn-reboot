@@ -88,14 +88,17 @@ const Localisation = () => {
                 {transports.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-md group"
+                    className="flex items-center gap-5 p-5 rounded-xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-md group"
                   >
-                    <div className={`w-10 h-10 rounded-lg ${item.color} flex items-center justify-center shrink-0 shadow-md`}>
-                      <span className="text-white font-bold text-sm">{item.time}</span>
+                    <div className="relative shrink-0">
+                      <div className="w-14 h-14 rounded-xl bg-burgundy/10 border border-burgundy/20 flex flex-col items-center justify-center">
+                        <span className="text-burgundy font-display text-lg leading-none">{item.time.replace(' min', '')}</span>
+                        <span className="text-burgundy/70 text-[10px] uppercase tracking-wide">min</span>
+                      </div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-foreground font-medium text-sm">{item.type}</p>
-                      <p className="text-muted-foreground text-xs">{item.lines} • {item.stop}</p>
+                      <p className="text-foreground font-medium text-base mb-1">{item.type}</p>
+                      <p className="text-muted-foreground text-sm">{item.lines} • {item.stop}</p>
                     </div>
                   </div>
                 ))}
