@@ -145,7 +145,7 @@ const Seminaires = () => {
               Nos salles de réunion
             </h2>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <SalonAccordion salons={salonsData} />
           </div>
         </div>
