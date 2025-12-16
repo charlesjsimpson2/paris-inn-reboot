@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
@@ -18,7 +18,8 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   
-  // Check if we're on a page with hero image
+  // Check if we're on homepage or a page with hero image
+  const isHomePage = location.pathname === "/";
   const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires";
 
   useEffect(() => {
@@ -30,71 +31,101 @@ export const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled || isHeroPage
-          ? "bg-background/95 backdrop-blur-md shadow-elegant py-4"
-          : "bg-transparent py-8"
-      }`}
-    >
-      {/* Top bar - hidden on hero pages */}
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Top bar with contact info - visible on homepage when not scrolled */}
       <div
-        className={`container mx-auto px-4 mb-4 transition-all duration-300 ${
-          isScrolled || isHeroPage ? "hidden" : "block"
+        className={`transition-all duration-500 ${
+          isScrolled || isHeroPage ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
         }`}
       >
-        <div className="flex items-center justify-end gap-4">
-          <a
-            href="tel:+33144240101"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-foreground font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="text-sm">+33 (0)1 44 24 01 01</span>
-          </a>
-          <a
-            href="mailto:hid.paris13@gmail.com"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-foreground font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
-          >
-            <Mail className="w-4 h-4" />
-            <span className="text-sm">hid.paris13@gmail.com</span>
-          </a>
+        <div className="bg-charcoal/80 backdrop-blur-sm border-b border-border/30">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center justify-between">
+              {/* Left: Address */}
+              <div className="hidden md:flex items-center gap-2 text-muted-foreground">
+                <MapPin className="w-4 h-4 text-burgundy" />
+                <span className="text-sm">211 Bd Vincent Auriol, 75013 Paris</span>
+              </div>
+              
+              {/* Right: Contact info + Button */}
+              <div className="flex items-center gap-4 ml-auto">
+                <a
+                  href="tel:+33144240101"
+                  className="flex items-center gap-2 text-foreground hover:text-burgundy transition-colors"
+                >
+                  <div className="w-8 h-8 rounded-full bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-burgundy" />
+                  </div>
+                  <span className="text-sm font-medium hidden sm:inline">+33 (0)1 44 24 01 01</span>
+                </a>
+                <a
+                  href="mailto:hid.paris13@gmail.com"
+                  className="flex items-center gap-2 text-foreground hover:text-burgundy transition-colors"
+                >
+                  <div className="w-8 h-8 rounded-full bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-burgundy" />
+                  </div>
+                  <span className="text-sm font-medium hidden sm:inline">hid.paris13@gmail.com</span>
+                </a>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="bg-burgundy hover:bg-burgundy/90 text-white border-burgundy px-4"
+                >
+                  Contactez-nous
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Main navigation */}
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between relative">
-          {/* Burger Menu - Left - LARGER */}
-          <button
-            className={`group px-8 py-4 rounded-full border-2 transition-all duration-300 flex items-center gap-4 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
-              isHeroPage 
-                ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
-                : "border-primary bg-primary/10 text-foreground hover:bg-primary hover:text-primary-foreground"
-            }`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Menu"
-          >
-            <Menu className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-            <span className="text-base font-bold uppercase tracking-widest">Menu</span>
-          </button>
+      <div
+        className={`transition-all duration-500 ${
+          isScrolled || isHeroPage
+            ? "bg-background/95 backdrop-blur-md shadow-elegant py-4"
+            : "bg-transparent py-6"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center justify-between relative">
+            {/* Burger Menu - Left - LARGER */}
+            <button
+              className={`group px-8 py-4 rounded-full border-2 transition-all duration-300 flex items-center gap-4 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
+                isHeroPage || isScrolled
+                  ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
+                  : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
+              }`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Menu"
+            >
+              <Menu className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+              <span className="text-base font-bold uppercase tracking-widest">Menu</span>
+            </button>
 
-          {/* Logo - Center - LARGER */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
-            <img 
-              src={logoHotel} 
-              alt="Hotel Inn Paris" 
-              className="h-14 md:h-16 w-auto"
-            />
-          </Link>
+            {/* Logo - Center - LARGER */}
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
+              <img 
+                src={logoHotel} 
+                alt="Hotel Inn Paris" 
+                className="h-14 md:h-16 w-auto"
+              />
+            </Link>
 
-          {/* Réserver Button - Right - LARGER */}
-          <Button variant="gold" size="xl" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <span className="flex items-center gap-3">
-              Réserver
-              <span className="text-sm bg-white/20 px-3 py-1 rounded-full">-10%</span>
-            </span>
-          </Button>
-        </nav>
+            {/* Réserver Button - Right - LARGER */}
+            <Button 
+              variant="gold" 
+              size="xl" 
+              className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy"
+            >
+              <span className="flex items-center gap-3">
+                Réserver
+                <span className="text-sm bg-white/20 px-3 py-1 rounded-full">-10%</span>
+              </span>
+            </Button>
+          </nav>
+        </div>
       </div>
 
       {/* Slide-out Menu */}
