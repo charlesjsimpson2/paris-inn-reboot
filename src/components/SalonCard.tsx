@@ -107,7 +107,7 @@ export const SalonCard = ({
               <img
                 src={images[currentIndex].src}
                 alt={images[currentIndex].alt}
-                className="w-full h-full object-cover transition-opacity duration-500"
+                className="w-full h-full object-cover"
               />
               
               {/* Navigation Arrows */}
@@ -147,9 +147,6 @@ export const SalonCard = ({
           {/* Content */}
           <div className={`space-y-6 ${reversed ? 'lg:order-1' : ''}`}>
             <div>
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                {name}
-              </h2>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
                 {name}
               </h2>
