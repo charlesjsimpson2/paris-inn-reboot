@@ -77,7 +77,7 @@ export const RoomsSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg">
-              En savoir plus
+              Voir toutes nos chambres
             </Button>
             <Button variant="gold" size="lg">
               Réserver une chambre
@@ -177,12 +177,6 @@ export const RoomsSection = () => {
             </button>
           </div>
 
-          {/* Link to Chambres page */}
-          <div className="text-center mt-10">
-            <Button variant="outline" size="lg" className="px-8">
-              Voir toutes nos chambres
-            </Button>
-          </div>
         </div>
       </div>
     </section>
