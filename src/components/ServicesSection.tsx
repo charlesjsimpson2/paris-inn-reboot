@@ -53,9 +53,9 @@ export const ServicesSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {/* Accueil à l'hôtel + Infos pratiques */}
-          <div className="bg-secondary/30 rounded-2xl p-8 border border-border/30">
+          <div className="bg-secondary/30 p-8 border border-border/30">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10 rounded-lg">
+              <div className="p-2 bg-primary/10">
                 <Clock className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-display text-xl text-foreground">Accueil & Infos pratiques</h3>
@@ -78,9 +78,9 @@ export const ServicesSection = () => {
           </div>
 
           {/* Restaurant à proximité */}
-          <div className="bg-secondary/30 rounded-2xl p-8 border border-border/30">
+          <div className="bg-secondary/30 p-8 border border-border/30">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10 rounded-lg">
+              <div className="p-2 bg-primary/10">
                 <Utensils className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-display text-xl text-foreground">Restaurant à proximité</h3>
@@ -91,9 +91,9 @@ export const ServicesSection = () => {
           </div>
 
           {/* Tourisme */}
-          <div className="bg-secondary/30 rounded-2xl p-8 border border-border/30">
+          <div className="bg-secondary/30 p-8 border border-border/30">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10 rounded-lg">
+              <div className="p-2 bg-primary/10">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-display text-xl text-foreground">Tourisme</h3>

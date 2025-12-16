@@ -59,7 +59,7 @@ export const SeminarSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Carousel */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+          <div className="relative aspect-[4/3] overflow-hidden shadow-lg">
             {images.map((image, index) => (
               <img
                 key={index}
@@ -74,14 +74,14 @@ export const SeminarSection = () => {
             {/* Navigation arrows */}
             <button
               onClick={goToPrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 rounded-full transition-all"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 transition-all"
               aria-label="Image précédente"
             >
               <ChevronLeft className="w-6 h-6 text-foreground" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 rounded-full transition-all"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 transition-all"
               aria-label="Image suivante"
             >
               <ChevronRight className="w-6 h-6 text-foreground" />
@@ -93,8 +93,8 @@ export const SeminarSection = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? "bg-primary w-6" : "bg-background/60"
+                  className={`h-1 transition-all ${
+                    index === currentIndex ? "bg-primary w-8" : "bg-background/60 w-4"
                   }`}
                   aria-label={`Aller à l'image ${index + 1}`}
                 />
@@ -119,7 +119,7 @@ export const SeminarSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center p-4 bg-background rounded-lg shadow-sm"
+                  className="flex flex-col items-center p-4 bg-background border border-border/30"
                 >
                   <feature.icon className="w-8 h-8 text-primary mb-2" />
                   <span className="text-sm text-foreground font-medium">{feature.label}</span>
