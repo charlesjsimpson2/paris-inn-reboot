@@ -73,21 +73,19 @@ const PetitDejeuner = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroPetitDejeuner}
-            alt="Petit déjeuner à l'hôtel"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-        </div>
-        <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-12">
-            <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+      <section className="relative h-[60vh] min-h-[400px]">
+        <img 
+          src={heroPetitDejeuner} 
+          alt="Petit déjeuner à l'hôtel" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+          <div className="container mx-auto">
+            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 mb-4">
               Chaque matin
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground">
+            </span>
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
               Le petit déjeuner qui donne le sourire !
             </h1>
           </div>
