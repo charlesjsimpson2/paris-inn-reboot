@@ -96,15 +96,10 @@ export const RoomsSection = () => {
         </div>
 
         {/* Equipment Section */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
-              Le confort avant tout
-            </p>
-            <h3 className="font-display text-3xl md:text-4xl text-foreground">
-              Nos Équipements
-            </h3>
-          </div>
+        <div className="mt-20 pt-16 border-t border-border/30">
+          <h3 className="font-display text-2xl md:text-3xl text-foreground text-center mb-12">
+            Nos Équipements
+          </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
