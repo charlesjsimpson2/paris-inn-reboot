@@ -85,12 +85,9 @@ export const ServicesSection = () => {
               </div>
               <h3 className="font-display text-xl text-foreground">Restaurant à proximité</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
+            <p className="text-muted-foreground leading-relaxed text-sm">
               {services[2].description}
             </p>
-            <a href="#" className="text-primary hover:underline font-medium text-sm">
-              {services[2].link} →
-            </a>
           </div>
 
           {/* Tourisme */}
@@ -101,12 +98,9 @@ export const ServicesSection = () => {
               </div>
               <h3 className="font-display text-xl text-foreground">Tourisme</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
+            <p className="text-muted-foreground leading-relaxed text-sm">
               {services[3].description}
             </p>
-            <a href="#" className="text-primary hover:underline font-medium text-sm">
-              {services[3].link} →
-            </a>
           </div>
         </div>
       </div>
