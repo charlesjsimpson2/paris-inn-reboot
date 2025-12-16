@@ -1,5 +1,6 @@
 import { Clock, Car, Wifi, Wind, Briefcase, Plane, Utensils, MapPin } from "lucide-react";
 import receptionHotel from "@/assets/reception-hotel.jpg";
+import restaurantPlat from "@/assets/restaurant-plat.jpg";
 
 const services = [
   {
@@ -93,16 +94,23 @@ export const ServicesSection = () => {
           </div>
 
           {/* Restaurant à proximité */}
-          <div className="bg-secondary/30 p-8 border border-border/30">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10">
-                <Utensils className="w-5 h-5 text-primary" />
+          <div className="bg-secondary/30 border border-border/30 overflow-hidden">
+            <img 
+              src={restaurantPlat} 
+              alt="Plat gastronomique" 
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-primary/10">
+                  <Utensils className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="font-display text-xl text-foreground">Restaurant à proximité</h3>
               </div>
-              <h3 className="font-display text-xl text-foreground">Restaurant à proximité</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {services[2].description}
+              </p>
             </div>
-            <p className="text-muted-foreground leading-relaxed text-sm">
-              {services[2].description}
-            </p>
           </div>
 
           {/* Tourisme */}
