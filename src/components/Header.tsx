@@ -11,6 +11,7 @@ const navItems = [
   { name: "Petit Déjeuner", href: "#services" },
   { name: "Localisation", href: "#localisation" },
   { name: "Actualités", href: "/actualites" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Header = () => {
