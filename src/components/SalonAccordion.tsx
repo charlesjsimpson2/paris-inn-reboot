@@ -146,6 +146,7 @@ export const SalonAccordion = ({ salons }: SalonAccordionProps) => {
                             src={capacityIcons[capacity.icon]} 
                             alt={capacity.label}
                             className="w-16 h-16 object-contain"
+                            style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(1500%) hue-rotate(330deg) brightness(85%)' }}
                           />
                         </div>
                         <div className="font-display text-2xl text-primary">{capacity.count}</div>
