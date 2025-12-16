@@ -42,10 +42,11 @@ export const SeminarSection = () => {
   }, []);
 
   return (
-    <section id="seminaire" className="py-20 bg-muted/30">
+    <section id="seminaire" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* Header with vertical line */}
+        <div className="text-center mb-12 relative">
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-6 bg-primary/40" />
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
             Espace professionnel
           </p>
