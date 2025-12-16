@@ -23,33 +23,31 @@ export const IntroSection = () => {
         </div>
 
         {/* Content: Text + Stats side by side */}
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center mb-10">
-          {/* Left: Text */}
-          <div>
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10 items-center mb-10">
+          {/* Left: Text - 3 cols */}
+          <div className="lg:col-span-3">
             <p className="text-muted-foreground text-lg leading-relaxed">
               Situé au cœur du 13ᵉ arrondissement, l'Hôtel Inn Design Paris bénéficie d'un emplacement idéal, à proximité de la Butte-aux-Cailles, des parcs et des quais. Notre hôtel propose 70 chambres confortables, un parking privé et sécurisé, ainsi qu'un bar convivial et un espace d'accueil propice à la détente ou aux échanges professionnels.
             </p>
           </div>
 
-          {/* Right: Stats 2x2 grid */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Right: Stats compact - 2 cols */}
+          <div className="lg:col-span-2 grid grid-cols-2 gap-3">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center gap-2 p-5 rounded-xl bg-charcoal border border-border/50 hover:border-primary/30 transition-all hover:shadow-lg aspect-square"
+                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-charcoal/50 border border-border/30"
               >
                 {feature.stars ? (
-                  <div className="flex items-center gap-0.5 text-primary mb-1">
-                    <Star className="w-5 h-5 fill-primary" />
-                    <Star className="w-5 h-5 fill-primary" />
-                    <Star className="w-5 h-5 fill-primary" />
+                  <div className="flex items-center gap-0.5 text-primary shrink-0">
+                    <Star className="w-3.5 h-3.5 fill-primary" />
+                    <Star className="w-3.5 h-3.5 fill-primary" />
+                    <Star className="w-3.5 h-3.5 fill-primary" />
                   </div>
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-1">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
+                  <feature.icon className="w-4 h-4 text-primary shrink-0" />
                 )}
-                <span className="text-foreground font-medium text-center text-sm">{feature.label}</span>
+                <span className="text-foreground text-sm">{feature.label}</span>
               </div>
             ))}
           </div>
