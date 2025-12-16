@@ -114,9 +114,11 @@ export const SalonAccordion = ({ salons }: SalonAccordionProps) => {
                 </h3>
                 <div className="flex items-center gap-4 mt-2">
                   <span className="text-primary font-semibold text-lg">{salon.surface}</span>
-                  <span className="text-muted-foreground">
-                    jusqu'à {Math.max(...salon.capacities.map(c => c.count))} personnes
-                  </span>
+                  {salon.capacities.length > 0 && (
+                    <span className="text-muted-foreground">
+                      jusqu'à {Math.max(...salon.capacities.map(c => c.count))} personnes
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
@@ -133,28 +135,30 @@ export const SalonAccordion = ({ salons }: SalonAccordionProps) => {
                   {salon.description}
                 </p>
 
-                {/* Capacity Section - Without burgundy background */}
-                <div>
-                  <h4 className="font-display text-xl text-foreground mb-6">
-                    Capacité selon la disposition
-                  </h4>
-                  <div className="grid grid-cols-3 gap-6">
-                    {salon.capacities.map((capacity, idx) => (
-                      <div key={idx} className="text-center p-4 rounded-xl bg-muted/30 border border-border/50">
-                        <div className="flex justify-center mb-3">
-                          <img 
-                            src={capacityIcons[capacity.icon]} 
-                            alt={capacity.label}
-                            className="w-16 h-16 object-contain"
-                            style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(1500%) hue-rotate(330deg) brightness(85%)' }}
-                          />
+                {/* Capacity Section - Only show if capacities exist */}
+                {salon.capacities.length > 0 && (
+                  <div>
+                    <h4 className="font-display text-xl text-foreground mb-6">
+                      Capacité selon la disposition
+                    </h4>
+                    <div className="grid grid-cols-3 gap-6">
+                      {salon.capacities.map((capacity, idx) => (
+                        <div key={idx} className="text-center p-4 rounded-xl bg-muted/30 border border-border/50">
+                          <div className="flex justify-center mb-3">
+                            <img 
+                              src={capacityIcons[capacity.icon]} 
+                              alt={capacity.label}
+                              className="w-16 h-16 object-contain"
+                              style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(1500%) hue-rotate(330deg) brightness(85%)' }}
+                            />
+                          </div>
+                          <div className="font-display text-2xl text-primary">{capacity.count}</div>
+                          <div className="text-sm text-muted-foreground mt-1">{capacity.label}</div>
                         </div>
-                        <div className="font-display text-2xl text-primary">{capacity.count}</div>
-                        <div className="text-sm text-muted-foreground mt-1">{capacity.label}</div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </AccordionContent>
