@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import pictoU from "@/assets/picto-salle-u.png";
 import pictoClasse from "@/assets/picto-salle-classe.png";
@@ -32,6 +32,14 @@ const capacityIcons = {
 const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Auto-play slideshow
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
@@ -46,14 +54,14 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
         />
       </div>
 
       <button
         type="button"
         onClick={goToPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg opacity-0 group-hover:opacity-100"
         aria-label="Image précédente"
       >
         <ChevronLeft className="w-5 h-5 text-charcoal" />
@@ -61,7 +69,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg opacity-0 group-hover:opacity-100"
         aria-label="Image suivante"
       >
         <ChevronRight className="w-5 h-5 text-charcoal" />
@@ -75,7 +83,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
             onClick={() => setCurrentIndex(index)}
             className={`w-2.5 h-2.5 rounded-full transition-all shadow-md ${
               index === currentIndex
-                ? "bg-primary scale-125"
+                ? "bg-burgundy scale-125"
                 : "bg-white/80 hover:bg-white"
             }`}
             aria-label={`Aller à l'image ${index + 1}`}
