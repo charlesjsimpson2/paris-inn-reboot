@@ -98,16 +98,18 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
       <div className={`relative z-10 min-h-[500px] lg:min-h-[550px] flex items-center ${reverse ? 'lg:justify-start' : 'lg:justify-end'}`}>
         <div className={`w-full lg:w-[50%] bg-background/95 backdrop-blur-sm lg:bg-background p-8 lg:p-10 ${reverse ? 'lg:ml-8' : 'lg:mr-8'} lg:my-12 lg:shadow-2xl lg:rounded-sm relative`}>
           
-          {/* Burgundy accent line */}
-          <div className={`absolute top-0 bottom-0 w-1.5 bg-primary ${reverse ? 'right-0' : 'left-0'}`} />
+          {/* Burgundy accent lines on both sides */}
+          <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-primary" />
+          <div className="absolute top-0 bottom-0 right-0 w-1.5 bg-primary" />
           
-          <div className={`${reverse ? 'lg:pr-6' : 'lg:pl-6'}`}>
-            {/* Surface */}
-            <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">{salon.surface}</span>
-
-            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mt-3 mb-4">
-              {salon.name}
-            </h3>
+          <div className="px-6">
+            {/* Name with Surface */}
+            <div className="flex items-baseline gap-3 mb-2">
+              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">
+                {salon.name}
+              </h3>
+              <span className="text-primary font-medium text-sm uppercase tracking-wider">{salon.surface}</span>
+            </div>
             
             {salon.capacities.length > 0 && (
               <p className="text-muted-foreground text-sm mb-5">
@@ -121,7 +123,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
 
             {/* Capacity Section */}
             {salon.capacities.length > 0 && (
-              <div className="flex flex-wrap items-center gap-6 pt-8 border-t border-border/50">
+              <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-border/50 mb-8">
                 {salon.capacities.map((capacity, idx) => (
                   <div key={idx} className="flex items-center gap-3 bg-muted/30 px-5 py-4 rounded-lg">
                     <img 
@@ -138,6 +140,14 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
                 ))}
               </div>
             )}
+
+            {/* CTA Button */}
+            <a
+              href="#contact"
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded font-medium transition-colors"
+            >
+              Demander un devis
+            </a>
           </div>
         </div>
       </div>
