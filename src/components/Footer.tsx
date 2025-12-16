@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
 export const Footer = () => {
   return (
@@ -8,13 +9,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
-            <div className="flex flex-col mb-6">
-              <span className="font-display text-2xl font-semibold text-foreground tracking-wide">
-                HÔTEL
-              </span>
-              <span className="font-display text-xl italic text-primary">
-                Inn Design
-              </span>
+            <div className="mb-6">
+              <img 
+                src={logoHotel} 
+                alt="Hôtel Inn Design Paris" 
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Un hôtel 3 étoiles au cœur du 13ème arrondissement de Paris, 
