@@ -304,7 +304,7 @@ const NosChambres = () => {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className={`${index === 0 ? "aspect-square" : "aspect-[4/3]"}`}>
+                <div className={`${index === 0 ? "aspect-[4/3]" : "aspect-[4/3]"} h-full`}>
                   <img
                     src={image.src}
                     alt={image.alt}
