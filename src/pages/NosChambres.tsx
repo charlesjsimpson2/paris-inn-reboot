@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Users, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda } from "lucide-react";
+import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
@@ -11,25 +11,21 @@ const rooms = [
   {
     name: "Chambre Double",
     description: "Lit de 160×200 cm. Profitez d'un espace élégant et confortable, idéal pour un séjour en couple ou en solo.",
-    capacity: "2 personnes",
     image: chambreDouble,
   },
   {
     name: "Chambre Twin",
     description: "2 lits de 100×200 cm. Parfaite pour les voyages entre amis ou collègues, avec tout le confort nécessaire.",
-    capacity: "2 personnes",
     image: chambreTwin,
   },
   {
     name: "Chambre Supérieure avec Balcon",
     description: "Profitez d'un espace extérieur privé avec vue sur Paris. Une expérience unique au cœur de la ville.",
-    capacity: "2 personnes",
     image: chambreSuperieureBalcon,
   },
   {
     name: "Chambres Communicantes",
     description: "2 chambres modulables avec portes communicantes. La solution idéale pour les familles ou groupes.",
-    capacity: "4 personnes",
     image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
   },
 ];
@@ -153,12 +149,6 @@ const NosChambres = () => {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                        
-                        {/* Capacity badge */}
-                        <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm text-foreground px-3 py-1.5 rounded-full text-sm font-medium flex items-center gap-2">
-                          <Users className="w-4 h-4 text-primary" />
-                          {room.capacity}
-                        </div>
                       </div>
                       
                       {/* Content */}
