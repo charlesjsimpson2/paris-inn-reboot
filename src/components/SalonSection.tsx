@@ -61,7 +61,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg opacity-0 group-hover:opacity-100"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
         aria-label="Image précédente"
       >
         <ChevronLeft className="w-5 h-5 text-charcoal" />
@@ -69,7 +69,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg opacity-0 group-hover:opacity-100"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
         aria-label="Image suivante"
       >
         <ChevronRight className="w-5 h-5 text-charcoal" />

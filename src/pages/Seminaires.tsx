@@ -136,19 +136,22 @@ const Seminaires = () => {
               </p>
             </div>
 
-            {/* Right: Equipment */}
-            <div className="grid grid-cols-2 gap-4">
-              {equipments.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 text-foreground"
-                >
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
+            {/* Right: Equipment - Elegant burgundy style */}
+            <div className="bg-burgundy/10 border border-burgundy/20 rounded-xl p-8">
+              <h3 className="font-display text-xl text-burgundy mb-6 text-center">Équipements inclus</h3>
+              <div className="grid grid-cols-2 gap-5">
+                {equipments.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 text-foreground"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-burgundy/15 flex items-center justify-center flex-shrink-0 border border-burgundy/30">
+                      <item.icon className="w-5 h-5 text-burgundy" />
+                    </div>
+                    <span className="text-sm font-medium">{item.label}</span>
                   </div>
-                  <span className="text-sm font-medium">{item.label}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
