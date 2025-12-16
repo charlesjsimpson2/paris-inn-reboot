@@ -106,24 +106,24 @@ export const RoomsSection = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative">
+        <div className="relative px-12 lg:px-16">
           {/* Navigation arrows on sides */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30 -translate-x-1/2 hidden lg:flex"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
             aria-label="Chambre précédente"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30 translate-x-1/2 hidden lg:flex"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
             aria-label="Chambre suivante"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
 
-          <div className="grid lg:grid-cols-2 gap-6 items-center">
+          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-6 items-center">
             {/* Content Side - Left */}
             <div className="relative order-2 lg:order-1">
               {rooms.map((room, index) => (
@@ -142,38 +142,15 @@ export const RoomsSection = () => {
                     <Users className="w-4 h-4 text-primary" />
                     <span className="text-sm">{room.capacity}</span>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
                     {room.description}
                   </p>
                 </div>
               ))}
 
-              <div className="flex items-center justify-between">
-                <Button variant="gold" size="lg">
-                  Réserver cette chambre
-                </Button>
-                <span className="text-foreground font-display text-lg">
-                  {currentIndex + 1}<span className="text-muted-foreground">/{rooms.length}</span>
-                </span>
-              </div>
-
-              {/* Mobile navigation */}
-              <div className="flex justify-center gap-3 mt-6 lg:hidden">
-                <button
-                  onClick={goToPrev}
-                  className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
-                  aria-label="Chambre précédente"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={goToNext}
-                  className="bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
-                  aria-label="Chambre suivante"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
+              <Button variant="gold" size="lg">
+                Réserver cette chambre
+              </Button>
             </div>
 
             {/* Image Side - Right */}
@@ -189,6 +166,13 @@ export const RoomsSection = () => {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Counter at bottom */}
+          <div className="flex justify-center mt-6">
+            <span className="text-foreground font-display text-lg">
+              {currentIndex + 1}<span className="text-muted-foreground">/{rooms.length}</span>
+            </span>
           </div>
         </div>
       </div>
