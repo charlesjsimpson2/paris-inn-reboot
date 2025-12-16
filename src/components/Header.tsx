@@ -7,7 +7,7 @@ import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 const navItems = [
   { name: "Accueil", href: "/" },
   { name: "Nos Chambres", href: "/nos-chambres" },
-  { name: "Séminaires", href: "#seminaire" },
+  { name: "Séminaires", href: "/seminaires" },
   { name: "Petit Déjeuner", href: "#services" },
   { name: "Localisation", href: "#localisation" },
   { name: "Actualités", href: "/actualites" },
@@ -19,7 +19,7 @@ export const Header = () => {
   const location = useLocation();
   
   // Check if we're on a page with hero image
-  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites";
+  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires";
 
   useEffect(() => {
     const handleScroll = () => {
