@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight, Users } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
@@ -46,6 +46,14 @@ export const RoomsSection = () => {
   const goToNext = () => {
     setCurrentIndex((prev) => (prev === rooms.length - 1 ? 0 : prev + 1));
   };
+
+  // Auto-play avec 7 secondes pour laisser le temps de lire
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev === rooms.length - 1 ? 0 : prev + 1));
+    }, 7000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section id="chambres" className="py-16 bg-charcoal">
