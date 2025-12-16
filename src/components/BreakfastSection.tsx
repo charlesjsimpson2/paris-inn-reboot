@@ -16,10 +16,10 @@ export const BreakfastSection = () => {
           {/* Content Side - Left */}
           <div className="space-y-6">
             <div>
-              <span className="text-primary font-medium text-sm uppercase tracking-wider">
+              <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
                 Chaque matin
-              </span>
-              <h2 className="font-display text-3xl lg:text-4xl text-foreground mt-2">
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl text-foreground">
                 Le petit déjeuner qui donne le sourire !
               </h2>
             </div>

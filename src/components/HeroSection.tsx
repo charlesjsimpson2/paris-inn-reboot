@@ -64,30 +64,55 @@ export const HeroSection = () => {
       >
         <ChevronRight className="w-6 h-6" />
       </button>
-      <div className="absolute bottom-20 left-0 z-10 px-6 md:px-12 lg:px-20 max-w-3xl">
-        <p className="text-white font-body uppercase tracking-[0.5em] text-base md:text-lg mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-          Bienvenue
-        </p>
-        <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-          Hôtel Inn Design
-        </h1>
-        <p className="text-3xl md:text-4xl text-white font-serif italic mb-6 animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-4 py-1 rounded">
-          Place d'Italie
-        </p>
-        <p className="font-body text-lg md:text-xl text-white/95 mb-8 animate-fade-in [animation-delay:600ms] leading-relaxed drop-shadow-md max-w-xl">
-          Un havre de paix et d'élégance au cœur du 13ème arrondissement.
-        </p>
+      {/* Hero Content - Two columns */}
+      <div className="absolute bottom-20 left-0 right-0 z-10 px-6 md:px-12 lg:px-20">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+          {/* Left: Text */}
+          <div className="max-w-2xl">
+            <p className="text-white font-body uppercase tracking-[0.5em] text-base md:text-lg mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+              Bienvenue
+            </p>
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+              Hôtel Inn Design
+            </h1>
+            <p className="text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-4 py-1 rounded">
+              Place d'Italie
+            </p>
+          </div>
+
+          {/* Right: Stats */}
+          <div className="flex flex-wrap lg:flex-col gap-3 animate-fade-in [animation-delay:600ms]">
+            {[
+              { label: "3 étoiles", icon: "★★★" },
+              { label: "70 chambres" },
+              { label: "Parking privé" },
+              { label: "Bar convivial" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 px-5 py-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
+              >
+                {item.icon ? (
+                  <span className="text-primary text-sm">{item.icon}</span>
+                ) : (
+                  <span className="w-2 h-2 rounded-full bg-primary" />
+                )}
+                <span className="text-white text-sm font-medium">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* Carousel Indicators - positioned bottom right */}
-      <div className="absolute bottom-20 right-6 md:right-12 lg:right-20 flex flex-col gap-2 z-20">
+      {/* Carousel Indicators - positioned bottom right above stats */}
+      <div className="absolute bottom-20 right-6 md:right-12 lg:right-20 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 flex lg:flex-col gap-2 z-20">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               current === index
-                ? "bg-primary h-8"
+                ? "bg-primary h-8 lg:h-2 lg:w-8"
                 : "bg-foreground/40 hover:bg-foreground/60"
             }`}
             aria-label={`Aller à l'image ${index + 1}`}

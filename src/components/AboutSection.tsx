@@ -40,7 +40,10 @@ export const AboutSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 uppercase tracking-wide">
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+            Emplacement idéal
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             Un hôtel situé au cœur de Paris
           </h2>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
