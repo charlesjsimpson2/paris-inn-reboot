@@ -66,9 +66,23 @@ export const RoomsSection = () => {
           <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             Chambres & Suites
           </h2>
-          <p className="text-muted-foreground">
-            Installez-vous confortablement dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées.
+          <p className="text-xl text-primary font-medium mb-4">
+            Posez vos valises et profitez !
           </p>
+          <p className="text-muted-foreground mb-3">
+            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            L'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille ou entre proches.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" size="lg">
+              En savoir plus
+            </Button>
+            <Button variant="gold" size="lg">
+              Réserver une chambre
+            </Button>
+          </div>
         </div>
 
         {/* Equipment Strip */}
