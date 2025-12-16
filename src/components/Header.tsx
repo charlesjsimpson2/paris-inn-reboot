@@ -81,7 +81,7 @@ export const Header = () => {
           </Link>
 
           {/* Réserver Button - Right */}
-          <Button variant="gold" size="lg" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-pulse hover:animate-none">
+          <Button variant="gold" size="lg" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-[pulse_3s_ease-in-out_infinite] hover:animate-none">
             <span className="flex items-center gap-2">
               Réserver
               <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">-10%</span>
