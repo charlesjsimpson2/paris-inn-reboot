@@ -128,28 +128,6 @@ export const RoomsSection = () => {
           </div>
         </div>
 
-        {/* Features Bar */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Wifi, label: "Wi-Fi Gratuit", desc: "Haut débit" },
-            { icon: Coffee, label: "Petit Déjeuner", desc: "7h - 10h" },
-            { icon: Car, label: "Parking Privé", desc: "Sécurisé" },
-            { icon: Users, label: "Séminaires", desc: "Sur demande" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-4 p-4 rounded-lg bg-background/50"
-            >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <item.icon className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p className="font-medium text-foreground">{item.label}</p>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
