@@ -10,6 +10,7 @@ import NosChambres from "./pages/NosChambres";
 import Seminaires from "./pages/Seminaires";
 import Contact from "./pages/Contact";
 import Localisation from "./pages/Localisation";
+import PetitDejeuner from "./pages/PetitDejeuner";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/nos-chambres" element={<NosChambres />} />
           <Route path="/seminaires" element={<Seminaires />} />
+          <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
           <Route path="/actualites" element={<Actualites />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/localisation" element={<Localisation />} />
