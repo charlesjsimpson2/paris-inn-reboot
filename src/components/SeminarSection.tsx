@@ -125,9 +125,14 @@ export const SeminarSection = () => {
               ))}
             </div>
 
-            <Button variant="gold" size="lg">
-              Demander un devis
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button variant="gold" size="lg">
+                Demander un devis
+              </Button>
+              <Button variant="elegant" size="lg">
+                Découvrir nos salles
+              </Button>
+            </div>
           </div>
         </div>
       </div>
