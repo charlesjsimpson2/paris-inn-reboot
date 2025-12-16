@@ -33,13 +33,13 @@ export const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled || isHeroPage
-          ? "bg-background/95 backdrop-blur-md shadow-elegant py-3"
-          : "bg-transparent py-6"
+          ? "bg-background/95 backdrop-blur-md shadow-elegant py-4"
+          : "bg-transparent py-8"
       }`}
     >
       {/* Top bar - hidden on hero pages */}
       <div
-        className={`container mx-auto px-4 mb-3 transition-all duration-300 ${
+        className={`container mx-auto px-4 mb-4 transition-all duration-300 ${
           isScrolled || isHeroPage ? "hidden" : "block"
         }`}
       >
@@ -64,9 +64,9 @@ export const Header = () => {
       {/* Main navigation */}
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between relative">
-          {/* Burger Menu - Left */}
+          {/* Burger Menu - Left - LARGER */}
           <button
-            className={`group px-6 py-3 rounded-full border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
+            className={`group px-8 py-4 rounded-full border-2 transition-all duration-300 flex items-center gap-4 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
               isHeroPage 
                 ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
                 : "border-primary bg-primary/10 text-foreground hover:bg-primary hover:text-primary-foreground"
@@ -74,24 +74,24 @@ export const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
-            <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
-            <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
+            <Menu className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+            <span className="text-base font-bold uppercase tracking-widest">Menu</span>
           </button>
 
-          {/* Logo - Center */}
+          {/* Logo - Center - LARGER */}
           <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
             <img 
               src={logoHotel} 
               alt="Hotel Inn Paris" 
-              className="h-10 md:h-12 w-auto"
+              className="h-14 md:h-16 w-auto"
             />
           </Link>
 
-          {/* Réserver Button - Right */}
-          <Button variant="gold" size="default" className="z-10 px-6 py-5 text-sm font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <span className="flex items-center gap-2">
+          {/* Réserver Button - Right - LARGER */}
+          <Button variant="gold" size="xl" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <span className="flex items-center gap-3">
               Réserver
-              <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">-10%</span>
+              <span className="text-sm bg-white/20 px-3 py-1 rounded-full">-10%</span>
             </span>
           </Button>
         </nav>
