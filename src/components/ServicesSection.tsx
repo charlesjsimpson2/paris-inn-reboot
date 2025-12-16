@@ -51,38 +51,27 @@ export const ServicesSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Accueil à l'hôtel */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Accueil à l'hôtel + Infos pratiques */}
           <div className="bg-secondary/30 rounded-2xl p-8 border border-border/30">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-primary/10 rounded-lg">
                 <Clock className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-display text-xl text-foreground">Accueil à l'hôtel</h3>
+              <h3 className="font-display text-xl text-foreground">Accueil & Infos pratiques</h3>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {services[0].items?.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <item.icon className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground">{item.text}</span>
+                  <span className="text-muted-foreground text-sm">{item.text}</span>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Infos pratiques */}
-          <div className="bg-secondary/30 rounded-2xl p-8 border border-border/30">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10 rounded-lg">
-                <Wifi className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-display text-xl text-foreground">Infos pratiques</h3>
-            </div>
-            <div className="space-y-4">
+              <div className="border-t border-border/30 my-4"></div>
               {services[1].items?.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <item.icon className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground">{item.text}</span>
+                  <span className="text-muted-foreground text-sm">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -96,10 +85,10 @@ export const ServicesSection = () => {
               </div>
               <h3 className="font-display text-xl text-foreground">Restaurant à proximité</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
               {services[2].description}
             </p>
-            <a href="#" className="text-primary hover:underline font-medium">
+            <a href="#" className="text-primary hover:underline font-medium text-sm">
               {services[2].link} →
             </a>
           </div>
@@ -112,10 +101,10 @@ export const ServicesSection = () => {
               </div>
               <h3 className="font-display text-xl text-foreground">Tourisme</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
               {services[3].description}
             </p>
-            <a href="#" className="text-primary hover:underline font-medium">
+            <a href="#" className="text-primary hover:underline font-medium text-sm">
               {services[3].link} →
             </a>
           </div>
