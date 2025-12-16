@@ -53,6 +53,14 @@ export const RoomsSection = () => {
           <p className="text-muted-foreground mt-4">
             Pour répondre à tous les besoins, l'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Button variant="outline" size="lg">
+              En savoir plus
+            </Button>
+            <Button size="lg">
+              Réservez une chambre
+            </Button>
+          </div>
         </div>
 
         {/* Rooms Grid */}
