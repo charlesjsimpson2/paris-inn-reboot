@@ -17,6 +17,9 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  
+  // Check if we're on a page with hero image
+  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,15 +32,15 @@ export const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isScrolled || isHeroPage
           ? "bg-background/95 backdrop-blur-md shadow-elegant py-3"
           : "bg-transparent py-6"
       }`}
     >
-      {/* Top bar */}
+      {/* Top bar - hidden on hero pages */}
       <div
         className={`container mx-auto px-4 mb-3 transition-all duration-300 ${
-          isScrolled ? "hidden" : "block"
+          isScrolled || isHeroPage ? "hidden" : "block"
         }`}
       >
         <div className="flex items-center justify-end gap-4">
@@ -63,12 +66,16 @@ export const Header = () => {
         <nav className="flex items-center justify-between relative">
           {/* Burger Menu - Left */}
           <button
-            className="group text-foreground px-6 py-3.5 rounded-full border-2 border-primary bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105"
+            className={`group px-6 py-3 rounded-full border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
+              isHeroPage 
+                ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
+                : "border-primary bg-primary/10 text-foreground hover:bg-primary hover:text-primary-foreground"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
-            <Menu className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-            <span className="text-base font-bold uppercase tracking-widest">Menu</span>
+            <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+            <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
           </button>
 
           {/* Logo - Center */}
@@ -76,12 +83,12 @@ export const Header = () => {
             <img 
               src={logoHotel} 
               alt="Hotel Inn Paris" 
-              className="h-12 md:h-16 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </Link>
 
           {/* Réserver Button - Right */}
-          <Button variant="gold" size="lg" className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-[pulse_3s_ease-in-out_infinite] hover:animate-none">
+          <Button variant="gold" size="default" className="z-10 px-6 py-5 text-sm font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             <span className="flex items-center gap-2">
               Réserver
               <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">-10%</span>
