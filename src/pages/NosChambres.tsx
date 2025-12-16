@@ -296,7 +296,7 @@ const NosChambres = () => {
                 data-index={index}
                 onClick={() => openLightbox(index)}
                 className={`relative overflow-hidden rounded-xl group cursor-pointer transition-all duration-700 ${
-                  index === 0 ? "col-span-2 row-span-2" : ""
+                  index === 0 ? "col-span-2" : ""
                 } ${
                   visibleItems.includes(index)
                     ? "opacity-100 translate-y-0 scale-100"
@@ -304,7 +304,7 @@ const NosChambres = () => {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className={`${index === 0 ? "aspect-square" : "aspect-[4/3]"}`}>
+                <div className="aspect-[4/3]">
                   <img
                     src={image.src}
                     alt={image.alt}
