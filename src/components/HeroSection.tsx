@@ -77,14 +77,6 @@ export const HeroSection = () => {
         <p className="font-body text-lg md:text-xl text-white/95 mb-8 animate-fade-in [animation-delay:600ms] leading-relaxed drop-shadow-md max-w-xl">
           Un havre de paix et d'élégance au cœur du 13ème arrondissement.
         </p>
-        <div className="flex flex-wrap gap-4 animate-fade-in [animation-delay:800ms]">
-          <Button variant="gold" size="lg" className="px-8 py-6 text-base font-bold shadow-xl">
-            Réserver
-          </Button>
-          <Button variant="elegant" size="lg" className="px-8 py-6 text-base font-bold border-white text-white hover:bg-white hover:text-foreground shadow-xl">
-            Découvrir
-          </Button>
-        </div>
       </div>
 
       {/* Carousel Indicators - positioned bottom right */}
