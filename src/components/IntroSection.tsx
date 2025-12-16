@@ -17,12 +17,14 @@ export const IntroSection = () => {
             Un hôtel bien placé pour tout faire !
           </h2>
           
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Situé au cœur du 13ᵉ arrondissement, l'Hôtel Inn Design Paris bénéficie d'un emplacement idéal, à proximité de la Butte-aux-Cailles, des parcs et des quais.
-          </p>
-          
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Nous proposons un hôtel 3 étoiles Place d'Italie avec 70 chambres confortables, un parking privé et sécurisé, ainsi qu'un bar convivial et un espace d'accueil propice à la détente ou aux échanges professionnels.
+            Situé au cœur du 13ᵉ arrondissement, l'Hôtel Inn Design Paris bénéficie d'un emplacement idéal, à proximité de la Butte-aux-Cailles, des parcs et des quais. Notre hôtel{" "}
+            <span className="inline-flex items-center gap-0.5 mx-1">
+              <Star className="w-4 h-4 text-primary fill-primary" />
+              <Star className="w-4 h-4 text-primary fill-primary" />
+              <Star className="w-4 h-4 text-primary fill-primary" />
+            </span>{" "}
+            70 chambres confortables, un parking privé et sécurisé, ainsi qu'un bar convivial et un espace d'accueil propice à la détente ou aux échanges professionnels.
           </p>
 
           {/* Features badges */}
