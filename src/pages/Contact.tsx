@@ -65,14 +65,14 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section - Same style as Chambres and Séminaires */}
-      <section className="relative h-[60vh] min-h-[400px]">
+      {/* Hero Section */}
+      <section className="relative h-[50vh] min-h-[350px]">
         <img 
           src={heroContact} 
           alt="Contactez-nous - Hôtel Inn Design Paris" 
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </section>
 
       {/* Contact Content */}
