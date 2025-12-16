@@ -75,11 +75,8 @@ export const RoomsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-10 pb-10 border-b border-border/30">
           {/* Left: Description */}
           <div>
-            <p className="text-muted-foreground mb-4">
-              Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
-            </p>
             <p className="text-muted-foreground mb-6">
-              L'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille ou entre proches.
+              Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous. L'hôtel propose également des <span className="font-semibold text-primary">chambres adaptées aux personnes à mobilité réduite</span> ainsi que des chambres communicantes, idéales pour les séjours en famille ou entre proches.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="outline" size="lg">
