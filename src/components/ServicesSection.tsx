@@ -1,4 +1,5 @@
 import { Clock, Car, Wifi, Wind, Briefcase, Plane, Utensils, MapPin } from "lucide-react";
+import receptionHotel from "@/assets/reception-hotel.jpg";
 
 const services = [
   {
@@ -18,7 +19,7 @@ const services = [
       { icon: Wifi, text: "Wifi gratuit" },
       { icon: Wind, text: "Climatisation" },
       { icon: Briefcase, text: "Bagagerie gratuite" },
-      { icon: Plane, text: "Taxi – Tarif unique pour l'aéroport" },
+      { icon: Plane, text: "Taxi – Tarif unique aéroport" },
     ],
     image: null,
   },
@@ -52,28 +53,42 @@ export const ServicesSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {/* Accueil à l'hôtel + Infos pratiques */}
-          <div className="bg-secondary/30 p-8 border border-border/30">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-primary/10">
-                <Clock className="w-5 h-5 text-primary" />
+          {/* Accueil à l'hôtel + Infos pratiques avec image */}
+          <div className="bg-secondary/30 border border-border/30 overflow-hidden">
+            <img 
+              src={receptionHotel} 
+              alt="Réception de l'hôtel" 
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-primary/10">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="font-display text-xl text-foreground">Accueil & Infos pratiques</h3>
               </div>
-              <h3 className="font-display text-xl text-foreground">Accueil & Infos pratiques</h3>
-            </div>
-            <div className="space-y-3">
-              {services[0].items?.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <item.icon className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground text-sm">{item.text}</span>
-                </div>
-              ))}
+              
+              {/* Accueil items */}
+              <div className="space-y-2 mb-4">
+                {services[0].items?.map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground text-sm">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              
               <div className="border-t border-border/30 my-4"></div>
-              {services[1].items?.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <item.icon className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground text-sm">{item.text}</span>
-                </div>
-              ))}
+              
+              {/* Infos pratiques en 2 colonnes */}
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                {services[1].items?.map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground text-xs">{item.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
