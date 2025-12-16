@@ -1,15 +1,8 @@
-import { Coffee, Croissant, Apple, Egg, Wine } from "lucide-react";
+import { Wine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import breakfastImage from "@/assets/petit-dejeuner.jpg";
 import barImage from "@/assets/bar-hotel.jpg";
-
-const features = [
-  { icon: Coffee, label: "Boissons chaudes" },
-  { icon: Croissant, label: "Viennoiseries" },
-  { icon: Apple, label: "Fruits frais" },
-  { icon: Egg, label: "Buffet salé" },
-];
 
 export const BreakfastSection = () => {
   return (
@@ -44,22 +37,6 @@ export const BreakfastSection = () => {
               charcuterie, blanc de dinde, fromages et yaourts nature bio. Et pour les 
               plus gourmands : confitures et crêpes moelleuses délicatement vanillées.
             </p>
-
-
-            {/* Features Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-2 p-4 bg-background border border-border/50"
-                >
-                  <feature.icon className="w-6 h-6 text-primary" />
-                  <span className="text-sm text-muted-foreground text-center">
-                    {feature.label}
-                  </span>
-                </div>
-              ))}
-            </div>
 
             <Button variant="gold" size="lg" asChild>
               <Link to="/petit-dejeuner">Découvrir notre petit-déjeuner</Link>
