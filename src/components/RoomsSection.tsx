@@ -116,14 +116,9 @@ export const RoomsSection = () => {
                     {room.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-4">
-                    <Button variant="gold" size="lg">
-                      Réserver cette chambre
-                    </Button>
-                    <Button variant="outline" size="lg">
-                      Voir les détails
-                    </Button>
-                  </div>
+                  <Button variant="gold" size="lg">
+                    Réserver cette chambre
+                  </Button>
                 </div>
               ))}
             </div>
@@ -166,6 +161,13 @@ export const RoomsSection = () => {
             >
               <ChevronRight className="w-6 h-6" />
             </button>
+          </div>
+
+          {/* Link to Chambres page */}
+          <div className="text-center mt-10">
+            <Button variant="outline" size="lg" className="px-8">
+              Voir toutes nos chambres
+            </Button>
           </div>
         </div>
       </div>
