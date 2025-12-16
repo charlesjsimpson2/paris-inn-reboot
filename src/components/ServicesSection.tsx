@@ -43,10 +43,10 @@ export const ServicesSection = () => {
     <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">
-            Nos services
-          </span>
-          <h2 className="font-display text-3xl lg:text-4xl text-foreground mt-2">
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+            À votre service
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground">
             Tout pour votre confort
           </h2>
         </div>

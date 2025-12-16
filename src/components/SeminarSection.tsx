@@ -46,11 +46,13 @@ export const SeminarSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+            Espace professionnel
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             Salle de séminaire
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-xl text-primary font-medium mb-4">
+          <p className="text-xl text-primary font-medium">
             Organisez vos réunions autrement !
           </p>
         </div>
