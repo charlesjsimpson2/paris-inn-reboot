@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -64,28 +65,24 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative h-[45vh] min-h-[350px] bg-gradient-to-br from-charcoal via-muted to-charcoal overflow-hidden">
-        <div className="absolute inset-0 bg-muted/30" />
-        
-        {/* Decorative icons */}
-        <div className="absolute inset-0 flex items-center justify-center gap-8 md:gap-16">
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-lg shadow-xl flex items-center justify-center transform -rotate-6 hover:rotate-0 transition-transform duration-500">
-            <Phone className="w-12 h-12 md:w-16 md:h-16 text-burgundy" />
-          </div>
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-lg shadow-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-500">
-            <Mail className="w-12 h-12 md:w-16 md:h-16 text-burgundy" />
-          </div>
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-lg shadow-xl flex items-center justify-center transform -rotate-3 hover:rotate-0 transition-transform duration-500 hidden sm:flex">
-            <span className="text-5xl md:text-6xl text-burgundy font-bold">@</span>
-          </div>
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-muted rounded-lg shadow-xl flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-500 hidden md:flex">
-            <MapPin className="w-12 h-12 md:w-16 md:h-16 text-burgundy" />
+      {/* Hero Section - Same style as Chambres and Séminaires */}
+      <section className="relative h-[60vh] min-h-[400px]">
+        <img 
+          src={heroContact} 
+          alt="Contactez-nous - Hôtel Inn Design Paris" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+          <div className="container mx-auto">
+            <span className="inline-block bg-burgundy text-white font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+              Contact
+            </span>
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
+              Contactez-nous
+            </h1>
           </div>
         </div>
-
-        {/* Burgundy line at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-burgundy" />
       </section>
 
       {/* Contact Content */}
