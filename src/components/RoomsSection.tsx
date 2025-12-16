@@ -66,43 +66,50 @@ export const RoomsSection = () => {
           <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             Chambres & Suites
           </h2>
-          <p className="text-xl text-primary font-medium mb-4">
+          <p className="text-xl text-primary font-medium mb-6">
             Posez vos valises et profitez !
           </p>
-          <p className="text-muted-foreground mb-3">
-            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
-          </p>
-          <p className="text-muted-foreground mb-6">
-            L'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille ou entre proches.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg">
-              Voir toutes nos chambres
-            </Button>
-            <Button variant="gold" size="lg">
-              Réserver une chambre
-            </Button>
-          </div>
         </div>
 
-        {/* Equipment Strip */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 pb-10 border-b border-border/30">
-          {[
-            { icon: Bath, label: "Salle d'eau privative" },
-            { icon: Tv, label: "TV écran plat" },
-            { icon: Briefcase, label: "Espace bureau" },
-            { icon: Wifi, label: "Wi-Fi gratuit" },
-            { icon: CupSoda, label: "Plateau de courtoisie" },
-            { icon: Snowflake, label: "Climatisation" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-2 text-muted-foreground"
-            >
-              <item.icon className="w-5 h-5 text-primary" />
-              <span className="text-sm">{item.label}</span>
+        {/* Two columns: Text left, Equipment right */}
+        <div className="grid md:grid-cols-2 gap-8 mb-10 pb-10 border-b border-border/30">
+          {/* Left: Description */}
+          <div>
+            <p className="text-muted-foreground mb-4">
+              Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              L'hôtel propose également des chambres adaptées aux personnes à mobilité réduite ainsi que des chambres communicantes, idéales pour les séjours en famille ou entre proches.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="outline" size="lg">
+                Voir toutes nos chambres
+              </Button>
+              <Button variant="gold" size="lg">
+                Réserver une chambre
+              </Button>
             </div>
-          ))}
+          </div>
+
+          {/* Right: Equipment */}
+          <div className="grid grid-cols-2 gap-4 content-start">
+            {[
+              { icon: Bath, label: "Salle d'eau privative" },
+              { icon: Tv, label: "TV écran plat" },
+              { icon: Briefcase, label: "Espace bureau" },
+              { icon: Wifi, label: "Wi-Fi gratuit" },
+              { icon: CupSoda, label: "Plateau de courtoisie" },
+              { icon: Snowflake, label: "Climatisation" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 text-muted-foreground"
+              >
+                <item.icon className="w-5 h-5 text-primary" />
+                <span className="text-sm">{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Carousel */}
