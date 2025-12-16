@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { SalonCard } from "@/components/SalonCard";
+import { SalonCardCompact } from "@/components/SalonCardCompact";
 import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide-react";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
 import salonBose1 from "@/assets/salon-bose-1.jpg";
@@ -86,60 +86,66 @@ const Seminaires = () => {
         </div>
       </section>
 
-      {/* Salon BOSE */}
-      <SalonCard
-        name="Salon BOSE"
-        description="Découvrez notre nouvelle salle de séminaire BOSE, conçue pour allier confort et haute technologie. Écrans interactifs, système audio-vidéo de pointe et connexion wifi ultra-rapide : tout est là pour vos réunions, formations ou conférences, sur place ou en lien avec l'international. Avec ses 40 m², cet espace garantit le succès de vos événements dans un cadre moderne et performant."
-        surface="40 m²"
-        images={[
-          { src: salonBose1, alt: "Salon BOSE - Vue d'ensemble" },
-          { src: salonBose2, alt: "Salon BOSE - Détail des sièges" },
-          { src: salonBose3, alt: "Salon BOSE - Configuration classe" },
-          { src: salonBose4, alt: "Salon BOSE - Vue avec écran" },
-        ]}
-        capacities={[
-          { icon: "u-shape", count: 20, label: "Disposition en U" },
-          { icon: "classe", count: 30, label: "Disposition Classe" },
-          { icon: "theatre", count: 40, label: "Disposition Théâtre" },
-        ]}
-      />
-
-      {/* Salon FENDER */}
-      <SalonCard
-        name="Salon FENDER"
-        description="Spacieuse et baignée de lumière naturelle, notre salle FENDER de 70 m² est parfaite pour vos réunions et événements professionnels. Équipée d'un écran HD, d'un rétroprojecteur, d'un système vidéo performant et du Wi-Fi haut débit, elle combine confort et technologie pour des présentations réussies. Un espace lumineux et convivial qui favorise la concentration et la collaboration de tous vos participants."
-        surface="70 m²"
-        images={[
-          { src: salonFender1, alt: "Salon FENDER - Vue en U" },
-          { src: salonFender2, alt: "Salon FENDER - Vue avec écran" },
-          { src: salonFender3, alt: "Salon FENDER - Configuration classe" },
-          { src: salonFender4, alt: "Salon FENDER - Vue d'ensemble" },
-        ]}
-        capacities={[
-          { icon: "u-shape", count: 33, label: "Disposition en U" },
-          { icon: "classe", count: 50, label: "Disposition Classe" },
-          { icon: "theatre", count: 70, label: "Disposition Théâtre" },
-        ]}
-        reversed
-      />
-
-      {/* Salon MARSHALL */}
-      <SalonCard
-        name="Salon MARSHALL"
-        description="Spacieuse et baignée de lumière grâce à son patio intérieur, notre salle MARSHALL de 117 m² est idéale pour vos assemblées générales et séminaires. Équipée d'un système audiovisuel de pointe, écran tactile, rétroprojecteur HD et Wi-Fi haut débit, elle garantit des présentations réussies. Avec un accès direct au patio, vos pauses et discussions informelles se font dans un cadre élégant et agréable, alliant professionnalisme et convivialité."
-        surface="117 m²"
-        images={[
-          { src: salonMarshall1, alt: "Salon MARSHALL - Vue d'ensemble" },
-          { src: salonMarshall2, alt: "Salon MARSHALL - Configuration classe" },
-          { src: salonMarshall3, alt: "Salon MARSHALL - Vue avec écran" },
-          { src: salonMarshall4, alt: "Salon MARSHALL - Patio" },
-        ]}
-        capacities={[
-          { icon: "u-shape", count: 42, label: "Disposition en U" },
-          { icon: "classe", count: 63, label: "Disposition Classe" },
-          { icon: "theatre", count: 105, label: "Disposition Théâtre" },
-        ]}
-      />
+      {/* Nos Salons - Grid Layout */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+              Nos salles de réunion
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <SalonCardCompact
+              name="Salon BOSE"
+              description="Découvrez notre nouvelle salle de séminaire BOSE, conçue pour allier confort et haute technologie. Écrans interactifs, système audio-vidéo de pointe et connexion wifi ultra-rapide."
+              surface="40 m²"
+              images={[
+                { src: salonBose1, alt: "Salon BOSE - Vue d'ensemble" },
+                { src: salonBose2, alt: "Salon BOSE - Détail des sièges" },
+                { src: salonBose3, alt: "Salon BOSE - Configuration classe" },
+                { src: salonBose4, alt: "Salon BOSE - Vue avec écran" },
+              ]}
+              capacities={[
+                { icon: "u-shape", count: 20, label: "En U" },
+                { icon: "classe", count: 30, label: "Classe" },
+                { icon: "theatre", count: 40, label: "Théâtre" },
+              ]}
+            />
+            <SalonCardCompact
+              name="Salon FENDER"
+              description="Spacieuse et baignée de lumière naturelle, notre salle FENDER est parfaite pour vos réunions et événements professionnels. Équipée d'un écran HD et d'un système vidéo performant."
+              surface="70 m²"
+              images={[
+                { src: salonFender1, alt: "Salon FENDER - Vue en U" },
+                { src: salonFender2, alt: "Salon FENDER - Vue avec écran" },
+                { src: salonFender3, alt: "Salon FENDER - Configuration classe" },
+                { src: salonFender4, alt: "Salon FENDER - Vue d'ensemble" },
+              ]}
+              capacities={[
+                { icon: "u-shape", count: 33, label: "En U" },
+                { icon: "classe", count: 50, label: "Classe" },
+                { icon: "theatre", count: 70, label: "Théâtre" },
+              ]}
+            />
+            <SalonCardCompact
+              name="Salon MARSHALL"
+              description="Spacieuse et baignée de lumière grâce à son patio intérieur, notre salle MARSHALL est idéale pour vos assemblées générales et séminaires avec accès direct au patio."
+              surface="117 m²"
+              images={[
+                { src: salonMarshall1, alt: "Salon MARSHALL - Vue d'ensemble" },
+                { src: salonMarshall2, alt: "Salon MARSHALL - Configuration classe" },
+                { src: salonMarshall3, alt: "Salon MARSHALL - Vue avec écran" },
+                { src: salonMarshall4, alt: "Salon MARSHALL - Patio" },
+              ]}
+              capacities={[
+                { icon: "u-shape", count: 42, label: "En U" },
+                { icon: "classe", count: 63, label: "Classe" },
+                { icon: "theatre", count: 105, label: "Théâtre" },
+              ]}
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
