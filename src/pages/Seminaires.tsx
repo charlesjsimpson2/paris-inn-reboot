@@ -12,6 +12,10 @@ import salonFender1 from "@/assets/salon-fender-1.jpg";
 import salonFender2 from "@/assets/salon-fender-2.jpg";
 import salonFender3 from "@/assets/salon-fender-3.jpg";
 import salonFender4 from "@/assets/salon-fender-4.jpg";
+import salonMarshall1 from "@/assets/salon-marshall-1.jpg";
+import salonMarshall2 from "@/assets/salon-marshall-2.jpg";
+import salonMarshall3 from "@/assets/salon-marshall-3.jpg";
+import salonMarshall4 from "@/assets/salon-marshall-4.jpg";
 
 const equipments = [
   { icon: Projector, label: "Vidéoprojecteur" },
@@ -117,6 +121,24 @@ const Seminaires = () => {
           { icon: "theatre", count: 70, label: "Disposition Théâtre" },
         ]}
         reversed
+      />
+
+      {/* Salon MARSHALL */}
+      <SalonCard
+        name="Salon MARSHALL"
+        description="Spacieuse et baignée de lumière grâce à son patio intérieur, notre salle MARSHALL de 117 m² est idéale pour vos assemblées générales et séminaires. Équipée d'un système audiovisuel de pointe, écran tactile, rétroprojecteur HD et Wi-Fi haut débit, elle garantit des présentations réussies. Avec un accès direct au patio, vos pauses et discussions informelles se font dans un cadre élégant et agréable, alliant professionnalisme et convivialité."
+        surface="117 m²"
+        images={[
+          { src: salonMarshall1, alt: "Salon MARSHALL - Vue d'ensemble" },
+          { src: salonMarshall2, alt: "Salon MARSHALL - Configuration classe" },
+          { src: salonMarshall3, alt: "Salon MARSHALL - Vue avec écran" },
+          { src: salonMarshall4, alt: "Salon MARSHALL - Patio" },
+        ]}
+        capacities={[
+          { icon: "u-shape", count: 42, label: "Disposition en U" },
+          { icon: "classe", count: 63, label: "Disposition Classe" },
+          { icon: "theatre", count: 105, label: "Disposition Théâtre" },
+        ]}
       />
 
       <section className="py-20 bg-background">
