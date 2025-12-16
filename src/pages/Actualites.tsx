@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 const newsArticles = [
   {
     id: 1,
-    title: "Réouverture de notre terrasse d'été",
-    excerpt: "Profitez de notre nouvelle terrasse rénovée avec vue sur Paris pour vos moments de détente...",
+    title: "Lorem ipsum dolor sit amet",
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
     date: "15 Décembre 2024",
     readTime: "3 min",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
@@ -17,8 +17,8 @@ const newsArticles = [
   },
   {
     id: 2,
-    title: "Nouveau menu petit-déjeuner bio",
-    excerpt: "Découvrez notre nouvelle carte de petit-déjeuner 100% bio et local pour bien commencer la journée...",
+    title: "Consectetur adipiscing elit",
+    excerpt: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
     date: "10 Décembre 2024",
     readTime: "2 min",
     image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&h=400&fit=crop",
@@ -26,8 +26,8 @@ const newsArticles = [
   },
   {
     id: 3,
-    title: "Partenariat avec le Musée du Louvre",
-    excerpt: "Bénéficiez de tarifs préférentiels pour le Louvre en réservant chez nous...",
+    title: "Sed do eiusmod tempor",
+    excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...",
     date: "5 Décembre 2024",
     readTime: "4 min",
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=400&fit=crop",
@@ -35,8 +35,8 @@ const newsArticles = [
   },
   {
     id: 4,
-    title: "Rénovation des chambres Executive",
-    excerpt: "Nos chambres Executive ont été entièrement rénovées pour votre plus grand confort...",
+    title: "Ut enim ad minim veniam",
+    excerpt: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...",
     date: "1 Décembre 2024",
     readTime: "3 min",
     image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&h=400&fit=crop",
@@ -44,8 +44,8 @@ const newsArticles = [
   },
   {
     id: 5,
-    title: "Guide des marchés de Noël parisiens",
-    excerpt: "Les meilleurs marchés de Noël à découvrir autour de l'hôtel cette année...",
+    title: "Quis nostrud exercitation",
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...",
     date: "25 Novembre 2024",
     readTime: "5 min",
     image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?w=600&h=400&fit=crop",
@@ -53,8 +53,8 @@ const newsArticles = [
   },
   {
     id: 6,
-    title: "Offre spéciale Saint-Valentin",
-    excerpt: "Préparez votre escapade romantique avec notre offre exclusive pour la Saint-Valentin...",
+    title: "Duis aute irure dolor",
+    excerpt: "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...",
     date: "20 Novembre 2024",
     readTime: "2 min",
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
