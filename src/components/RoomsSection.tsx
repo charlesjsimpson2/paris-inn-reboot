@@ -57,6 +57,15 @@ export const RoomsSection = () => {
 
   return (
     <section id="chambres" className="py-20 bg-secondary/20">
+      {/* Decorative separator */}
+      <div className="container mx-auto px-4 mb-12">
+        <div className="flex items-center justify-center gap-4">
+          <div className="h-px w-16 bg-primary/30" />
+          <div className="w-2 h-2 rotate-45 border border-primary/30" />
+          <div className="h-px w-16 bg-primary/30" />
+        </div>
+      </div>
+      
       <div className="container mx-auto px-4">
         {/* Main Grid: Text Left + Carousel Right */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">

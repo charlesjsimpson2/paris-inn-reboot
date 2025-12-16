@@ -3,6 +3,15 @@ import { MapPin } from "lucide-react";
 export const LocationSection = () => {
   return (
     <section id="localisation" className="py-24 bg-secondary/20">
+      {/* Decorative separator */}
+      <div className="container mx-auto px-4 mb-12">
+        <div className="flex items-center justify-center gap-4">
+          <div className="h-px w-16 bg-primary/30" />
+          <div className="w-2 h-2 rotate-45 border border-primary/30" />
+          <div className="h-px w-16 bg-primary/30" />
+        </div>
+      </div>
+      
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Map */}
@@ -21,7 +30,7 @@ export const LocationSection = () => {
 
           {/* Info */}
           <div className="bg-background p-8 border-l-2 border-primary/30">
-            <div className="relative mb-6">
+            <div className="mb-6">
               <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
                 Comment nous trouver
               </p>
