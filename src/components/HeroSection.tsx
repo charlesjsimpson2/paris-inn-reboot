@@ -33,7 +33,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[700px] overflow-hidden">
+    <section className="relative h-[85vh] min-h-[500px] overflow-hidden">
       {/* Background Images */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
