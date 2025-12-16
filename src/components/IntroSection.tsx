@@ -38,11 +38,11 @@ export const IntroSection = () => {
             ))}
           </div>
 
-          <p className="text-foreground text-xl font-display mb-8">
+          <p className="text-foreground text-xl font-display mb-6">
             Réservez votre chambre et profitez de votre séjour à Paris !
           </p>
 
-          <Button variant="gold" size="lg" className="px-10 py-6 text-base font-bold shadow-xl">
+          <Button variant="gold" size="xl" className="px-12 py-7 text-lg font-bold shadow-xl">
             Réserver une chambre
           </Button>
         </div>
