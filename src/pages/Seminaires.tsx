@@ -168,15 +168,17 @@ const Seminaires = () => {
           </div>
         </div>
         
-        {/* Salons list with alternating backgrounds */}
-        {salonsData.map((salon, index) => {
-          const bgColors = ['bg-muted/30', 'bg-charcoal', 'bg-muted/50', 'bg-charcoal/80'];
-          return (
-            <div key={index} className={bgColors[index % bgColors.length]}>
-              <SalonSection salon={salon} reverse={index % 2 === 1} />
-            </div>
-          );
-        })}
+        {/* Salons list with alternating backgrounds and spacing */}
+        <div className="space-y-12 py-12">
+          {salonsData.map((salon, index) => {
+            const bgColors = ['bg-muted/30', 'bg-charcoal', 'bg-muted/50', 'bg-charcoal/80'];
+            return (
+              <div key={index} className={`${bgColors[index % bgColors.length]} rounded-lg mx-4 lg:mx-8`}>
+                <SalonSection salon={salon} reverse={index % 2 === 1} />
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       <section className="py-20 bg-background">
