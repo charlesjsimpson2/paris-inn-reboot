@@ -16,6 +16,10 @@ import salonMarshall1 from "@/assets/salon-marshall-1.jpg";
 import salonMarshall2 from "@/assets/salon-marshall-2.jpg";
 import salonMarshall3 from "@/assets/salon-marshall-3.jpg";
 import salonMarshall4 from "@/assets/salon-marshall-4.jpg";
+import coworking1 from "@/assets/coworking-1.jpg";
+import coworking2 from "@/assets/coworking-2.jpg";
+import coworking3 from "@/assets/coworking-3.jpg";
+import coworking4 from "@/assets/coworking-4.jpg";
 
 const equipments = [
   { icon: Projector, label: "Vidéoprojecteur" },
@@ -74,6 +78,18 @@ const salonsData = [
       { icon: "classe" as const, count: 63, label: "Classe" },
       { icon: "theatre" as const, count: 105, label: "Théâtre" },
     ],
+  },
+  {
+    name: "Espace Coworking",
+    description: "Calme, élégant et pensé pour la productivité, notre espace de coworking offre un cadre idéal pour travailler en toute sérénité. Design épuré, mobilier soigné et ambiance apaisante créent une atmosphère propice à la concentration, seul ou en équipe. Réunions, sessions de travail ou moments de réflexion : tout est réuni pour mener vos projets à bien dans un environnement professionnel et inspirant.",
+    surface: "Espace modulable",
+    images: [
+      { src: coworking1, alt: "Espace Coworking - Vue d'ensemble" },
+      { src: coworking2, alt: "Espace Coworking - Table de travail" },
+      { src: coworking3, alt: "Espace Coworking - Banquette et décoration" },
+      { src: coworking4, alt: "Espace Coworking - Détails déco" },
+    ],
+    capacities: [],
   },
 ];
 
