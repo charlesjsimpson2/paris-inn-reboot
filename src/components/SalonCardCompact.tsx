@@ -96,7 +96,7 @@ export const SalonCardCompact = ({
   };
 
   return (
-    <div className="bg-card rounded-2xl overflow-hidden shadow-xl flex flex-col h-full">
+    <div className="bg-card rounded-2xl overflow-hidden shadow-xl flex flex-col h-full hover-scale animate-fade-in">
       {/* Image Carousel */}
       <div className="relative aspect-[4/3]">
         <img
@@ -104,27 +104,30 @@ export const SalonCardCompact = ({
           alt={images[currentIndex].alt}
           className="w-full h-full object-cover"
         />
-        
+
         {/* Navigation Arrows */}
         <button
+          type="button"
           onClick={goToPrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors pointer-events-auto"
           aria-label="Image précédente"
         >
           <ChevronLeft className="w-5 h-5 text-foreground" />
         </button>
         <button
+          type="button"
           onClick={goToNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors pointer-events-auto"
           aria-label="Image suivante"
         >
           <ChevronRight className="w-5 h-5 text-foreground" />
         </button>
 
         {/* Dots Indicator */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
           {images.map((_, index) => (
             <button
+              type="button"
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-all ${
@@ -138,7 +141,7 @@ export const SalonCardCompact = ({
         </div>
 
         {/* Surface Badge */}
-        <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+        <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
           {surface}
         </div>
       </div>

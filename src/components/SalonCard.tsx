@@ -98,7 +98,7 @@ export const SalonCard = ({
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-background animate-fade-in">
       <div className="container mx-auto px-4">
         <div className={`grid lg:grid-cols-2 gap-12 items-center ${reversed ? 'lg:flex-row-reverse' : ''}`}>
           {/* Image Carousel */}
@@ -109,27 +109,30 @@ export const SalonCard = ({
                 alt={images[currentIndex].alt}
                 className="w-full h-full object-cover"
               />
-              
+
               {/* Navigation Arrows */}
               <button
+                type="button"
                 onClick={goToPrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors pointer-events-auto"
                 aria-label="Image précédente"
               >
                 <ChevronLeft className="w-6 h-6 text-foreground" />
               </button>
               <button
+                type="button"
                 onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors pointer-events-auto"
                 aria-label="Image suivante"
               >
                 <ChevronRight className="w-6 h-6 text-foreground" />
               </button>
 
               {/* Dots Indicator */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
                 {images.map((_, index) => (
                   <button
+                    type="button"
                     key={index}
                     onClick={() => setCurrentIndex(index)}
                     className={`w-2 h-2 rounded-full transition-all ${
