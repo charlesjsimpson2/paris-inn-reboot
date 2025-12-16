@@ -1,4 +1,6 @@
 import { Coffee, Croissant, Apple, Egg, Wine } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import breakfastImage from "@/assets/petit-dejeuner.jpg";
 import barImage from "@/assets/bar-hotel.jpg";
 
@@ -58,6 +60,10 @@ export const BreakfastSection = () => {
                 </div>
               ))}
             </div>
+
+            <Button variant="gold" size="lg" asChild>
+              <Link to="/petit-dejeuner">Découvrir notre petit-déjeuner</Link>
+            </Button>
           </div>
 
           {/* Image Side - Right */}
