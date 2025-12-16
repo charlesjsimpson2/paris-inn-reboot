@@ -59,15 +59,18 @@ export const RoomsSection = () => {
     <section id="chambres" className="py-20 bg-charcoal">
       <div className="container mx-auto px-4">
         {/* Header centered */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
             Nos Hébergements
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             Chambres & Suites
           </h2>
-          <p className="text-xl text-primary font-medium">
+          <p className="text-xl text-primary font-medium mb-6">
             Posez vos valises et profitez !
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
           </p>
         </div>
 
@@ -159,17 +162,16 @@ export const RoomsSection = () => {
           </div>
         </div>
 
-        {/* Description + CTA */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" asChild>
-              <a href="/nos-chambres">Voir toutes nos chambres</a>
-            </Button>
-          </div>
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <Button variant="outline" size="lg" asChild>
+            <a href="/nos-chambres">Voir toutes nos chambres</a>
+          </Button>
+          <Button variant="gold" size="lg" asChild>
+            <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+              Réserver une chambre
+            </a>
+          </Button>
         </div>
 
         {/* Bottom: Equipment */}
