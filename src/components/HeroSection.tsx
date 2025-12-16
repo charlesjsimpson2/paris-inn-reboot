@@ -65,13 +65,13 @@ export const HeroSection = () => {
         <ChevronRight className="w-6 h-6" />
       </button>
       <div className="absolute bottom-20 left-0 z-10 px-6 md:px-12 lg:px-20 max-w-3xl">
-        <p className="text-primary font-body uppercase tracking-[0.4em] text-sm md:text-base mb-4 animate-fade-in [animation-delay:200ms] font-semibold drop-shadow-lg">
-          Bienvenue à Paris
+        <p className="text-white font-body uppercase tracking-[0.5em] text-base md:text-lg mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+          Bienvenue
         </p>
         <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
           Hôtel Inn Design
         </h1>
-        <p className="text-3xl md:text-4xl text-primary font-serif italic mb-6 animate-fade-in [animation-delay:500ms] drop-shadow-lg">
+        <p className="text-3xl md:text-4xl text-white font-serif italic mb-6 animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-4 py-1 rounded">
           Place d'Italie
         </p>
         <p className="font-body text-lg md:text-xl text-white/95 mb-8 animate-fade-in [animation-delay:600ms] leading-relaxed drop-shadow-md max-w-xl">
