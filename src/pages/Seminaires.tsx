@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { SalonAccordion } from "@/components/SalonAccordion";
+import { SalonSection } from "@/components/SalonSection";
 import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide-react";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
 import salonBose1 from "@/assets/salon-bose-1.jpg";
@@ -81,6 +81,7 @@ const salonsData = [
   },
   {
     name: "Espace Coworking",
+    subtitle: "Un espace de coworking inspirant",
     description: "Calme, élégant et pensé pour la productivité, notre espace de coworking offre un cadre idéal pour travailler en toute sérénité. Design épuré, mobilier soigné et ambiance apaisante créent une atmosphère propice à la concentration, seul ou en équipe. Réunions, sessions de travail ou moments de réflexion : tout est réuni pour mener vos projets à bien dans un environnement professionnel et inspirant.",
     surface: "Espace modulable",
     images: [
@@ -153,7 +154,7 @@ const Seminaires = () => {
         </div>
       </section>
 
-      {/* Nos Salons - Accordion Layout */}
+      {/* Nos Salons - Card Layout */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -161,9 +162,11 @@ const Seminaires = () => {
               Nos salles de réunion
             </h2>
           </div>
-          <div className="max-w-6xl mx-auto">
-            <SalonAccordion salons={salonsData} />
-          </div>
+        </div>
+        <div className="space-y-0">
+          {salonsData.map((salon, index) => (
+            <SalonSection key={index} salon={salon} reverse={index % 2 === 1} />
+          ))}
         </div>
       </section>
 
