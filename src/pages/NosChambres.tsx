@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSod
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
+import heroChambres from "@/assets/hero-chambres.jpg";
 
 const rooms = [
   {
@@ -58,44 +59,51 @@ const NosChambres = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-charcoal">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
+      {/* Hero Section with Image */}
+      <section className="relative h-[60vh] min-h-[400px]">
+        <img 
+          src={heroChambres} 
+          alt="Chambre Hôtel Inn Design Paris" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+          <div className="container mx-auto">
+            <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
               Nos Hébergements
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Bienvenue à l'Hôtel Inn Design Paris !
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
+              Les chambres de l'Hôtel Inn Design Paris
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Profitez de 70 chambres lumineuses, insonorisées et tout confort, avec salle de bain équipée.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              En solo, en famille ou entre amis, tout est pensé pour votre bien-être, avec des chambres communicantes et une équipe aux petits soins.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Idéalement situé, l'hôtel est le point de départ parfait pour découvrir Paris sans stress.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Equipments */}
-      <section className="py-12 bg-muted/30 border-y border-border/30">
+      {/* Text + Equipment Section */}
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            {equipments.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 text-foreground"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-primary" />
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left: Text */}
+            <div>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Profitez de 70 chambres lumineuses, insonorisées et tout confort, avec salle de bain équipée. En solo, en famille ou entre amis, tout est pensé pour votre bien-être, avec des chambres communicantes et une équipe aux petits soins. Idéalement situé, l'hôtel est le point de départ parfait pour découvrir Paris sans stress.
+              </p>
+            </div>
+
+            {/* Right: Equipment */}
+            <div className="grid grid-cols-2 gap-4">
+              {equipments.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 text-foreground"
+                >
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium">{item.label}</span>
                 </div>
-                <span className="text-sm font-medium">{item.label}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
