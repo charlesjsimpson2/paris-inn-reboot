@@ -46,18 +46,41 @@ export const Footer = () => {
           <div>
             <h4 className="font-display text-lg text-foreground mb-6">Navigation</h4>
             <ul className="space-y-3">
-              {["Accueil", "Nos Chambres", "Petit Déjeuner", "Séminaires", "Localisation", "Actualités"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      to={item === "Actualités" ? "/actualites" : "#"}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              <li>
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Accueil
+                </Link>
+              </li>
+              <li>
+                <Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Nos Chambres
+                </Link>
+              </li>
+              <li>
+                <Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Petit Déjeuner
+                </Link>
+              </li>
+              <li>
+                <Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Séminaires
+                </Link>
+              </li>
+              <li>
+                <Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Localisation
+                </Link>
+              </li>
+              <li>
+                <Link to="/actualites" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Actualités
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -68,7 +91,7 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  178 boulevard Vincent Auriol<br />
+                  211 boulevard Vincent Auriol<br />
                   75013 Paris, France
                 </span>
               </li>
@@ -89,25 +112,6 @@ export const Footer = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   hid.paris13@gmail.com
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Hours */}
-          <div>
-            <h4 className="font-display text-lg text-foreground mb-6">Horaires</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex justify-between">
-                <span>Réception</span>
-                <span className="text-foreground">24h/24</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Petit Déjeuner</span>
-                <span className="text-foreground">7h - 10h</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Bar</span>
-                <span className="text-foreground">17h - 23h</span>
               </li>
             </ul>
           </div>
