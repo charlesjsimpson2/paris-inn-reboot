@@ -183,7 +183,7 @@ const Contact = () => {
 
             {/* Right: Info + Map */}
             <div>
-              <div className="bg-charcoal rounded-xl p-8 mb-8">
+              <div className="bg-charcoal p-8 mb-8">
                 <h2 className="font-display text-2xl text-burgundy mb-6">
                   Hôtel Inn Design Paris Place d'Italie
                 </h2>
@@ -195,7 +195,7 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="flex items-start gap-4 group"
                   >
-                    <div className="w-12 h-12 rounded-full bg-burgundy/15 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-burgundy/15 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-burgundy" />
                     </div>
                     <div>
@@ -210,7 +210,7 @@ const Contact = () => {
                     href="tel:+33144240101"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="w-12 h-12 rounded-full bg-burgundy/15 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-burgundy/15 flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-burgundy" />
                     </div>
                     <p className="font-medium text-foreground group-hover:text-burgundy transition-colors">
@@ -222,7 +222,7 @@ const Contact = () => {
                     href="mailto:hid.paris13@gmail.com"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="w-12 h-12 rounded-full bg-burgundy/15 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-burgundy/15 flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-burgundy" />
                     </div>
                     <p className="font-medium text-foreground group-hover:text-burgundy transition-colors">
@@ -233,7 +233,7 @@ const Contact = () => {
               </div>
 
               {/* Google Map */}
-              <div className="rounded-xl overflow-hidden shadow-lg h-[350px]">
+              <div className="overflow-hidden shadow-lg h-[350px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3547!3d48.8288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6719c8c8c8c8c%3A0x0!2s211%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
                   width="100%"

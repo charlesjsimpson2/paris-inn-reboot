@@ -61,7 +61,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
         aria-label="Image précédente"
       >
         <ChevronLeft className="w-5 h-5 text-charcoal" />
@@ -69,7 +69,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
         aria-label="Image suivante"
       >
         <ChevronRight className="w-5 h-5 text-charcoal" />
@@ -81,7 +81,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
             type="button"
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all shadow-md ${
+            className={`w-2.5 h-2.5 transition-all shadow-md ${
               index === currentIndex
                 ? "bg-burgundy scale-125"
                 : "bg-white/80 hover:bg-white"
@@ -133,7 +133,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
             {salon.capacities.length > 0 && (
               <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-border/50 mb-8">
                 {salon.capacities.map((capacity, idx) => (
-                  <div key={idx} className="flex items-center gap-3 bg-muted/30 px-5 py-4 rounded-lg">
+                  <div key={idx} className="flex items-center gap-3 bg-muted/30 px-5 py-4">
                     <img 
                       src={capacityIcons[capacity.icon]} 
                       alt={capacity.label}
@@ -152,7 +152,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
             {/* CTA Button */}
             <a
               href="#contact"
-              className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 rounded font-medium transition-colors"
+              className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 font-medium transition-colors"
             >
               Demander un devis
             </a>

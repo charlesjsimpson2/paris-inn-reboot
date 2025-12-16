@@ -57,7 +57,7 @@ export const NewsSection = () => {
           {newsArticles.map((article) => (
             <article
               key={article.id}
-              className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300"
+              className="group bg-card overflow-hidden border border-border hover:border-primary/30 transition-all duration-300"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -67,7 +67,7 @@ export const NewsSection = () => {
                 />
               </div>
               <div className="p-6">
-                <span className="inline-block px-2 py-1 rounded-full bg-primary/10 text-primary text-xs mb-3">
+                <span className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs mb-3">
                   {article.category}
                 </span>
                 <h3 className="font-display text-xl text-foreground mb-3 group-hover:text-primary transition-colors">

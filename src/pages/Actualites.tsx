@@ -89,7 +89,7 @@ const Actualites = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="aspect-[16/10] rounded-lg overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={newsArticles[0].image}
                   alt={newsArticles[0].title}
@@ -97,7 +97,7 @@ const Actualites = () => {
                 />
               </div>
               <div className="lg:pl-8">
-                <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm mb-4">
                   {newsArticles[0].category}
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
@@ -135,7 +135,7 @@ const Actualites = () => {
               {newsArticles.slice(1).map((article) => (
                 <article
                   key={article.id}
-                  className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/30 transition-all duration-300"
+                  className="group bg-card overflow-hidden border border-border hover:border-primary/30 transition-all duration-300"
                 >
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
@@ -145,7 +145,7 @@ const Actualites = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="inline-block px-2 py-1 rounded-full bg-primary/10 text-primary text-xs mb-3">
+                    <span className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs mb-3">
                       {article.category}
                     </span>
                     <h3 className="font-display text-xl text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -193,7 +193,7 @@ const Actualites = () => {
                 <input
                   type="email"
                   placeholder="Votre email"
-                  className="flex-1 px-4 py-3 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                  className="flex-1 px-4 py-3 bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 />
                 <Button variant="gold">S'inscrire</Button>
               </div>

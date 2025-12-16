@@ -109,7 +109,7 @@ const Seminaires = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
           <div className="container mx-auto">
-            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 mb-4">
               Séminaires & Événements
             </span>
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
@@ -137,7 +137,7 @@ const Seminaires = () => {
             </div>
 
             {/* Right: Equipment - Elegant burgundy style */}
-            <div className="bg-burgundy/10 border border-burgundy/20 rounded-xl p-8">
+            <div className="bg-burgundy/10 border border-burgundy/20 p-8">
               <h3 className="font-display text-xl text-burgundy mb-6 text-center">Équipements inclus</h3>
               <div className="grid grid-cols-2 gap-5">
                 {equipments.map((item, index) => (
@@ -145,7 +145,7 @@ const Seminaires = () => {
                     key={index}
                     className="flex items-center gap-3 text-foreground"
                   >
-                    <div className="w-10 h-10 rounded-full bg-burgundy/15 flex items-center justify-center flex-shrink-0 border border-burgundy/30">
+                    <div className="w-10 h-10 bg-burgundy/15 flex items-center justify-center flex-shrink-0 border border-burgundy/30">
                       <item.icon className="w-5 h-5 text-burgundy" />
                     </div>
                     <span className="text-sm font-medium">{item.label}</span>
@@ -176,7 +176,7 @@ const Seminaires = () => {
           {salonsData.map((salon, index) => {
             const bgColors = ['bg-muted/30', 'bg-charcoal', 'bg-muted/50', 'bg-charcoal/80'];
             return (
-              <div key={index} className={`${bgColors[index % bgColors.length]} rounded-lg mx-4 lg:mx-8`}>
+              <div key={index} className={`${bgColors[index % bgColors.length]} mx-4 lg:mx-8`}>
                 <SalonSection salon={salon} reverse={index % 2 === 1} />
               </div>
             );
@@ -187,7 +187,7 @@ const Seminaires = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 mb-4">
               Visite Virtuelle
             </span>
             <h2 className="font-display text-3xl md:text-4xl text-foreground">
@@ -195,7 +195,7 @@ const Seminaires = () => {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-video overflow-hidden shadow-2xl">
               <iframe
                 src="https://www.youtube.com/embed/6VK-aPuljJY"
                 title="Visite de nos salles de séminaires"
