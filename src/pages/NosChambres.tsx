@@ -13,28 +13,24 @@ const rooms = [
     description: "Lit de 160×200 cm. Profitez d'un espace élégant et confortable, idéal pour un séjour en couple ou en solo.",
     capacity: "2 personnes",
     image: chambreDouble,
-    features: ["Wi-Fi gratuit", "Climatisation", "TV écran plat", "Salle d'eau privative"],
   },
   {
     name: "Chambre Twin",
     description: "2 lits de 100×200 cm. Parfaite pour les voyages entre amis ou collègues, avec tout le confort nécessaire.",
     capacity: "2 personnes",
     image: chambreTwin,
-    features: ["Wi-Fi gratuit", "Climatisation", "TV écran plat", "Espace bureau"],
   },
   {
     name: "Chambre Supérieure avec Balcon",
     description: "Profitez d'un espace extérieur privé avec vue sur Paris. Une expérience unique au cœur de la ville.",
     capacity: "2 personnes",
     image: chambreSuperieureBalcon,
-    features: ["Balcon privé", "Vue panoramique", "Climatisation", "Plateau de courtoisie"],
   },
   {
     name: "Chambres Communicantes",
     description: "2 chambres modulables avec portes communicantes. La solution idéale pour les familles ou groupes.",
     capacity: "4 personnes",
     image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
-    features: ["Espace famille", "Modulable", "Wi-Fi gratuit", "2 salles de bain"],
   },
 ];
 
@@ -50,12 +46,14 @@ const equipments = [
 const NosChambres = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const maxIndex = Math.max(0, rooms.length - 2); // Show 2 at a time
+
   const goToPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? rooms.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev === rooms.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   const currentRoom = rooms[currentIndex];
@@ -106,115 +104,114 @@ const NosChambres = () => {
         </div>
       </section>
 
-      {/* Room Carousel - New Design */}
-      <section className="py-20 bg-background">
+      {/* Room Carousel - Cards Layout */}
+      <section className="py-20 bg-background overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left: Image */}
-            <div className="relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
-                {rooms.map((room, index) => (
-                  <img
-                    key={index}
-                    src={room.image}
-                    alt={room.name}
-                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
-                      index === currentIndex ? "opacity-100 scale-100" : "opacity-0 scale-110"
-                    }`}
-                  />
-                ))}
-                
-                {/* Subtle gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                
-                {/* Counter badge */}
-                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                  {currentIndex + 1} / {rooms.length}
-                </div>
-              </div>
-
-              {/* Navigation arrows */}
-              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex gap-3">
-                <button
-                  onClick={goToPrev}
-                  className="bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all shadow-lg"
-                  aria-label="Chambre précédente"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={goToNext}
-                  className="bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-all shadow-lg"
-                  aria-label="Chambre suivante"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Right: Info */}
-            <div className="lg:pl-8">
-              {rooms.map((room, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-500 ${
-                    index === currentIndex
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4 absolute pointer-events-none"
-                  }`}
-                  style={{ display: index === currentIndex ? 'block' : 'none' }}
-                >
-                  <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-                    Chambre {currentIndex + 1}
-                  </p>
-                  <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                    {room.name}
-                  </h2>
-                  
-                  <div className="flex items-center gap-2 text-muted-foreground mb-6">
-                    <Users className="w-5 h-5 text-primary" />
-                    <span>{room.capacity}</span>
-                  </div>
-                  
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                    {room.description}
-                  </p>
-                  
-                  {/* Features */}
-                  <div className="grid grid-cols-2 gap-3 mb-8">
-                    {room.features.map((feature, fIndex) => (
-                      <div
-                        key={fIndex}
-                        className="flex items-center gap-2 text-sm text-foreground bg-muted/50 px-4 py-3 rounded-lg"
-                      >
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Button variant="gold" size="xl" className="w-full sm:w-auto">
-                    Réserver cette chambre
-                  </Button>
-                </div>
-              ))}
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+              Découvrez nos chambres
+            </h2>
+            <p className="text-muted-foreground">
+              Faites défiler pour voir toutes nos catégories
+            </p>
           </div>
 
-          {/* Room selector dots */}
-          <div className="flex justify-center gap-3 mt-16">
-            {rooms.map((room, index) => (
+          <div className="relative">
+            {/* Navigation arrows */}
+            <button
+              onClick={goToPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground hover:bg-primary/90 p-4 rounded-full transition-all shadow-xl -translate-x-1/2 hidden md:flex"
+              aria-label="Chambres précédentes"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground hover:bg-primary/90 p-4 rounded-full transition-all shadow-xl translate-x-1/2 hidden md:flex"
+              aria-label="Chambres suivantes"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Cards container */}
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-out gap-6"
+                style={{ transform: `translateX(-${currentIndex * 50}%)` }}
+              >
+                {rooms.map((room, index) => (
+                  <div
+                    key={index}
+                    className="w-full md:w-[calc(50%-12px)] flex-shrink-0 group"
+                  >
+                    <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                      {/* Image */}
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <img
+                          src={room.image}
+                          alt={room.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        
+                        {/* Capacity badge */}
+                        <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm text-foreground px-3 py-1.5 rounded-full text-sm font-medium flex items-center gap-2">
+                          <Users className="w-4 h-4 text-primary" />
+                          {room.capacity}
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="p-6">
+                        <h3 className="font-display text-2xl text-foreground mb-3 group-hover:text-primary transition-colors">
+                          {room.name}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed mb-6">
+                          {room.description}
+                        </p>
+                        <Button variant="gold" className="w-full">
+                          Réserver
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile navigation */}
+            <div className="flex justify-center gap-4 mt-8 md:hidden">
               <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-primary w-12 h-3 rounded-full"
-                    : "bg-muted hover:bg-primary/50 w-3 h-3 rounded-full"
-                }`}
-                aria-label={`Voir ${room.name}`}
-              />
-            ))}
+                onClick={goToPrev}
+                className="bg-primary text-primary-foreground p-3 rounded-full"
+                aria-label="Précédent"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={goToNext}
+                className="bg-primary text-primary-foreground p-3 rounded-full"
+                aria-label="Suivant"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Progress indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex
+                      ? "bg-primary w-8"
+                      : "bg-muted hover:bg-primary/50 w-2"
+                  }`}
+                  aria-label={`Aller à la position ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
