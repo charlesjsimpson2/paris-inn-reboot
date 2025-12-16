@@ -112,11 +112,14 @@ export const Header = () => {
               variant="gold" 
               size="xl" 
               className="z-10 px-8 py-6 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy"
+              asChild
             >
-              <span className="flex items-center gap-3">
-                Réserver
-                <span className="text-sm bg-white/20 px-3 py-1 rounded-full">-10%</span>
-              </span>
+              <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+                <span className="flex items-center gap-3">
+                  Réserver
+                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">-10%</span>
+                </span>
+              </a>
             </Button>
           </nav>
         </div>

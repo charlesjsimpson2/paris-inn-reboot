@@ -82,8 +82,10 @@ export const RoomsSection = () => {
               <Button variant="outline" size="lg" asChild>
                 <a href="/nos-chambres">Voir toutes nos chambres</a>
               </Button>
-              <Button variant="gold" size="lg">
-                Réserver une chambre
+              <Button variant="gold" size="lg" asChild>
+                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+                  Réserver une chambre
+                </a>
               </Button>
             </div>
           </div>
