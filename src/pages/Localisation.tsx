@@ -23,76 +23,87 @@ const Localisation = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Map Section - Full width at top */}
-      <section className="pt-24">
-        <div className="relative h-[50vh] min-h-[400px]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3586!3d48.8282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6721c7c1b1c1b%3A0x123456789abcdef!2s178%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Localisation Hôtel Inn Design Paris"
-          />
-          
-          {/* Floating address card */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-background rounded-xl shadow-2xl p-6 border border-border max-w-md w-[90%]">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-burgundy flex items-center justify-center shrink-0">
-                <MapPin className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h2 className="font-display text-xl text-foreground mb-1">
-                  Hôtel Inn Design Paris
-                </h2>
-                <p className="text-muted-foreground">
-                  178 boulevard Vincent Auriol, 75013 Paris
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Transports Section */}
-      <section className="py-16 bg-charcoal">
+      {/* Map Section - Side by side */}
+      <section className="pt-24 pb-16 bg-charcoal">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-burgundy font-medium text-sm uppercase tracking-[0.2em] mb-3 block">
-              Comment venir
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              Accès & Transports
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
-            {transports.map((item, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-background border border-border hover:border-burgundy/30 transition-colors text-center"
-              >
-                <div className={`w-3 h-3 rounded-full ${item.color} mx-auto mb-4`} />
-                <p className="font-display text-3xl text-burgundy mb-2">{item.time}</p>
-                <p className="font-display text-lg text-foreground mb-1">{item.type}</p>
-                <p className="text-muted-foreground text-sm">{item.lines}</p>
-                <p className="text-muted-foreground text-xs mt-1">{item.stop}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Metro Lines */}
-          <div className="flex items-center justify-center gap-4 p-5 rounded-xl bg-background border border-border max-w-sm mx-auto">
-            <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-sm">5</span>
-              <span className="w-8 h-8 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-sm">6</span>
-              <span className="w-8 h-8 rounded-full bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-sm">7</span>
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+            {/* Map */}
+            <div className="relative h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3586!3d48.8282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6721c7c1b1c1b%3A0x123456789abcdef!2s178%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localisation Hôtel Inn Design Paris"
+                className="rounded-2xl"
+              />
             </div>
-            <div className="flex items-center gap-2">
-              <Train className="w-5 h-5 text-burgundy" />
-              <span className="text-muted-foreground text-sm">Place d'Italie (sortie 3)</span>
+
+            {/* Location Info */}
+            <div className="flex flex-col justify-center">
+              <span className="text-burgundy font-medium text-sm uppercase tracking-[0.2em] mb-4 block">
+                Nous trouver
+              </span>
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+                Notre emplacement
+              </h1>
+              
+              {/* Address Card */}
+              <div className="bg-background rounded-xl p-6 border border-border mb-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-full bg-burgundy flex items-center justify-center shrink-0">
+                    <MapPin className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="font-display text-xl text-foreground mb-1">
+                      Hôtel Inn Design Paris
+                    </h2>
+                    <p className="text-muted-foreground">
+                      178 boulevard Vincent Auriol<br />
+                      75013 Paris, France
+                    </p>
+                  </div>
+                </div>
+                <a 
+                  href="https://maps.google.com/?q=178+Boulevard+Vincent+Auriol,+75013+Paris" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-burgundy hover:text-burgundy/80 transition-colors font-medium text-sm"
+                >
+                  Ouvrir dans Google Maps →
+                </a>
+              </div>
+
+              {/* Quick Transport Info */}
+              <div className="grid grid-cols-3 gap-4">
+                {transports.map((item, index) => (
+                  <div
+                    key={index}
+                    className="p-4 rounded-xl bg-background border border-border text-center hover:border-burgundy/30 transition-colors"
+                  >
+                    <div className={`w-2 h-2 rounded-full ${item.color} mx-auto mb-2`} />
+                    <p className="font-display text-2xl text-burgundy mb-1">{item.time}</p>
+                    <p className="text-foreground text-sm font-medium">{item.type}</p>
+                    <p className="text-muted-foreground text-xs">{item.stop}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Metro Lines */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border mt-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-sm">5</span>
+                  <span className="w-8 h-8 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-sm">6</span>
+                  <span className="w-8 h-8 rounded-full bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-sm">7</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Train className="w-5 h-5 text-burgundy" />
+                  <span className="text-muted-foreground text-sm">Place d'Italie (sortie 3)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
