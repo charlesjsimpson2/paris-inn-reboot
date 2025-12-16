@@ -79,15 +79,21 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 17px; /* Base font size increased */
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+  }
+
+  p {
+    @apply text-base leading-relaxed;
   }
 }
 
