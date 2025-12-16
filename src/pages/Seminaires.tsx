@@ -73,6 +73,31 @@ const Seminaires = () => {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+              Visite Virtuelle
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+              Découvrez nos espaces en vidéo
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/6VK-aPuljJY"
+                title="Visite de nos salles de séminaires"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
