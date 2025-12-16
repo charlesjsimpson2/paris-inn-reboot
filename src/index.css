@@ -6,53 +6,53 @@
 
 @layer base {
   :root {
-    /* Elegant navy blue hotel theme - inspired by Hotel Inn Paris logo */
-    --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
+    /* Elegant burgundy hotel theme */
+    --background: 0 20% 6%;
+    --foreground: 30 15% 92%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 18% 10%;
+    --card-foreground: 30 15% 92%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 18% 10%;
+    --popover-foreground: 30 15% 92%;
 
-    /* Navy blue accent */
-    --primary: 210 70% 55%;
-    --primary-foreground: 210 20% 98%;
+    /* Burgundy accent */
+    --primary: 345 60% 45%;
+    --primary-foreground: 30 15% 95%;
 
-    --secondary: 220 30% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 0 18% 15%;
+    --secondary-foreground: 30 15% 92%;
 
-    --muted: 220 25% 22%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 0 15% 20%;
+    --muted-foreground: 30 10% 60%;
 
-    --accent: 210 70% 55%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 345 60% 45%;
+    --accent-foreground: 30 15% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 210 70% 55%;
+    --border: 0 15% 18%;
+    --input: 0 15% 18%;
+    --ring: 345 60% 45%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --gold: 210 70% 55%;
-    --gold-light: 210 70% 65%;
-    --gold-dark: 210 70% 45%;
-    --cream: 210 20% 95%;
-    --charcoal: 220 30% 12%;
-    --charcoal-light: 220 30% 18%;
+    --gold: 345 60% 45%;
+    --gold-light: 345 55% 55%;
+    --gold-dark: 345 65% 35%;
+    --cream: 30 15% 92%;
+    --charcoal: 0 18% 10%;
+    --charcoal-light: 0 18% 15%;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(210 70% 55%) 0%, hsl(210 70% 45%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(220 30% 8%) 0%, hsl(220 30% 12%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(220, 30%, 8%, 0.3) 0%, hsla(220, 30%, 8%, 0.8) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(345 60% 45%) 0%, hsl(345 65% 35%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 20% 6%) 0%, hsl(0 18% 10%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(0, 20%, 6%, 0.3) 0%, hsla(0, 20%, 6%, 0.8) 100%);
 
     /* Shadows */
-    --shadow-gold: 0 4px 30px hsla(210, 70%, 55%, 0.15);
+    --shadow-gold: 0 4px 30px hsla(345, 60%, 45%, 0.15);
     --shadow-elegant: 0 25px 50px -12px hsla(0, 0%, 0%, 0.5);
 
     /* Fonts */
@@ -60,14 +60,14 @@
     --font-body: 'DM Sans', system-ui, sans-serif;
 
     /* Sidebar */
-    --sidebar-background: 220 30% 12%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 210 70% 55%;
-    --sidebar-primary-foreground: 210 20% 98%;
-    --sidebar-accent: 220 30% 18%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 220 25% 20%;
-    --sidebar-ring: 210 70% 55%;
+    --sidebar-background: 0 18% 10%;
+    --sidebar-foreground: 30 15% 92%;
+    --sidebar-primary: 345 60% 45%;
+    --sidebar-primary-foreground: 30 15% 95%;
+    --sidebar-accent: 0 18% 15%;
+    --sidebar-accent-foreground: 30 15% 92%;
+    --sidebar-border: 0 15% 18%;
+    --sidebar-ring: 345 60% 45%;
   }
 }
 
