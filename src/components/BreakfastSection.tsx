@@ -43,9 +43,6 @@ export const BreakfastSection = () => {
               plus gourmands : confitures et crêpes moelleuses délicatement vanillées.
             </p>
 
-            <p className="text-foreground font-medium">
-              De quoi bien commencer la journée, quel que soit votre programme !
-            </p>
 
             {/* Features Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
