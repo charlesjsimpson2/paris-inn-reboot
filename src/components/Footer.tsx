@@ -1,51 +1,28 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
 export const Footer = () => {
   return (
     <footer className="bg-charcoal border-t border-border">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-1">
-            <div className="mb-6">
-              <img 
-                src={logoHotel} 
-                alt="Hôtel Inn Design Paris" 
-                className="h-14 w-auto"
-              />
-            </div>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Un hôtel 3 étoiles au cœur du 13ème arrondissement de Paris, 
-              à deux pas de la Place d'Italie.
+          <div>
+            <img 
+              src={logoHotel} 
+              alt="Hôtel Inn Design Paris" 
+              className="h-12 w-auto mb-4"
+            />
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Hôtel 3 étoiles au cœur du 13ème arrondissement, à deux pas de la Place d'Italie.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation Col 1 */}
           <div>
-            <h4 className="font-display text-lg text-foreground mb-6">Navigation</h4>
-            <ul className="space-y-3">
+            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4">Navigation</h4>
+            <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Accueil
@@ -66,6 +43,13 @@ export const Footer = () => {
                   Séminaires
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Navigation Col 2 */}
+          <div>
+            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4 opacity-0">Liens</h4>
+            <ul className="space-y-2">
               <li>
                 <Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Localisation
@@ -86,30 +70,27 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-lg text-foreground mb-6">Contact</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-muted-foreground text-sm">
-                  211 boulevard Vincent Auriol<br />
-                  75013 Paris, France
-                </span>
+            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4">Contact</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-2 text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>211 Bd Vincent Auriol, 75013 Paris</span>
               </li>
               <li>
                 <a
                   href="tel:+33144240101"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Phone className="w-5 h-5 text-primary" />
+                  <Phone className="w-4 h-4 text-primary" />
                   +33 (0)1 44 24 01 01
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:hid.paris13@gmail.com"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Mail className="w-4 h-4 text-primary" />
                   hid.paris13@gmail.com
                 </a>
               </li>
@@ -118,11 +99,11 @@ export const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
+        <div className="border-t border-border/50 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-muted-foreground text-xs">
             © 2024 Hôtel Inn Design Paris. Tous droits réservés.
           </p>
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-4 text-xs">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
               Mentions légales
             </a>
