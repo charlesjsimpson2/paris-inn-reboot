@@ -54,7 +54,7 @@ export const Header = () => {
                   href="tel:+33144240101"
                   className="flex items-center gap-2 text-foreground hover:text-burgundy transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-full bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
+                  <div className="w-8 h-8 bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
                     <Phone className="w-4 h-4 text-burgundy" />
                   </div>
                   <span className="text-sm font-medium hidden sm:inline">+33 (0)1 44 24 01 01</span>
@@ -63,7 +63,7 @@ export const Header = () => {
                   href="mailto:hid.paris13@gmail.com"
                   className="flex items-center gap-2 text-foreground hover:text-burgundy transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-full bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
+                  <div className="w-8 h-8 bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
                     <Mail className="w-4 h-4 text-burgundy" />
                   </div>
                   <span className="text-sm font-medium hidden sm:inline">hid.paris13@gmail.com</span>
@@ -86,7 +86,7 @@ export const Header = () => {
           <nav className="flex items-center justify-between relative">
             {/* Burger Menu - Left */}
             <button
-              className={`group px-5 py-2.5 rounded-full border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
+              className={`group px-5 py-2.5 border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
                 isHeroPage || isScrolled
                   ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
                   : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
@@ -134,7 +134,7 @@ export const Header = () => {
         <div className="p-6">
           {/* Close button */}
           <button
-            className="mb-8 p-2 rounded-lg hover:bg-muted transition-colors"
+            className="mb-8 p-2 hover:bg-muted transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="Fermer le menu"
           >
@@ -147,7 +147,7 @@ export const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-body text-lg uppercase tracking-wider py-3 px-4 rounded-lg transition-all hover:bg-muted hover:text-primary ${
+                className={`font-body text-lg uppercase tracking-wider py-3 px-4 transition-all hover:bg-muted hover:text-primary ${
                   location.pathname === item.href
                     ? "text-primary bg-muted/50"
                     : "text-foreground/80"

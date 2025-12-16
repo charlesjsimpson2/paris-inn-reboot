@@ -52,14 +52,14 @@ export const HeroSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrev}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
         aria-label="Image précédente"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
         aria-label="Image suivante"
       >
         <ChevronRight className="w-6 h-6" />
@@ -72,7 +72,7 @@ export const HeroSection = () => {
         <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
           Hôtel Inn Design
         </h1>
-        <p className="text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-4 py-1 rounded">
+        <p className="text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-4 py-1">
           Place d'Italie
         </p>
       </div>
@@ -83,7 +83,7 @@ export const HeroSection = () => {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 transition-all duration-300 ${
               current === index
                 ? "bg-primary h-8"
                 : "bg-foreground/40 hover:bg-foreground/60"

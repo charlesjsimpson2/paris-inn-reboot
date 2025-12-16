@@ -57,7 +57,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
         aria-label="Image précédente"
       >
         <ChevronLeft className="w-6 h-6 text-foreground" />
@@ -65,7 +65,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       <button
         type="button"
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
         aria-label="Image suivante"
       >
         <ChevronRight className="w-6 h-6 text-foreground" />
@@ -77,7 +77,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
             type="button"
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
+            className={`w-2.5 h-2.5 transition-all ${
               index === currentIndex
                 ? "bg-primary w-8"
                 : "bg-white/60 hover:bg-white"
