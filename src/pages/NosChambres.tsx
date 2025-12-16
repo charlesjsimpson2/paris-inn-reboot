@@ -229,8 +229,10 @@ const NosChambres = () => {
                         <p className="text-muted-foreground leading-relaxed mb-6">
                           {room.description}
                         </p>
-                        <Button variant="gold" className="w-full">
-                          Réserver
+                        <Button variant="gold" className="w-full" asChild>
+                          <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+                            Réserver
+                          </a>
                         </Button>
                       </div>
                     </div>

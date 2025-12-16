@@ -70,8 +70,10 @@ export const IntroSection = () => {
           <p className="text-foreground text-xl font-display mb-6">
             Réservez votre chambre et profitez de votre séjour à Paris !
           </p>
-          <Button variant="gold" size="xl" className="px-12 py-7 text-lg font-bold shadow-xl">
-            Réserver une chambre
+          <Button variant="gold" size="xl" className="px-12 py-7 text-lg font-bold shadow-xl" asChild>
+            <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+              Réserver une chambre
+            </a>
           </Button>
         </div>
       </div>
