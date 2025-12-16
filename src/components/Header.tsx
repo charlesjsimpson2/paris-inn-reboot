@@ -111,11 +111,13 @@ export const Header = () => {
             <Button 
               variant="gold" 
               size="lg" 
-              className="z-10 px-6 py-5 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy animate-pulse hover:animate-none"
+              className="z-10 px-6 py-5 text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy relative overflow-hidden group"
               asChild
             >
               <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                <span className="flex items-center gap-3">
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></span>
+                <span className="relative flex items-center gap-3">
                   <span className="text-lg">Réserver</span>
                   <span className="text-sm bg-white/25 px-3 py-1.5 rounded-full font-bold animate-bounce">-10%</span>
                 </span>
