@@ -8,7 +8,7 @@ const navItems = [
   { name: "Accueil", href: "/" },
   { name: "Nos Chambres", href: "/nos-chambres" },
   { name: "Séminaires", href: "/seminaires" },
-  { name: "Petit Déjeuner", href: "#services" },
+  { name: "Petit Déjeuner", href: "/petit-dejeuner" },
   { name: "Localisation", href: "/localisation" },
   { name: "Actualités", href: "/actualites" },
   { name: "Contact", href: "/contact" },
@@ -21,7 +21,7 @@ export const Header = () => {
   
   // Check if we're on homepage or a page with hero image
   const isHomePage = location.pathname === "/";
-  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation";
+  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner";
 
   useEffect(() => {
     const handleScroll = () => {
