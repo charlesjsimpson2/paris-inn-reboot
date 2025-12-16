@@ -58,115 +58,73 @@ export const RoomsSection = () => {
   return (
     <section id="chambres" className="py-20 bg-charcoal">
       <div className="container mx-auto px-4">
-        {/* Main Grid: Text Left + Carousel Right */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
-          {/* Left: Header + Description + CTA */}
-          <div className="space-y-6">
-            <div>
-              <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-                Nos Hébergements
-              </p>
-              <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
-                Chambres & Suites
-              </h2>
-              <p className="text-xl text-primary font-medium">
-                Posez vos valises et profitez !
-              </p>
-            </div>
+        {/* Header centered */}
+        <div className="text-center mb-12">
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+            Nos Hébergements
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
+            Chambres & Suites
+          </h2>
+          <p className="text-xl text-primary font-medium">
+            Posez vos valises et profitez !
+          </p>
+        </div>
 
-            <p className="text-muted-foreground leading-relaxed">
-              Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous. L'hôtel propose également des <span className="font-semibold text-primary">chambres adaptées aux personnes à mobilité réduite</span> ainsi que des chambres communicantes, idéales pour les séjours en famille ou entre proches.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button variant="outline" size="lg" asChild>
-                <a href="/nos-chambres">Voir toutes nos chambres</a>
-              </Button>
-              <Button variant="gold" size="lg" asChild>
-                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                  Réserver une chambre
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Right: Carousel */}
-          <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
-              {rooms.map((room, index) => (
+        {/* Carousel - larger */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          {rooms.map((room, index) => (
+            <div 
+              key={index}
+              className="relative group cursor-pointer overflow-hidden"
+              onClick={() => setCurrentIndex(index)}
+            >
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  key={index}
                   src={room.image}
                   alt={room.name}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
-                    index === currentIndex ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                  className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+                    index === currentIndex ? "brightness-100" : "brightness-75"
                   }`}
                 />
-              ))}
+              </div>
               
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               
-              {/* Text overlay bottom */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                {rooms.map((room, index) => (
-                  <div
-                    key={index}
-                    className={`transition-all duration-500 ${
-                      index === currentIndex
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-4 absolute inset-0 pointer-events-none"
-                    }`}
-                  >
-                    <h3 className="font-display text-xl md:text-2xl text-white mb-2">
-                      {room.name}
-                    </h3>
-                    <p className="text-white/90 leading-relaxed text-sm line-clamp-2">
-                      {room.description}
-                    </p>
-                  </div>
-                ))}
+              {/* Text overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="font-display text-lg text-white mb-1">
+                  {room.name}
+                </h3>
+                <p className="text-white/80 text-sm line-clamp-2">
+                  {room.description}
+                </p>
               </div>
 
-              {/* Navigation arrows */}
-              <button
-                onClick={goToPrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-2.5 transition-all backdrop-blur-sm"
-                aria-label="Chambre précédente"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                onClick={goToNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-2.5 transition-all backdrop-blur-sm"
-                aria-label="Chambre suivante"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-
-              {/* Counter */}
-              <div className="absolute bottom-5 right-5 md:bottom-6 md:right-6">
-                <span className="text-white font-display text-sm">
-                  {currentIndex + 1}<span className="text-white/60">/{rooms.length}</span>
-                </span>
-              </div>
+              {/* Active indicator */}
+              {index === currentIndex && (
+                <div className="absolute top-4 left-4 w-2 h-2 bg-primary" />
+              )}
             </div>
+          ))}
+        </div>
 
-            {/* Dots indicator */}
-            <div className="flex justify-center gap-2 mt-4">
-              {rooms.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`h-1 transition-all ${
-                    index === currentIndex 
-                      ? "bg-primary w-8" 
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-4"
-                  }`}
-                  aria-label={`Voir chambre ${index + 1}`}
-                />
-              ))}
-            </div>
+        {/* Description + CTA */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            Installez-vous dans l'une de nos 70 chambres lumineuses, insonorisées et entièrement équipées pour votre confort. Climatisation, télévision à écran plat, espace bureau, coffre-fort, sèche-cheveux, plateau de courtoisie… tout est pensé pour que vous vous sentiez comme chez vous.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" size="lg" asChild>
+              <a href="/nos-chambres">Voir toutes nos chambres</a>
+            </Button>
+            <Button variant="gold" size="lg" asChild>
+              <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+                Réserver une chambre
+              </a>
+            </Button>
           </div>
         </div>
 
