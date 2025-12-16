@@ -1,6 +1,7 @@
+import { useState, useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Coffee, Croissant, Apple, Egg, Clock, Users } from "lucide-react";
+import { Coffee, Croissant, Apple, Egg, Clock, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import salle1 from "@/assets/breakfast/salle-1.jpg";
 import salle2 from "@/assets/breakfast/salle-2.jpg";
@@ -18,6 +19,7 @@ const features = [
 
 const galleryImages = [
   { src: tablePetitDejeuner, alt: "Petit déjeuner complet" },
+  { src: buffet1, alt: "Buffet petit déjeuner" },
   { src: salle1, alt: "Salle petit déjeuner" },
   { src: salle2, alt: "Espace petit déjeuner" },
   { src: balcon, alt: "Petit déjeuner sur balcon" },
@@ -25,6 +27,46 @@ const galleryImages = [
 ];
 
 const PetitDejeuner = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.getAttribute('data-index') || '0');
+            setVisibleItems((prev) => [...new Set([...prev, index])]);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    const items = galleryRef.current?.querySelectorAll('[data-index]');
+    items?.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => setLightboxOpen(false);
+
+  const prevImage = () => {
+    setLightboxIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+  };
+
+  const nextImage = () => {
+    setLightboxIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -127,29 +169,87 @@ const PetitDejeuner = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-12">
-            Notre espace petit déjeuner
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+              Galerie Photo
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+              Notre espace petit déjeuner
+            </h2>
+          </div>
+
+          {/* Gallery Grid */}
+          <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages.map((image, index) => (
-              <div
+              <button
                 key={index}
-                className={`relative overflow-hidden rounded-xl ${
-                  index === 0 ? "md:col-span-2 md:row-span-2" : ""
+                data-index={index}
+                onClick={() => openLightbox(index)}
+                className={`relative overflow-hidden rounded-xl group cursor-pointer transition-all duration-700 ${
+                  visibleItems.includes(index)
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 translate-y-8 scale-95"
                 }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+                <div className="aspect-[4/3]">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-lg">
+                    Voir
+                  </span>
+                </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center">
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Fermer"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-3 hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Image précédente"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          
+          <img
+            src={galleryImages[lightboxIndex].src}
+            alt={galleryImages[lightboxIndex].alt}
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg"
+          />
+          
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-3 hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Image suivante"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+          
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
+            {lightboxIndex + 1} / {galleryImages.length}
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
