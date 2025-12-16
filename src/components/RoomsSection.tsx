@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight, Users } from "lucide-react";
+import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight } from "lucide-react";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
@@ -106,26 +106,25 @@ export const RoomsSection = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative px-12 lg:px-16">
-          {/* Navigation arrows on sides */}
-          <button
-            onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
-            aria-label="Chambre précédente"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/10 hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-all border border-primary/30"
-            aria-label="Chambre suivante"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-
-          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-6 items-center">
-            {/* Content Side - Left */}
-            <div className="relative order-2 lg:order-1">
+        <div className="relative">
+          {/* Image with overlay text */}
+          <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-xl shadow-2xl">
+            {rooms.map((room, index) => (
+              <img
+                key={index}
+                src={room.image}
+                alt={room.name}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+                  index === currentIndex ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                }`}
+              />
+            ))}
+            
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            
+            {/* Text overlay bottom left */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
               {rooms.map((room, index) => (
                 <div
                   key={index}
@@ -135,44 +134,38 @@ export const RoomsSection = () => {
                       : "opacity-0 translate-y-4 absolute inset-0 pointer-events-none"
                   }`}
                 >
-                  <h3 className="font-display text-2xl md:text-3xl text-foreground mb-2">
+                  <h3 className="font-display text-2xl md:text-4xl text-white mb-3">
                     {room.name}
                   </h3>
-                  <div className="flex items-center gap-2 text-muted-foreground mb-3">
-                    <Users className="w-4 h-4 text-primary" />
-                    <span className="text-sm">{room.capacity}</span>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
+                  <p className="text-white/90 leading-relaxed max-w-xl text-sm md:text-base">
                     {room.description}
                   </p>
                 </div>
               ))}
-
-              <Button variant="gold" size="lg">
-                Réserver cette chambre
-              </Button>
             </div>
 
-            {/* Image Side - Right */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl order-1 lg:order-2">
-              {rooms.map((room, index) => (
-                <img
-                  key={index}
-                  src={room.image}
-                  alt={room.name}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
-                    index === currentIndex ? "opacity-100 scale-100" : "opacity-0 scale-105"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+            {/* Navigation arrows */}
+            <button
+              onClick={goToPrev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full transition-all backdrop-blur-sm"
+              aria-label="Chambre précédente"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full transition-all backdrop-blur-sm"
+              aria-label="Chambre suivante"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
 
-          {/* Counter at bottom */}
-          <div className="flex justify-center mt-6">
-            <span className="text-foreground font-display text-lg">
-              {currentIndex + 1}<span className="text-muted-foreground">/{rooms.length}</span>
-            </span>
+            {/* Counter bottom right */}
+            <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10">
+              <span className="text-white font-display text-lg">
+                {currentIndex + 1}<span className="text-white/60">/{rooms.length}</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
