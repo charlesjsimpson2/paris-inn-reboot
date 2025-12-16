@@ -99,8 +99,8 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
         <div className={`w-full lg:w-[50%] bg-background/95 backdrop-blur-sm lg:bg-background p-8 lg:p-10 ${reverse ? 'lg:ml-8' : 'lg:mr-8'} lg:my-12 lg:shadow-2xl lg:rounded-sm relative`}>
           
           {/* Burgundy accent lines on both sides */}
-          <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-primary" />
-          <div className="absolute top-0 bottom-0 right-0 w-1.5 bg-primary" />
+          <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-burgundy" />
+          <div className="absolute top-0 bottom-0 right-0 w-1.5 bg-burgundy" />
           
           <div className="px-6">
             {/* Name with Surface */}
@@ -108,12 +108,12 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
               <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">
                 {salon.name}
               </h3>
-              <span className="text-primary font-medium text-sm uppercase tracking-wider">{salon.surface}</span>
+              <span className="text-burgundy font-medium text-sm uppercase tracking-wider">{salon.surface}</span>
             </div>
             
             {salon.capacities.length > 0 && (
               <p className="text-muted-foreground text-sm mb-5">
-                Jusqu'à <span className="text-primary font-semibold">{Math.max(...salon.capacities.map(c => c.count))}</span> personnes
+                Jusqu'à <span className="text-burgundy font-semibold">{Math.max(...salon.capacities.map(c => c.count))}</span> personnes
               </p>
             )}
 
@@ -133,7 +133,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
                       style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(1500%) hue-rotate(330deg) brightness(85%)' }}
                     />
                     <div>
-                      <span className="font-display text-2xl text-primary block leading-none">{capacity.count}</span>
+                      <span className="font-display text-2xl text-burgundy block leading-none">{capacity.count}</span>
                       <span className="text-sm text-muted-foreground">{capacity.label}</span>
                     </div>
                   </div>
@@ -144,7 +144,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
             {/* CTA Button */}
             <a
               href="#contact"
-              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded font-medium transition-colors"
+              className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 rounded font-medium transition-colors"
             >
               Demander un devis
             </a>
