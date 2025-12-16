@@ -36,16 +36,7 @@ const destinations = [
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-secondary/20">
-      {/* Decorative separator */}
-      <div className="container mx-auto px-4 mb-12">
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-px w-16 bg-primary/30" />
-          <div className="w-2 h-2 rotate-45 border border-primary/30" />
-          <div className="h-px w-16 bg-primary/30" />
-        </div>
-      </div>
-      
+    <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -62,8 +53,8 @@ export const AboutSection = () => {
 
         {/* Main content grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Single image - no rounded corners */}
-          <div className="relative group overflow-hidden shadow-xl">
+          {/* Single image */}
+          <div className="relative group rounded-xl overflow-hidden">
             <img
               src={proximiteMetro}
               alt="Hôtel Inn Design près du métro Place d'Italie"
@@ -72,15 +63,15 @@ export const AboutSection = () => {
           </div>
 
           {/* Destinations grid */}
-          <div className="bg-background p-8 border-l-2 border-primary/30">
-            <div className="grid grid-cols-2 gap-3 mb-6">
+          <div>
+            <div className="grid grid-cols-2 gap-2 mb-4">
               {destinations.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-3 bg-secondary/30 border border-border/50 hover:border-primary/30 transition-colors"
+                  className="flex items-center gap-2 p-2 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors"
                 >
-                  <div className="w-10 h-10 bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-4 h-4 text-primary" />
                   </div>
                   <div>
                     <p className="font-display text-sm text-primary">{item.time}</p>
@@ -91,14 +82,14 @@ export const AboutSection = () => {
             </div>
 
             {/* Metro line */}
-            <div className="flex items-center justify-center gap-4 p-4 bg-secondary/30 border border-border/50">
+            <div className="flex items-center justify-center gap-3 p-3 rounded-lg bg-card border border-border">
               <div className="flex items-center gap-1">
-                <span className="w-7 h-7 bg-[#BB4D98] flex items-center justify-center text-white font-bold text-xs">5</span>
-                <span className="w-7 h-7 bg-[#7EC083] flex items-center justify-center text-white font-bold text-xs">6</span>
-                <span className="w-7 h-7 bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-xs">7</span>
+                <span className="w-6 h-6 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-xs">5</span>
+                <span className="w-6 h-6 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-xs">6</span>
+                <span className="w-6 h-6 rounded-full bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-xs">7</span>
               </div>
               <div className="flex items-center gap-2">
-                <Train className="w-5 h-5 text-primary" />
+                <Train className="w-4 h-4 text-primary" />
                 <div>
                   <p className="font-display text-sm text-primary">2 min</p>
                   <p className="text-muted-foreground text-xs">Accès métro (sortie 3)</p>

@@ -42,16 +42,7 @@ export const SeminarSection = () => {
   }, []);
 
   return (
-    <section id="seminaire" className="py-20 bg-background">
-      {/* Decorative separator */}
-      <div className="container mx-auto px-4 mb-12">
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-px w-16 bg-primary/30" />
-          <div className="w-2 h-2 rotate-45 border border-primary/30" />
-          <div className="h-px w-16 bg-primary/30" />
-        </div>
-      </div>
-      
+    <section id="seminaire" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

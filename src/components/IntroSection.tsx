@@ -11,7 +11,7 @@ const features = [
 
 export const IntroSection = () => {
   return (
-    <section className="py-16 pb-8 bg-background">
+    <section className="py-16 pb-8 bg-gradient-to-b from-card to-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

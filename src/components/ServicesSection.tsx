@@ -40,16 +40,7 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-secondary/20">
-      {/* Decorative separator */}
-      <div className="container mx-auto px-4 mb-12">
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-px w-16 bg-primary/30" />
-          <div className="w-2 h-2 rotate-45 border border-primary/30" />
-          <div className="h-px w-16 bg-primary/30" />
-        </div>
-      </div>
-      
+    <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">

@@ -56,22 +56,13 @@ export const RoomsSection = () => {
   }, []);
 
   return (
-    <section id="chambres" className="py-20 bg-secondary/20">
-      {/* Decorative separator */}
-      <div className="container mx-auto px-4 mb-12">
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-px w-16 bg-primary/30" />
-          <div className="w-2 h-2 rotate-45 border border-primary/30" />
-          <div className="h-px w-16 bg-primary/30" />
-        </div>
-      </div>
-      
+    <section id="chambres" className="py-20 bg-charcoal">
       <div className="container mx-auto px-4">
         {/* Main Grid: Text Left + Carousel Right */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
           {/* Left: Header + Description + CTA */}
-          <div className="space-y-6 bg-background p-8 border-l-2 border-primary/30">
-            <div className="relative">
+          <div className="space-y-6">
+            <div>
               <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
                 Nos Hébergements
               </p>
