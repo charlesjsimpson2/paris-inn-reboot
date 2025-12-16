@@ -54,7 +54,7 @@ export const AboutSection = () => {
         {/* Main content grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Single image */}
-          <div className="relative group rounded-xl overflow-hidden">
+          <div className="relative group overflow-hidden">
             <img
               src={proximiteMetro}
               alt="Hôtel Inn Design près du métro Place d'Italie"
@@ -68,9 +68,9 @@ export const AboutSection = () => {
               {destinations.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 p-2 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors"
+                  className="flex items-center gap-2 p-2 bg-card border border-border hover:border-primary/30 transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 bg-primary/10 flex items-center justify-center shrink-0">
                     <item.icon className="w-4 h-4 text-primary" />
                   </div>
                   <div>
@@ -82,7 +82,7 @@ export const AboutSection = () => {
             </div>
 
             {/* Metro line */}
-            <div className="flex items-center justify-center gap-3 p-3 rounded-lg bg-card border border-border">
+            <div className="flex items-center justify-center gap-3 p-3 bg-card border border-border">
               <div className="flex items-center gap-1">
                 <span className="w-6 h-6 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-xs">5</span>
                 <span className="w-6 h-6 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-xs">6</span>
