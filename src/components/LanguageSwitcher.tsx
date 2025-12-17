@@ -26,7 +26,7 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative z-[70]" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-2 py-1.5 text-sm bg-card/80 border border-border rounded hover:bg-card transition-colors"
@@ -38,7 +38,7 @@ export const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-36 bg-card border border-border rounded-md shadow-lg z-50 overflow-hidden">
+        <div className="absolute top-full right-0 mt-3 w-36 bg-card border border-border rounded-md shadow-lg z-[80] overflow-hidden">
           {languages.map((lang) => (
             <button
               key={lang.code}
