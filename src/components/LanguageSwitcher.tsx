@@ -29,26 +29,26 @@ export const LanguageSwitcher = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:text-primary transition-colors"
+        className="flex items-center gap-1.5 px-2 py-1.5 text-sm bg-card/80 border border-border rounded hover:bg-card transition-colors"
         aria-label="Select language"
       >
-        <span className="text-lg">{currentLanguage?.flag}</span>
-        <span className="hidden sm:inline">{currentLanguage?.code.toUpperCase()}</span>
-        <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <span className="text-base">{currentLanguage?.flag}</span>
+        <span className="text-xs font-medium">{currentLanguage?.code.toUpperCase()}</span>
+        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-40 bg-card border border-border rounded-md shadow-lg z-50 overflow-hidden">
+        <div className="absolute top-full right-0 mt-2 w-36 bg-card border border-border rounded-md shadow-lg z-50 overflow-hidden">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleSelect(lang.code)}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left hover:bg-muted transition-colors ${
+              className={`w-full flex items-center gap-2 px-3 py-2 text-sm text-left hover:bg-muted transition-colors ${
                 language === lang.code ? 'bg-muted text-primary' : 'text-foreground'
               }`}
             >
-              <span className="text-lg">{lang.flag}</span>
-              <span>{lang.name}</span>
+              <span className="text-base">{lang.flag}</span>
+              <span className="text-xs">{lang.name}</span>
             </button>
           ))}
         </div>
