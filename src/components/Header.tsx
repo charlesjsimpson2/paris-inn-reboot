@@ -117,7 +117,7 @@ export const Header = () => {
             <div className="flex items-center gap-2 md:gap-4 z-10">
               {/* Language Switcher - visible when top bar is hidden */}
               {(isScrolled || isHeroPage) && (
-                <div className="text-foreground">
+                <div className="text-foreground relative z-50">
                   <LanguageSwitcher />
                 </div>
               )}
