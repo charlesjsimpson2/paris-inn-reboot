@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ContactBubble } from "@/components/ContactBubble";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -29,28 +30,30 @@ const PageLoader = () => (
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/nos-chambres" element={<NosChambres />} />
-            <Route path="/seminaires" element={<Seminaires />} />
-            <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
-            <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
-            <Route path="/actualites" element={<Actualites />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/localisation" element={<Localisation />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        <ContactBubble />
-      </BrowserRouter>
-    </TooltipProvider>
+    <LanguageProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/nos-chambres" element={<NosChambres />} />
+              <Route path="/seminaires" element={<Seminaires />} />
+              <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
+              <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
+              <Route path="/actualites" element={<Actualites />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/localisation" element={<Localisation />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+          <ContactBubble />
+        </BrowserRouter>
+      </TooltipProvider>
+    </LanguageProvider>
   </QueryClientProvider>
 );
 
