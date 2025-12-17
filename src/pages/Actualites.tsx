@@ -72,14 +72,14 @@ const Actualites = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
-                Blog & Actualités
+                Événements & Offres
               </p>
               <h1 className="font-display text-4xl md:text-6xl text-foreground mb-6">
-                Les dernières nouvelles de l'hôtel
+                Nos événements et offres exclusives
               </h1>
               <p className="text-muted-foreground text-lg">
-                Restez informé des événements, offres spéciales et actualités 
-                de l'Hôtel Inn Design Paris.
+                Découvrez les événements à venir, concerts, promotions et offres 
+                spéciales de l'Hôtel Inn Design Paris.
               </p>
             </div>
           </div>
@@ -117,7 +117,7 @@ const Actualites = () => {
                   </span>
                 </div>
                 <Button variant="gold">
-                  Lire l'article
+                  En savoir plus
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -129,7 +129,7 @@ const Actualites = () => {
         <section className="py-16 bg-charcoal">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-3xl text-foreground mb-10">
-              Tous les articles
+              Tous les événements
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.slice(1).map((article) => (
@@ -172,7 +172,7 @@ const Actualites = () => {
             {/* Load More */}
             <div className="text-center mt-12">
               <Button variant="outline" size="lg">
-                Voir plus d'articles
+                Voir plus d'événements
               </Button>
             </div>
           </div>
