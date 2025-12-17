@@ -38,16 +38,16 @@ export const NewsSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
-            <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
-              Blog & Actualités
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              Nos dernières actualités
-            </h2>
+          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
+            Événements & Offres
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl text-foreground">
+            Nos prochains événements
+          </h2>
           </div>
           <Link to="/actualites" className="mt-4 md:mt-0">
             <Button variant="outline">
-              Voir toutes les actualités
+              Voir tous les événements
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>
