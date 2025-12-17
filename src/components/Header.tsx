@@ -2,22 +2,27 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
-const navItems = [
-  { name: "Accueil", href: "/" },
-  { name: "Nos Chambres", href: "/nos-chambres" },
-  { name: "Séminaires", href: "/seminaires" },
-  { name: "Petit Déjeuner", href: "/petit-dejeuner" },
-  { name: "Localisation", href: "/localisation" },
-  { name: "Actualités", href: "/actualites" },
-  { name: "Contact", href: "/contact" },
+const getNavItems = (t: (key: string) => string) => [
+  { name: t('nav.hotel'), href: "/" },
+  { name: t('nav.rooms'), href: "/nos-chambres" },
+  { name: t('nav.seminars'), href: "/seminaires" },
+  { name: t('nav.breakfast'), href: "/petit-dejeuner" },
+  { name: t('nav.location'), href: "/localisation" },
+  { name: t('nav.events'), href: "/actualites" },
+  { name: t('nav.contact'), href: "/contact" },
 ];
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
+  
+  const navItems = getNavItems(t);
   
   // Check if we're on homepage or a page with hero image
   const isHomePage = location.pathname === "/";
@@ -42,7 +47,10 @@ export const Header = () => {
         <div className="bg-charcoal/80 backdrop-blur-sm border-b border-border/30">
           <div className="container mx-auto px-4 py-2">
             <div className="flex items-center justify-between">
-              {/* Left: Address */}
+              {/* Left: Language Switcher */}
+              <LanguageSwitcher />
+              
+              {/* Center: Address */}
               <div className="hidden md:flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-burgundy" />
                 <span className="text-sm">211 Bd Vincent Auriol, 75013 Paris</span>
@@ -84,19 +92,29 @@ export const Header = () => {
       >
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between relative">
-            {/* Burger Menu - Left */}
-            <button
-              className={`group px-5 py-2.5 border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
-                isHeroPage || isScrolled
-                  ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
-                  : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
-              }`}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Menu"
-            >
-              <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
-              <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
-            </button>
+            {/* Left side: Menu + Language */}
+            <div className="flex items-center gap-2 z-10">
+              {/* Burger Menu */}
+              <button
+                className={`group px-5 py-2.5 border-2 transition-all duration-300 flex items-center gap-3 shadow-md hover:shadow-lg hover:scale-105 ${
+                  isHeroPage || isScrolled
+                    ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
+                    : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
+                }`}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Menu"
+              >
+                <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+                <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
+              </button>
+              
+              {/* Language Switcher - visible when top bar is hidden */}
+              {(isScrolled || isHeroPage) && (
+                <div className={isHeroPage || isScrolled ? "text-foreground" : "text-white"}>
+                  <LanguageSwitcher />
+                </div>
+              )}
+            </div>
 
             {/* Logo - Center */}
             <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
@@ -118,7 +136,7 @@ export const Header = () => {
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></span>
                 <span className="relative flex items-center gap-1 md:gap-3">
-                  <span className="text-sm md:text-lg">Réserver</span>
+                  <span className="text-sm md:text-lg">{t('nav.book').split(' ')[0]}</span>
                   <span className="text-xs md:text-sm bg-white/25 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-bold animate-bounce">-10%</span>
                 </span>
               </a>
