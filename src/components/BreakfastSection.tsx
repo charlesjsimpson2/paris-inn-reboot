@@ -19,7 +19,7 @@ export const BreakfastSection = () => {
         </div>
 
         {/* Petit-déjeuner */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
           {/* Content Side - Left */}
           <div className="space-y-6">
             <h3 className="font-display text-2xl md:text-3xl text-foreground">
@@ -56,7 +56,7 @@ export const BreakfastSection = () => {
         </div>
 
         {/* Bar */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image Side - Left */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] overflow-hidden shadow-xl">

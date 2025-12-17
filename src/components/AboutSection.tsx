@@ -64,7 +64,7 @@ export const AboutSection = () => {
 
           {/* Destinations grid */}
           <div>
-            <div className="grid grid-cols-2 gap-2 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
               {destinations.map((item, index) => (
                 <div
                   key={index}
@@ -73,9 +73,9 @@ export const AboutSection = () => {
                   <div className="w-8 h-8 bg-primary/10 flex items-center justify-center shrink-0">
                     <item.icon className="w-4 h-4 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-display text-sm text-primary">{item.time}</p>
-                    <p className="text-muted-foreground text-xs">{item.label}</p>
+                    <p className="text-muted-foreground text-xs truncate">{item.label}</p>
                   </div>
                 </div>
               ))}

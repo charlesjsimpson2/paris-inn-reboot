@@ -96,8 +96,10 @@ export const RoomsSection = () => {
           {/* Cards container */}
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-out gap-6"
-              style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
+              className="flex transition-transform duration-500 ease-out gap-4 md:gap-6"
+              style={{ 
+                transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 16}px))`,
+              }}
             >
               {rooms.map((room, index) => (
                 <div
@@ -114,8 +116,8 @@ export const RoomsSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                     
                     {/* Text overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="font-display text-xl md:text-2xl text-white mb-2 group-hover:text-primary transition-colors">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                      <h3 className="font-display text-lg md:text-2xl text-white mb-1 md:mb-2 group-hover:text-primary transition-colors">
                         {room.name}
                       </h3>
                       <p className="text-white/90 leading-relaxed text-sm md:text-base line-clamp-2">
@@ -164,11 +166,11 @@ export const RoomsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button variant="outline" size="lg" asChild>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12">
+          <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
             <a href="/nos-chambres">Voir toutes nos chambres</a>
           </Button>
-          <Button variant="gold" size="lg" asChild>
+          <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
             <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
               Réserver une chambre
             </a>
@@ -177,7 +179,7 @@ export const RoomsSection = () => {
 
         {/* Bottom: Equipment */}
         <div className="border-t border-border/30 pt-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
             {[
               { icon: Bath, label: "Salle d'eau privative" },
               { icon: Tv, label: "TV écran plat" },
@@ -188,12 +190,12 @@ export const RoomsSection = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 text-center group"
+                className="flex flex-col items-center gap-2 md:gap-3 text-center group"
               >
-                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <span className="text-sm text-muted-foreground">{item.label}</span>
+                <span className="text-xs md:text-sm text-muted-foreground">{item.label}</span>
               </div>
             ))}
           </div>
