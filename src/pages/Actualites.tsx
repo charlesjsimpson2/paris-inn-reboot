@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -118,10 +118,32 @@ const Actualites = () => {
                     {newsArticles[0].readTime} {t('actualites.readTime')}
                   </span>
                 </div>
-                <Button variant="gold">
-                  {t('actualites.learnMore')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                <div className="flex items-center gap-4">
+                  <Button variant="gold">
+                    {t('actualites.learnMore')}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                  <div className="flex items-center gap-2">
+                    <a
+                      href={`https://www.instagram.com/`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 border border-border hover:border-primary hover:text-primary transition-colors"
+                      aria-label="Partager sur Instagram"
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 border border-border hover:border-primary hover:text-primary transition-colors"
+                      aria-label="Partager sur LinkedIn"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -165,6 +187,26 @@ const Actualites = () => {
                         <Clock className="w-3 h-3" />
                         {article.readTime}
                       </span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border">
+                      <a
+                        href={`https://www.instagram.com/`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 border border-border hover:border-primary hover:text-primary transition-colors"
+                        aria-label="Partager sur Instagram"
+                      >
+                        <Instagram className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-1.5 border border-border hover:border-primary hover:text-primary transition-colors"
+                        aria-label="Partager sur LinkedIn"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </article>
