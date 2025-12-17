@@ -1,20 +1,23 @@
 import { Wine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import breakfastImage from "@/assets/petit-dejeuner.jpg";
 import barImage from "@/assets/bar-hotel.jpg";
 
 export const BreakfastSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="petit-dejeuner" className="py-16 lg:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-            À votre service
+            {t('breakfast.badge')}
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground">
-            Petit-déjeuner & Bar
+            {t('breakfast.title')}
           </h2>
         </div>
 
@@ -23,23 +26,19 @@ export const BreakfastSection = () => {
           {/* Content Side - Left */}
           <div className="space-y-6">
             <h3 className="font-display text-2xl md:text-3xl text-foreground">
-              Le petit déjeuner qui donne le sourire !
+              {t('breakfast.subtitle')}
             </h3>
 
             <p className="text-muted-foreground leading-relaxed">
-              Chaque matin, faites le plein d'énergie avec notre petit déjeuner complet, 
-              servi en buffet sucré & salé à volonté.
+              {t('breakfast.desc1')}
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              Au menu : boissons chaudes, baguettes tradition et céréales, viennoiseries 
-              croustillantes, fruits frais et céréales. Côté salé, retrouvez œufs durs, 
-              charcuterie, blanc de dinde, fromages et yaourts nature bio. Et pour les 
-              plus gourmands : confitures et crêpes moelleuses délicatement vanillées.
+              {t('breakfast.desc2')}
             </p>
 
             <Button variant="gold" size="lg" asChild>
-              <Link to="/petit-dejeuner">Découvrir notre petit-déjeuner</Link>
+              <Link to="/petit-dejeuner">{t('breakfast.cta')}</Link>
             </Button>
           </div>
 
@@ -75,18 +74,16 @@ export const BreakfastSection = () => {
                 <Wine className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-display text-2xl md:text-3xl text-foreground">
-                Un bar convivial pour se détendre
+                {t('breakfast.bar.title')}
               </h3>
             </div>
 
             <p className="text-muted-foreground leading-relaxed">
-              À tout moment de la journée, installez-vous au bar de l'hôtel pour partager 
-              un verre, échanger ou simplement faire une pause.
+              {t('breakfast.bar.desc1')}
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              Dans une ambiance accueillante et décontractée, c'est l'endroit idéal pour 
-              se retrouver après une journée bien remplie.
+              {t('breakfast.bar.desc2')}
             </p>
           </div>
         </div>

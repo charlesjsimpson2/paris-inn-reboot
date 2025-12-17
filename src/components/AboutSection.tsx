@@ -1,53 +1,32 @@
 import { Plane, Building2, Landmark, MapPin, Train } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
 
 const destinations = [
-  {
-    icon: Plane,
-    time: "1h",
-    label: "Aéroport de Paris-Charles de Gaulle",
-  },
-  {
-    icon: Plane,
-    time: "45 min",
-    label: "Aéroport de Paris-Orly",
-  },
-  {
-    icon: Building2,
-    time: "26 min",
-    label: "Tour Eiffel",
-  },
-  {
-    icon: Landmark,
-    time: "8 min",
-    label: "Musée du Louvre",
-  },
-  {
-    icon: MapPin,
-    time: "30 min",
-    label: "Les Champs-Élysées",
-  },
-  {
-    icon: Landmark,
-    time: "20 min",
-    label: "Le Panthéon",
-  },
+  { icon: Plane, time: "1h", label: "Aéroport de Paris-Charles de Gaulle" },
+  { icon: Plane, time: "45 min", label: "Aéroport de Paris-Orly" },
+  { icon: Building2, time: "26 min", label: "Tour Eiffel" },
+  { icon: Landmark, time: "8 min", label: "Musée du Louvre" },
+  { icon: MapPin, time: "30 min", label: "Les Champs-Élysées" },
+  { icon: Landmark, time: "20 min", label: "Le Panthéon" },
 ];
 
 export const AboutSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-            Emplacement idéal
+            {t('about.badge')}
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
-            Un hôtel situé au cœur de Paris
+            {t('about.title')}
           </h2>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Hôtel Inn Paris est situé à 2min à pied du métro parisien et offre une grande commodité.
+            {t('about.description')}
           </p>
         </div>
 
@@ -92,7 +71,7 @@ export const AboutSection = () => {
                 <Train className="w-4 h-4 text-primary" />
                 <div>
                   <p className="font-display text-sm text-primary">2 min</p>
-                  <p className="text-muted-foreground text-xs">Accès métro (sortie 3)</p>
+                  <p className="text-muted-foreground text-xs">{t('about.metro')}</p>
                 </div>
               </div>
             </div>

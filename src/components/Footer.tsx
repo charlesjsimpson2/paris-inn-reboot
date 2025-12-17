@@ -1,8 +1,11 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-charcoal border-t border-border">
       <div className="container mx-auto px-4 py-12">
@@ -15,32 +18,32 @@ export const Footer = () => {
               className="h-12 w-auto mb-4"
             />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Hôtel 3 étoiles au cœur du 13ème arrondissement, à deux pas de la Place d'Italie.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Navigation Col 1 */}
           <div>
-            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4">Navigation</h4>
+            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4">{t('footer.navigation')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Accueil
+                  {t('nav.home')}
                 </Link>
               </li>
               <li>
                 <Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Nos Chambres
+                  {t('nav.rooms')}
                 </Link>
               </li>
               <li>
                 <Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Petit Déjeuner
+                  {t('nav.breakfast')}
                 </Link>
               </li>
               <li>
                 <Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Séminaires
+                  {t('nav.seminars')}
                 </Link>
               </li>
             </ul>
@@ -52,17 +55,17 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Localisation
+                  {t('nav.location')}
                 </Link>
               </li>
               <li>
                 <Link to="/actualites" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Actualités
+                  {t('nav.events')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Contact
+                  {t('nav.contact')}
                 </Link>
               </li>
             </ul>
@@ -70,7 +73,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4">Contact</h4>
+            <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -101,14 +104,14 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-border/50 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-muted-foreground text-xs">
-            © 2024 Hôtel Inn Design Paris. Tous droits réservés.
+            © 2024 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
           <div className="flex gap-4 text-xs">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Mentions légales
+              {t('footer.legal')}
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Politique de confidentialité
+              {t('footer.privacy')}
             </a>
           </div>
         </div>
