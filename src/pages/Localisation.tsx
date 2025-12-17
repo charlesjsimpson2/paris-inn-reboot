@@ -1,24 +1,27 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MapPin, Plane, Building2, Landmark, Train, Car, Clock, Phone, TrainFront, Bus, TramFront } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
 
-const destinations = [
-  { icon: Plane, time: "1h", label: "Aéroport Paris-CDG" },
-  { icon: Plane, time: "45 min", label: "Aéroport Paris-Orly" },
-  { icon: Building2, time: "26 min", label: "Tour Eiffel" },
-  { icon: Landmark, time: "8 min", label: "Musée du Louvre" },
-  { icon: MapPin, time: "30 min", label: "Champs-Élysées" },
-  { icon: Landmark, time: "20 min", label: "Le Panthéon" },
-];
-
-const transports = [
-  { type: "Métro", lines: "Lignes 5, 6 & 7", stop: "Place d'Italie", time: "2 min", icon: TrainFront },
-  { type: "Bus", lines: "Lignes 27, 47, 83", stop: "Vincent Auriol", time: "1 min", icon: Bus },
-  { type: "Tramway", lines: "T3a", stop: "Porte d'Italie", time: "10 min", icon: TramFront },
-];
-
 const Localisation = () => {
+  const { t } = useLanguage();
+
+  const destinations = [
+    { icon: Plane, time: "1h", label: t('locationPage.airport.cdg') },
+    { icon: Plane, time: "45 min", label: t('locationPage.airport.orly') },
+    { icon: Building2, time: "26 min", label: t('locationPage.eiffel') },
+    { icon: Landmark, time: "8 min", label: t('locationPage.louvre') },
+    { icon: MapPin, time: "30 min", label: t('locationPage.champs') },
+    { icon: Landmark, time: "20 min", label: t('locationPage.pantheon') },
+  ];
+
+  const transports = [
+    { type: t('location.metro'), lines: "Lignes 5, 6 & 7", stop: "Place d'Italie", time: "2 min", icon: TrainFront },
+    { type: t('location.bus'), lines: "Lignes 27, 47, 83", stop: "Vincent Auriol", time: "1 min", icon: Bus },
+    { type: t('location.tramway'), lines: "T3a", stop: "Porte d'Italie", time: "10 min", icon: TramFront },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -29,10 +32,10 @@ const Localisation = () => {
           {/* Section Header */}
           <div className="text-center mb-12 animate-fade-in">
             <span className="text-burgundy font-medium text-sm uppercase tracking-[0.3em] mb-4 block">
-              Nous trouver
+              {t('locationPage.badge')}
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground">
-              Notre emplacement
+              {t('locationPage.title')}
             </h1>
           </div>
 
@@ -76,7 +79,7 @@ const Localisation = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-burgundy hover:text-burgundy/80 transition-colors font-medium text-sm group"
                     >
-                      Ouvrir dans Google Maps 
+                      {t('locationPage.openMaps')} 
                       <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
                   </div>
@@ -143,13 +146,13 @@ const Localisation = () => {
             {/* Content */}
             <div className="order-1 lg:order-2">
               <span className="text-burgundy font-medium text-sm uppercase tracking-[0.3em] mb-4 block">
-                Idéalement situé
+                {t('locationPage.idealLocation')}
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-                Un hôtel au cœur de Paris
+                {t('locationPage.heartOfParis')}
               </h2>
               <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-                À deux pas du métro Place d'Italie, profitez d'un accès rapide à tous les monuments et attractions de la capitale.
+                {t('locationPage.heartDesc')}
               </p>
 
               {/* Destinations Grid */}
@@ -177,18 +180,18 @@ const Localisation = () => {
                     <div className="w-8 h-8 rounded-lg bg-burgundy/10 flex items-center justify-center">
                       <Car className="w-4 h-4 text-burgundy" />
                     </div>
-                    <span className="font-medium text-foreground">Parking</span>
+                    <span className="font-medium text-foreground">{t('locationPage.parking')}</span>
                   </div>
-                  <p className="text-muted-foreground text-sm">Parking privé sécurisé (15€/jour)</p>
+                  <p className="text-muted-foreground text-sm">{t('locationPage.parkingDesc')}</p>
                 </div>
                 <div className="p-5 rounded-xl bg-background/50 border border-border/50 hover:border-burgundy/30 transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 rounded-lg bg-burgundy/10 flex items-center justify-center">
                       <Clock className="w-4 h-4 text-burgundy" />
                     </div>
-                    <span className="font-medium text-foreground">Réception</span>
+                    <span className="font-medium text-foreground">{t('locationPage.reception')}</span>
                   </div>
-                  <p className="text-muted-foreground text-sm">Ouverte 24h/24</p>
+                  <p className="text-muted-foreground text-sm">{t('locationPage.receptionDesc')}</p>
                 </div>
               </div>
             </div>
@@ -204,7 +207,7 @@ const Localisation = () => {
               <Phone className="w-8 h-8 text-white" />
             </div>
             <div>
-              <p className="text-white/70 mb-2 text-lg">Besoin d'indications ?</p>
+              <p className="text-white/70 mb-2 text-lg">{t('locationPage.needDirections')}</p>
               <a href="tel:+33144240101" className="text-white font-display text-3xl hover:text-white/90 transition-colors">
                 +33 (0)1 44 24 01 01
               </a>

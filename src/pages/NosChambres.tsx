@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { RoomSection } from "@/components/RoomSection";
 import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
@@ -20,72 +21,73 @@ import gallery7 from "@/assets/gallery/chambre-6.jpg";
 import gallery8 from "@/assets/gallery/plateau-courtoisie.jpg";
 import gallery9 from "@/assets/gallery/coin-salon.jpg";
 
-const galleryImages = [
-  { src: gallery1, alt: "Chambre avec vue" },
-  { src: gallery2, alt: "Chambre double" },
-  { src: gallery3, alt: "Balcon avec petit déjeuner" },
-  { src: gallery4, alt: "Chambre twin" },
-  { src: gallery5, alt: "Salle de bain moderne" },
-  { src: gallery6, alt: "Chambre supérieure" },
-  { src: gallery7, alt: "Chambre twin confort" },
-  { src: gallery8, alt: "Plateau de courtoisie" },
-  { src: gallery9, alt: "Coin salon" },
-];
-
-const roomsData = [
-  {
-    name: "Chambre Double",
-    details: "Lit de 160×200 cm",
-    description: "Profitez d'un espace élégant et confortable, idéal pour un séjour en couple ou en solo. Équipée de tout le confort moderne, cette chambre vous offre un havre de paix au cœur de Paris.",
-    images: [
-      { src: chambreDouble, alt: "Chambre Double - Vue d'ensemble" },
-      { src: gallery2, alt: "Chambre Double - Détail" },
-    ],
-  },
-  {
-    name: "Chambre Twin",
-    details: "2 lits de 100×200 cm",
-    description: "Parfaite pour les voyages entre amis ou collègues, avec tout le confort nécessaire. Deux lits séparés dans un espace optimisé pour un séjour agréable.",
-    images: [
-      { src: chambreTwin, alt: "Chambre Twin - Vue d'ensemble" },
-      { src: gallery4, alt: "Chambre Twin - Détail" },
-    ],
-  },
-  {
-    name: "Chambre Supérieure avec Balcon",
-    details: "Vue sur Paris",
-    description: "Profitez d'un espace extérieur privé avec vue sur Paris. Une expérience unique au cœur de la ville. Idéale pour savourer votre petit-déjeuner en admirant les toits parisiens.",
-    images: [
-      { src: chambreSuperieureBalcon, alt: "Chambre Supérieure - Vue balcon" },
-      { src: gallery3, alt: "Chambre Supérieure - Balcon" },
-      { src: gallery1, alt: "Chambre Supérieure - Intérieur" },
-    ],
-  },
-  {
-    name: "Chambres Communicantes",
-    details: "2 chambres modulables",
-    description: "Deux chambres avec portes communicantes, la solution idéale pour les familles ou groupes. Profitez de l'intimité de chambres séparées tout en restant connectés.",
-    images: [
-      { src: gallery6, alt: "Chambres Communicantes - Vue" },
-      { src: gallery7, alt: "Chambres Communicantes - Détail" },
-    ],
-  },
-];
-
-const equipments = [
-  { icon: Bath, label: "Salle d'eau privative" },
-  { icon: Tv, label: "TV écran plat" },
-  { icon: Briefcase, label: "Espace bureau" },
-  { icon: Wifi, label: "Wi-Fi gratuit" },
-  { icon: CupSoda, label: "Plateau de courtoisie" },
-  { icon: Snowflake, label: "Climatisation" },
-];
-
 const NosChambres = () => {
+  const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const galleryRef = useRef<HTMLDivElement>(null);
+
+  const galleryImages = [
+    { src: gallery1, alt: "Chambre avec vue" },
+    { src: gallery2, alt: "Chambre double" },
+    { src: gallery3, alt: "Balcon avec petit déjeuner" },
+    { src: gallery4, alt: "Chambre twin" },
+    { src: gallery5, alt: "Salle de bain moderne" },
+    { src: gallery6, alt: "Chambre supérieure" },
+    { src: gallery7, alt: "Chambre twin confort" },
+    { src: gallery8, alt: "Plateau de courtoisie" },
+    { src: gallery9, alt: "Coin salon" },
+  ];
+
+  const roomsData = [
+    {
+      name: t('roomsPage.double.name'),
+      details: t('roomsPage.double.details'),
+      description: t('roomsPage.double.desc'),
+      images: [
+        { src: chambreDouble, alt: "Chambre Double - Vue d'ensemble" },
+        { src: gallery2, alt: "Chambre Double - Détail" },
+      ],
+    },
+    {
+      name: t('roomsPage.twin.name'),
+      details: t('roomsPage.twin.details'),
+      description: t('roomsPage.twin.desc'),
+      images: [
+        { src: chambreTwin, alt: "Chambre Twin - Vue d'ensemble" },
+        { src: gallery4, alt: "Chambre Twin - Détail" },
+      ],
+    },
+    {
+      name: t('roomsPage.superior.name'),
+      details: t('roomsPage.superior.details'),
+      description: t('roomsPage.superior.desc'),
+      images: [
+        { src: chambreSuperieureBalcon, alt: "Chambre Supérieure - Vue balcon" },
+        { src: gallery3, alt: "Chambre Supérieure - Balcon" },
+        { src: gallery1, alt: "Chambre Supérieure - Intérieur" },
+      ],
+    },
+    {
+      name: t('roomsPage.connecting.name'),
+      details: t('roomsPage.connecting.details'),
+      description: t('roomsPage.connecting.desc'),
+      images: [
+        { src: gallery6, alt: "Chambres Communicantes - Vue" },
+        { src: gallery7, alt: "Chambres Communicantes - Détail" },
+      ],
+    },
+  ];
+
+  const equipments = [
+    { icon: Bath, label: t('rooms.bathroom') },
+    { icon: Tv, label: t('rooms.tv') },
+    { icon: Briefcase, label: t('rooms.desk') },
+    { icon: Wifi, label: t('rooms.wifi') },
+    { icon: CupSoda, label: t('rooms.courtesy') },
+    { icon: Snowflake, label: t('rooms.ac') },
+  ];
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -137,10 +139,10 @@ const NosChambres = () => {
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
           <div className="container mx-auto">
             <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
-              Nos Hébergements
+              {t('roomsPage.badge')}
             </span>
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
-              Les chambres de l'Hôtel Inn Design Paris
+              {t('roomsPage.title')}
             </h1>
           </div>
         </div>
@@ -153,7 +155,7 @@ const NosChambres = () => {
             {/* Left: Text */}
             <div>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Profitez de 70 chambres lumineuses, insonorisées et tout confort, avec salle de bain équipée. En solo, en famille ou entre amis, tout est pensé pour votre bien-être, avec des chambres communicantes et une équipe aux petits soins. Idéalement situé, l'hôtel est le point de départ parfait pour découvrir Paris sans stress.
+                {t('roomsPage.intro')}
               </p>
             </div>
 
@@ -181,9 +183,9 @@ const NosChambres = () => {
         <div className="py-16 bg-charcoal">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">Nos hébergements</span>
+              <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">{t('roomsPage.ourRooms')}</span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mt-3">
-                Découvrez nos chambres
+                {t('roomsPage.discover')}
               </h2>
             </div>
           </div>
@@ -207,10 +209,10 @@ const NosChambres = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4 animate-fade-in">
-              Galerie Photo
+              {t('roomsPage.gallery')}
             </span>
             <h2 className="font-display text-3xl md:text-4xl text-foreground animate-fade-in">
-              Découvrez nos espaces
+              {t('roomsPage.spaces')}
             </h2>
           </div>
 
@@ -239,7 +241,7 @@ const NosChambres = () => {
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                   <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-lg">
-                    Voir
+                    {t('roomsPage.view')}
                   </span>
                 </div>
               </button>
@@ -291,13 +293,13 @@ const NosChambres = () => {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-primary-foreground mb-4">
-            Réservez votre chambre dès maintenant
+            {t('roomsPage.cta.title')}
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            Profitez de -10% en réservant directement sur notre site
+            {t('roomsPage.cta.subtitle')}
           </p>
           <Button variant="outline" size="xl" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-            Voir les disponibilités
+            {t('roomsPage.cta.button')}
           </Button>
         </div>
       </section>
