@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface RoomData {
   name: string;
@@ -83,6 +84,8 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
 };
 
 export const RoomSection = ({ room, reverse = false }: RoomSectionProps) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="relative min-h-[450px] lg:min-h-[500px]">
       {/* Image - Full width on one side */}
@@ -121,7 +124,7 @@ export const RoomSection = ({ room, reverse = false }: RoomSectionProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Réserver cette chambre
+                {t('rooms.bookButton')}
               </a>
             </Button>
           </div>
