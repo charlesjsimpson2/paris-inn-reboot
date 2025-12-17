@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import pictoU from "@/assets/picto-salle-u.png";
 import pictoClasse from "@/assets/picto-salle-classe.png";
 import pictoTheatre from "@/assets/picto-salle-theatre.png";
@@ -95,6 +96,8 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
 };
 
 export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="relative min-h-[500px] lg:min-h-[550px]">
       {/* Image - Full width on one side */}
@@ -154,7 +157,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
               href="#contact"
               className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 font-medium transition-colors"
             >
-              Demander un devis
+              {t('seminars.quoteButton')}
             </a>
           </div>
         </div>

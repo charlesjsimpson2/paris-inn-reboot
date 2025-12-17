@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Sample news data - will be replaced with real data
 const newsArticles = [
@@ -63,6 +64,8 @@ const newsArticles = [
 ];
 
 const Actualites = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -72,14 +75,13 @@ const Actualites = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
-                Événements & Offres
+                {t('actualites.hero.badge')}
               </p>
               <h1 className="font-display text-4xl md:text-6xl text-foreground mb-6">
-                Nos événements et offres exclusives
+                {t('actualites.hero.title')}
               </h1>
               <p className="text-muted-foreground text-lg">
-                Découvrez les événements à venir, concerts, promotions et offres 
-                spéciales de l'Hôtel Inn Design Paris.
+                {t('actualites.hero.description')}
               </p>
             </div>
           </div>
@@ -113,11 +115,11 @@ const Actualites = () => {
                   </span>
                   <span className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
-                    {newsArticles[0].readTime} de lecture
+                    {newsArticles[0].readTime} {t('actualites.readTime')}
                   </span>
                 </div>
                 <Button variant="gold">
-                  En savoir plus
+                  {t('actualites.learnMore')}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -129,7 +131,7 @@ const Actualites = () => {
         <section className="py-16 bg-charcoal">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-3xl text-foreground mb-10">
-              Tous les événements
+              {t('actualites.allEvents')}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.slice(1).map((article) => (
@@ -172,7 +174,7 @@ const Actualites = () => {
             {/* Load More */}
             <div className="text-center mt-12">
               <Button variant="outline" size="lg">
-                Voir plus d'événements
+                {t('actualites.loadMore')}
               </Button>
             </div>
           </div>
@@ -183,19 +185,18 @@ const Actualites = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                Restez informé
+                {t('actualites.newsletter.title')}
               </h2>
               <p className="text-muted-foreground mb-8">
-                Inscrivez-vous à notre newsletter pour recevoir nos dernières 
-                actualités et offres exclusives.
+                {t('actualites.newsletter.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input
                   type="email"
-                  placeholder="Votre email"
+                  placeholder={t('actualites.newsletter.placeholder')}
                   className="flex-1 px-4 py-3 bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 />
-                <Button variant="gold">S'inscrire</Button>
+                <Button variant="gold">{t('actualites.newsletter.button')}</Button>
               </div>
             </div>
           </div>

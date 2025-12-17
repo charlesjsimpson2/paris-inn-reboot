@@ -196,6 +196,25 @@ const translations: Record<Language, Record<string, string>> = {
     'events.title': 'Découvrez notre agenda et offres',
     'events.cta': 'Voir tous les événements',
     
+    // Actualites Page
+    'actualites.hero.badge': 'Événements & Offres',
+    'actualites.hero.title': 'Nos événements et offres exclusives',
+    'actualites.hero.description': 'Découvrez les événements à venir, concerts, promotions et offres spéciales de l\'Hôtel Inn Design Paris.',
+    'actualites.readTime': 'de lecture',
+    'actualites.learnMore': 'En savoir plus',
+    'actualites.allEvents': 'Tous les événements',
+    'actualites.loadMore': 'Voir plus d\'événements',
+    'actualites.newsletter.title': 'Restez informé',
+    'actualites.newsletter.description': 'Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités et offres exclusives.',
+    'actualites.newsletter.placeholder': 'Votre email',
+    'actualites.newsletter.button': 'S\'inscrire',
+    
+    // Room booking button
+    'rooms.bookButton': 'Réserver',
+    
+    // Seminar quote button  
+    'seminars.quoteButton': 'Demander un devis',
+    
     // CTA
     'cta.badge': 'Meilleur Prix Garanti',
     'cta.title': 'Réservez directement pour les meilleurs tarifs',
@@ -390,6 +409,25 @@ const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Events & Offers',
     'events.title': 'Discover our agenda and offers',
     'events.cta': 'See all events',
+    
+    // Actualites Page
+    'actualites.hero.badge': 'Events & Offers',
+    'actualites.hero.title': 'Our events and exclusive offers',
+    'actualites.hero.description': 'Discover upcoming events, concerts, promotions and special offers at Hotel Inn Design Paris.',
+    'actualites.readTime': 'read',
+    'actualites.learnMore': 'Learn more',
+    'actualites.allEvents': 'All events',
+    'actualites.loadMore': 'See more events',
+    'actualites.newsletter.title': 'Stay informed',
+    'actualites.newsletter.description': 'Subscribe to our newsletter to receive our latest news and exclusive offers.',
+    'actualites.newsletter.placeholder': 'Your email',
+    'actualites.newsletter.button': 'Subscribe',
+    
+    // Room booking button
+    'rooms.bookButton': 'Book',
+    
+    // Seminar quote button
+    'seminars.quoteButton': 'Request a quote',
     
     // CTA
     'cta.badge': 'Best Price Guaranteed',
@@ -586,6 +624,25 @@ const translations: Record<Language, Record<string, string>> = {
     'events.title': 'Descubra nuestra agenda y ofertas',
     'events.cta': 'Ver todos los eventos',
     
+    // Actualites Page
+    'actualites.hero.badge': 'Eventos y Ofertas',
+    'actualites.hero.title': 'Nuestros eventos y ofertas exclusivas',
+    'actualites.hero.description': 'Descubra los próximos eventos, conciertos, promociones y ofertas especiales del Hotel Inn Design París.',
+    'actualites.readTime': 'de lectura',
+    'actualites.learnMore': 'Saber más',
+    'actualites.allEvents': 'Todos los eventos',
+    'actualites.loadMore': 'Ver más eventos',
+    'actualites.newsletter.title': 'Manténgase informado',
+    'actualites.newsletter.description': 'Suscríbase a nuestro boletín para recibir nuestras últimas noticias y ofertas exclusivas.',
+    'actualites.newsletter.placeholder': 'Su email',
+    'actualites.newsletter.button': 'Suscribirse',
+    
+    // Room booking button
+    'rooms.bookButton': 'Reservar',
+    
+    // Seminar quote button
+    'seminars.quoteButton': 'Solicitar presupuesto',
+    
     // CTA
     'cta.badge': 'Mejor Precio Garantizado',
     'cta.title': 'Reserve directamente para las mejores tarifas',
@@ -781,6 +838,25 @@ const translations: Record<Language, Record<string, string>> = {
     'events.title': 'Scopri la nostra agenda e offerte',
     'events.cta': 'Vedi tutti gli eventi',
     
+    // Actualites Page
+    'actualites.hero.badge': 'Eventi e Offerte',
+    'actualites.hero.title': 'I nostri eventi e offerte esclusive',
+    'actualites.hero.description': 'Scopri i prossimi eventi, concerti, promozioni e offerte speciali dell\'Hotel Inn Design Paris.',
+    'actualites.readTime': 'di lettura',
+    'actualites.learnMore': 'Scopri di più',
+    'actualites.allEvents': 'Tutti gli eventi',
+    'actualites.loadMore': 'Vedi altri eventi',
+    'actualites.newsletter.title': 'Resta informato',
+    'actualites.newsletter.description': 'Iscriviti alla nostra newsletter per ricevere le nostre ultime notizie e offerte esclusive.',
+    'actualites.newsletter.placeholder': 'La tua email',
+    'actualites.newsletter.button': 'Iscriviti',
+    
+    // Room booking button
+    'rooms.bookButton': 'Prenota',
+    
+    // Seminar quote button
+    'seminars.quoteButton': 'Richiedi preventivo',
+    
     // CTA
     'cta.badge': 'Miglior Prezzo Garantito',
     'cta.title': 'Prenota direttamente per le migliori tariffe',
@@ -975,6 +1051,25 @@ const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Eventos e Ofertas',
     'events.title': 'Descubra nossa agenda e ofertas',
     'events.cta': 'Ver todos os eventos',
+    
+    // Actualites Page
+    'actualites.hero.badge': 'Eventos e Ofertas',
+    'actualites.hero.title': 'Nossos eventos e ofertas exclusivas',
+    'actualites.hero.description': 'Descubra os próximos eventos, shows, promoções e ofertas especiais do Hotel Inn Design Paris.',
+    'actualites.readTime': 'de leitura',
+    'actualites.learnMore': 'Saiba mais',
+    'actualites.allEvents': 'Todos os eventos',
+    'actualites.loadMore': 'Ver mais eventos',
+    'actualites.newsletter.title': 'Fique informado',
+    'actualites.newsletter.description': 'Inscreva-se em nossa newsletter para receber nossas últimas notícias e ofertas exclusivas.',
+    'actualites.newsletter.placeholder': 'Seu email',
+    'actualites.newsletter.button': 'Inscrever-se',
+    
+    // Room booking button
+    'rooms.bookButton': 'Reservar',
+    
+    // Seminar quote button
+    'seminars.quoteButton': 'Solicitar orçamento',
     
     // CTA
     'cta.badge': 'Melhor Preço Garantido',
