@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Coffee, Croissant, Apple, Egg, Clock, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import salle1 from "@/assets/breakfast/salle-1.jpg";
 import salle2 from "@/assets/breakfast/salle-2.jpg";
@@ -11,27 +12,28 @@ import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import tablePetitDejeuner from "@/assets/breakfast/table-petit-dejeuner.jpg";
 import heroPetitDejeuner from "@/assets/breakfast/hero-petit-dejeuner.jpg";
 
-const features = [
-  { icon: Coffee, label: "Boissons chaudes" },
-  { icon: Croissant, label: "Viennoiseries" },
-  { icon: Apple, label: "Fruits frais" },
-  { icon: Egg, label: "Buffet salé" },
-];
-
-const galleryImages = [
-  { src: tablePetitDejeuner, alt: "Petit déjeuner complet" },
-  { src: buffet1, alt: "Buffet petit déjeuner" },
-  { src: salle1, alt: "Salle petit déjeuner" },
-  { src: salle2, alt: "Espace petit déjeuner" },
-  { src: balcon, alt: "Petit déjeuner sur balcon" },
-  { src: petitDejeuner, alt: "Buffet varié" },
-];
-
 const PetitDejeuner = () => {
+  const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const galleryRef = useRef<HTMLDivElement>(null);
+
+  const features = [
+    { icon: Coffee, label: t('breakfastPage.hotDrinks') },
+    { icon: Croissant, label: t('breakfastPage.pastries') },
+    { icon: Apple, label: t('breakfastPage.fruits') },
+    { icon: Egg, label: t('breakfastPage.savory') },
+  ];
+
+  const galleryImages = [
+    { src: tablePetitDejeuner, alt: "Petit déjeuner complet" },
+    { src: buffet1, alt: "Buffet petit déjeuner" },
+    { src: salle1, alt: "Salle petit déjeuner" },
+    { src: salle2, alt: "Espace petit déjeuner" },
+    { src: balcon, alt: "Petit déjeuner sur balcon" },
+    { src: petitDejeuner, alt: "Buffet varié" },
+  ];
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -83,10 +85,10 @@ const PetitDejeuner = () => {
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
           <div className="container mx-auto">
             <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 mb-4">
-              Chaque matin
+              {t('breakfastPage.badge')}
             </span>
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
-              Le petit déjeuner qui donne le sourire !
+              {t('breakfastPage.title')}
             </h1>
           </div>
         </div>
@@ -99,19 +101,15 @@ const PetitDejeuner = () => {
             {/* Content Side */}
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Chaque matin, faites le plein d'énergie avec notre petit déjeuner complet, 
-                servi en buffet sucré & salé à volonté.
+                {t('breakfastPage.intro1')}
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                Au menu : boissons chaudes, baguettes tradition et céréales, viennoiseries 
-                croustillantes, fruits frais et céréales. Côté salé, retrouvez œufs durs, 
-                charcuterie, blanc de dinde, fromages et yaourts nature bio. Et pour les 
-                plus gourmands : confitures et crêpes moelleuses délicatement vanillées.
+                {t('breakfastPage.intro2')}
               </p>
 
               <p className="text-foreground font-medium text-lg">
-                De quoi bien commencer la journée, quel que soit votre programme !
+                {t('breakfastPage.enjoy')}
               </p>
 
               {/* Info boxes */}
@@ -121,8 +119,8 @@ const PetitDejeuner = () => {
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Horaires</p>
-                    <p className="font-medium text-foreground">7h00 - 10h00</p>
+                    <p className="text-sm text-muted-foreground">{t('breakfastPage.hours')}</p>
+                    <p className="font-medium text-foreground">{t('breakfastPage.hoursValue')}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 bg-secondary/30 rounded-xl border border-border/50">
@@ -130,8 +128,8 @@ const PetitDejeuner = () => {
                     <Users className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Formule</p>
-                    <p className="font-medium text-foreground">Buffet à volonté</p>
+                    <p className="text-sm text-muted-foreground">{t('breakfastPage.formula')}</p>
+                    <p className="font-medium text-foreground">{t('breakfastPage.formulaValue')}</p>
                   </div>
                 </div>
               </div>
@@ -172,10 +170,10 @@ const PetitDejeuner = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
-              Galerie Photo
+              {t('breakfastPage.gallery')}
             </span>
             <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              Notre espace petit déjeuner
+              {t('breakfastPage.space')}
             </h2>
           </div>
 
@@ -202,7 +200,7 @@ const PetitDejeuner = () => {
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                   <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-lg">
-                    Voir
+                    {t('breakfastPage.view')}
                   </span>
                 </div>
               </button>

@@ -47,7 +47,7 @@ const translations: Record<Language, Record<string, string>> = {
     'intro.parking': 'Parking privé',
     'intro.bar': 'Bar convivial',
     
-    // Rooms Section
+    // Rooms Section (Homepage)
     'rooms.badge': 'Nos Hébergements',
     'rooms.title': 'Chambres & Suites',
     'rooms.subtitle': 'Posez vos valises et profitez !',
@@ -70,13 +70,66 @@ const translations: Record<Language, Record<string, string>> = {
     'rooms.courtesy': 'Plateau de courtoisie',
     'rooms.ac': 'Climatisation',
     
-    // About / Location
+    // Rooms Page
+    'roomsPage.badge': 'Nos Hébergements',
+    'roomsPage.title': 'Les chambres de l\'Hôtel Inn Design Paris',
+    'roomsPage.intro': 'Profitez de 70 chambres lumineuses, insonorisées et tout confort, avec salle de bain équipée. En solo, en famille ou entre amis, tout est pensé pour votre bien-être, avec des chambres communicantes et une équipe aux petits soins. Idéalement situé, l\'hôtel est le point de départ parfait pour découvrir Paris sans stress.',
+    'roomsPage.ourRooms': 'Nos hébergements',
+    'roomsPage.discover': 'Découvrez nos chambres',
+    'roomsPage.gallery': 'Galerie Photo',
+    'roomsPage.spaces': 'Découvrez nos espaces',
+    'roomsPage.view': 'Voir',
+    'roomsPage.cta.title': 'Réservez votre chambre dès maintenant',
+    'roomsPage.cta.subtitle': 'Profitez de -10% en réservant directement sur notre site',
+    'roomsPage.cta.button': 'Voir les disponibilités',
+    'roomsPage.double.name': 'Chambre Double',
+    'roomsPage.double.details': 'Lit de 160×200 cm',
+    'roomsPage.double.desc': 'Profitez d\'un espace élégant et confortable, idéal pour un séjour en couple ou en solo. Équipée de tout le confort moderne, cette chambre vous offre un havre de paix au cœur de Paris.',
+    'roomsPage.twin.name': 'Chambre Twin',
+    'roomsPage.twin.details': '2 lits de 100×200 cm',
+    'roomsPage.twin.desc': 'Parfaite pour les voyages entre amis ou collègues, avec tout le confort nécessaire. Deux lits séparés dans un espace optimisé pour un séjour agréable.',
+    'roomsPage.superior.name': 'Chambre Supérieure avec Balcon',
+    'roomsPage.superior.details': 'Vue sur Paris',
+    'roomsPage.superior.desc': 'Profitez d\'un espace extérieur privé avec vue sur Paris. Une expérience unique au cœur de la ville. Idéale pour savourer votre petit-déjeuner en admirant les toits parisiens.',
+    'roomsPage.connecting.name': 'Chambres Communicantes',
+    'roomsPage.connecting.details': '2 chambres modulables',
+    'roomsPage.connecting.desc': 'Deux chambres avec portes communicantes, la solution idéale pour les familles ou groupes. Profitez de l\'intimité de chambres séparées tout en restant connectés.',
+    
+    // About / Location (Homepage)
     'about.badge': 'Emplacement idéal',
     'about.title': 'Un hôtel situé au cœur de Paris',
     'about.description': 'Hôtel Inn Paris est situé à 2min à pied du métro parisien et offre une grande commodité.',
     'about.metro': 'Accès métro (sortie 3)',
     
-    // Breakfast
+    // Location Section (Homepage)
+    'location.badge': 'Comment nous trouver',
+    'location.title': 'Localisation',
+    'location.access': 'Accès',
+    'location.metro': 'Métro',
+    'location.bus': 'Bus',
+    'location.tramway': 'Tramway',
+    'location.parking': 'Parking privé sécurisé disponible sur réservation.',
+    
+    // Location Page
+    'locationPage.badge': 'Nous trouver',
+    'locationPage.title': 'Notre emplacement',
+    'locationPage.openMaps': 'Ouvrir dans Google Maps',
+    'locationPage.idealLocation': 'Idéalement situé',
+    'locationPage.heartOfParis': 'Un hôtel au cœur de Paris',
+    'locationPage.heartDesc': 'À deux pas du métro Place d\'Italie, profitez d\'un accès rapide à tous les monuments et attractions de la capitale.',
+    'locationPage.parking': 'Parking',
+    'locationPage.parkingDesc': 'Parking privé sécurisé (15€/jour)',
+    'locationPage.reception': 'Réception',
+    'locationPage.receptionDesc': 'Ouverte 24h/24',
+    'locationPage.needDirections': 'Besoin d\'indications ?',
+    'locationPage.airport.cdg': 'Aéroport Paris-CDG',
+    'locationPage.airport.orly': 'Aéroport Paris-Orly',
+    'locationPage.eiffel': 'Tour Eiffel',
+    'locationPage.louvre': 'Musée du Louvre',
+    'locationPage.champs': 'Champs-Élysées',
+    'locationPage.pantheon': 'Le Panthéon',
+    
+    // Breakfast (Homepage)
     'breakfast.badge': 'À votre service',
     'breakfast.title': 'Petit-déjeuner & Bar',
     'breakfast.subtitle': 'Le petit déjeuner qui donne le sourire !',
@@ -87,7 +140,25 @@ const translations: Record<Language, Record<string, string>> = {
     'breakfast.bar.desc1': 'À tout moment de la journée, installez-vous au bar de l\'hôtel pour partager un verre, échanger ou simplement faire une pause.',
     'breakfast.bar.desc2': 'Dans une ambiance accueillante et décontractée, c\'est l\'endroit idéal pour se retrouver après une journée bien remplie.',
     
-    // Seminars
+    // Breakfast Page
+    'breakfastPage.badge': 'Chaque matin',
+    'breakfastPage.title': 'Le petit déjeuner qui donne le sourire !',
+    'breakfastPage.intro1': 'Chaque matin, faites le plein d\'énergie avec notre petit déjeuner complet, servi en buffet sucré & salé à volonté.',
+    'breakfastPage.intro2': 'Au menu : boissons chaudes, baguettes tradition et céréales, viennoiseries croustillantes, fruits frais et céréales. Côté salé, retrouvez œufs durs, charcuterie, blanc de dinde, fromages et yaourts nature bio. Et pour les plus gourmands : confitures et crêpes moelleuses délicatement vanillées.',
+    'breakfastPage.enjoy': 'De quoi bien commencer la journée, quel que soit votre programme !',
+    'breakfastPage.hours': 'Horaires',
+    'breakfastPage.hoursValue': '7h00 - 10h00',
+    'breakfastPage.formula': 'Formule',
+    'breakfastPage.formulaValue': 'Buffet à volonté',
+    'breakfastPage.hotDrinks': 'Boissons chaudes',
+    'breakfastPage.pastries': 'Viennoiseries',
+    'breakfastPage.fruits': 'Fruits frais',
+    'breakfastPage.savory': 'Buffet salé',
+    'breakfastPage.gallery': 'Galerie Photo',
+    'breakfastPage.space': 'Notre espace petit déjeuner',
+    'breakfastPage.view': 'Voir',
+    
+    // Seminars (Homepage)
     'seminars.badge': 'Espace professionnel',
     'seminars.title': 'Salle de séminaire',
     'seminars.subtitle': 'Organisez vos réunions autrement !',
@@ -95,6 +166,30 @@ const translations: Record<Language, Record<string, string>> = {
     'seminars.desc2': 'Selon vos objectifs, différentes configurations sont possibles afin de s\'adapter parfaitement à vos réunions, formations ou événements professionnels.',
     'seminars.quote': 'Demander un devis',
     'seminars.discover': 'Découvrir nos salles',
+    
+    // Seminars Page
+    'seminarsPage.badge': 'Séminaires & Événements',
+    'seminarsPage.title': 'Nos salles de séminaires',
+    'seminarsPage.intro1': 'Organisez vos réunions, formations ou événements professionnels dans nos salles modernes et modulables, parfaites pour petites équipes ou grandes délégations.',
+    'seminarsPage.intro2': 'Après une journée productive, vos participants pourront profiter de chambres confortables et d\'espaces de détente.',
+    'seminarsPage.intro3': 'Nous proposons également des salons modulables pour vos cocktails, banquets ou journées d\'études, le tout dans un cadre pratique et agréable.',
+    'seminarsPage.equipment': 'Équipements inclus',
+    'seminarsPage.projector': 'Vidéoprojecteur',
+    'seminarsPage.screen': 'Écran de projection',
+    'seminarsPage.wifi': 'Wi-Fi haut débit',
+    'seminarsPage.coffee': 'Pauses café',
+    'seminarsPage.modular': 'Configurations modulables',
+    'seminarsPage.catering': 'Service traiteur',
+    'seminarsPage.spaces': 'Nos espaces',
+    'seminarsPage.meetingRooms': 'Salles de réunion',
+    'seminarsPage.virtualTour': 'Visite Virtuelle',
+    'seminarsPage.videoTitle': 'Découvrez nos espaces en vidéo',
+    'seminarsPage.cta.title': 'Demandez un devis personnalisé',
+    'seminarsPage.cta.subtitle': 'Notre équipe vous accompagne dans l\'organisation de votre événement',
+    'seminarsPage.cta.button': 'Nous contacter',
+    'seminarsPage.uShape': 'En U',
+    'seminarsPage.classroom': 'Classe',
+    'seminarsPage.theatre': 'Théâtre',
     
     // Events
     'events.badge': 'Événements & Offres',
@@ -107,6 +202,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.description': 'En réservant sur notre site officiel, bénéficiez du meilleur tarif disponible et d\'avantages exclusifs pour votre séjour.',
     'cta.button': 'Réserver maintenant',
     'cta.contact': 'Nous contacter',
+    
+    // Contact Bubble
+    'contact.bubble': 'Contactez-nous',
     
     // Footer
     'footer.description': 'Hôtel 3 étoiles au cœur du 13ème arrondissement, à deux pas de la Place d\'Italie.',
@@ -167,11 +265,64 @@ const translations: Record<Language, Record<string, string>> = {
     'rooms.courtesy': 'Courtesy tray',
     'rooms.ac': 'Air conditioning',
     
+    // Rooms Page
+    'roomsPage.badge': 'Our Accommodations',
+    'roomsPage.title': 'The rooms of Hotel Inn Design Paris',
+    'roomsPage.intro': 'Enjoy 70 bright, soundproofed and comfortable rooms, with equipped bathroom. Solo, with family or friends, everything is designed for your well-being, with connecting rooms and a caring team. Ideally located, the hotel is the perfect starting point to discover Paris stress-free.',
+    'roomsPage.ourRooms': 'Our accommodations',
+    'roomsPage.discover': 'Discover our rooms',
+    'roomsPage.gallery': 'Photo Gallery',
+    'roomsPage.spaces': 'Discover our spaces',
+    'roomsPage.view': 'View',
+    'roomsPage.cta.title': 'Book your room now',
+    'roomsPage.cta.subtitle': 'Get -10% by booking directly on our website',
+    'roomsPage.cta.button': 'Check availability',
+    'roomsPage.double.name': 'Double Room',
+    'roomsPage.double.details': '160×200 cm bed',
+    'roomsPage.double.desc': 'Enjoy an elegant and comfortable space, ideal for a couple or solo stay. Equipped with all modern comforts, this room offers you a haven of peace in the heart of Paris.',
+    'roomsPage.twin.name': 'Twin Room',
+    'roomsPage.twin.details': '2 beds of 100×200 cm',
+    'roomsPage.twin.desc': 'Perfect for trips with friends or colleagues, with all the necessary comfort. Two separate beds in an optimized space for a pleasant stay.',
+    'roomsPage.superior.name': 'Superior Room with Balcony',
+    'roomsPage.superior.details': 'Paris view',
+    'roomsPage.superior.desc': 'Enjoy a private outdoor space with views of Paris. A unique experience in the heart of the city. Ideal for enjoying your breakfast while admiring the Parisian rooftops.',
+    'roomsPage.connecting.name': 'Connecting Rooms',
+    'roomsPage.connecting.details': '2 modular rooms',
+    'roomsPage.connecting.desc': 'Two rooms with connecting doors, the ideal solution for families or groups. Enjoy the privacy of separate rooms while staying connected.',
+    
     // About / Location
     'about.badge': 'Ideal location',
     'about.title': 'A hotel in the heart of Paris',
     'about.description': 'Hotel Inn Paris is located 2 minutes walk from the Parisian metro and offers great convenience.',
     'about.metro': 'Metro access (exit 3)',
+    
+    // Location Section (Homepage)
+    'location.badge': 'How to find us',
+    'location.title': 'Location',
+    'location.access': 'Access',
+    'location.metro': 'Metro',
+    'location.bus': 'Bus',
+    'location.tramway': 'Tramway',
+    'location.parking': 'Private secure parking available upon reservation.',
+    
+    // Location Page
+    'locationPage.badge': 'Find us',
+    'locationPage.title': 'Our location',
+    'locationPage.openMaps': 'Open in Google Maps',
+    'locationPage.idealLocation': 'Ideally located',
+    'locationPage.heartOfParis': 'A hotel in the heart of Paris',
+    'locationPage.heartDesc': 'Steps from the Place d\'Italie metro, enjoy quick access to all the capital\'s monuments and attractions.',
+    'locationPage.parking': 'Parking',
+    'locationPage.parkingDesc': 'Private secure parking (€15/day)',
+    'locationPage.reception': 'Reception',
+    'locationPage.receptionDesc': 'Open 24/7',
+    'locationPage.needDirections': 'Need directions?',
+    'locationPage.airport.cdg': 'Paris-CDG Airport',
+    'locationPage.airport.orly': 'Paris-Orly Airport',
+    'locationPage.eiffel': 'Eiffel Tower',
+    'locationPage.louvre': 'Louvre Museum',
+    'locationPage.champs': 'Champs-Élysées',
+    'locationPage.pantheon': 'The Pantheon',
     
     // Breakfast
     'breakfast.badge': 'At your service',
@@ -184,6 +335,24 @@ const translations: Record<Language, Record<string, string>> = {
     'breakfast.bar.desc1': 'At any time of the day, settle in at the hotel bar to share a drink, chat or simply take a break.',
     'breakfast.bar.desc2': 'In a welcoming and relaxed atmosphere, it\'s the ideal place to meet up after a busy day.',
     
+    // Breakfast Page
+    'breakfastPage.badge': 'Every morning',
+    'breakfastPage.title': 'The breakfast that makes you smile!',
+    'breakfastPage.intro1': 'Every morning, fill up on energy with our full breakfast, served as an all-you-can-eat sweet & savory buffet.',
+    'breakfastPage.intro2': 'On the menu: hot drinks, traditional baguettes and cereals, crispy pastries, fresh fruits and cereals. On the savory side, find hard-boiled eggs, cold cuts, turkey breast, cheeses and organic plain yogurts. And for those with a sweet tooth: jams and delicate vanilla pancakes.',
+    'breakfastPage.enjoy': 'Everything you need to start the day right, whatever your plans!',
+    'breakfastPage.hours': 'Hours',
+    'breakfastPage.hoursValue': '7:00 AM - 10:00 AM',
+    'breakfastPage.formula': 'Formula',
+    'breakfastPage.formulaValue': 'All-you-can-eat buffet',
+    'breakfastPage.hotDrinks': 'Hot drinks',
+    'breakfastPage.pastries': 'Pastries',
+    'breakfastPage.fruits': 'Fresh fruits',
+    'breakfastPage.savory': 'Savory buffet',
+    'breakfastPage.gallery': 'Photo Gallery',
+    'breakfastPage.space': 'Our breakfast area',
+    'breakfastPage.view': 'View',
+    
     // Seminars
     'seminars.badge': 'Professional space',
     'seminars.title': 'Seminar room',
@@ -192,6 +361,30 @@ const translations: Record<Language, Record<string, string>> = {
     'seminars.desc2': 'Depending on your objectives, different configurations are possible to perfectly adapt to your meetings, training sessions or professional events.',
     'seminars.quote': 'Request a quote',
     'seminars.discover': 'Discover our rooms',
+    
+    // Seminars Page
+    'seminarsPage.badge': 'Seminars & Events',
+    'seminarsPage.title': 'Our seminar rooms',
+    'seminarsPage.intro1': 'Organize your meetings, training sessions or professional events in our modern and modular rooms, perfect for small teams or large delegations.',
+    'seminarsPage.intro2': 'After a productive day, your participants can enjoy comfortable rooms and relaxation areas.',
+    'seminarsPage.intro3': 'We also offer modular lounges for your cocktails, banquets or study days, all in a practical and pleasant setting.',
+    'seminarsPage.equipment': 'Equipment included',
+    'seminarsPage.projector': 'Video projector',
+    'seminarsPage.screen': 'Projection screen',
+    'seminarsPage.wifi': 'High-speed Wi-Fi',
+    'seminarsPage.coffee': 'Coffee breaks',
+    'seminarsPage.modular': 'Modular configurations',
+    'seminarsPage.catering': 'Catering service',
+    'seminarsPage.spaces': 'Our spaces',
+    'seminarsPage.meetingRooms': 'Meeting rooms',
+    'seminarsPage.virtualTour': 'Virtual Tour',
+    'seminarsPage.videoTitle': 'Discover our spaces on video',
+    'seminarsPage.cta.title': 'Request a personalized quote',
+    'seminarsPage.cta.subtitle': 'Our team supports you in organizing your event',
+    'seminarsPage.cta.button': 'Contact us',
+    'seminarsPage.uShape': 'U-shape',
+    'seminarsPage.classroom': 'Classroom',
+    'seminarsPage.theatre': 'Theatre',
     
     // Events
     'events.badge': 'Events & Offers',
@@ -204,6 +397,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.description': 'By booking on our official website, benefit from the best available rate and exclusive advantages for your stay.',
     'cta.button': 'Book now',
     'cta.contact': 'Contact us',
+    
+    // Contact Bubble
+    'contact.bubble': 'Contact us',
     
     // Footer
     'footer.description': '3-star hotel in the heart of the 13th arrondissement, steps from Place d\'Italie.',
@@ -264,11 +460,64 @@ const translations: Record<Language, Record<string, string>> = {
     'rooms.courtesy': 'Bandeja de cortesía',
     'rooms.ac': 'Aire acondicionado',
     
+    // Rooms Page
+    'roomsPage.badge': 'Nuestros Alojamientos',
+    'roomsPage.title': 'Las habitaciones del Hotel Inn Design París',
+    'roomsPage.intro': 'Disfrute de 70 habitaciones luminosas, insonorizadas y confortables, con baño equipado. Solo, en familia o con amigos, todo está pensado para su bienestar, con habitaciones comunicantes y un equipo atento. Idealmente ubicado, el hotel es el punto de partida perfecto para descubrir París sin estrés.',
+    'roomsPage.ourRooms': 'Nuestros alojamientos',
+    'roomsPage.discover': 'Descubra nuestras habitaciones',
+    'roomsPage.gallery': 'Galería de Fotos',
+    'roomsPage.spaces': 'Descubra nuestros espacios',
+    'roomsPage.view': 'Ver',
+    'roomsPage.cta.title': 'Reserve su habitación ahora',
+    'roomsPage.cta.subtitle': 'Obtenga -10% reservando directamente en nuestro sitio',
+    'roomsPage.cta.button': 'Ver disponibilidad',
+    'roomsPage.double.name': 'Habitación Doble',
+    'roomsPage.double.details': 'Cama de 160×200 cm',
+    'roomsPage.double.desc': 'Disfrute de un espacio elegante y confortable, ideal para parejas o estancias en solitario. Equipada con todo el confort moderno, esta habitación le ofrece un remanso de paz en el corazón de París.',
+    'roomsPage.twin.name': 'Habitación Twin',
+    'roomsPage.twin.details': '2 camas de 100×200 cm',
+    'roomsPage.twin.desc': 'Perfecta para viajes con amigos o colegas, con todo el confort necesario. Dos camas separadas en un espacio optimizado para una estancia agradable.',
+    'roomsPage.superior.name': 'Habitación Superior con Balcón',
+    'roomsPage.superior.details': 'Vista a París',
+    'roomsPage.superior.desc': 'Disfrute de un espacio exterior privado con vistas a París. Una experiencia única en el corazón de la ciudad. Ideal para disfrutar del desayuno admirando los tejados parisinos.',
+    'roomsPage.connecting.name': 'Habitaciones Comunicantes',
+    'roomsPage.connecting.details': '2 habitaciones modulables',
+    'roomsPage.connecting.desc': 'Dos habitaciones con puertas comunicantes, la solución ideal para familias o grupos. Disfrute de la privacidad de habitaciones separadas manteniéndose conectados.',
+    
     // About / Location
     'about.badge': 'Ubicación ideal',
     'about.title': 'Un hotel en el corazón de París',
     'about.description': 'Hotel Inn París está a 2 minutos a pie del metro parisino y ofrece gran comodidad.',
     'about.metro': 'Acceso metro (salida 3)',
+    
+    // Location Section (Homepage)
+    'location.badge': 'Cómo encontrarnos',
+    'location.title': 'Ubicación',
+    'location.access': 'Acceso',
+    'location.metro': 'Metro',
+    'location.bus': 'Autobús',
+    'location.tramway': 'Tranvía',
+    'location.parking': 'Parking privado seguro disponible con reserva.',
+    
+    // Location Page
+    'locationPage.badge': 'Encuéntrenos',
+    'locationPage.title': 'Nuestra ubicación',
+    'locationPage.openMaps': 'Abrir en Google Maps',
+    'locationPage.idealLocation': 'Idealmente ubicado',
+    'locationPage.heartOfParis': 'Un hotel en el corazón de París',
+    'locationPage.heartDesc': 'A pasos del metro Place d\'Italie, disfrute de acceso rápido a todos los monumentos y atracciones de la capital.',
+    'locationPage.parking': 'Parking',
+    'locationPage.parkingDesc': 'Parking privado seguro (15€/día)',
+    'locationPage.reception': 'Recepción',
+    'locationPage.receptionDesc': 'Abierta 24/7',
+    'locationPage.needDirections': '¿Necesita indicaciones?',
+    'locationPage.airport.cdg': 'Aeropuerto París-CDG',
+    'locationPage.airport.orly': 'Aeropuerto París-Orly',
+    'locationPage.eiffel': 'Torre Eiffel',
+    'locationPage.louvre': 'Museo del Louvre',
+    'locationPage.champs': 'Campos Elíseos',
+    'locationPage.pantheon': 'El Panteón',
     
     // Breakfast
     'breakfast.badge': 'A su servicio',
@@ -281,6 +530,24 @@ const translations: Record<Language, Record<string, string>> = {
     'breakfast.bar.desc1': 'En cualquier momento del día, siéntese en el bar del hotel para compartir una copa, charlar o simplemente hacer una pausa.',
     'breakfast.bar.desc2': 'En un ambiente acogedor y relajado, es el lugar ideal para reunirse después de un día ajetreado.',
     
+    // Breakfast Page
+    'breakfastPage.badge': 'Cada mañana',
+    'breakfastPage.title': '¡El desayuno que te hace sonreír!',
+    'breakfastPage.intro1': 'Cada mañana, llénese de energía con nuestro desayuno completo, servido en buffet dulce y salado a voluntad.',
+    'breakfastPage.intro2': 'En el menú: bebidas calientes, baguettes tradicionales y cereales, bollería crujiente, frutas frescas y cereales. En el lado salado, huevos duros, embutidos, pechuga de pavo, quesos y yogures naturales bio. Y para los más golosos: mermeladas y crepes suaves delicadamente vainilladas.',
+    'breakfastPage.enjoy': '¡Todo lo necesario para empezar bien el día, sea cual sea su programa!',
+    'breakfastPage.hours': 'Horarios',
+    'breakfastPage.hoursValue': '7:00 - 10:00',
+    'breakfastPage.formula': 'Fórmula',
+    'breakfastPage.formulaValue': 'Buffet libre',
+    'breakfastPage.hotDrinks': 'Bebidas calientes',
+    'breakfastPage.pastries': 'Bollería',
+    'breakfastPage.fruits': 'Frutas frescas',
+    'breakfastPage.savory': 'Buffet salado',
+    'breakfastPage.gallery': 'Galería de Fotos',
+    'breakfastPage.space': 'Nuestra zona de desayuno',
+    'breakfastPage.view': 'Ver',
+    
     // Seminars
     'seminars.badge': 'Espacio profesional',
     'seminars.title': 'Sala de seminarios',
@@ -289,6 +556,30 @@ const translations: Record<Language, Record<string, string>> = {
     'seminars.desc2': 'Según sus objetivos, diferentes configuraciones son posibles para adaptarse perfectamente a sus reuniones, formaciones o eventos profesionales.',
     'seminars.quote': 'Solicitar presupuesto',
     'seminars.discover': 'Descubrir nuestras salas',
+    
+    // Seminars Page
+    'seminarsPage.badge': 'Seminarios y Eventos',
+    'seminarsPage.title': 'Nuestras salas de seminarios',
+    'seminarsPage.intro1': 'Organice sus reuniones, formaciones o eventos profesionales en nuestras salas modernas y modulables, perfectas para equipos pequeños o grandes delegaciones.',
+    'seminarsPage.intro2': 'Después de un día productivo, sus participantes podrán disfrutar de habitaciones confortables y zonas de descanso.',
+    'seminarsPage.intro3': 'También ofrecemos salones modulables para sus cócteles, banquetes o jornadas de estudio, todo en un entorno práctico y agradable.',
+    'seminarsPage.equipment': 'Equipamiento incluido',
+    'seminarsPage.projector': 'Videoproyector',
+    'seminarsPage.screen': 'Pantalla de proyección',
+    'seminarsPage.wifi': 'Wi-Fi de alta velocidad',
+    'seminarsPage.coffee': 'Pausas café',
+    'seminarsPage.modular': 'Configuraciones modulables',
+    'seminarsPage.catering': 'Servicio de catering',
+    'seminarsPage.spaces': 'Nuestros espacios',
+    'seminarsPage.meetingRooms': 'Salas de reuniones',
+    'seminarsPage.virtualTour': 'Visita Virtual',
+    'seminarsPage.videoTitle': 'Descubra nuestros espacios en vídeo',
+    'seminarsPage.cta.title': 'Solicite un presupuesto personalizado',
+    'seminarsPage.cta.subtitle': 'Nuestro equipo le acompaña en la organización de su evento',
+    'seminarsPage.cta.button': 'Contáctenos',
+    'seminarsPage.uShape': 'En U',
+    'seminarsPage.classroom': 'Clase',
+    'seminarsPage.theatre': 'Teatro',
     
     // Events
     'events.badge': 'Eventos y Ofertas',
@@ -301,6 +592,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.description': 'Al reservar en nuestro sitio oficial, benefíciese de la mejor tarifa disponible y ventajas exclusivas para su estancia.',
     'cta.button': 'Reservar ahora',
     'cta.contact': 'Contáctenos',
+    
+    // Contact Bubble
+    'contact.bubble': 'Contáctenos',
     
     // Footer
     'footer.description': 'Hotel de 3 estrellas en el corazón del distrito 13, a pasos de Place d\'Italie.',
@@ -361,11 +655,64 @@ const translations: Record<Language, Record<string, string>> = {
     'rooms.courtesy': 'Vassoio di cortesia',
     'rooms.ac': 'Aria condizionata',
     
+    // Rooms Page
+    'roomsPage.badge': 'I Nostri Alloggi',
+    'roomsPage.title': 'Le camere dell\'Hotel Inn Design Paris',
+    'roomsPage.intro': 'Goditi 70 camere luminose, insonorizzate e confortevoli, con bagno attrezzato. Da solo, in famiglia o con amici, tutto è pensato per il tuo benessere, con camere comunicanti e un team premuroso. Posizione ideale, l\'hotel è il punto di partenza perfetto per scoprire Parigi senza stress.',
+    'roomsPage.ourRooms': 'I nostri alloggi',
+    'roomsPage.discover': 'Scopri le nostre camere',
+    'roomsPage.gallery': 'Galleria Foto',
+    'roomsPage.spaces': 'Scopri i nostri spazi',
+    'roomsPage.view': 'Vedi',
+    'roomsPage.cta.title': 'Prenota la tua camera ora',
+    'roomsPage.cta.subtitle': 'Ottieni -10% prenotando direttamente sul nostro sito',
+    'roomsPage.cta.button': 'Verifica disponibilità',
+    'roomsPage.double.name': 'Camera Doppia',
+    'roomsPage.double.details': 'Letto 160×200 cm',
+    'roomsPage.double.desc': 'Goditi uno spazio elegante e confortevole, ideale per un soggiorno di coppia o in solitaria. Dotata di tutti i comfort moderni, questa camera ti offre un\'oasi di pace nel cuore di Parigi.',
+    'roomsPage.twin.name': 'Camera Twin',
+    'roomsPage.twin.details': '2 letti da 100×200 cm',
+    'roomsPage.twin.desc': 'Perfetta per viaggi con amici o colleghi, con tutto il comfort necessario. Due letti separati in uno spazio ottimizzato per un soggiorno piacevole.',
+    'roomsPage.superior.name': 'Camera Superior con Balcone',
+    'roomsPage.superior.details': 'Vista su Parigi',
+    'roomsPage.superior.desc': 'Goditi uno spazio esterno privato con vista su Parigi. Un\'esperienza unica nel cuore della città. Ideale per gustare la colazione ammirando i tetti parigini.',
+    'roomsPage.connecting.name': 'Camere Comunicanti',
+    'roomsPage.connecting.details': '2 camere modulabili',
+    'roomsPage.connecting.desc': 'Due camere con porte comunicanti, la soluzione ideale per famiglie o gruppi. Goditi la privacy di camere separate restando connessi.',
+    
     // About / Location
     'about.badge': 'Posizione ideale',
     'about.title': 'Un hotel nel cuore di Parigi',
     'about.description': "L'Hotel Inn Paris si trova a 2 minuti a piedi dalla metropolitana parigina e offre grande comodità.",
     'about.metro': 'Accesso metro (uscita 3)',
+    
+    // Location Section (Homepage)
+    'location.badge': 'Come trovarci',
+    'location.title': 'Posizione',
+    'location.access': 'Accesso',
+    'location.metro': 'Metro',
+    'location.bus': 'Autobus',
+    'location.tramway': 'Tram',
+    'location.parking': 'Parcheggio privato sicuro disponibile su prenotazione.',
+    
+    // Location Page
+    'locationPage.badge': 'Trovaci',
+    'locationPage.title': 'La nostra posizione',
+    'locationPage.openMaps': 'Apri in Google Maps',
+    'locationPage.idealLocation': 'Posizione ideale',
+    'locationPage.heartOfParis': 'Un hotel nel cuore di Parigi',
+    'locationPage.heartDesc': 'A due passi dalla metro Place d\'Italie, goditi un accesso rapido a tutti i monumenti e le attrazioni della capitale.',
+    'locationPage.parking': 'Parcheggio',
+    'locationPage.parkingDesc': 'Parcheggio privato sicuro (15€/giorno)',
+    'locationPage.reception': 'Reception',
+    'locationPage.receptionDesc': 'Aperta 24/7',
+    'locationPage.needDirections': 'Hai bisogno di indicazioni?',
+    'locationPage.airport.cdg': 'Aeroporto Parigi-CDG',
+    'locationPage.airport.orly': 'Aeroporto Parigi-Orly',
+    'locationPage.eiffel': 'Torre Eiffel',
+    'locationPage.louvre': 'Museo del Louvre',
+    'locationPage.champs': 'Campi Elisi',
+    'locationPage.pantheon': 'Il Pantheon',
     
     // Breakfast
     'breakfast.badge': 'Al vostro servizio',
@@ -378,6 +725,24 @@ const translations: Record<Language, Record<string, string>> = {
     'breakfast.bar.desc1': 'In qualsiasi momento della giornata, accomodati al bar dell\'hotel per condividere un drink, chiacchierare o semplicemente fare una pausa.',
     'breakfast.bar.desc2': 'In un\'atmosfera accogliente e rilassata, è il luogo ideale per ritrovarsi dopo una giornata intensa.',
     
+    // Breakfast Page
+    'breakfastPage.badge': 'Ogni mattina',
+    'breakfastPage.title': 'La colazione che ti fa sorridere!',
+    'breakfastPage.intro1': 'Ogni mattina, fai il pieno di energia con la nostra colazione completa, servita a buffet dolce e salato a volontà.',
+    'breakfastPage.intro2': 'Nel menu: bevande calde, baguette tradizionali e cereali, paste croccanti, frutta fresca e cereali. Sul lato salato, uova sode, salumi, petto di tacchino, formaggi e yogurt naturali bio. E per i più golosi: marmellate e crepes morbide delicatamente vanilliate.',
+    'breakfastPage.enjoy': 'Tutto il necessario per iniziare bene la giornata, qualunque sia il tuo programma!',
+    'breakfastPage.hours': 'Orari',
+    'breakfastPage.hoursValue': '7:00 - 10:00',
+    'breakfastPage.formula': 'Formula',
+    'breakfastPage.formulaValue': 'Buffet a volontà',
+    'breakfastPage.hotDrinks': 'Bevande calde',
+    'breakfastPage.pastries': 'Paste',
+    'breakfastPage.fruits': 'Frutta fresca',
+    'breakfastPage.savory': 'Buffet salato',
+    'breakfastPage.gallery': 'Galleria Foto',
+    'breakfastPage.space': 'La nostra area colazione',
+    'breakfastPage.view': 'Vedi',
+    
     // Seminars
     'seminars.badge': 'Spazio professionale',
     'seminars.title': 'Sala seminari',
@@ -386,6 +751,30 @@ const translations: Record<Language, Record<string, string>> = {
     'seminars.desc2': 'A seconda dei tuoi obiettivi, diverse configurazioni sono possibili per adattarsi perfettamente alle tue riunioni, formazioni o eventi professionali.',
     'seminars.quote': 'Richiedi preventivo',
     'seminars.discover': 'Scopri le nostre sale',
+    
+    // Seminars Page
+    'seminarsPage.badge': 'Seminari ed Eventi',
+    'seminarsPage.title': 'Le nostre sale seminari',
+    'seminarsPage.intro1': 'Organizza le tue riunioni, formazioni o eventi professionali nelle nostre sale moderne e modulabili, perfette per piccoli team o grandi delegazioni.',
+    'seminarsPage.intro2': 'Dopo una giornata produttiva, i tuoi partecipanti potranno godere di camere confortevoli e aree relax.',
+    'seminarsPage.intro3': 'Offriamo anche saloni modulabili per i vostri cocktail, banchetti o giornate di studio, il tutto in un ambiente pratico e piacevole.',
+    'seminarsPage.equipment': 'Attrezzatura inclusa',
+    'seminarsPage.projector': 'Videoproiettore',
+    'seminarsPage.screen': 'Schermo di proiezione',
+    'seminarsPage.wifi': 'Wi-Fi ad alta velocità',
+    'seminarsPage.coffee': 'Pause caffè',
+    'seminarsPage.modular': 'Configurazioni modulabili',
+    'seminarsPage.catering': 'Servizio catering',
+    'seminarsPage.spaces': 'I nostri spazi',
+    'seminarsPage.meetingRooms': 'Sale riunioni',
+    'seminarsPage.virtualTour': 'Tour Virtuale',
+    'seminarsPage.videoTitle': 'Scopri i nostri spazi in video',
+    'seminarsPage.cta.title': 'Richiedi un preventivo personalizzato',
+    'seminarsPage.cta.subtitle': 'Il nostro team ti accompagna nell\'organizzazione del tuo evento',
+    'seminarsPage.cta.button': 'Contattaci',
+    'seminarsPage.uShape': 'A U',
+    'seminarsPage.classroom': 'Classe',
+    'seminarsPage.theatre': 'Teatro',
     
     // Events
     'events.badge': 'Eventi e Offerte',
@@ -398,6 +787,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.description': 'Prenotando sul nostro sito ufficiale, beneficia della migliore tariffa disponibile e vantaggi esclusivi per il tuo soggiorno.',
     'cta.button': 'Prenota ora',
     'cta.contact': 'Contattaci',
+    
+    // Contact Bubble
+    'contact.bubble': 'Contattaci',
     
     // Footer
     'footer.description': 'Hotel 3 stelle nel cuore del 13° arrondissement, a due passi da Place d\'Italie.',
@@ -458,11 +850,64 @@ const translations: Record<Language, Record<string, string>> = {
     'rooms.courtesy': 'Bandeja de cortesia',
     'rooms.ac': 'Ar condicionado',
     
+    // Rooms Page
+    'roomsPage.badge': 'Nossos Alojamentos',
+    'roomsPage.title': 'Os quartos do Hotel Inn Design Paris',
+    'roomsPage.intro': 'Desfrute de 70 quartos luminosos, à prova de som e confortáveis, com banheiro equipado. Sozinho, em família ou com amigos, tudo é pensado para o seu bem-estar, com quartos comunicantes e uma equipe atenciosa. Localização ideal, o hotel é o ponto de partida perfeito para descobrir Paris sem estresse.',
+    'roomsPage.ourRooms': 'Nossos alojamentos',
+    'roomsPage.discover': 'Descubra nossos quartos',
+    'roomsPage.gallery': 'Galeria de Fotos',
+    'roomsPage.spaces': 'Descubra nossos espaços',
+    'roomsPage.view': 'Ver',
+    'roomsPage.cta.title': 'Reserve seu quarto agora',
+    'roomsPage.cta.subtitle': 'Obtenha -10% reservando diretamente em nosso site',
+    'roomsPage.cta.button': 'Ver disponibilidade',
+    'roomsPage.double.name': 'Quarto Duplo',
+    'roomsPage.double.details': 'Cama de 160×200 cm',
+    'roomsPage.double.desc': 'Desfrute de um espaço elegante e confortável, ideal para uma estadia a dois ou sozinho. Equipado com todo o conforto moderno, este quarto oferece um refúgio de paz no coração de Paris.',
+    'roomsPage.twin.name': 'Quarto Twin',
+    'roomsPage.twin.details': '2 camas de 100×200 cm',
+    'roomsPage.twin.desc': 'Perfeito para viagens com amigos ou colegas, com todo o conforto necessário. Duas camas separadas em um espaço otimizado para uma estadia agradável.',
+    'roomsPage.superior.name': 'Quarto Superior com Varanda',
+    'roomsPage.superior.details': 'Vista de Paris',
+    'roomsPage.superior.desc': 'Desfrute de um espaço exterior privado com vista para Paris. Uma experiência única no coração da cidade. Ideal para saborear o café da manhã admirando os telhados parisienses.',
+    'roomsPage.connecting.name': 'Quartos Comunicantes',
+    'roomsPage.connecting.details': '2 quartos moduláveis',
+    'roomsPage.connecting.desc': 'Dois quartos com portas comunicantes, a solução ideal para famílias ou grupos. Desfrute da privacidade de quartos separados mantendo-se conectados.',
+    
     // About / Location
     'about.badge': 'Localização ideal',
     'about.title': 'Um hotel no coração de Paris',
     'about.description': 'O Hotel Inn Paris fica a 2 minutos a pé do metrô parisiense e oferece grande comodidade.',
     'about.metro': 'Acesso metrô (saída 3)',
+    
+    // Location Section (Homepage)
+    'location.badge': 'Como nos encontrar',
+    'location.title': 'Localização',
+    'location.access': 'Acesso',
+    'location.metro': 'Metrô',
+    'location.bus': 'Ônibus',
+    'location.tramway': 'Tramway',
+    'location.parking': 'Estacionamento privado seguro disponível mediante reserva.',
+    
+    // Location Page
+    'locationPage.badge': 'Encontre-nos',
+    'locationPage.title': 'Nossa localização',
+    'locationPage.openMaps': 'Abrir no Google Maps',
+    'locationPage.idealLocation': 'Localização ideal',
+    'locationPage.heartOfParis': 'Um hotel no coração de Paris',
+    'locationPage.heartDesc': 'A poucos passos do metrô Place d\'Italie, desfrute de acesso rápido a todos os monumentos e atrações da capital.',
+    'locationPage.parking': 'Estacionamento',
+    'locationPage.parkingDesc': 'Estacionamento privado seguro (€15/dia)',
+    'locationPage.reception': 'Recepção',
+    'locationPage.receptionDesc': 'Aberta 24/7',
+    'locationPage.needDirections': 'Precisa de direções?',
+    'locationPage.airport.cdg': 'Aeroporto Paris-CDG',
+    'locationPage.airport.orly': 'Aeroporto Paris-Orly',
+    'locationPage.eiffel': 'Torre Eiffel',
+    'locationPage.louvre': 'Museu do Louvre',
+    'locationPage.champs': 'Champs-Élysées',
+    'locationPage.pantheon': 'O Pantheon',
     
     // Breakfast
     'breakfast.badge': 'Ao seu serviço',
@@ -475,6 +920,24 @@ const translations: Record<Language, Record<string, string>> = {
     'breakfast.bar.desc1': 'A qualquer hora do dia, sente-se no bar do hotel para compartilhar uma bebida, conversar ou simplesmente fazer uma pausa.',
     'breakfast.bar.desc2': 'Em um ambiente acolhedor e descontraído, é o lugar ideal para se reunir após um dia agitado.',
     
+    // Breakfast Page
+    'breakfastPage.badge': 'Todas as manhãs',
+    'breakfastPage.title': 'O café da manhã que faz você sorrir!',
+    'breakfastPage.intro1': 'Todas as manhãs, recarregue suas energias com nosso café da manhã completo, servido em buffet doce e salgado à vontade.',
+    'breakfastPage.intro2': 'No cardápio: bebidas quentes, baguetes tradicionais e cereais, croissants crocantes, frutas frescas e cereais. No lado salgado, ovos cozidos, frios, peito de peru, queijos e iogurtes naturais orgânicos. E para os mais gulosos: geleias e panquecas macias delicadamente baunilhadas.',
+    'breakfastPage.enjoy': 'Tudo o que você precisa para começar bem o dia, seja qual for o seu programa!',
+    'breakfastPage.hours': 'Horários',
+    'breakfastPage.hoursValue': '7:00 - 10:00',
+    'breakfastPage.formula': 'Fórmula',
+    'breakfastPage.formulaValue': 'Buffet à vontade',
+    'breakfastPage.hotDrinks': 'Bebidas quentes',
+    'breakfastPage.pastries': 'Croissants',
+    'breakfastPage.fruits': 'Frutas frescas',
+    'breakfastPage.savory': 'Buffet salgado',
+    'breakfastPage.gallery': 'Galeria de Fotos',
+    'breakfastPage.space': 'Nossa área de café da manhã',
+    'breakfastPage.view': 'Ver',
+    
     // Seminars
     'seminars.badge': 'Espaço profissional',
     'seminars.title': 'Sala de seminários',
@@ -483,6 +946,30 @@ const translations: Record<Language, Record<string, string>> = {
     'seminars.desc2': 'Dependendo dos seus objetivos, diferentes configurações são possíveis para se adaptar perfeitamente às suas reuniões, treinamentos ou eventos profissionais.',
     'seminars.quote': 'Solicitar orçamento',
     'seminars.discover': 'Descobrir nossas salas',
+    
+    // Seminars Page
+    'seminarsPage.badge': 'Seminários e Eventos',
+    'seminarsPage.title': 'Nossas salas de seminário',
+    'seminarsPage.intro1': 'Organize suas reuniões, treinamentos ou eventos profissionais em nossas salas modernas e moduláveis, perfeitas para pequenas equipes ou grandes delegações.',
+    'seminarsPage.intro2': 'Após um dia produtivo, seus participantes poderão desfrutar de quartos confortáveis e áreas de descanso.',
+    'seminarsPage.intro3': 'Também oferecemos salões moduláveis para seus coquetéis, banquetes ou jornadas de estudo, tudo em um ambiente prático e agradável.',
+    'seminarsPage.equipment': 'Equipamentos incluídos',
+    'seminarsPage.projector': 'Projetor de vídeo',
+    'seminarsPage.screen': 'Tela de projeção',
+    'seminarsPage.wifi': 'Wi-Fi de alta velocidade',
+    'seminarsPage.coffee': 'Pausas para café',
+    'seminarsPage.modular': 'Configurações moduláveis',
+    'seminarsPage.catering': 'Serviço de catering',
+    'seminarsPage.spaces': 'Nossos espaços',
+    'seminarsPage.meetingRooms': 'Salas de reunião',
+    'seminarsPage.virtualTour': 'Tour Virtual',
+    'seminarsPage.videoTitle': 'Descubra nossos espaços em vídeo',
+    'seminarsPage.cta.title': 'Solicite um orçamento personalizado',
+    'seminarsPage.cta.subtitle': 'Nossa equipe acompanha você na organização do seu evento',
+    'seminarsPage.cta.button': 'Entre em contato',
+    'seminarsPage.uShape': 'Em U',
+    'seminarsPage.classroom': 'Classe',
+    'seminarsPage.theatre': 'Teatro',
     
     // Events
     'events.badge': 'Eventos e Ofertas',
@@ -495,6 +982,9 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.description': 'Ao reservar em nosso site oficial, beneficie-se da melhor tarifa disponível e vantagens exclusivas para sua estadia.',
     'cta.button': 'Reservar agora',
     'cta.contact': 'Entre em contato',
+    
+    // Contact Bubble
+    'contact.bubble': 'Fale conosco',
     
     // Footer
     'footer.description': 'Hotel 3 estrelas no coração do 13º arrondissement, a poucos passos da Place d\'Italie.',

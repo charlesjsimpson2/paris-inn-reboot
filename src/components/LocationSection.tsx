@@ -1,6 +1,15 @@
 import { MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const LocationSection = () => {
+  const { t } = useLanguage();
+
+  const transports = [
+    { transport: t('location.metro'), line: "Ligne 6 & 7", stop: "Place d'Italie", time: "2 min" },
+    { transport: t('location.bus'), line: "Lignes 27, 47, 83", stop: "Vincent Auriol", time: "1 min" },
+    { transport: t('location.tramway'), line: "T3a", stop: "Porte d'Italie", time: "10 min" },
+  ];
+
   return (
     <section id="localisation" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -22,10 +31,10 @@ export const LocationSection = () => {
           {/* Info */}
           <div>
             <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
-              Comment nous trouver
+              {t('location.badge')}
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
-              Localisation
+              {t('location.title')}
             </h2>
             <div className="flex items-start gap-4 mb-8">
               <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0">
@@ -40,13 +49,9 @@ export const LocationSection = () => {
             </div>
 
             <div className="space-y-4 mb-8">
-              <h4 className="font-display text-lg text-foreground">Accès</h4>
+              <h4 className="font-display text-lg text-foreground">{t('location.access')}</h4>
               <div className="grid gap-3">
-                {[
-                  { transport: "Métro", line: "Ligne 6 & 7", stop: "Place d'Italie", time: "2 min" },
-                  { transport: "Bus", line: "Lignes 27, 47, 83", stop: "Vincent Auriol", time: "1 min" },
-                  { transport: "Tramway", line: "T3a", stop: "Porte d'Italie", time: "10 min" },
-                ].map((item, index) => (
+                {transports.map((item, index) => (
                   <div
                     key={index}
                     className="flex items-center justify-between p-3 bg-card border border-border"
@@ -63,7 +68,7 @@ export const LocationSection = () => {
             </div>
 
             <p className="text-muted-foreground text-sm">
-              Parking privé sécurisé disponible sur réservation.
+              {t('location.parking')}
             </p>
           </div>
         </div>
