@@ -1,54 +1,32 @@
 import { Clock, Car, Briefcase, Plane, Utensils, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import receptionHotel from "@/assets/reception-hotel.jpg";
 import restaurantPlat from "@/assets/restaurant-plat.jpg";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
 
-const services = [
-  {
-    title: "Accueil à l'hôtel",
-    icon: Clock,
-    items: [
-      { icon: Clock, text: "Réception 24/24 – 7j/7" },
-      { icon: Briefcase, text: "Départ avant 12h – Arrivée après 14h" },
-      { icon: Car, text: "Parking privé et sécurisé" },
-    ],
-    image: null,
-  },
-  {
-    title: "Infos pratiques",
-    icon: Briefcase,
-    items: [
-      { icon: Briefcase, text: "Bagagerie gratuite" },
-      { icon: Plane, text: "Taxi – Tarif unique aéroport" },
-    ],
-    image: null,
-  },
-  {
-    title: "Restaurant à proximité",
-    icon: Utensils,
-    description: "Que vous soyez à la recherche de plats locaux et traditionnels, de saveurs internationales exotiques ou de mets gastronomiques raffinés, il y a de fortes chances que vous puissiez trouver un restaurant adapté à vos envies.",
-    link: "Retrouvez la liste des restaurants à proximité",
-    image: null,
-  },
-  {
-    title: "Tourisme",
-    icon: MapPin,
-    description: "Lors de votre séjour à l'hôtel Inn Design Place d'Italie à Paris, vous pourrez vous plonger dans l'histoire de la capitale française : Les Catacombes de Paris, La Tour Eiffel, Tour Montparnasse, Institut du monde arabe, Musée du Louvres, Panthéon...",
-    link: "Découvrez tout ce qu'il y a à visiter",
-    image: null,
-  },
-];
-
 export const ServicesSection = () => {
+  const { t } = useLanguage();
+
+  const receptionItems = [
+    { icon: Clock, text: t('services.reception.247') },
+    { icon: Briefcase, text: t('services.reception.checkin') },
+    { icon: Car, text: t('services.reception.parking') },
+  ];
+
+  const infoItems = [
+    { icon: Briefcase, text: t('services.reception.luggage') },
+    { icon: Plane, text: t('services.reception.taxi') },
+  ];
+
   return (
     <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-            À votre service
+            {t('services.badge')}
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground">
-            Tout pour votre confort
+            {t('services.title')}
           </h2>
         </div>
 
@@ -65,12 +43,12 @@ export const ServicesSection = () => {
                 <div className="p-2 bg-primary/10">
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl text-foreground">Accueil & Infos pratiques</h3>
+                <h3 className="font-display text-xl text-foreground">{t('services.reception.title')}</h3>
               </div>
               
               {/* Accueil items */}
               <div className="space-y-2 mb-4">
-                {services[0].items?.map((item, idx) => (
+                {receptionItems.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-muted-foreground text-sm">{item.text}</span>
@@ -82,7 +60,7 @@ export const ServicesSection = () => {
               
               {/* Infos pratiques en 2 colonnes */}
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                {services[1].items?.map((item, idx) => (
+                {infoItems.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-muted-foreground text-xs">{item.text}</span>
@@ -104,10 +82,10 @@ export const ServicesSection = () => {
                 <div className="p-2 bg-primary/10">
                   <Utensils className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl text-foreground">Restaurant à proximité</h3>
+                <h3 className="font-display text-xl text-foreground">{t('services.restaurant.title')}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-sm">
-                {services[2].description}
+                {t('services.restaurant.desc')}
               </p>
             </div>
           </div>
@@ -124,10 +102,10 @@ export const ServicesSection = () => {
                 <div className="p-2 bg-primary/10">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl text-foreground">Tourisme</h3>
+                <h3 className="font-display text-xl text-foreground">{t('services.tourism.title')}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-sm">
-                {services[3].description}
+                {t('services.tourism.desc')}
               </p>
             </div>
           </div>

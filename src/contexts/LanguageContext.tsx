@@ -215,6 +215,20 @@ const translations: Record<Language, Record<string, string>> = {
     // Seminar quote button  
     'seminars.quoteButton': 'Demander un devis',
     
+    // Services Section
+    'services.badge': 'À votre service',
+    'services.title': 'Tout pour votre confort',
+    'services.reception.title': 'Accueil & Infos pratiques',
+    'services.reception.247': 'Réception 24/24 – 7j/7',
+    'services.reception.checkin': 'Départ avant 12h – Arrivée après 14h',
+    'services.reception.parking': 'Parking privé et sécurisé',
+    'services.reception.luggage': 'Bagagerie gratuite',
+    'services.reception.taxi': 'Taxi – Tarif unique aéroport',
+    'services.restaurant.title': 'Restaurant à proximité',
+    'services.restaurant.desc': 'Que vous soyez à la recherche de plats locaux et traditionnels, de saveurs internationales exotiques ou de mets gastronomiques raffinés, il y a de fortes chances que vous puissiez trouver un restaurant adapté à vos envies.',
+    'services.tourism.title': 'Tourisme',
+    'services.tourism.desc': 'Lors de votre séjour à l\'hôtel Inn Design Place d\'Italie à Paris, vous pourrez vous plonger dans l\'histoire de la capitale française : Les Catacombes de Paris, La Tour Eiffel, Tour Montparnasse, Institut du monde arabe, Musée du Louvres, Panthéon...',
+    
     // CTA
     'cta.badge': 'Meilleur Prix Garanti',
     'cta.title': 'Réservez directement pour les meilleurs tarifs',
@@ -428,6 +442,20 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Seminar quote button
     'seminars.quoteButton': 'Request a quote',
+    
+    // Services Section
+    'services.badge': 'At your service',
+    'services.title': 'Everything for your comfort',
+    'services.reception.title': 'Reception & Practical info',
+    'services.reception.247': 'Reception 24/7',
+    'services.reception.checkin': 'Check-out before 12pm – Check-in after 2pm',
+    'services.reception.parking': 'Private secure parking',
+    'services.reception.luggage': 'Free luggage storage',
+    'services.reception.taxi': 'Taxi – Fixed airport rate',
+    'services.restaurant.title': 'Nearby restaurants',
+    'services.restaurant.desc': 'Whether you\'re looking for local and traditional dishes, exotic international flavors or refined gourmet cuisine, chances are you can find a restaurant that suits your cravings.',
+    'services.tourism.title': 'Tourism',
+    'services.tourism.desc': 'During your stay at Hotel Inn Design Place d\'Italie in Paris, you can immerse yourself in the history of the French capital: The Catacombs of Paris, The Eiffel Tower, Montparnasse Tower, Arab World Institute, Louvre Museum, Pantheon...',
     
     // CTA
     'cta.badge': 'Best Price Guaranteed',
@@ -643,6 +671,20 @@ const translations: Record<Language, Record<string, string>> = {
     // Seminar quote button
     'seminars.quoteButton': 'Solicitar presupuesto',
     
+    // Services Section
+    'services.badge': 'A su servicio',
+    'services.title': 'Todo para su comodidad',
+    'services.reception.title': 'Recepción e Información práctica',
+    'services.reception.247': 'Recepción 24/7',
+    'services.reception.checkin': 'Salida antes de las 12h – Llegada después de las 14h',
+    'services.reception.parking': 'Parking privado y seguro',
+    'services.reception.luggage': 'Consigna gratuita',
+    'services.reception.taxi': 'Taxi – Tarifa única aeropuerto',
+    'services.restaurant.title': 'Restaurantes cercanos',
+    'services.restaurant.desc': 'Ya sea que busque platos locales y tradicionales, sabores internacionales exóticos o cocina gourmet refinada, es muy probable que encuentre un restaurante adaptado a sus deseos.',
+    'services.tourism.title': 'Turismo',
+    'services.tourism.desc': 'Durante su estancia en el Hotel Inn Design Place d\'Italie en París, podrá sumergirse en la historia de la capital francesa: Las Catacumbas de París, La Torre Eiffel, Torre Montparnasse, Instituto del Mundo Árabe, Museo del Louvre, Panteón...',
+    
     // CTA
     'cta.badge': 'Mejor Precio Garantizado',
     'cta.title': 'Reserve directamente para las mejores tarifas',
@@ -857,6 +899,20 @@ const translations: Record<Language, Record<string, string>> = {
     // Seminar quote button
     'seminars.quoteButton': 'Richiedi preventivo',
     
+    // Services Section
+    'services.badge': 'Al vostro servizio',
+    'services.title': 'Tutto per il vostro comfort',
+    'services.reception.title': 'Reception & Info pratiche',
+    'services.reception.247': 'Reception 24/7',
+    'services.reception.checkin': 'Check-out prima delle 12 – Check-in dopo le 14',
+    'services.reception.parking': 'Parcheggio privato e sicuro',
+    'services.reception.luggage': 'Deposito bagagli gratuito',
+    'services.reception.taxi': 'Taxi – Tariffa fissa aeroporto',
+    'services.restaurant.title': 'Ristoranti nelle vicinanze',
+    'services.restaurant.desc': 'Che cerchiate piatti locali e tradizionali, sapori internazionali esotici o cucina gourmet raffinata, è molto probabile che possiate trovare un ristorante adatto ai vostri desideri.',
+    'services.tourism.title': 'Turismo',
+    'services.tourism.desc': 'Durante il vostro soggiorno all\'Hotel Inn Design Place d\'Italie a Parigi, potrete immergervi nella storia della capitale francese: Le Catacombe di Parigi, La Torre Eiffel, Torre Montparnasse, Istituto del Mondo Arabo, Museo del Louvre, Pantheon...',
+    
     // CTA
     'cta.badge': 'Miglior Prezzo Garantito',
     'cta.title': 'Prenota direttamente per le migliori tariffe',
@@ -1070,6 +1126,20 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Seminar quote button
     'seminars.quoteButton': 'Solicitar orçamento',
+    
+    // Services Section
+    'services.badge': 'Ao seu serviço',
+    'services.title': 'Tudo para o seu conforto',
+    'services.reception.title': 'Recepção & Informações práticas',
+    'services.reception.247': 'Recepção 24/7',
+    'services.reception.checkin': 'Check-out antes das 12h – Check-in após as 14h',
+    'services.reception.parking': 'Estacionamento privado e seguro',
+    'services.reception.luggage': 'Guarda-volumes gratuito',
+    'services.reception.taxi': 'Táxi – Tarifa fixa aeroporto',
+    'services.restaurant.title': 'Restaurantes próximos',
+    'services.restaurant.desc': 'Seja procurando pratos locais e tradicionais, sabores internacionais exóticos ou culinária gourmet refinada, é muito provável que você encontre um restaurante adequado aos seus desejos.',
+    'services.tourism.title': 'Turismo',
+    'services.tourism.desc': 'Durante sua estadia no Hotel Inn Design Place d\'Italie em Paris, você poderá mergulhar na história da capital francesa: As Catacumbas de Paris, A Torre Eiffel, Torre Montparnasse, Instituto do Mundo Árabe, Museu do Louvre, Panteão...',
     
     // CTA
     'cta.badge': 'Melhor Preço Garantido',
