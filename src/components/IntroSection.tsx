@@ -67,10 +67,10 @@ export const IntroSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <p className="text-foreground text-xl font-display mb-6">
+          <p className="text-foreground text-lg md:text-xl font-display mb-4 md:mb-6">
             Réservez votre chambre et profitez de votre séjour à Paris !
           </p>
-          <Button variant="gold" size="xl" className="px-12 py-7 text-lg font-bold shadow-xl" asChild>
+          <Button variant="gold" size="lg" className="px-8 py-5 md:px-12 md:py-7 text-base md:text-lg font-bold shadow-xl w-full sm:w-auto" asChild>
             <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
               Réserver une chambre
             </a>

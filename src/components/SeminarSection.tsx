@@ -75,17 +75,17 @@ export const SeminarSection = () => {
             {/* Navigation arrows */}
             <button
               onClick={goToPrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 transition-all"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-1.5 md:p-2 transition-all"
               aria-label="Image précédente"
             >
-              <ChevronLeft className="w-6 h-6 text-foreground" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-foreground" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 transition-all"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-1.5 md:p-2 transition-all"
               aria-label="Image suivante"
             >
-              <ChevronRight className="w-6 h-6 text-foreground" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-foreground" />
             </button>
 
             {/* Indicators */}
@@ -128,11 +128,11 @@ export const SeminarSection = () => {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Button variant="gold" size="lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
                 <Link to="/reservation-seminaire">Demander un devis</Link>
               </Button>
-              <Button variant="elegant" size="lg" asChild>
+              <Button variant="elegant" size="lg" className="w-full sm:w-auto" asChild>
                 <Link to="/seminaires">Découvrir nos salles</Link>
               </Button>
             </div>

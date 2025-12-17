@@ -27,12 +27,12 @@ export const CTASection = () => {
           disponible et d'avantages exclusifs pour votre séjour.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="gold" size="xl" asChild>
+          <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
             <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
               Réserver maintenant
             </a>
           </Button>
-          <Button variant="elegant" size="xl">
+          <Button variant="elegant" size="lg" className="w-full sm:w-auto">
             Nous contacter
           </Button>
         </div>

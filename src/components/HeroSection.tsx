@@ -49,44 +49,44 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/20 to-transparent" />
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - hidden on small mobile */}
       <button
         onClick={goToPrev}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
+        className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-background/20 backdrop-blur-sm border border-foreground/20 hidden sm:flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
         aria-label="Image précédente"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-background/20 backdrop-blur-sm border border-foreground/20 flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
+        className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-background/20 backdrop-blur-sm border border-foreground/20 hidden sm:flex items-center justify-center text-foreground/80 hover:bg-background/40 hover:text-foreground transition-all"
         aria-label="Image suivante"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
       </button>
       {/* Hero Content */}
-      <div className="absolute bottom-20 left-0 z-10 px-6 md:px-12 lg:px-20 max-w-2xl">
-        <p className="text-white font-body uppercase tracking-[0.5em] text-base md:text-lg mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+      <div className="absolute bottom-16 sm:bottom-20 left-0 z-10 px-4 sm:px-6 md:px-12 lg:px-20 max-w-2xl">
+        <p className="text-white font-body uppercase tracking-[0.3em] sm:tracking-[0.5em] text-sm sm:text-base md:text-lg mb-2 sm:mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
           Bienvenue
         </p>
-        <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+        <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
           Hôtel Inn Design
         </h1>
-        <p className="text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-4 py-1">
+        <p className="text-xl sm:text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-3 sm:px-4 py-1">
           Place d'Italie
         </p>
       </div>
 
       {/* Carousel Indicators */}
-      <div className="absolute bottom-20 right-6 md:right-12 lg:right-20 flex flex-col gap-2 z-20">
+      <div className="absolute bottom-16 sm:bottom-20 right-4 sm:right-6 md:right-12 lg:right-20 flex flex-col gap-1.5 sm:gap-2 z-20">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-2 h-2 transition-all duration-300 ${
+            className={`w-1.5 sm:w-2 transition-all duration-300 ${
               current === index
-                ? "bg-primary h-8"
-                : "bg-foreground/40 hover:bg-foreground/60"
+                ? "bg-primary h-6 sm:h-8"
+                : "bg-foreground/40 hover:bg-foreground/60 h-1.5 sm:h-2"
             }`}
             aria-label={`Aller à l'image ${index + 1}`}
           />
