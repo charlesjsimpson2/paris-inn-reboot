@@ -1,25 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Star, BedDouble, Car, Wine } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import vueBalcon from "@/assets/vue-balcon-paris.jpg";
 
-const features = [
-  { icon: Star, label: "3 étoiles", stars: true },
-  { icon: BedDouble, label: "70 chambres" },
-  { icon: Car, label: "Parking privé" },
-  { icon: Wine, label: "Bar convivial" },
-];
-
 export const IntroSection = () => {
+  const { t } = useLanguage();
+
+  const features = [
+    { icon: Star, label: t('intro.stars'), stars: true },
+    { icon: BedDouble, label: t('intro.rooms') },
+    { icon: Car, label: t('intro.parking') },
+    { icon: Wine, label: t('intro.bar') },
+  ];
+
   return (
     <section className="py-16 pb-8 bg-gradient-to-b from-card to-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-            Bienvenue
+            {t('intro.badge')}
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground">
-            Un hôtel bien placé pour tout faire !
+            {t('intro.title')}
           </h2>
         </div>
 
@@ -28,7 +31,7 @@ export const IntroSection = () => {
           {/* Left: Text + Stats */}
           <div>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Situé au cœur du 13ᵉ arrondissement, l'Hôtel Inn Design Paris bénéficie d'un emplacement idéal, à proximité de la Butte-aux-Cailles, des parcs et des quais. Notre hôtel propose 70 chambres confortables, un parking privé et sécurisé, ainsi qu'un bar convivial et un espace d'accueil propice à la détente ou aux échanges professionnels.
+              {t('intro.description')}
             </p>
 
             {/* Stats in row */}
@@ -68,11 +71,11 @@ export const IntroSection = () => {
         {/* CTA */}
         <div className="text-center">
           <p className="text-foreground text-lg md:text-xl font-display mb-4 md:mb-6">
-            Réservez votre chambre et profitez de votre séjour à Paris !
+            {t('intro.cta')}
           </p>
           <Button variant="gold" size="lg" className="px-8 py-5 md:px-12 md:py-7 text-base md:text-lg font-bold shadow-xl w-full sm:w-auto" asChild>
             <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-              Réserver une chambre
+              {t('intro.button')}
             </a>
           </Button>
         </div>

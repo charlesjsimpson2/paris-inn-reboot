@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import hotelReception from "@/assets/hotel-reception.jpg";
 import hotelChambre from "@/assets/hotel-chambre.jpg";
@@ -18,6 +18,7 @@ const heroImages = [
 
 export const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const { t } = useLanguage();
 
   const goToPrev = () => {
     setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
@@ -67,13 +68,13 @@ export const HeroSection = () => {
       {/* Hero Content */}
       <div className="absolute bottom-16 sm:bottom-20 left-0 z-10 px-4 sm:px-6 md:px-12 lg:px-20 max-w-2xl">
         <p className="text-white font-body uppercase tracking-[0.3em] sm:tracking-[0.5em] text-sm sm:text-base md:text-lg mb-2 sm:mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-          Bienvenue
+          {t('hero.welcome')}
         </p>
         <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-          Hôtel Inn Design
+          {t('hero.name')}
         </h1>
         <p className="text-xl sm:text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-3 sm:px-4 py-1">
-          Place d'Italie
+          {t('hero.location')}
         </p>
       </div>
 

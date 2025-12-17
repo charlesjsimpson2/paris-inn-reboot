@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Monitor, Wifi, Mic, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import seminaire1 from "@/assets/seminaire-1.jpg";
 import seminaire2 from "@/assets/seminaire-2.jpg";
@@ -26,6 +27,7 @@ const features = [
 
 export const SeminarSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useLanguage();
 
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -48,13 +50,13 @@ export const SeminarSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
-            Espace professionnel
+            {t('seminars.badge')}
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
-            Salle de séminaire
+            {t('seminars.title')}
           </h2>
           <p className="text-xl text-primary font-medium">
-            Organisez vos réunions autrement !
+            {t('seminars.subtitle')}
           </p>
         </div>
 
@@ -106,13 +108,10 @@ export const SeminarSection = () => {
           {/* Content */}
           <div>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              L'hôtel Inn Design de Paris met à votre disposition plusieurs salles de séminaire 
-              modernes et entièrement équipées : paperboard, écrans avec vidéoprojecteur, micros 
-              et connexion wifi.
+              {t('seminars.desc1')}
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Selon vos objectifs, différentes configurations sont possibles afin de s'adapter 
-              parfaitement à vos réunions, formations ou événements professionnels.
+              {t('seminars.desc2')}
             </p>
 
             {/* Features */}
@@ -130,10 +129,10 @@ export const SeminarSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
-                <Link to="/reservation-seminaire">Demander un devis</Link>
+                <Link to="/reservation-seminaire">{t('seminars.quote')}</Link>
               </Button>
               <Button variant="elegant" size="lg" className="w-full sm:w-auto" asChild>
-                <Link to="/seminaires">Découvrir nos salles</Link>
+                <Link to="/seminaires">{t('seminars.discover')}</Link>
               </Button>
             </div>
           </div>

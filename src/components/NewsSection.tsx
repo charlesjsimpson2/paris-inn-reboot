@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const newsArticles = [
   {
@@ -14,21 +15,23 @@ const newsArticles = [
 ];
 
 export const NewsSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-charcoal">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
           <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">
-            Événements & Offres
+            {t('events.badge')}
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-foreground">
-            Découvrez notre agenda et offres
+            {t('events.title')}
           </h2>
           </div>
           <Link to="/actualites" className="mt-4 md:mt-0">
             <Button variant="outline">
-              Voir tous les événements
+              {t('events.cta')}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>
