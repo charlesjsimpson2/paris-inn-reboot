@@ -47,16 +47,13 @@ export const Header = () => {
         <div className="bg-charcoal/80 backdrop-blur-sm border-b border-border/30">
           <div className="container mx-auto px-4 py-2">
             <div className="flex items-center justify-between">
-              {/* Left: Language Switcher */}
-              <LanguageSwitcher />
-              
-              {/* Center: Address */}
+              {/* Left: Address */}
               <div className="hidden md:flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-burgundy" />
                 <span className="text-sm">211 Bd Vincent Auriol, 75013 Paris</span>
               </div>
               
-              {/* Right: Contact info + Button */}
+              {/* Right: Contact info + Language Switcher */}
               <div className="flex items-center gap-4 ml-auto">
                 <a
                   href="tel:+33144240101"
@@ -76,6 +73,7 @@ export const Header = () => {
                   </div>
                   <span className="text-sm font-medium hidden sm:inline">hid.paris13@gmail.com</span>
                 </a>
+                <LanguageSwitcher />
               </div>
             </div>
           </div>
@@ -92,29 +90,19 @@ export const Header = () => {
       >
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between relative">
-            {/* Left side: Menu + Language */}
-            <div className="flex items-center gap-2 z-10">
-              {/* Burger Menu */}
-              <button
-                className={`group px-5 py-2.5 border-2 transition-all duration-300 flex items-center gap-3 shadow-md hover:shadow-lg hover:scale-105 ${
-                  isHeroPage || isScrolled
-                    ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
-                    : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
-                }`}
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Menu"
-              >
-                <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
-                <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
-              </button>
-              
-              {/* Language Switcher - visible when top bar is hidden */}
-              {(isScrolled || isHeroPage) && (
-                <div className={isHeroPage || isScrolled ? "text-foreground" : "text-white"}>
-                  <LanguageSwitcher />
-                </div>
-              )}
-            </div>
+            {/* Burger Menu - Left */}
+            <button
+              className={`group px-5 py-2.5 border-2 transition-all duration-300 flex items-center gap-3 z-10 shadow-md hover:shadow-lg hover:scale-105 ${
+                isHeroPage || isScrolled
+                  ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
+                  : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
+              }`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Menu"
+            >
+              <Menu className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
+              <span className="text-sm font-bold uppercase tracking-widest">Menu</span>
+            </button>
 
             {/* Logo - Center */}
             <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
@@ -125,22 +113,31 @@ export const Header = () => {
               />
             </Link>
 
-            {/* Réserver Button - Right */}
-            <Button 
-              variant="gold" 
-              size="lg" 
-              className="z-10 px-3 py-2 md:px-6 md:py-5 text-sm md:text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy relative overflow-hidden group"
-              asChild
-            >
-              <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></span>
-                <span className="relative flex items-center gap-1 md:gap-3">
-                  <span className="text-sm md:text-lg">{t('nav.book').split(' ')[0]}</span>
-                  <span className="text-xs md:text-sm bg-white/25 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-bold animate-bounce">-10%</span>
-                </span>
-              </a>
-            </Button>
+            {/* Right side: Language + Réserver Button */}
+            <div className="flex items-center gap-2 md:gap-4 z-10">
+              {/* Language Switcher - visible when top bar is hidden */}
+              {(isScrolled || isHeroPage) && (
+                <div className="text-foreground">
+                  <LanguageSwitcher />
+                </div>
+              )}
+              
+              <Button 
+                variant="gold" 
+                size="lg" 
+                className="px-3 py-2 md:px-6 md:py-5 text-sm md:text-base font-bold tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy relative overflow-hidden group"
+                asChild
+              >
+                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></span>
+                  <span className="relative flex items-center gap-1 md:gap-3">
+                    <span className="text-sm md:text-lg">{t('nav.book').split(' ')[0]}</span>
+                    <span className="text-xs md:text-sm bg-white/25 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-bold animate-bounce">-10%</span>
+                  </span>
+                </a>
+              </Button>
+            </div>
           </nav>
         </div>
       </div>
