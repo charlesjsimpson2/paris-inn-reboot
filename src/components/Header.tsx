@@ -133,7 +133,7 @@ export const Header = () => {
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></span>
                   <span className="relative flex items-center gap-1 md:gap-3">
                     <span className="text-sm md:text-lg">{t('nav.book').split(' ')[0]}</span>
-                    <span className="text-xs md:text-sm bg-white/25 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-bold animate-bounce">-10%</span>
+                    <span className="text-xs md:text-sm bg-white/25 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-bold animate-bounce">-15%</span>
                   </span>
                 </a>
               </Button>
