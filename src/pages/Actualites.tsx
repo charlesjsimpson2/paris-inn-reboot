@@ -1,34 +1,44 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowRight, Instagram, Linkedin } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Instagram, Linkedin, Music, Heart, MapPin, Ticket, Percent, Car, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Sample news data - will be replaced with real data
+// Featured Les Enfoirés event
+const enfoires = {
+  id: "enfoires-2026",
+  title: "🎤 Les Enfoirés 2026",
+  subtitle: "La Ballade des Enfoirés",
+  description: "Rejoignez-nous pour vivre l'expérience Enfoirés comme jamais ! Le spectacle caritatif annuel des Restos du Cœur revient à l'Accor Arena de Paris-Bercy du 13 au 19 janvier 2026.",
+  fullDescription: "Venez profiter de votre concert Enfoiré dans un concept Enfoiré ! Notre hôtel vous propose une offre exclusive pour vivre cette expérience caritative unique dans les meilleures conditions.",
+  dateStart: "13 Janvier 2026",
+  dateEnd: "19 Janvier 2026",
+  location: "Accor Arena (Paris-Bercy)",
+  image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&h=500&fit=crop",
+  youtubeVideoId: "dQw4w9WgXcQ",
+  offers: [
+    { icon: "hotel", text: "Tarif préférentiel sur votre chambre" },
+    { icon: "taxi", text: "10% de réduction sur le taxi vers l'Accor Arena" },
+    { icon: "ticket", text: "Assistance réservation billets" },
+  ],
+};
+
+// Other news articles
 const newsArticles = [
   {
-    id: 1,
-    title: "Lorem ipsum dolor sit amet",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
-    date: "15 Décembre 2024",
-    readTime: "3 min",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
-    category: "Événement",
-  },
-  {
     id: 2,
-    title: "Consectetur adipiscing elit",
-    excerpt: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
+    title: "Offres spéciales week-end",
+    excerpt: "Profitez de nos tarifs avantageux pour vos escapades parisiennes le week-end...",
     date: "10 Décembre 2024",
     readTime: "2 min",
     image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&h=400&fit=crop",
-    category: "Restauration",
+    category: "Offre",
   },
   {
     id: 3,
-    title: "Sed do eiusmod tempor",
-    excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...",
+    title: "Partenariat avec les restaurants locaux",
+    excerpt: "Découvrez nos partenaires gastronomiques pour une expérience culinaire inoubliable...",
     date: "5 Décembre 2024",
     readTime: "4 min",
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=400&fit=crop",
@@ -36,30 +46,12 @@ const newsArticles = [
   },
   {
     id: 4,
-    title: "Ut enim ad minim veniam",
-    excerpt: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...",
+    title: "Rénovation de nos espaces séminaires",
+    excerpt: "Nos salles de réunion font peau neuve pour vous accueillir dans les meilleures conditions...",
     date: "1 Décembre 2024",
     readTime: "3 min",
     image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&h=400&fit=crop",
     category: "Hôtel",
-  },
-  {
-    id: 5,
-    title: "Quis nostrud exercitation",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...",
-    date: "25 Novembre 2024",
-    readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1512389142860-9c449e58a814?w=600&h=400&fit=crop",
-    category: "Paris",
-  },
-  {
-    id: 6,
-    title: "Duis aute irure dolor",
-    excerpt: "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...",
-    date: "20 Novembre 2024",
-    readTime: "2 min",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
-    category: "Offre",
   },
 ];
 
@@ -87,76 +79,144 @@ const Actualites = () => {
           </div>
         </section>
 
-        {/* Featured Article */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={newsArticles[0].image}
-                  alt={newsArticles[0].title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="lg:pl-8">
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm mb-4">
-                  {newsArticles[0].category}
-                </span>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                  {newsArticles[0].title}
-                </h2>
-                <p className="text-muted-foreground mb-6">
-                  {newsArticles[0].excerpt}
-                </p>
-                <div className="flex items-center gap-6 text-sm text-muted-foreground mb-6">
-                  <span className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    {newsArticles[0].date}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    {newsArticles[0].readTime} {t('actualites.readTime')}
-                  </span>
+        {/* Featured Les Enfoirés Event */}
+        <section className="py-16 relative overflow-hidden">
+          {/* Festive background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 via-yellow-500/5 to-red-600/10" />
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,hsl(var(--primary))_2px,transparent_2px),radial-gradient(circle_at_80%_70%,hsl(var(--primary))_2px,transparent_2px)] bg-[length:60px_60px,40px_40px]" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            {/* Main Event Card */}
+            <div className="bg-gradient-to-r from-red-600 via-yellow-500 to-red-600 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="grid lg:grid-cols-2">
+                {/* Image side */}
+                <div className="relative aspect-[16/10] lg:aspect-auto">
+                  <img
+                    src={enfoires.image}
+                    alt={enfoires.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Overlay with hearts */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                    <Heart className="w-6 h-6 text-red-500 animate-pulse" fill="currentColor" />
+                    <span className="text-white font-bold text-lg">Les Restos du Cœur</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <Button variant="gold">
-                    {t('actualites.learnMore')}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                  <div className="flex items-center gap-2">
-                    <a
-                      href={`https://www.instagram.com/`}
+                
+                {/* Content side */}
+                <div className="p-8 lg:p-12 bg-white">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white text-sm font-bold rounded-full">
+                      <Music className="w-4 h-4" />
+                      Concert Événement
+                    </span>
+                    <Heart className="w-5 h-5 text-red-500 animate-pulse" fill="currentColor" />
+                  </div>
+                  
+                  <h2 className="font-display text-3xl md:text-4xl text-charcoal mb-2">
+                    {enfoires.title}
+                  </h2>
+                  <p className="text-xl text-red-600 font-semibold mb-4">
+                    {enfoires.subtitle}
+                  </p>
+                  
+                  <p className="text-muted-foreground mb-6">
+                    {enfoires.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal mb-6">
+                    <span className="flex items-center gap-2 bg-yellow-100 px-3 py-1.5 rounded-full">
+                      <Calendar className="w-4 h-4 text-red-600" />
+                      {enfoires.dateStart} - {enfoires.dateEnd}
+                    </span>
+                    <span className="flex items-center gap-2 bg-yellow-100 px-3 py-1.5 rounded-full">
+                      <MapPin className="w-4 h-4 text-red-600" />
+                      {enfoires.location}
+                    </span>
+                  </div>
+                  
+                  {/* Offers */}
+                  <div className="bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl p-6 mb-6">
+                    <h3 className="font-display text-lg text-charcoal mb-4 flex items-center gap-2">
+                      <Ticket className="w-5 h-5 text-red-600" />
+                      Notre offre spéciale Enfoirés
+                    </h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-3 text-charcoal">
+                        <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
+                          <Percent className="w-4 h-4 text-white" />
+                        </div>
+                        Tarif préférentiel sur votre chambre
+                      </li>
+                      <li className="flex items-center gap-3 text-charcoal">
+                        <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center">
+                          <Car className="w-4 h-4 text-white" />
+                        </div>
+                        10% de réduction sur le taxi vers l'Accor Arena
+                      </li>
+                      <li className="flex items-center gap-3 text-charcoal">
+                        <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
+                          <Ticket className="w-4 h-4 text-white" />
+                        </div>
+                        Assistance réservation billets
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Button 
+                      size="lg" 
+                      className="bg-red-600 hover:bg-red-700 text-white font-bold"
+                    >
+                      Réserver cette offre
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
+                    <a 
+                      href={`https://www.youtube.com/watch?v=${enfoires.youtubeVideoId}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 border border-border hover:border-primary hover:text-primary transition-colors"
-                      aria-label="Partager sur Instagram"
+                      className="inline-flex items-center gap-2 px-6 py-3 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-50 transition-colors"
                     >
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 border border-border hover:border-primary hover:text-primary transition-colors"
-                      aria-label="Partager sur LinkedIn"
-                    >
-                      <Linkedin className="w-5 h-5" />
+                      <Play className="w-5 h-5" />
+                      Voir la vidéo
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+            
+            {/* YouTube Embed */}
+            <div className="mt-12">
+              <h3 className="font-display text-2xl text-foreground mb-6 text-center">
+                🎵 Découvrez Les Enfoirés en vidéo
+              </h3>
+              <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${enfoires.youtubeVideoId}`}
+                  title="Les Enfoirés - Vidéo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Articles Grid */}
+        {/* Other Articles Grid */}
         <section className="py-16 bg-charcoal">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-3xl text-foreground mb-10">
               {t('actualites.allEvents')}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsArticles.slice(1).map((article) => (
+              {newsArticles.map((article) => (
                 <article
                   key={article.id}
                   className="group bg-card overflow-hidden border border-border hover:border-primary/30 transition-all duration-300"
