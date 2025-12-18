@@ -19,9 +19,9 @@ export const NewsSection = () => {
   const featuredEvent = newsArticles[0];
 
   return (
-    <section className="relative bg-primary overflow-hidden">
+    <section className="relative bg-gradient-to-r from-primary via-burgundy to-primary overflow-hidden">
       {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary animate-pulse opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-burgundy/30 via-transparent to-burgundy/30 animate-pulse" />
       
       {/* Moving shimmer effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full animate-[shimmer_2.5s_infinite]" />
@@ -32,8 +32,8 @@ export const NewsSection = () => {
       </div>
       
       {/* Glow accents */}
-      <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-64 h-32 bg-white/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-48 h-24 bg-white/5 rounded-full blur-2xl animate-pulse animation-delay-200" />
+      <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-64 h-32 bg-burgundy/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-48 h-24 bg-burgundy/20 rounded-full blur-2xl animate-pulse animation-delay-200" />
       
       <div className="container mx-auto px-4 py-5 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
