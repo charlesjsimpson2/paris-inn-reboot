@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Check, X, Shield, Percent, Gift } from "lucide-react";
+import { Check, Shield, Percent, Gift } from "lucide-react";
 
 export const CTASection = () => {
   const { t } = useLanguage();
@@ -47,43 +47,17 @@ export const CTASection = () => {
             {t('cta.description')}
           </p>
 
-          {/* Comparison cards */}
-          <div className="grid md:grid-cols-3 gap-4 mb-10">
-            {/* Other platforms */}
-            <div className="bg-muted/50 border border-border rounded-xl p-6 relative opacity-70">
-              <div className="absolute -top-2 -right-2 bg-destructive text-destructive-foreground text-xs px-2 py-1 rounded-full font-bold">
-                {t('cta.moreExpensive')}
-              </div>
-              <p className="text-muted-foreground text-sm mb-2">Booking.com</p>
-              <p className="text-foreground font-display text-2xl line-through decoration-destructive">€129</p>
-              <div className="flex items-center gap-1 text-destructive text-sm mt-2">
-                <X className="w-4 h-4" />
-                <span>{t('cta.noAdvantages')}</span>
-              </div>
-            </div>
-
-            <div className="bg-muted/50 border border-border rounded-xl p-6 relative opacity-70">
-              <div className="absolute -top-2 -right-2 bg-destructive text-destructive-foreground text-xs px-2 py-1 rounded-full font-bold">
-                {t('cta.moreExpensive')}
-              </div>
-              <p className="text-muted-foreground text-sm mb-2">Expedia</p>
-              <p className="text-foreground font-display text-2xl line-through decoration-destructive">€125</p>
-              <div className="flex items-center gap-1 text-destructive text-sm mt-2">
-                <X className="w-4 h-4" />
-                <span>{t('cta.noAdvantages')}</span>
-              </div>
-            </div>
-
-            {/* Our site - highlighted */}
-            <div className="bg-primary/10 border-2 border-primary rounded-xl p-6 relative transform md:-translate-y-2 shadow-lg">
+          {/* Best price card - centered */}
+          <div className="flex justify-center mb-10">
+            <div className="bg-primary/10 border-2 border-primary rounded-xl p-8 relative shadow-lg max-w-sm w-full">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs px-4 py-1.5 rounded-full font-bold whitespace-nowrap">
                 ✓ {t('cta.bestPrice')}
               </div>
-              <p className="text-primary font-medium text-sm mb-2">{t('cta.ourSite')}</p>
-              <p className="text-foreground font-display text-3xl">€109</p>
-              <div className="flex items-center gap-1 text-primary text-sm mt-2 font-medium">
+              <p className="text-primary font-medium text-sm mb-2 text-center">{t('cta.ourSite')}</p>
+              <p className="text-foreground font-display text-4xl text-center">-15%</p>
+              <div className="flex items-center justify-center gap-1 text-primary text-sm mt-3 font-medium">
                 <Check className="w-4 h-4" />
-                <span>-15% + {t('cta.exclusiveAdvantages')}</span>
+                <span>{t('cta.exclusiveAdvantages')}</span>
               </div>
             </div>
           </div>
