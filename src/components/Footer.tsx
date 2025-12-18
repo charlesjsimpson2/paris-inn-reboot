@@ -77,7 +77,7 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span>211 Bd Vincent Auriol, 75013 Paris</span>
+                <span>178 Bd Vincent Auriol, 75013 Paris</span>
               </li>
               <li>
                 <a
