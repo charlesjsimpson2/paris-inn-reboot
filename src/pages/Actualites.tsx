@@ -167,13 +167,15 @@ const Actualites = () => {
                   </div>
                   
                   <div className="flex flex-wrap items-center gap-4">
-                    <Button 
-                      size="lg" 
-                      className="bg-red-600 hover:bg-red-700 text-white font-bold"
-                    >
-                      Réserver cette offre
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
+                    <Link to="/enfoires-2026">
+                      <Button 
+                        size="lg" 
+                        className="bg-red-600 hover:bg-red-700 text-white font-bold"
+                      >
+                        Découvrir l'offre complète
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </Button>
+                    </Link>
                     <a 
                       href={`https://www.youtube.com/watch?v=${enfoires.youtubeVideoId}`}
                       target="_blank"

@@ -84,7 +84,7 @@ export const NewsSection = () => {
               {featuredEvent.dateStart} - {featuredEvent.dateEnd}
             </div>
             
-            <Link to="/actualites">
+            <Link to="/enfoires-2026">
               <Button 
                 size="lg"
                 className="bg-white text-red-600 hover:bg-yellow-100 hover:text-red-700 font-bold shadow-xl group transition-all duration-300 hover:scale-105 border-2 border-white/50"
