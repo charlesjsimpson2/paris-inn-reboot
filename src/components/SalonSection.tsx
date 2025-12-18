@@ -154,7 +154,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
 
             {/* CTA Button */}
             <a
-              href="#contact"
+              href="/reservation-seminaire"
               className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 font-medium transition-colors"
             >
               {t('seminars.quoteButton')}

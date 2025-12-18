@@ -190,7 +190,7 @@ const Contact = () => {
                 
                 <div className="space-y-5">
                   <a
-                    href="https://maps.google.com/?q=211+Boulevard+Vincent+Auriol,+75013+Paris"
+                    href="https://maps.google.com/?q=178+Boulevard+Vincent+Auriol,+75013+Paris"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-4 group"
@@ -200,7 +200,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground group-hover:text-burgundy transition-colors">
-                        211 boulevard Vincent Auriol
+                        178 boulevard Vincent Auriol
                       </p>
                       <p className="text-muted-foreground">75013 Paris</p>
                     </div>
@@ -235,7 +235,7 @@ const Contact = () => {
               {/* Google Map */}
               <div className="overflow-hidden shadow-lg h-[350px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3547!3d48.8288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6719c8c8c8c8c%3A0x0!2s211%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.8876744366814!2d2.3547!3d48.8288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6719c8c8c8c8c%3A0x0!2s178%20Boulevard%20Vincent%20Auriol%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

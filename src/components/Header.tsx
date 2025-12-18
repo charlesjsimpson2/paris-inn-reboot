@@ -50,7 +50,7 @@ export const Header = () => {
               {/* Left: Address */}
               <div className="hidden md:flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-burgundy" />
-                <span className="text-sm">211 Bd Vincent Auriol, 75013 Paris</span>
+                <span className="text-sm">178 Bd Vincent Auriol, 75013 Paris</span>
               </div>
               
               {/* Right: Contact info + Language Switcher */}

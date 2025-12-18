@@ -112,17 +112,28 @@ const PetitDejeuner = () => {
                 {t('breakfastPage.enjoy')}
               </p>
 
-              {/* Info boxes */}
-              <div className="grid sm:grid-cols-2 gap-4 pt-4">
-                <div className="flex items-center gap-4 p-4 bg-secondary/30 rounded-xl border border-border/50">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-primary" />
+              {/* Info boxes - Horaires */}
+              <div className="bg-secondary/30 rounded-xl border border-border/50 p-6 pt-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{t('breakfastPage.hours')}</p>
-                    <p className="font-medium text-foreground">{t('breakfastPage.hoursValue')}</p>
+                  <h3 className="font-display text-lg text-foreground">{t('breakfastPage.hours')}</h3>
+                </div>
+                <div className="space-y-3 ml-13">
+                  <div className="flex justify-between items-center py-2 border-b border-border/30">
+                    <span className="text-muted-foreground">Lundi – Vendredi</span>
+                    <span className="font-medium text-foreground">06:30 – 10:00</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-border/30">
+                    <span className="text-muted-foreground">Samedi – Dimanche</span>
+                    <span className="font-medium text-foreground">07:00 – 10:30</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Info boxes - Formule et Gratuité */}
+              <div className="grid sm:grid-cols-2 gap-4 pt-4">
                 <div className="flex items-center gap-4 p-4 bg-secondary/30 rounded-xl border border-border/50">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <Users className="w-6 h-6 text-primary" />
@@ -130,6 +141,15 @@ const PetitDejeuner = () => {
                   <div>
                     <p className="text-sm text-muted-foreground">{t('breakfastPage.formula')}</p>
                     <p className="font-medium text-foreground">{t('breakfastPage.formulaValue')}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-4 bg-primary/10 rounded-xl border border-primary/30">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="text-primary font-bold text-lg">🎁</span>
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Enfants</p>
+                    <p className="font-medium text-primary">Gratuit – de 12 ans</p>
                   </div>
                 </div>
               </div>
