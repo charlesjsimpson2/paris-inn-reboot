@@ -231,10 +231,19 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.badge': 'Meilleur Prix Garanti',
-    'cta.title': 'Réservez directement pour les meilleurs tarifs',
-    'cta.description': 'En réservant sur notre site officiel, bénéficiez du meilleur tarif disponible et d\'avantages exclusifs pour votre séjour.',
-    'cta.button': 'Réserver maintenant',
+    'cta.title': 'Moins cher ici qu\'ailleurs, c\'est garanti',
+    'cta.subtitle': 'Aucune plateforme ne battra notre prix !',
+    'cta.description': 'Booking, Expedia, Hotels.com... Vous ne trouverez jamais moins cher qu\'en réservant directement sur notre site. C\'est notre promesse.',
+    'cta.button': 'Réserver au meilleur prix',
     'cta.contact': 'Nous contacter',
+    'cta.moreExpensive': '+ Cher',
+    'cta.noAdvantages': 'Aucun avantage',
+    'cta.bestPrice': 'Meilleur tarif',
+    'cta.ourSite': 'Site officiel',
+    'cta.exclusiveAdvantages': 'avantages exclusifs',
+    'cta.advantage1': '-15% garanti',
+    'cta.advantage2': 'Avantages exclusifs',
+    'cta.advantage3': 'Réservation sécurisée',
     
     // Contact Bubble
     'contact.bubble': 'Contactez-nous',
@@ -459,10 +468,19 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.badge': 'Best Price Guaranteed',
-    'cta.title': 'Book directly for the best rates',
-    'cta.description': 'By booking on our official website, benefit from the best available rate and exclusive advantages for your stay.',
-    'cta.button': 'Book now',
+    'cta.title': 'Cheaper here than anywhere else, guaranteed',
+    'cta.subtitle': 'No platform will beat our price!',
+    'cta.description': 'Booking, Expedia, Hotels.com... You will never find a cheaper rate than booking directly on our website. That\'s our promise.',
+    'cta.button': 'Book at the best price',
     'cta.contact': 'Contact us',
+    'cta.moreExpensive': 'More $',
+    'cta.noAdvantages': 'No perks',
+    'cta.bestPrice': 'Best rate',
+    'cta.ourSite': 'Official website',
+    'cta.exclusiveAdvantages': 'exclusive perks',
+    'cta.advantage1': '-15% guaranteed',
+    'cta.advantage2': 'Exclusive perks',
+    'cta.advantage3': 'Secure booking',
     
     // Contact Bubble
     'contact.bubble': 'Contact us',
@@ -687,10 +705,19 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.badge': 'Mejor Precio Garantizado',
-    'cta.title': 'Reserve directamente para las mejores tarifas',
-    'cta.description': 'Al reservar en nuestro sitio oficial, benefíciese de la mejor tarifa disponible y ventajas exclusivas para su estancia.',
-    'cta.button': 'Reservar ahora',
+    'cta.title': 'Más barato aquí que en cualquier otro lugar',
+    'cta.subtitle': '¡Ninguna plataforma superará nuestro precio!',
+    'cta.description': 'Booking, Expedia, Hotels.com... Nunca encontrará un precio más bajo que reservando directamente en nuestro sitio. Es nuestra promesa.',
+    'cta.button': 'Reservar al mejor precio',
     'cta.contact': 'Contáctenos',
+    'cta.moreExpensive': 'Más caro',
+    'cta.noAdvantages': 'Sin ventajas',
+    'cta.bestPrice': 'Mejor tarifa',
+    'cta.ourSite': 'Sitio oficial',
+    'cta.exclusiveAdvantages': 'ventajas exclusivas',
+    'cta.advantage1': '-15% garantizado',
+    'cta.advantage2': 'Ventajas exclusivas',
+    'cta.advantage3': 'Reserva segura',
     
     // Contact Bubble
     'contact.bubble': 'Contáctenos',
@@ -915,10 +942,19 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.badge': 'Miglior Prezzo Garantito',
-    'cta.title': 'Prenota direttamente per le migliori tariffe',
-    'cta.description': 'Prenotando sul nostro sito ufficiale, beneficia della migliore tariffa disponibile e vantaggi esclusivi per il tuo soggiorno.',
-    'cta.button': 'Prenota ora',
+    'cta.title': 'Più economico qui che altrove, garantito',
+    'cta.subtitle': 'Nessuna piattaforma batterà il nostro prezzo!',
+    'cta.description': 'Booking, Expedia, Hotels.com... Non troverai mai un prezzo più basso che prenotando direttamente sul nostro sito. È la nostra promessa.',
+    'cta.button': 'Prenota al miglior prezzo',
     'cta.contact': 'Contattaci',
+    'cta.moreExpensive': 'Più caro',
+    'cta.noAdvantages': 'Nessun vantaggio',
+    'cta.bestPrice': 'Miglior tariffa',
+    'cta.ourSite': 'Sito ufficiale',
+    'cta.exclusiveAdvantages': 'vantaggi esclusivi',
+    'cta.advantage1': '-15% garantito',
+    'cta.advantage2': 'Vantaggi esclusivi',
+    'cta.advantage3': 'Prenotazione sicura',
     
     // Contact Bubble
     'contact.bubble': 'Contattaci',
@@ -1143,10 +1179,19 @@ const translations: Record<Language, Record<string, string>> = {
     
     // CTA
     'cta.badge': 'Melhor Preço Garantido',
-    'cta.title': 'Reserve diretamente para as melhores tarifas',
-    'cta.description': 'Ao reservar em nosso site oficial, beneficie-se da melhor tarifa disponível e vantagens exclusivas para sua estadia.',
-    'cta.button': 'Reservar agora',
+    'cta.title': 'Mais barato aqui do que em qualquer outro lugar',
+    'cta.subtitle': 'Nenhuma plataforma vai bater nosso preço!',
+    'cta.description': 'Booking, Expedia, Hotels.com... Você nunca encontrará um preço mais baixo do que reservando diretamente em nosso site. É nossa promessa.',
+    'cta.button': 'Reservar ao melhor preço',
     'cta.contact': 'Entre em contato',
+    'cta.moreExpensive': 'Mais caro',
+    'cta.noAdvantages': 'Sem vantagens',
+    'cta.bestPrice': 'Melhor tarifa',
+    'cta.ourSite': 'Site oficial',
+    'cta.exclusiveAdvantages': 'vantagens exclusivas',
+    'cta.advantage1': '-15% garantido',
+    'cta.advantage2': 'Vantagens exclusivas',
+    'cta.advantage3': 'Reserva segura',
     
     // Contact Bubble
     'contact.bubble': 'Fale conosco',
