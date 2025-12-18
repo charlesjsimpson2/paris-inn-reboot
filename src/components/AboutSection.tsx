@@ -1,6 +1,6 @@
 import { Plane, Building2, Landmark, MapPin, Train } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
+import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 
 const destinations = [
   { icon: Plane, time: "1h", label: "Aéroport de Paris-Charles de Gaulle" },
@@ -35,7 +35,7 @@ export const AboutSection = () => {
           {/* Single image */}
           <div className="relative group overflow-hidden">
             <img
-              src={proximiteMetro}
+              src={hotelMetroFacade}
               alt="Hôtel Inn Design près du métro Place d'Italie"
               className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
             />
