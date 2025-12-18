@@ -122,7 +122,31 @@ const Seminaires = () => {
         </div>
       </section>
 
-      {/* Description + Equipment Section */}
+      {/* Video Section - Featured */}
+      <section className="py-16 bg-charcoal relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">
+                {t('seminarsPage.virtualTour')}
+              </span>
+              <h2 className="font-display text-2xl md:text-3xl text-foreground mt-2">
+                {t('seminarsPage.videoTitle')}
+              </h2>
+            </div>
+            <div className="relative aspect-video overflow-hidden shadow-2xl border border-border/30">
+              <iframe
+                src="https://www.youtube.com/embed/6VK-aPuljJY"
+                title="Visite de nos salles de séminaires"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -187,29 +211,6 @@ const Seminaires = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 mb-4">
-              {t('seminarsPage.virtualTour')}
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              {t('seminarsPage.videoTitle')}
-            </h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video overflow-hidden shadow-2xl">
-              <iframe
-                src="https://www.youtube.com/embed/6VK-aPuljJY"
-                title="Visite de nos salles de séminaires"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary">
