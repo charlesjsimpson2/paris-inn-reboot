@@ -120,48 +120,48 @@ const SalonAgriculture = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 items-stretch">
-                <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
-                    src={hotelMetroFacade}
-                    alt="Façade de l'hôtel près du métro"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="space-y-4">
-                  <div className="bg-white/10 backdrop-blur-sm p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <Train className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-display text-xl">En Métro</h3>
-                        <p className="text-white/80 text-sm">~25 minutes</p>
-                      </div>
-                    </div>
-                    <p className="text-white/90 text-sm leading-relaxed">
-                      <strong>Ligne 7</strong> depuis Place d'Italie jusqu'à <strong>Porte de Versailles</strong> 
-                      (correspondance ligne 12). Trajet direct et rapide !
-                    </p>
-                  </div>
+              <div className="mb-8">
+                <img
+                  src={hotelMetroFacade}
+                  alt="Façade de l'hôtel près du métro"
+                  className="w-full max-h-[400px] object-cover"
+                />
+              </div>
 
-                  <div className="bg-white/10 backdrop-blur-sm p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <Clock className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-display text-xl">Horaires du Salon</h3>
-                        <p className="text-white/80 text-sm">9h - 19h</p>
-                      </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white/10 backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                      <Train className="w-6 h-6" />
                     </div>
-                    <p className="text-white/90 text-sm leading-relaxed">
-                      Ouvert tous les jours de <strong>9h à 19h</strong>. 
-                      Nocturne le vendredi jusqu'à 23h. Arrivez tôt pour éviter la foule !
-                    </p>
+                    <div>
+                      <h3 className="font-display text-xl">En Métro</h3>
+                      <p className="text-white/80 text-sm">~25 minutes</p>
+                    </div>
                   </div>
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    <strong>Ligne 7</strong> depuis Place d'Italie jusqu'à <strong>Porte de Versailles</strong> 
+                    (correspondance ligne 12). Trajet direct et rapide !
+                  </p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-6 flex flex-col justify-center">
+
+                <div className="bg-white/10 backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                      <Clock className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-xl">Horaires du Salon</h3>
+                      <p className="text-white/80 text-sm">9h - 19h</p>
+                    </div>
+                  </div>
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    Ouvert tous les jours de <strong>9h à 19h</strong>. 
+                    Nocturne le vendredi jusqu'à 23h. Arrivez tôt pour éviter la foule !
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                       <MapPin className="w-6 h-6" />
