@@ -125,70 +125,72 @@ const SalonAgriculture = () => {
         {/* Accès depuis l'hôtel */}
         <section className="py-16 bg-gradient-to-r from-green-600 via-green-700 to-amber-600 text-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <h2 className="font-display text-3xl md:text-4xl mb-4">
-                  Accès facile depuis l'Hotel Inn Paris
-                </h2>
-                <p className="text-white/90 text-lg">
-                  Rejoignez le Salon en toute simplicité grâce aux transports en commun
-                </p>
-              </div>
-
-              <div className="mb-8">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Image à gauche */}
+              <div>
                 <img
                   src={hotelMetroFacade}
                   alt="Façade de l'hôtel près du métro"
-                  className="w-full max-h-[400px] object-cover"
+                  className="w-full h-full object-cover rounded-lg shadow-xl"
                 />
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <Train className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-xl">En Métro</h3>
-                      <p className="text-white/80 text-sm">~25 minutes</p>
-                    </div>
-                  </div>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    <strong>Ligne 7</strong> depuis Place d'Italie jusqu'à <strong>Porte de Versailles</strong> 
-                    (correspondance ligne 12). Trajet direct et rapide !
-                  </p>
-                </div>
+              {/* Contenu à droite */}
+              <div>
+                <h2 className="font-display text-3xl md:text-4xl mb-4">
+                  Accès facile depuis l'Hotel Inn Paris
+                </h2>
+                <p className="text-white/90 text-lg mb-8">
+                  Rejoignez le Salon en toute simplicité grâce aux transports en commun
+                </p>
 
-                <div className="bg-white/10 backdrop-blur-sm p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <Clock className="w-6 h-6" />
+                <div className="space-y-4">
+                  <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <Train className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-lg">En Métro</h3>
+                        <p className="text-white/80 text-sm">~25 minutes</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-display text-xl">Horaires du Salon</h3>
-                      <p className="text-white/80 text-sm">9h - 19h</p>
-                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      <strong>Ligne 7</strong> depuis Place d'Italie jusqu'à <strong>Porte de Versailles</strong> 
+                      (correspondance ligne 12). Trajet direct et rapide !
+                    </p>
                   </div>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    Ouvert tous les jours de <strong>9h à 19h</strong>. 
-                    Nocturne le vendredi jusqu'à 23h. Arrivez tôt pour éviter la foule !
-                  </p>
-                </div>
 
-                <div className="bg-white/10 backdrop-blur-sm p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <MapPin className="w-6 h-6" />
+                  <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <Clock className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-lg">Horaires du Salon</h3>
+                        <p className="text-white/80 text-sm">9h - 19h</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-display text-xl">Parc des Expositions</h3>
-                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      Ouvert tous les jours de <strong>9h à 19h</strong>. 
+                      Nocturne le vendredi jusqu'à 23h. Arrivez tôt pour éviter la foule !
+                    </p>
                   </div>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    <strong>1 Place de la Porte de Versailles</strong><br />
-                    75015 Paris
-                  </p>
+
+                  <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <MapPin className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-lg">Parc des Expositions</h3>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      <strong>1 Place de la Porte de Versailles</strong><br />
+                      75015 Paris
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
