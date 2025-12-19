@@ -1,12 +1,41 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Phone, Mail, Gift, Ticket } from "lucide-react";
+import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Phone, Mail, Gift, Ticket, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import enfoiresLogo from "@/assets/enfoires-logo.png";
 import enfoiresAffiche from "@/assets/enfoires-affiche.jpg";
 
 const Enfoires2026 = () => {
+  // Countdown to January 13, 2026 at 20:00 (concert start)
+  const targetDate = new Date('2026-01-13T20:00:00').getTime();
+  
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        setCountdown({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [targetDate]);
+
   const concertDates = [
     { day: "Mar. 13", month: "Janvier" },
     { day: "Mer. 14", month: "Janvier" },
@@ -68,7 +97,7 @@ const Enfoires2026 = () => {
                     Le spectacle caritatif le plus populaire de France revient pour une édition exceptionnelle !
                   </p>
                   
-                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                     <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
                       <Calendar className="w-5 h-5" />
                       13 - 19 Janvier 2026
@@ -78,13 +107,47 @@ const Enfoires2026 = () => {
                       Accor Arena
                     </div>
                   </div>
+
+                  {/* Countdown */}
+                  <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                    <div className="flex items-center justify-center gap-2 mb-4 text-pink-200">
+                      <Clock className="w-5 h-5" />
+                      <span className="text-sm uppercase tracking-wider font-medium">Compte à rebours</span>
+                    </div>
+                    <div className="grid grid-cols-4 gap-4 text-center">
+                      <div>
+                        <div className="bg-white/20 rounded-xl px-4 py-3">
+                          <span className="font-display text-3xl md:text-4xl text-white">{countdown.days}</span>
+                        </div>
+                        <p className="text-pink-200 text-xs mt-2 uppercase">Jours</p>
+                      </div>
+                      <div>
+                        <div className="bg-white/20 rounded-xl px-4 py-3">
+                          <span className="font-display text-3xl md:text-4xl text-white">{countdown.hours}</span>
+                        </div>
+                        <p className="text-pink-200 text-xs mt-2 uppercase">Heures</p>
+                      </div>
+                      <div>
+                        <div className="bg-white/20 rounded-xl px-4 py-3">
+                          <span className="font-display text-3xl md:text-4xl text-white">{countdown.minutes}</span>
+                        </div>
+                        <p className="text-pink-200 text-xs mt-2 uppercase">Minutes</p>
+                      </div>
+                      <div>
+                        <div className="bg-white/20 rounded-xl px-4 py-3">
+                          <span className="font-display text-3xl md:text-4xl text-white">{countdown.seconds}</span>
+                        </div>
+                        <p className="text-pink-200 text-xs mt-2 uppercase">Secondes</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Logo and poster */}
                 <div className="flex flex-col items-center gap-6">
                   <img 
                     src={enfoiresLogo} 
-                    alt="Logo Les Enfoirés" 
+                    alt="Logo Les Enfoirés"
                     className="w-48 md:w-64 drop-shadow-2xl"
                   />
                   <img 
@@ -303,27 +366,40 @@ const Enfoires2026 = () => {
               <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
                 Réservez votre séjour Enfoiré
               </h2>
-              <p className="text-white/90 text-lg mb-8">
+              <p className="text-white/90 text-lg mb-4">
                 Contactez-nous pour profiter de notre offre spéciale concert
               </p>
+              
+              {/* Contact info */}
+              <div className="flex flex-col items-center gap-2 mb-8 text-white/80">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>178 Bd Vincent Auriol, 75013 Paris</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+33 (0)1 44 24 01 01</span>
+                </div>
+              </div>
+
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <Link to="/contact">
+                <a href="tel:+33144240101">
                   <Button 
                     size="lg" 
                     className="bg-white text-pink-600 hover:bg-pink-100 font-bold"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Nous contacter
+                    +33 (0)1 44 24 01 01
                   </Button>
-                </Link>
-                <a href="mailto:contact@hotel-inn-paris.com">
+                </a>
+                <a href="mailto:hid.paris13@gmail.com">
                   <Button 
                     size="lg" 
                     variant="outline"
                     className="border-2 border-white text-white hover:bg-white/10 font-bold"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    contact@hotel-inn-paris.com
+                    hid.paris13@gmail.com
                   </Button>
                 </a>
               </div>
