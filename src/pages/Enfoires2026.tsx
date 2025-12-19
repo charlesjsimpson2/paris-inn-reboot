@@ -262,31 +262,6 @@ const Enfoires2026 = () => {
           </div>
         </section>
 
-        {/* Video Section - Moved before Hotel Offer */}
-        <section className="py-16 bg-white dark:bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-              <Music className="w-10 h-10 text-pink-600 mx-auto mb-3" />
-              <h2 className="font-display text-3xl text-foreground">
-                Découvrez Les Enfoirés en vidéo
-              </h2>
-            </div>
-            <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl ring-1 ring-pink-100 dark:ring-pink-900/30">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/ZuAnUmO8RfA"
-                title="Les Enfoirés 2025 - Au Pays des Enfoirés"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-        </section>
-
-
         {/* Nos Offres */}
         <section className="py-16 bg-gradient-to-br from-pink-100 via-white to-fuchsia-100 dark:from-pink-950/30 dark:via-card dark:to-fuchsia-950/30">
           <div className="container mx-auto px-4">
@@ -329,6 +304,30 @@ const Enfoires2026 = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="py-16 bg-white dark:bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <Music className="w-10 h-10 text-pink-600 mx-auto mb-3" />
+              <h2 className="font-display text-3xl text-foreground">
+                Découvrez Les Enfoirés en vidéo
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl ring-1 ring-pink-100 dark:ring-pink-900/30">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/ZuAnUmO8RfA"
+                title="Les Enfoirés 2025 - Au Pays des Enfoirés"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
             </div>
           </div>
         </section>
