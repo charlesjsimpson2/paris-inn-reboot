@@ -29,12 +29,6 @@ export const RoomsSection = () => {
       capacity: "2 personnes",
       image: chambreSuperieureBalcon,
     },
-    {
-      name: t('rooms.connecting'),
-      description: t('rooms.connecting.desc'),
-      capacity: "4 personnes",
-      image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
-    },
   ];
 
   const equipment = [
