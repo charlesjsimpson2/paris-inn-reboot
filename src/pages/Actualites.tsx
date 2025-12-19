@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
+import drapeauFrance from "@/assets/drapeau-france.png";
+import drapeauIrlande from "@/assets/drapeau-irlande.png";
 
 // Événements passés
 const pastEvents = [
@@ -116,7 +118,11 @@ const Actualites = () => {
                       <Trophy className="w-4 h-4 text-green-400" />
                       <span className="text-green-400 text-sm font-medium">Rugby</span>
                     </div>
-                    <h3 className="font-display text-xl text-white mb-1">🇫🇷 France vs Irlande 🇮🇪</h3>
+                    <h3 className="font-display text-xl text-white mb-1 flex items-center gap-2">
+                      <img src={drapeauFrance} alt="France" className="w-6 h-4 object-cover rounded-sm" />
+                      France vs Irlande
+                      <img src={drapeauIrlande} alt="Irlande" className="w-6 h-4 object-cover rounded-sm" />
+                    </h3>
                     <p className="text-white/80 text-sm">8 mars 2025 • Stade de France</p>
                   </div>
                 </div>

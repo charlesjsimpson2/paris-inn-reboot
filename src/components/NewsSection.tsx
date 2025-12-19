@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, Music, Heart, Ticket, Trophy, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import drapeauFrance from "@/assets/drapeau-france.png";
+import drapeauIrlande from "@/assets/drapeau-irlande.png";
 const events = [
   {
     id: 1,
@@ -26,7 +27,7 @@ const events = [
   {
     id: 2,
     title: "🏉 Tournoi 6 Nations",
-    subtitle: "🇫🇷 France vs Irlande 🇮🇪",
+    subtitleComponent: true,
     excerpt: "Stade de France • Supporters français & irlandais bienvenus !",
     dateStart: "8 Mars 2025",
     dateEnd: "",
@@ -127,8 +128,16 @@ export const NewsSection = () => {
                 <h3 className="font-display text-xl md:text-2xl text-white font-bold drop-shadow-lg">
                   {currentEvent.title}
                 </h3>
-                <p className="text-white/90 text-sm font-medium">
-                  {currentEvent.subtitle}
+                <p className="text-white/90 text-sm font-medium flex items-center gap-1">
+                  {currentEvent.subtitleComponent ? (
+                    <>
+                      <img src={drapeauFrance} alt="France" className="w-5 h-3.5 object-cover rounded-sm" />
+                      <span>France vs Irlande</span>
+                      <img src={drapeauIrlande} alt="Irlande" className="w-5 h-3.5 object-cover rounded-sm" />
+                    </>
+                  ) : (
+                    currentEvent.subtitle
+                  )}
                 </p>
               </div>
               <div className="hidden md:block w-px h-10 bg-white/40" />

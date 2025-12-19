@@ -5,7 +5,8 @@ import { Calendar, MapPin, Train, Trophy, Users, Play, Clock } from "lucide-reac
 import { Link } from "react-router-dom";
 import rugbyHero from "@/assets/rugby-france-irlande.jpg";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
-
+import drapeauFrance from "@/assets/drapeau-france.png";
+import drapeauIrlande from "@/assets/drapeau-irlande.png";
 const Tournoi6Nations = () => {
   // Résultats des 10 derniers matchs France - Irlande
   const previousMatches = [
@@ -83,11 +84,11 @@ const Tournoi6Nations = () => {
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-3 mb-4">
                   <span className="bg-blue-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
-                    🇫🇷 France
+                    <img src={drapeauFrance} alt="France" className="w-5 h-4 object-cover rounded-sm" /> France
                   </span>
                   <span className="text-white text-xl font-bold">VS</span>
                   <span className="bg-green-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
-                    🇮🇪 Irlande
+                    <img src={drapeauIrlande} alt="Irlande" className="w-5 h-4 object-cover rounded-sm" /> Irlande
                   </span>
                 </div>
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
@@ -124,11 +125,11 @@ const Tournoi6Nations = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center gap-4 mb-6">
-                <span className="text-3xl">🇫🇷</span>
+                <img src={drapeauFrance} alt="France" className="w-8 h-6 object-cover rounded-sm shadow" />
                 <h2 className="font-display text-3xl md:text-4xl text-foreground">
                   Un événement incontournable
                 </h2>
-                <span className="text-3xl">🇮🇪</span>
+                <img src={drapeauIrlande} alt="Irlande" className="w-8 h-6 object-cover rounded-sm shadow" />
               </div>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                 Organisé chaque année, le Tournoi des 6 Nations réunit les six grandes nations européennes du rugby : 
@@ -217,7 +218,7 @@ const Tournoi6Nations = () => {
               {/* France */}
               <div className="bg-blue-600 rounded-lg overflow-hidden">
                 <div className="p-4 flex items-center justify-center gap-3 border-b border-blue-500">
-                  <span className="text-2xl">🇫🇷</span>
+                  <img src={drapeauFrance} alt="France" className="w-7 h-5 object-cover rounded-sm" />
                   <h3 className="font-display text-2xl text-white">France</h3>
                 </div>
                 <div className="p-4">
@@ -235,7 +236,7 @@ const Tournoi6Nations = () => {
               {/* Irlande */}
               <div className="bg-green-600 rounded-lg overflow-hidden">
                 <div className="p-4 flex items-center justify-center gap-3 border-b border-green-500">
-                  <span className="text-2xl">🇮🇪</span>
+                  <img src={drapeauIrlande} alt="Irlande" className="w-7 h-5 object-cover rounded-sm" />
                   <h3 className="font-display text-2xl text-white">Irlande</h3>
                 </div>
                 <div className="p-4">
