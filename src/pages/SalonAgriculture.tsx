@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 // Image Salon Agriculture
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
+import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
+import salonAgricultureEnfantAne from "@/assets/salon-agriculture-enfant-ane.jpg";
 
 // Photos de l'hôtel
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
@@ -117,6 +119,46 @@ const SalonAgriculture = () => {
                   alt="Salon de l'Agriculture - Paris"
                   className="max-w-xs md:max-w-sm shadow-xl object-contain"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Galerie Photos Salon */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">
+                L'ambiance du Salon
+              </h2>
+              <p className="text-muted-foreground">
+                Des moments uniques à partager en famille
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <div className="group relative aspect-[16/9] overflow-hidden rounded-xl shadow-xl">
+                <img
+                  src={salonAgricultureVaches}
+                  alt="Vaches dans la salle de traite au Salon de l'Agriculture"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="font-display text-lg">La salle de traite</p>
+                  <p className="text-white/80 text-sm">Découvrez le quotidien des éleveurs</p>
+                </div>
+              </div>
+              <div className="group relative aspect-[16/9] overflow-hidden rounded-xl shadow-xl">
+                <img
+                  src={salonAgricultureEnfantAne}
+                  alt="Enfant caressant un âne au Salon de l'Agriculture"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="font-display text-lg">Rencontres animales</p>
+                  <p className="text-white/80 text-sm">Un moment magique pour les enfants</p>
+                </div>
               </div>
             </div>
           </div>
