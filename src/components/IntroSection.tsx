@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Star, BedDouble, Car, Wine } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import vueBalcon from "@/assets/vue-balcon-paris.jpg";
+import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 
 export const IntroSection = () => {
   const { t } = useLanguage();
@@ -60,8 +60,8 @@ export const IntroSection = () => {
           <div className="relative group">
             <div className="overflow-hidden shadow-xl">
               <img
-                src={vueBalcon}
-                alt="Vue depuis le balcon de l'hôtel sur Paris"
+                src={hotelMetroFacade}
+                alt="Façade de l'Hotel Inn Paris avec le métro"
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
