@@ -38,48 +38,6 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top bar with contact info - visible on homepage when not scrolled */}
-      <div
-        className={`transition-all duration-500 ${
-          isScrolled || isHeroPage ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
-        }`}
-      >
-        <div className="bg-charcoal/80 backdrop-blur-sm border-b border-border/30">
-          <div className="container mx-auto px-4 py-2">
-            <div className="flex items-center justify-between">
-              {/* Left: Address */}
-              <div className="hidden md:flex items-center gap-2 text-muted-foreground">
-                <MapPin className="w-4 h-4 text-burgundy" />
-                <span className="text-sm">178 Bd Vincent Auriol, 75013 Paris</span>
-              </div>
-              
-              {/* Right: Contact info + Language Switcher */}
-              <div className="flex items-center gap-4 ml-auto">
-                <a
-                  href="tel:+33144240101"
-                  className="flex items-center gap-2 text-foreground hover:text-burgundy transition-colors"
-                >
-                  <div className="w-8 h-8 bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-burgundy" />
-                  </div>
-                  <span className="text-sm font-medium hidden sm:inline">+33 (0)1 44 24 01 01</span>
-                </a>
-                <a
-                  href="mailto:hid.paris13@gmail.com"
-                  className="flex items-center gap-2 text-foreground hover:text-burgundy transition-colors"
-                >
-                  <div className="w-8 h-8 bg-burgundy/15 border border-burgundy/30 flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-burgundy" />
-                  </div>
-                  <span className="text-sm font-medium hidden sm:inline">hid.paris13@gmail.com</span>
-                </a>
-                <LanguageSwitcher />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main navigation */}
       <div
         className={`transition-all duration-500 ${
@@ -115,12 +73,10 @@ export const Header = () => {
 
             {/* Right side: Language + Réserver Button */}
             <div className="flex items-center gap-2 md:gap-4 z-10">
-              {/* Language Switcher - visible when top bar is hidden */}
-              {(isScrolled || isHeroPage) && (
-                <div className="text-foreground relative z-50">
-                  <LanguageSwitcher />
-                </div>
-              )}
+              {/* Language Switcher */}
+              <div className={`relative z-50 ${isScrolled || isHeroPage ? 'text-foreground' : 'text-white'}`}>
+                <LanguageSwitcher />
+              </div>
               
               <Button 
                 variant="gold" 
