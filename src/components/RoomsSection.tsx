@@ -37,8 +37,8 @@ export const RoomsSection = () => {
     },
   ];
 
-  // On desktop, we show 2 cards, so max index should be rooms.length - 2
-  const maxIndex = rooms.length > 2 ? rooms.length - 2 : 0;
+  // On desktop, we show 2 cards at a time, so max index is ceil(length/2) - 1
+  const maxIndex = Math.ceil(rooms.length / 2) - 1;
 
   const equipment = [
     { icon: Bath, label: t('rooms.bathroom') },
