@@ -40,8 +40,8 @@ const SalonAgriculture = () => {
         {/* Hero Section */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
           <img
-            src={salonAgricultureImage}
-            alt="Salon de l'Agriculture - Paris"
+            src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&h=1080&fit=crop"
+            alt="Salon de l'Agriculture - Vaches dans un pré"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-amber-900/70" />
@@ -77,26 +77,35 @@ const SalonAgriculture = () => {
         {/* Présentation */}
         <section className="py-16 bg-gradient-to-br from-green-50 via-white to-amber-50 dark:from-green-950/20 dark:via-card dark:to-amber-950/20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Leaf className="w-8 h-8 text-green-600" />
-                <h2 className="font-display text-3xl md:text-4xl text-foreground">
-                  Un événement incontournable
-                </h2>
-                <TreeDeciduous className="w-8 h-8 text-green-600" />
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <Leaf className="w-8 h-8 text-green-600" />
+                  <h2 className="font-display text-3xl md:text-4xl text-foreground">
+                    Un événement incontournable
+                  </h2>
+                  <TreeDeciduous className="w-8 h-8 text-green-600" />
+                </div>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  Le <strong className="text-green-700 dark:text-green-400">Salon International de l'Agriculture</strong> est 
+                  un événement parisien bien connu de tous les Français. Chaque année, cette grande foire agricole 
+                  réunit plus de <strong className="text-foreground">600 000 visiteurs</strong> au Parc des Expositions 
+                  de la Porte de Versailles.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  L'objectif du célèbre Salon est de <strong className="text-foreground">valoriser les produits agricoles</strong> français 
+                  et de faire découvrir au grand public des <strong className="text-foreground">produits locaux</strong> et 
+                  des <strong className="text-foreground">animaux d'élevage</strong>. Une immersion unique dans le monde agricole 
+                  sous toutes ses facettes !
+                </p>
               </div>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Le <strong className="text-green-700 dark:text-green-400">Salon International de l'Agriculture</strong> est 
-                un événement parisien bien connu de tous les Français. Chaque année, cette grande foire agricole 
-                réunit plus de <strong className="text-foreground">600 000 visiteurs</strong> au Parc des Expositions 
-                de la Porte de Versailles.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                L'objectif du célèbre Salon est de <strong className="text-foreground">valoriser les produits agricoles</strong> français 
-                et de faire découvrir au grand public des <strong className="text-foreground">produits locaux</strong> et 
-                des <strong className="text-foreground">animaux d'élevage</strong>. Une immersion unique dans le monde agricole 
-                sous toutes ses facettes !
-              </p>
+              <div className="relative">
+                <img
+                  src={salonAgricultureImage}
+                  alt="Salon de l'Agriculture - Paris"
+                  className="w-full rounded-2xl shadow-xl"
+                />
+              </div>
             </div>
           </div>
         </section>
