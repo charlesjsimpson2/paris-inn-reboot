@@ -302,7 +302,7 @@ const Enfoires2026 = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-3 gap-6 mb-10">
                 <div className="bg-gradient-to-br from-pink-500/10 to-fuchsia-500/10 rounded-xl p-6 border border-pink-200 dark:border-pink-800/30 text-center">
                   <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Heart className="w-7 h-7 text-pink-600" fill="currentColor" />
@@ -326,6 +326,18 @@ const Enfoires2026 = () => {
                   <h3 className="font-display text-xl text-foreground mb-2">Late check-out</h3>
                   <p className="text-muted-foreground text-sm">Départ tardif offert le lendemain du concert</p>
                 </div>
+              </div>
+
+              <div className="text-center">
+                <Link to="/reservation-seminaire">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white font-bold px-10 py-6 text-lg shadow-xl hover:shadow-pink-500/30 hover:scale-105 transition-all duration-300"
+                  >
+                    <Heart className="w-5 h-5 mr-3" fill="currentColor" />
+                    Réservez votre séjour Enfoiré
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -355,30 +367,6 @@ const Enfoires2026 = () => {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-20 bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,white_2px,transparent_2px)] bg-[length:40px_40px]" />
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <Heart className="w-12 h-12 text-pink-300 mx-auto mb-4" fill="currentColor" />
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-8">
-                Réservez votre séjour Enfoiré
-              </h2>
-              
-              <Link to="/contact">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-pink-600 hover:bg-pink-100 font-bold px-12 py-6 text-lg shadow-2xl hover:shadow-pink-500/30 hover:scale-105 transition-all duration-300"
-                >
-                  <Heart className="w-5 h-5 mr-3" fill="currentColor" />
-                  Nous contacter
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
