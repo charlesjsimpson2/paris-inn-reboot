@@ -286,6 +286,90 @@ const Enfoires2026 = () => {
           </div>
         </section>
 
+        {/* Lottery Section - Win a T-shirt */}
+        <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#ec4899_1px,transparent_1px)] bg-[length:30px_30px]" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-2xl mx-auto">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-fuchsia-600 rounded-full mb-4 shadow-lg shadow-pink-500/30">
+                  <Gift className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">
+                  🎁 Tirage au sort exclusif
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Tentez de gagner un <strong className="text-pink-600">t-shirt officiel Les Enfoirés</strong> !
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-pink-50 to-fuchsia-50 dark:from-pink-950/30 dark:to-fuchsia-950/30 rounded-2xl p-8 border border-pink-100 dark:border-pink-900/30">
+                <div className="flex items-center justify-center gap-2 mb-6 text-pink-600 dark:text-pink-400">
+                  <Sparkles className="w-5 h-5" />
+                  <span className="font-medium">Réservé aux clients de l'hôtel</span>
+                  <Sparkles className="w-5 h-5" />
+                </div>
+
+                <form className="space-y-4">
+                  <div>
+                    <label htmlFor="lottery-name" className="block text-sm font-medium text-foreground mb-1">
+                      Votre nom complet
+                    </label>
+                    <input
+                      type="text"
+                      id="lottery-name"
+                      placeholder="Jean Dupont"
+                      className="w-full px-4 py-3 rounded-lg border border-pink-200 dark:border-pink-800 bg-white dark:bg-charcoal focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="lottery-email" className="block text-sm font-medium text-foreground mb-1">
+                      Votre email
+                    </label>
+                    <input
+                      type="email"
+                      id="lottery-email"
+                      placeholder="jean.dupont@email.com"
+                      className="w-full px-4 py-3 rounded-lg border border-pink-200 dark:border-pink-800 bg-white dark:bg-charcoal focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="lottery-booking" className="block text-sm font-medium text-foreground mb-1">
+                      Numéro de réservation
+                    </label>
+                    <input
+                      type="text"
+                      id="lottery-booking"
+                      placeholder="Ex: HIP-2026-XXXXX"
+                      className="w-full px-4 py-3 rounded-lg border border-pink-200 dark:border-pink-800 bg-white dark:bg-charcoal focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+
+                  <Button 
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-pink-600 to-fuchsia-600 hover:from-pink-700 hover:to-fuchsia-700 text-white font-bold py-4 text-lg shadow-lg hover:shadow-pink-500/30 transition-all"
+                  >
+                    <Gift className="w-5 h-5 mr-2" />
+                    Participer au tirage
+                  </Button>
+                </form>
+
+                <p className="text-center text-xs text-muted-foreground mt-4">
+                  Le tirage au sort aura lieu le 20 janvier 2026. Les gagnants seront contactés par email.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Hotel Offer Section - Final CTA */}
         <section className="py-16 bg-gradient-to-br from-pink-600 via-fuchsia-600 to-purple-700 text-white">
           <div className="container mx-auto px-4">
