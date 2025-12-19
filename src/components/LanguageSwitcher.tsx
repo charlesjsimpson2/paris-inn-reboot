@@ -2,6 +2,21 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage, languages, Language } from '@/contexts/LanguageContext';
 
+// Import flag images
+import flagFr from '@/assets/flags/flag-fr.png';
+import flagEn from '@/assets/flags/flag-en.png';
+import flagEs from '@/assets/flags/flag-es.png';
+import flagIt from '@/assets/flags/flag-it.png';
+import flagPt from '@/assets/flags/flag-pt.png';
+
+const flagImages: Record<Language, string> = {
+  fr: flagFr,
+  en: flagEn,
+  es: flagEs,
+  it: flagIt,
+  pt: flagPt,
+};
+
 export const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
@@ -32,22 +47,30 @@ export const LanguageSwitcher = () => {
         className="flex items-center gap-1.5 px-2 py-1.5 text-sm bg-card/80 border border-border rounded hover:bg-card transition-colors"
         aria-label="Select language"
       >
-        <span className="text-base">{currentLanguage?.flag}</span>
+        <img 
+          src={flagImages[language]} 
+          alt={currentLanguage?.name} 
+          className="w-5 h-4 object-cover rounded-sm shadow-sm"
+        />
         <span className="text-xs font-medium">{currentLanguage?.code.toUpperCase()}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-3 w-36 bg-card border border-border rounded-md shadow-lg z-[80] overflow-hidden">
+        <div className="absolute top-full right-0 mt-3 w-40 bg-card border border-border rounded-md shadow-lg z-[80] overflow-hidden">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleSelect(lang.code)}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-sm text-left hover:bg-muted transition-colors ${
+              className={`w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left hover:bg-muted transition-colors ${
                 language === lang.code ? 'bg-muted text-primary' : 'text-foreground'
               }`}
             >
-              <span className="text-base">{lang.flag}</span>
+              <img 
+                src={flagImages[lang.code]} 
+                alt={lang.name} 
+                className="w-6 h-4 object-cover rounded-sm shadow-sm"
+              />
               <span className="text-xs">{lang.name}</span>
             </button>
           ))}
