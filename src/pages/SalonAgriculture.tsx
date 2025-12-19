@@ -100,7 +100,7 @@ const SalonAgriculture = () => {
                 <img
                   src={salonAgricultureImage}
                   alt="Salon de l'Agriculture - Paris"
-                  className="w-full rounded-2xl shadow-xl"
+                  className="w-full shadow-xl"
                 />
               </div>
             </div>
@@ -120,8 +120,8 @@ const SalonAgriculture = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="grid md:grid-cols-3 gap-6 items-stretch">
+                <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
                   <img
                     src={hotelMetroFacade}
                     alt="Façade de l'hôtel près du métro"
@@ -129,7 +129,7 @@ const SalonAgriculture = () => {
                   />
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <div className="bg-white/10 backdrop-blur-sm p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                         <Train className="w-6 h-6" />
@@ -145,7 +145,7 @@ const SalonAgriculture = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <div className="bg-white/10 backdrop-blur-sm p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                         <Clock className="w-6 h-6" />
@@ -161,15 +161,19 @@ const SalonAgriculture = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-8 text-center">
-                <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                  <MapPin className="w-6 h-6" />
-                  <div className="text-left">
-                    <p className="font-bold">Parc des Expositions</p>
-                    <p className="text-sm text-white/80">1 Place de la Porte de Versailles, 75015 Paris</p>
+                <div className="bg-white/10 backdrop-blur-sm p-6 flex flex-col justify-center">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-xl">Parc des Expositions</h3>
+                    </div>
                   </div>
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    <strong>1 Place de la Porte de Versailles</strong><br />
+                    75015 Paris
+                  </p>
                 </div>
               </div>
             </div>
@@ -189,7 +193,7 @@ const SalonAgriculture = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="bg-card rounded-xl overflow-hidden border border-border">
+              <div className="bg-card overflow-hidden border border-border">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={petitDejeuner}
@@ -208,7 +212,7 @@ const SalonAgriculture = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-xl overflow-hidden border border-border">
+              <div className="bg-card overflow-hidden border border-border">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={hotelMetroFacade}
@@ -227,7 +231,7 @@ const SalonAgriculture = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-xl overflow-hidden border border-border">
+              <div className="bg-card overflow-hidden border border-border">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={chambreDouble}
@@ -264,7 +268,7 @@ const SalonAgriculture = () => {
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {otherSalons.map((salon, index) => (
-                <div key={index} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                <div key={index} className="group relative aspect-[4/3] overflow-hidden">
                   <img
                     src={salon.image}
                     alt={salon.name}
