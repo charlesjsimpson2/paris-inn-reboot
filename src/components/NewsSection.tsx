@@ -69,7 +69,7 @@ export const NewsSection = () => {
           <p className="text-muted-foreground text-lg">{t('news.subtitle')}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-0">
+        <div className="grid md:grid-cols-3 gap-4">
           {events.map((event) => {
             const Icon = event.icon;
             return (
