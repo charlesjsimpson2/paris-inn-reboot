@@ -19,6 +19,7 @@ const PetitDejeuner = lazy(() => import("./pages/PetitDejeuner"));
 const ReservationSeminaire = lazy(() => import("./pages/ReservationSeminaire"));
 const Enfoires2026 = lazy(() => import("./pages/Enfoires2026"));
 const Tournoi6Nations = lazy(() => import("./pages/Tournoi6Nations"));
+const SalonAgriculture = lazy(() => import("./pages/SalonAgriculture"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/actualites" element={<Actualites />} />
               <Route path="/enfoires-2026" element={<Enfoires2026 />} />
               <Route path="/tournoi-6-nations" element={<Tournoi6Nations />} />
+              <Route path="/salon-agriculture" element={<SalonAgriculture />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/localisation" element={<Localisation />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
