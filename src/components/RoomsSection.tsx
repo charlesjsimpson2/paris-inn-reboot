@@ -29,7 +29,16 @@ export const RoomsSection = () => {
       capacity: "2 personnes",
       image: chambreSuperieureBalcon,
     },
+    {
+      name: t('rooms.connecting'),
+      description: t('rooms.connecting.desc'),
+      capacity: "4 personnes",
+      image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
+    },
   ];
+
+  // On desktop, we show 2 cards, so max index should be rooms.length - 2
+  const maxIndex = rooms.length > 2 ? rooms.length - 2 : 0;
 
   const equipment = [
     { icon: Bath, label: t('rooms.bathroom') },
@@ -41,19 +50,19 @@ export const RoomsSection = () => {
   ];
 
   const goToPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? rooms.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev === rooms.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
   };
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev === rooms.length - 1 ? 0 : prev + 1));
+      setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
     }, 7000);
     return () => clearInterval(timer);
-  }, [rooms.length]);
+  }, [maxIndex]);
 
   return (
     <section id="chambres" className="py-20 bg-charcoal">
@@ -150,7 +159,7 @@ export const RoomsSection = () => {
 
           {/* Progress indicator */}
           <div className="flex justify-center gap-2 mt-6">
-            {rooms.map((_, index) => (
+            {Array.from({ length: maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
@@ -159,7 +168,7 @@ export const RoomsSection = () => {
                     ? "bg-primary w-8" 
                     : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-4"
                 }`}
-                aria-label={`Voir chambre ${index + 1}`}
+                aria-label={`Voir chambres ${index + 1}`}
               />
             ))}
           </div>
