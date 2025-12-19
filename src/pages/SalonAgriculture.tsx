@@ -8,13 +8,8 @@ import { Link } from "react-router-dom";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 
 // Photos de l'hôtel
-import hotelReception from "@/assets/hotel-reception.jpg";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
-import chambre1 from "@/assets/gallery/chambre-1.jpg";
-import chambre2 from "@/assets/gallery/chambre-2.jpg";
-import salleDeBain from "@/assets/gallery/salle-de-bain.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
-import vueBalcon from "@/assets/vue-balcon-paris.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 const SalonAgriculture = () => {
   const otherSalons = [
@@ -254,88 +249,6 @@ const SalonAgriculture = () => {
           </div>
         </section>
 
-        {/* Galerie de l'hôtel */}
-        <section className="py-16 bg-card">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <Hotel className="w-6 h-6 text-primary" />
-              </div>
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                Découvrez notre hôtel
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Un cadre confortable et élégant pour vous ressourcer après vos journées au Salon
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl col-span-2 md:col-span-1 md:row-span-2">
-                <img
-                  src={hotelReception}
-                  alt="Réception de l'hôtel"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-white font-medium">Notre réception</p>
-                </div>
-              </div>
-
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl">
-                <img
-                  src={chambre1}
-                  alt="Chambre confortable"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl">
-                <img
-                  src={chambre2}
-                  alt="Chambre double"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl">
-                <img
-                  src={salleDeBain}
-                  alt="Salle de bain moderne"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl">
-                <img
-                  src={petitDejeuner}
-                  alt="Petit-déjeuner buffet"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl col-span-2 md:col-span-1">
-                <img
-                  src={vueBalcon}
-                  alt="Vue depuis le balcon"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-white font-medium">Vue sur Paris</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Link to="/nos-chambres">
-                <Button variant="outline" size="lg" className="font-medium">
-                  Voir toutes nos chambres
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Autres salons */}
         <section className="py-16 bg-background">
