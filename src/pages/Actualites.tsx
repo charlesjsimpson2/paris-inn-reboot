@@ -1,9 +1,11 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowRight, Instagram, Linkedin, Music, Heart, MapPin, Ticket, Percent, Car, Play } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Instagram, Linkedin, Music, Heart, MapPin, Ticket, Percent, Car, Play, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
+import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 
 // Featured Les Enfoirés event
 const enfoires = {
@@ -75,6 +77,60 @@ const Actualites = () => {
               <p className="text-muted-foreground text-lg">
                 {t('actualites.hero.description')}
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Events Shortcuts */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="font-display text-2xl md:text-3xl text-foreground mb-8 text-center">
+              Nos événements à ne pas manquer
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Enfoirés 2026 */}
+              <Link to="/enfoires-2026" className="group">
+                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <div className="aspect-[16/9]">
+                    <img 
+                      src={enfoiresAffiche} 
+                      alt="Les Enfoirés 2026" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Music className="w-4 h-4 text-pink-400" />
+                      <span className="text-pink-400 text-sm font-medium">Concert</span>
+                    </div>
+                    <h3 className="font-display text-xl text-white mb-1">Les Enfoirés 2026</h3>
+                    <p className="text-white/80 text-sm">22 janvier - 1er février • Accor Arena</p>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Tournoi 6 Nations */}
+              <Link to="/tournoi-6-nations" className="group">
+                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <div className="aspect-[16/9]">
+                    <img 
+                      src={rugbyImage} 
+                      alt="Tournoi 6 Nations France - Irlande" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Trophy className="w-4 h-4 text-green-400" />
+                      <span className="text-green-400 text-sm font-medium">Rugby</span>
+                    </div>
+                    <h3 className="font-display text-xl text-white mb-1">France vs Irlande</h3>
+                    <p className="text-white/80 text-sm">8 mars 2025 • Stade de France</p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
