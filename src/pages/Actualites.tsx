@@ -35,80 +35,123 @@ const Actualites = () => {
         </section>
 
         {/* Events Shortcuts */}
-        <section className="py-12 bg-background">
+        <section className="py-16 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="font-display text-2xl md:text-3xl text-foreground mb-8 text-center">
-              Nos événements à ne pas manquer
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+                À venir
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground">
+                Nos événements à ne pas manquer
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Enfoirés 2026 */}
               <Link to="/enfoires-2026" className="group">
-                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className="aspect-[16/9]">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img 
                       src={enfoiresAffiche} 
                       alt="Les Enfoirés 2026" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Music className="w-4 h-4 text-pink-400" />
-                      <span className="text-pink-400 text-sm font-medium">Concert</span>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-xs font-medium">
+                        <Music className="w-3 h-3" />
+                        Concert solidaire
+                      </span>
                     </div>
-                    <h3 className="font-display text-xl text-white mb-1">Les Enfoirés 2026</h3>
-                    <p className="text-white/80 text-sm">22 janvier - 1er février • Accor Arena</p>
+                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">
+                      Les Enfoirés 2026
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      La Ballade des Enfoirés - Le rendez-vous musical caritatif de l'année
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        13 - 19 janvier 2026
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Accor Arena Paris</p>
                   </div>
-                </div>
+                </article>
               </Link>
 
               {/* Tournoi 6 Nations */}
               <Link to="/tournoi-6-nations" className="group">
-                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className="aspect-[16/9]">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
+                  <div className="aspect-[4/3] overflow-hidden relative">
                     <img 
                       src={rugbyImage} 
                       alt="Tournoi 6 Nations France - Irlande" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Trophy className="w-4 h-4 text-green-400" />
-                      <span className="text-green-400 text-sm font-medium">Rugby</span>
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center gap-3 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-2 px-4">
+                      <img src={drapeauFrance} alt="France" className="w-8 h-5 object-cover rounded shadow-sm" />
+                      <span className="font-display text-foreground text-sm">VS</span>
+                      <img src={drapeauIrlande} alt="Irlande" className="w-8 h-5 object-cover rounded shadow-sm" />
                     </div>
-                    <h3 className="font-display text-xl text-white mb-1 flex items-center gap-2">
-                      <img src={drapeauFrance} alt="France" className="w-6 h-4 object-cover rounded-sm" />
-                      France vs Irlande
-                      <img src={drapeauIrlande} alt="Irlande" className="w-6 h-4 object-cover rounded-sm" />
-                    </h3>
-                    <p className="text-white/80 text-sm">8 mars 2025 • Stade de France</p>
                   </div>
-                </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-medium">
+                        <Trophy className="w-3 h-3" />
+                        Tournoi 6 Nations
+                      </span>
+                    </div>
+                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">
+                      France vs Irlande
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Le choc au sommet du Tournoi - Vivez l'intensité du rugby international
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        8 mars 2025
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Stade de France</p>
+                  </div>
+                </article>
               </Link>
 
               {/* Salon de l'Agriculture */}
               <Link to="/salon-agriculture" className="group">
-                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className="aspect-[16/9]">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
+                  <div className="aspect-[4/3] overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=450&fit=crop" 
+                      src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=600&fit=crop" 
                       alt="Salon de l'Agriculture" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Leaf className="w-4 h-4 text-green-400" />
-                      <span className="text-green-400 text-sm font-medium">Salon</span>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-xs font-medium">
+                        <Leaf className="w-3 h-3" />
+                        Salon
+                      </span>
                     </div>
-                    <h3 className="font-display text-xl text-white mb-1">🐄 Salon de l'Agriculture</h3>
-                    <p className="text-white/80 text-sm">22 fév - 2 mars 2025 • Porte de Versailles</p>
+                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">
+                      Salon de l'Agriculture
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      La plus grande ferme de France - 600 000 visiteurs chaque année
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        22 fév - 2 mars 2025
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Porte de Versailles</p>
                   </div>
-                </div>
+                </article>
               </Link>
             </div>
           </div>
