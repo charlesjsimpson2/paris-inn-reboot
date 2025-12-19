@@ -43,17 +43,7 @@ export const NewsSection = () => {
   return (
     <section className="py-12 bg-gradient-to-br from-charcoal via-charcoal to-charcoal/95">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-            <Ticket className="w-4 h-4" />
-            <span className="font-medium text-sm uppercase tracking-wider">Événements à venir</span>
-          </div>
-          <h2 className="font-display text-2xl md:text-3xl text-white">
-            Réservez pour les grands événements parisiens
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
           {events.map((event) => {
             const Icon = event.icon;
             return (
@@ -116,6 +106,16 @@ export const NewsSection = () => {
               </Link>
             );
           })}
+        </div>
+
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+            <Ticket className="w-4 h-4" />
+            <span className="font-medium text-sm uppercase tracking-wider">Événements à venir</span>
+          </div>
+          <h2 className="font-display text-2xl md:text-3xl text-white">
+            Réservez pour les grands événements parisiens
+          </h2>
         </div>
       </div>
     </section>
