@@ -76,12 +76,21 @@ const Tournoi6Nations = () => {
             alt="Match France - Irlande au Stade de France"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-black/50 to-green-900/70" />
           
           <div className="absolute inset-0 flex items-end">
             <div className="container mx-auto px-4 pb-16">
               <div className="max-w-3xl">
-                <div className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full mb-4">
+                <div className="inline-flex items-center gap-3 mb-4">
+                  <span className="bg-blue-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
+                    🇫🇷 France
+                  </span>
+                  <span className="text-white text-xl font-bold">VS</span>
+                  <span className="bg-green-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
+                    🇮🇪 Irlande
+                  </span>
+                </div>
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
                   <Trophy className="w-4 h-4" />
                   <span className="font-medium text-sm">Tournoi des 6 Nations 2025</span>
                 </div>
@@ -111,28 +120,37 @@ const Tournoi6Nations = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-16 bg-card">
+        <section className="py-16 bg-gradient-to-r from-blue-50 via-white to-green-50 dark:from-blue-950/20 dark:via-card dark:to-green-950/20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                Un événement incontournable pour les passionnés de rugby
-              </h2>
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <span className="text-3xl">🇫🇷</span>
+                <h2 className="font-display text-3xl md:text-4xl text-foreground">
+                  Un événement incontournable
+                </h2>
+                <span className="text-3xl">🇮🇪</span>
+              </div>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                 Organisé chaque année, le Tournoi des 6 Nations réunit les six grandes nations européennes du rugby : 
-                la <strong className="text-foreground">France</strong>, l'<strong className="text-foreground">Angleterre</strong>, 
-                l'<strong className="text-foreground">Écosse</strong>, l'<strong className="text-foreground">Irlande</strong>, 
+                la <strong className="text-blue-600 dark:text-blue-400">France</strong>, l'<strong className="text-foreground">Angleterre</strong>, 
+                l'<strong className="text-foreground">Écosse</strong>, l'<strong className="text-green-600 dark:text-green-400">Irlande</strong>, 
                 le <strong className="text-foreground">Pays de Galles</strong> et l'<strong className="text-foreground">Italie</strong>.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Cette compétition prestigieuse est l'occasion de vivre des moments d'intense émotion 
                 et de découvrir le meilleur du rugby européen dans une ambiance électrique.
               </p>
+              <div className="mt-8 p-6 bg-white dark:bg-card rounded-xl shadow-lg border border-border">
+                <p className="text-foreground font-medium text-lg">
+                  🏨 Supporters <span className="text-blue-600 dark:text-blue-400">français</span> et <span className="text-green-600 dark:text-green-400">irlandais</span>, notre hôtel vous accueille avec le même enthousiasme !
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Accès facile au stade */}
-        <section className="py-16 bg-gradient-to-r from-green-700 to-green-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-600 via-blue-700 to-green-600 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-center">
