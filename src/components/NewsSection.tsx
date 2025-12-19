@@ -76,7 +76,7 @@ export const NewsSection = () => {
             </div>
             <div className="grid md:grid-cols-2 items-center">
               <div className="relative aspect-[4/3] md:aspect-auto md:h-80 overflow-hidden">
-                <img src={events[0].image} alt={events[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={events[0].image} alt={events[0].title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-pink-600/80 hidden md:block" />
               </div>
               <div className="relative p-8 md:p-10">
@@ -105,7 +105,7 @@ export const NewsSection = () => {
                   </div>
                   <div className="relative flex items-stretch">
                     <div className="relative w-1/3 min-h-[180px] overflow-hidden">
-                      <img src={event.image} alt={event.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <img src={event.image} alt={event.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                       <div className={`absolute inset-0 bg-gradient-to-r from-transparent to-current opacity-60 ${event.id === 2 ? 'to-blue-600' : 'to-green-600'}`} />
                     </div>
                     <div className="flex-1 p-6 flex flex-col justify-center">
@@ -113,9 +113,9 @@ export const NewsSection = () => {
                         <Icon className="w-3.5 h-3.5" />{event.category}
                       </div>
                       <h3 className="font-display text-xl md:text-2xl text-white mb-1 group-hover:translate-x-1 transition-transform flex items-center gap-2 flex-wrap">
-                        {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" className="w-6 h-4 object-cover rounded shadow" />}
+                        {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-6 h-4 object-cover rounded shadow" />}
                         {event.title}
-                        {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" className="w-6 h-4 object-cover rounded shadow" />}
+                        {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-6 h-4 object-cover rounded shadow" />}
                       </h3>
                       <p className="text-white/70 text-sm mb-3">{event.subtitleWithFlags ? t('rugby.tournament') : event.subtitle}</p>
                       <div className="flex items-center justify-between">

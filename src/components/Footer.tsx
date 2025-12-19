@@ -15,6 +15,7 @@ export const Footer = () => {
             <img 
               src={logoHotel} 
               alt="Hôtel Inn Design Paris" 
+              loading="lazy"
               className="h-12 w-auto mb-4"
             />
             <p className="text-muted-foreground text-sm leading-relaxed">
