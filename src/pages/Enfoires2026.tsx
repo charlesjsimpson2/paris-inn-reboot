@@ -270,25 +270,19 @@ const Enfoires2026 = () => {
                 <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">
                   Nos offres exclusives
                 </h2>
-                <p className="text-muted-foreground">Profitez de nos avantages pendant votre séjour</p>
+                <p className="text-muted-foreground">Offres réservées aux clients séjournant pendant Les Enfoirés</p>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-pink-200 dark:border-pink-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center">
-                      <Car className="w-8 h-8 text-pink-600" />
-                    </div>
-                    <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">PROMO</span>
+                  <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Car className="w-8 h-8 text-pink-600" />
                   </div>
                   <h3 className="font-display text-2xl text-foreground mb-2">Parking privé</h3>
                   <p className="text-muted-foreground mb-4">
-                    Tarif préférentiel pour nos clients : stationnez en toute sécurité
+                    Stationnez en toute sécurité dans notre parking privé pendant votre séjour
                   </p>
-                  <div className="flex items-center gap-2">
-                    <span className="text-muted-foreground line-through text-lg">25€</span>
-                    <div className="inline-block bg-pink-600 text-white font-bold text-xl px-4 py-2 rounded-full">
-                      15€ / jour
-                    </div>
+                  <div className="inline-block bg-pink-600 text-white font-bold text-xl px-4 py-2 rounded-full">
+                    Seulement 15€ / jour
                   </div>
                 </div>
                 <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-fuchsia-200 dark:border-fuchsia-800/50 hover:scale-105 transition-transform duration-300">
@@ -304,6 +298,9 @@ const Enfoires2026 = () => {
                   </div>
                 </div>
               </div>
+              <p className="text-center text-sm text-muted-foreground mt-6 italic">
+                * Ces offres sont valables uniquement lors de votre séjour pendant l'événement
+              </p>
             </div>
           </div>
         </section>
