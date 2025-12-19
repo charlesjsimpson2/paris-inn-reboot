@@ -57,7 +57,7 @@ export const NewsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Attention-grabbing header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/20 to-gold/20 border border-primary/30 text-primary px-5 py-2.5 rounded-full mb-4 animate-pulse">
+          <div className="inline-flex items-center gap-2 bg-burgundy/10 border border-burgundy/30 text-burgundy px-5 py-2.5 rounded-full mb-4 animate-pulse">
             <Sparkles className="w-4 h-4" />
             <span className="font-bold text-sm uppercase tracking-wider">Ne manquez pas !</span>
             <Sparkles className="w-4 h-4" />
@@ -65,7 +65,7 @@ export const NewsSection = () => {
           <h2 className="font-display text-3xl md:text-5xl text-burgundy mb-2">
             Événements <span className="text-primary">à venir</span>
           </h2>
-          <p className="text-burgundy/80 text-lg">Réservez votre séjour pour les grands rendez-vous parisiens</p>
+          <p className="text-muted-foreground text-lg">Réservez votre séjour pour les grands rendez-vous parisiens</p>
         </div>
 
         {/* Featured Event - Full Width */}
