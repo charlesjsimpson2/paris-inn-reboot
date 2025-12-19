@@ -1,6 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight, Music, Heart, Ticket, Trophy, Leaf } from "lucide-react";
+import { Calendar, ArrowRight, Music, Trophy, Leaf, Ticket } from "lucide-react";
 import { Link } from "react-router-dom";
+import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
+import rugbyImage from "@/assets/rugby-france-irlande.jpg";
+import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -8,114 +10,130 @@ const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
 const events = [
   {
     id: 1,
-    title: "🎤 Les Enfoirés 2026",
+    title: "Les Enfoirés 2026",
     subtitle: "La Ballade des Enfoirés",
     dateStart: "13 - 19 Janvier 2026",
-    category: "Concert",
+    category: "Concert solidaire",
     link: "/enfoires-2026",
-    gradient: "from-pink-600 to-fuchsia-600",
+    gradient: "from-pink-600 via-fuchsia-500 to-purple-600",
+    accentColor: "pink",
     icon: Music,
+    image: enfoiresAffiche,
   },
   {
     id: 2,
-    title: "🏉 Tournoi 6 Nations",
+    title: "Tournoi 6 Nations",
     subtitle: "France vs Irlande",
     subtitleWithFlags: true,
     dateStart: "8 Mars 2025",
     category: "Rugby",
     link: "/tournoi-6-nations",
-    gradient: "from-blue-600 to-green-600",
+    gradient: "from-blue-600 via-indigo-500 to-blue-700",
+    accentColor: "blue",
     icon: Trophy,
+    image: rugbyImage,
   },
   {
     id: 3,
-    title: "🐄 Salon de l'Agriculture",
-    subtitle: "Porte de Versailles",
+    title: "Salon de l'Agriculture",
+    subtitle: "La plus grande ferme de France",
     dateStart: "22 Fév - 2 Mars 2025",
     category: "Salon",
     link: "/salon-agriculture",
-    gradient: "from-green-600 to-amber-600",
+    gradient: "from-green-600 via-emerald-500 to-teal-600",
+    accentColor: "green",
     icon: Leaf,
+    image: salonAgricultureHero,
   },
 ];
 
 export const NewsSection = () => {
   return (
-    <section className="py-12 bg-gradient-to-br from-charcoal via-charcoal to-charcoal/95">
+    <section className="py-20 bg-gradient-to-b from-charcoal to-background">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full mb-4">
+            <Ticket className="w-4 h-4" />
+            <span className="font-medium text-sm uppercase tracking-wider">Événements à venir</span>
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-foreground">
+            Réservez pour les grands événements parisiens
+          </h2>
+        </div>
+
+        {/* Events Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {events.map((event) => {
             const Icon = event.icon;
             return (
               <Link 
                 key={event.id} 
                 to={event.link}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="group"
               >
-                {/* Gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${event.gradient} opacity-90`} />
-                
-                {/* Pattern overlay */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:20px_20px]" />
-                </div>
+                <article className="relative h-full bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t ${event.gradient} opacity-40 mix-blend-multiply`} />
+                    
+                    {/* Category badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className={`inline-flex items-center gap-1.5 bg-white/95 dark:bg-card/95 backdrop-blur-sm shadow-lg px-3 py-1.5 rounded-full text-xs font-semibold ${
+                        event.accentColor === 'pink' ? 'text-pink-600' :
+                        event.accentColor === 'blue' ? 'text-blue-600' :
+                        'text-green-600'
+                      }`}>
+                        <Icon className="w-3.5 h-3.5" />
+                        {event.category}
+                      </span>
+                    </div>
 
-                {/* Content */}
-                <div className="relative p-6 flex flex-col h-full min-h-[220px]">
-                  {/* Category badge */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
-                      <Icon className="w-3.5 h-3.5" />
-                      {event.category}
-                    </span>
+                    {/* Flags for rugby match */}
+                    {event.subtitleWithFlags && (
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-full py-2 px-4 shadow-lg">
+                        <img src={drapeauFrance} alt="France" className="w-8 h-5 object-cover rounded shadow-sm" />
+                        <span className="font-display text-foreground text-sm font-bold">VS</span>
+                        <img src={drapeauIrlande} alt="Irlande" className="w-8 h-5 object-cover rounded shadow-sm" />
+                      </div>
+                    )}
                   </div>
 
-                  {/* Title & Subtitle */}
-                  <div className="flex-1">
-                    <h3 className="font-display text-xl md:text-2xl text-white mb-2 group-hover:scale-105 transition-transform origin-left">
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="font-display text-xl text-foreground mb-1 group-hover:text-primary transition-colors">
                       {event.title}
                     </h3>
-                    <p className="text-white/80 text-sm flex items-center gap-1.5">
-                      {event.subtitleWithFlags ? (
-                        <>
-                          <img src={drapeauFrance} alt="France" className="w-5 h-3.5 object-cover rounded-sm" />
-                          <span>{event.subtitle}</span>
-                          <img src={drapeauIrlande} alt="Irlande" className="w-5 h-3.5 object-cover rounded-sm" />
-                        </>
-                      ) : (
-                        event.subtitle
-                      )}
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {event.subtitleWithFlags ? "Le choc au sommet du Tournoi" : event.subtitle}
                     </p>
-                  </div>
 
-                  {/* Date & CTA */}
-                  <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
-                    <div className="flex items-center text-white/90 text-sm">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {event.dateStart}
-                    </div>
-                    <div className="flex items-center text-white font-medium text-sm group-hover:translate-x-1 transition-transform">
-                      Voir
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                    {/* Footer */}
+                    <div className="flex items-center justify-between pt-4 border-t border-border">
+                      <div className="flex items-center text-muted-foreground text-sm">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {event.dateStart}
+                      </div>
+                      <div className={`flex items-center font-semibold text-sm group-hover:translate-x-1 transition-transform ${
+                        event.accentColor === 'pink' ? 'text-pink-600' :
+                        event.accentColor === 'blue' ? 'text-blue-600' :
+                        'text-green-600'
+                      }`}>
+                        Découvrir
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-white/10 to-transparent pointer-events-none" />
+                </article>
               </Link>
             );
           })}
-        </div>
-
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-            <Ticket className="w-4 h-4" />
-            <span className="font-medium text-sm uppercase tracking-wider">Événements à venir</span>
-          </div>
-          <h2 className="font-display text-2xl md:text-3xl text-white">
-            Réservez pour les grands événements parisiens
-          </h2>
         </div>
       </div>
     </section>
