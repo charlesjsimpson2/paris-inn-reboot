@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticket, Clock } from "lucide-react";
+import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticket, Clock, Car } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
@@ -286,6 +286,41 @@ const Enfoires2026 = () => {
           </div>
         </section>
 
+
+        {/* Offres Transport */}
+        <section className="py-12 bg-pink-50 dark:bg-pink-950/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-display text-2xl md:text-3xl text-foreground text-center mb-8">
+                Nos offres transport
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-pink-200 dark:border-pink-800/30 flex items-center gap-4">
+                  <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center shrink-0">
+                    <Car className="w-7 h-7 text-pink-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg text-foreground mb-1">Parking privé</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Si vous venez en voiture, notre parking est à votre disposition pour seulement <strong className="text-pink-600">15€/jour</strong>
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-pink-200 dark:border-pink-800/30 flex items-center gap-4">
+                  <div className="w-14 h-14 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-full flex items-center justify-center shrink-0">
+                    <Ticket className="w-7 h-7 text-fuchsia-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg text-foreground mb-1">Taxi -10%</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Profitez d'une réduction de <strong className="text-fuchsia-600">-10%</strong> sur vos trajets en taxi pour vous rendre à l'Accor Arena et en revenir
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Hotel Offer Section - Final CTA */}
         <section className="py-16 bg-gradient-to-br from-pink-600 via-fuchsia-600 to-purple-700 text-white">
