@@ -143,17 +143,12 @@ const Enfoires2026 = () => {
                   </div>
                 </div>
                 
-                {/* Logo and poster */}
-                <div className="flex flex-col items-center gap-6">
-                  <img 
-                    src={enfoiresLogo} 
-                    alt="Logo Les Enfoirés"
-                    className="w-48 md:w-64 drop-shadow-2xl"
-                  />
+                {/* Poster only */}
+                <div className="flex flex-col items-center">
                   <img 
                     src={enfoiresAffiche} 
                     alt="Au Pays des Enfoirés 2025" 
-                    className="w-40 md:w-48 rounded-xl shadow-2xl ring-4 ring-white/20"
+                    className="w-48 md:w-56 rounded-xl shadow-2xl ring-4 ring-white/20"
                   />
                 </div>
               </div>
@@ -166,6 +161,11 @@ const Enfoires2026 = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
+                <img 
+                  src={enfoiresLogo} 
+                  alt="Logo Les Enfoirés"
+                  className="w-40 md:w-52 mx-auto mb-6"
+                />
                 <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 px-4 py-2 rounded-full mb-4">
                   <Sparkles className="w-5 h-5" />
                   <span className="font-medium">Édition 2026</span>
