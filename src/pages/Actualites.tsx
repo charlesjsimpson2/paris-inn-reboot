@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Music, Trophy } from "lucide-react";
+import { Calendar, Camera, Music, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
@@ -92,8 +92,30 @@ const Actualites = () => {
           </div>
         </section>
 
+        {/* Événements Passés */}
+        <section className="py-16 bg-charcoal">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Camera className="w-5 h-5 text-primary" />
+                <span className="text-primary font-body uppercase tracking-[0.2em] text-sm">
+                  Retour en images
+                </span>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl text-foreground">
+                Événements passés
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                Découvrez les moments partagés par nos clients lors des grands événements parisiens
+              </p>
+            </div>
 
-        {/* Newsletter */}
+            <p className="text-center text-muted-foreground text-sm italic">
+              Photos à venir prochainement...
+            </p>
+          </div>
+        </section>
+
         <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
