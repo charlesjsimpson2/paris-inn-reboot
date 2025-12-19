@@ -36,37 +36,47 @@ const SalonAgriculture = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+        <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
           <img
             src={salonAgricultureHero}
             alt="Salon de l'Agriculture - Lama au salon"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-amber-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
           
-          <div className="absolute inset-0 flex items-end">
-            <div className="container mx-auto px-4 pb-16">
-              <div className="max-w-3xl">
-                <div className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full mb-4">
-                  <Leaf className="w-4 h-4" />
-                  <span className="font-medium text-sm">Salon International</span>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="container mx-auto px-4 text-center">
+              <div className="max-w-4xl mx-auto">
+                <div className="inline-flex items-center gap-2 bg-green-600/90 backdrop-blur-sm text-white px-5 py-2.5 rounded-full mb-6 shadow-lg">
+                  <Leaf className="w-5 h-5" />
+                  <span className="font-medium text-sm uppercase tracking-wider">Salon International de l'Agriculture</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white mb-4">
-                  🐄 Salon de l'Agriculture 2025
+                <h1 className="font-display text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
+                  Salon de l'Agriculture 2025
                 </h1>
-                <p className="text-white/90 text-lg md:text-xl mb-6">
+                <p className="text-white/95 text-xl md:text-2xl mb-8 font-light">
                   La plus grande ferme de France s'installe à Paris
                 </p>
-                <div className="flex flex-wrap gap-4 text-white/90">
-                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <Calendar className="w-4 h-4" />
-                    <span>22 Février - 2 Mars 2025</span>
+                <div className="flex flex-wrap gap-4 justify-center mb-10">
+                  <div className="flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full border border-white/30">
+                    <Calendar className="w-5 h-5 text-white" />
+                    <span className="text-white font-medium">22 Février - 2 Mars 2025</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <MapPin className="w-4 h-4" />
-                    <span>Porte de Versailles</span>
+                  <div className="flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full border border-white/30">
+                    <MapPin className="w-5 h-5 text-white" />
+                    <span className="text-white font-medium">Porte de Versailles</span>
                   </div>
                 </div>
+                <a 
+                  href="https://www.booking.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="xl" className="bg-green-600 hover:bg-green-700 text-white font-bold shadow-xl px-10">
+                    <Hotel className="w-5 h-5 mr-2" />
+                    Réserver votre hébergement
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
