@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
+import chambre4 from "@/assets/gallery/chambre-4.jpg";
 
 export const RoomsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,7 +34,7 @@ export const RoomsSection = () => {
       name: t('rooms.connecting'),
       description: t('rooms.connecting.desc'),
       capacity: "4 personnes",
-      image: "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=600&h=400&fit=crop",
+      image: chambre4,
     },
   ];
 
@@ -120,6 +121,7 @@ export const RoomsSection = () => {
                     <img
                       src={room.image}
                       alt={room.name}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

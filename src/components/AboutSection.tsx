@@ -37,6 +37,7 @@ export const AboutSection = () => {
             <img
               src={proximiteMetro}
               alt="Hôtel Inn Design près du métro Place d'Italie"
+              loading="lazy"
               className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
             />
           </div>

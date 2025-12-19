@@ -48,6 +48,7 @@ export const BreakfastSection = () => {
               <img
                 src={breakfastImage}
                 alt="Petit déjeuner buffet à l'hôtel"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -62,6 +63,7 @@ export const BreakfastSection = () => {
               <img
                 src={barImage}
                 alt="Bar convivial de l'hôtel"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>

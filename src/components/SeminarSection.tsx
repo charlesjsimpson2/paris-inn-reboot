@@ -68,6 +68,7 @@ export const SeminarSection = () => {
                 key={index}
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
                   index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
+import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -38,7 +39,7 @@ const Actualites = () => {
               <Link to="/enfoires-2026" className="group">
                 <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={enfoiresAffiche} alt="Les Enfoirés 2026" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={enfoiresAffiche} alt="Les Enfoirés 2026" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
@@ -59,11 +60,11 @@ const Actualites = () => {
               <Link to="/tournoi-6-nations" className="group">
                 <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
                   <div className="aspect-[4/3] overflow-hidden relative">
-                    <img src={rugbyImage} alt="Tournoi 6 Nations" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={rugbyImage} alt="Tournoi 6 Nations" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center gap-3 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-2 px-4">
-                      <img src={drapeauFrance} alt="France" className="w-8 h-5 object-cover rounded shadow-sm" />
+                      <img src={drapeauFrance} alt="France" loading="lazy" className="w-8 h-5 object-cover rounded shadow-sm" />
                       <span className="font-display text-foreground text-sm">VS</span>
-                      <img src={drapeauIrlande} alt="Irlande" className="w-8 h-5 object-cover rounded shadow-sm" />
+                      <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-8 h-5 object-cover rounded shadow-sm" />
                     </div>
                   </div>
                   <div className="p-6">
@@ -85,7 +86,7 @@ const Actualites = () => {
               <Link to="/salon-agriculture" className="group">
                 <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=600&fit=crop" alt="Salon de l'Agriculture" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={salonAgricultureHero} alt="Salon de l'Agriculture" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
