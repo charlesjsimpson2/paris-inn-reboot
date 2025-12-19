@@ -7,7 +7,7 @@ const featuredEvent = {
   id: 1,
   title: "🎤 Les Enfoirés 2026",
   subtitle: "La Ballade des Enfoirés",
-  excerpt: "Spectacle caritatif à l'Accor Arena • Offre spéciale hôtel + 10% sur le taxi",
+  excerpt: "Spectacle caritatif à l'Accor Arena • Offre spéciale hôtel -10% sur le taxi",
   dateStart: "13 Janvier 2026",
   dateEnd: "19 Janvier 2026",
   category: "Concert",
