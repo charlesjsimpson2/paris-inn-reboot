@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Phone, Mail, Gift, Ticket, Clock } from "lucide-react";
+import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticket, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import enfoiresLogo from "@/assets/enfoires-logo.png";
@@ -363,46 +363,19 @@ const Enfoires2026 = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <Heart className="w-12 h-12 text-pink-300 mx-auto mb-4" fill="currentColor" />
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
+              <h2 className="font-display text-3xl md:text-4xl text-white mb-8">
                 Réservez votre séjour Enfoiré
               </h2>
-              <p className="text-white/90 text-lg mb-4">
-                Contactez-nous pour profiter de notre offre spéciale concert
-              </p>
               
-              {/* Contact info */}
-              <div className="flex flex-col items-center gap-2 mb-8 text-white/80">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>178 Bd Vincent Auriol, 75013 Paris</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <span>+33 (0)1 44 24 01 01</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center justify-center gap-4">
-                <a href="tel:+33144240101">
-                  <Button 
-                    size="lg" 
-                    className="bg-white text-pink-600 hover:bg-pink-100 font-bold"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    +33 (0)1 44 24 01 01
-                  </Button>
-                </a>
-                <a href="mailto:hid.paris13@gmail.com">
-                  <Button 
-                    size="lg" 
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white/10 font-bold"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
-                    hid.paris13@gmail.com
-                  </Button>
-                </a>
-              </div>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-pink-600 hover:bg-pink-100 font-bold px-12 py-6 text-lg shadow-2xl hover:shadow-pink-500/30 hover:scale-105 transition-all duration-300"
+                >
+                  <Heart className="w-5 h-5 mr-3" fill="currentColor" />
+                  Nous contacter
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
