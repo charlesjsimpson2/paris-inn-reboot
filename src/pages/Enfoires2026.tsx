@@ -5,7 +5,7 @@ import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticke
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import enfoiresLogo from "@/assets/enfoires-logo.png";
-import enfoiresAffiche from "@/assets/enfoires-affiche.jpg";
+import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 
 const Enfoires2026 = () => {
   // Countdown to January 13, 2026 at 20:00 (concert start)
