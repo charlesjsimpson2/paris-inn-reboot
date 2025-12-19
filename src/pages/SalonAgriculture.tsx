@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Leaf, Users, Clock, Utensils, TreeDeciduous, Hotel } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Image Salon Agriculture
+import salonAgricultureImage from "@/assets/salon-agriculture.webp";
+
 // Photos de l'hôtel
 import hotelReception from "@/assets/hotel-reception.jpg";
 import chambre1 from "@/assets/gallery/chambre-1.jpg";
@@ -37,8 +40,8 @@ const SalonAgriculture = () => {
         {/* Hero Section */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&h=1080&fit=crop"
-            alt="Salon de l'Agriculture - Vaches dans un pré"
+            src={salonAgricultureImage}
+            alt="Salon de l'Agriculture - Paris"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-amber-900/70" />
