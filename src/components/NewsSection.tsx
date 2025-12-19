@@ -18,9 +18,9 @@ export const NewsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-red-600 via-yellow-500 to-red-600">
+    <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 via-fuchsia-500 to-pink-600">
       {/* Animated colorful gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500/40 via-yellow-400/30 to-red-500/40 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-500/40 via-fuchsia-400/30 to-pink-500/40 animate-pulse" />
       
       {/* Moving shimmer effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
@@ -45,8 +45,8 @@ export const NewsSection = () => {
       </div>
       
       {/* Glow accents */}
-      <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-64 h-32 bg-yellow-400/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-48 h-24 bg-red-400/30 rounded-full blur-2xl animate-pulse animation-delay-200" />
+      <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-64 h-32 bg-fuchsia-400/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-48 h-24 bg-pink-400/30 rounded-full blur-2xl animate-pulse animation-delay-200" />
       
       <div className="container mx-auto px-4 py-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -87,7 +87,7 @@ export const NewsSection = () => {
             <Link to="/enfoires-2026">
               <Button 
                 size="lg"
-                className="bg-white text-red-600 hover:bg-yellow-100 hover:text-red-700 font-bold shadow-xl group transition-all duration-300 hover:scale-105 border-2 border-white/50"
+                className="bg-white text-pink-600 hover:bg-pink-50 hover:text-pink-700 font-bold shadow-xl group transition-all duration-300 hover:scale-105 border-2 border-white/50"
               >
                 Découvrir l'offre
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

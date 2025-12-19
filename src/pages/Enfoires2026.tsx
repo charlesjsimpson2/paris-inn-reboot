@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticket, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import enfoiresLogo from "@/assets/enfoires-logo.png";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 
 const Enfoires2026 = () => {
@@ -126,13 +125,8 @@ const Enfoires2026 = () => {
                   />
                 </div>
                 
-                {/* Logo and info */}
+                {/* Info */}
                 <div className="text-center md:text-left">
-                  <img 
-                    src={enfoiresLogo} 
-                    alt="Logo Les Enfoirés"
-                    className="w-32 md:w-40 mx-auto md:mx-0 mb-6"
-                  />
                   <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 px-4 py-2 rounded-full mb-4">
                     <Sparkles className="w-4 h-4" />
                     <span className="font-medium text-sm">Édition 2026</span>
@@ -140,9 +134,15 @@ const Enfoires2026 = () => {
                   <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
                     Un spectacle unique de solidarité
                   </h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                     Le spectacle caritatif le plus populaire de France revient pour 7 soirées magiques à Paris-Bercy. Une édition exceptionnelle avec le retour de Florent Pagny et Bénabar !
                   </p>
+                  <Link to="/reservation-seminaire">
+                    <Button className="bg-pink-600 hover:bg-pink-700 text-white">
+                      <Heart className="w-4 h-4 mr-2" fill="currentColor" />
+                      Contactez-nous
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -275,8 +275,8 @@ const Enfoires2026 = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Les Enfoirés - La Ballade des Enfoirés"
+                src="https://www.youtube.com/embed/ZuAnUmO8RfA"
+                title="Les Enfoirés 2025 - Au Pays des Enfoirés"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
