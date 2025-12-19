@@ -62,10 +62,10 @@ export const NewsSection = () => {
             <span className="font-bold text-sm uppercase tracking-wider">Ne manquez pas !</span>
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="font-display text-3xl md:text-5xl text-white mb-2">
+          <h2 className="font-display text-3xl md:text-5xl text-burgundy mb-2">
             Événements <span className="text-primary">à venir</span>
           </h2>
-          <p className="text-white/60 text-lg">Réservez votre séjour pour les grands rendez-vous parisiens</p>
+          <p className="text-burgundy/80 text-lg">Réservez votre séjour pour les grands rendez-vous parisiens</p>
         </div>
 
         {/* Featured Event - Full Width */}
