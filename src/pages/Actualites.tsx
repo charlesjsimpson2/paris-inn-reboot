@@ -116,7 +116,7 @@ const Actualites = () => {
                       <Trophy className="w-4 h-4 text-green-400" />
                       <span className="text-green-400 text-sm font-medium">Rugby</span>
                     </div>
-                    <h3 className="font-display text-xl text-white mb-1">France vs Irlande</h3>
+                    <h3 className="font-display text-xl text-white mb-1">🇫🇷 France vs Irlande 🇮🇪</h3>
                     <p className="text-white/80 text-sm">8 mars 2025 • Stade de France</p>
                   </div>
                 </div>

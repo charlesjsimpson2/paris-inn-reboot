@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Train, Trophy, Users, Play, Clock, Flag } from "lucide-react";
+import { Calendar, MapPin, Train, Trophy, Users, Play, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import rugbyHero from "@/assets/rugby-france-irlande.jpg";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
@@ -243,7 +243,7 @@ const Tournoi6Nations = () => {
               {/* France */}
               <div className="bg-blue-600 rounded-lg overflow-hidden">
                 <div className="p-4 flex items-center justify-center gap-3 border-b border-blue-500">
-                  <Flag className="w-6 h-6 text-white" />
+                  <span className="text-2xl">🇫🇷</span>
                   <h3 className="font-display text-2xl text-white">France</h3>
                 </div>
                 <div className="p-4">
@@ -261,7 +261,7 @@ const Tournoi6Nations = () => {
               {/* Irlande */}
               <div className="bg-green-600 rounded-lg overflow-hidden">
                 <div className="p-4 flex items-center justify-center gap-3 border-b border-green-500">
-                  <Flag className="w-6 h-6 text-white" />
+                  <span className="text-2xl">🇮🇪</span>
                   <h3 className="font-display text-2xl text-white">Irlande</h3>
                 </div>
                 <div className="p-4">
