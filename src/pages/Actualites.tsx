@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Camera, Music, Trophy } from "lucide-react";
+import { Calendar, Camera, Music, Trophy, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
@@ -40,7 +40,7 @@ const Actualites = () => {
             <h2 className="font-display text-2xl md:text-3xl text-foreground mb-8 text-center">
               Nos événements à ne pas manquer
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {/* Enfoirés 2026 */}
               <Link to="/enfoires-2026" className="group">
                 <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
@@ -85,6 +85,28 @@ const Actualites = () => {
                       <img src={drapeauIrlande} alt="Irlande" className="w-6 h-4 object-cover rounded-sm" />
                     </h3>
                     <p className="text-white/80 text-sm">8 mars 2025 • Stade de France</p>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Salon de l'Agriculture */}
+              <Link to="/salon-agriculture" className="group">
+                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <div className="aspect-[16/9]">
+                    <img 
+                      src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=450&fit=crop" 
+                      alt="Salon de l'Agriculture" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Leaf className="w-4 h-4 text-green-400" />
+                      <span className="text-green-400 text-sm font-medium">Salon</span>
+                    </div>
+                    <h3 className="font-display text-xl text-white mb-1">🐄 Salon de l'Agriculture</h3>
+                    <p className="text-white/80 text-sm">22 fév - 2 mars 2025 • Porte de Versailles</p>
                   </div>
                 </div>
               </Link>
