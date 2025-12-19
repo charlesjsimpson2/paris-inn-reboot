@@ -69,55 +69,30 @@ export const NewsSection = () => {
           <p className="text-muted-foreground text-lg">{t('news.subtitle')}</p>
         </div>
 
-        <Link to={events[0].link} className="group block mb-8">
-          <div className={`relative overflow-hidden rounded-3xl ${events[0].bgColor} shadow-2xl hover:shadow-3xl transition-all duration-500`}>
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:24px_24px]" />
-            </div>
-            <div className="grid md:grid-cols-2 items-center">
-              <div className="relative aspect-[4/3] md:aspect-auto md:h-80 overflow-hidden">
-                <img src={events[0].image} alt={events[0].title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-pink-600/80 hidden md:block" />
-              </div>
-              <div className="relative p-8 md:p-10">
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-4">
-                  <Music className="w-4 h-4" />{events[0].category}
-                </div>
-                <h3 className="font-display text-3xl md:text-4xl text-white mb-3 group-hover:translate-x-2 transition-transform">{events[0].title}</h3>
-                <p className="text-white/80 text-lg mb-4">{events[0].subtitle}</p>
-                <div className="flex items-center gap-6">
-                  <div className="flex items-center text-white/90"><Calendar className="w-5 h-5 mr-2" /><span className="font-medium">{events[0].dateStart}</span></div>
-                  <div className="flex items-center text-white font-bold group-hover:translate-x-2 transition-transform">{t('news.discover')}<ArrowRight className="w-5 h-5 ml-2" /></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {events.slice(1).map((event) => {
+        <div className="grid md:grid-cols-3 gap-0">
+          {events.map((event) => {
             const Icon = event.icon;
             return (
               <Link key={event.id} to={event.link} className="group">
-                <div className={`relative overflow-hidden rounded-2xl ${event.bgColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1`}>
+                <div className={`relative overflow-hidden ${event.bgColor} shadow-xl hover:shadow-2xl transition-all duration-500 h-full`}>
                   <div className="absolute inset-0 opacity-15">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:20px_20px]" />
                   </div>
-                  <div className="relative flex items-stretch">
-                    <div className="relative w-1/3 min-h-[180px] overflow-hidden">
-                      <img src={event.image} alt={event.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                      <div className={`absolute inset-0 bg-gradient-to-r from-transparent to-current opacity-60 ${event.id === 2 ? 'to-blue-600' : 'to-green-600'}`} />
+                  <div className="relative flex flex-col h-full">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <div className={`absolute inset-0 bg-gradient-to-t from-current to-transparent opacity-60`} />
                     </div>
                     <div className="flex-1 p-6 flex flex-col justify-center">
-                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3 w-fit">
+                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 w-fit mb-3">
                         <Icon className="w-3.5 h-3.5" />{event.category}
                       </div>
                       <h3 className="font-display text-xl md:text-2xl text-white mb-1 group-hover:translate-x-1 transition-transform flex items-center gap-2 flex-wrap">
-                        {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-6 h-4 object-cover rounded shadow" />}
+                        {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-6 h-4 object-cover shadow" />}
                         {event.title}
-                        {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-6 h-4 object-cover rounded shadow" />}
+                        {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-6 h-4 object-cover shadow" />}
                       </h3>
-                      <p className="text-white/70 text-sm mb-3">{event.subtitleWithFlags ? t('rugby.tournament') : event.subtitle}</p>
+                      <p className="text-white/70 text-sm mb-3">{event.subtitle}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center text-white/80 text-sm"><Calendar className="w-4 h-4 mr-1.5" />{event.dateStart}</div>
                         <div className="flex items-center text-white font-semibold text-sm group-hover:translate-x-1 transition-transform">{t('news.see')}<ArrowRight className="w-4 h-4 ml-1" /></div>
