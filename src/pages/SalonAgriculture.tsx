@@ -111,11 +111,11 @@ const SalonAgriculture = () => {
                   sous toutes ses facettes !
                 </p>
               </div>
-              <div className="relative">
+              <div className="flex justify-center">
                 <img
                   src={salonAgricultureImage}
                   alt="Salon de l'Agriculture - Paris"
-                  className="w-full shadow-xl"
+                  className="max-w-xs md:max-w-sm shadow-xl object-contain"
                 />
               </div>
             </div>
@@ -268,67 +268,39 @@ const SalonAgriculture = () => {
         </section>
 
 
-        {/* Autres salons */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                Autres salons à la Porte de Versailles
-              </h2>
-              <p className="text-muted-foreground">
-                Découvrez les autres événements majeurs près de notre hôtel
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {otherSalons.map((salon, index) => (
-                <div key={index} className="group relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={salon.image}
-                    alt={salon.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white font-display text-lg">{salon.name}</h3>
-                    <p className="text-white/80 text-sm flex items-center gap-2">
-                      <Calendar className="w-4 h-4" /> {salon.date}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Offres Transport */}
-        <section className="py-12 bg-amber-50 dark:bg-amber-950/20">
+        {/* Nos Offres */}
+        <section className="py-16 bg-gradient-to-br from-amber-100 via-green-50 to-amber-100 dark:from-amber-950/30 dark:via-green-950/20 dark:to-amber-950/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="font-display text-2xl md:text-3xl text-foreground text-center mb-8">
-                Nos offres transport
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-800/30 flex items-center gap-4">
-                  <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center shrink-0">
-                    <Car className="w-7 h-7 text-green-600" />
+              <div className="text-center mb-10">
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">
+                  Nos offres exclusives
+                </h2>
+                <p className="text-muted-foreground">Profitez de nos avantages pendant votre séjour</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-green-200 dark:border-green-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Car className="w-8 h-8 text-green-600" />
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-1">Parking privé</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Si vous venez en voiture, notre parking est à votre disposition pour seulement <strong className="text-green-600">15€/jour</strong>
-                    </p>
+                  <h3 className="font-display text-2xl text-foreground mb-2">Parking privé</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Si vous venez en voiture, notre parking sécurisé est à votre disposition
+                  </p>
+                  <div className="inline-block bg-green-600 text-white font-bold text-xl px-4 py-2 rounded-full">
+                    15€ / jour
                   </div>
                 </div>
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-800/30 flex items-center gap-4">
-                  <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center shrink-0">
-                    <Ticket className="w-7 h-7 text-amber-600" />
+                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-amber-200 dark:border-amber-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Ticket className="w-8 h-8 text-amber-600" />
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-1">Taxi -10%</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Profitez d'une réduction de <strong className="text-amber-600">-10%</strong> sur vos trajets en taxi pour vous rendre au Salon et en revenir
-                    </p>
+                  <h3 className="font-display text-2xl text-foreground mb-2">Taxi partenaire</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Réduction sur vos trajets pour vous rendre au Salon et en revenir
+                  </p>
+                  <div className="inline-block bg-amber-600 text-white font-bold text-xl px-4 py-2 rounded-full">
+                    -10%
                   </div>
                 </div>
               </div>
@@ -360,6 +332,39 @@ const SalonAgriculture = () => {
                   Nous contacter
                 </Button>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Autres salons */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+                Autres salons à la Porte de Versailles
+              </h2>
+              <p className="text-muted-foreground">
+                Découvrez les autres événements majeurs près de notre hôtel
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {otherSalons.map((salon, index) => (
+                <div key={index} className="group relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={salon.image}
+                    alt={salon.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-white font-display text-lg">{salon.name}</h3>
+                    <p className="text-white/80 text-sm flex items-center gap-2">
+                      <Calendar className="w-4 h-4" /> {salon.date}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
