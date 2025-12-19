@@ -1,67 +1,97 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, ArrowRight, Phone, Mail } from "lucide-react";
+import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Phone, Mail, Gift, Ticket } from "lucide-react";
 import { Link } from "react-router-dom";
+import enfoiresLogo from "@/assets/enfoires-logo.png";
+import enfoiresAffiche from "@/assets/enfoires-affiche.jpg";
 
 const Enfoires2026 = () => {
+  const concertDates = [
+    { day: "Mar. 13", month: "Janvier" },
+    { day: "Mer. 14", month: "Janvier" },
+    { day: "Jeu. 15", month: "Janvier" },
+    { day: "Ven. 16", month: "Janvier" },
+    { day: "Sam. 17", month: "Janvier" },
+    { day: "Dim. 18", month: "Janvier" },
+    { day: "Lun. 19", month: "Janvier" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section with festive gradient */}
-        <section className="relative pt-24 pb-16 overflow-hidden">
-          {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-600 via-yellow-500 to-red-600" />
-          <div className="absolute inset-0 bg-gradient-to-r from-red-500/40 via-yellow-400/30 to-red-500/40 animate-pulse" />
+        {/* Hero Section with pink/magenta theme */}
+        <section className="relative pt-24 pb-20 overflow-hidden">
+          {/* Animated background - pink/magenta theme like the logo */}
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-600 via-fuchsia-600 to-purple-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           
-          {/* Confetti pattern */}
-          <div className="absolute inset-0 opacity-10">
+          {/* Stars pattern */}
+          <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_2px,transparent_2px),radial-gradient(circle_at_80%_70%,white_2px,transparent_2px),radial-gradient(circle_at_50%_50%,white_1px,transparent_1px)] bg-[length:60px_60px,40px_40px,30px_30px]" />
           </div>
           
-          {/* Floating hearts */}
-          <div className="absolute left-[10%] top-1/3">
-            <Heart className="w-12 h-12 text-white/20 animate-pulse" fill="currentColor" />
+          {/* Floating elements */}
+          <div className="absolute left-[5%] top-1/3 animate-pulse">
+            <Heart className="w-16 h-16 text-white/30" fill="currentColor" />
           </div>
-          <div className="absolute right-[15%] top-1/2">
-            <Heart className="w-8 h-8 text-white/20 animate-pulse animation-delay-200" fill="currentColor" />
+          <div className="absolute right-[8%] top-1/4 animate-bounce">
+            <Music className="w-12 h-12 text-white/20" />
           </div>
-          <div className="absolute left-[20%] bottom-1/4">
-            <Music className="w-10 h-10 text-white/15 animate-bounce" />
+          <div className="absolute left-[15%] bottom-1/4 animate-pulse animation-delay-200">
+            <Star className="w-10 h-10 text-yellow-300/40" fill="currentColor" />
           </div>
-          <div className="absolute right-[10%] bottom-1/3">
-            <Music className="w-6 h-6 text-white/15 animate-bounce animation-delay-400" />
+          <div className="absolute right-[12%] bottom-1/3 animate-bounce animation-delay-400">
+            <Mic className="w-8 h-8 text-white/20" />
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Heart className="w-8 h-8 text-white animate-pulse" fill="currentColor" />
-                <span className="text-white/90 uppercase tracking-widest text-sm font-medium">
-                  Les Restos du Cœur
-                </span>
-                <Heart className="w-8 h-8 text-white animate-pulse" fill="currentColor" />
-              </div>
-              
-              <h1 className="font-display text-5xl md:text-7xl text-white mb-4 drop-shadow-lg">
-                🎤 Les Enfoirés 2026
-              </h1>
-              <p className="text-2xl md:text-3xl text-white/90 font-display mb-6">
-                La Ballade des Enfoirés
-              </p>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
-                Le spectacle caritatif le plus populaire de France revient pour une édition exceptionnelle !
-              </p>
-              
-              <div className="flex flex-wrap items-center justify-center gap-4">
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
-                  <Calendar className="w-5 h-5" />
-                  13 - 19 Janvier 2026
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Text content */}
+                <div className="text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
+                    <Heart className="w-6 h-6 text-pink-300 animate-pulse" fill="currentColor" />
+                    <span className="text-white/90 uppercase tracking-widest text-sm font-medium">
+                      Les Restos du Cœur
+                    </span>
+                  </div>
+                  
+                  <h1 className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-lg">
+                    Les Enfoirés 2026
+                  </h1>
+                  <p className="text-2xl md:text-3xl text-pink-200 font-display mb-6">
+                    La Ballade des Enfoirés
+                  </p>
+                  <p className="text-white/80 text-lg mb-8">
+                    Le spectacle caritatif le plus populaire de France revient pour une édition exceptionnelle !
+                  </p>
+                  
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
+                      <Calendar className="w-5 h-5" />
+                      13 - 19 Janvier 2026
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
+                      <MapPin className="w-5 h-5" />
+                      Accor Arena
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
-                  <MapPin className="w-5 h-5" />
-                  Accor Arena (Paris-Bercy)
+                
+                {/* Logo and poster */}
+                <div className="flex flex-col items-center gap-6">
+                  <img 
+                    src={enfoiresLogo} 
+                    alt="Logo Les Enfoirés" 
+                    className="w-48 md:w-64 drop-shadow-2xl"
+                  />
+                  <img 
+                    src={enfoiresAffiche} 
+                    alt="Au Pays des Enfoirés 2025" 
+                    className="w-40 md:w-48 rounded-xl shadow-2xl ring-4 ring-white/20"
+                  />
                 </div>
               </div>
             </div>
@@ -69,79 +99,91 @@ const Enfoires2026 = () => {
         </section>
 
         {/* Concert Promotion Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-b from-pink-50 to-white dark:from-pink-950/20 dark:to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Sparkles className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                <h2 className="font-display text-4xl text-foreground mb-6">
-                  7 soirées magiques à Paris-Bercy
+                <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 px-4 py-2 rounded-full mb-4">
+                  <Sparkles className="w-5 h-5" />
+                  <span className="font-medium">Édition 2026</span>
+                </div>
+                <h2 className="font-display text-4xl text-foreground mb-4">
+                  Un spectacle unique de solidarité
                 </h2>
+                <p className="text-xl text-muted-foreground">
+                  7 soirées magiques à Paris-Bercy
+                </p>
               </div>
 
-              <div className="prose prose-lg mx-auto text-muted-foreground space-y-6">
-                <p className="text-xl leading-relaxed">
-                  Du <strong className="text-foreground">mardi 13 au lundi 19 janvier 2026</strong>, Les Enfoirés font leur grand retour sur la scène de l'Accor Arena pour <strong className="text-foreground">sept spectacles exceptionnels</strong>. Cette nouvelle édition, intitulée "La Ballade des Enfoirés", s'annonce riche en émotions et en surprises.
-                </p>
+              <div className="bg-white dark:bg-charcoal rounded-2xl shadow-xl p-8 md:p-12 border border-pink-100 dark:border-pink-900/30">
+                <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+                  <p className="text-xl leading-relaxed">
+                    Du <strong className="text-pink-600 dark:text-pink-400">mardi 13 au lundi 19 janvier 2026</strong>, l'Accor Arena de Paris-Bercy accueille la nouvelle édition des Enfoirés. Sept représentations exceptionnelles où les plus grands artistes français se réunissent pour une cause qui nous rassemble tous : <strong className="text-foreground">lutter contre la faim et la précarité</strong>.
+                  </p>
 
-                <p className="leading-relaxed">
-                  Cette année, le public pourra célébrer le retour de <strong className="text-foreground">Florent Pagny</strong>, absent depuis 2021, ainsi que celui de <strong className="text-foreground">Bénabar</strong>, qui retrouve la troupe après quatre ans d'absence. "Les Enfoirés, ce sont vraiment ceux qui sont sur scène et le public, avec lequel il y a une communion réelle, car on est tous là pour une bonne raison", confie Bénabar.
-                </p>
+                  <p className="leading-relaxed">
+                    Cette édition promet des moments d'émotion intense avec le <strong className="text-foreground">retour très attendu de Florent Pagny</strong>, absent depuis 2021, et de <strong className="text-foreground">Bénabar</strong> qui retrouve la troupe après quatre ans. Le chanteur confie : "Les Enfoirés, ce sont vraiment ceux qui sont sur scène et le public, une communion réelle car on est tous là pour une bonne raison."
+                  </p>
 
-                <p className="leading-relaxed">
-                  Parmi les talents qui enrichissent la troupe, on retrouve également <strong className="text-foreground">Héléna</strong> de la Star Academy, <strong className="text-foreground">Pierre Garnier</strong>, <strong className="text-foreground">Joseph Kamel</strong>, le trompettiste <strong className="text-foreground">Ibrahim Maalouf</strong>, l'humoriste <strong className="text-foreground">François-Xavier Demaison</strong>, et <strong className="text-foreground">Alain Chamfort</strong>.
-                </p>
+                  <p className="leading-relaxed">
+                    La troupe 2026 réserve également de belles surprises avec <strong className="text-foreground">Héléna</strong> de la Star Academy, <strong className="text-foreground">Pierre Garnier</strong>, <strong className="text-foreground">Joseph Kamel</strong>, le virtuose <strong className="text-foreground">Ibrahim Maalouf</strong>, l'humoriste <strong className="text-foreground">François-Xavier Demaison</strong> et le légendaire <strong className="text-foreground">Alain Chamfort</strong>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* History Section */}
-        <section className="py-20 bg-charcoal">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gradient-to-br from-fuchsia-900 via-pink-900 to-purple-900 text-white relative overflow-hidden">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px),radial-gradient(circle_at_70%_80%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Heart className="w-12 h-12 text-red-500 mx-auto mb-4" fill="currentColor" />
-                <h2 className="font-display text-3xl text-foreground mb-4">
-                  L'histoire d'un mouvement solidaire
+                <Heart className="w-16 h-16 text-pink-400 mx-auto mb-4" fill="currentColor" />
+                <h2 className="font-display text-4xl mb-4">
+                  Plus de 35 ans de solidarité
                 </h2>
-              </div>
-
-              <div className="prose prose-lg mx-auto text-muted-foreground space-y-6 mb-12">
-                <p className="leading-relaxed">
-                  Depuis <strong className="text-foreground">1989</strong>, Les Enfoirés rassemblent chaque année les plus grands artistes français pour soutenir <strong className="text-foreground">Les Restos du Cœur</strong>, l'association fondée par <strong className="text-foreground">Coluche</strong> en 1985. Ce spectacle est devenu un rendez-vous incontournable de la solidarité en France.
-                </p>
-
-                <p className="leading-relaxed">
-                  Tous les artistes participent <strong className="text-foreground">bénévolement</strong>. Comme le rappelle Bénabar : "Pas un seul artiste, je dis bien pas un seul, n'a touché un centime pour sa participation." Une preuve de la générosité qui anime cette aventure humaine et solidaire depuis plus de 35 ans.
-                </p>
-
-                <p className="leading-relaxed">
-                  Chaque année, le spectacle et la vente des DVD et CD permettent de financer des millions de repas pour les plus démunis. <strong className="text-foreground">Les Enfoirés, c'est sincère, il y a un truc qui est indiscutable.</strong>
+                <p className="text-pink-200 text-xl">
+                  Une aventure humaine et artistique unique
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="w-16 h-16 rounded-full bg-red-600/10 flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-red-600" />
-                  </div>
-                  <p className="font-display text-3xl text-foreground mb-2">35+</p>
-                  <p className="text-muted-foreground">Années de solidarité</p>
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                  <h3 className="font-display text-2xl mb-4 text-pink-300">L'héritage de Coluche</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Depuis 1989, Les Enfoirés perpétuent l'esprit des Restos du Cœur fondés par Coluche en 1985. Chaque année, les plus grands artistes français se mobilisent <strong className="text-white">bénévolement</strong> pour offrir un spectacle mémorable au profit des plus démunis.
+                  </p>
                 </div>
-                <div>
-                  <div className="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mx-auto mb-4">
-                    <Heart className="w-8 h-8 text-yellow-600" fill="currentColor" />
-                  </div>
-                  <p className="font-display text-3xl text-foreground mb-2">1M+</p>
-                  <p className="text-muted-foreground">Repas distribués chaque année</p>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                  <h3 className="font-display text-2xl mb-4 text-pink-300">Un engagement sincère</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    "Pas un seul artiste n'a touché un centime pour sa participation", rappelle Bénabar. Concerts, ventes de DVD et CD : chaque euro récolté finance des repas pour ceux qui en ont besoin. <strong className="text-white">Les Enfoirés, c'est sincère.</strong>
+                  </p>
                 </div>
-                <div>
-                  <div className="w-16 h-16 rounded-full bg-red-600/10 flex items-center justify-center mx-auto mb-4">
-                    <Mic className="w-8 h-8 text-red-600" />
-                  </div>
-                  <p className="font-display text-3xl text-foreground mb-2">50+</p>
-                  <p className="text-muted-foreground">Artistes sur scène</p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-6 text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <Users className="w-10 h-10 text-pink-400 mx-auto mb-3" />
+                  <p className="font-display text-4xl mb-1">35+</p>
+                  <p className="text-pink-200 text-sm">Années de concerts</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <Heart className="w-10 h-10 text-pink-400 mx-auto mb-3" fill="currentColor" />
+                  <p className="font-display text-4xl mb-1">1M+</p>
+                  <p className="text-pink-200 text-sm">Repas par an</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <Mic className="w-10 h-10 text-pink-400 mx-auto mb-3" />
+                  <p className="font-display text-4xl mb-1">50+</p>
+                  <p className="text-pink-200 text-sm">Artistes</p>
                 </div>
               </div>
             </div>
@@ -151,47 +193,91 @@ const Enfoires2026 = () => {
         {/* Concert Dates */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Calendar className="w-12 h-12 text-red-600 mx-auto mb-4" />
-              <h2 className="font-display text-3xl text-foreground mb-8">
-                Les dates du concert
-              </h2>
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <Calendar className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+                <h2 className="font-display text-4xl text-foreground mb-4">
+                  Les 7 dates du concert
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Accor Arena (Paris-Bercy) - Janvier 2026
+                </p>
+              </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                {[
-                  { day: "Mar. 13", month: "Janvier" },
-                  { day: "Mer. 14", month: "Janvier" },
-                  { day: "Jeu. 15", month: "Janvier" },
-                  { day: "Ven. 16", month: "Janvier" },
-                  { day: "Sam. 17", month: "Janvier" },
-                  { day: "Dim. 18", month: "Janvier" },
-                  { day: "Lun. 19", month: "Janvier" },
-                ].map((date, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+                {concertDates.map((date, index) => (
                   <div 
                     key={index}
-                    className="bg-gradient-to-br from-red-50 to-yellow-50 dark:from-red-950/30 dark:to-yellow-950/30 rounded-xl p-6 border border-red-100 dark:border-red-900/30 hover:shadow-lg transition-all hover:scale-105"
+                    className="group bg-gradient-to-br from-pink-500 to-fuchsia-600 rounded-xl p-5 text-center hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
                   >
-                    <p className="font-display text-2xl text-red-600">{date.day}</p>
-                    <p className="text-muted-foreground">{date.month} 2026</p>
+                    <p className="font-display text-xl text-white">{date.day}</p>
+                    <p className="text-pink-200 text-sm">{date.month}</p>
+                    <p className="text-white/60 text-xs mt-1">2026</p>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-red-600" />
-                <span className="text-lg">Accor Arena, 8 Boulevard de Bercy, 75012 Paris</span>
+              <div className="flex items-center justify-center gap-2 text-muted-foreground bg-pink-50 dark:bg-pink-950/20 rounded-xl p-4">
+                <MapPin className="w-5 h-5 text-pink-600" />
+                <span>Accor Arena, 8 Boulevard de Bercy, 75012 Paris</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hotel Offer Section */}
+        <section className="py-20 bg-charcoal">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <Gift className="w-12 h-12 text-pink-500 mx-auto mb-4" />
+                <h2 className="font-display text-4xl text-foreground mb-4">
+                  Notre offre spéciale Enfoirés
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Profitez du concert dans les meilleures conditions
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-pink-500/10 to-fuchsia-500/10 rounded-xl p-6 border border-pink-200 dark:border-pink-800/30 text-center">
+                  <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="w-7 h-7 text-pink-600" fill="currentColor" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Tarif préférentiel</h3>
+                  <p className="text-muted-foreground text-sm">Chambre confortable avec petit-déjeuner inclus</p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-pink-500/10 to-fuchsia-500/10 rounded-xl p-6 border border-pink-200 dark:border-pink-800/30 text-center">
+                  <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Ticket className="w-7 h-7 text-pink-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">-10% sur le taxi</h3>
+                  <p className="text-muted-foreground text-sm">Réduction partenaire pour vous rendre à l'Accor Arena</p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-pink-500/10 to-fuchsia-500/10 rounded-xl p-6 border border-pink-200 dark:border-pink-800/30 text-center">
+                  <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="w-7 h-7 text-pink-600" fill="currentColor" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Late check-out</h3>
+                  <p className="text-muted-foreground text-sm">Départ tardif offert le lendemain du concert</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Video Section */}
-        <section className="py-16 bg-charcoal">
+        <section className="py-16 bg-gradient-to-b from-pink-50 to-white dark:from-pink-950/20 dark:to-background">
           <div className="container mx-auto px-4">
-            <h2 className="font-display text-3xl text-foreground text-center mb-8">
-              🎵 Découvrez Les Enfoirés en vidéo
-            </h2>
-            <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl">
+            <div className="text-center mb-8">
+              <Music className="w-10 h-10 text-pink-600 mx-auto mb-4" />
+              <h2 className="font-display text-3xl text-foreground">
+                Découvrez Les Enfoirés en vidéo
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl ring-4 ring-pink-200 dark:ring-pink-900/50">
               <iframe
                 width="100%"
                 height="100%"
@@ -207,21 +293,24 @@ const Enfoires2026 = () => {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-20 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-500/40 via-transparent to-red-500/40 animate-pulse" />
+        <section className="py-20 bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,white_2px,transparent_2px)] bg-[length:40px_40px]" />
+          </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
+              <Heart className="w-12 h-12 text-pink-300 mx-auto mb-4" fill="currentColor" />
               <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
                 Réservez votre séjour Enfoiré
               </h2>
               <p className="text-white/90 text-lg mb-8">
-                Profitez de notre offre spéciale et vivez le concert dans les meilleures conditions.
+                Contactez-nous pour profiter de notre offre spéciale concert
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link to="/contact">
                   <Button 
                     size="lg" 
-                    className="bg-white text-red-600 hover:bg-yellow-100 font-bold"
+                    className="bg-white text-pink-600 hover:bg-pink-100 font-bold"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Nous contacter
