@@ -9,11 +9,13 @@ import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 
 // Photos de l'hôtel
 import hotelReception from "@/assets/hotel-reception.jpg";
+import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import chambre1 from "@/assets/gallery/chambre-1.jpg";
 import chambre2 from "@/assets/gallery/chambre-2.jpg";
 import salleDeBain from "@/assets/gallery/salle-de-bain.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import vueBalcon from "@/assets/vue-balcon-paris.jpg";
+import chambreDouble from "@/assets/chambre-double.jpg";
 const SalonAgriculture = () => {
   const otherSalons = [
     { 
@@ -123,37 +125,46 @@ const SalonAgriculture = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <Train className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-xl">En Métro</h3>
-                      <p className="text-white/80 text-sm">~25 minutes</p>
-                    </div>
-                  </div>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    <strong>Ligne 7</strong> depuis Place d'Italie jusqu'à <strong>Porte de Versailles</strong> 
-                    (correspondance ligne 12). Trajet direct et rapide !
-                  </p>
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                  <img
+                    src={hotelMetroFacade}
+                    alt="Façade de l'hôtel près du métro"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <Clock className="w-6 h-6" />
+                <div className="space-y-4">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <Train className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-xl">En Métro</h3>
+                        <p className="text-white/80 text-sm">~25 minutes</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-display text-xl">Horaires du Salon</h3>
-                      <p className="text-white/80 text-sm">9h - 19h</p>
-                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      <strong>Ligne 7</strong> depuis Place d'Italie jusqu'à <strong>Porte de Versailles</strong> 
+                      (correspondance ligne 12). Trajet direct et rapide !
+                    </p>
                   </div>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    Ouvert tous les jours de <strong>9h à 19h</strong>. 
-                    Nocturne le vendredi jusqu'à 23h. Arrivez tôt pour éviter la foule !
-                  </p>
+
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <Clock className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-xl">Horaires du Salon</h3>
+                        <p className="text-white/80 text-sm">9h - 19h</p>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      Ouvert tous les jours de <strong>9h à 19h</strong>. 
+                      Nocturne le vendredi jusqu'à 23h. Arrivez tôt pour éviter la foule !
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -183,34 +194,61 @@ const SalonAgriculture = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="bg-card rounded-xl p-6 border border-border text-center">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Utensils className="w-8 h-8 text-green-600" />
+              <div className="bg-card rounded-xl overflow-hidden border border-border">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={petitDejeuner}
+                    alt="Petit-déjeuner buffet"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-2">Petit-déjeuner copieux</h3>
-                <p className="text-muted-foreground text-sm">
-                  Buffet généreux avec produits frais pour bien commencer votre journée de visite
-                </p>
+                <div className="p-6 text-center">
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4 -mt-10 relative z-10 border-4 border-card">
+                    <Utensils className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Petit-déjeuner copieux</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Buffet généreux avec produits frais pour bien commencer votre journée de visite
+                  </p>
+                </div>
               </div>
 
-              <div className="bg-card rounded-xl p-6 border border-border text-center">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Train className="w-8 h-8 text-green-600" />
+              <div className="bg-card rounded-xl overflow-hidden border border-border">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={hotelMetroFacade}
+                    alt="Façade de l'hôtel près du métro"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-2">Proximité transports</h3>
-                <p className="text-muted-foreground text-sm">
-                  Métro à 2 minutes à pied pour rejoindre facilement la Porte de Versailles
-                </p>
+                <div className="p-6 text-center">
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4 -mt-10 relative z-10 border-4 border-card">
+                    <Train className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Proximité transports</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Métro à 2 minutes à pied pour rejoindre facilement la Porte de Versailles
+                  </p>
+                </div>
               </div>
 
-              <div className="bg-card rounded-xl p-6 border border-border text-center">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-green-600" />
+              <div className="bg-card rounded-xl overflow-hidden border border-border">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={chambreDouble}
+                    alt="Chambre double confortable"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-2">Accueil chaleureux</h3>
-                <p className="text-muted-foreground text-sm">
-                  Notre équipe vous conseille sur les meilleures heures de visite et itinéraires
-                </p>
+                <div className="p-6 text-center">
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4 -mt-10 relative z-10 border-4 border-card">
+                    <Users className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Chambres confortables</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Reposez-vous dans nos chambres douillettes après une journée au Salon
+                  </p>
+                </div>
               </div>
             </div>
           </div>
