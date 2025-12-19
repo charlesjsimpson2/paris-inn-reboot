@@ -5,6 +5,7 @@ import { Calendar, MapPin, Train, Leaf, Users, Clock, Utensils, TreeDeciduous, H
 import { Link } from "react-router-dom";
 
 // Image Salon Agriculture
+import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 
 // Photos de l'hôtel
@@ -37,8 +38,8 @@ const SalonAgriculture = () => {
         {/* Hero Section */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&h=1080&fit=crop"
-            alt="Salon de l'Agriculture - Vaches dans un pré"
+            src={salonAgricultureHero}
+            alt="Salon de l'Agriculture - Lama au salon"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-amber-900/70" />
