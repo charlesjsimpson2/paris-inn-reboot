@@ -287,34 +287,45 @@ const Enfoires2026 = () => {
         </section>
 
 
-        {/* Offres Transport */}
-        <section className="py-12 bg-pink-50 dark:bg-pink-950/20">
+        {/* Nos Offres */}
+        <section className="py-16 bg-gradient-to-br from-pink-100 via-white to-fuchsia-100 dark:from-pink-950/30 dark:via-card dark:to-fuchsia-950/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="font-display text-2xl md:text-3xl text-foreground text-center mb-8">
-                Nos offres transport
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-pink-200 dark:border-pink-800/30 flex items-center gap-4">
-                  <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center shrink-0">
-                    <Car className="w-7 h-7 text-pink-600" />
+              <div className="text-center mb-10">
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">
+                  Nos offres exclusives
+                </h2>
+                <p className="text-muted-foreground">Profitez de nos avantages pendant votre séjour</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-pink-200 dark:border-pink-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center">
+                      <Car className="w-8 h-8 text-pink-600" />
+                    </div>
+                    <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">PROMO</span>
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-1">Parking privé</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Si vous venez en voiture, notre parking est à votre disposition pour seulement <strong className="text-pink-600">15€/jour</strong>
-                    </p>
+                  <h3 className="font-display text-2xl text-foreground mb-2">Parking privé</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Tarif préférentiel pour nos clients : stationnez en toute sécurité
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-muted-foreground line-through text-lg">25€</span>
+                    <div className="inline-block bg-pink-600 text-white font-bold text-xl px-4 py-2 rounded-full">
+                      15€ / jour
+                    </div>
                   </div>
                 </div>
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-pink-200 dark:border-pink-800/30 flex items-center gap-4">
-                  <div className="w-14 h-14 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-full flex items-center justify-center shrink-0">
-                    <Ticket className="w-7 h-7 text-fuchsia-600" />
+                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-fuchsia-200 dark:border-fuchsia-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Ticket className="w-8 h-8 text-fuchsia-600" />
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-1">Taxi -10%</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Profitez d'une réduction de <strong className="text-fuchsia-600">-10%</strong> sur vos trajets en taxi pour vous rendre à l'Accor Arena et en revenir
-                    </p>
+                  <h3 className="font-display text-2xl text-foreground mb-2">Taxi partenaire</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Réduction sur vos trajets pour vous rendre à l'Accor Arena et en revenir
+                  </p>
+                  <div className="inline-block bg-fuchsia-600 text-white font-bold text-xl px-4 py-2 rounded-full">
+                    -10%
                   </div>
                 </div>
               </div>
