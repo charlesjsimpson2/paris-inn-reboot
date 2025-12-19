@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
-import drapeauFrance from "@/assets/drapeau-france.png";
-import drapeauIrlande from "@/assets/drapeau-irlande.png";
+
+const drapeauFrance = "https://flagcdn.com/w80/fr.png";
+const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
 
 // Événements passés
 const pastEvents = [

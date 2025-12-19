@@ -5,8 +5,9 @@ import { Calendar, MapPin, Train, Trophy, Users, Play, Clock } from "lucide-reac
 import { Link } from "react-router-dom";
 import rugbyHero from "@/assets/rugby-france-irlande.jpg";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
-import drapeauFrance from "@/assets/drapeau-france.png";
-import drapeauIrlande from "@/assets/drapeau-irlande.png";
+
+const drapeauFrance = "https://flagcdn.com/w80/fr.png";
+const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
 const Tournoi6Nations = () => {
   // Résultats des 10 derniers matchs France - Irlande
   const previousMatches = [
