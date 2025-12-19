@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Train, Leaf, Users, Clock, Utensils, TreeDeciduous, Hotel } from "lucide-react";
+import { Calendar, MapPin, Train, Leaf, Users, Clock, Utensils, TreeDeciduous, Hotel, Car, Ticket } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Image Salon Agriculture
@@ -297,6 +297,41 @@ const SalonAgriculture = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Offres Transport */}
+        <section className="py-12 bg-amber-50 dark:bg-amber-950/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-display text-2xl md:text-3xl text-foreground text-center mb-8">
+                Nos offres transport
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-800/30 flex items-center gap-4">
+                  <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center shrink-0">
+                    <Car className="w-7 h-7 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg text-foreground mb-1">Parking privé</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Si vous venez en voiture, notre parking est à votre disposition pour seulement <strong className="text-green-600">15€/jour</strong>
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-800/30 flex items-center gap-4">
+                  <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center shrink-0">
+                    <Ticket className="w-7 h-7 text-amber-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg text-foreground mb-1">Taxi -10%</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Profitez d'une réduction de <strong className="text-amber-600">-10%</strong> sur vos trajets en taxi pour vous rendre au Salon et en revenir
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
