@@ -152,49 +152,23 @@ const Tournoi6Nations = () => {
         {/* Accès facile au stade */}
         <section className="py-16 bg-gradient-to-r from-blue-600 via-blue-700 to-green-600 text-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="font-display text-3xl md:text-4xl mb-6">
-                    Stade de France facilement accessible
-                  </h2>
-                  <p className="text-white/90 text-lg leading-relaxed mb-6">
-                    Depuis l'Hotel Inn Paris, rejoignez le Stade de France en toute simplicité grâce au métro. 
-                    Un trajet direct et rapide pour ne rien manquer du spectacle !
-                  </p>
-                  <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                    <div className="flex items-center gap-2">
-                      <Train className="w-6 h-6" />
-                      <span className="font-bold">Ligne 13</span>
-                    </div>
-                    <div className="h-8 w-px bg-white/30" />
-                    <div>
-                      <p className="font-bold">~35 min</p>
-                      <p className="text-sm text-white/80">Place d'Italie → Saint-Denis</p>
-                    </div>
-                  </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="font-display text-3xl md:text-4xl mb-6">
+                Stade de France facilement accessible
+              </h2>
+              <p className="text-white/90 text-lg leading-relaxed mb-8">
+                Depuis l'Hotel Inn Paris, rejoignez le Stade de France en toute simplicité grâce au métro. 
+                Un trajet direct et rapide pour ne rien manquer du spectacle !
+              </p>
+              <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="flex items-center gap-2">
+                  <Train className="w-6 h-6" />
+                  <span className="font-bold">Ligne 13</span>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                  <h3 className="font-display text-xl mb-4">Offre spéciale match</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-white rounded-full" />
-                      <span>Petit-déjeuner buffet inclus</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-white rounded-full" />
-                      <span>Late check-out jusqu'à 14h</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-white rounded-full" />
-                      <span>-10% sur le taxi vers le stade</span>
-                    </li>
-                  </ul>
-                  <Link to="/reservation-seminaire">
-                    <Button className="w-full mt-6 bg-white text-green-700 hover:bg-white/90">
-                      Réserver maintenant
-                    </Button>
-                  </Link>
+                <div className="h-8 w-px bg-white/30" />
+                <div>
+                  <p className="font-bold">~35 min</p>
+                  <p className="text-sm text-white/80">Place d'Italie → Saint-Denis</p>
                 </div>
               </div>
             </div>
