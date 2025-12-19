@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, Music, Heart, Ticket, Trophy, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import drapeauFrance from "@/assets/drapeau-france.png";
-import drapeauIrlande from "@/assets/drapeau-irlande.png";
+
+const drapeauFrance = "https://flagcdn.com/w80/fr.png";
+const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
 const events = [
   {
     id: 1,
