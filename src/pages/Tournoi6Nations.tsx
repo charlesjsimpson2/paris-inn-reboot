@@ -315,15 +315,21 @@ const Tournoi6Nations = () => {
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Car className="w-8 h-8 text-blue-600" />
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                      <Car className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">PROMO</span>
                   </div>
                   <h3 className="font-display text-2xl text-foreground mb-2">Parking privé</h3>
                   <p className="text-muted-foreground mb-4">
-                    Si vous venez en voiture, notre parking sécurisé est à votre disposition
+                    Tarif préférentiel pour nos clients : stationnez en toute sécurité
                   </p>
-                  <div className="inline-block bg-blue-600 text-white font-bold text-xl px-4 py-2 rounded-full">
-                    15€ / jour
+                  <div className="flex items-center gap-2">
+                    <span className="text-muted-foreground line-through text-lg">25€</span>
+                    <div className="inline-block bg-blue-600 text-white font-bold text-xl px-4 py-2 rounded-full">
+                      15€ / jour
+                    </div>
                   </div>
                 </div>
                 <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-green-200 dark:border-green-800/50 hover:scale-105 transition-transform duration-300">
