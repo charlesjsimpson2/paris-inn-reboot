@@ -44,18 +44,18 @@ const Actualites = () => {
                     <img src={enfoiresAffiche} alt="Les Enfoirés 2026" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-4 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center justify-center mb-2">
                       <span className="inline-flex items-center gap-1 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Music className="w-3 h-3" />{t('actualites.concert')}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('enfoires.title')}</h3>
-                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('actualites.enfoires.subtitle')}</p>
-                    <div className="mt-auto">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <h3 className="font-display text-lg text-foreground mb-2 group-hover:text-primary transition-colors text-center leading-tight min-h-[3rem] flex items-center justify-center">{t('enfoires.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-3 text-center leading-relaxed min-h-[3rem]">{t('actualites.enfoires.subtitle')}</p>
+                    <div className="mt-auto border-t border-border/30 pt-3">
+                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" /><span>{t('actualites.enfoires.date')}</span>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{t('actualites.enfoires.location')}</p>
+                      <p className="text-xs text-muted-foreground mt-1 text-center">{t('actualites.enfoires.location')}</p>
                     </div>
                   </div>
                 </article>
@@ -72,18 +72,18 @@ const Actualites = () => {
                     </div>
                   </div>
                   <div className="p-4 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center justify-center mb-2">
                       <span className="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Trophy className="w-3 h-3" />{t('rugby.tournament')}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('actualites.rugby.title')}</h3>
-                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('actualites.rugby.subtitle')}</p>
-                    <div className="mt-auto">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <h3 className="font-display text-lg text-foreground mb-2 group-hover:text-primary transition-colors text-center leading-tight min-h-[3rem] flex items-center justify-center">{t('actualites.rugby.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-3 text-center leading-relaxed min-h-[3rem]">{t('actualites.rugby.subtitle')}</p>
+                    <div className="mt-auto border-t border-border/30 pt-3">
+                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" /><span>{t('actualites.rugby.date')}</span>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{t('actualites.rugby.location')}</p>
+                      <p className="text-xs text-muted-foreground mt-1 text-center">{t('actualites.rugby.location')}</p>
                     </div>
                   </div>
                 </article>
@@ -95,18 +95,18 @@ const Actualites = () => {
                     <img src={salonAgricultureHero} alt="Salon de l'Agriculture" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-4 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center justify-center mb-2">
                       <span className="inline-flex items-center gap-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Leaf className="w-3 h-3" />{t('actualites.salon')}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('actualites.agriculture.title')}</h3>
-                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('actualites.agriculture.subtitle')}</p>
-                    <div className="mt-auto">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <h3 className="font-display text-lg text-foreground mb-2 group-hover:text-primary transition-colors text-center leading-tight min-h-[3rem] flex items-center justify-center">{t('actualites.agriculture.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-3 text-center leading-relaxed min-h-[3rem]">{t('actualites.agriculture.subtitle')}</p>
+                    <div className="mt-auto border-t border-border/30 pt-3">
+                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" /><span>{t('actualites.agriculture.date')}</span>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{t('actualites.agriculture.location')}</p>
+                      <p className="text-xs text-muted-foreground mt-1 text-center">{t('actualites.agriculture.location')}</p>
                     </div>
                   </div>
                 </article>
@@ -118,18 +118,18 @@ const Actualites = () => {
                     <img src={mikaHero} alt="MIKA Spinning Out Tour" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-4 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center justify-center mb-2">
                       <span className="inline-flex items-center gap-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Mic className="w-3 h-3" />{t('actualites.concert')}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('mika.title')}</h3>
-                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('mika.subtitle')}</p>
-                    <div className="mt-auto">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <h3 className="font-display text-lg text-foreground mb-2 group-hover:text-primary transition-colors text-center leading-tight min-h-[3rem] flex items-center justify-center">{t('mika.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-3 text-center leading-relaxed min-h-[3rem]">{t('mika.subtitle')}</p>
+                    <div className="mt-auto border-t border-border/30 pt-3">
+                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" /><span>16 {t('mika.february')} 2026</span>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-0.5 truncate">Accor Arena Paris</p>
+                      <p className="text-xs text-muted-foreground mt-1 text-center">Accor Arena Paris</p>
                     </div>
                   </div>
                 </article>
@@ -141,18 +141,18 @@ const Actualites = () => {
                     <img src={claraHero} alt="Clara Luciani Concert" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-4 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center justify-center mb-2">
                       <span className="inline-flex items-center gap-1 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Mic className="w-3 h-3" />{t('actualites.concert')}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('clara.title')}</h3>
-                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('clara.subtitle')}</p>
-                    <div className="mt-auto">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <h3 className="font-display text-lg text-foreground mb-2 group-hover:text-primary transition-colors text-center leading-tight min-h-[3rem] flex items-center justify-center">{t('clara.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-3 text-center leading-relaxed min-h-[3rem]">{t('clara.subtitle')}</p>
+                    <div className="mt-auto border-t border-border/30 pt-3">
+                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3" /><span>{t('actualites.clara.date')}</span>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-0.5 truncate">Accor Arena Paris</p>
+                      <p className="text-xs text-muted-foreground mt-1 text-center">Accor Arena Paris</p>
                     </div>
                   </div>
                 </article>
