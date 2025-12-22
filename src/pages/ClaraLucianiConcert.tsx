@@ -259,6 +259,37 @@ const ClaraLucianiConcert = () => {
           </div>
         </section>
 
+        {/* Offers Section */}
+        <section className="py-16 bg-gradient-to-br from-indigo-100 via-white to-blue-100 dark:from-indigo-950/30 dark:via-card dark:to-blue-950/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('clara.exclusiveOffers')}</h2>
+                <p className="text-muted-foreground">{t('clara.offersSubtitle')}</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-indigo-200 dark:border-indigo-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Car className="w-8 h-8 text-indigo-600" />
+                  </div>
+                  <h3 className="font-display text-2xl text-foreground mb-2">{t('clara.parking')}</h3>
+                  <p className="text-muted-foreground mb-4">{t('clara.parkingDesc')}</p>
+                  <div className="inline-block bg-indigo-600 text-white font-bold text-xl px-4 py-2 rounded-full">{t('clara.parkingPrice')}</div>
+                </div>
+                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Ticket className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="font-display text-2xl text-foreground mb-2">{t('clara.taxi')}</h3>
+                  <p className="text-muted-foreground mb-4">{t('clara.taxiDesc')}</p>
+                  <div className="inline-block bg-blue-600 text-white font-bold text-xl px-4 py-2 rounded-full">{t('clara.taxiDiscount')}</div>
+                </div>
+              </div>
+              <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('clara.offersNote')}</p>
+            </div>
+          </div>
+        </section>
+
         {/* Hotel Promo Section */}
         <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950/20 dark:via-background dark:to-indigo-950/20">
           <div className="container mx-auto px-4">
