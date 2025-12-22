@@ -160,9 +160,9 @@ const ClaraLucianiConcert = () => {
                     <iframe 
                       width="100%" 
                       height="100%" 
-                      src="https://www.youtube.com/embed/lpyQ1lM32Mg" 
-                      title="Clara Luciani - La Grenade" 
-                      frameBorder="0" 
+                      src="https://www.youtube.com/embed/NwxR84S6JQE" 
+                      title="Clara Luciani - Concert 2025" 
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                       allowFullScreen 
                       className="w-full h-full" 
