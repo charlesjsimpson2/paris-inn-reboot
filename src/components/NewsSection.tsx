@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
-import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
+import salonAgricultureHero from "@/assets/salon-agriculture.webp";
 import mikaAffiche from "@/assets/mika-cropped.jpg";
 import claraHero from "@/assets/clara-luciani-portrait.jpg";
 
