@@ -133,8 +133,8 @@ const MikaConcert = () => {
                 <div className="grid md:grid-cols-2 gap-6 items-start">
                   <div>
                     <h3 className="font-display text-xl text-foreground mb-3">{t('mika.bio.title')}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: t('mika.bio.text1') }} />
-                    <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.bio.text2') }} />
+                    <p className="text-muted-foreground leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: t('mika.bio.text1') }} />
+                    <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.bio.text2') }} />
                   </div>
                   <img 
                     src={mikaHero} 
