@@ -39,8 +39,8 @@ const ClaraLucianiConcert = () => {
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-rose-900 via-fuchsia-900 to-violet-900" />
-          <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a3e] via-[#2d2d5a] to-[#1a1a3e]" />
+          <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -51,21 +51,21 @@ const ClaraLucianiConcert = () => {
                 </div>
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                    <Music className="w-4 h-4 text-rose-200" />
+                    <Music className="w-4 h-4 text-blue-200" />
                     <span className="text-white/90 uppercase tracking-widest text-xs font-medium">{t('clara.tour')}</span>
                   </div>
                   <h1 className="font-display text-4xl md:text-6xl text-white mb-3 drop-shadow-lg">{t('clara.title')}</h1>
-                  <p className="text-xl md:text-2xl text-rose-200 font-display mb-6">{t('clara.subtitle')}</p>
+                  <p className="text-xl md:text-2xl text-blue-200 font-display mb-6">{t('clara.subtitle')}</p>
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-8">
-                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
+                    <div className="flex items-center gap-2 bg-[#3d5afe]/40 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
                       <Calendar className="w-4 h-4" />{t('clara.dateInfo')}
                     </div>
-                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
+                    <div className="flex items-center gap-2 bg-[#3d5afe]/40 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
                       <MapPin className="w-4 h-4" />Accor Arena Paris
                     </div>
                   </div>
                   <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-5">
-                    <div className="flex items-center justify-center gap-2 mb-3 text-rose-200">
+                    <div className="flex items-center justify-center gap-2 mb-3 text-blue-200">
                       <Clock className="w-4 h-4" />
                       <span className="text-xs uppercase tracking-wider font-medium">{t('clara.countdown')}</span>
                     </div>
@@ -77,10 +77,10 @@ const ClaraLucianiConcert = () => {
                         { value: countdown.seconds, label: t('clara.sec') }
                       ].map((item, idx) => (
                         <div key={idx}>
-                          <div className="bg-white/20 rounded-xl px-2 md:px-4 py-2">
+                          <div className="bg-[#3d5afe]/50 rounded-xl px-2 md:px-4 py-2">
                             <span className="font-display text-xl md:text-3xl text-white">{item.value}</span>
                           </div>
-                          <p className="text-rose-200 text-xs mt-1 uppercase">{item.label}</p>
+                          <p className="text-blue-200 text-xs mt-1 uppercase">{item.label}</p>
                         </div>
                       ))}
                     </div>
@@ -95,7 +95,7 @@ const ClaraLucianiConcert = () => {
         <section className="py-10 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 px-4 py-2 rounded-full mb-3">
+              <div className="inline-flex items-center gap-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-4 py-2 rounded-full mb-3">
                 <Sparkles className="w-4 h-4" />
                 <span className="font-medium text-sm">{t('clara.edition2026')}</span>
               </div>
@@ -106,7 +106,7 @@ const ClaraLucianiConcert = () => {
         </section>
 
         {/* Biography Section with Image */}
-        <section className="py-16 bg-rose-50/50 dark:bg-rose-950/10">
+        <section className="py-16 bg-indigo-50/50 dark:bg-indigo-950/10">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-10 items-start">
@@ -138,18 +138,18 @@ const ClaraLucianiConcert = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
-                <Music className="w-10 h-10 text-rose-600 mx-auto mb-3" />
+                <Music className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
                 <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('clara.albumTitle')}</h2>
                 <p className="text-muted-foreground">{t('clara.albumSubtitle')}</p>
               </div>
-              <div className="bg-gradient-to-br from-rose-100 to-fuchsia-100 dark:from-rose-900/30 dark:to-fuchsia-900/30 rounded-2xl p-8 border border-rose-200/50 dark:border-rose-800/30">
+              <div className="bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/30 dark:to-blue-900/30 rounded-2xl p-8 border border-indigo-200/50 dark:border-indigo-800/30">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
                     <h3 className="font-display text-2xl text-foreground mb-3">{t('clara.albumName')}</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: t('clara.albumDesc') }} />
                     <div className="flex flex-wrap gap-2">
                       {['La Grenade', 'Nue', 'Le reste', 'Amour toujours', 'Respire encore'].map((song) => (
-                        <span key={song} className="bg-rose-600/10 text-rose-700 dark:text-rose-300 px-3 py-1 rounded-full text-sm">
+                        <span key={song} className="bg-indigo-600/10 text-indigo-700 dark:text-indigo-300 px-3 py-1 rounded-full text-sm">
                           {song}
                         </span>
                       ))}
@@ -174,39 +174,39 @@ const ClaraLucianiConcert = () => {
         </section>
 
         {/* Concert Info */}
-        <section className="py-16 bg-gradient-to-br from-rose-100 via-white to-fuchsia-100 dark:from-rose-950/30 dark:via-card dark:to-fuchsia-950/30">
+        <section className="py-16 bg-gradient-to-br from-indigo-100 via-white to-blue-100 dark:from-indigo-950/30 dark:via-card dark:to-blue-950/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <Calendar className="w-10 h-10 text-rose-600 mx-auto mb-3" />
+                <Calendar className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
                 <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('clara.concertDates')}</h2>
                 <p className="text-muted-foreground">Accor Arena (Paris-Bercy)</p>
               </div>
               <div className="flex flex-col md:flex-row justify-center gap-6 mb-8">
-                <div className="bg-gradient-to-br from-rose-500 to-fuchsia-600 rounded-xl p-6 text-center shadow-lg flex-1 max-w-xs mx-auto md:mx-0">
+                <div className="bg-gradient-to-br from-[#3d5afe] to-[#1a1a3e] rounded-xl p-6 text-center shadow-lg flex-1 max-w-xs mx-auto md:mx-0">
                   <p className="font-display text-2xl text-white">{t('clara.date1')}</p>
-                  <p className="text-rose-200 text-sm mt-1">20h00</p>
+                  <p className="text-blue-200 text-sm mt-1">20h00</p>
                 </div>
-                <div className="bg-gradient-to-br from-fuchsia-500 to-violet-600 rounded-xl p-6 text-center shadow-lg flex-1 max-w-xs mx-auto md:mx-0">
+                <div className="bg-gradient-to-br from-[#5c6bc0] to-[#1a1a3e] rounded-xl p-6 text-center shadow-lg flex-1 max-w-xs mx-auto md:mx-0">
                   <p className="font-display text-2xl text-white">{t('clara.date2')}</p>
-                  <p className="text-fuchsia-200 text-sm mt-1">20h00</p>
+                  <p className="text-indigo-200 text-sm mt-1">20h00</p>
                 </div>
               </div>
               <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
                 <h3 className="font-display text-xl text-foreground mb-4 text-center">{t('clara.practicalInfo')}</h3>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div className="flex flex-col items-center gap-2">
-                    <Clock className="w-6 h-6 text-rose-600" />
+                    <Clock className="w-6 h-6 text-indigo-600" />
                     <span className="text-muted-foreground text-sm">{t('clara.doorsOpen')}</span>
                     <span className="font-medium text-foreground">19h00</span>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <Euro className="w-6 h-6 text-rose-600" />
+                    <Euro className="w-6 h-6 text-indigo-600" />
                     <span className="text-muted-foreground text-sm">{t('clara.priceRange')}</span>
                     <span className="font-medium text-foreground">39€ - 89€</span>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <MapPin className="w-6 h-6 text-rose-600" />
+                    <MapPin className="w-6 h-6 text-indigo-600" />
                     <span className="text-muted-foreground text-sm">{t('clara.venue')}</span>
                     <span className="font-medium text-foreground">Accor Arena, 8 Bd de Bercy</span>
                   </div>
@@ -217,42 +217,42 @@ const ClaraLucianiConcert = () => {
         </section>
 
         {/* Artist Stats */}
-        <section className="py-16 bg-gradient-to-br from-violet-900 via-fuchsia-900 to-rose-900 text-white relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-br from-[#1a1a3e] via-[#2d2d5a] to-[#3d5afe] text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
-                <Star className="w-12 h-12 text-rose-400 mx-auto mb-3" />
+                <Star className="w-12 h-12 text-blue-300 mx-auto mb-3" />
                 <h2 className="font-display text-3xl md:text-4xl mb-2">{t('clara.artistSection')}</h2>
-                <p className="text-rose-200">{t('clara.artistSubtitle')}</p>
+                <p className="text-blue-200">{t('clara.artistSubtitle')}</p>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-10">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-rose-300">{t('clara.musicalPath')}</h3>
+                  <h3 className="font-display text-xl mb-3 text-blue-300">{t('clara.musicalPath')}</h3>
                   <p className="text-white/80 text-sm leading-relaxed">{t('clara.musicalPathDesc')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-rose-300">{t('clara.awards')}</h3>
+                  <h3 className="font-display text-xl mb-3 text-blue-300">{t('clara.awards')}</h3>
                   <p className="text-white/80 text-sm leading-relaxed">{t('clara.awardsDesc')}</p>
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Mic className="w-8 h-8 text-rose-400 mx-auto mb-2" />
+                  <Mic className="w-8 h-8 text-blue-300 mx-auto mb-2" />
                   <p className="font-display text-3xl">3</p>
-                  <p className="text-rose-200 text-xs">{t('clara.albums')}</p>
+                  <p className="text-blue-200 text-xs">{t('clara.albums')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Star className="w-8 h-8 text-rose-400 mx-auto mb-2" />
+                  <Star className="w-8 h-8 text-blue-300 mx-auto mb-2" />
                   <p className="font-display text-3xl">3</p>
-                  <p className="text-rose-200 text-xs">{t('clara.victories')}</p>
+                  <p className="text-blue-200 text-xs">{t('clara.victories')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Music className="w-8 h-8 text-rose-400 mx-auto mb-2" />
+                  <Music className="w-8 h-8 text-blue-300 mx-auto mb-2" />
                   <p className="font-display text-3xl">1</p>
-                  <p className="text-rose-200 text-xs">{t('clara.diamond')}</p>
+                  <p className="text-blue-200 text-xs">{t('clara.diamond')}</p>
                 </div>
               </div>
             </div>
@@ -260,7 +260,7 @@ const ClaraLucianiConcert = () => {
         </section>
 
         {/* Hotel Promo Section */}
-        <section className="py-16 bg-gradient-to-br from-amber-50 via-white to-rose-50 dark:from-amber-950/20 dark:via-background dark:to-rose-950/20">
+        <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-950/20 dark:via-background dark:to-indigo-950/20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
@@ -287,8 +287,8 @@ const ClaraLucianiConcert = () => {
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-rose-600" />
+                        <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center flex-shrink-0">
+                          <Coffee className="w-5 h-5 text-indigo-600" />
                         </div>
                         <div>
                           <h4 className="font-medium text-foreground">{t('clara.hotelPromo.breakfast')}</h4>
@@ -296,8 +296,8 @@ const ClaraLucianiConcert = () => {
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-fuchsia-100 dark:bg-fuchsia-900/30 flex items-center justify-center flex-shrink-0">
-                          <Car className="w-5 h-5 text-fuchsia-600" />
+                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                          <Car className="w-5 h-5 text-blue-600" />
                         </div>
                         <div>
                           <h4 className="font-medium text-foreground">{t('clara.hotelPromo.parking')}</h4>
@@ -306,7 +306,7 @@ const ClaraLucianiConcert = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-primary/5 to-rose-100/50 dark:from-primary/10 dark:to-rose-900/20 p-8 md:p-10">
+                  <div className="bg-gradient-to-br from-primary/5 to-indigo-100/50 dark:from-primary/10 dark:to-indigo-900/20 p-8 md:p-10">
                     <h3 className="font-display text-2xl text-foreground mb-4">{t('clara.hotelPromo.comfort')}</h3>
                     <ul className="space-y-3">
                       <li className="flex items-center gap-3 text-muted-foreground">
@@ -367,17 +367,17 @@ const ClaraLucianiConcert = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-rose-500 via-fuchsia-500 to-violet-600 text-white">
+        <section className="py-16 bg-gradient-to-br from-[#3d5afe] via-[#5c6bc0] to-[#1a1a3e] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
-                <Gift className="w-10 h-10 text-rose-200 mx-auto mb-3" />
+                <Gift className="w-10 h-10 text-blue-200 mx-auto mb-3" />
                 <h2 className="font-display text-3xl md:text-4xl mb-2">{t('clara.bookStay')}</h2>
-                <p className="text-rose-200">{t('clara.bestConditions')}</p>
+                <p className="text-blue-200">{t('clara.bestConditions')}</p>
               </div>
               <div className="text-center">
                 <Link to="/reservation-seminaire">
-                  <Button size="lg" className="bg-white text-rose-600 hover:bg-rose-50 font-bold px-10 py-6 text-lg shadow-xl hover:scale-105 transition-all duration-300">
+                  <Button size="lg" className="bg-white text-indigo-600 hover:bg-indigo-50 font-bold px-10 py-6 text-lg shadow-xl hover:scale-105 transition-all duration-300">
                     <Music className="w-5 h-5 mr-3" />{t('clara.bookNow')}
                   </Button>
                 </Link>
