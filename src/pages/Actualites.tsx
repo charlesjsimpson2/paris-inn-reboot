@@ -37,113 +37,123 @@ const Actualites = () => {
               <h2 className="font-display text-3xl md:text-4xl text-foreground">{t('actualites.dontMiss')}</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
-              <Link to="/enfoires-2026" className="group">
-                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
-                  <div className="aspect-[4/3] overflow-hidden">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+              <Link to="/enfoires-2026" className="group h-full">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img src={enfoiresAffiche} alt="Les Enfoirés 2026" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1.5 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Music className="w-3 h-3" />{t('actualites.concert')}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('enfoires.title')}</h3>
-                    <p className="text-muted-foreground text-sm mb-3">{t('actualites.enfoires.subtitle')}</p>
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{t('actualites.enfoires.date')}</span>
+                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('enfoires.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('actualites.enfoires.subtitle')}</p>
+                    <div className="mt-auto">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" /><span>{t('actualites.enfoires.date')}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{t('actualites.enfoires.location')}</p>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">{t('actualites.enfoires.location')}</p>
                   </div>
                 </article>
               </Link>
 
-              <Link to="/tournoi-6-nations" className="group">
-                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+              <Link to="/tournoi-6-nations" className="group h-full">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+                  <div className="aspect-[3/4] overflow-hidden relative">
                     <img src={rugbyImage} alt="Tournoi 6 Nations" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center gap-3 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-2 px-4">
-                      <img src={drapeauFrance} alt="France" loading="lazy" className="w-8 h-5 object-cover rounded shadow-sm" />
-                      <span className="font-display text-foreground text-sm">VS</span>
-                      <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-8 h-5 object-cover rounded shadow-sm" />
+                    <div className="absolute bottom-2 left-2 right-2 flex items-center justify-center gap-2 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-1.5 px-3">
+                      <img src={drapeauFrance} alt="France" loading="lazy" className="w-6 h-4 object-cover rounded shadow-sm" />
+                      <span className="font-display text-foreground text-xs">VS</span>
+                      <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-6 h-4 object-cover rounded shadow-sm" />
                     </div>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Trophy className="w-3 h-3" />{t('rugby.tournament')}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('actualites.rugby.title')}</h3>
-                    <p className="text-muted-foreground text-sm mb-3">{t('actualites.rugby.subtitle')}</p>
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{t('actualites.rugby.date')}</span>
+                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('actualites.rugby.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('actualites.rugby.subtitle')}</p>
+                    <div className="mt-auto">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" /><span>{t('actualites.rugby.date')}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{t('actualites.rugby.location')}</p>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">{t('actualites.rugby.location')}</p>
                   </div>
                 </article>
               </Link>
 
-              <Link to="/salon-agriculture" className="group">
-                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
-                  <div className="aspect-[4/3] overflow-hidden">
+              <Link to="/salon-agriculture" className="group h-full">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img src={salonAgricultureHero} alt="Salon de l'Agriculture" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Leaf className="w-3 h-3" />{t('actualites.salon')}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('actualites.agriculture.title')}</h3>
-                    <p className="text-muted-foreground text-sm mb-3">{t('actualites.agriculture.subtitle')}</p>
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{t('actualites.agriculture.date')}</span>
+                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('actualites.agriculture.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('actualites.agriculture.subtitle')}</p>
+                    <div className="mt-auto">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" /><span>{t('actualites.agriculture.date')}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{t('actualites.agriculture.location')}</p>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">{t('actualites.agriculture.location')}</p>
                   </div>
                 </article>
               </Link>
 
-              <Link to="/mika-concert" className="group">
-                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
-                  <div className="aspect-[4/3] overflow-hidden">
+              <Link to="/mika-concert" className="group h-full">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img src={mikaHero} alt="MIKA Spinning Out Tour" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1.5 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Mic className="w-3 h-3" />{t('actualites.concert')}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('mika.title')}</h3>
-                    <p className="text-muted-foreground text-sm mb-3">{t('mika.subtitle')}</p>
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />16 {t('mika.february')} 2026</span>
+                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('mika.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('mika.subtitle')}</p>
+                    <div className="mt-auto">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" /><span>16 {t('mika.february')} 2026</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 truncate">Accor Arena Paris</p>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Accor Arena Paris</p>
                   </div>
                 </article>
               </Link>
 
-              <Link to="/clara-luciani-concert" className="group">
-                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
-                  <div className="aspect-[4/3] overflow-hidden">
+              <Link to="/clara-luciani-concert" className="group h-full">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img src={claraHero} alt="Clara Luciani Concert" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1.5 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-2 py-0.5 rounded-full text-xs font-medium">
                         <Mic className="w-3 h-3" />{t('actualites.concert')}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('clara.title')}</h3>
-                    <p className="text-muted-foreground text-sm mb-3">{t('clara.subtitle')}</p>
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{t('actualites.clara.date')}</span>
+                    <h3 className="font-display text-lg text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">{t('clara.title')}</h3>
+                    <p className="text-muted-foreground text-xs mb-2 line-clamp-2 flex-1">{t('clara.subtitle')}</p>
+                    <div className="mt-auto">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" /><span>{t('actualites.clara.date')}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 truncate">Accor Arena Paris</p>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Accor Arena Paris</p>
                   </div>
                 </article>
               </Link>
