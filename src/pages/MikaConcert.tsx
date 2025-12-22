@@ -115,12 +115,21 @@ const MikaConcert = () => {
         {/* Description Section */}
         <section className="py-16 bg-orange-50/50 dark:bg-orange-950/10">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-orange-100 dark:border-orange-900/20">
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
-                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText1') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText2') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText3') }} />
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-orange-100 dark:border-orange-900/20">
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
+                    <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText1') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText2') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText3') }} />
+                  </div>
+                </div>
+                <div className="order-first md:order-last">
+                  <img 
+                    src={mikaHero} 
+                    alt="MIKA en concert" 
+                    className="w-full h-auto rounded-2xl shadow-xl object-cover aspect-[4/5]" 
+                  />
                 </div>
               </div>
             </div>
@@ -326,13 +335,6 @@ const MikaConcert = () => {
           </div>
         </section>
 
-        {/* Hero Image Section */}
-        <section className="py-0">
-          <div className="relative h-[50vh] md:h-[60vh]">
-            <img src={mikaHero} alt="MIKA Spinning Out Tour" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 via-transparent to-transparent" />
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 text-white">
