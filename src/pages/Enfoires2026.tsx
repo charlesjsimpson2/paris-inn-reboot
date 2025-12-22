@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticket, Clock, Car } from "lucide-react";
+import { Calendar, MapPin, Music, Heart, Star, Users, Mic, Sparkles, Gift, Ticket, Clock, Car, Coffee, Wifi, Tv, Train } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
@@ -222,6 +222,95 @@ const Enfoires2026 = () => {
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('enfoires.offersNote')}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Hotel Promo Section */}
+        <section className="py-16 bg-gradient-to-br from-rose-50 via-white to-pink-50 dark:from-rose-950/20 dark:via-background dark:to-pink-950/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+                  <Star className="w-4 h-4" />
+                  <span className="font-medium text-sm">{t('enfoires.hotelPromo.badge')}</span>
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('enfoires.hotelPromo.title')}</h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t('enfoires.hotelPromo.subtitle')}</p>
+              </div>
+
+              <div className="bg-white dark:bg-card rounded-2xl shadow-xl border border-border/50 overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="p-8 md:p-10">
+                    <h3 className="font-display text-2xl text-foreground mb-4">{t('enfoires.hotelPromo.whyUs')}</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                          <Train className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-foreground">{t('enfoires.hotelPromo.location')}</h4>
+                          <p className="text-sm text-muted-foreground">{t('enfoires.hotelPromo.locationDesc')}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center flex-shrink-0">
+                          <Coffee className="w-5 h-5 text-pink-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-foreground">{t('enfoires.hotelPromo.breakfast')}</h4>
+                          <p className="text-sm text-muted-foreground">{t('enfoires.hotelPromo.breakfastDesc')}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-full bg-fuchsia-100 dark:bg-fuchsia-900/30 flex items-center justify-center flex-shrink-0">
+                          <Users className="w-5 h-5 text-fuchsia-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-foreground">{t('enfoires.hotelPromo.reception')}</h4>
+                          <p className="text-sm text-muted-foreground">{t('enfoires.hotelPromo.receptionDesc')}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/5 to-pink-100/50 dark:from-primary/10 dark:to-pink-900/20 p-8 md:p-10">
+                    <h3 className="font-display text-2xl text-foreground mb-4">{t('enfoires.hotelPromo.comfort')}</h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
+                          <Tv className="w-4 h-4 text-primary" />
+                        </div>
+                        <span>{t('enfoires.hotelPromo.tv')}</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
+                          <Wifi className="w-4 h-4 text-primary" />
+                        </div>
+                        <span>{t('enfoires.hotelPromo.wifi')}</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
+                          <Coffee className="w-4 h-4 text-primary" />
+                        </div>
+                        <span>{t('enfoires.hotelPromo.buffet')}</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
+                          <Car className="w-4 h-4 text-primary" />
+                        </div>
+                        <span>{t('enfoires.hotelPromo.parkingOption')}</span>
+                      </li>
+                    </ul>
+                    <div className="mt-6">
+                      <Link to="/nos-chambres">
+                        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                          {t('enfoires.hotelPromo.discoverRooms')}
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
