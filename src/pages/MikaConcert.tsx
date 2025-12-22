@@ -94,20 +94,15 @@ const MikaConcert = () => {
         </section>
 
         {/* About Section */}
-        <section className="py-16 bg-white dark:bg-background">
+        <section className="py-10 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full mb-3">
                 <Sparkles className="w-4 h-4" />
                 <span className="font-medium text-sm">{t('mika.edition2026')}</span>
               </div>
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('mika.uniqueShow')}</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-2xl mx-auto">{t('mika.showDesc')}</p>
-              <Link to="/reservation-seminaire">
-                <Button className="bg-orange-600 hover:bg-orange-700 text-white">
-                  <Music className="w-4 h-4 mr-2" />{t('mika.contactUs')}
-                </Button>
-              </Link>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('mika.uniqueShow')}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">{t('mika.showDesc')}</p>
             </div>
           </div>
         </section>
