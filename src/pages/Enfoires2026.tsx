@@ -53,7 +53,7 @@ const Enfoires2026 = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="flex justify-center order-2 md:order-1">
-                  <img src={enfoiresAffiche} alt="Les Enfoirés 2026" className="w-full max-w-sm shadow-2xl" />
+                  <img src={enfoiresAffiche} alt="Les Enfoirés 2026" className="w-full max-w-md md:max-w-lg shadow-2xl" />
                 </div>
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
