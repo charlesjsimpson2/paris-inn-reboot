@@ -1,9 +1,10 @@
-import { Calendar, ArrowRight, Music, Trophy, Leaf, Sparkles } from "lucide-react";
+import { Calendar, ArrowRight, Music, Trophy, Leaf, Sparkles, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
+import mikaAffiche from "@/assets/mika-affiche.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -49,6 +50,18 @@ export const NewsSection = () => {
       icon: Leaf,
       image: salonAgricultureHero,
     },
+    {
+      id: 4,
+      title: "MIKA",
+      subtitle: "Spinning Out Tour 2025",
+      dateStart: "Février 2025",
+      category: "Concert",
+      link: "/mika-concert",
+      bgColor: "bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600",
+      textColor: "text-orange-100",
+      icon: Mic,
+      image: mikaAffiche,
+    },
   ];
 
   return (
@@ -69,7 +82,7 @@ export const NewsSection = () => {
           <p className="text-muted-foreground text-lg">{t('news.subtitle')}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {events.map((event) => {
             const Icon = event.icon;
             return (
