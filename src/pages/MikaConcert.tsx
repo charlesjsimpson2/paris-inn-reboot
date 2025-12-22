@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Music, Star, Mic, Sparkles, Gift, Ticket, Clock, Car, Coffee, Wifi, Tv, Users, Train } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import mikaAffiche from "@/assets/mika-affiche.jpg";
+import mikaAffiche from "@/assets/mika-spinning-out-tour.webp";
 import mikaHero from "@/assets/mika-concert-hero.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const MikaConcert = () => {
   const { t } = useLanguage();
   
-  // Date à confirmer en février 2025
-  const targetDate = new Date('2025-02-15T20:00:00').getTime();
+  // Date confirmée : 16 février 2026 à 20h00
+  const targetDate = new Date('2026-02-16T20:00:00').getTime();
   
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
@@ -99,7 +99,7 @@ const MikaConcert = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full mb-4">
                 <Sparkles className="w-4 h-4" />
-                <span className="font-medium text-sm">{t('mika.edition2025')}</span>
+                <span className="font-medium text-sm">{t('mika.edition2026')}</span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('mika.uniqueShow')}</h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-2xl mx-auto">{t('mika.showDesc')}</p>
@@ -134,12 +134,12 @@ const MikaConcert = () => {
               <div className="text-center mb-10">
                 <Calendar className="w-10 h-10 text-orange-600 mx-auto mb-3" />
                 <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('mika.concertParis')}</h2>
-                <p className="text-muted-foreground">Accor Arena (Paris-Bercy) - {t('mika.february')} 2025</p>
+                <p className="text-muted-foreground">Accor Arena (Paris-Bercy) - {t('mika.monday')} 16 {t('mika.february')} 2026</p>
               </div>
               <div className="flex justify-center mb-6">
                 <div className="bg-gradient-to-br from-orange-500 to-pink-600 rounded-xl p-6 text-center shadow-lg">
-                  <p className="font-display text-2xl text-white">{t('mika.february')} 2025</p>
-                  <p className="text-orange-200 text-sm mt-1">{t('mika.dateToConfirm')}</p>
+                  <p className="font-display text-2xl text-white">{t('mika.monday')} 16 {t('mika.february')} 2026</p>
+                  <p className="text-orange-200 text-sm mt-1">20h00</p>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground bg-orange-50 dark:bg-orange-950/20 rounded-lg p-3">
