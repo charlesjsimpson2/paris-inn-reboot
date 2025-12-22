@@ -5,6 +5,7 @@ import { Calendar, MapPin, Music, Star, Mic, Sparkles, Gift, Ticket, Clock, Car 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import mikaAffiche from "@/assets/mika-affiche.jpg";
+import mikaHero from "@/assets/mika-concert-hero.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const MikaConcert = () => {
@@ -36,8 +37,11 @@ const MikaConcert = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-24 pb-16 overflow-hidden bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        <section className="relative pt-24 pb-16 overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={mikaHero} alt="MIKA Spinning Out Tour" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/90 via-pink-900/80 to-purple-900/90" />
+          </div>
           <div className="absolute inset-0 opacity-15">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
           </div>
