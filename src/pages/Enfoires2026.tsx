@@ -50,40 +50,47 @@ const Enfoires2026 = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <Heart className="w-4 h-4 text-pink-200" fill="currentColor" />
-                <span className="text-white/90 uppercase tracking-widest text-xs font-medium">{t('enfoires.restosCoeur')}</span>
-              </div>
-              <h1 className="font-display text-5xl md:text-7xl text-white mb-3 drop-shadow-lg">{t('enfoires.title')}</h1>
-              <p className="text-2xl md:text-3xl text-pink-200 font-display mb-8">{t('enfoires.ballade')}</p>
-              <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
-                  <Calendar className="w-5 h-5" />13 - 19 {t('enfoires.january')} 2026
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="flex justify-center order-2 md:order-1">
+                  <img src={enfoiresAffiche} alt="Les Enfoirés 2026" className="w-full max-w-sm shadow-2xl" />
                 </div>
-                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full text-white font-medium">
-                  <MapPin className="w-5 h-5" />Accor Arena Paris
-                </div>
-              </div>
-              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="flex items-center justify-center gap-2 mb-4 text-pink-200">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-xs uppercase tracking-wider font-medium">{t('enfoires.countdown')}</span>
-                </div>
-                <div className="grid grid-cols-4 gap-3 md:gap-6 text-center">
-                  {[
-                    { value: countdown.days, label: t('enfoires.days') },
-                    { value: countdown.hours, label: t('enfoires.hours') },
-                    { value: countdown.minutes, label: t('enfoires.min') },
-                    { value: countdown.seconds, label: t('enfoires.sec') }
-                  ].map((item, idx) => (
-                    <div key={idx}>
-                      <div className="bg-white/20 rounded-xl px-3 md:px-5 py-3">
-                        <span className="font-display text-2xl md:text-4xl text-white">{item.value}</span>
-                      </div>
-                      <p className="text-pink-200 text-xs mt-2 uppercase">{item.label}</p>
+                <div className="text-center md:text-left order-1 md:order-2">
+                  <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                    <Heart className="w-4 h-4 text-pink-200" fill="currentColor" />
+                    <span className="text-white/90 uppercase tracking-widest text-xs font-medium">{t('enfoires.restosCoeur')}</span>
+                  </div>
+                  <h1 className="font-display text-4xl md:text-6xl text-white mb-3 drop-shadow-lg">{t('enfoires.title')}</h1>
+                  <p className="text-xl md:text-2xl text-pink-200 font-display mb-6">{t('enfoires.ballade')}</p>
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-8">
+                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
+                      <Calendar className="w-4 h-4" />13 - 19 {t('enfoires.january')} 2026
                     </div>
-                  ))}
+                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
+                      <MapPin className="w-4 h-4" />Accor Arena Paris
+                    </div>
+                  </div>
+                  <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-5">
+                    <div className="flex items-center justify-center gap-2 mb-3 text-pink-200">
+                      <Clock className="w-4 h-4" />
+                      <span className="text-xs uppercase tracking-wider font-medium">{t('enfoires.countdown')}</span>
+                    </div>
+                    <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
+                      {[
+                        { value: countdown.days, label: t('enfoires.days') },
+                        { value: countdown.hours, label: t('enfoires.hours') },
+                        { value: countdown.minutes, label: t('enfoires.min') },
+                        { value: countdown.seconds, label: t('enfoires.sec') }
+                      ].map((item, idx) => (
+                        <div key={idx}>
+                          <div className="bg-white/20 rounded-xl px-2 md:px-4 py-2">
+                            <span className="font-display text-xl md:text-3xl text-white">{item.value}</span>
+                          </div>
+                          <p className="text-pink-200 text-xs mt-1 uppercase">{item.label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,25 +99,18 @@ const Enfoires2026 = () => {
 
         <section className="py-16 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="flex justify-center">
-                  <img src={enfoiresAffiche} alt="Les Enfoirés 2026" className="w-full max-w-md rounded-2xl shadow-2xl ring-1 ring-pink-100" />
-                </div>
-                <div className="text-center md:text-left">
-                  <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 px-4 py-2 rounded-full mb-4">
-                    <Sparkles className="w-4 h-4" />
-                    <span className="font-medium text-sm">{t('enfoires.edition2026')}</span>
-                  </div>
-                  <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('enfoires.uniqueShow')}</h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">{t('enfoires.showDesc')}</p>
-                  <Link to="/reservation-seminaire">
-                    <Button className="bg-pink-600 hover:bg-pink-700 text-white">
-                      <Heart className="w-4 h-4 mr-2" fill="currentColor" />{t('enfoires.contactUs')}
-                    </Button>
-                  </Link>
-                </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center gap-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 px-4 py-2 rounded-full mb-4">
+                <Sparkles className="w-4 h-4" />
+                <span className="font-medium text-sm">{t('enfoires.edition2026')}</span>
               </div>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('enfoires.uniqueShow')}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-2xl mx-auto">{t('enfoires.showDesc')}</p>
+              <Link to="/reservation-seminaire">
+                <Button className="bg-pink-600 hover:bg-pink-700 text-white">
+                  <Heart className="w-4 h-4 mr-2" fill="currentColor" />{t('enfoires.contactUs')}
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
