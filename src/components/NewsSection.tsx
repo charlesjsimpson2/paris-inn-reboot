@@ -5,7 +5,7 @@ import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import mikaAffiche from "@/assets/mika-cropped.jpg";
-import claraHero from "@/assets/clara-luciani-hero.jpg";
+import claraHero from "@/assets/clara-luciani-portrait.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
