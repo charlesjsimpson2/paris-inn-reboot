@@ -8,6 +8,7 @@ import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import mikaHero from "@/assets/mika-concert-hero.jpg";
+import claraHero from "@/assets/clara-luciani-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -36,7 +37,7 @@ const Actualites = () => {
               <h2 className="font-display text-3xl md:text-4xl text-foreground">{t('actualites.dontMiss')}</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
               <Link to="/enfoires-2026" className="group">
                 <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
                   <div className="aspect-[4/3] overflow-hidden">
@@ -120,6 +121,27 @@ const Actualites = () => {
                     <p className="text-muted-foreground text-sm mb-3">{t('mika.subtitle')}</p>
                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
                       <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />16 {t('mika.february')} 2026</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">Accor Arena Paris</p>
+                  </div>
+                </article>
+              </Link>
+
+              <Link to="/clara-luciani-concert" className="group">
+                <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={claraHero} alt="Clara Luciani Concert" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1.5 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-3 py-1 rounded-full text-xs font-medium">
+                        <Mic className="w-3 h-3" />{t('actualites.concert')}
+                      </span>
+                    </div>
+                    <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('clara.title')}</h3>
+                    <p className="text-muted-foreground text-sm mb-3">{t('clara.subtitle')}</p>
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{t('actualites.clara.date')}</span>
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Accor Arena Paris</p>
                   </div>
