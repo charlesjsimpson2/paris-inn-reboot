@@ -48,7 +48,7 @@ const ClaraLucianiConcert = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="flex justify-center order-2 md:order-1">
-                  <img src={claraHero} alt="Clara Luciani" className="w-full max-w-md md:max-w-lg shadow-2xl rounded-xl" />
+                  <img src={claraHero} alt="Clara Luciani" className="w-full max-w-lg md:max-w-xl lg:max-w-2xl shadow-2xl rounded-xl" />
                 </div>
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
