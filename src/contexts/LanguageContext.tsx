@@ -210,7 +210,7 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.newsletter.button': 'S\'inscrire',
     'actualites.upcoming': 'À venir',
     'actualites.dontMiss': 'Nos événements à ne pas manquer',
-    'actualites.concert': 'Concert solidaire',
+    'actualites.concert': 'En concert',
     'actualites.salon': 'Salon',
     'actualites.enfoires.subtitle': 'La Ballade des Enfoirés - Le rendez-vous musical caritatif de l\'année',
     'actualites.enfoires.date': '13 - 19 janvier 2026',
@@ -876,7 +876,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Actualites Page - Events
     'actualites.upcoming': 'Upcoming',
     'actualites.dontMiss': 'Events not to be missed',
-    'actualites.concert': 'Charity concert',
+    'actualites.concert': 'In concert',
     'actualites.salon': 'Exhibition',
     'actualites.enfoires.subtitle': 'La Ballade des Enfoirés - The annual charity music event',
     'actualites.enfoires.date': 'January 13 - 19, 2026',
@@ -1365,7 +1365,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Actualites Page - Events
     'actualites.upcoming': 'Próximamente',
     'actualites.dontMiss': 'Eventos que no debe perderse',
-    'actualites.concert': 'Concierto solidario',
+    'actualites.concert': 'En concierto',
     'actualites.salon': 'Feria',
     'actualites.enfoires.subtitle': 'La Ballade des Enfoirés - El evento musical benéfico del año',
     'actualites.enfoires.date': '13 - 19 de enero de 2026',
@@ -1854,7 +1854,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Actualites Page - Events
     'actualites.upcoming': 'In arrivo',
     'actualites.dontMiss': 'Eventi da non perdere',
-    'actualites.concert': 'Concerto di beneficenza',
+    'actualites.concert': 'In concerto',
     'actualites.salon': 'Fiera',
     'actualites.enfoires.subtitle': 'La Ballade des Enfoirés - L\'evento musicale di beneficenza dell\'anno',
     'actualites.enfoires.date': '13 - 19 gennaio 2026',
@@ -2343,7 +2343,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Actualites Page - Events
     'actualites.upcoming': 'Em breve',
     'actualites.dontMiss': 'Eventos imperdíveis',
-    'actualites.concert': 'Show beneficente',
+    'actualites.concert': 'Em concerto',
     'actualites.salon': 'Feira',
     'actualites.enfoires.subtitle': 'La Ballade des Enfoirés - O evento musical beneficente do ano',
     'actualites.enfoires.date': '13 - 19 de janeiro de 2026',
