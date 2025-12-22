@@ -116,7 +116,7 @@ const MikaConcert = () => {
         <section className="py-16 bg-orange-50/50 dark:bg-orange-950/10">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="grid md:grid-cols-2 gap-8 mb-10">
                 <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-orange-100 dark:border-orange-900/20">
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
                     <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText1') }} />
@@ -124,20 +124,19 @@ const MikaConcert = () => {
                     <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText3') }} />
                   </div>
                 </div>
-                <div className="order-first md:order-last">
-                  <div className="flex flex-col md:flex-row gap-5">
-                    <img 
-                      src={mikaHero} 
-                      alt="MIKA en concert" 
-                      className="w-full md:w-1/2 h-auto rounded-xl shadow-lg object-cover aspect-square" 
-                    />
-                    <div className="flex-1 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-orange-900/30 dark:to-pink-900/30 rounded-xl p-5 border border-orange-200/50 dark:border-orange-800/30">
-                      <h3 className="font-display text-lg text-foreground mb-2">{t('mika.bio.title')}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-2" dangerouslySetInnerHTML={{ __html: t('mika.bio.text1') }} />
-                      <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.bio.text2') }} />
-                    </div>
-                  </div>
+                <div className="bg-gradient-to-br from-orange-100 to-pink-100 dark:from-orange-900/30 dark:to-pink-900/30 rounded-2xl p-8 md:p-10 border border-orange-200/50 dark:border-orange-800/30">
+                  <h3 className="font-display text-2xl text-foreground mb-4">{t('mika.bio.title')}</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: t('mika.bio.text1') }} />
+                  <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.bio.text2') }} />
                 </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={mikaHero} 
+                  alt="MIKA en concert" 
+                  className="w-full h-64 md:h-80 object-cover" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-orange-900/60 via-transparent to-transparent" />
               </div>
             </div>
           </div>
