@@ -5,7 +5,6 @@ import { Calendar, MapPin, Music, Star, Mic, Sparkles, Gift, Ticket, Clock, Car 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import mikaAffiche from "@/assets/mika-affiche.jpg";
-import mikaHero from "@/assets/mika-concert-hero.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const MikaConcert = () => {
@@ -51,13 +50,13 @@ const MikaConcert = () => {
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                     <Music className="w-4 h-4 text-orange-200" />
-                    <span className="text-white/90 uppercase tracking-widest text-xs font-medium">Spinning Out Tour</span>
+                    <span className="text-white/90 uppercase tracking-widest text-xs font-medium">{t('mika.tour')}</span>
                   </div>
-                  <h1 className="font-display text-4xl md:text-6xl text-white mb-3 drop-shadow-lg">MIKA</h1>
-                  <p className="text-xl md:text-2xl text-orange-200 font-display mb-6">Spinning Out Tour 2025</p>
+                  <h1 className="font-display text-4xl md:text-6xl text-white mb-3 drop-shadow-lg">{t('mika.title')}</h1>
+                  <p className="text-xl md:text-2xl text-orange-200 font-display mb-6">{t('mika.subtitle')}</p>
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-8">
                     <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
-                      <Calendar className="w-4 h-4" />Février 2025 (date à confirmer)
+                      <Calendar className="w-4 h-4" />{t('mika.dateInfo')}
                     </div>
                     <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
                       <MapPin className="w-4 h-4" />Accor Arena Paris
@@ -66,14 +65,14 @@ const MikaConcert = () => {
                   <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-5">
                     <div className="flex items-center justify-center gap-2 mb-3 text-orange-200">
                       <Clock className="w-4 h-4" />
-                      <span className="text-xs uppercase tracking-wider font-medium">Compte à rebours</span>
+                      <span className="text-xs uppercase tracking-wider font-medium">{t('mika.countdown')}</span>
                     </div>
                     <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
                       {[
-                        { value: countdown.days, label: "Jours" },
-                        { value: countdown.hours, label: "Heures" },
-                        { value: countdown.minutes, label: "Min" },
-                        { value: countdown.seconds, label: "Sec" }
+                        { value: countdown.days, label: t('mika.days') },
+                        { value: countdown.hours, label: t('mika.hours') },
+                        { value: countdown.minutes, label: t('mika.min') },
+                        { value: countdown.seconds, label: t('mika.sec') }
                       ].map((item, idx) => (
                         <div key={idx}>
                           <div className="bg-white/20 rounded-xl px-2 md:px-4 py-2">
@@ -96,15 +95,13 @@ const MikaConcert = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-4 py-2 rounded-full mb-4">
                 <Sparkles className="w-4 h-4" />
-                <span className="font-medium text-sm">Spinning Out Tour 2025</span>
+                <span className="font-medium text-sm">{t('mika.edition2025')}</span>
               </div>
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Un spectacle inoubliable</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
-                MIKA revient à Paris avec son nouveau spectacle "Spinning Out Tour" ! L'artiste international vous promet une soirée exceptionnelle remplie de hits iconiques et de nouvelles chansons.
-              </p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('mika.uniqueShow')}</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-2xl mx-auto">{t('mika.showDesc')}</p>
               <Link to="/reservation-seminaire">
                 <Button className="bg-orange-600 hover:bg-orange-700 text-white">
-                  <Music className="w-4 h-4 mr-2" />Nous contacter
+                  <Music className="w-4 h-4 mr-2" />{t('mika.contactUs')}
                 </Button>
               </Link>
             </div>
@@ -117,15 +114,9 @@ const MikaConcert = () => {
             <div className="max-w-4xl mx-auto">
               <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-orange-100 dark:border-orange-900/20">
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
-                  <p className="text-lg leading-relaxed">
-                    <strong>MIKA</strong>, l'artiste pop aux multiples facettes, annonce son retour triomphal sur scène avec le <strong>"Spinning Out Tour"</strong>. Après le succès mondial de ses albums et de ses prestations télévisées, il promet un show à couper le souffle.
-                  </p>
-                  <p className="leading-relaxed">
-                    Connu pour ses tubes comme <em>"Grace Kelly"</em>, <em>"Relax, Take It Easy"</em>, <em>"Love Today"</em> et bien d'autres, MIKA vous entraînera dans un univers coloré et festif. Sa voix exceptionnelle et son énergie débordante vous garantissent une soirée mémorable.
-                  </p>
-                  <p className="leading-relaxed">
-                    L'<strong>Accor Arena (Paris-Bercy)</strong> accueillera cet événement unique. Ne manquez pas l'occasion de vivre cette expérience musicale exceptionnelle !
-                  </p>
+                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText2') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText3') }} />
                 </div>
               </div>
             </div>
@@ -138,13 +129,13 @@ const MikaConcert = () => {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
                 <Calendar className="w-10 h-10 text-orange-600 mx-auto mb-3" />
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">Concert à Paris</h2>
-                <p className="text-muted-foreground">Accor Arena (Paris-Bercy) - Février 2025</p>
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('mika.concertParis')}</h2>
+                <p className="text-muted-foreground">Accor Arena (Paris-Bercy) - {t('mika.february')} 2025</p>
               </div>
               <div className="flex justify-center mb-6">
                 <div className="bg-gradient-to-br from-orange-500 to-pink-600 rounded-xl p-6 text-center shadow-lg">
-                  <p className="font-display text-2xl text-white">Février 2025</p>
-                  <p className="text-orange-200 text-sm mt-1">Date à confirmer</p>
+                  <p className="font-display text-2xl text-white">{t('mika.february')} 2025</p>
+                  <p className="text-orange-200 text-sm mt-1">{t('mika.dateToConfirm')}</p>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground bg-orange-50 dark:bg-orange-950/20 rounded-lg p-3">
@@ -164,38 +155,34 @@ const MikaConcert = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
                 <Star className="w-12 h-12 text-orange-400 mx-auto mb-3" />
-                <h2 className="font-display text-3xl md:text-4xl mb-2">Un artiste d'exception</h2>
-                <p className="text-orange-200">Une carrière internationale époustouflante</p>
+                <h2 className="font-display text-3xl md:text-4xl mb-2">{t('mika.exceptionalArtist')}</h2>
+                <p className="text-orange-200">{t('mika.internationalCareer')}</p>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-10">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-orange-300">Parcours musical</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Depuis son premier album "Life in Cartoon Motion" en 2007, MIKA a vendu plus de 10 millions d'albums dans le monde. Sa voix unique et son style flamboyant ont conquis les fans du monde entier.
-                  </p>
+                  <h3 className="font-display text-xl mb-3 text-orange-300">{t('mika.musicalPath')}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">{t('mika.musicalPathDesc')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-orange-300">Spectacles légendaires</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Ses concerts sont de véritables fêtes visuelles et sonores. Entre costumes extravagants, décors colorés et chorégraphies énergiques, chaque show est une expérience unique et inoubliable.
-                  </p>
+                  <h3 className="font-display text-xl mb-3 text-orange-300">{t('mika.legendaryShows')}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">{t('mika.legendaryShowsDesc')}</p>
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <Mic className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                   <p className="font-display text-3xl">10M+</p>
-                  <p className="text-orange-200 text-xs">Albums vendus</p>
+                  <p className="text-orange-200 text-xs">{t('mika.albumsSold')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <Star className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                   <p className="font-display text-3xl">6</p>
-                  <p className="text-orange-200 text-xs">Albums studio</p>
+                  <p className="text-orange-200 text-xs">{t('mika.studioAlbums')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <Music className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                   <p className="font-display text-3xl">15+</p>
-                  <p className="text-orange-200 text-xs">Années de carrière</p>
+                  <p className="text-orange-200 text-xs">{t('mika.careerYears')}</p>
                 </div>
               </div>
             </div>
@@ -207,28 +194,28 @@ const MikaConcert = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">Offres exclusives</h2>
-                <p className="text-muted-foreground">Profitez de nos services pour votre soirée</p>
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('mika.exclusiveOffers')}</h2>
+                <p className="text-muted-foreground">{t('mika.offersSubtitle')}</p>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-orange-200 dark:border-orange-800/50 hover:scale-105 transition-transform duration-300">
                   <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4">
                     <Car className="w-8 h-8 text-orange-600" />
                   </div>
-                  <h3 className="font-display text-2xl text-foreground mb-2">Parking sécurisé</h3>
-                  <p className="text-muted-foreground mb-4">Profitez de notre parking privé et sécurisé pour votre véhicule pendant toute la durée du concert.</p>
-                  <div className="inline-block bg-orange-600 text-white font-bold text-xl px-4 py-2 rounded-full">15€ / nuit</div>
+                  <h3 className="font-display text-2xl text-foreground mb-2">{t('mika.parking')}</h3>
+                  <p className="text-muted-foreground mb-4">{t('mika.parkingDesc')}</p>
+                  <div className="inline-block bg-orange-600 text-white font-bold text-xl px-4 py-2 rounded-full">{t('mika.parkingPrice')}</div>
                 </div>
                 <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-pink-200 dark:border-pink-800/50 hover:scale-105 transition-transform duration-300">
                   <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mb-4">
                     <Ticket className="w-8 h-8 text-pink-600" />
                   </div>
-                  <h3 className="font-display text-2xl text-foreground mb-2">Navette taxi</h3>
-                  <p className="text-muted-foreground mb-4">Réservez votre taxi à l'avance et bénéficiez de tarifs préférentiels pour rejoindre l'Accor Arena.</p>
-                  <div className="inline-block bg-pink-600 text-white font-bold text-xl px-4 py-2 rounded-full">-10% taxi</div>
+                  <h3 className="font-display text-2xl text-foreground mb-2">{t('mika.taxi')}</h3>
+                  <p className="text-muted-foreground mb-4">{t('mika.taxiDesc')}</p>
+                  <div className="inline-block bg-pink-600 text-white font-bold text-xl px-4 py-2 rounded-full">{t('mika.taxiDiscount')}</div>
                 </div>
               </div>
-              <p className="text-center text-sm text-muted-foreground mt-6 italic">*Offres réservées aux clients de l'hôtel</p>
+              <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('mika.offersNote')}</p>
             </div>
           </div>
         </section>
@@ -238,7 +225,7 @@ const MikaConcert = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <Music className="w-10 h-10 text-orange-600 mx-auto mb-3" />
-              <h2 className="font-display text-3xl text-foreground">Découvrez MIKA en concert</h2>
+              <h2 className="font-display text-3xl text-foreground">{t('mika.watchVideo')}</h2>
             </div>
             <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl ring-1 ring-orange-100 dark:ring-orange-900/30">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0CGVgAYJyjk" title="MIKA - Grace Kelly (Official Video)" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
@@ -252,13 +239,13 @@ const MikaConcert = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
                 <Gift className="w-10 h-10 text-orange-200 mx-auto mb-3" />
-                <h2 className="font-display text-3xl md:text-4xl mb-2">Réservez votre séjour</h2>
-                <p className="text-orange-200">Profitez des meilleures conditions</p>
+                <h2 className="font-display text-3xl md:text-4xl mb-2">{t('mika.bookStay')}</h2>
+                <p className="text-orange-200">{t('mika.bestConditions')}</p>
               </div>
               <div className="text-center">
                 <Link to="/reservation-seminaire">
                   <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50 font-bold px-10 py-6 text-lg shadow-xl hover:scale-105 transition-all duration-300">
-                    <Music className="w-5 h-5 mr-3" />Réserver maintenant
+                    <Music className="w-5 h-5 mr-3" />{t('mika.bookNow')}
                   </Button>
                 </Link>
               </div>
