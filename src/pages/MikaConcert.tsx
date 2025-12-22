@@ -338,7 +338,7 @@ const MikaConcert = () => {
               <h2 className="font-display text-3xl text-foreground">{t('mika.watchVideo')}</h2>
             </div>
             <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl ring-1 ring-orange-100 dark:ring-orange-900/30">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0CGVgAYJyjk" title="MIKA - Grace Kelly (Official Video)" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PdKB51C6TEE" title="MIKA - Spinning Out Tour" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
             </div>
           </div>
         </section>
