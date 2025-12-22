@@ -119,7 +119,7 @@ const Actualites = () => {
                     <h3 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{t('mika.title')}</h3>
                     <p className="text-muted-foreground text-sm mb-3">{t('mika.subtitle')}</p>
                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{t('actualites.mika.date')}</span>
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />16 {t('mika.february')} 2026</span>
                     </div>
                     <p className="text-xs text-muted-foreground mt-1">Accor Arena Paris</p>
                   </div>
