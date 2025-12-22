@@ -124,12 +124,17 @@ const MikaConcert = () => {
                     <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.aboutText3') }} />
                   </div>
                 </div>
-                <div className="order-first md:order-last">
+                <div className="order-first md:order-last space-y-6">
                   <img 
                     src={mikaHero} 
                     alt="MIKA en concert" 
-                    className="w-full h-auto rounded-2xl shadow-xl object-cover aspect-[4/5]" 
+                    className="w-full h-auto rounded-2xl shadow-xl object-cover aspect-[3/4]" 
                   />
+                  <div className="bg-gradient-to-br from-orange-100 to-pink-100 dark:from-orange-900/30 dark:to-pink-900/30 rounded-xl p-6 border border-orange-200/50 dark:border-orange-800/30">
+                    <h3 className="font-display text-xl text-foreground mb-3">{t('mika.bio.title')}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: t('mika.bio.text1') }} />
+                    <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('mika.bio.text2') }} />
+                  </div>
                 </div>
               </div>
             </div>

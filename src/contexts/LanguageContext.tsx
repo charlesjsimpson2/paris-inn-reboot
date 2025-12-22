@@ -501,7 +501,10 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.hotelPromo.buffet': 'Petit-déjeuner buffet inclus',
     'mika.hotelPromo.parkingOption': 'Parking privé sécurisé (15€/jour)',
     'mika.hotelPromo.discoverRooms': 'Découvrir nos chambres',
-    'actualites.mika.date': 'Février 2025',
+    'mika.bio.title': 'Qui est MIKA ?',
+    'mika.bio.text1': '<strong>Michael Holbrook Penniman Jr.</strong>, dit MIKA, est un auteur-compositeur-interprète britannico-libanais né à Beyrouth en 1983. Révélé en 2007 avec son album <em>"Life in Cartoon Motion"</em> et le tube planétaire <em>"Grace Kelly"</em>, il est devenu une icône de la pop mondiale.',
+    'mika.bio.text2': 'Après le succès de <em>"My Name Is Michael Holbrook"</em> (2019), MIKA revient en 2026 avec le <strong>Spinning Out Tour</strong>, une tournée mondiale célébrant 17 ans de carrière avec un spectacle visuel époustouflant mêlant ses plus grands succès et de nouvelles créations.',
+    'actualites.mika.date': '16 février 2026',
   },
   en: {
     // Navigation
@@ -798,6 +801,9 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.hotelPromo.buffet': 'Buffet breakfast included',
     'mika.hotelPromo.parkingOption': 'Private secure parking (€15/day)',
     'mika.hotelPromo.discoverRooms': 'Discover our rooms',
+    'mika.bio.title': 'Who is MIKA?',
+    'mika.bio.text1': '<strong>Michael Holbrook Penniman Jr.</strong>, known as MIKA, is a British-Lebanese singer-songwriter born in Beirut in 1983. He rose to fame in 2007 with his album <em>"Life in Cartoon Motion"</em> and the worldwide hit <em>"Grace Kelly"</em>, becoming a global pop icon.',
+    'mika.bio.text2': 'Following the success of <em>"My Name Is Michael Holbrook"</em> (2019), MIKA returns in 2026 with the <strong>Spinning Out Tour</strong>, a world tour celebrating 17 years of career with a stunning visual show blending his greatest hits and new creations.',
     'actualites.mika.date': '16 February 2026',
     
     // Actualites Page - Events
@@ -1284,7 +1290,10 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.hotelPromo.buffet': 'Desayuno buffet incluido',
     'mika.hotelPromo.parkingOption': 'Parking privado seguro (15€/día)',
     'mika.hotelPromo.discoverRooms': 'Descubrir nuestras habitaciones',
-    'actualites.mika.date': 'Febrero 2025',
+    'mika.bio.title': '¿Quién es MIKA?',
+    'mika.bio.text1': '<strong>Michael Holbrook Penniman Jr.</strong>, conocido como MIKA, es un cantautor británico-libanés nacido en Beirut en 1983. Saltó a la fama en 2007 con su álbum <em>"Life in Cartoon Motion"</em> y el éxito mundial <em>"Grace Kelly"</em>, convirtiéndose en un icono del pop mundial.',
+    'mika.bio.text2': 'Tras el éxito de <em>"My Name Is Michael Holbrook"</em> (2019), MIKA regresa en 2026 con el <strong>Spinning Out Tour</strong>, una gira mundial que celebra 17 años de carrera con un espectáculo visual impresionante que mezcla sus mayores éxitos y nuevas creaciones.',
+    'actualites.mika.date': '16 febrero 2026',
 
     // Actualites Page - Events
     'actualites.upcoming': 'Próximamente',
@@ -1770,7 +1779,10 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.hotelPromo.buffet': 'Colazione a buffet inclusa',
     'mika.hotelPromo.parkingOption': 'Parcheggio privato sicuro (15€/giorno)',
     'mika.hotelPromo.discoverRooms': 'Scopri le nostre camere',
-    'actualites.mika.date': 'Febbraio 2025',
+    'mika.bio.title': 'Chi è MIKA?',
+    'mika.bio.text1': '<strong>Michael Holbrook Penniman Jr.</strong>, noto come MIKA, è un cantautore britannico-libanese nato a Beirut nel 1983. È diventato famoso nel 2007 con il suo album <em>"Life in Cartoon Motion"</em> e il successo mondiale <em>"Grace Kelly"</em>, diventando un\'icona del pop mondiale.',
+    'mika.bio.text2': 'Dopo il successo di <em>"My Name Is Michael Holbrook"</em> (2019), MIKA torna nel 2026 con lo <strong>Spinning Out Tour</strong>, un tour mondiale che celebra 17 anni di carriera con uno spettacolo visivo mozzafiato che mescola i suoi più grandi successi e nuove creazioni.',
+    'actualites.mika.date': '16 febbraio 2026',
 
     // Actualites Page - Events
     'actualites.upcoming': 'In arrivo',
@@ -2256,7 +2268,10 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.hotelPromo.buffet': 'Café da manhã buffet incluído',
     'mika.hotelPromo.parkingOption': 'Estacionamento privado seguro (15€/dia)',
     'mika.hotelPromo.discoverRooms': 'Descubra nossos quartos',
-    'actualites.mika.date': 'Fevereiro 2025',
+    'mika.bio.title': 'Quem é MIKA?',
+    'mika.bio.text1': '<strong>Michael Holbrook Penniman Jr.</strong>, conhecido como MIKA, é um cantor e compositor britânico-libanês nascido em Beirute em 1983. Ficou famoso em 2007 com seu álbum <em>"Life in Cartoon Motion"</em> e o sucesso mundial <em>"Grace Kelly"</em>, tornando-se um ícone do pop mundial.',
+    'mika.bio.text2': 'Após o sucesso de <em>"My Name Is Michael Holbrook"</em> (2019), MIKA retorna em 2026 com o <strong>Spinning Out Tour</strong>, uma turnê mundial celebrando 17 anos de carreira com um show visual deslumbrante misturando seus maiores sucessos e novas criações.',
+    'actualites.mika.date': '16 fevereiro 2026',
 
     // Actualites Page - Events
     'actualites.upcoming': 'Em breve',
