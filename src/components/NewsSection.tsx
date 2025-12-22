@@ -5,6 +5,7 @@ import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import mikaAffiche from "@/assets/mika-affiche.jpg";
+import claraHero from "@/assets/clara-luciani-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -12,12 +13,14 @@ const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
 export const NewsSection = () => {
   const { t } = useLanguage();
 
+  // Events with sortable dates (YYYY-MM-DD format for sorting)
   const events = [
     {
       id: 1,
       title: t('enfoires.title'),
       subtitle: t('enfoires.ballade'),
       dateStart: t('actualites.enfoires.date'),
+      sortDate: "2026-01-13",
       category: t('actualites.concert'),
       link: "/enfoires-2026",
       bgColor: "bg-gradient-to-br from-pink-500 via-fuchsia-500 to-purple-600",
@@ -31,6 +34,7 @@ export const NewsSection = () => {
       subtitle: t('rugby.tournament'),
       subtitleWithFlags: true,
       dateStart: t('actualites.rugby.date'),
+      sortDate: "2026-02-22",
       category: t('rugby.tournament'),
       link: "/tournoi-6-nations",
       bgColor: "bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700",
@@ -43,6 +47,7 @@ export const NewsSection = () => {
       title: t('actualites.agriculture.title'),
       subtitle: t('agriculture.biggestFarm'),
       dateStart: t('actualites.agriculture.date'),
+      sortDate: "2026-02-21",
       category: t('actualites.salon'),
       link: "/salon-agriculture",
       bgColor: "bg-gradient-to-br from-green-500 via-emerald-500 to-teal-600",
@@ -55,6 +60,7 @@ export const NewsSection = () => {
       title: t('mika.title'),
       subtitle: t('mika.subtitle'),
       dateStart: t('actualites.mika.date'),
+      sortDate: "2026-02-16",
       category: t('actualites.concert'),
       link: "/mika-concert",
       bgColor: "bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600",
@@ -62,7 +68,25 @@ export const NewsSection = () => {
       icon: Mic,
       image: mikaAffiche,
     },
+    {
+      id: 5,
+      title: t('clara.title'),
+      subtitle: t('clara.subtitle'),
+      dateStart: t('actualites.clara.date'),
+      sortDate: "2026-02-18",
+      category: t('actualites.concert'),
+      link: "/clara-luciani-concert",
+      bgColor: "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-600",
+      textColor: "text-indigo-100",
+      icon: Mic,
+      image: claraHero,
+    },
   ];
+
+  // Sort events by date (closest first)
+  const sortedEvents = [...events].sort((a, b) => 
+    new Date(a.sortDate).getTime() - new Date(b.sortDate).getTime()
+  );
 
   return (
     <section className="relative py-16 overflow-hidden">
@@ -82,8 +106,8 @@ export const NewsSection = () => {
           <p className="text-muted-foreground text-lg">{t('news.subtitle')}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {events.map((event) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {sortedEvents.map((event) => {
             const Icon = event.icon;
             return (
               <Link key={event.id} to={event.link} className="group">
@@ -96,19 +120,19 @@ export const NewsSection = () => {
                       <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                       <div className={`absolute inset-0 bg-gradient-to-t from-current to-transparent opacity-60`} />
                     </div>
-                    <div className="flex-1 p-6 flex flex-col justify-center">
-                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 w-fit mb-3">
+                    <div className="flex-1 p-4 flex flex-col justify-center">
+                      <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 w-fit mb-2">
                         <Icon className="w-3.5 h-3.5" />{event.category}
                       </div>
-                      <h3 className="font-display text-xl md:text-2xl text-white mb-1 group-hover:translate-x-1 transition-transform flex items-center gap-2 flex-wrap">
-                        {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-6 h-4 object-cover shadow" />}
+                      <h3 className="font-display text-lg md:text-xl text-white mb-1 group-hover:translate-x-1 transition-transform flex items-center gap-2 flex-wrap">
+                        {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow" />}
                         {event.title}
-                        {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-6 h-4 object-cover shadow" />}
+                        {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-5 h-3 object-cover shadow" />}
                       </h3>
-                      <p className="text-white/70 text-sm mb-3">{event.subtitle}</p>
+                      <p className="text-white/70 text-xs mb-2 line-clamp-2">{event.subtitle}</p>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center text-white/80 text-sm"><Calendar className="w-4 h-4 mr-1.5" />{event.dateStart}</div>
-                        <div className="flex items-center text-white font-semibold text-sm group-hover:translate-x-1 transition-transform">{t('news.see')}<ArrowRight className="w-4 h-4 ml-1" /></div>
+                        <div className="flex items-center text-white/80 text-xs"><Calendar className="w-3 h-3 mr-1" />{event.dateStart}</div>
+                        <div className="flex items-center text-white font-semibold text-xs group-hover:translate-x-1 transition-transform">{t('news.see')}<ArrowRight className="w-3 h-3 ml-1" /></div>
                       </div>
                     </div>
                   </div>
