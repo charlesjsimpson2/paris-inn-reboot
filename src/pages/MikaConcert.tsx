@@ -38,9 +38,9 @@ const MikaConcert = () => {
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={mikaHero} alt="MIKA Spinning Out Tour" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/90 via-pink-900/80 to-purple-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-900 via-pink-900 to-purple-900" />
+          <div className="absolute inset-0 opacity-15">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
           </div>
           <div className="absolute inset-0 opacity-15">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
@@ -323,6 +323,14 @@ const MikaConcert = () => {
             <div className="max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl ring-1 ring-orange-100 dark:ring-orange-900/30">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0CGVgAYJyjk" title="MIKA - Grace Kelly (Official Video)" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
             </div>
+          </div>
+        </section>
+
+        {/* Hero Image Section */}
+        <section className="py-0">
+          <div className="relative h-[50vh] md:h-[60vh]">
+            <img src={mikaHero} alt="MIKA Spinning Out Tour" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 via-transparent to-transparent" />
           </div>
         </section>
 
