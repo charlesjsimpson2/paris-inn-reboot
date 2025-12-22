@@ -1,7 +1,7 @@
 import { Calendar, ArrowRight, Music, Trophy, Leaf, Sparkles, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
+import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import mikaAffiche from "@/assets/mika-affiche.jpg";
@@ -26,7 +26,7 @@ export const NewsSection = () => {
       bgColor: "bg-gradient-to-br from-pink-500 via-fuchsia-500 to-purple-600",
       textColor: "text-pink-100",
       icon: Music,
-      image: enfoiresAffiche,
+      image: enfoiresLogo,
     },
     {
       id: 2,
