@@ -5,6 +5,7 @@ import { Calendar, MapPin, Music, Star, Mic, Sparkles, Gift, Ticket, Clock, Car,
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import claraHero from "@/assets/clara-luciani-hero.jpg";
+import claraPortrait from "@/assets/clara-luciani-portrait.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreSuperieure from "@/assets/chambre-superieure-balcon.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -113,7 +114,7 @@ const ClaraLucianiConcert = () => {
                 {/* Image à gauche */}
                 <div className="order-2 md:order-1">
                   <img 
-                    src={claraHero} 
+                    src={claraPortrait} 
                     alt="Clara Luciani" 
                     className="w-full h-auto rounded-2xl shadow-xl object-cover" 
                   />
