@@ -136,7 +136,7 @@ const MikaConcert = () => {
                   <img 
                     src={mikaHero} 
                     alt="MIKA en concert" 
-                    className="w-full h-auto rounded-xl shadow-lg object-cover aspect-[3/4]" 
+                    className="w-full max-w-xs h-auto rounded-xl shadow-lg object-cover aspect-[3/4] mx-auto" 
                   />
                 </div>
               </div>
