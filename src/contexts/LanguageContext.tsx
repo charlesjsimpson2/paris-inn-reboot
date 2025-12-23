@@ -587,6 +587,11 @@ const translations: Record<Language, Record<string, string>> = {
     'clara.bookNow': 'Réserver maintenant',
     'actualites.clara.date': '18 & 19 février 2026',
     
+    // Related Events Component
+    'relatedEvents.title': 'Autres événements à venir',
+    'relatedEvents.subtitle': 'Découvrez nos offres pour les prochains événements parisiens',
+    'relatedEvents.viewAll': 'Voir tous les événements',
+    
     // Semi-Marathon de Paris
     'actualites.semimarathon.date': '8 mars 2026',
     'actualites.sport': 'Sport',
@@ -987,6 +992,11 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.pastEventsDesc': 'Discover moments shared by our guests during major Parisian events',
     'actualites.photosComing': 'Photos coming soon...',
     'actualites.noUpcoming': 'No upcoming events at the moment. Check back soon!',
+    
+    // Related Events Component
+    'relatedEvents.title': 'Other upcoming events',
+    'relatedEvents.subtitle': 'Discover our offers for upcoming Parisian events',
+    'relatedEvents.viewAll': 'View all events',
     
     // News Section (Homepage)
     'news.dontMiss': 'Don\'t miss!',

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RelatedEvents } from "@/components/RelatedEvents";
 
 const Enfoires2026 = () => {
   const { t } = useLanguage();
@@ -345,6 +346,9 @@ const Enfoires2026 = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Events */}
+        <RelatedEvents currentEventId="enfoires" />
       </main>
       <Footer />
     </div>

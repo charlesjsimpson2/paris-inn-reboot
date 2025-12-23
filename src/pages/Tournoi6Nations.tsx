@@ -5,6 +5,7 @@ import { Calendar, MapPin, Train, Trophy, Clock, Car, Ticket } from "lucide-reac
 import { Link } from "react-router-dom";
 import rugbyHero from "@/assets/rugby-france-irlande.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RelatedEvents } from "@/components/RelatedEvents";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -251,6 +252,9 @@ const Tournoi6Nations = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Events */}
+        <RelatedEvents currentEventId="rugby" />
       </main>
       <Footer />
     </div>

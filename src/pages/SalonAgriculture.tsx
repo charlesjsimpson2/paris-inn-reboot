@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Leaf, Users, Clock, Utensils, TreeDeciduous, Hotel, Car, Ticket, Star, Coffee, Wifi, Tv } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RelatedEvents } from "@/components/RelatedEvents";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
@@ -322,6 +323,9 @@ const SalonAgriculture = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Events */}
+        <RelatedEvents currentEventId="agriculture" />
       </main>
       <Footer />
     </div>
