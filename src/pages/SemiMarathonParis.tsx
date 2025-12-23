@@ -5,6 +5,7 @@ import { Calendar, MapPin, Timer, Star, Trophy, Heart, Clock, Car, Coffee, Wifi,
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
+import semiMarathonCourse from "@/assets/semi-marathon-course.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const SemiMarathonParis = () => {
@@ -108,10 +109,17 @@ const SemiMarathonParis = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-emerald-100 dark:border-emerald-900/20 mb-8">
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
-                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText1') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText2') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText3') }} />
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                  <img 
+                    src={semiMarathonCourse} 
+                    alt="Coureurs du Semi-Marathon de Paris" 
+                    className="w-full h-auto rounded-xl shadow-lg object-cover" 
+                  />
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
+                    <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText1') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText2') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText3') }} />
+                  </div>
                 </div>
               </div>
               
