@@ -21,6 +21,7 @@ export const NewsSection = () => {
   const { t } = useLanguage();
 
   // Events with sortable dates (YYYY-MM-DD format for sorting)
+  // endDate is the last day of the event - events are hidden after this date
   const events = [
     {
       id: 1,
@@ -28,6 +29,7 @@ export const NewsSection = () => {
       subtitle: t('enfoires.ballade'),
       dateStart: t('actualites.enfoires.date'),
       sortDate: "2026-01-13",
+      endDate: "2026-01-19", // Dernier jour des Enfoirés
       category: t('actualites.concert'),
       link: "/enfoires-2026",
       bgColor: "bg-gradient-to-br from-pink-500 via-fuchsia-500 to-purple-600",
@@ -42,6 +44,7 @@ export const NewsSection = () => {
       subtitleWithFlags: true,
       dateStart: t('actualites.rugby.date'),
       sortDate: "2026-02-22",
+      endDate: "2026-02-22", // Match France-Irlande
       category: t('rugby.tournament'),
       link: "/tournoi-6-nations",
       bgColor: "bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700",
@@ -55,6 +58,7 @@ export const NewsSection = () => {
       subtitle: t('agriculture.biggestFarm'),
       dateStart: t('actualites.agriculture.date'),
       sortDate: "2026-02-21",
+      endDate: "2026-03-01", // Fin du Salon de l'Agriculture
       category: t('actualites.salon'),
       link: "/salon-agriculture",
       bgColor: "bg-gradient-to-br from-green-500 via-emerald-500 to-teal-600",
@@ -68,6 +72,7 @@ export const NewsSection = () => {
       subtitle: t('mika.subtitle'),
       dateStart: t('actualites.mika.date'),
       sortDate: "2026-02-16",
+      endDate: "2026-02-16", // Concert Mika
       category: t('actualites.concert'),
       link: "/mika-concert",
       bgColor: "bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600",
@@ -81,6 +86,7 @@ export const NewsSection = () => {
       subtitle: t('clara.subtitle'),
       dateStart: t('actualites.clara.date'),
       sortDate: "2026-02-18",
+      endDate: "2026-02-18", // Concert Clara Luciani
       category: t('actualites.concert'),
       link: "/clara-luciani-concert",
       bgColor: "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-600",
@@ -90,10 +96,20 @@ export const NewsSection = () => {
     },
   ];
 
-  // Sort events by date (closest first)
-  const sortedEvents = [...events].sort((a, b) => 
-    new Date(a.sortDate).getTime() - new Date(b.sortDate).getTime()
-  );
+  // Get today's date at midnight for comparison
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Filter out past events and sort by date (closest first)
+  const sortedEvents = [...events]
+    .filter(event => {
+      const eventEndDate = new Date(event.endDate);
+      eventEndDate.setHours(23, 59, 59, 999); // End of the last day
+      return eventEndDate >= today;
+    })
+    .sort((a, b) => 
+      new Date(a.sortDate).getTime() - new Date(b.sortDate).getTime()
+    );
 
   return (
     <section className="relative py-16 overflow-hidden">
