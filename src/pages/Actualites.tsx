@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, Camera, Music, Trophy, Leaf, Mic, Clock } from "lucide-react";
+import { Calendar, Camera, Music, Trophy, Leaf, Mic, Clock, Timer } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
@@ -9,6 +9,7 @@ import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import mikaHero from "@/assets/mika-concert-hero.jpg";
 import claraHero from "@/assets/clara-luciani-hero.jpg";
+import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -88,6 +89,20 @@ const Actualites = () => {
       icon: Trophy,
       badgeColor: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
       hasFlags: true,
+    },
+    {
+      id: "semimarathon",
+      title: t('semimarathon.title'),
+      subtitle: t('semimarathon.subtitle'),
+      date: t('actualites.semimarathon.date'),
+      sortDate: "2026-03-08",
+      endDate: "2026-03-08",
+      location: "Paris",
+      category: t('actualites.sport'),
+      link: "/semi-marathon-paris",
+      image: semiMarathonHero,
+      icon: Timer,
+      badgeColor: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400",
     },
   ];
 
