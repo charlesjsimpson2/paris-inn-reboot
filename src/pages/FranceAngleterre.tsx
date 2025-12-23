@@ -352,7 +352,7 @@ const FranceAngleterre = () => {
         </section>
 
         {/* CTA Réservation */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-red-600">
+        <section className="py-20 bg-blue-700">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Réservez votre séjour pour le Crunch</h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Profitez des meilleures conditions pour vivre ce match légendaire entre la France et l'Angleterre</p>
