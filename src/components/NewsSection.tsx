@@ -90,7 +90,7 @@ export const NewsSection = () => {
       endDate: "2026-02-18", // Concert Clara Luciani
       category: t('actualites.concert'),
       link: "/clara-luciani-concert",
-      bgColor: "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-600",
+      bgColor: "bg-gradient-to-br from-sky-500 via-cyan-500 to-teal-600",
       textColor: "text-indigo-100",
       icon: Mic,
       image: claraHero,
