@@ -404,13 +404,13 @@ const FranceAngleterre = () => {
                 </div>
 
                 {/* Taxi */}
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-purple-200 dark:border-purple-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Ticket className="w-7 h-7 text-purple-600" />
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-red-200 dark:border-red-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Ticket className="w-7 h-7 text-red-600" />
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-2">Service Taxi</h3>
                   <p className="text-muted-foreground text-sm mb-4">Aller et retour vers le Stade de France</p>
-                  <div className="inline-block bg-purple-600 text-white font-bold text-lg px-4 py-2 rounded-full">-10%</div>
+                  <div className="inline-block bg-red-600 text-white font-bold text-lg px-4 py-2 rounded-full">-10%</div>
                 </div>
 
               </div>
