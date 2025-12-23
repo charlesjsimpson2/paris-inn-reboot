@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 
-import franceAngleterreHero from "@/assets/france-angleterre-hero.png";
+import franceAngleterreHero from "@/assets/france-angleterre-match.png";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauAngleterre = "https://flagcdn.com/w80/gb-eng.png";
