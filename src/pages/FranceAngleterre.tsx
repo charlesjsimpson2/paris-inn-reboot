@@ -56,9 +56,9 @@ const FranceAngleterre = () => {
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-red-900" />
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-800 via-slate-100 to-red-700" />
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,hsl(var(--foreground))_1px,transparent_1px),radial-gradient(circle_at_80%_70%,hsl(var(--foreground))_1px,transparent_1px)] bg-[length:50px_50px]" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
@@ -66,7 +66,7 @@ const FranceAngleterre = () => {
                 {/* Image sur le côté */}
                 <div className="flex justify-center order-2 md:order-1">
                   <div className="relative group">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-white to-red-500 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                     <img 
                       src={franceAngleterreHero} 
                       alt="France vs Angleterre" 
@@ -81,25 +81,25 @@ const FranceAngleterre = () => {
                     <span className="bg-blue-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
                       <img src={drapeauFrance} alt="France" className="w-5 h-4 object-cover rounded-sm" /> France
                     </span>
-                    <span className="text-white text-xl font-bold">VS</span>
+                    <span className="text-slate-800 text-xl font-bold">VS</span>
                     <span className="bg-red-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
                       <img src={drapeauAngleterre} alt="Angleterre" className="w-5 h-4 object-cover rounded-sm" /> Angleterre
                     </span>
                   </div>
-                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
+                  <div className="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
                     <Trophy className="w-4 h-4" />
                     <span className="font-medium text-sm">Tournoi des 6 Nations 2026</span>
                   </div>
-                  <h1 className="font-display text-4xl md:text-6xl text-white mb-4">France vs Angleterre</h1>
-                  <p className="text-white/90 text-lg md:text-xl mb-6">Le Crunch - La rivalité légendaire du rugby européen</p>
-                  <div className="flex flex-wrap justify-center md:justify-start gap-3 text-white/90">
-                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <h1 className="font-display text-4xl md:text-6xl text-slate-900 mb-4">France vs Angleterre</h1>
+                  <p className="text-slate-700 text-lg md:text-xl mb-6">Le Crunch - La rivalité légendaire du rugby européen</p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-3 text-slate-700">
+                    <div className="flex items-center gap-2 bg-slate-900/80 text-white backdrop-blur-sm px-4 py-2 rounded-full">
                       <Calendar className="w-4 h-4" /><span>14 Mars 2026</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <div className="flex items-center gap-2 bg-slate-900/80 text-white backdrop-blur-sm px-4 py-2 rounded-full">
                       <Clock className="w-4 h-4" /><span>20h10</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <div className="flex items-center gap-2 bg-slate-900/80 text-white backdrop-blur-sm px-4 py-2 rounded-full">
                       <MapPin className="w-4 h-4" /><span>Stade de France</span>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ const FranceAngleterre = () => {
         </section>
 
         {/* Accès facile */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-700 via-slate-800 to-red-700 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="font-display text-3xl md:text-4xl mb-6">Accès facile au Stade de France</h2>
