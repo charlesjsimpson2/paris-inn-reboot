@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Timer, Star, Trophy, Heart, Clock, Car, Coffee, Wifi, Tv, Users, Train, Utensils, Droplets, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
-import semiMarathonCourse from "@/assets/semi-marathon-course.jpg";
+import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
+import semiMarathonCoureurs from "@/assets/semi-marathon-coureurs.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const SemiMarathonParis = () => {
@@ -111,7 +111,7 @@ const SemiMarathonParis = () => {
               <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-emerald-100 dark:border-emerald-900/20 mb-8">
                 <div className="grid md:grid-cols-2 gap-8 items-start">
                   <img 
-                    src={semiMarathonCourse} 
+                    src={semiMarathonCoureurs} 
                     alt="Coureurs du Semi-Marathon de Paris" 
                     className="w-full h-auto rounded-xl shadow-lg object-cover" 
                   />
