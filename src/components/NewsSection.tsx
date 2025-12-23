@@ -7,6 +7,7 @@ import salonAgricultureHero from "@/assets/salon-agriculture.webp";
 import mikaAffiche from "@/assets/mika-cropped.jpg";
 import claraHero from "@/assets/clara-luciani-portrait.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
+import wutangHero from "@/assets/wu-tang-concert.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -108,6 +109,20 @@ export const NewsSection = () => {
       textColor: "text-emerald-100",
       icon: Timer,
       image: semiMarathonHero,
+    },
+    {
+      id: 7,
+      title: t('wutang.title'),
+      subtitle: t('wutang.subtitle'),
+      dateStart: t('actualites.wutang.date'),
+      sortDate: "2026-03-11",
+      endDate: "2026-03-11", // Concert Wu-Tang Clan
+      category: t('actualites.concert'),
+      link: "/wu-tang-concert",
+      bgColor: "bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-600",
+      textColor: "text-yellow-100",
+      icon: Mic,
+      image: wutangHero,
     },
   ];
 

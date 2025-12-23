@@ -7,6 +7,7 @@ import claraHero from "@/assets/clara-luciani-hero.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
+import wutangHero from "@/assets/wu-tang-concert.jpg";
 
 interface RelatedEventsProps {
   currentEventId: string;
@@ -93,6 +94,19 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       color: "from-[#E94E4B] to-[#3BB5DC]",
       bgColor: "bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20",
       textColor: "text-[#E94E4B]",
+    },
+    {
+      id: "wutang",
+      title: t('wutang.title'),
+      date: t('actualites.wutang.date'),
+      sortDate: "2026-03-11",
+      endDate: "2026-03-11",
+      link: "/wu-tang-concert",
+      image: wutangHero,
+      icon: Mic,
+      color: "from-yellow-500 to-amber-600",
+      bgColor: "bg-yellow-100 dark:bg-yellow-900/30",
+      textColor: "text-yellow-600 dark:text-yellow-400",
     },
   ];
 
