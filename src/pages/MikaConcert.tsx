@@ -8,6 +8,7 @@ import mikaAffiche from "@/assets/mika-spinning-out-tour.webp";
 import mikaHero from "@/assets/mika-concert-hero.jpg";
 import mikaBanner from "@/assets/mika-spinning-tour-banner.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RelatedEvents } from "@/components/RelatedEvents";
 
 const MikaConcert = () => {
   const { t } = useLanguage();
@@ -518,6 +519,9 @@ const MikaConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Events */}
+        <RelatedEvents currentEventId="mika" />
       </main>
       <Footer />
     </div>

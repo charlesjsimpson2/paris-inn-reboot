@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import semiMarathonCoureurs from "@/assets/semi-marathon-coureurs.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RelatedEvents } from "@/components/RelatedEvents";
 
 const SemiMarathonParis = () => {
   const { t } = useLanguage();
@@ -355,6 +356,9 @@ const SemiMarathonParis = () => {
             </a>
           </div>
         </section>
+
+        {/* Related Events */}
+        <RelatedEvents currentEventId="semimarathon" />
       </main>
       <Footer />
     </div>

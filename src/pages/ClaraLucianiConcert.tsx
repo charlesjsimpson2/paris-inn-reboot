@@ -9,6 +9,7 @@ import claraPortrait from "@/assets/clara-luciani-portrait.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreSuperieure from "@/assets/chambre-superieure-balcon.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RelatedEvents } from "@/components/RelatedEvents";
 
 const ClaraLucianiConcert = () => {
   const { t } = useLanguage();
@@ -484,6 +485,9 @@ const ClaraLucianiConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Events */}
+        <RelatedEvents currentEventId="clara" />
       </main>
       <Footer />
     </div>
