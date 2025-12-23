@@ -55,36 +55,53 @@ const FranceAngleterre = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-          <img src={franceAngleterreHero} alt="Match France - Angleterre" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-black/60 to-red-900/80" />
-          <div className="absolute inset-0 flex items-end">
-            <div className="container mx-auto px-4 pb-16">
-              <div className="max-w-3xl">
-                <div className="inline-flex items-center gap-3 mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
-                    <img src={drapeauFrance} alt="France" className="w-5 h-4 object-cover rounded-sm" /> France
-                  </span>
-                  <span className="text-white text-xl font-bold">VS</span>
-                  <span className="bg-red-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
-                    <img src={drapeauAngleterre} alt="Angleterre" className="w-5 h-4 object-cover rounded-sm" /> Angleterre
-                  </span>
-                </div>
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
-                  <Trophy className="w-4 h-4" />
-                  <span className="font-medium text-sm">Tournoi des 6 Nations 2026</span>
-                </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white mb-4">France vs Angleterre</h1>
-                <p className="text-white/90 text-lg md:text-xl mb-6">Le Crunch - La rivalité légendaire du rugby européen</p>
-                <div className="flex flex-wrap gap-4 text-white/90">
-                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <Calendar className="w-4 h-4" /><span>14 Mars 2026</span>
+        <section className="relative pt-24 pb-16 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-red-900" />
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                {/* Image sur le côté */}
+                <div className="flex justify-center order-2 md:order-1">
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+                    <img 
+                      src={franceAngleterreHero} 
+                      alt="France vs Angleterre" 
+                      className="relative w-full max-w-md rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500" 
+                    />
                   </div>
-                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <Clock className="w-4 h-4" /><span>20h10</span>
+                </div>
+                
+                {/* Texte */}
+                <div className="text-center md:text-left order-1 md:order-2">
+                  <div className="inline-flex items-center gap-3 mb-4">
+                    <span className="bg-blue-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
+                      <img src={drapeauFrance} alt="France" className="w-5 h-4 object-cover rounded-sm" /> France
+                    </span>
+                    <span className="text-white text-xl font-bold">VS</span>
+                    <span className="bg-red-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
+                      <img src={drapeauAngleterre} alt="Angleterre" className="w-5 h-4 object-cover rounded-sm" /> Angleterre
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <MapPin className="w-4 h-4" /><span>Stade de France</span>
+                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
+                    <Trophy className="w-4 h-4" />
+                    <span className="font-medium text-sm">Tournoi des 6 Nations 2026</span>
+                  </div>
+                  <h1 className="font-display text-4xl md:text-6xl text-white mb-4">France vs Angleterre</h1>
+                  <p className="text-white/90 text-lg md:text-xl mb-6">Le Crunch - La rivalité légendaire du rugby européen</p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-3 text-white/90">
+                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <Calendar className="w-4 h-4" /><span>14 Mars 2026</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <Clock className="w-4 h-4" /><span>20h10</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <MapPin className="w-4 h-4" /><span>Stade de France</span>
+                    </div>
                   </div>
                 </div>
               </div>
