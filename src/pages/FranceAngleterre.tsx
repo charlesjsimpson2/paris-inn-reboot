@@ -326,15 +326,6 @@ const FranceAngleterre = () => {
                   <div className="inline-block bg-purple-600 text-white font-bold text-lg px-4 py-2 rounded-full">-10%</div>
                 </div>
 
-                {/* Tirage maillot */}
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-red-200 dark:border-red-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Trophy className="w-7 h-7 text-red-600" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Tirage au sort</h3>
-                  <p className="text-muted-foreground text-sm mb-4">Gagnez un maillot officiel (France ou Angleterre)</p>
-                  <div className="inline-block bg-red-600 text-white font-bold text-lg px-4 py-2 rounded-full">Gratuit</div>
-                </div>
               </div>
 
               <p className="text-center text-sm text-muted-foreground mt-6 italic">* Offres réservées aux clients séjournant pendant le week-end du match</p>
