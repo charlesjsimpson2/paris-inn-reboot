@@ -108,6 +108,19 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       bgColor: "bg-yellow-100 dark:bg-yellow-900/30",
       textColor: "text-yellow-600 dark:text-yellow-400",
     },
+    {
+      id: "france-angleterre",
+      title: "France vs Angleterre",
+      date: "14 mars 2026",
+      sortDate: "2026-03-14",
+      endDate: "2026-03-14",
+      link: "/france-angleterre",
+      image: rugbyImage,
+      icon: Trophy,
+      color: "from-blue-600 to-red-600",
+      bgColor: "bg-purple-100 dark:bg-purple-900/30",
+      textColor: "text-purple-600 dark:text-purple-400",
+    },
   ];
 
   // Filter out current event and past events, then take up to 3
