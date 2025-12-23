@@ -507,6 +507,19 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.bio.text2': 'Après le succès de <em>"My Name Is Michael Holbrook"</em> (2019), MIKA revient en 2026 avec le <strong>Spinning Out Tour</strong>, une tournée mondiale célébrant 17 ans de carrière avec un spectacle visuel époustouflant mêlant ses plus grands succès et de nouvelles créations.',
     'actualites.mika.date': '16 février 2026',
     
+    // Tirage au sort T-shirt (tous concerts)
+    'concert.raffle.badge': 'Jeu-concours exclusif',
+    'concert.raffle.title': 'Gagnez un T-shirt officiel !',
+    'concert.raffle.subtitle': 'Tirage au sort réservé aux clients de l\'hôtel',
+    'concert.raffle.desc': 'Participez à notre tirage au sort exclusif et tentez de remporter un T-shirt officiel de la tournée ! Chaque client séjournant à l\'hôtel à l\'occasion du concert est automatiquement inscrit.',
+    'concert.raffle.howTo': 'Comment participer ?',
+    'concert.raffle.step1': 'Réservez votre chambre pour la date du concert',
+    'concert.raffle.step2': 'Inscrivez-vous à la réception à votre arrivée',
+    'concert.raffle.step3': 'Le tirage au sort a lieu le jour du concert à 18h',
+    'concert.raffle.winner': 'Le gagnant est annoncé à la réception',
+    'concert.raffle.note': '*Un T-shirt officiel à gagner par concert. Voir conditions à la réception.',
+    
+
     // Clara Luciani Concert Page
     'clara.tour': 'Tournée 2026',
     'clara.title': 'Clara Luciani',
@@ -940,6 +953,19 @@ const translations: Record<Language, Record<string, string>> = {
     'mika.bio.text2': 'Following the success of <em>"My Name Is Michael Holbrook"</em> (2019), MIKA returns in 2026 with the <strong>Spinning Out Tour</strong>, a world tour celebrating 17 years of career with a stunning visual show blending his greatest hits and new creations.',
     'actualites.mika.date': '16 February 2026',
     
+    // T-shirt raffle (all concerts)
+    'concert.raffle.badge': 'Exclusive contest',
+    'concert.raffle.title': 'Win an official T-shirt!',
+    'concert.raffle.subtitle': 'Raffle reserved for hotel guests',
+    'concert.raffle.desc': 'Enter our exclusive raffle and try to win an official tour T-shirt! Every guest staying at the hotel for the concert is automatically entered.',
+    'concert.raffle.howTo': 'How to participate?',
+    'concert.raffle.step1': 'Book your room for the concert date',
+    'concert.raffle.step2': 'Register at reception upon arrival',
+    'concert.raffle.step3': 'The draw takes place on concert day at 6 PM',
+    'concert.raffle.winner': 'The winner is announced at reception',
+    'concert.raffle.note': '*One official T-shirt to win per concert. See conditions at reception.',
+    
+
     // Actualites Page - Events
     'actualites.upcoming': 'Upcoming',
     'actualites.dontMiss': 'Events not to be missed',
