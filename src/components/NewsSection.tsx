@@ -1,4 +1,4 @@
-import { Calendar, ArrowRight, Music, Trophy, Leaf, Sparkles, Mic, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, ArrowRight, Music, Trophy, Leaf, Sparkles, Mic, Timer, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresLogo from "@/assets/enfoires-logo-new.png";
@@ -6,6 +6,7 @@ import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture.webp";
 import mikaAffiche from "@/assets/mika-cropped.jpg";
 import claraHero from "@/assets/clara-luciani-portrait.jpg";
+import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -93,6 +94,20 @@ export const NewsSection = () => {
       textColor: "text-indigo-100",
       icon: Mic,
       image: claraHero,
+    },
+    {
+      id: 6,
+      title: t('semimarathon.title'),
+      subtitle: t('semimarathon.subtitle'),
+      dateStart: t('actualites.semimarathon.date'),
+      sortDate: "2026-03-08",
+      endDate: "2026-03-08", // Semi-Marathon de Paris
+      category: t('actualites.sport'),
+      link: "/semi-marathon-paris",
+      bgColor: "bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600",
+      textColor: "text-emerald-100",
+      icon: Timer,
+      image: semiMarathonHero,
     },
   ];
 
