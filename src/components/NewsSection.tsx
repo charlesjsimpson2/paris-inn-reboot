@@ -6,7 +6,7 @@ import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import salonAgricultureHero from "@/assets/salon-agriculture.webp";
 import mikaAffiche from "@/assets/mika-cropped.jpg";
 import claraHero from "@/assets/clara-luciani-portrait.jpg";
-import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
+import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import {
   Carousel,
   CarouselContent,
