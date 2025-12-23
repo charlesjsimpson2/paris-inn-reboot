@@ -156,29 +156,35 @@ export const NewsSection = () => {
               const Icon = event.icon;
               return (
                 <CarouselItem key={event.id} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <Link to={event.link} className="group block h-full">
-                    <div className={`relative overflow-hidden ${event.bgColor} shadow-xl hover:shadow-2xl transition-all duration-500 h-full`}>
+                  <Link to={event.link} className="group block h-full perspective-1000">
+                    <div className={`relative overflow-hidden ${event.bgColor} shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 h-full rounded-xl transform-gpu group-hover:scale-[1.02] group-hover:-translate-y-2 group-hover:rotate-y-1`}>
+                      {/* Shine effect on hover */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-20">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                      </div>
                       <div className="absolute inset-0 opacity-15">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:20px_20px]" />
                       </div>
                       <div className="relative flex flex-col h-full">
                         <div className="relative aspect-[4/3] overflow-hidden">
-                          <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                          <div className={`absolute inset-0 bg-gradient-to-t from-current to-transparent opacity-60`} />
+                          <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                          <div className={`absolute inset-0 bg-gradient-to-t from-current to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500`} />
+                          {/* Glow border effect */}
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ring-2 ring-white/30 ring-inset rounded-t-xl" />
                         </div>
                         <div className="flex-1 p-4 flex flex-col justify-center">
-                          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 w-fit mb-2">
-                            <Icon className="w-3.5 h-3.5" />{event.category}
+                          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 w-fit mb-2 group-hover:bg-white/30 transition-colors duration-300">
+                            <Icon className="w-3.5 h-3.5 group-hover:rotate-12 transition-transform duration-300" />{event.category}
                           </div>
-                          <h3 className="font-display text-lg md:text-xl text-white mb-1 group-hover:translate-x-1 transition-transform flex items-center gap-2 flex-wrap">
-                            {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow" />}
+                          <h3 className="font-display text-lg md:text-xl text-white mb-1 group-hover:translate-x-2 transition-transform duration-300 ease-out flex items-center gap-2 flex-wrap">
+                            {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
                             {event.title}
-                            {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-5 h-3 object-cover shadow" />}
+                            {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
                           </h3>
-                          <p className="text-white/70 text-xs mb-2 line-clamp-2">{event.subtitle}</p>
+                          <p className="text-white/70 text-xs mb-2 line-clamp-2 group-hover:text-white/90 transition-colors duration-300">{event.subtitle}</p>
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center text-white/80 text-xs"><Calendar className="w-3 h-3 mr-1" />{event.dateStart}</div>
-                            <div className="flex items-center text-white font-semibold text-xs group-hover:translate-x-1 transition-transform">{t('news.see')}<ArrowRight className="w-3 h-3 ml-1" /></div>
+                            <div className="flex items-center text-white/80 text-xs group-hover:text-white transition-colors duration-300"><Calendar className="w-3 h-3 mr-1 group-hover:scale-110 transition-transform" />{event.dateStart}</div>
+                            <div className="flex items-center text-white font-semibold text-xs group-hover:translate-x-2 transition-transform duration-300 ease-out">{t('news.see')}<ArrowRight className="w-3 h-3 ml-1 group-hover:ml-2 transition-all duration-300" /></div>
                           </div>
                         </div>
                       </div>
