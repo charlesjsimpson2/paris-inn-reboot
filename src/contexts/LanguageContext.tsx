@@ -227,6 +227,7 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.flashback': 'Retour en images',
     'actualites.pastEventsDesc': 'Découvrez les moments partagés par nos clients lors des grands événements parisiens',
     'actualites.photosComing': 'Photos à venir prochainement...',
+    'actualites.noUpcoming': 'Aucun événement à venir pour le moment. Revenez bientôt !',
     
     // News Section (Homepage)
     'news.dontMiss': 'Ne manquez pas !',
@@ -893,6 +894,7 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.flashback': 'Flashback',
     'actualites.pastEventsDesc': 'Discover moments shared by our guests during major Parisian events',
     'actualites.photosComing': 'Photos coming soon...',
+    'actualites.noUpcoming': 'No upcoming events at the moment. Check back soon!',
     
     // News Section (Homepage)
     'news.dontMiss': 'Don\'t miss!',
@@ -1382,6 +1384,7 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.flashback': 'Retrospectiva',
     'actualites.pastEventsDesc': 'Descubra los momentos compartidos por nuestros clientes durante los grandes eventos parisinos',
     'actualites.photosComing': 'Fotos próximamente...',
+    'actualites.noUpcoming': '¡No hay eventos próximos por el momento. ¡Vuelve pronto!',
     
     // News Section (Homepage)
     'news.dontMiss': '¡No se lo pierda!',
@@ -1871,6 +1874,7 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.flashback': 'Retrospettiva',
     'actualites.pastEventsDesc': 'Scopri i momenti condivisi dai nostri ospiti durante i grandi eventi parigini',
     'actualites.photosComing': 'Foto in arrivo...',
+    'actualites.noUpcoming': 'Nessun evento in programma al momento. Torna presto!',
     
     // News Section (Homepage)
     'news.dontMiss': 'Da non perdere!',
@@ -2360,6 +2364,7 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.flashback': 'Retrospectiva',
     'actualites.pastEventsDesc': 'Descubra os momentos compartilhados por nossos hóspedes durante os grandes eventos parisienses',
     'actualites.photosComing': 'Fotos em breve...',
+    'actualites.noUpcoming': 'Nenhum evento próximo no momento. Volte em breve!',
     
     // News Section (Homepage)
     'news.dontMiss': 'Não perca!',
