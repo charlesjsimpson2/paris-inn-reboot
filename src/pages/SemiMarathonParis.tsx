@@ -36,12 +36,15 @@ const SemiMarathonParis = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - Couleurs HOKA */}
         <section className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900" />
+          {/* Gradient diagonal style HOKA : rouge corail -> bleu ciel */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]" />
           <div className="absolute inset-0 opacity-15">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_1px,transparent_1px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px)] bg-[length:50px_50px]" />
           </div>
+          {/* Bande jaune diagonale style HOKA */}
+          <div className="absolute bottom-0 right-0 w-1/3 h-32 bg-[#F9C74F] transform skew-y-[-6deg] origin-bottom-right opacity-80" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -50,11 +53,11 @@ const SemiMarathonParis = () => {
                 </div>
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                    <Timer className="w-4 h-4 text-emerald-200" />
+                    <Timer className="w-4 h-4 text-[#F9C74F]" />
                     <span className="text-white/90 uppercase tracking-widest text-xs font-medium">{t('semimarathon.event')}</span>
                   </div>
                   <h1 className="font-display text-4xl md:text-6xl text-white mb-3 drop-shadow-lg">{t('semimarathon.title')}</h1>
-                  <p className="text-xl md:text-2xl text-emerald-200 font-display mb-6">{t('semimarathon.subtitle')}</p>
+                  <p className="text-xl md:text-2xl text-[#F9C74F] font-display mb-6">{t('semimarathon.subtitle')}</p>
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-8">
                     <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium text-sm">
                       <Calendar className="w-4 h-4" />{t('semimarathon.dateInfo')}
@@ -64,7 +67,7 @@ const SemiMarathonParis = () => {
                     </div>
                   </div>
                   <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-5">
-                    <div className="flex items-center justify-center gap-2 mb-3 text-emerald-200">
+                    <div className="flex items-center justify-center gap-2 mb-3 text-[#F9C74F]">
                       <Clock className="w-4 h-4" />
                       <span className="text-xs uppercase tracking-wider font-medium">{t('semimarathon.countdown')}</span>
                     </div>
@@ -76,10 +79,10 @@ const SemiMarathonParis = () => {
                         { value: countdown.seconds, label: t('semimarathon.sec') }
                       ].map((item, idx) => (
                         <div key={idx}>
-                          <div className="bg-white/20 rounded-xl px-2 md:px-4 py-2">
+                          <div className="bg-[#E94E4B] rounded-xl px-2 md:px-4 py-2">
                             <span className="font-display text-xl md:text-3xl text-white">{item.value}</span>
                           </div>
-                          <p className="text-emerald-200 text-xs mt-1 uppercase">{item.label}</p>
+                          <p className="text-[#F9C74F] text-xs mt-1 uppercase">{item.label}</p>
                         </div>
                       ))}
                     </div>
@@ -94,7 +97,7 @@ const SemiMarathonParis = () => {
         <section className="py-10 bg-white dark:bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full mb-3">
+              <div className="inline-flex items-center gap-2 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 text-[#E94E4B] px-4 py-2 rounded-full mb-3">
                 <Trophy className="w-4 h-4" />
                 <span className="font-medium text-sm">{t('semimarathon.edition2026')}</span>
               </div>
@@ -105,10 +108,10 @@ const SemiMarathonParis = () => {
         </section>
 
         {/* Description Section */}
-        <section className="py-16 bg-emerald-50/50 dark:bg-emerald-950/10">
+        <section className="py-16 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-emerald-100 dark:border-emerald-900/20 mb-8">
+              <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-[#3BB5DC]/20 dark:border-[#3BB5DC]/10 mb-8">
                 <div className="grid md:grid-cols-2 gap-8 items-start">
                   <img 
                     src={semiMarathonCoureurs} 
@@ -126,17 +129,17 @@ const SemiMarathonParis = () => {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 text-center mb-8">
                 <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
-                  <Timer className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
+                  <Timer className="w-10 h-10 text-[#E94E4B] mx-auto mb-2" />
                   <p className="font-display text-3xl text-foreground">21.1 km</p>
                   <p className="text-muted-foreground text-sm">{t('semimarathon.distance')}</p>
                 </div>
                 <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
-                  <Users className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
+                  <Users className="w-10 h-10 text-[#3BB5DC] mx-auto mb-2" />
                   <p className="font-display text-3xl text-foreground">40 000+</p>
                   <p className="text-muted-foreground text-sm">{t('semimarathon.runners')}</p>
                 </div>
                 <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
-                  <Trophy className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
+                  <Trophy className="w-10 h-10 text-[#F9C74F] mx-auto mb-2" />
                   <p className="font-display text-3xl text-foreground">1992</p>
                   <p className="text-muted-foreground text-sm">{t('semimarathon.since')}</p>
                 </div>
@@ -145,25 +148,27 @@ const SemiMarathonParis = () => {
           </div>
         </section>
 
-        {/* Parcours Section */}
-        <section className="py-16 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
+        {/* Parcours Section - Style HOKA */}
+        <section className="py-16 bg-gradient-to-br from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7] text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
           </div>
+          {/* Bande jaune */}
+          <div className="absolute top-0 left-0 w-1/4 h-20 bg-[#F9C74F] transform skew-y-[6deg] origin-top-left opacity-80" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
-                <MapPin className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
+                <MapPin className="w-12 h-12 text-[#F9C74F] mx-auto mb-3" />
                 <h2 className="font-display text-3xl md:text-4xl mb-2">{t('semimarathon.course')}</h2>
-                <p className="text-emerald-200">{t('semimarathon.courseSubtitle')}</p>
+                <p className="text-white/80">{t('semimarathon.courseSubtitle')}</p>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-10">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-emerald-300">{t('semimarathon.start')}</h3>
+                  <h3 className="font-display text-xl mb-3 text-[#F9C74F]">{t('semimarathon.start')}</h3>
                   <p className="text-white/80 text-sm leading-relaxed">{t('semimarathon.startDesc')}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-emerald-300">{t('semimarathon.highlights')}</h3>
+                  <h3 className="font-display text-xl mb-3 text-[#F9C74F]">{t('semimarathon.highlights')}</h3>
                   <p className="text-white/80 text-sm leading-relaxed">{t('semimarathon.highlightsDesc')}</p>
                 </div>
               </div>
@@ -172,11 +177,11 @@ const SemiMarathonParis = () => {
         </section>
 
         {/* Exclusive Runner Offers Section */}
-        <section className="py-16 bg-gradient-to-br from-amber-100 via-white to-emerald-100 dark:from-amber-950/20 dark:via-background dark:to-emerald-950/20">
+        <section className="py-16 bg-gradient-to-br from-[#F9C74F]/20 via-white to-[#3BB5DC]/20 dark:from-[#F9C74F]/10 dark:via-background dark:to-[#3BB5DC]/10">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full mb-4">
+                <div className="inline-flex items-center gap-2 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 text-[#E94E4B] px-4 py-2 rounded-full mb-4">
                   <Heart className="w-4 h-4" />
                   <span className="font-medium text-sm">{t('semimarathon.runnerPackage')}</span>
                 </div>
@@ -186,32 +191,32 @@ const SemiMarathonParis = () => {
 
               {/* Runner Special Offers */}
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-emerald-200 dark:border-emerald-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Sun className="w-7 h-7 text-emerald-600" />
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-[#E94E4B]/30 dark:border-[#E94E4B]/20 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 rounded-full flex items-center justify-center mb-4">
+                    <Sun className="w-7 h-7 text-[#E94E4B]" />
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-2">{t('semimarathon.earlyBreakfast')}</h3>
                   <p className="text-muted-foreground text-sm mb-3">{t('semimarathon.earlyBreakfastDesc')}</p>
-                  <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-3 py-1.5 rounded-full text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 text-[#E94E4B] px-3 py-1.5 rounded-full text-sm font-medium">
                     <Utensils className="w-4 h-4" />
                     {t('semimarathon.pastaSalad')}
                   </div>
                 </div>
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-teal-200 dark:border-teal-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Droplets className="w-7 h-7 text-teal-600" />
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-[#3BB5DC]/30 dark:border-[#3BB5DC]/20 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/20 rounded-full flex items-center justify-center mb-4">
+                    <Droplets className="w-7 h-7 text-[#3BB5DC]" />
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-2">{t('semimarathon.lateCheckout')}</h3>
                   <p className="text-muted-foreground text-sm mb-3">{t('semimarathon.lateCheckoutDesc')}</p>
-                  <div className="inline-block bg-teal-600 text-white font-bold text-sm px-3 py-1.5 rounded-full">{t('semimarathon.showerAccess')}</div>
+                  <div className="inline-block bg-[#3BB5DC] text-white font-bold text-sm px-3 py-1.5 rounded-full">{t('semimarathon.showerAccess')}</div>
                 </div>
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-amber-200 dark:border-amber-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Coffee className="w-7 h-7 text-amber-600" />
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-[#F9C74F]/50 dark:border-[#F9C74F]/30 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-[#F9C74F]/20 dark:bg-[#F9C74F]/10 rounded-full flex items-center justify-center mb-4">
+                    <Coffee className="w-7 h-7 text-[#D4A843]" />
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-2">{t('semimarathon.happyHour')}</h3>
                   <p className="text-muted-foreground text-sm mb-3">{t('semimarathon.happyHourDesc')}</p>
-                  <div className="inline-block bg-amber-600 text-white font-bold text-sm px-3 py-1.5 rounded-full">{t('semimarathon.happyHourDiscount')}</div>
+                  <div className="inline-block bg-[#F9C74F] text-black font-bold text-sm px-3 py-1.5 rounded-full">{t('semimarathon.happyHourDiscount')}</div>
                 </div>
               </div>
 
@@ -219,25 +224,25 @@ const SemiMarathonParis = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-lg border border-border/50">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Car className="w-6 h-6 text-emerald-600" />
+                    <div className="w-12 h-12 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Car className="w-6 h-6 text-[#E94E4B]" />
                     </div>
                     <div>
                       <h3 className="font-display text-lg text-foreground mb-1">{t('semimarathon.parking')}</h3>
                       <p className="text-muted-foreground text-sm mb-2">{t('semimarathon.parkingDesc')}</p>
-                      <div className="inline-block bg-emerald-600 text-white font-bold text-sm px-3 py-1 rounded-full">{t('semimarathon.parkingPrice')}</div>
+                      <div className="inline-block bg-[#E94E4B] text-white font-bold text-sm px-3 py-1 rounded-full">{t('semimarathon.parkingPrice')}</div>
                     </div>
                   </div>
                 </div>
                 <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-lg border border-border/50">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/30 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Train className="w-6 h-6 text-cyan-600" />
+                    <div className="w-12 h-12 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Train className="w-6 h-6 text-[#3BB5DC]" />
                     </div>
                     <div>
                       <h3 className="font-display text-lg text-foreground mb-1">{t('semimarathon.taxi')}</h3>
                       <p className="text-muted-foreground text-sm mb-2">{t('semimarathon.taxiDesc')}</p>
-                      <div className="inline-block bg-cyan-600 text-white font-bold text-sm px-3 py-1 rounded-full">{t('semimarathon.taxiDiscount')}</div>
+                      <div className="inline-block bg-[#3BB5DC] text-white font-bold text-sm px-3 py-1 rounded-full">{t('semimarathon.taxiDiscount')}</div>
                     </div>
                   </div>
                 </div>
@@ -248,7 +253,7 @@ const SemiMarathonParis = () => {
         </section>
 
         {/* Hotel Promo Section */}
-        <section className="py-16 bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/20 dark:via-background dark:to-teal-950/20">
+        <section className="py-16 bg-gradient-to-br from-[#3BB5DC]/10 via-white to-[#E94E4B]/10 dark:from-[#3BB5DC]/5 dark:via-background dark:to-[#E94E4B]/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
@@ -266,8 +271,8 @@ const SemiMarathonParis = () => {
                     <h3 className="font-display text-2xl text-foreground mb-4">{t('semimarathon.hotelPromo.whyUs')}</h3>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Train className="w-5 h-5 text-primary" />
+                        <div className="w-10 h-10 rounded-full bg-[#3BB5DC]/10 flex items-center justify-center flex-shrink-0">
+                          <Train className="w-5 h-5 text-[#3BB5DC]" />
                         </div>
                         <div>
                           <h4 className="font-medium text-foreground">{t('semimarathon.hotelPromo.location')}</h4>
@@ -275,8 +280,8 @@ const SemiMarathonParis = () => {
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-emerald-600" />
+                        <div className="w-10 h-10 rounded-full bg-[#E94E4B]/10 flex items-center justify-center flex-shrink-0">
+                          <Coffee className="w-5 h-5 text-[#E94E4B]" />
                         </div>
                         <div>
                           <h4 className="font-medium text-foreground">{t('semimarathon.hotelPromo.breakfast')}</h4>
@@ -284,8 +289,8 @@ const SemiMarathonParis = () => {
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center flex-shrink-0">
-                          <Users className="w-5 h-5 text-teal-600" />
+                        <div className="w-10 h-10 rounded-full bg-[#F9C74F]/20 flex items-center justify-center flex-shrink-0">
+                          <Users className="w-5 h-5 text-[#D4A843]" />
                         </div>
                         <div>
                           <h4 className="font-medium text-foreground">{t('semimarathon.hotelPromo.reception')}</h4>
@@ -294,36 +299,36 @@ const SemiMarathonParis = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-primary/5 to-emerald-100/50 dark:from-primary/10 dark:to-emerald-900/20 p-8 md:p-10">
+                  <div className="bg-gradient-to-br from-[#3BB5DC]/10 to-[#E94E4B]/10 dark:from-[#3BB5DC]/5 dark:to-[#E94E4B]/5 p-8 md:p-10">
                     <h3 className="font-display text-2xl text-foreground mb-4">{t('semimarathon.hotelPromo.comfort')}</h3>
                     <ul className="space-y-3">
                       <li className="flex items-center gap-3 text-muted-foreground">
                         <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Tv className="w-4 h-4 text-primary" />
+                          <Tv className="w-4 h-4 text-[#E94E4B]" />
                         </div>
                         <span className="text-sm">{t('semimarathon.hotelPromo.tv')}</span>
                       </li>
                       <li className="flex items-center gap-3 text-muted-foreground">
                         <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Wifi className="w-4 h-4 text-primary" />
+                          <Wifi className="w-4 h-4 text-[#3BB5DC]" />
                         </div>
                         <span className="text-sm">{t('semimarathon.hotelPromo.wifi')}</span>
                       </li>
                       <li className="flex items-center gap-3 text-muted-foreground">
                         <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Coffee className="w-4 h-4 text-primary" />
+                          <Coffee className="w-4 h-4 text-[#F9C74F]" />
                         </div>
                         <span className="text-sm">{t('semimarathon.hotelPromo.buffet')}</span>
                       </li>
                       <li className="flex items-center gap-3 text-muted-foreground">
                         <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Car className="w-4 h-4 text-primary" />
+                          <Car className="w-4 h-4 text-[#E94E4B]" />
                         </div>
                         <span className="text-sm">{t('semimarathon.hotelPromo.parkingOption')}</span>
                       </li>
                     </ul>
                     <Link to="/nos-chambres">
-                      <Button variant="outline" className="mt-6 w-full">{t('semimarathon.hotelPromo.discoverRooms')}</Button>
+                      <Button className="mt-6 w-full bg-[#E94E4B] hover:bg-[#D43F3C] text-white">{t('semimarathon.hotelPromo.discoverRooms')}</Button>
                     </Link>
                   </div>
                 </div>
@@ -332,17 +337,19 @@ const SemiMarathonParis = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
-          <div className="container mx-auto px-4 text-center">
+        {/* CTA Section - Style HOKA diagonal */}
+        <section className="py-16 bg-gradient-to-r from-[#E94E4B] to-[#3BB5DC] text-white relative overflow-hidden">
+          {/* Bande jaune diagonale */}
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-[#F9C74F] transform skew-y-[-2deg] origin-bottom-left" />
+          <div className="container mx-auto px-4 text-center relative z-10">
             <h2 className="font-display text-3xl md:text-4xl mb-4">{t('semimarathon.bookStay')}</h2>
-            <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">{t('semimarathon.bestConditions')}</p>
+            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">{t('semimarathon.bestConditions')}</p>
             <a 
               href="https://www.secure-hotel-booking.com/Hotel-Inn-Design-Place-d-Italie/2V5Y/1892/fr" 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button size="lg" variant="secondary" className="text-lg px-8">
+              <Button size="lg" className="bg-[#F9C74F] hover:bg-[#E5B73D] text-black font-bold text-lg px-8">
                 {t('semimarathon.bookNow')}
               </Button>
             </a>
