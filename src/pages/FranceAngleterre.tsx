@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 
+import franceAngleterreHero from "@/assets/france-angleterre-hero.png";
+
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauAngleterre = "https://flagcdn.com/w80/gb-eng.png";
-const rugbyHero = "https://images.unsplash.com/photo-1544298621-35a764866ff1?w=1920&h=1080&fit=crop";
 
 const FranceAngleterre = () => {
   const { t } = useLanguage();
@@ -55,7 +56,7 @@ const FranceAngleterre = () => {
       <main>
         {/* Hero Section */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-          <img src={rugbyHero} alt="Match France - Angleterre" className="absolute inset-0 w-full h-full object-cover" />
+          <img src={franceAngleterreHero} alt="Match France - Angleterre" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-black/60 to-red-900/80" />
           <div className="absolute inset-0 flex items-end">
             <div className="container mx-auto px-4 pb-16">
