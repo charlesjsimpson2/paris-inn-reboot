@@ -24,6 +24,7 @@ const MikaConcert = lazy(() => import("./pages/MikaConcert"));
 const ClaraLucianiConcert = lazy(() => import("./pages/ClaraLucianiConcert"));
 const SemiMarathonParis = lazy(() => import("./pages/SemiMarathonParis"));
 const WuTangConcert = lazy(() => import("./pages/WuTangConcert"));
+const FranceAngleterre = lazy(() => import("./pages/FranceAngleterre"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
               <Route path="/clara-luciani-concert" element={<ClaraLucianiConcert />} />
               <Route path="/semi-marathon-paris" element={<SemiMarathonParis />} />
               <Route path="/wu-tang-concert" element={<WuTangConcert />} />
+              <Route path="/france-angleterre" element={<FranceAngleterre />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/localisation" element={<Localisation />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

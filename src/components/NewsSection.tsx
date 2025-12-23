@@ -18,6 +18,7 @@ import {
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
+const drapeauAngleterre = "https://flagcdn.com/w80/gb-eng.png";
 
 export const NewsSection = () => {
   const { t } = useLanguage();
@@ -124,6 +125,21 @@ export const NewsSection = () => {
       icon: Mic,
       image: wutangHero,
     },
+    {
+      id: 8,
+      title: "France vs Angleterre",
+      subtitle: "Le Crunch - La rivalité légendaire",
+      subtitleWithFlagsEngland: true,
+      dateStart: "14 mars 2026",
+      sortDate: "2026-03-14",
+      endDate: "2026-03-14",
+      category: t('rugby.tournament'),
+      link: "/france-angleterre",
+      bgColor: "bg-gradient-to-br from-blue-600 via-purple-600 to-red-600",
+      textColor: "text-blue-100",
+      icon: Trophy,
+      image: rugbyImage,
+    },
   ];
 
   // Get today's date at midnight for comparison
@@ -193,8 +209,10 @@ export const NewsSection = () => {
                           </div>
                           <h3 className="font-display text-lg md:text-xl text-white mb-1 group-hover:translate-x-2 transition-transform duration-300 ease-out flex items-center gap-2 flex-wrap">
                             {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
+                            {(event as any).subtitleWithFlagsEngland && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
                             {event.title}
                             {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
+                            {(event as any).subtitleWithFlagsEngland && <img src={drapeauAngleterre} alt="Angleterre" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
                           </h3>
                           <p className="text-white/70 text-xs mb-2 line-clamp-2 group-hover:text-white/90 transition-colors duration-300">{event.subtitle}</p>
                           <div className="flex items-center justify-between">
