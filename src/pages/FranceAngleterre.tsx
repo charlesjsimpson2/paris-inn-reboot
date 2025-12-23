@@ -5,14 +5,48 @@ import { Calendar, MapPin, Train, Trophy, Clock, Car, Ticket, Hotel, Users } fro
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { useState, useEffect } from "react";
 
 import franceAngleterreHero from "@/assets/france-angleterre-match.png";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauAngleterre = "https://flagcdn.com/w80/gb-eng.png";
 
+// Date du match : 14 Mars 2026 à 20h10
+const MATCH_DATE = new Date("2026-03-14T20:10:00");
+
+const useCountdown = (targetDate: Date) => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = targetDate.getTime() - new Date().getTime();
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return timeLeft;
+};
+
 const FranceAngleterre = () => {
   const { t } = useLanguage();
+  const countdown = useCountdown(MATCH_DATE);
 
   const previousMatches = [
     { year: "2024", competition: "6 Nations", result: "France 33 - 31 Angleterre", venue: "Lyon", winner: "france" },
@@ -104,6 +138,41 @@ const FranceAngleterre = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compte à rebours */}
+        <section className="py-10 bg-gradient-to-r from-blue-900 via-slate-900 to-red-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-6">
+              <h2 className="font-display text-2xl md:text-3xl text-white mb-2">Coup d'envoi dans</h2>
+            </div>
+            <div className="flex justify-center gap-4 md:gap-8">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                  <span className="text-2xl md:text-4xl font-bold text-white">{countdown.days}</span>
+                </div>
+                <span className="text-white/80 text-sm mt-2">Jours</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 bg-slate-700 rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-2xl md:text-4xl font-bold text-white">{countdown.hours}</span>
+                </div>
+                <span className="text-white/80 text-sm mt-2">Heures</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 bg-slate-700 rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-2xl md:text-4xl font-bold text-white">{countdown.minutes}</span>
+                </div>
+                <span className="text-white/80 text-sm mt-2">Minutes</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 md:w-24 md:h-24 bg-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/30">
+                  <span className="text-2xl md:text-4xl font-bold text-white">{countdown.seconds}</span>
+                </div>
+                <span className="text-white/80 text-sm mt-2">Secondes</span>
               </div>
             </div>
           </div>
