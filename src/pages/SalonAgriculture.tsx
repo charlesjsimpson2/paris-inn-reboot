@@ -62,108 +62,12 @@ const SalonAgriculture = () => {
           </div>
         </section>
 
-        {/* Hotel Promo Section - MOVED UP */}
-        <section className="py-16 bg-gradient-to-br from-lime-50 via-white to-green-50 dark:from-lime-950/20 dark:via-background dark:to-green-950/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-                  <Star className="w-4 h-4" />
-                  <span className="font-medium text-sm">{t('agriculture.hotelPromo.badge')}</span>
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('agriculture.hotelPromo.title')}</h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t('agriculture.hotelPromo.subtitle')}</p>
-              </div>
-
-              <div className="bg-white dark:bg-card rounded-2xl shadow-xl border border-border/50 overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="p-8 md:p-10">
-                    <h3 className="font-display text-2xl text-foreground mb-4">{t('agriculture.hotelPromo.whyUs')}</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Train className="w-5 h-5 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{t('agriculture.hotelPromo.location')}</h4>
-                          <p className="text-sm text-muted-foreground">{t('agriculture.hotelPromo.locationDesc')}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-green-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{t('agriculture.hotelPromo.breakfast')}</h4>
-                          <p className="text-sm text-muted-foreground">{t('agriculture.hotelPromo.breakfastDesc')}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
-                          <Users className="w-5 h-5 text-amber-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{t('agriculture.hotelPromo.reception')}</h4>
-                          <p className="text-sm text-muted-foreground">{t('agriculture.hotelPromo.receptionDesc')}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-primary/5 to-green-100/50 dark:from-primary/10 dark:to-green-900/20 p-8 md:p-10">
-                    <h3 className="font-display text-2xl text-foreground mb-4">{t('agriculture.hotelPromo.comfort')}</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Tv className="w-4 h-4 text-primary" />
-                        </div>
-                        <span>{t('agriculture.hotelPromo.tv')}</span>
-                      </li>
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Wifi className="w-4 h-4 text-primary" />
-                        </div>
-                        <span>{t('agriculture.hotelPromo.wifi')}</span>
-                      </li>
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Coffee className="w-4 h-4 text-primary" />
-                        </div>
-                        <span>{t('agriculture.hotelPromo.buffet')}</span>
-                      </li>
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Car className="w-4 h-4 text-primary" />
-                        </div>
-                        <span>{t('agriculture.hotelPromo.parkingOption')}</span>
-                      </li>
-                    </ul>
-                    <div className="mt-6">
-                      <Link to="/nos-chambres">
-                        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                          {t('agriculture.hotelPromo.discoverRooms')}
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section - MOVED UP */}
-        <section className="py-20 bg-gradient-to-r from-green-600 via-green-700 to-amber-600">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl text-white mb-4">{t('agriculture.specialOffer')}</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">{t('agriculture.bestConditions')}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-white text-green-700 hover:bg-white/90 font-bold shadow-xl">{t('agriculture.bookNow')}</Button>
-              </a>
-              <Link to="/contact"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">{t('contact.title')}</Button></Link>
-            </div>
-          </div>
-        </section>
+        {/* Hotel Promo Section */}
+        <EventHotelPromo 
+          eventName="Salon Agriculture" 
+          accentColor="from-green-600 via-green-700 to-amber-600"
+          urgencyMessage="Offre Salon de l'Agriculture"
+        />
 
         {/* Event Description */}
         <section className="py-16 bg-gradient-to-br from-green-50 via-white to-amber-50 dark:from-green-950/20 dark:via-card dark:to-amber-950/20">
