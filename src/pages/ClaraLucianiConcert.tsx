@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Star, Mic, Sparkles, Gift, Ticket, Clock, Car, Coffee, Wifi, Tv, Users, Train, Euro, Shirt, Trophy, CheckCircle } from "lucide-react";
+import { Calendar, MapPin, Music, Mic, Sparkles, Clock, Shirt, Trophy, CheckCircle, Star, Gift, Car, Ticket, Train, Coffee, Wifi, Tv, Users, Euro } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import claraHero from "@/assets/clara-luciani-hero.jpg";
@@ -10,6 +10,7 @@ import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreSuperieure from "@/assets/chambre-superieure-balcon.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { EventHotelPromo } from "@/components/EventHotelPromo";
 
 const ClaraLucianiConcert = () => {
   const { t } = useLanguage();
