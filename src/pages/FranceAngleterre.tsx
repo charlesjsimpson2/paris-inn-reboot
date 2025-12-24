@@ -178,6 +178,89 @@ const FranceAngleterre = () => {
           </div>
         </section>
 
+        {/* Offres exclusives hôtel - DÉPLACÉ EN PREMIER */}
+        <section className="py-16 bg-gradient-to-br from-blue-100 via-white to-red-100 dark:from-blue-950/30 dark:via-card dark:to-red-950/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+                  <Hotel className="w-5 h-5" />
+                  <span className="font-semibold">Séjournez près du match</span>
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">Nos offres exclusives</h2>
+                <p className="text-muted-foreground">Pour les supporters du Crunch France - Angleterre</p>
+              </div>
+
+              {/* Avantage hébergement */}
+              <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-primary/20 mb-8">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="w-10 h-10 text-primary" />
+                  </div>
+                  <div className="text-center md:text-left flex-1">
+                    <h3 className="font-display text-2xl text-foreground mb-2">Moins de transport, plus de rugby !</h3>
+                    <p className="text-muted-foreground mb-4">
+                      En séjournant à l'Hôtel Inn Design Paris, vous profitez d'un emplacement idéal à seulement 30 minutes du Stade de France. 
+                      Évitez le stress des transports de dernière minute et profitez pleinement de l'ambiance d'avant-match dans la capitale.
+                    </p>
+                    <p className="text-sm text-primary font-medium">
+                      Chambres disponibles à partir de 89€ la nuit - Petit-déjeuner inclus sur demande
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* Parking */}
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Car className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Parking privé</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Stationnez en toute sécurité pendant votre séjour</p>
+                  <div className="inline-block bg-blue-600 text-white font-bold text-lg px-4 py-2 rounded-full">15€ / nuit</div>
+                </div>
+
+                {/* Taxi */}
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-red-200 dark:border-red-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Ticket className="w-7 h-7 text-red-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Service Taxi</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Aller et retour vers le Stade de France</p>
+                  <div className="inline-block bg-red-600 text-white font-bold text-lg px-4 py-2 rounded-full">-10%</div>
+                </div>
+
+                {/* Accès facile */}
+                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-slate-200 dark:border-slate-800/50 hover:scale-105 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-slate-100 dark:bg-slate-900/30 rounded-full flex items-center justify-center mb-4">
+                    <Train className="w-7 h-7 text-slate-600" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">Métro direct</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Ligne 13 vers le Stade de France</p>
+                  <div className="inline-block bg-slate-600 text-white font-bold text-lg px-4 py-2 rounded-full">~30 min</div>
+                </div>
+              </div>
+
+              <p className="text-center text-sm text-muted-foreground mt-6 italic">* Offres réservées aux clients séjournant pendant le week-end du match</p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Réservation - DÉPLACÉ EN PREMIER */}
+        <section className="py-20 bg-blue-700">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Réservez votre séjour pour le Crunch</h2>
+            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Profitez des meilleures conditions pour vivre ce match légendaire entre la France et l'Angleterre</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild>
+                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">Réserver maintenant</a>
+              </Button>
+              <Link to="/reservation-seminaire"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Nous contacter</Button></Link>
+            </div>
+          </div>
+        </section>
+
         {/* Présentation du match */}
         <section className="py-16 bg-gradient-to-r from-blue-50 via-white to-red-50 dark:from-blue-950/20 dark:via-card dark:to-red-950/20">
           <div className="container mx-auto px-4">
@@ -281,23 +364,6 @@ const FranceAngleterre = () => {
           </div>
         </section>
 
-        {/* Accès facile */}
-        <section className="py-16 bg-gradient-to-r from-blue-700 via-slate-800 to-red-700 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl mb-6">Accès facile au Stade de France</h2>
-              <p className="text-white/90 text-lg leading-relaxed mb-8">
-                Depuis notre hôtel situé Place d'Italie, rejoignez le Stade de France en toute simplicité grâce aux transports en commun.
-              </p>
-              <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                <div className="flex items-center gap-2"><Train className="w-6 h-6" /><span className="font-bold">Ligne 13</span></div>
-                <div className="h-8 w-px bg-white/30" />
-                <div><p className="font-bold">~30 minutes</p><p className="text-sm text-white/80">Place d'Italie → Stade de France</p></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Compositions probables */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
@@ -360,82 +426,8 @@ const FranceAngleterre = () => {
           </div>
         </section>
 
-        {/* Offres exclusives hôtel */}
-        <section className="py-16 bg-gradient-to-br from-blue-100 via-white to-red-100 dark:from-blue-950/30 dark:via-card dark:to-red-950/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-                  <Hotel className="w-5 h-5" />
-                  <span className="font-semibold">Séjournez près du match</span>
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">Nos offres exclusives</h2>
-                <p className="text-muted-foreground">Pour les supporters du Crunch France - Angleterre</p>
-              </div>
-
-              {/* Avantage hébergement */}
-              <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-primary/20 mb-8">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="w-10 h-10 text-primary" />
-                  </div>
-                  <div className="text-center md:text-left flex-1">
-                    <h3 className="font-display text-2xl text-foreground mb-2">Moins de transport, plus de rugby !</h3>
-                    <p className="text-muted-foreground mb-4">
-                      En séjournant à l'Hôtel Inn Design Paris, vous profitez d'un emplacement idéal à seulement 30 minutes du Stade de France. 
-                      Évitez le stress des transports de dernière minute et profitez pleinement de l'ambiance d'avant-match dans la capitale.
-                    </p>
-                    <p className="text-sm text-primary font-medium">
-                      Chambres disponibles à partir de 89€ la nuit - Petit-déjeuner inclus sur demande
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                {/* Parking */}
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Car className="w-7 h-7 text-blue-600" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Parking privé</h3>
-                  <p className="text-muted-foreground text-sm mb-4">Stationnez en toute sécurité pendant votre séjour</p>
-                  <div className="inline-block bg-blue-600 text-white font-bold text-lg px-4 py-2 rounded-full">15€ / nuit</div>
-                </div>
-
-                {/* Taxi */}
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-red-200 dark:border-red-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Ticket className="w-7 h-7 text-red-600" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">Service Taxi</h3>
-                  <p className="text-muted-foreground text-sm mb-4">Aller et retour vers le Stade de France</p>
-                  <div className="inline-block bg-red-600 text-white font-bold text-lg px-4 py-2 rounded-full">-10%</div>
-                </div>
-
-              </div>
-
-              <p className="text-center text-sm text-muted-foreground mt-6 italic">* Offres réservées aux clients séjournant pendant le week-end du match</p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Réservation */}
-        <section className="py-20 bg-blue-700">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Réservez votre séjour pour le Crunch</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Profitez des meilleures conditions pour vivre ce match légendaire entre la France et l'Angleterre</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild>
-                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">Réserver maintenant</a>
-              </Button>
-              <Link to="/reservation-seminaire"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Nous contacter</Button></Link>
-            </div>
-          </div>
-        </section>
-
         {/* Découvrir Paris */}
-        <section className="py-16 bg-card">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Profitez de Paris</h2>
