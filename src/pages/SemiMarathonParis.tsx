@@ -1,13 +1,14 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Timer, Star, Trophy, Heart, Clock, Car, Coffee, Wifi, Tv, Users, Train, Utensils, Droplets, Sun } from "lucide-react";
+import { Calendar, MapPin, Timer, Trophy, Heart, Clock, Utensils, Droplets, Sun, Star, Train, Coffee, Users, Tv, Wifi, Car } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import semiMarathonCoureurs from "@/assets/semi-marathon-coureurs.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { EventHotelPromo } from "@/components/EventHotelPromo";
 
 const SemiMarathonParis = () => {
   const { t } = useLanguage();

@@ -1,13 +1,14 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Music, Star, Mic, Sparkles, Gift, Ticket, Clock, Car, Coffee, Wifi, Tv, Users, Train, Zap, Heart, Shirt, Trophy, CheckCircle, Euro } from "lucide-react";
+import { Calendar, MapPin, Music, Mic, Sparkles, Clock, Zap, Heart, Shirt, Trophy, CheckCircle, Star, Gift, Car, Ticket, Train, Coffee, Wifi, Tv, Users, Euro } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import wutangConcert from "@/assets/wu-tang-concert.jpg";
 import wutangPortrait from "@/assets/wu-tang-portrait.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { EventHotelPromo } from "@/components/EventHotelPromo";
 
 const WuTangConcert = () => {
   const { t } = useLanguage();

@@ -5,6 +5,7 @@ import { Calendar, MapPin, Train, Leaf, Users, Clock, Utensils, TreeDeciduous, H
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { EventHotelPromo } from "@/components/EventHotelPromo";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
