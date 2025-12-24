@@ -105,6 +105,115 @@ const WuTangConcert = () => {
           </div>
         </section>
 
+        {/* Hotel Promo Section - MOVED UP */}
+        <section className="py-20 bg-gradient-to-br from-amber-50 via-white to-yellow-50 dark:from-amber-950/20 dark:via-background dark:to-yellow-950/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/20 to-yellow-500/20 text-primary px-6 py-3 rounded-full mb-4 shadow-lg border border-primary/20">
+                  <Star className="w-5 h-5" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('wutang.hotelPromo.badge')}</span>
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('wutang.hotelPromo.title')}</h2>
+                <p className="text-muted-foreground text-xl max-w-2xl mx-auto">{t('wutang.hotelPromo.subtitle')}</p>
+              </div>
+
+              <div className="bg-white dark:bg-card rounded-3xl shadow-2xl border-2 border-border/50 overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="p-10 md:p-12">
+                    <h3 className="font-display text-2xl text-foreground mb-6">{t('wutang.hotelPromo.whyUs')}</h3>
+                    <div className="space-y-5">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                          <Train className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-foreground text-lg">{t('wutang.hotelPromo.location')}</h4>
+                          <p className="text-muted-foreground">{t('wutang.hotelPromo.locationDesc')}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-yellow-100 to-amber-100 dark:from-yellow-900/30 dark:to-amber-900/30 flex items-center justify-center flex-shrink-0">
+                          <Coffee className="w-6 h-6 text-yellow-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-foreground text-lg">{t('wutang.hotelPromo.breakfast')}</h4>
+                          <p className="text-muted-foreground">{t('wutang.hotelPromo.breakfastDesc')}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 flex items-center justify-center flex-shrink-0">
+                          <Users className="w-6 h-6 text-amber-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-foreground text-lg">{t('wutang.hotelPromo.reception')}</h4>
+                          <p className="text-muted-foreground">{t('wutang.hotelPromo.receptionDesc')}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-primary/5 via-yellow-100/50 to-amber-100/50 dark:from-primary/10 dark:via-yellow-900/20 dark:to-amber-900/20 p-10 md:p-12">
+                    <h3 className="font-display text-2xl text-foreground mb-6">{t('wutang.hotelPromo.comfort')}</h3>
+                    <ul className="space-y-4">
+                      {[
+                        { icon: Tv, text: t('wutang.hotelPromo.tv') },
+                        { icon: Wifi, text: t('wutang.hotelPromo.wifi') },
+                        { icon: Coffee, text: t('wutang.hotelPromo.buffet') },
+                        { icon: Car, text: t('wutang.hotelPromo.parkingOption') }
+                      ].map((item, idx) => (
+                        <li key={idx} className="flex items-center gap-4 text-muted-foreground">
+                          <div className="w-10 h-10 rounded-xl bg-white dark:bg-card flex items-center justify-center shadow-md">
+                            <item.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <span className="font-medium">{item.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-8">
+                      <Link to="/nos-chambres">
+                        <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white font-bold py-6 text-lg shadow-xl hover:scale-105 transition-all duration-300">
+                          {t('wutang.hotelPromo.discoverRooms')}
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section - MOVED UP */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500 via-amber-600 to-orange-600 animate-gradient" />
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-300/30 rounded-full blur-3xl animate-float" />
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-500/30 rounded-full blur-3xl animate-float animation-delay-600" />
+          </div>
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,white_2px,transparent_2px)] bg-[length:40px_40px]" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="inline-block p-4 bg-white/20 backdrop-blur-md rounded-full mb-6 animate-bounce-subtle border border-white/30">
+                  <Gift className="w-12 h-12 text-white" />
+                </div>
+                <h2 className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-2xl">{t('wutang.bookStay')}</h2>
+                <p className="text-yellow-100 text-xl">{t('wutang.bestConditions')}</p>
+              </div>
+              <div className="text-center">
+                <Link to="/reservation-seminaire">
+                  <Button size="lg" className="bg-white text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-amber-600 hover:bg-yellow-50 font-bold px-12 py-8 text-xl shadow-2xl hover:scale-110 transition-all duration-300 border-4 border-white/50 group">
+                    <Mic className="w-6 h-6 mr-3 text-yellow-600 group-hover:animate-bounce" />
+                    <span className="bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent">{t('wutang.bookNow')}</span>
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About Section */}
         <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600" />
@@ -377,84 +486,6 @@ const WuTangConcert = () => {
           </div>
         </section>
 
-        {/* Hotel Promo Section */}
-        <section className="py-20 bg-gradient-to-br from-amber-50 via-white to-yellow-50 dark:from-amber-950/20 dark:via-background dark:to-yellow-950/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/20 to-yellow-500/20 text-primary px-6 py-3 rounded-full mb-4 shadow-lg border border-primary/20">
-                  <Star className="w-5 h-5" />
-                  <span className="font-bold text-sm uppercase tracking-wider">{t('wutang.hotelPromo.badge')}</span>
-                </div>
-                <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('wutang.hotelPromo.title')}</h2>
-                <p className="text-muted-foreground text-xl max-w-2xl mx-auto">{t('wutang.hotelPromo.subtitle')}</p>
-              </div>
-
-              <div className="bg-white dark:bg-card rounded-3xl shadow-2xl border-2 border-border/50 overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="p-10 md:p-12">
-                    <h3 className="font-display text-2xl text-foreground mb-6">{t('wutang.hotelPromo.whyUs')}</h3>
-                    <div className="space-y-5">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-yellow-500/20 flex items-center justify-center flex-shrink-0">
-                          <Train className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-foreground text-lg">{t('wutang.hotelPromo.location')}</h4>
-                          <p className="text-muted-foreground">{t('wutang.hotelPromo.locationDesc')}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-yellow-100 to-amber-100 dark:from-yellow-900/30 dark:to-amber-900/30 flex items-center justify-center flex-shrink-0">
-                          <Coffee className="w-6 h-6 text-yellow-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-foreground text-lg">{t('wutang.hotelPromo.breakfast')}</h4>
-                          <p className="text-muted-foreground">{t('wutang.hotelPromo.breakfastDesc')}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 flex items-center justify-center flex-shrink-0">
-                          <Users className="w-6 h-6 text-amber-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-foreground text-lg">{t('wutang.hotelPromo.reception')}</h4>
-                          <p className="text-muted-foreground">{t('wutang.hotelPromo.receptionDesc')}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-primary/5 via-yellow-100/50 to-amber-100/50 dark:from-primary/10 dark:via-yellow-900/20 dark:to-amber-900/20 p-10 md:p-12">
-                    <h3 className="font-display text-2xl text-foreground mb-6">{t('wutang.hotelPromo.comfort')}</h3>
-                    <ul className="space-y-4">
-                      {[
-                        { icon: Tv, text: t('wutang.hotelPromo.tv') },
-                        { icon: Wifi, text: t('wutang.hotelPromo.wifi') },
-                        { icon: Coffee, text: t('wutang.hotelPromo.buffet') },
-                        { icon: Car, text: t('wutang.hotelPromo.parkingOption') }
-                      ].map((item, idx) => (
-                        <li key={idx} className="flex items-center gap-4 text-muted-foreground">
-                          <div className="w-10 h-10 rounded-xl bg-white dark:bg-card flex items-center justify-center shadow-md">
-                            <item.icon className="w-5 h-5 text-primary" />
-                          </div>
-                          <span className="font-medium">{item.text}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-8">
-                      <Link to="/nos-chambres">
-                        <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white font-bold py-6 text-lg shadow-xl hover:scale-105 transition-all duration-300">
-                          {t('wutang.hotelPromo.discoverRooms')}
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Video Section */}
         <section className="py-20 bg-gradient-to-br from-gray-100 via-white to-yellow-50 dark:from-gray-950/20 dark:via-background dark:to-yellow-950/20">
           <div className="container mx-auto px-4">
@@ -477,37 +508,6 @@ const WuTangConcert = () => {
                   allowFullScreen 
                   className="w-full h-full" 
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500 via-amber-600 to-orange-600 animate-gradient" />
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-300/30 rounded-full blur-3xl animate-float" />
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-500/30 rounded-full blur-3xl animate-float animation-delay-600" />
-          </div>
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,white_2px,transparent_2px)] bg-[length:40px_40px]" />
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="inline-block p-4 bg-white/20 backdrop-blur-md rounded-full mb-6 animate-bounce-subtle border border-white/30">
-                  <Gift className="w-12 h-12 text-white" />
-                </div>
-                <h2 className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-2xl">{t('wutang.bookStay')}</h2>
-                <p className="text-yellow-100 text-xl">{t('wutang.bestConditions')}</p>
-              </div>
-              <div className="text-center">
-                <Link to="/reservation-seminaire">
-                  <Button size="lg" className="bg-white text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-amber-600 hover:bg-yellow-50 font-bold px-12 py-8 text-xl shadow-2xl hover:scale-110 transition-all duration-300 border-4 border-white/50 group">
-                    <Mic className="w-6 h-6 mr-3 text-yellow-600 group-hover:animate-bounce" />
-                    <span className="bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent">{t('wutang.bookNow')}</span>
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>
