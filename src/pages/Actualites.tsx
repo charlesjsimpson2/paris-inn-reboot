@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Camera, Music, Trophy, Leaf, Mic, Clock, Timer } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import enfoiresAffiche from "@/assets/enfoires-2026-affiche.png";
+import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
-import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
-import mikaHero from "@/assets/mika-concert-hero.jpg";
-import claraHero from "@/assets/clara-luciani-hero.jpg";
-import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
+import salonAgricultureHero from "@/assets/salon-agriculture.webp";
+import mikaHero from "@/assets/mika-cropped.jpg";
+import claraHero from "@/assets/clara-luciani-portrait.jpg";
+import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
+import wutangHero from "@/assets/wu-tang-concert.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -29,7 +30,7 @@ const Actualites = () => {
       location: t('actualites.enfoires.location'),
       category: t('actualites.concert'),
       link: "/enfoires-2026",
-      image: enfoiresAffiche,
+      image: enfoiresLogo,
       icon: Music,
       badgeColor: "bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400",
     },
@@ -103,6 +104,35 @@ const Actualites = () => {
       image: semiMarathonHero,
       icon: Timer,
       badgeColor: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400",
+    },
+    {
+      id: "wutang",
+      title: t('wutang.title'),
+      subtitle: t('wutang.subtitle'),
+      date: t('actualites.wutang.date'),
+      sortDate: "2026-03-11",
+      endDate: "2026-03-11",
+      location: "Accor Arena Paris",
+      category: t('actualites.concert'),
+      link: "/wu-tang-concert",
+      image: wutangHero,
+      icon: Mic,
+      badgeColor: "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400",
+    },
+    {
+      id: "france-angleterre",
+      title: "France vs Angleterre",
+      subtitle: "Le Crunch - La rivalité légendaire",
+      date: "14 mars 2026",
+      sortDate: "2026-03-14",
+      endDate: "2026-03-14",
+      location: "Stade de France",
+      category: t('rugby.tournament'),
+      link: "/france-angleterre",
+      image: rugbyImage,
+      icon: Trophy,
+      badgeColor: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
+      hasFlags: true,
     },
   ];
 
