@@ -95,122 +95,12 @@ const SemiMarathonParis = () => {
           </div>
         </section>
 
-        {/* Hotel Promo Section - DÉPLACÉ EN PREMIER */}
-        <section className="py-16 bg-gradient-to-br from-[#3BB5DC]/10 via-white to-[#E94E4B]/10 dark:from-[#3BB5DC]/5 dark:via-background dark:to-[#E94E4B]/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-                  <Star className="w-4 h-4" />
-                  <span className="font-medium text-sm">{t('semimarathon.hotelPromo.badge')}</span>
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('semimarathon.hotelPromo.title')}</h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t('semimarathon.hotelPromo.subtitle')}</p>
-              </div>
-
-              <div className="bg-white dark:bg-card rounded-2xl shadow-xl border border-border/50 overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="p-8 md:p-10">
-                    <h3 className="font-display text-2xl text-foreground mb-4">{t('semimarathon.hotelPromo.whyUs')}</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-[#3BB5DC]/10 flex items-center justify-center flex-shrink-0">
-                          <Train className="w-5 h-5 text-[#3BB5DC]" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{t('semimarathon.hotelPromo.location')}</h4>
-                          <p className="text-sm text-muted-foreground">{t('semimarathon.hotelPromo.locationDesc')}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-[#E94E4B]/10 flex items-center justify-center flex-shrink-0">
-                          <Coffee className="w-5 h-5 text-[#E94E4B]" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{t('semimarathon.hotelPromo.breakfast')}</h4>
-                          <p className="text-sm text-muted-foreground">{t('semimarathon.hotelPromo.breakfastDesc')}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-[#F9C74F]/20 flex items-center justify-center flex-shrink-0">
-                          <Users className="w-5 h-5 text-[#D4A843]" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-foreground">{t('semimarathon.hotelPromo.reception')}</h4>
-                          <p className="text-sm text-muted-foreground">{t('semimarathon.hotelPromo.receptionDesc')}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-[#3BB5DC]/10 to-[#E94E4B]/10 dark:from-[#3BB5DC]/5 dark:to-[#E94E4B]/5 p-8 md:p-10">
-                    <h3 className="font-display text-2xl text-foreground mb-4">{t('semimarathon.hotelPromo.comfort')}</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Tv className="w-4 h-4 text-[#E94E4B]" />
-                        </div>
-                        <span className="text-sm">{t('semimarathon.hotelPromo.tv')}</span>
-                      </li>
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Wifi className="w-4 h-4 text-[#3BB5DC]" />
-                        </div>
-                        <span className="text-sm">{t('semimarathon.hotelPromo.wifi')}</span>
-                      </li>
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Coffee className="w-4 h-4 text-[#F9C74F]" />
-                        </div>
-                        <span className="text-sm">{t('semimarathon.hotelPromo.buffet')}</span>
-                      </li>
-                      <li className="flex items-center gap-3 text-muted-foreground">
-                        <div className="w-8 h-8 rounded-full bg-white dark:bg-card flex items-center justify-center shadow-sm">
-                          <Car className="w-4 h-4 text-[#E94E4B]" />
-                        </div>
-                        <span className="text-sm">{t('semimarathon.hotelPromo.parkingOption')}</span>
-                      </li>
-                    </ul>
-                    <Link to="/nos-chambres">
-                      <Button className="mt-6 w-full bg-[#E94E4B] hover:bg-[#D43F3C] text-white">{t('semimarathon.hotelPromo.discoverRooms')}</Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section - DÉPLACÉ EN PREMIER */}
-        <section className="py-16 bg-gradient-to-r from-[#E94E4B] to-[#3BB5DC] text-white relative overflow-hidden">
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-[#F9C74F] transform skew-y-[-2deg] origin-bottom-left" />
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="font-display text-3xl md:text-4xl mb-4">{t('semimarathon.bookStay')}</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">{t('semimarathon.bestConditions')}</p>
-            <a 
-              href="https://www.secure-hotel-booking.com/Hotel-Inn-Design-Place-d-Italie/2V5Y/1892/fr" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" className="bg-[#F9C74F] hover:bg-[#E5B73D] text-black font-bold text-lg px-8">
-                {t('semimarathon.bookNow')}
-              </Button>
-            </a>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section className="py-10 bg-white dark:bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 text-[#E94E4B] px-4 py-2 rounded-full mb-3">
-                <Trophy className="w-4 h-4" />
-                <span className="font-medium text-sm">{t('semimarathon.edition2026')}</span>
-              </div>
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('semimarathon.legendaryRace')}</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">{t('semimarathon.raceDesc')}</p>
-            </div>
-          </div>
-        </section>
+        {/* Hotel Promo Section */}
+        <EventHotelPromo 
+          eventName="Semi-Marathon" 
+          accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
+          urgencyMessage="Offre Semi-Marathon Paris"
+        />
 
         {/* Description Section */}
         <section className="py-16 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/5">
