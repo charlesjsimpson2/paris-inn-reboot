@@ -9,6 +9,7 @@ import wutangPortrait from "@/assets/wu-tang-portrait.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
+import { EasyAccessSection } from "@/components/EasyAccessSection";
 
 const WuTangConcert = () => {
   const { t } = useLanguage();
@@ -367,6 +368,15 @@ const WuTangConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Accor Arena Paris"
+          travelTime="~25 min"
+          metroLine="Ligne 14"
+          metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
+          accentColor="from-yellow-500 via-amber-600 to-orange-600"
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="wutang" />
