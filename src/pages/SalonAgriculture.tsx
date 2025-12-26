@@ -48,7 +48,7 @@ const SalonAgriculture = () => {
             <p className="text-green-800 text-lg md:text-xl mb-6 font-medium">{t('agriculture.biggestFarm')}</p>
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-sm border border-green-200">
-                <Calendar className="w-5 h-5 text-green-600" /><span className="text-green-800 font-medium">22 Février - 2 Mars 2025</span>
+                <Calendar className="w-5 h-5 text-green-600" /><span className="text-green-800 font-medium">21 Février - 1 Mars 2026</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-sm border border-green-200">
                 <MapPin className="w-5 h-5 text-green-600" /><span className="text-green-800 font-medium">Porte de Versailles</span>
