@@ -207,12 +207,6 @@ const MikaConcert = () => {
           accentColor="from-orange-500 via-pink-600 to-purple-700"
         />
 
-        {/* Hotel Promo Section */}
-        <EventHotelPromo 
-          eventName="MIKA Live" 
-          accentColor="from-orange-500 via-pink-600 to-purple-700"
-          urgencyMessage="Offre Concert MIKA"
-        />
 
         {/* About Section - Plus dynamique */}
         <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
@@ -384,6 +378,14 @@ const MikaConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Hotel Promo Section - Compact */}
+        <EventHotelPromo 
+          eventName="MIKA Live" 
+          accentColor="from-orange-500 via-pink-600 to-purple-700"
+          urgencyMessage="Offre Concert MIKA"
+          compact
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="mika" />

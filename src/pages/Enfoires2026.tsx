@@ -174,12 +174,6 @@ const Enfoires2026 = () => {
           accentColor="from-pink-600 via-fuchsia-600 to-purple-700"
         />
 
-        {/* Hotel Promo Section */}
-        <EventHotelPromo 
-          eventName="Les Enfoirés 2026" 
-          accentColor="from-pink-600 via-fuchsia-600 to-purple-700"
-          urgencyMessage="Offre spéciale Enfoirés"
-        />
 
         {/* About Section */}
         <section className="py-16 bg-white dark:bg-background">
@@ -297,6 +291,14 @@ const Enfoires2026 = () => {
             </div>
           </div>
         </section>
+
+        {/* Hotel Promo Section - Compact */}
+        <EventHotelPromo 
+          eventName="Les Enfoirés 2026" 
+          accentColor="from-pink-600 via-fuchsia-600 to-purple-700"
+          urgencyMessage="Offre spéciale Enfoirés"
+          compact
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="enfoires" />

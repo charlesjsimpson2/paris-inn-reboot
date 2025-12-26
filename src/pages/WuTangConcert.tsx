@@ -180,12 +180,6 @@ const WuTangConcert = () => {
           accentColor="from-yellow-500 via-amber-600 to-orange-600"
         />
 
-        {/* Hotel Promo Section */}
-        <EventHotelPromo 
-          eventName="Wu-Tang Clan" 
-          accentColor="from-yellow-500 via-amber-600 to-orange-600"
-          urgencyMessage="Offre Concert Wu-Tang"
-        />
 
         {/* About Section */}
         <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
@@ -377,6 +371,14 @@ const WuTangConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Hotel Promo Section - Compact */}
+        <EventHotelPromo 
+          eventName="Wu-Tang Clan" 
+          accentColor="from-yellow-500 via-amber-600 to-orange-600"
+          urgencyMessage="Offre Concert Wu-Tang"
+          compact
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="wutang" />
