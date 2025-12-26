@@ -217,11 +217,11 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.enfoires.location': 'Accor Arena Paris',
     'actualites.rugby.title': 'France vs Irlande',
     'actualites.rugby.subtitle': 'Le choc au sommet du Tournoi - Vivez l\'intensité du rugby international',
-    'actualites.rugby.date': '8 mars 2025',
+    'actualites.rugby.date': '22 février 2026',
     'actualites.rugby.location': 'Stade de France',
     'actualites.agriculture.title': 'Salon de l\'Agriculture',
     'actualites.agriculture.subtitle': 'La plus grande ferme de France - 600 000 visiteurs chaque année',
-    'actualites.agriculture.date': '22 fév - 2 mars 2025',
+    'actualites.agriculture.date': '21 fév - 1 mars 2026',
     'actualites.agriculture.location': 'Porte de Versailles',
     'actualites.pastEvents': 'Événements passés',
     'actualites.flashback': 'Retour en images',
@@ -295,7 +295,7 @@ const translations: Record<Language, Record<string, string>> = {
     'enfoires.moreEvents': 'Découvrez nos autres événements',
     
     // Rugby Page
-    'rugby.tournament': 'Tournoi des 6 Nations 2025',
+    'rugby.tournament': 'Tournoi des 6 Nations 2026',
     'rugby.title': 'France vs Irlande',
     'rugby.subtitle': 'Le choc au sommet du rugby européen au Stade de France',
     'rugby.unmissable': 'Un événement incontournable',
@@ -335,7 +335,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Agriculture Page
     'agriculture.badge': 'Salon International de l\'Agriculture',
-    'agriculture.title': 'Salon de l\'Agriculture 2025',
+    'agriculture.title': 'Salon de l\'Agriculture 2026',
     'agriculture.biggestFarm': 'La plus grande ferme de France s\'installe à Paris',
     'agriculture.bookAccommodation': 'Réserver votre hébergement',
     'agriculture.unmissable': 'Un événement incontournable',
@@ -1047,11 +1047,11 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.enfoires.location': 'Accor Arena Paris',
     'actualites.rugby.title': 'France vs Ireland',
     'actualites.rugby.subtitle': 'The tournament\'s top clash - Experience the intensity of international rugby',
-    'actualites.rugby.date': 'March 8, 2025',
+    'actualites.rugby.date': 'February 22, 2026',
     'actualites.rugby.location': 'Stade de France',
     'actualites.agriculture.title': 'Agricultural Show',
     'actualites.agriculture.subtitle': 'France\'s largest farm - 600,000 visitors each year',
-    'actualites.agriculture.date': 'Feb 22 - Mar 2, 2025',
+    'actualites.agriculture.date': 'Feb 21 - Mar 1, 2026',
     'actualites.agriculture.location': 'Porte de Versailles',
     'actualites.pastEvents': 'Past events',
     'actualites.flashback': 'Flashback',
@@ -1130,7 +1130,7 @@ const translations: Record<Language, Record<string, string>> = {
     'enfoires.moreEvents': 'Discover our other events',
     
     // Rugby Page
-    'rugby.tournament': '6 Nations Tournament 2025',
+    'rugby.tournament': '6 Nations Tournament 2026',
     'rugby.title': 'France vs Ireland',
     'rugby.subtitle': 'The top clash of European rugby at the Stade de France',
     'rugby.unmissable': 'An unmissable event',
@@ -1170,7 +1170,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Agriculture Page
     'agriculture.badge': 'International Agricultural Show',
-    'agriculture.title': 'Agricultural Show 2025',
+    'agriculture.title': 'Agricultural Show 2026',
     'agriculture.biggestFarm': 'France\'s largest farm comes to Paris',
     'agriculture.bookAccommodation': 'Book your accommodation',
     'agriculture.unmissable': 'An unmissable event',
@@ -1608,11 +1608,11 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.enfoires.location': 'Accor Arena París',
     'actualites.rugby.title': 'Francia vs Irlanda',
     'actualites.rugby.subtitle': 'El choque cumbre del Torneo - Viva la intensidad del rugby internacional',
-    'actualites.rugby.date': '8 de marzo de 2025',
+    'actualites.rugby.date': '22 de febrero de 2026',
     'actualites.rugby.location': 'Stade de France',
     'actualites.agriculture.title': 'Salón de la Agricultura',
     'actualites.agriculture.subtitle': 'La granja más grande de Francia - 600.000 visitantes cada año',
-    'actualites.agriculture.date': '22 feb - 2 mar 2025',
+    'actualites.agriculture.date': '21 feb - 1 mar 2026',
     'actualites.agriculture.location': 'Porte de Versailles',
     'actualites.pastEvents': 'Eventos pasados',
     'actualites.flashback': 'Retrospectiva',
@@ -1686,7 +1686,7 @@ const translations: Record<Language, Record<string, string>> = {
     'enfoires.moreEvents': 'Descubra nuestros otros eventos',
     
     // Rugby Page
-    'rugby.tournament': 'Torneo 6 Naciones 2025',
+    'rugby.tournament': 'Torneo 6 Naciones 2026',
     'rugby.title': 'Francia vs Irlanda',
     'rugby.subtitle': 'El choque cumbre del rugby europeo en el Stade de France',
     'rugby.unmissable': 'Un evento imperdible',
@@ -1726,7 +1726,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Agriculture Page
     'agriculture.badge': 'Salón Internacional de la Agricultura',
-    'agriculture.title': 'Salón de la Agricultura 2025',
+    'agriculture.title': 'Salón de la Agricultura 2026',
     'agriculture.biggestFarm': 'La granja más grande de Francia se instala en París',
     'agriculture.bookAccommodation': 'Reservar su alojamiento',
     'agriculture.unmissable': 'Un evento imperdible',
@@ -2098,11 +2098,11 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.enfoires.location': 'Accor Arena Parigi',
     'actualites.rugby.title': 'Francia vs Irlanda',
     'actualites.rugby.subtitle': 'Lo scontro al vertice del Torneo - Vivi l\'intensità del rugby internazionale',
-    'actualites.rugby.date': '8 marzo 2025',
+    'actualites.rugby.date': '22 febbraio 2026',
     'actualites.rugby.location': 'Stade de France',
     'actualites.agriculture.title': 'Salone dell\'Agricoltura',
     'actualites.agriculture.subtitle': 'La fattoria più grande di Francia - 600.000 visitatori ogni anno',
-    'actualites.agriculture.date': '22 feb - 2 mar 2025',
+    'actualites.agriculture.date': '21 feb - 1 mar 2026',
     'actualites.agriculture.location': 'Porte de Versailles',
     'actualites.pastEvents': 'Eventi passati',
     'actualites.flashback': 'Retrospettiva',
@@ -2176,7 +2176,7 @@ const translations: Record<Language, Record<string, string>> = {
     'enfoires.moreEvents': 'Scopri i nostri altri eventi',
     
     // Rugby Page
-    'rugby.tournament': 'Torneo 6 Nazioni 2025',
+    'rugby.tournament': 'Torneo 6 Nazioni 2026',
     'rugby.title': 'Francia vs Irlanda',
     'rugby.subtitle': 'Lo scontro al vertice del rugby europeo allo Stade de France',
     'rugby.unmissable': 'Un evento imperdibile',
@@ -2216,7 +2216,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Agriculture Page
     'agriculture.badge': 'Salone Internazionale dell\'Agricoltura',
-    'agriculture.title': 'Salone dell\'Agricoltura 2025',
+    'agriculture.title': 'Salone dell\'Agricoltura 2026',
     'agriculture.biggestFarm': 'La fattoria più grande di Francia arriva a Parigi',
     'agriculture.bookAccommodation': 'Prenota il tuo alloggio',
     'agriculture.unmissable': 'Un evento imperdibile',
@@ -2588,11 +2588,11 @@ const translations: Record<Language, Record<string, string>> = {
     'actualites.enfoires.location': 'Accor Arena Paris',
     'actualites.rugby.title': 'França vs Irlanda',
     'actualites.rugby.subtitle': 'O confronto no topo do Torneio - Viva a intensidade do rugby internacional',
-    'actualites.rugby.date': '8 de março de 2025',
+    'actualites.rugby.date': '22 de fevereiro de 2026',
     'actualites.rugby.location': 'Stade de France',
     'actualites.agriculture.title': 'Feira de Agricultura',
     'actualites.agriculture.subtitle': 'A maior fazenda da França - 600.000 visitantes por ano',
-    'actualites.agriculture.date': '22 fev - 2 mar 2025',
+    'actualites.agriculture.date': '21 fev - 1 mar 2026',
     'actualites.agriculture.location': 'Porte de Versailles',
     'actualites.pastEvents': 'Eventos passados',
     'actualites.flashback': 'Retrospectiva',
@@ -2666,7 +2666,7 @@ const translations: Record<Language, Record<string, string>> = {
     'enfoires.moreEvents': 'Descubra nossos outros eventos',
     
     // Rugby Page
-    'rugby.tournament': 'Torneio das 6 Nações 2025',
+    'rugby.tournament': 'Torneio das 6 Nações 2026',
     'rugby.title': 'França vs Irlanda',
     'rugby.subtitle': 'O confronto no topo do rugby europeu no Stade de France',
     'rugby.unmissable': 'Um evento imperdível',
@@ -2706,7 +2706,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Agriculture Page
     'agriculture.badge': 'Feira Internacional de Agricultura',
-    'agriculture.title': 'Feira de Agricultura 2025',
+    'agriculture.title': 'Feira de Agricultura 2026',
     'agriculture.biggestFarm': 'A maior fazenda da França chega a Paris',
     'agriculture.bookAccommodation': 'Reserve sua acomodação',
     'agriculture.unmissable': 'Um evento imperdível',

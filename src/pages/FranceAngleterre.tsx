@@ -147,32 +147,32 @@ const FranceAngleterre = () => {
         <section className="py-10 bg-gradient-to-r from-blue-900 via-slate-900 to-red-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-6">
-              <h2 className="font-display text-2xl md:text-3xl text-white mb-2">Coup d'envoi dans</h2>
+              <h2 className="font-display text-2xl md:text-3xl text-white mb-2">{t('enfoires.countdown')}</h2>
             </div>
             <div className="flex justify-center gap-4 md:gap-8">
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <span className="text-2xl md:text-4xl font-bold text-white">{countdown.days}</span>
                 </div>
-                <span className="text-white/80 text-sm mt-2">Jours</span>
+                <span className="text-white/80 text-sm mt-2">{t('enfoires.days')}</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-slate-700 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl md:text-4xl font-bold text-white">{countdown.hours}</span>
                 </div>
-                <span className="text-white/80 text-sm mt-2">Heures</span>
+                <span className="text-white/80 text-sm mt-2">{t('enfoires.hours')}</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-slate-700 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl md:text-4xl font-bold text-white">{countdown.minutes}</span>
                 </div>
-                <span className="text-white/80 text-sm mt-2">Minutes</span>
+                <span className="text-white/80 text-sm mt-2">{t('enfoires.min')}</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/30">
                   <span className="text-2xl md:text-4xl font-bold text-white">{countdown.seconds}</span>
                 </div>
-                <span className="text-white/80 text-sm mt-2">Secondes</span>
+                <span className="text-white/80 text-sm mt-2">{t('enfoires.sec')}</span>
               </div>
             </div>
           </div>
