@@ -159,21 +159,21 @@ export const NewsSection = () => {
     );
 
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-12 sm:py-16 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/95 to-background" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-burgundy via-burgundy to-primary text-white px-6 py-3 rounded-full mb-6 shadow-lg shadow-burgundy/30 animate-pulse hover:scale-105 transition-transform cursor-default">
-            <Sparkles className="w-5 h-5 animate-spin" style={{ animationDuration: '3s' }} />
-            <span className="font-bold text-base uppercase tracking-widest">{t('news.dontMiss')}</span>
-            <Sparkles className="w-5 h-5 animate-spin" style={{ animationDuration: '3s', animationDirection: 'reverse' }} />
+      <div className="container mx-auto px-3 sm:px-4 relative z-10">
+        <div className="text-center mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-burgundy via-burgundy to-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full mb-4 sm:mb-6 shadow-lg shadow-burgundy/30 cursor-default">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="font-bold text-sm sm:text-base uppercase tracking-wider sm:tracking-widest">{t('news.dontMiss')}</span>
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
-          <h2 className="font-display text-3xl md:text-5xl text-burgundy mb-2">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl text-burgundy mb-2">
             {t('news.upcomingEvents')}
           </h2>
-          <p className="text-muted-foreground text-lg">{t('news.subtitle')}</p>
+          <p className="text-muted-foreground text-base sm:text-lg">{t('news.subtitle')}</p>
         </div>
 
         <Carousel

@@ -62,6 +62,8 @@ export const IntroSection = () => {
               <img
                 src={hotelMetroFacade}
                 alt="Façade de l'Hotel Inn Paris avec le métro"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>

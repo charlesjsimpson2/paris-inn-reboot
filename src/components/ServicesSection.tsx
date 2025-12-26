@@ -30,20 +30,22 @@ export const ServicesSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {/* Accueil à l'hôtel + Infos pratiques avec image */}
-          <div className="bg-secondary/30 border border-border/30 overflow-hidden">
+          <div className="bg-secondary/30 border border-border/30 overflow-hidden sm:col-span-2 md:col-span-1">
             <img 
               src={receptionHotel} 
               alt="Réception de l'hôtel" 
-              className="w-full h-52 object-cover"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-40 sm:h-52 object-cover"
             />
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10">
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl text-foreground">{t('services.reception.title')}</h3>
+                <h3 className="font-display text-lg sm:text-xl text-foreground">{t('services.reception.title')}</h3>
               </div>
               
               {/* Accueil items */}
@@ -75,14 +77,16 @@ export const ServicesSection = () => {
             <img 
               src={restaurantPlat} 
               alt="Plat gastronomique" 
-              className="w-full h-52 object-cover"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-40 sm:h-52 object-cover"
             />
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10">
                   <Utensils className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl text-foreground">{t('services.restaurant.title')}</h3>
+                <h3 className="font-display text-lg sm:text-xl text-foreground">{t('services.restaurant.title')}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-sm">
                 {t('services.restaurant.desc')}
@@ -95,14 +99,16 @@ export const ServicesSection = () => {
             <img 
               src={tourEiffel} 
               alt="Tour Eiffel Paris" 
-              className="w-full h-52 object-cover"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-40 sm:h-52 object-cover"
             />
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-xl text-foreground">{t('services.tourism.title')}</h3>
+                <h3 className="font-display text-lg sm:text-xl text-foreground">{t('services.tourism.title')}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-sm">
                 {t('services.tourism.desc')}
