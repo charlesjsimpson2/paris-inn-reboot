@@ -58,6 +58,15 @@ const SalonAgriculture = () => {
           </div>
         </section>
 
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Porte de Versailles"
+          travelTime="~25 min"
+          metroLine="Ligne 12"
+          metroRoute="Place d'Italie → Porte de Versailles (via Ligne 7 puis 12)"
+          accentColor="from-green-600 via-green-700 to-amber-600"
+        />
+
         {/* Hotel Promo Section */}
         <EventHotelPromo 
           eventName="Salon Agriculture" 
@@ -212,15 +221,6 @@ const SalonAgriculture = () => {
           </div>
         </section>
 
-
-        {/* Easy Access Section */}
-        <EasyAccessSection 
-          venue="Porte de Versailles"
-          travelTime="~25 min"
-          metroLine="Ligne 12"
-          metroRoute="Place d'Italie → Porte de Versailles (via Ligne 7 puis 12)"
-          accentColor="from-green-600 via-green-700 to-amber-600"
-        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="agriculture" />

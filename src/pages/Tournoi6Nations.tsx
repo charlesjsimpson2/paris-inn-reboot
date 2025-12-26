@@ -108,19 +108,14 @@ const Tournoi6Nations = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-r from-blue-600 via-blue-700 to-green-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl mb-6">{t('rugby.easyAccess')}</h2>
-              <p className="text-white/90 text-lg leading-relaxed mb-8">{t('rugby.accessDesc')}</p>
-              <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                <div className="flex items-center gap-2"><Train className="w-6 h-6" /><span className="font-bold">{t('rugby.line13')}</span></div>
-                <div className="h-8 w-px bg-white/30" />
-                <div><p className="font-bold">{t('rugby.duration')}</p><p className="text-sm text-white/80">{t('rugby.route')}</p></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Stade de France"
+          travelTime="~30 min"
+          metroLine="Ligne 13"
+          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
+          accentColor="from-blue-600 via-blue-700 to-green-600"
+        />
 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
@@ -253,15 +248,6 @@ const Tournoi6Nations = () => {
             </div>
           </div>
         </section>
-
-        {/* Easy Access Section */}
-        <EasyAccessSection 
-          venue="Stade de France"
-          travelTime="~30 min"
-          metroLine="Ligne 13"
-          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
-          accentColor="from-blue-600 via-blue-700 to-green-600"
-        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="rugby" />
