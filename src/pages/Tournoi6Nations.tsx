@@ -76,7 +76,7 @@ const Tournoi6Nations = () => {
                 <p className="text-white/90 text-lg md:text-xl mb-6">{t('rugby.subtitle')}</p>
                 <div className="flex flex-wrap gap-4 text-white/90">
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <Calendar className="w-4 h-4" /><span>8 Mars 2025</span>
+                    <Calendar className="w-4 h-4" /><span>8 Mars 2026</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                     <Clock className="w-4 h-4" /><span>21h00</span>
