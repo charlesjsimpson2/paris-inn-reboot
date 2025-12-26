@@ -1894,6 +1894,19 @@ const translations: Record<Language, Record<string, string>> = {
     'clara.hotelPromo.whyUs': '¿Por qué elegir nuestro hotel?',
     'clara.hotelPromo.location': 'Acceso directo al Accor Arena',
     'clara.hotelPromo.locationDesc': 'Cerca de la estación de metro Place d\'Italie, llega al Accor Arena en 20 minutos por la línea 14.',
+
+    // Sorteo de camiseta (todos los conciertos)
+    'concert.raffle.badge': 'Concurso exclusivo',
+    'concert.raffle.title': '¡Gana una camiseta oficial!',
+    'concert.raffle.subtitle': 'Sorteo reservado a los clientes del hotel',
+    'concert.raffle.desc': 'Participa en nuestro sorteo exclusivo e intenta ganar una camiseta oficial de la gira. Todos los clientes que se alojen en el hotel con motivo del concierto quedan inscritos automáticamente.',
+    'concert.raffle.howTo': '¿Cómo participar?',
+    'concert.raffle.step1': 'Reserva tu habitación para la fecha del concierto',
+    'concert.raffle.step2': 'Inscríbete en recepción a tu llegada',
+    'concert.raffle.step3': 'El sorteo se realiza el día del concierto a las 18:00',
+    'concert.raffle.winner': 'El ganador se anuncia en recepción',
+    'concert.raffle.note': '*Una camiseta oficial para ganar por concierto. Consulta las condiciones en recepción.',
+
     'actualites.claraluciani.date': '18-19 febrero 2026',
   },
   it: {
@@ -2438,6 +2451,19 @@ const translations: Record<Language, Record<string, string>> = {
     'clara.hotelPromo.whyUs': 'Perché scegliere il nostro hotel?',
     'clara.hotelPromo.location': 'Accesso diretto all\'Accor Arena',
     'clara.hotelPromo.locationDesc': 'Vicino alla stazione metro Place d\'Italie, raggiungi l\'Accor Arena in 20 minuti con la linea 14.',
+
+    // Estrazione maglietta (tutti i concerti)
+    'concert.raffle.badge': 'Concorso esclusivo',
+    'concert.raffle.title': 'Vinci una maglietta ufficiale!',
+    'concert.raffle.subtitle': 'Estrazione riservata agli ospiti dell\'hotel',
+    'concert.raffle.desc': 'Partecipa alla nostra estrazione esclusiva e prova a vincere una maglietta ufficiale del tour! Ogni ospite che soggiorna in hotel per il concerto viene iscritto automaticamente.',
+    'concert.raffle.howTo': 'Come partecipare?',
+    'concert.raffle.step1': 'Prenota la tua camera per la data del concerto',
+    'concert.raffle.step2': 'Registrati in reception al tuo arrivo',
+    'concert.raffle.step3': 'L\'estrazione si svolge il giorno del concerto alle 18:00',
+    'concert.raffle.winner': 'Il vincitore viene annunciato in reception',
+    'concert.raffle.note': '*Una maglietta ufficiale in palio per concerto. Vedi condizioni in reception.',
+
     'actualites.claraluciani.date': '18-19 febbraio 2026',
   },
   pt: {
@@ -2982,6 +3008,19 @@ const translations: Record<Language, Record<string, string>> = {
     'clara.hotelPromo.whyUs': 'Por que escolher nosso hotel?',
     'clara.hotelPromo.location': 'Acesso direto ao Accor Arena',
     'clara.hotelPromo.locationDesc': 'Perto da estação de metrô Place d\'Italie, chegue ao Accor Arena em 20 minutos pela linha 14.',
+
+    // Sorteio de camiseta (todos os concertos)
+    'concert.raffle.badge': 'Concurso exclusivo',
+    'concert.raffle.title': 'Ganhe uma camiseta oficial!',
+    'concert.raffle.subtitle': 'Sorteio reservado aos hóspedes do hotel',
+    'concert.raffle.desc': 'Participe do nosso sorteio exclusivo e tente ganhar uma camiseta oficial da turnê! Todo hóspede que se hospedar no hotel por causa do concerto é inscrito automaticamente.',
+    'concert.raffle.howTo': 'Como participar?',
+    'concert.raffle.step1': 'Reserve seu quarto para a data do concerto',
+    'concert.raffle.step2': 'Inscreva-se na recepção ao chegar',
+    'concert.raffle.step3': 'O sorteio acontece no dia do concerto às 18:00',
+    'concert.raffle.winner': 'O vencedor é anunciado na recepção',
+    'concert.raffle.note': '*Uma camiseta oficial para ganhar por concerto. Consulte as condições na recepção.',
+
     'actualites.claraluciani.date': '18-19 fevereiro 2026',
   },
 };
