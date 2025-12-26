@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
+import franceAngleterreHero from "@/assets/france-angleterre-hero.png";
 import salonAgricultureHero from "@/assets/salon-agriculture.webp";
 import mikaHero from "@/assets/mika-cropped.jpg";
 import claraHero from "@/assets/clara-luciani-portrait.jpg";
@@ -129,7 +130,7 @@ const Actualites = () => {
       location: "Stade de France",
       category: t('rugby.tournament'),
       link: "/france-angleterre",
-      image: rugbyImage,
+      image: franceAngleterreHero,
       icon: Trophy,
       badgeColor: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
       hasFlags: true,
