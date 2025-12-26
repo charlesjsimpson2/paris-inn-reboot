@@ -8,12 +8,14 @@ interface EventHotelPromoProps {
   eventName: string;
   accentColor?: string;
   urgencyMessage?: string;
+  compact?: boolean;
 }
 
 export const EventHotelPromo = ({ 
   eventName, 
   accentColor = "from-primary via-burgundy to-primary",
-  urgencyMessage
+  urgencyMessage,
+  compact = false
 }: EventHotelPromoProps) => {
   const { t } = useLanguage();
 
@@ -21,10 +23,59 @@ export const EventHotelPromo = ({
     { icon: Train, text: t('enfoires.hotelPromo.location'), highlight: true },
     { icon: Coffee, text: t('enfoires.hotelPromo.breakfast') },
     { icon: Wifi, text: t('enfoires.hotelPromo.wifi') },
-    { icon: Tv, text: t('enfoires.hotelPromo.tv') },
     { icon: Car, text: t('enfoires.hotelPromo.parkingOption') },
-    { icon: Users, text: t('enfoires.hotelPromo.reception') },
   ];
+
+  if (compact) {
+    return (
+      <section className="py-8 bg-gradient-to-br from-muted/30 via-background to-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className={`bg-gradient-to-r ${accentColor} rounded-2xl p-6 shadow-lg relative overflow-hidden`}>
+              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:250%_250%] animate-shimmer" />
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Star className="w-7 h-7 text-white" fill="currentColor" />
+                  </div>
+                  <div className="text-white text-center md:text-left">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Clock className="w-4 h-4" />
+                      <span className="text-xs font-medium uppercase tracking-wider opacity-90">Offre limitée</span>
+                    </div>
+                    <h3 className="font-display text-lg md:text-xl">{t('enfoires.hotelPromo.title')}</h3>
+                    <p className="text-white/80 text-sm hidden md:block">Emplacement idéal à quelques minutes de l'événement</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="hidden lg:flex items-center gap-2 text-white/90 text-sm">
+                    {advantages.slice(0, 3).map((adv, i) => {
+                      const Icon = adv.icon;
+                      return (
+                        <div key={i} className="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-full">
+                          <Icon className="w-3 h-3" />
+                          <span className="text-xs">{adv.text}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <Link to="/reservation-seminaire">
+                    <Button 
+                      size="sm" 
+                      className="bg-white text-foreground hover:bg-white/90 font-bold shadow-lg"
+                    >
+                      Réserver
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="relative py-0">
@@ -97,7 +148,7 @@ export const EventHotelPromo = ({
 
                     {/* Advantages Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-8">
-                      {advantages.map((advantage, index) => {
+                      {[...advantages, { icon: Tv, text: t('enfoires.hotelPromo.tv') }, { icon: Users, text: t('enfoires.hotelPromo.reception') }].map((advantage, index) => {
                         const Icon = advantage.icon;
                         return (
                           <div 

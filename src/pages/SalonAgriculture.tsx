@@ -67,12 +67,6 @@ const SalonAgriculture = () => {
           accentColor="from-green-600 via-green-700 to-amber-600"
         />
 
-        {/* Hotel Promo Section */}
-        <EventHotelPromo 
-          eventName="Salon Agriculture" 
-          accentColor="from-green-600 via-green-700 to-amber-600"
-          urgencyMessage="Offre Salon de l'Agriculture"
-        />
 
         {/* Event Description */}
         <section className="py-16 bg-gradient-to-br from-green-50 via-white to-amber-50 dark:from-green-950/20 dark:via-card dark:to-amber-950/20">
@@ -221,6 +215,13 @@ const SalonAgriculture = () => {
           </div>
         </section>
 
+        {/* Hotel Promo Section - Compact */}
+        <EventHotelPromo 
+          eventName="Salon Agriculture" 
+          accentColor="from-green-600 via-green-700 to-amber-600"
+          urgencyMessage="Offre Salon de l'Agriculture"
+          compact
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="agriculture" />

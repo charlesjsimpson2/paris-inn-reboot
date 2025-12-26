@@ -105,12 +105,6 @@ const SemiMarathonParis = () => {
           accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
         />
 
-        {/* Hotel Promo Section */}
-        <EventHotelPromo 
-          eventName="Semi-Marathon" 
-          accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
-          urgencyMessage="Offre Semi-Marathon Paris"
-        />
 
         {/* Description Section */}
         <section className="py-16 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/5">
@@ -256,6 +250,14 @@ const SemiMarathonParis = () => {
             </div>
           </div>
         </section>
+
+        {/* Hotel Promo Section - Compact */}
+        <EventHotelPromo 
+          eventName="Semi-Marathon" 
+          accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
+          urgencyMessage="Offre Semi-Marathon Paris"
+          compact
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="semimarathon" />

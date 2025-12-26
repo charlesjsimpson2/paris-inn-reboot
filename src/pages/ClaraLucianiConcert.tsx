@@ -168,12 +168,6 @@ const ClaraLucianiConcert = () => {
           accentColor="from-[#3d5afe] via-[#5c6bc0] to-[#1a1a3e]"
         />
 
-        {/* Hotel Promo Section */}
-        <EventHotelPromo 
-          eventName="Clara Luciani" 
-          accentColor="from-[#3d5afe] via-[#5c6bc0] to-[#1a1a3e]"
-          urgencyMessage="Offre Concert Clara Luciani"
-        />
 
         {/* About Section */}
         <section className="py-10 bg-white dark:bg-background">
@@ -342,6 +336,14 @@ const ClaraLucianiConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Hotel Promo Section - Compact */}
+        <EventHotelPromo 
+          eventName="Clara Luciani" 
+          accentColor="from-[#3d5afe] via-[#5c6bc0] to-[#1a1a3e]"
+          urgencyMessage="Offre Concert Clara Luciani"
+          compact
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="clara" />
