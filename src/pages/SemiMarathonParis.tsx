@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Timer, Trophy, Heart, Clock, Utensils, Droplets, Sun, Star, Train, Coffee, Users, Tv, Wifi, Car } from "lucide-react";
+import { Calendar, MapPin, Timer, Trophy, Heart, Clock, Utensils, Droplets, Sun, Star, Train, Coffee, Users, Tv, Wifi, Car, Gift, Shirt, Ticket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
@@ -92,6 +92,70 @@ const SemiMarathonParis = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Exclusive Offers - 3 columns */}
+        <section className="py-10 bg-gradient-to-br from-[#E94E4B]/10 via-white to-[#3BB5DC]/10 dark:from-[#E94E4B]/5 dark:via-background dark:to-[#3BB5DC]/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#E94E4B] to-[#3BB5DC] text-white px-5 py-2 rounded-full mb-2 shadow-lg">
+                  <Gift className="w-4 h-4" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('semimarathon.exclusiveOffers')}</span>
+                </div>
+                <p className="text-muted-foreground text-sm">{t('semimarathon.offersSubtitle')}</p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-5">
+                {/* Parking */}
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-[#E94E4B]/30 dark:border-[#E94E4B]/20 hover:scale-[1.02] transition-transform duration-300 group">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#E94E4B] to-[#E94E4B]/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Car className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg text-foreground">{t('semimarathon.parking')}</h3>
+                      <div className="inline-block bg-[#E94E4B] text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('semimarathon.parkingPrice')}</div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('semimarathon.parkingDesc')}</p>
+                </div>
+
+                {/* Taxi */}
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-[#3BB5DC]/30 dark:border-[#3BB5DC]/20 hover:scale-[1.02] transition-transform duration-300 group">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#3BB5DC] to-[#2A9BC7] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Ticket className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg text-foreground">{t('semimarathon.taxi')}</h3>
+                      <div className="inline-block bg-[#3BB5DC] text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('semimarathon.taxiDiscount')}</div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('semimarathon.taxiDesc')}</p>
+                </div>
+
+                {/* T-shirt Raffle */}
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-[#F9C74F]/50 dark:border-[#F9C74F]/30 hover:scale-[1.02] transition-transform duration-300 group relative overflow-hidden">
+                  <div className="absolute top-2 right-2">
+                    <Trophy className="w-4 h-4 text-[#F9C74F]" />
+                  </div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#F9C74F] to-[#E94E4B] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Shirt className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg text-foreground">{t('concert.raffle.title').replace('!', '')}</h3>
+                      <span className="text-xs text-[#F9C74F] font-medium uppercase tracking-wide">{t('concert.raffle.badge')}</span>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('concert.raffle.subtitle')}</p>
+                </div>
+              </div>
+              
+              <p className="text-center text-xs text-muted-foreground mt-4 italic">{t('semimarathon.offersNote')} {t('concert.raffle.note')}</p>
             </div>
           </div>
         </section>
