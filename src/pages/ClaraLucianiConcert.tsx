@@ -94,6 +94,70 @@ const ClaraLucianiConcert = () => {
           </div>
         </section>
 
+        {/* Exclusive Offers - 3 columns (moved up) */}
+        <section className="py-10 bg-gradient-to-br from-indigo-50 via-white to-blue-50 dark:from-indigo-950/20 dark:via-background dark:to-blue-950/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full mb-2 shadow-lg">
+                  <Gift className="w-4 h-4" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('clara.exclusiveOffers')}</span>
+                </div>
+                <p className="text-muted-foreground text-sm">{t('clara.offersSubtitle')}</p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-5">
+                {/* Parking */}
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-indigo-200 dark:border-indigo-800/50 hover:scale-[1.02] transition-transform duration-300 group">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Car className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg text-foreground">{t('clara.parking')}</h3>
+                      <div className="inline-block bg-indigo-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('clara.parkingPrice')}</div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('clara.parkingDesc')}</p>
+                </div>
+
+                {/* Taxi */}
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-[1.02] transition-transform duration-300 group">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Car className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg text-foreground">{t('clara.taxi')}</h3>
+                      <div className="inline-block bg-blue-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('clara.taxiDiscount')}</div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('clara.taxiDesc')}</p>
+                </div>
+
+                {/* T-shirt Raffle */}
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-purple-200 dark:border-purple-800/50 hover:scale-[1.02] transition-transform duration-300 group relative overflow-hidden">
+                  <div className="absolute top-2 right-2">
+                    <Trophy className="w-4 h-4 text-purple-400" />
+                  </div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Shirt className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg text-foreground">{t('concert.raffle.title').replace('!', '')}</h3>
+                      <span className="text-xs text-purple-600 dark:text-purple-400 font-medium uppercase tracking-wide">{t('concert.raffle.badge')}</span>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{t('concert.raffle.subtitle')}</p>
+                </div>
+              </div>
+              
+              <p className="text-center text-xs text-muted-foreground mt-4 italic">{t('clara.offersNote')} {t('concert.raffle.note')}</p>
+            </div>
+          </div>
+        </section>
+
         {/* Hotel Promo Section */}
         <EventHotelPromo 
           eventName="Clara Luciani" 
@@ -265,104 +329,6 @@ const ClaraLucianiConcert = () => {
                   <p className="text-blue-200 text-xs">{t('clara.diamond')}</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Offers Section */}
-        <section className="py-16 bg-gradient-to-br from-indigo-100 via-white to-blue-100 dark:from-indigo-950/30 dark:via-card dark:to-blue-950/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">{t('clara.exclusiveOffers')}</h2>
-                <p className="text-muted-foreground">{t('clara.offersSubtitle')}</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-indigo-200 dark:border-indigo-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Car className="w-8 h-8 text-indigo-600" />
-                  </div>
-                  <h3 className="font-display text-2xl text-foreground mb-2">{t('clara.parking')}</h3>
-                  <p className="text-muted-foreground mb-4">{t('clara.parkingDesc')}</p>
-                  <div className="inline-block bg-indigo-600 text-white font-bold text-xl px-4 py-2 rounded-full">{t('clara.parkingPrice')}</div>
-                </div>
-                <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
-                    <Ticket className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="font-display text-2xl text-foreground mb-2">{t('clara.taxi')}</h3>
-                  <p className="text-muted-foreground mb-4">{t('clara.taxiDesc')}</p>
-                  <div className="inline-block bg-blue-600 text-white font-bold text-xl px-4 py-2 rounded-full">{t('clara.taxiDiscount')}</div>
-                </div>
-              </div>
-              <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('clara.offersNote')}</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Raffle Section - T-shirt */}
-        <section className="py-16 bg-gradient-to-br from-indigo-100 via-blue-50 to-purple-100 dark:from-indigo-950/30 dark:via-blue-950/20 dark:to-purple-950/30 relative overflow-hidden">
-          <div className="absolute top-0 right-1/4 w-80 h-80 bg-indigo-300/40 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-blue-300/30 rounded-full blur-3xl" />
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-3 rounded-full mb-4 shadow-xl">
-                  <Trophy className="w-5 h-5" />
-                  <span className="font-bold text-sm uppercase tracking-wider">{t('concert.raffle.badge')}</span>
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('concert.raffle.title')}</h2>
-                <p className="text-muted-foreground text-lg">{t('concert.raffle.subtitle')}</p>
-              </div>
-              
-              <div className="bg-white dark:bg-card rounded-2xl shadow-xl border-2 border-indigo-200 dark:border-indigo-700/50 overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  {/* Left - T-shirt visual */}
-                  <div className="bg-gradient-to-br from-indigo-500 via-blue-600 to-purple-600 p-10 flex flex-col items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,white_2px,transparent_2px)] bg-[length:30px_30px]" />
-                    </div>
-                    <div className="relative bg-white/20 backdrop-blur-md rounded-3xl p-8 border border-white/30">
-                      <Shirt className="w-28 h-28 text-white drop-shadow-xl" />
-                    </div>
-                    <p className="text-white font-display text-xl mt-6 text-center drop-shadow-lg">T-shirt officiel<br />Clara Luciani Tour 2026</p>
-                  </div>
-                  
-                  {/* Right - How to participate */}
-                  <div className="p-8 md:p-10">
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{t('concert.raffle.desc')}</p>
-                    
-                    <h3 className="font-display text-xl text-foreground mb-4 flex items-center gap-2">
-                      <Sparkles className="w-5 h-5 text-indigo-500" />
-                      {t('concert.raffle.howTo')}
-                    </h3>
-                    
-                    <div className="space-y-4">
-                      {[
-                        { step: 1, text: t('concert.raffle.step1') },
-                        { step: 2, text: t('concert.raffle.step2') },
-                        { step: 3, text: t('concert.raffle.step3') }
-                      ].map((item) => (
-                        <div key={item.step} className="flex items-start gap-4">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0 shadow-lg">
-                            <span className="text-white font-bold">{item.step}</span>
-                          </div>
-                          <p className="text-muted-foreground pt-2">{item.text}</p>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="mt-6 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-xl border border-indigo-200 dark:border-indigo-800/30">
-                      <div className="flex items-center gap-3">
-                        <CheckCircle className="w-6 h-6 text-green-500" />
-                        <p className="text-foreground font-medium">{t('concert.raffle.winner')}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('concert.raffle.note')}</p>
             </div>
           </div>
         </section>
