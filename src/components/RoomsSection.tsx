@@ -66,21 +66,21 @@ export const RoomsSection = () => {
   }, [maxIndex]);
 
   return (
-    <section id="chambres" className="py-20 bg-charcoal">
-      <div className="container mx-auto px-4">
+    <section id="chambres" className="py-12 sm:py-20 bg-charcoal">
+      <div className="container mx-auto px-3 sm:px-4">
         {/* Header centered */}
-        <div className="text-center mb-12 max-w-5xl mx-auto">
-          <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-3">
+        <div className="text-center mb-8 sm:mb-12 max-w-5xl mx-auto">
+          <p className="text-primary font-body uppercase tracking-[0.15em] sm:tracking-[0.2em] text-xs sm:text-sm mb-2 sm:mb-3">
             {t('rooms.badge')}
           </p>
-          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl text-foreground mb-3 sm:mb-4">
             {t('rooms.title')}
           </h2>
-          <p className="text-xl text-primary font-medium mb-6">
+          <p className="text-lg sm:text-xl text-primary font-medium mb-4 sm:mb-6">
             {t('rooms.subtitle')}
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            {t('rooms.description')}<br />
+          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+            {t('rooms.description')}<br className="hidden sm:block" />
             {t('rooms.description2')}
           </p>
         </div>

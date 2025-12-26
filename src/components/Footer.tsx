@@ -8,17 +8,17 @@ export const Footer = () => {
 
   return (
     <footer className="bg-charcoal border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto px-3 sm:px-4 py-8 sm:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Logo & Description */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <img 
               src={logoHotel} 
               alt="Hôtel Inn Design Paris" 
               loading="lazy"
-              className="h-12 w-auto mb-4"
+              className="h-10 sm:h-12 w-auto mb-3 sm:mb-4"
             />
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
               {t('footer.description')}
             </p>
           </div>
@@ -103,15 +103,15 @@ export const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border/50 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-muted-foreground text-xs">
+        <div className="border-t border-border/50 mt-8 sm:mt-10 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-muted-foreground text-[10px] sm:text-xs text-center sm:text-left">
             © 2024 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
-          <div className="flex gap-4 text-xs">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+          <div className="flex gap-4 text-[10px] sm:text-xs">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
               {t('footer.legal')}
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
               {t('footer.privacy')}
             </a>
           </div>

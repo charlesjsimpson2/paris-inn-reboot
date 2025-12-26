@@ -79,21 +79,50 @@
 
   html {
     scroll-behavior: smooth;
-    font-size: 17px; /* Base font size increased */
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Improve touch targets on mobile */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better focus states for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    text-wrap: balance;
   }
 
   p {
     @apply text-base leading-relaxed;
+    text-wrap: pretty;
+  }
+
+  /* Optimized images */
+  img {
+    content-visibility: auto;
   }
 }
 
