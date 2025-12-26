@@ -9,6 +9,7 @@ import semiMarathonCoureurs from "@/assets/semi-marathon-coureurs.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
+import { EasyAccessSection } from "@/components/EasyAccessSection";
 
 const SemiMarathonParis = () => {
   const { t } = useLanguage();
@@ -246,6 +247,15 @@ const SemiMarathonParis = () => {
             </div>
           </div>
         </section>
+
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Départ - Bois de Vincennes"
+          travelTime="~20 min"
+          metroLine="Ligne 8"
+          metroRoute="Place d'Italie → Porte Dorée (accès Bois de Vincennes)"
+          accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="semimarathon" />

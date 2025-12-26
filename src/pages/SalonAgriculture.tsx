@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
+import { EasyAccessSection } from "@/components/EasyAccessSection";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
@@ -17,11 +18,6 @@ import chambreDouble from "@/assets/chambre-double.jpg";
 const SalonAgriculture = () => {
   const { t } = useLanguage();
 
-  const otherSalons = [
-    { name: "Salon Mondial du Tourisme", date: "Mars 2025", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" },
-    { name: "Salon de la Plongée", date: "Janvier 2026", image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop" },
-    { name: "Salon du Chocolat", date: "Octobre 2025", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -216,27 +212,15 @@ const SalonAgriculture = () => {
           </div>
         </section>
 
-        {/* Other Salons Section */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('agriculture.otherSalons')}</h2>
-              <p className="text-muted-foreground">{t('agriculture.otherSalonsDesc')}</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {otherSalons.map((salon, i) => (
-                <div key={i} className="group relative aspect-[4/3] overflow-hidden">
-                  <img src={salon.image} alt={salon.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-white font-display text-lg">{salon.name}</h3>
-                    <p className="text-white/80 text-sm flex items-center gap-2"><Calendar className="w-4 h-4" /> {salon.date}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Porte de Versailles"
+          travelTime="~25 min"
+          metroLine="Ligne 12"
+          metroRoute="Place d'Italie → Porte de Versailles (via Ligne 7 puis 12)"
+          accentColor="from-green-600 via-green-700 to-amber-600"
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="agriculture" />

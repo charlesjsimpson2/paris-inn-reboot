@@ -5,6 +5,7 @@ import { Calendar, MapPin, Train, Trophy, Clock, Car, Ticket, Hotel, Users } fro
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { useState, useEffect } from "react";
 
 import franceAngleterreHero from "@/assets/france-angleterre-match.png";
@@ -447,6 +448,15 @@ const FranceAngleterre = () => {
             </div>
           </div>
         </section>
+
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Stade de France"
+          travelTime="~30 min"
+          metroLine="Ligne 13"
+          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
+          accentColor="from-blue-800 via-slate-600 to-red-700"
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="france-angleterre" />

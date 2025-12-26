@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import rugbyHero from "@/assets/rugby-france-irlande.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
+import { EasyAccessSection } from "@/components/EasyAccessSection";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -252,6 +253,15 @@ const Tournoi6Nations = () => {
             </div>
           </div>
         </section>
+
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Stade de France"
+          travelTime="~30 min"
+          metroLine="Ligne 13"
+          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
+          accentColor="from-blue-600 via-blue-700 to-green-600"
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="rugby" />

@@ -10,6 +10,7 @@ import mikaBanner from "@/assets/mika-spinning-tour-banner.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
+import { EasyAccessSection } from "@/components/EasyAccessSection";
 
 const MikaConcert = () => {
   const { t } = useLanguage();
@@ -374,6 +375,15 @@ const MikaConcert = () => {
             </div>
           </div>
         </section>
+
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Accor Arena Paris"
+          travelTime="~25 min"
+          metroLine="Ligne 14"
+          metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
+          accentColor="from-orange-500 via-pink-600 to-purple-700"
+        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="mika" />
