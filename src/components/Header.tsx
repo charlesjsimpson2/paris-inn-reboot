@@ -75,8 +75,8 @@ export const Header = () => {
 
             {/* Right side: Language + Réserver Button */}
             <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 z-10">
-              {/* Language Switcher - hidden on very small screens */}
-              <div className={`relative z-50 hidden xs:block ${isScrolled || isHeroPage ? 'text-foreground' : 'text-white'}`}>
+              {/* Language Switcher */}
+              <div className={`relative z-50 ${isScrolled || isHeroPage ? 'text-foreground' : 'text-white'}`}>
                 <LanguageSwitcher />
               </div>
               
