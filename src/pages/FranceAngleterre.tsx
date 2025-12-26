@@ -248,7 +248,16 @@ const FranceAngleterre = () => {
           </div>
         </section>
 
-        {/* CTA Réservation - DÉPLACÉ EN PREMIER */}
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Stade de France"
+          travelTime="~30 min"
+          metroLine="Ligne 13"
+          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
+          accentColor="from-blue-800 via-slate-600 to-red-700"
+        />
+
+        {/* CTA Réservation */}
         <section className="py-20 bg-blue-700">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Réservez votre séjour pour le Crunch</h2>
@@ -448,15 +457,6 @@ const FranceAngleterre = () => {
             </div>
           </div>
         </section>
-
-        {/* Easy Access Section */}
-        <EasyAccessSection 
-          venue="Stade de France"
-          travelTime="~30 min"
-          metroLine="Ligne 13"
-          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
-          accentColor="from-blue-800 via-slate-600 to-red-700"
-        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="france-angleterre" />

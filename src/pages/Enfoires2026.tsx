@@ -165,6 +165,15 @@ const Enfoires2026 = () => {
           </div>
         </section>
 
+        {/* Easy Access Section */}
+        <EasyAccessSection 
+          venue="Accor Arena Paris"
+          travelTime="~25 min"
+          metroLine="Ligne 14"
+          metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
+          accentColor="from-pink-600 via-fuchsia-600 to-purple-700"
+        />
+
         {/* Hotel Promo Section */}
         <EventHotelPromo 
           eventName="Les Enfoirés 2026" 
@@ -288,15 +297,6 @@ const Enfoires2026 = () => {
             </div>
           </div>
         </section>
-
-        {/* Easy Access Section */}
-        <EasyAccessSection 
-          venue="Accor Arena Paris"
-          travelTime="~25 min"
-          metroLine="Ligne 14"
-          metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
-          accentColor="from-pink-600 via-fuchsia-600 to-purple-700"
-        />
 
         {/* Related Events */}
         <RelatedEvents currentEventId="enfoires" />
