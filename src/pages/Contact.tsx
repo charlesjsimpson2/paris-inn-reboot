@@ -1,65 +1,22 @@
 // Contact page
-import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Phone, Mail, MapPin } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
+import { useEffect } from "react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  useEffect(() => {
+    // Load Tally embed script
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      toast({
-        title: "Erreur",
-        description: "Veuillez remplir tous les champs obligatoires.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Erreur",
-        description: "Veuillez entrer une adresse email valide.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
-    });
-    
-    setFormData({ name: "", phone: "", email: "", message: "" });
-    setIsSubmitting(false);
-  };
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -95,90 +52,18 @@ const Contact = () => {
                 Si vous préférez nous contacter par téléphone, vous trouverez nos coordonnées à côté. Nous sommes disponibles pendant nos heures d'ouverture.
               </p>
 
-              {/* Contact Form */}
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Nom <span className="text-burgundy">*</span>
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Votre nom"
-                      className="border-border focus:border-burgundy focus:ring-burgundy"
-                      maxLength={100}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      Téléphone
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Votre téléphone"
-                      className="border-border focus:border-burgundy focus:ring-burgundy"
-                      maxLength={20}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email <span className="text-burgundy">*</span>
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Votre adresse email"
-                    className="border-border focus:border-burgundy focus:ring-burgundy"
-                    maxLength={255}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message <span className="text-burgundy">*</span>
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Votre message..."
-                    className="border-border focus:border-burgundy focus:ring-burgundy min-h-[150px]"
-                    maxLength={2000}
-                    required
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="bg-burgundy hover:bg-burgundy/90 text-white px-8 py-6 text-base"
-                >
-                  {isSubmitting ? (
-                    "Envoi en cours..."
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Envoyer le message
-                    </>
-                  )}
-                </Button>
-              </form>
+              {/* Tally Form Embed */}
+              <div className="bg-card rounded-lg border border-border overflow-hidden">
+                <iframe 
+                  data-tally-src="https://tally.so/embed/vGraVd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy" 
+                  width="100%" 
+                  height="500"
+                  frameBorder="0" 
+                  title="Formulaire de contact"
+                  className="w-full"
+                />
+              </div>
             </div>
 
             {/* Right: Info + Map */}

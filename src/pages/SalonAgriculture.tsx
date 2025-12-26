@@ -97,7 +97,7 @@ const SalonAgriculture = () => {
         <section className="py-12 bg-gradient-to-br from-green-50 via-amber-50 to-green-50 dark:from-green-950/30 dark:via-amber-950/20 dark:to-green-950/30">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-3xl md:text-4xl text-center text-foreground mb-8">Nos offres exclusives</h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-green-200 dark:border-green-800/50 hover:scale-105 transition-transform duration-300 text-center">
                 <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Car className="w-7 h-7 text-green-600" />
@@ -113,14 +113,6 @@ const SalonAgriculture = () => {
                 <h3 className="font-display text-xl text-foreground mb-2">Taxi Partenaire</h3>
                 <p className="text-muted-foreground text-sm mb-4">Réservation taxi vers le salon avec tarif préférentiel</p>
                 <div className="inline-block bg-amber-600 text-white font-bold px-4 py-2 rounded-full">-10%</div>
-              </div>
-              <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-green-300 dark:border-green-700/50 hover:scale-105 transition-transform duration-300 text-center">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-amber-100 dark:from-green-900/30 dark:to-amber-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shirt className="w-7 h-7 text-green-600" />
-                </div>
-                <h3 className="font-display text-xl text-foreground mb-2">Tirage au sort</h3>
-                <p className="text-muted-foreground text-sm mb-4">Gagnez un T-shirt officiel du Salon de l'Agriculture</p>
-                <div className="inline-block bg-gradient-to-r from-green-600 to-amber-500 text-white font-bold px-4 py-2 rounded-full">Gratuit</div>
               </div>
             </div>
           </div>
