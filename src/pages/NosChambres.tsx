@@ -298,9 +298,15 @@ const NosChambres = () => {
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
             {t('roomsPage.cta.subtitle')}
           </p>
-          <Button variant="outline" size="xl" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-            {t('roomsPage.cta.button')}
-          </Button>
+          <a
+            href="https://www.booking.com/hotel/fr/inn-design-paris.fr.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="xl" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              {t('roomsPage.cta.button')}
+            </Button>
+          </a>
         </div>
       </section>
 
