@@ -80,10 +80,10 @@ const FranceAngleterre = () => {
   ];
 
   const parisAttractions = [
-    { name: "Montmartre & Sacré-Cœur", time: "25 min", image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=400&h=300&fit=crop" },
-    { name: "Champs-Élysées", time: "30 min", image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=300&fit=crop" },
-    { name: "Opéra Garnier", time: "20 min", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=400&h=300&fit=crop" },
-    { name: "Tour Eiffel", time: "26 min", image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?w=400&h=300&fit=crop" },
+    { name: t("franceangleterre.paris.attractions.montmartre"), time: "25 min", image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=400&h=300&fit=crop" },
+    { name: t("franceangleterre.paris.attractions.champsElysees"), time: "30 min", image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=300&fit=crop" },
+    { name: t("franceangleterre.paris.attractions.opera"), time: "20 min", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=400&h=300&fit=crop" },
+    { name: t("franceangleterre.paris.attractions.eiffel"), time: "26 min", image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?w=400&h=300&fit=crop" },
   ];
 
   return (
@@ -115,28 +115,28 @@ const FranceAngleterre = () => {
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="inline-flex items-center gap-3 mb-4">
                     <span className="bg-blue-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
-                      <img src={drapeauFrance} alt="France" className="w-5 h-4 object-cover rounded-sm" /> France
+                      <img src={drapeauFrance} alt={t("franceangleterre.france")} className="w-5 h-4 object-cover rounded-sm" /> {t("franceangleterre.france")}
                     </span>
                     <span className="text-slate-800 text-xl font-bold">VS</span>
                     <span className="bg-red-600 text-white px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2">
-                      <img src={drapeauAngleterre} alt="Angleterre" className="w-5 h-4 object-cover rounded-sm" /> Angleterre
+                      <img src={drapeauAngleterre} alt={t("franceangleterre.england")} className="w-5 h-4 object-cover rounded-sm" /> {t("franceangleterre.england")}
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4">
                     <Trophy className="w-4 h-4" />
-                    <span className="font-medium text-sm">Tournoi des 6 Nations 2026</span>
+                    <span className="font-medium text-sm">{t("franceangleterre.tournament")}</span>
                   </div>
-                  <h1 className="font-display text-4xl md:text-6xl text-slate-900 mb-4">France vs Angleterre</h1>
-                  <p className="text-slate-700 text-lg md:text-xl mb-6">Le Crunch - La rivalité légendaire du rugby européen</p>
+                  <h1 className="font-display text-4xl md:text-6xl text-slate-900 mb-4">{t('actualites.franceangleterre.title')}</h1>
+                  <p className="text-slate-700 text-lg md:text-xl mb-6">{t('actualites.franceangleterre.subtitle')}</p>
                   <div className="flex flex-wrap justify-center md:justify-start gap-3 text-slate-700">
                     <div className="flex items-center gap-2 bg-slate-900/80 text-white backdrop-blur-sm px-4 py-2 rounded-full">
-                      <Calendar className="w-4 h-4" /><span>14 Mars 2026</span>
+                      <Calendar className="w-4 h-4" /><span>{t('actualites.franceangleterre.date')}</span>
                     </div>
                     <div className="flex items-center gap-2 bg-slate-900/80 text-white backdrop-blur-sm px-4 py-2 rounded-full">
-                      <Clock className="w-4 h-4" /><span>20h10</span>
+                      <Clock className="w-4 h-4" /><span>{t("franceangleterre.time")}</span>
                     </div>
                     <div className="flex items-center gap-2 bg-slate-900/80 text-white backdrop-blur-sm px-4 py-2 rounded-full">
-                      <MapPin className="w-4 h-4" /><span>Stade de France</span>
+                      <MapPin className="w-4 h-4" /><span>{t("franceangleterre.venue")}</span>
                     </div>
                   </div>
                 </div>
@@ -187,9 +187,9 @@ const FranceAngleterre = () => {
               <div className="text-center mb-6">
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-red-600 text-white px-5 py-2 rounded-full mb-2 shadow-lg">
                   <Gift className="w-4 h-4" />
-                  <span className="font-bold text-sm uppercase tracking-wider">Nos offres exclusives</span>
+                  <span className="font-bold text-sm uppercase tracking-wider">{t("franceangleterre.offers.title")}</span>
                 </div>
-                <p className="text-muted-foreground text-sm">Pour les supporters du Crunch France - Angleterre</p>
+                <p className="text-muted-foreground text-sm">{t("franceangleterre.offers.subtitle")}</p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-5">
@@ -200,11 +200,11 @@ const FranceAngleterre = () => {
                       <Car className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg text-foreground">Parking privé</h3>
+                      <h3 className="font-display text-lg text-foreground">{t("franceangleterre.offers.parking.title")}</h3>
                       <div className="inline-block bg-blue-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">15€ / nuit</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">Stationnez en toute sécurité pendant votre séjour</p>
+                  <p className="text-muted-foreground text-sm">{t("franceangleterre.offers.parking.desc")}</p>
                 </div>
 
                 {/* Taxi */}
@@ -214,11 +214,11 @@ const FranceAngleterre = () => {
                       <Ticket className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg text-foreground">Service Taxi</h3>
+                      <h3 className="font-display text-lg text-foreground">{t("franceangleterre.offers.taxi.title")}</h3>
                       <div className="inline-block bg-red-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">-10%</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">Aller et retour vers le Stade de France</p>
+                  <p className="text-muted-foreground text-sm">{t("franceangleterre.offers.taxi.desc")}</p>
                 </div>
 
                 {/* T-shirt Raffle */}
@@ -239,30 +239,30 @@ const FranceAngleterre = () => {
                 </div>
               </div>
               
-              <p className="text-center text-xs text-muted-foreground mt-4 italic">* Offres réservées aux clients séjournant pendant le week-end du match. {t('concert.raffle.note')}</p>
+              <p className="text-center text-xs text-muted-foreground mt-4 italic">* {t("franceangleterre.offers.notePrefix")} {t('concert.raffle.note')}</p>
             </div>
           </div>
         </section>
 
         {/* Easy Access Section */}
         <EasyAccessSection 
-          venue="Stade de France"
-          travelTime="~30 min"
-          metroLine="Ligne 13"
-          metroRoute="Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)"
+          venue={t("franceangleterre.venue")}
+          travelTime={t("franceangleterre.travelTime")}
+          metroLineKey="easyAccess.lines.line13"
+          metroRouteKey="easyAccess.routes.stadeDeFrance"
           accentColor="from-blue-800 via-slate-600 to-red-700"
         />
 
         {/* CTA Réservation */}
         <section className="py-20 bg-blue-700">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Réservez votre séjour pour le Crunch</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Profitez des meilleures conditions pour vivre ce match légendaire entre la France et l'Angleterre</p>
+            <h2 className="font-display text-3xl md:text-4xl text-white mb-4">{t("franceangleterre.cta.title")}</h2>
+            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">{t("franceangleterre.cta.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild>
-                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">Réserver maintenant</a>
+                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">{t("franceangleterre.cta.bookNow")}</a>
               </Button>
-              <Link to="/reservation-seminaire"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Nous contacter</Button></Link>
+              <Link to="/reservation-seminaire"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">{t("franceangleterre.cta.contact")}</Button></Link>
             </div>
           </div>
         </section>
@@ -272,21 +272,14 @@ const FranceAngleterre = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center gap-4 mb-6">
-                <img src={drapeauFrance} alt="France" className="w-10 h-7 object-cover rounded-sm shadow" />
-                <h2 className="font-display text-3xl md:text-4xl text-foreground">Le Crunch : Une rivalité légendaire</h2>
-                <img src={drapeauAngleterre} alt="Angleterre" className="w-10 h-7 object-cover rounded-sm shadow" />
+                <img src={drapeauFrance} alt={t("franceangleterre.france")} className="w-10 h-7 object-cover rounded-sm shadow" />
+                <h2 className="font-display text-3xl md:text-4xl text-foreground">{t("franceangleterre.match.title")}</h2>
+                <img src={drapeauAngleterre} alt={t("franceangleterre.england")} className="w-10 h-7 object-cover rounded-sm shadow" />
               </div>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Le <strong>"Crunch"</strong> est le nom donné à cette confrontation mythique entre la <strong>France</strong> et l'<strong>Angleterre</strong>. 
-                Depuis plus d'un siècle, ces deux nations s'affrontent dans des matchs d'une intensité inégalée, 
-                faisant de cette rencontre l'une des plus attendues du rugby mondial.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Avec 104 confrontations au compteur, la France et l'Angleterre ont écrit les plus belles pages de l'histoire du rugby. 
-                Ce match au Stade de France promet une nouvelle fois un spectacle exceptionnel.
-              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">{t("franceangleterre.match.p1")}</p>
+              <p className="text-muted-foreground text-lg leading-relaxed">{t("franceangleterre.match.p2")}</p>
               <div className="mt-8 p-6 bg-white dark:bg-card rounded-xl shadow-lg border border-border">
-                <p className="text-foreground font-medium text-lg">🏨 Supporters français et anglais, notre hôtel vous accueille à bras ouverts !</p>
+                <p className="text-foreground font-medium text-lg">{t("franceangleterre.match.supporters")}</p>
               </div>
             </div>
           </div>
@@ -296,8 +289,8 @@ const FranceAngleterre = () => {
         <section className="py-16 bg-card">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Les Équipes</h2>
-              <p className="text-muted-foreground">Découvrez les deux nations qui s'affronteront</p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t("franceangleterre.teams.title")}</h2>
+              <p className="text-muted-foreground">{t("franceangleterre.teams.subtitle")}</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -310,8 +303,8 @@ const FranceAngleterre = () => {
                     <div className="flex items-center gap-3">
                       <img src={drapeauFrance} alt="France" className="w-12 h-8 object-cover rounded shadow" />
                       <div>
-                        <h3 className="font-display text-2xl text-white">XV de France</h3>
-                        <p className="text-blue-200 text-sm">Fédération Française de Rugby</p>
+                        <h3 className="font-display text-2xl text-white">{t("franceangleterre.teams.france.title")}</h3>
+                        <p className="text-blue-200 text-sm">{t("franceangleterre.teams.france.org")}</p>
                       </div>
                     </div>
                   </div>
@@ -320,16 +313,15 @@ const FranceAngleterre = () => {
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="bg-blue-700/50 p-3 rounded-lg text-center">
                       <p className="text-3xl font-bold">6</p>
-                      <p className="text-xs text-blue-200">Grands Chelems</p>
+                      <p className="text-xs text-blue-200">{t("franceangleterre.teams.stats.grandSlams")}</p>
                     </div>
                     <div className="bg-blue-700/50 p-3 rounded-lg text-center">
                       <p className="text-3xl font-bold">17</p>
-                      <p className="text-xs text-blue-200">Titres 6 Nations</p>
+                      <p className="text-xs text-blue-200">{t("franceangleterre.teams.stats.sixNationsTitles")}</p>
                     </div>
                   </div>
                   <p className="text-sm text-blue-100">
-                    Menée par Antoine Dupont, considéré comme le meilleur joueur du monde, 
-                    l'équipe de France affiche ses ambitions et vise le Grand Chelem.
+                    {t("franceangleterre.teams.france.desc")}
                   </p>
                 </div>
               </div>
@@ -343,8 +335,8 @@ const FranceAngleterre = () => {
                     <div className="flex items-center gap-3">
                       <img src={drapeauAngleterre} alt="Angleterre" className="w-12 h-8 object-cover rounded shadow" />
                       <div>
-                        <h3 className="font-display text-2xl text-white">XV de la Rose</h3>
-                        <p className="text-red-200 text-sm">Rugby Football Union</p>
+                        <h3 className="font-display text-2xl text-white">{t("franceangleterre.teams.england.title")}</h3>
+                        <p className="text-red-200 text-sm">{t("franceangleterre.teams.england.org")}</p>
                       </div>
                     </div>
                   </div>
@@ -353,16 +345,15 @@ const FranceAngleterre = () => {
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="bg-red-700/50 p-3 rounded-lg text-center">
                       <p className="text-3xl font-bold">13</p>
-                      <p className="text-xs text-red-200">Grands Chelems</p>
+                      <p className="text-xs text-red-200">{t("franceangleterre.teams.stats.grandSlams")}</p>
                     </div>
                     <div className="bg-red-700/50 p-3 rounded-lg text-center">
                       <p className="text-3xl font-bold">29</p>
-                      <p className="text-xs text-red-200">Titres 6 Nations</p>
+                      <p className="text-xs text-red-200">{t("franceangleterre.teams.stats.sixNationsTitles")}</p>
                     </div>
                   </div>
                   <p className="text-sm text-red-100">
-                    L'Angleterre, nation historique du rugby et championne du monde 2003, 
-                    reste une équipe redoutable emmenée par Maro Itoje et Marcus Smith.
+                    {t("franceangleterre.teams.england.desc")}
                   </p>
                 </div>
               </div>
@@ -374,14 +365,14 @@ const FranceAngleterre = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Compositions probables</h2>
-              <p className="text-muted-foreground">Les XV attendus pour ce Crunch</p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t("franceangleterre.lineups.title")}</h2>
+              <p className="text-muted-foreground">{t("franceangleterre.lineups.subtitle")}</p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="bg-blue-600 rounded-lg overflow-hidden">
                 <div className="p-4 flex items-center justify-center gap-3 border-b border-blue-500">
                   <img src={drapeauFrance} alt="France" className="w-7 h-5 object-cover rounded-sm" />
-                  <h3 className="font-display text-2xl text-white">France</h3>
+                  <h3 className="font-display text-2xl text-white">{t("franceangleterre.france")}</h3>
                 </div>
                 <div className="p-4 grid grid-cols-3 gap-2">
                   {franceTeam.map((player, i) => (
@@ -395,7 +386,7 @@ const FranceAngleterre = () => {
               <div className="bg-red-600 rounded-lg overflow-hidden">
                 <div className="p-4 flex items-center justify-center gap-3 border-b border-red-500">
                   <img src={drapeauAngleterre} alt="Angleterre" className="w-7 h-5 object-cover rounded-sm" />
-                  <h3 className="font-display text-2xl text-white">Angleterre</h3>
+                  <h3 className="font-display text-2xl text-white">{t("franceangleterre.england")}</h3>
                 </div>
                 <div className="p-4 grid grid-cols-3 gap-2">
                   {englandTeam.map((player, i) => (
@@ -414,8 +405,8 @@ const FranceAngleterre = () => {
         <section className="py-16 bg-card">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">10 dernières confrontations</h2>
-              <p className="text-muted-foreground">L'histoire d'une rivalité intense</p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t("franceangleterre.history.title")}</h2>
+              <p className="text-muted-foreground">{t("franceangleterre.history.subtitle")}</p>
             </div>
             <div className="max-w-3xl mx-auto space-y-3">
               {previousMatches.map((match, i) => (
@@ -426,7 +417,7 @@ const FranceAngleterre = () => {
                 </div>
               ))}
               <div className="mt-6 p-4 bg-muted rounded-lg text-center">
-                <p className="text-muted-foreground"><strong className="text-foreground">Bilan sur 10 matchs :</strong> France 5 victoires - Angleterre 5 victoires</p>
+                <p className="text-muted-foreground"><strong className="text-foreground">{t("franceangleterre.history.summaryLabel")}</strong> {t("franceangleterre.history.summaryText")}</p>
               </div>
             </div>
           </div>
@@ -436,8 +427,8 @@ const FranceAngleterre = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Profitez de Paris</h2>
-              <p className="text-muted-foreground">Prolongez votre week-end rugby par une visite de la capitale</p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t("franceangleterre.paris.title")}</h2>
+              <p className="text-muted-foreground">{t("franceangleterre.paris.subtitle")}</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {parisAttractions.map((attraction, i) => (
@@ -456,9 +447,9 @@ const FranceAngleterre = () => {
 
         {/* Hotel Promo Section - Compact */}
         <EventHotelPromo 
-          eventName="France - Angleterre" 
+          eventName={t('actualites.franceangleterre.title')}
           accentColor="from-blue-800 via-slate-600 to-red-700"
-          urgencyMessage="Offre Match Le Crunch"
+          urgencyMessage={t("franceangleterre.hotelPromo.urgency")}
           compact
         />
 

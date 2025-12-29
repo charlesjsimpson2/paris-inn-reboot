@@ -110,8 +110,8 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
     },
     {
       id: "france-angleterre",
-      title: "France vs Angleterre",
-      date: "14 mars 2026",
+      title: t('actualites.franceangleterre.title'),
+      date: t('actualites.franceangleterre.date'),
       sortDate: "2026-03-14",
       endDate: "2026-03-14",
       link: "/france-angleterre",
