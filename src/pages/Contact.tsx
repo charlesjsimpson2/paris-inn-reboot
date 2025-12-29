@@ -38,27 +38,17 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left: Form */}
             <div>
-              <h1 className="font-display text-4xl md:text-5xl text-foreground mb-6">
+              <h1 className="font-display text-4xl md:text-5xl text-foreground mb-8">
                 Contactez-nous
               </h1>
-              
-              <p className="text-muted-foreground text-lg mb-4">
-                Si vous avez des questions, des commentaires ou des préoccupations, n'hésitez pas à nous contacter. Notre équipe est là pour vous aider et répondre à vos besoins.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                Utilisez le formulaire ci-dessous pour nous envoyer un message. Nous nous efforçons de répondre rapidement à tous les messages que nous recevons.
-              </p>
-              <p className="text-muted-foreground mb-8">
-                Si vous préférez nous contacter par téléphone, vous trouverez nos coordonnées à côté. Nous sommes disponibles pendant nos heures d'ouverture.
-              </p>
 
               {/* Tally Form Embed */}
-              <div className="bg-card rounded-lg border border-border overflow-hidden">
+              <div className="rounded-lg overflow-hidden">
                 <iframe 
-                  data-tally-src="https://tally.so/embed/vGraVd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  data-tally-src="https://tally.so/embed/vGraVd?alignLeft=1&transparentBackground=1&dynamicHeight=1"
                   loading="lazy" 
                   width="100%" 
-                  height="500"
+                  height="600"
                   frameBorder="0" 
                   title="Formulaire de contact"
                   className="w-full"
