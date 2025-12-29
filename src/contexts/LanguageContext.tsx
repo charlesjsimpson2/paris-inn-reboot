@@ -1109,8 +1109,16 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.priceRange': 'From €65 to €150',
     'wutang.doorsOpen': 'Doors open',
     'wutang.venue': 'Venue',
-    
-    
+    'wutang.legendaryGroup': 'A legendary group',
+    'wutang.internationalCareer': 'Over 30 years of career',
+    'wutang.musicalPath': 'Musical journey',
+    'wutang.musicalPathDesc': 'Since "Enter the Wu-Tang" in 1993, the group has redefined the codes of hip-hop. Their unique RZA production and signature flows have influenced an entire generation.',
+    'wutang.legendaryShows': 'Legendary shows',
+    'wutang.legendaryShowsDesc': 'Their concerts are true hip-hop ceremonies. The raw energy of the 9 MCs on stage creates an electric and unforgettable atmosphere.',
+    'wutang.albumsSold': 'Albums sold',
+    'wutang.studioAlbums': 'Studio albums',
+    'wutang.careerYears': 'Career years',
+
     // Related Events Component
     'relatedEvents.title': 'Other upcoming events',
     'relatedEvents.subtitle': 'Discover our offers for upcoming Parisian events',
@@ -1764,6 +1772,20 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.priceRange': 'De 65€ a 150€',
     'wutang.doorsOpen': 'Apertura de puertas',
     'wutang.venue': 'Lugar',
+    'wutang.legendaryGroup': 'Un grupo legendario',
+    'wutang.internationalCareer': 'Más de 30 años de carrera',
+    'wutang.musicalPath': 'Trayectoria musical',
+    'wutang.musicalPathDesc': 'Desde "Enter the Wu-Tang" en 1993, el grupo ha redefinido los códigos del hip-hop. Su producción única firmada por RZA y sus flows característicos han influenciado a toda una generación.',
+    'wutang.legendaryShows': 'Espectáculos legendarios',
+    'wutang.legendaryShowsDesc': 'Sus conciertos son verdaderas ceremonias de hip-hop. La energía bruta de los 9 MCs en el escenario crea una atmósfera eléctrica e inolvidable.',
+    'wutang.albumsSold': 'Álbumes vendidos',
+    'wutang.studioAlbums': 'Álbumes de estudio',
+    'wutang.careerYears': 'Años de carrera',
+
+    // Related Events Component
+    'relatedEvents.title': 'Otros eventos próximos',
+    'relatedEvents.subtitle': 'Descubra nuestras ofertas para los próximos eventos parisinos',
+    'relatedEvents.viewAll': 'Ver todos los eventos',
 
     
     // News Section (Homepage)
@@ -2427,6 +2449,20 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.priceRange': 'Da 65€ a 150€',
     'wutang.doorsOpen': 'Apertura porte',
     'wutang.venue': 'Luogo',
+    'wutang.legendaryGroup': 'Un gruppo leggendario',
+    'wutang.internationalCareer': 'Oltre 30 anni di carriera',
+    'wutang.musicalPath': 'Percorso musicale',
+    'wutang.musicalPathDesc': 'Dal 1993, con "Enter the Wu-Tang", il gruppo ha ridefinito i codici dell’hip-hop. La produzione unica firmata RZA e i loro flow inconfondibili hanno influenzato un’intera generazione.',
+    'wutang.legendaryShows': 'Spettacoli leggendari',
+    'wutang.legendaryShowsDesc': 'I loro concerti sono vere cerimonie hip-hop. L’energia grezza dei 9 MC sul palco crea un’atmosfera elettrica e indimenticabile.',
+    'wutang.albumsSold': 'Album venduti',
+    'wutang.studioAlbums': 'Album in studio',
+    'wutang.careerYears': 'Anni di carriera',
+
+    // Related Events Component
+    'relatedEvents.title': 'Altri eventi in arrivo',
+    'relatedEvents.subtitle': 'Scopri le nostre offerte per i prossimi eventi parigini',
+    'relatedEvents.viewAll': 'Vedi tutti gli eventi',
 
     
     // News Section (Homepage)
@@ -3090,6 +3126,20 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.priceRange': 'De 65€ a 150€',
     'wutang.doorsOpen': 'Abertura das portas',
     'wutang.venue': 'Local',
+    'wutang.legendaryGroup': 'Um grupo lendário',
+    'wutang.internationalCareer': 'Mais de 30 anos de carreira',
+    'wutang.musicalPath': 'Trajetória musical',
+    'wutang.musicalPathDesc': 'Desde "Enter the Wu-Tang" em 1993, o grupo redefiniu os códigos do hip-hop. A produção única assinada por RZA e seus flows característicos influenciaram toda uma geração.',
+    'wutang.legendaryShows': 'Shows lendários',
+    'wutang.legendaryShowsDesc': 'Seus shows são verdadeiras cerimônias de hip-hop. A energia bruta dos 9 MCs no palco cria uma atmosfera elétrica e inesquecível.',
+    'wutang.albumsSold': 'Álbuns vendidos',
+    'wutang.studioAlbums': 'Álbuns de estúdio',
+    'wutang.careerYears': 'Anos de carreira',
+
+    // Related Events Component
+    'relatedEvents.title': 'Outros eventos em breve',
+    'relatedEvents.subtitle': 'Descubra nossas ofertas para os próximos eventos parisienses',
+    'relatedEvents.viewAll': 'Ver todos os eventos',
 
     
     // News Section (Homepage)
