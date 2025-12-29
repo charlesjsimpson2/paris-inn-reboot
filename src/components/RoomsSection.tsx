@@ -66,27 +66,27 @@ export const RoomsSection = memo(() => {
   }, [maxIndex]);
 
   return (
-    <section id="chambres" className="py-12 sm:py-20 bg-charcoal">
-      <div className="container mx-auto px-3 sm:px-4">
+    <section id="chambres" className="py-10 xs:py-12 sm:py-20 bg-charcoal">
+      <div className="container mx-auto px-3 xs:px-4">
         {/* Header centered */}
-        <div className="text-center mb-8 sm:mb-12 max-w-5xl mx-auto">
-          <p className="text-primary font-body uppercase tracking-[0.15em] sm:tracking-[0.2em] text-xs sm:text-sm mb-2 sm:mb-3">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-12 max-w-5xl mx-auto">
+          <p className="text-primary font-body uppercase tracking-[0.1em] xs:tracking-[0.15em] sm:tracking-[0.2em] text-[10px] xs:text-xs sm:text-sm mb-1.5 xs:mb-2 sm:mb-3">
             {t('rooms.badge')}
           </p>
-          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl text-foreground mb-3 sm:mb-4">
+          <h2 className="font-display text-xl xs:text-2xl sm:text-4xl md:text-5xl text-foreground mb-2 xs:mb-3 sm:mb-4">
             {t('rooms.title')}
           </h2>
-          <p className="text-lg sm:text-xl text-primary font-medium mb-4 sm:mb-6">
+          <p className="text-base xs:text-lg sm:text-xl text-primary font-medium mb-3 xs:mb-4 sm:mb-6">
             {t('rooms.subtitle')}
           </p>
-          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+          <p className="text-muted-foreground leading-relaxed text-xs xs:text-sm sm:text-base">
             {t('rooms.description')}<br className="hidden sm:block" />
             {t('rooms.description2')}
           </p>
         </div>
 
         {/* Carousel with navigation */}
-        <div className="relative mb-12">
+        <div className="relative mb-8 xs:mb-10 sm:mb-12">
           {/* Navigation arrows */}
           <button
             onClick={goToPrev}
@@ -106,7 +106,7 @@ export const RoomsSection = memo(() => {
           {/* Cards container */}
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-out gap-4 md:gap-6"
+              className="flex transition-transform duration-500 ease-out gap-3 xs:gap-4 md:gap-6"
               style={{ 
                 transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 16}px))`,
               }}
@@ -117,7 +117,7 @@ export const RoomsSection = memo(() => {
                   className="w-full md:w-[calc(50%-12px)] flex-shrink-0 group"
                 >
                   {/* Image with overlay description */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg xs:rounded-none">
                     <img
                       src={room.image}
                       alt={room.name}
@@ -127,11 +127,11 @@ export const RoomsSection = memo(() => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                     
                     {/* Text overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                      <h3 className="font-display text-lg md:text-2xl text-white mb-1 md:mb-2 group-hover:text-primary transition-colors">
+                    <div className="absolute bottom-0 left-0 right-0 p-3 xs:p-4 md:p-6">
+                      <h3 className="font-display text-base xs:text-lg md:text-2xl text-white mb-0.5 xs:mb-1 md:mb-2 group-hover:text-primary transition-colors">
                         {room.name}
                       </h3>
-                      <p className="text-white/90 leading-relaxed text-sm md:text-base line-clamp-2">
+                      <p className="text-white/90 leading-relaxed text-xs xs:text-sm md:text-base line-clamp-2">
                         {room.description}
                       </p>
                     </div>
@@ -142,33 +142,33 @@ export const RoomsSection = memo(() => {
           </div>
 
           {/* Mobile navigation */}
-          <div className="flex justify-center gap-4 mt-6 md:hidden">
+          <div className="flex justify-center gap-3 xs:gap-4 mt-4 xs:mt-6 md:hidden">
             <button
               onClick={goToPrev}
-              className="bg-primary text-primary-foreground p-3"
+              className="bg-primary text-primary-foreground p-2.5 xs:p-3"
               aria-label="Précédent"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 xs:w-5 xs:h-5" />
             </button>
             <button
               onClick={goToNext}
-              className="bg-primary text-primary-foreground p-3"
+              className="bg-primary text-primary-foreground p-2.5 xs:p-3"
               aria-label="Suivant"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5" />
             </button>
           </div>
 
           {/* Progress indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-1.5 xs:gap-2 mt-4 xs:mt-6">
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-1 transition-all ${
                   index === currentIndex 
-                    ? "bg-primary w-8" 
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-4"
+                    ? "bg-primary w-6 xs:w-8" 
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-3 xs:w-4"
                 }`}
                 aria-label={`Voir chambres ${index + 1}`}
               />
@@ -177,11 +177,11 @@ export const RoomsSection = memo(() => {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12">
-          <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+        <div className="flex flex-col sm:flex-row gap-2 xs:gap-3 sm:gap-4 justify-center mb-8 xs:mb-10 sm:mb-12">
+          <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm xs:text-base py-2.5 xs:py-3" asChild>
             <a href="/nos-chambres">{t('rooms.viewAll')}</a>
           </Button>
-          <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
+          <Button variant="gold" size="lg" className="w-full sm:w-auto text-sm xs:text-base py-2.5 xs:py-3" asChild>
             <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer">
               {t('rooms.book')}
             </a>
@@ -189,17 +189,17 @@ export const RoomsSection = memo(() => {
         </div>
 
         {/* Bottom: Equipment */}
-        <div className="border-t border-border/30 pt-8">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
+        <div className="border-t border-border/30 pt-6 xs:pt-8">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 xs:gap-4 md:gap-6">
             {equipment.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-2 md:gap-3 text-center group"
+                className="flex flex-col items-center gap-1.5 xs:gap-2 md:gap-3 text-center group"
               >
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                <div className="w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-3.5 h-3.5 xs:w-4 xs:h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <span className="text-xs md:text-sm text-muted-foreground">{item.label}</span>
+                <span className="text-[10px] xs:text-xs md:text-sm text-muted-foreground">{item.label}</span>
               </div>
             ))}
           </div>

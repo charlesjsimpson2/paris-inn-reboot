@@ -159,21 +159,21 @@ export const NewsSection = () => {
     );
 
   return (
-    <section className="relative py-12 sm:py-16 overflow-hidden">
+    <section className="relative py-10 xs:py-12 sm:py-16 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/95 to-background" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
       
-      <div className="container mx-auto px-3 sm:px-4 relative z-10">
-        <div className="text-center mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-burgundy via-burgundy to-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full mb-4 sm:mb-6 shadow-lg shadow-burgundy/30 cursor-default">
-            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="font-bold text-sm sm:text-base uppercase tracking-wider sm:tracking-widest">{t('news.dontMiss')}</span>
-            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+      <div className="container mx-auto px-3 xs:px-4 relative z-10">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-1.5 xs:gap-2 sm:gap-3 bg-gradient-to-r from-burgundy via-burgundy to-primary text-white px-3 xs:px-4 sm:px-6 py-1.5 xs:py-2 sm:py-3 rounded-full mb-3 xs:mb-4 sm:mb-6 shadow-lg shadow-burgundy/30 cursor-default">
+            <Sparkles className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5" />
+            <span className="font-bold text-[11px] xs:text-xs sm:text-base uppercase tracking-wider xs:tracking-widest">{t('news.dontMiss')}</span>
+            <Sparkles className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5" />
           </div>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl text-burgundy mb-2">
+          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-5xl text-burgundy mb-1.5 xs:mb-2">
             {t('news.upcomingEvents')}
           </h2>
-          <p className="text-muted-foreground text-base sm:text-lg">{t('news.subtitle')}</p>
+          <p className="text-muted-foreground text-sm xs:text-base sm:text-lg">{t('news.subtitle')}</p>
         </div>
 
         <Carousel
@@ -183,13 +183,13 @@ export const NewsSection = () => {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-3 xs:-ml-4">
             {sortedEvents.map((event) => {
               const Icon = event.icon;
               return (
-                <CarouselItem key={event.id} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <CarouselItem key={event.id} className="pl-3 xs:pl-4 basis-[85%] xs:basis-[80%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <Link to={event.link} className="group block h-full perspective-1000">
-                    <div className={`relative overflow-hidden ${event.bgColor} shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 h-full rounded-xl transform-gpu group-hover:scale-[1.02] group-hover:-translate-y-2 group-hover:rotate-y-1`}>
+                    <div className={`relative overflow-hidden ${event.bgColor} shadow-xl hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 h-full rounded-lg xs:rounded-xl transform-gpu group-hover:scale-[1.02] group-hover:-translate-y-2 group-hover:rotate-y-1`}>
                       {/* Shine effect on hover */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-20">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
@@ -202,23 +202,23 @@ export const NewsSection = () => {
                           <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
                           <div className={`absolute inset-0 bg-gradient-to-t from-current to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500`} />
                           {/* Glow border effect */}
-                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ring-2 ring-white/30 ring-inset rounded-t-xl" />
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ring-2 ring-white/30 ring-inset rounded-t-lg xs:rounded-t-xl" />
                         </div>
-                        <div className="flex-1 p-4 flex flex-col justify-center">
-                          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 w-fit mb-2 group-hover:bg-white/30 transition-colors duration-300">
-                            <Icon className="w-3.5 h-3.5 group-hover:rotate-12 transition-transform duration-300" />{event.category}
+                        <div className="flex-1 p-3 xs:p-4 flex flex-col justify-center">
+                          <div className="inline-flex items-center gap-1.5 xs:gap-2 bg-white/20 backdrop-blur-sm text-white text-[10px] xs:text-xs font-bold uppercase tracking-wider px-2 xs:px-3 py-1 xs:py-1.5 w-fit mb-1.5 xs:mb-2 group-hover:bg-white/30 transition-colors duration-300">
+                            <Icon className="w-3 h-3 xs:w-3.5 xs:h-3.5 group-hover:rotate-12 transition-transform duration-300" />{event.category}
                           </div>
-                          <h3 className="font-display text-lg md:text-xl text-white mb-1 group-hover:translate-x-2 transition-transform duration-300 ease-out flex items-center gap-2 flex-wrap">
-                            {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
-                            {(event as any).subtitleWithFlagsEngland && <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
+                          <h3 className="font-display text-base xs:text-lg md:text-xl text-white mb-0.5 xs:mb-1 group-hover:translate-x-2 transition-transform duration-300 ease-out flex items-center gap-1.5 xs:gap-2 flex-wrap">
+                            {event.subtitleWithFlags && <img src={drapeauFrance} alt="France" loading="lazy" className="w-4 h-2.5 xs:w-5 xs:h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
+                            {(event as any).subtitleWithFlagsEngland && <img src={drapeauFrance} alt="France" loading="lazy" className="w-4 h-2.5 xs:w-5 xs:h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
                             {event.title}
-                            {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
-                            {(event as any).subtitleWithFlagsEngland && <img src={drapeauAngleterre} alt="Angleterre" loading="lazy" className="w-5 h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
+                            {event.subtitleWithFlags && <img src={drapeauIrlande} alt="Irlande" loading="lazy" className="w-4 h-2.5 xs:w-5 xs:h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
+                            {(event as any).subtitleWithFlagsEngland && <img src={drapeauAngleterre} alt="Angleterre" loading="lazy" className="w-4 h-2.5 xs:w-5 xs:h-3 object-cover shadow group-hover:scale-110 transition-transform" />}
                           </h3>
-                          <p className="text-white/70 text-xs mb-2 line-clamp-2 group-hover:text-white/90 transition-colors duration-300">{event.subtitle}</p>
+                          <p className="text-white/70 text-[11px] xs:text-xs mb-1.5 xs:mb-2 line-clamp-2 group-hover:text-white/90 transition-colors duration-300">{event.subtitle}</p>
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center text-white/80 text-xs group-hover:text-white transition-colors duration-300"><Calendar className="w-3 h-3 mr-1 group-hover:scale-110 transition-transform" />{event.dateStart}</div>
-                            <div className="flex items-center text-white font-semibold text-xs group-hover:translate-x-2 transition-transform duration-300 ease-out">{t('news.see')}<ArrowRight className="w-3 h-3 ml-1 group-hover:ml-2 transition-all duration-300" /></div>
+                            <div className="flex items-center text-white/80 text-[10px] xs:text-xs group-hover:text-white transition-colors duration-300"><Calendar className="w-2.5 h-2.5 xs:w-3 xs:h-3 mr-1 group-hover:scale-110 transition-transform" />{event.dateStart}</div>
+                            <div className="flex items-center text-white font-semibold text-[10px] xs:text-xs group-hover:translate-x-2 transition-transform duration-300 ease-out">{t('news.see')}<ArrowRight className="w-2.5 h-2.5 xs:w-3 xs:h-3 ml-1 group-hover:ml-2 transition-all duration-300" /></div>
                           </div>
                         </div>
                       </div>
@@ -228,9 +228,9 @@ export const NewsSection = () => {
               );
             })}
           </CarouselContent>
-          <div className="flex justify-center gap-4 mt-6">
-            <CarouselPrevious className="relative static translate-y-0 bg-burgundy hover:bg-burgundy/80 text-white border-none" />
-            <CarouselNext className="relative static translate-y-0 bg-burgundy hover:bg-burgundy/80 text-white border-none" />
+          <div className="flex justify-center gap-3 xs:gap-4 mt-4 xs:mt-6">
+            <CarouselPrevious className="relative static translate-y-0 bg-burgundy hover:bg-burgundy/80 text-white border-none h-9 w-9 xs:h-10 xs:w-10" />
+            <CarouselNext className="relative static translate-y-0 bg-burgundy hover:bg-burgundy/80 text-white border-none h-9 w-9 xs:h-10 xs:w-10" />
           </div>
         </Carousel>
       </div>
