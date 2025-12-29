@@ -35,7 +35,7 @@ export const NewsSection = () => {
       sortDate: "2026-01-13",
       endDate: "2026-01-19", // Dernier jour des Enfoirés
       category: t('actualites.concert'),
-      link: "/enfoires-2026",
+      link: "/evenements/enfoires-2026",
       bgColor: "bg-gradient-to-br from-pink-500 via-fuchsia-500 to-purple-600",
       textColor: "text-pink-100",
       icon: Music,
@@ -50,7 +50,7 @@ export const NewsSection = () => {
       sortDate: "2026-02-22",
       endDate: "2026-02-22", // Match France-Irlande
       category: t('rugby.tournament'),
-      link: "/tournoi-6-nations",
+      link: "/evenements/tournoi-6-nations",
       bgColor: "bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700",
       textColor: "text-blue-100",
       icon: Trophy,
@@ -64,7 +64,7 @@ export const NewsSection = () => {
       sortDate: "2026-02-21",
       endDate: "2026-03-01", // Fin du Salon de l'Agriculture
       category: t('actualites.salon'),
-      link: "/salon-agriculture",
+      link: "/evenements/salon-agriculture",
       bgColor: "bg-gradient-to-br from-green-500 via-emerald-500 to-teal-600",
       textColor: "text-green-100",
       icon: Leaf,
@@ -78,7 +78,7 @@ export const NewsSection = () => {
       sortDate: "2026-02-16",
       endDate: "2026-02-16", // Concert Mika
       category: t('actualites.concert'),
-      link: "/mika-concert",
+      link: "/evenements/mika-concert",
       bgColor: "bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600",
       textColor: "text-orange-100",
       icon: Mic,
@@ -92,7 +92,7 @@ export const NewsSection = () => {
       sortDate: "2026-02-18",
       endDate: "2026-02-18", // Concert Clara Luciani
       category: t('actualites.concert'),
-      link: "/clara-luciani-concert",
+      link: "/evenements/clara-luciani-concert",
       bgColor: "bg-gradient-to-br from-sky-500 via-cyan-500 to-teal-600",
       textColor: "text-indigo-100",
       icon: Mic,
@@ -106,7 +106,7 @@ export const NewsSection = () => {
       sortDate: "2026-03-08",
       endDate: "2026-03-08", // Semi-Marathon de Paris
       category: t('actualites.sport'),
-      link: "/semi-marathon-paris",
+      link: "/evenements/semi-marathon-paris",
       bgColor: "bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600",
       textColor: "text-emerald-100",
       icon: Timer,
@@ -120,7 +120,7 @@ export const NewsSection = () => {
       sortDate: "2026-03-11",
       endDate: "2026-03-11", // Concert Wu-Tang Clan
       category: t('actualites.concert'),
-      link: "/wu-tang-concert",
+      link: "/evenements/wu-tang-concert",
       bgColor: "bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-600",
       textColor: "text-yellow-100",
       icon: Mic,
@@ -135,7 +135,7 @@ export const NewsSection = () => {
       sortDate: "2026-03-14",
       endDate: "2026-03-14",
       category: t('rugby.tournament'),
-      link: "/france-angleterre",
+      link: "/evenements/france-angleterre",
       bgColor: "bg-gradient-to-br from-blue-600 via-purple-600 to-red-600",
       textColor: "text-blue-100",
       icon: Trophy,
