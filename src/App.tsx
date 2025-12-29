@@ -57,15 +57,15 @@ const App = () => {
                 <Route path="/seminaires" element={<Seminaires />} />
                 <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
                 <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
-                <Route path="/actualites" element={<Actualites />} />
-                <Route path="/enfoires-2026" element={<Enfoires2026 />} />
-                <Route path="/tournoi-6-nations" element={<Tournoi6Nations />} />
-                <Route path="/salon-agriculture" element={<SalonAgriculture />} />
-                <Route path="/mika-concert" element={<MikaConcert />} />
-                <Route path="/clara-luciani-concert" element={<ClaraLucianiConcert />} />
-                <Route path="/semi-marathon-paris" element={<SemiMarathonParis />} />
-                <Route path="/wu-tang-concert" element={<WuTangConcert />} />
-                <Route path="/france-angleterre" element={<FranceAngleterre />} />
+                <Route path="/evenements" element={<Actualites />} />
+                <Route path="/evenements/enfoires-2026" element={<Enfoires2026 />} />
+                <Route path="/evenements/tournoi-6-nations" element={<Tournoi6Nations />} />
+                <Route path="/evenements/salon-agriculture" element={<SalonAgriculture />} />
+                <Route path="/evenements/mika-concert" element={<MikaConcert />} />
+                <Route path="/evenements/clara-luciani-concert" element={<ClaraLucianiConcert />} />
+                <Route path="/evenements/semi-marathon-paris" element={<SemiMarathonParis />} />
+                <Route path="/evenements/wu-tang-concert" element={<WuTangConcert />} />
+                <Route path="/evenements/france-angleterre" element={<FranceAngleterre />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

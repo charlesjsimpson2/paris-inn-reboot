@@ -12,7 +12,7 @@ const getNavItems = (t: (key: string) => string) => [
   { name: t('nav.seminars'), href: "/seminaires" },
   { name: t('nav.breakfast'), href: "/petit-dejeuner" },
   { name: t('nav.location'), href: "/localisation" },
-  { name: t('nav.events'), href: "/actualites" },
+  { name: t('nav.events'), href: "/evenements" },
   { name: t('nav.contact'), href: "/contact" },
 ];
 
@@ -26,7 +26,7 @@ export const Header = memo(() => {
   
   // Check if we're on homepage or a page with hero image
   const isHomePage = location.pathname === "/";
-  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/actualites" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner";
+  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/evenements" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner";
 
   useEffect(() => {
     const handleScroll = () => {

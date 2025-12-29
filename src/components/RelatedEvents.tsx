@@ -23,7 +23,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.enfoires.date'),
       sortDate: "2026-01-13",
       endDate: "2026-01-19",
-      link: "/enfoires-2026",
+      link: "/evenements/enfoires-2026",
       image: enfoiresAffiche,
       icon: Music,
       color: "from-pink-500 to-rose-600",
@@ -36,7 +36,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: "16 " + t('mika.february') + " 2026",
       sortDate: "2026-02-16",
       endDate: "2026-02-16",
-      link: "/mika-concert",
+      link: "/evenements/mika-concert",
       image: mikaHero,
       icon: Mic,
       color: "from-orange-500 to-pink-600",
@@ -49,7 +49,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.clara.date'),
       sortDate: "2026-02-18",
       endDate: "2026-02-19",
-      link: "/clara-luciani-concert",
+      link: "/evenements/clara-luciani-concert",
       image: claraHero,
       icon: Mic,
       color: "from-indigo-500 to-purple-600",
@@ -62,7 +62,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.agriculture.date'),
       sortDate: "2026-02-21",
       endDate: "2026-03-01",
-      link: "/salon-agriculture",
+      link: "/evenements/salon-agriculture",
       image: salonAgricultureHero,
       icon: Leaf,
       color: "from-green-500 to-emerald-600",
@@ -75,7 +75,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.rugby.date'),
       sortDate: "2026-02-22",
       endDate: "2026-02-22",
-      link: "/tournoi-6-nations",
+      link: "/evenements/tournoi-6-nations",
       image: rugbyImage,
       icon: Trophy,
       color: "from-blue-500 to-indigo-600",
@@ -88,7 +88,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.semimarathon.date'),
       sortDate: "2026-03-08",
       endDate: "2026-03-08",
-      link: "/semi-marathon-paris",
+      link: "/evenements/semi-marathon-paris",
       image: semiMarathonHero,
       icon: Timer,
       color: "from-[#E94E4B] to-[#3BB5DC]",
@@ -101,7 +101,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.wutang.date'),
       sortDate: "2026-03-11",
       endDate: "2026-03-11",
-      link: "/wu-tang-concert",
+      link: "/evenements/wu-tang-concert",
       image: wutangHero,
       icon: Mic,
       color: "from-yellow-500 to-amber-600",
@@ -114,7 +114,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       date: t('actualites.franceangleterre.date'),
       sortDate: "2026-03-14",
       endDate: "2026-03-14",
-      link: "/france-angleterre",
+      link: "/evenements/france-angleterre",
       image: rugbyImage,
       icon: Trophy,
       color: "from-blue-600 to-red-600",
@@ -186,7 +186,7 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
           
           <div className="text-center mt-8">
             <Link 
-              to="/actualites" 
+              to="/evenements" 
               className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
             >
               {t('relatedEvents.viewAll')} →
