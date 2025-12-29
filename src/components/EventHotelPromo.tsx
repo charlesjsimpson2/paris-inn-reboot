@@ -41,10 +41,10 @@ export const EventHotelPromo = ({
                   <div className="text-white text-center md:text-left">
                     <div className="flex items-center gap-2 mb-1">
                       <Clock className="w-4 h-4" />
-                      <span className="text-xs font-medium uppercase tracking-wider opacity-90">Offre limitée</span>
+                      <span className="text-xs font-medium uppercase tracking-wider opacity-90">{t("eventHotelPromo.limitedOffer")}</span>
                     </div>
                     <h3 className="font-display text-lg md:text-xl">{t('enfoires.hotelPromo.title')}</h3>
-                    <p className="text-white/80 text-sm hidden md:block">Emplacement idéal à quelques minutes de l'événement</p>
+                    <p className="text-white/80 text-sm hidden md:block">{t("eventHotelPromo.idealLocation")}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -60,11 +60,11 @@ export const EventHotelPromo = ({
                     })}
                   </div>
                   <Link to="/reservation-seminaire">
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       className="bg-white text-foreground hover:bg-white/90 font-bold shadow-lg"
                     >
-                      Réserver
+                      {t("eventHotelPromo.book")}
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Button>
                   </Link>
@@ -135,14 +135,14 @@ export const EventHotelPromo = ({
                       <div className="flex items-center gap-2 text-primary mb-2">
                         <Clock className="w-4 h-4" />
                         <span className="text-sm font-medium uppercase tracking-wider">
-                          Offre limitée
+                          {t("eventHotelPromo.limitedOffer")}
                         </span>
                       </div>
                       <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">
                         {t('enfoires.hotelPromo.title')}
                       </h2>
                       <p className="text-muted-foreground">
-                        Profitez de notre emplacement idéal à quelques minutes de l'événement
+                        {t("eventHotelPromo.idealLocation")}
                       </p>
                     </div>
 
@@ -175,21 +175,21 @@ export const EventHotelPromo = ({
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link to="/reservation-seminaire" className="flex-1">
-                        <Button 
-                          size="lg" 
+                        <Button
+                          size="lg"
                           className="w-full bg-gradient-to-r from-primary to-burgundy hover:from-primary/90 hover:to-burgundy/90 text-primary-foreground font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
                         >
-                          Réserver maintenant
+                          {t("eventHotelPromo.bookNow")}
                           <ArrowRight className="w-5 h-5 ml-2" />
                         </Button>
                       </Link>
                       <Link to="/nos-chambres">
-                        <Button 
-                          size="lg" 
-                          variant="outline" 
+                        <Button
+                          size="lg"
+                          variant="outline"
                           className="w-full border-primary/30 hover:bg-primary/5"
                         >
-                          Voir les chambres
+                          {t("eventHotelPromo.viewRooms")}
                         </Button>
                       </Link>
                     </div>
@@ -198,11 +198,11 @@ export const EventHotelPromo = ({
                     <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-border/50">
                       <div className="flex items-center gap-1 text-xs text-muted-foreground">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
-                        Annulation gratuite
+                        {t("eventHotelPromo.freeCancellation")}
                       </div>
                       <div className="flex items-center gap-1 text-xs text-muted-foreground">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
-                        Meilleur prix garanti
+                        {t("eventHotelPromo.bestPrice")}
                       </div>
                     </div>
                   </div>

@@ -44,6 +44,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'easyAccess.travelTime': 'Temps de trajet',
     'easyAccess.destinationLabel': "Destination de l'événement",
     'easyAccess.imageAlt': "Hôtel Inn Paris - Métro Place d'Italie",
+    'easyAccess.lines.line13': 'Ligne 13',
+    'easyAccess.routes.stadeDeFrance': "Place d'Italie → Saint-Denis Porte de Paris (via Ligne 7 puis 13)",
 
     // Intro
     'intro.badge': 'Bienvenue',
@@ -240,7 +242,70 @@ export const translations: Record<Language, Record<string, string>> = {
     'actualites.franceangleterre.title': 'France vs Angleterre',
     'actualites.franceangleterre.subtitle': 'Le Crunch - La rivalité légendaire du rugby',
     'actualites.franceangleterre.date': '14 mars 2026',
-    
+
+    // France vs Angleterre (page)
+    'franceangleterre.france': 'France',
+    'franceangleterre.england': 'Angleterre',
+    'franceangleterre.tournament': 'Tournoi des 6 Nations 2026',
+    'franceangleterre.time': '20h10',
+    'franceangleterre.venue': 'Stade de France',
+    'franceangleterre.travelTime': '~30 min',
+
+    'franceangleterre.offers.title': 'Nos offres exclusives',
+    'franceangleterre.offers.subtitle': 'Pour les supporters du Crunch France - Angleterre',
+    'franceangleterre.offers.parking.title': 'Parking privé',
+    'franceangleterre.offers.parking.desc': 'Stationnez en toute sécurité pendant votre séjour',
+    'franceangleterre.offers.taxi.title': 'Service Taxi',
+    'franceangleterre.offers.taxi.desc': 'Aller et retour vers le Stade de France',
+    'franceangleterre.offers.notePrefix': 'Offres réservées aux clients séjournant pendant le week-end du match.',
+
+    'franceangleterre.cta.title': 'Réservez votre séjour pour le Crunch',
+    'franceangleterre.cta.subtitle': "Profitez des meilleures conditions pour vivre ce match légendaire entre la France et l'Angleterre",
+    'franceangleterre.cta.bookNow': 'Réserver maintenant',
+    'franceangleterre.cta.contact': 'Nous contacter',
+
+    'franceangleterre.match.title': 'Le Crunch : Une rivalité légendaire',
+    'franceangleterre.match.p1': "Le <strong>\"Crunch\"</strong> est le nom donné à cette confrontation mythique entre la <strong>France</strong> et l'<strong>Angleterre</strong>. Depuis plus d'un siècle, ces deux nations s'affrontent dans des matchs d'une intensité inégalée, faisant de cette rencontre l'une des plus attendues du rugby mondial.",
+    'franceangleterre.match.p2': "Avec 104 confrontations au compteur, la France et l'Angleterre ont écrit les plus belles pages de l'histoire du rugby. Ce match au Stade de France promet une nouvelle fois un spectacle exceptionnel.",
+    'franceangleterre.match.supporters': '🏨 Supporters français et anglais, notre hôtel vous accueille à bras ouverts !',
+
+    'franceangleterre.teams.title': 'Les équipes',
+    'franceangleterre.teams.subtitle': "Découvrez les deux nations qui s'affronteront",
+    'franceangleterre.teams.stats.grandSlams': 'Grands Chelems',
+    'franceangleterre.teams.stats.sixNationsTitles': 'Titres 6 Nations',
+    'franceangleterre.teams.france.title': 'XV de France',
+    'franceangleterre.teams.france.org': 'Fédération Française de Rugby',
+    'franceangleterre.teams.france.desc': "Menée par Antoine Dupont, considéré comme le meilleur joueur du monde, l'équipe de France affiche ses ambitions et vise le Grand Chelem.",
+    'franceangleterre.teams.england.title': 'XV de la Rose',
+    'franceangleterre.teams.england.org': 'Rugby Football Union',
+    'franceangleterre.teams.england.desc': "L'Angleterre, nation historique du rugby et championne du monde 2003, reste une équipe redoutable emmenée par Maro Itoje et Marcus Smith.",
+
+    'franceangleterre.lineups.title': 'Compositions probables',
+    'franceangleterre.lineups.subtitle': 'Les XV attendus pour ce Crunch',
+
+    'franceangleterre.history.title': '10 dernières confrontations',
+    'franceangleterre.history.subtitle': "L'histoire d'une rivalité intense",
+    'franceangleterre.history.summaryLabel': 'Bilan sur 10 matchs :',
+    'franceangleterre.history.summaryText': 'France 5 victoires - Angleterre 5 victoires',
+
+    'franceangleterre.paris.title': 'Profitez de Paris',
+    'franceangleterre.paris.subtitle': 'Prolongez votre week-end rugby par une visite de la capitale',
+    'franceangleterre.paris.attractions.montmartre': 'Montmartre & Sacré-Cœur',
+    'franceangleterre.paris.attractions.champsElysees': 'Champs-Élysées',
+    'franceangleterre.paris.attractions.opera': 'Opéra Garnier',
+    'franceangleterre.paris.attractions.eiffel': 'Tour Eiffel',
+
+    'franceangleterre.hotelPromo.urgency': 'Offre Match Le Crunch',
+
+    // Event hotel promo (shared)
+    'eventHotelPromo.limitedOffer': 'Offre limitée',
+    'eventHotelPromo.idealLocation': "Emplacement idéal à quelques minutes de l'événement",
+    'eventHotelPromo.book': 'Réserver',
+    'eventHotelPromo.bookNow': 'Réserver maintenant',
+    'eventHotelPromo.viewRooms': 'Voir les chambres',
+    'eventHotelPromo.freeCancellation': 'Annulation gratuite',
+    'eventHotelPromo.bestPrice': 'Meilleur prix garanti',
+
     // News Section (Homepage)
     'news.dontMiss': 'Ne manquez pas !',
     'news.upcomingEvents': 'Événements à venir',
@@ -761,6 +826,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'easyAccess.travelTime': 'Travel time',
     'easyAccess.destinationLabel': 'Event destination',
     'easyAccess.imageAlt': "Hotel Inn Paris - Place d'Italie metro",
+    'easyAccess.lines.line13': 'Line 13',
+    'easyAccess.routes.stadeDeFrance': "Place d'Italie → Saint-Denis Porte de Paris (via Lines 7 then 13)",
 
     // Intro
     'intro.badge': 'Welcome',
@@ -1083,6 +1150,70 @@ export const translations: Record<Language, Record<string, string>> = {
     'actualites.franceangleterre.title': 'France vs England',
     'actualites.franceangleterre.subtitle': 'The Crunch - The legendary rugby rivalry',
     'actualites.franceangleterre.date': 'March 14, 2026',
+
+    // France vs England (page)
+    'franceangleterre.france': 'France',
+    'franceangleterre.england': 'England',
+    'franceangleterre.tournament': 'Six Nations 2026',
+    'franceangleterre.time': '8:10 PM',
+    'franceangleterre.venue': 'Stade de France',
+    'franceangleterre.travelTime': '~30 min',
+
+    'franceangleterre.offers.title': 'Our exclusive offers',
+    'franceangleterre.offers.subtitle': 'For fans of The Crunch France - England',
+    'franceangleterre.offers.parking.title': 'Private parking',
+    'franceangleterre.offers.parking.desc': 'Park securely during your stay',
+    'franceangleterre.offers.taxi.title': 'Taxi service',
+    'franceangleterre.offers.taxi.desc': 'Round trip to Stade de France',
+    'franceangleterre.offers.notePrefix': 'Offers reserved for guests staying during match weekend.',
+
+    'franceangleterre.cta.title': 'Book your stay for The Crunch',
+    'franceangleterre.cta.subtitle': 'Enjoy the best conditions to experience this legendary match between France and England',
+    'franceangleterre.cta.bookNow': 'Book now',
+    'franceangleterre.cta.contact': 'Contact us',
+
+    'franceangleterre.match.title': 'The Crunch: a legendary rivalry',
+    'franceangleterre.match.p1': 'The <strong>"Crunch"</strong> is the name given to this iconic showdown between <strong>France</strong> and <strong>England</strong>. For over a century, these two nations have faced off in matches of unrivaled intensity, making it one of world rugby\'s most anticipated fixtures.',
+    'franceangleterre.match.p2': 'With 104 meetings to date, France and England have written some of rugby\'s greatest chapters. This match at Stade de France promises another exceptional spectacle.',
+    'franceangleterre.match.supporters': '🏨 French and English fans, our hotel welcomes you with open arms!',
+
+    'franceangleterre.teams.title': 'The teams',
+    'franceangleterre.teams.subtitle': 'Discover the two nations that will face each other',
+    'franceangleterre.teams.stats.grandSlams': 'Grand Slams',
+    'franceangleterre.teams.stats.sixNationsTitles': 'Six Nations titles',
+    'franceangleterre.teams.france.title': 'France XV',
+    'franceangleterre.teams.france.org': 'French Rugby Federation',
+    'franceangleterre.teams.france.desc': 'Led by Antoine Dupont, considered one of the best players in the world, France come in with big ambitions and a Grand Slam target.',
+    'franceangleterre.teams.england.title': 'Red Rose XV',
+    'franceangleterre.teams.england.org': 'Rugby Football Union',
+    'franceangleterre.teams.england.desc': 'England, a historic rugby nation and 2003 world champions, remain a formidable side led by Maro Itoje and Marcus Smith.',
+
+    'franceangleterre.lineups.title': 'Probable lineups',
+    'franceangleterre.lineups.subtitle': 'The expected XV for this Crunch',
+
+    'franceangleterre.history.title': 'Last 10 meetings',
+    'franceangleterre.history.subtitle': 'The story of an intense rivalry',
+    'franceangleterre.history.summaryLabel': 'Record over 10 matches:',
+    'franceangleterre.history.summaryText': 'France 5 wins - England 5 wins',
+
+    'franceangleterre.paris.title': 'Enjoy Paris',
+    'franceangleterre.paris.subtitle': 'Extend your rugby weekend with a visit to the capital',
+    'franceangleterre.paris.attractions.montmartre': 'Montmartre & Sacré-Cœur',
+    'franceangleterre.paris.attractions.champsElysees': 'Champs-Élysées',
+    'franceangleterre.paris.attractions.opera': 'Opéra Garnier',
+    'franceangleterre.paris.attractions.eiffel': 'Eiffel Tower',
+
+    'franceangleterre.hotelPromo.urgency': 'The Crunch match offer',
+
+    // Event hotel promo (shared)
+    'eventHotelPromo.limitedOffer': 'Limited offer',
+    'eventHotelPromo.idealLocation': 'Ideal location just minutes from the event',
+    'eventHotelPromo.book': 'Book',
+    'eventHotelPromo.bookNow': 'Book now',
+    'eventHotelPromo.viewRooms': 'View rooms',
+    'eventHotelPromo.freeCancellation': 'Free cancellation',
+    'eventHotelPromo.bestPrice': 'Best price guaranteed',
+
     'actualites.wutang.date': 'March 11, 2026',
     'wutang.tour': 'The Final Chamber Tour',
     'wutang.title': 'Wu-Tang Clan',
@@ -1437,6 +1568,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'easyAccess.travelTime': 'Tiempo de trayecto',
     'easyAccess.destinationLabel': 'Destino del evento',
     'easyAccess.imageAlt': "Hotel Inn París - Metro Place d'Italie",
+    'easyAccess.lines.line13': 'Línea 13',
+    'easyAccess.routes.stadeDeFrance': "Place d'Italie → Saint-Denis Porte de Paris (vía líneas 7 y 13)",
 
     // Intro
     'intro.badge': 'Bienvenido',
@@ -1746,6 +1879,70 @@ export const translations: Record<Language, Record<string, string>> = {
     'actualites.franceangleterre.title': 'Francia vs Inglaterra',
     'actualites.franceangleterre.subtitle': 'El Crunch - La rivalidad legendaria del rugby',
     'actualites.franceangleterre.date': '14 marzo 2026',
+
+    // Francia vs Inglaterra (página)
+    'franceangleterre.france': 'Francia',
+    'franceangleterre.england': 'Inglaterra',
+    'franceangleterre.tournament': 'Seis Naciones 2026',
+    'franceangleterre.time': '20:10',
+    'franceangleterre.venue': 'Stade de France',
+    'franceangleterre.travelTime': '~30 min',
+
+    'franceangleterre.offers.title': 'Nuestras ofertas exclusivas',
+    'franceangleterre.offers.subtitle': 'Para los aficionados del Crunch Francia - Inglaterra',
+    'franceangleterre.offers.parking.title': 'Parking privado',
+    'franceangleterre.offers.parking.desc': 'Aparque con total seguridad durante su estancia',
+    'franceangleterre.offers.taxi.title': 'Servicio de taxi',
+    'franceangleterre.offers.taxi.desc': 'Ida y vuelta al Stade de France',
+    'franceangleterre.offers.notePrefix': 'Ofertas reservadas a los huéspedes alojados durante el fin de semana del partido.',
+
+    'franceangleterre.cta.title': 'Reserve su estancia para el Crunch',
+    'franceangleterre.cta.subtitle': 'Disfrute de las mejores condiciones para vivir este partido legendario entre Francia e Inglaterra',
+    'franceangleterre.cta.bookNow': 'Reservar ahora',
+    'franceangleterre.cta.contact': 'Contactarnos',
+
+    'franceangleterre.match.title': 'El Crunch: una rivalidad legendaria',
+    'franceangleterre.match.p1': 'El <strong>"Crunch"</strong> es el nombre dado a este choque mítico entre <strong>Francia</strong> e <strong>Inglaterra</strong>. Desde hace más de un siglo, estas dos naciones se enfrentan en partidos de una intensidad sin igual, lo que convierte este encuentro en uno de los más esperados del rugby mundial.',
+    'franceangleterre.match.p2': 'Con 104 enfrentamientos en el contador, Francia e Inglaterra han escrito algunas de las páginas más bellas de la historia del rugby. Este partido en el Stade de France promete de nuevo un espectáculo excepcional.',
+    'franceangleterre.match.supporters': '🏨 ¡Aficionados franceses e ingleses, nuestro hotel les recibe con los brazos abiertos!',
+
+    'franceangleterre.teams.title': 'Los equipos',
+    'franceangleterre.teams.subtitle': 'Descubra las dos naciones que se enfrentarán',
+    'franceangleterre.teams.stats.grandSlams': 'Grand Slams',
+    'franceangleterre.teams.stats.sixNationsTitles': 'Títulos del Seis Naciones',
+    'franceangleterre.teams.france.title': 'XV de Francia',
+    'franceangleterre.teams.france.org': 'Federación Francesa de Rugby',
+    'franceangleterre.teams.france.desc': 'Liderada por Antoine Dupont, considerado uno de los mejores jugadores del mundo, Francia llega con grandes ambiciones y apunta al Grand Slam.',
+    'franceangleterre.teams.england.title': 'XV de la Rosa',
+    'franceangleterre.teams.england.org': 'Rugby Football Union',
+    'franceangleterre.teams.england.desc': 'Inglaterra, nación histórica del rugby y campeona del mundo en 2003, sigue siendo un equipo temible liderado por Maro Itoje y Marcus Smith.',
+
+    'franceangleterre.lineups.title': 'Alineaciones probables',
+    'franceangleterre.lineups.subtitle': 'Los XV esperados para este Crunch',
+
+    'franceangleterre.history.title': 'Últimos 10 enfrentamientos',
+    'franceangleterre.history.subtitle': 'La historia de una rivalidad intensa',
+    'franceangleterre.history.summaryLabel': 'Balance en 10 partidos:',
+    'franceangleterre.history.summaryText': 'Francia 5 victorias - Inglaterra 5 victorias',
+
+    'franceangleterre.paris.title': 'Disfrute de París',
+    'franceangleterre.paris.subtitle': 'Prolongue su fin de semana de rugby con una visita a la capital',
+    'franceangleterre.paris.attractions.montmartre': 'Montmartre y Sacré-Cœur',
+    'franceangleterre.paris.attractions.champsElysees': 'Campos Elíseos',
+    'franceangleterre.paris.attractions.opera': 'Ópera Garnier',
+    'franceangleterre.paris.attractions.eiffel': 'Torre Eiffel',
+
+    'franceangleterre.hotelPromo.urgency': 'Oferta Partido El Crunch',
+
+    // Promo hotel evento (común)
+    'eventHotelPromo.limitedOffer': 'Oferta limitada',
+    'eventHotelPromo.idealLocation': 'Ubicación ideal a pocos minutos del evento',
+    'eventHotelPromo.book': 'Reservar',
+    'eventHotelPromo.bookNow': 'Reservar ahora',
+    'eventHotelPromo.viewRooms': 'Ver habitaciones',
+    'eventHotelPromo.freeCancellation': 'Cancelación gratuita',
+    'eventHotelPromo.bestPrice': 'Mejor precio garantizado',
+
     'actualites.wutang.date': '11 marzo 2026',
     'wutang.tour': 'The Final Chamber Tour',
     'wutang.title': 'Wu-Tang Clan',
@@ -2114,6 +2311,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'easyAccess.travelTime': 'Tempo di percorrenza',
     'easyAccess.destinationLabel': "Destinazione dell'evento",
     'easyAccess.imageAlt': "Hotel Inn Paris - Metro Place d'Italie",
+    'easyAccess.lines.line13': 'Linea 13',
+    'easyAccess.routes.stadeDeFrance': "Place d'Italie → Saint-Denis Porte de Paris (via linee 7 e 13)",
 
     // Intro
     'intro.badge': 'Benvenuto',
@@ -2423,6 +2622,70 @@ export const translations: Record<Language, Record<string, string>> = {
     'actualites.franceangleterre.title': 'Francia vs Inghilterra',
     'actualites.franceangleterre.subtitle': 'Il Crunch - La leggendaria rivalità del rugby',
     'actualites.franceangleterre.date': '14 marzo 2026',
+
+    // Francia vs Inghilterra (pagina)
+    'franceangleterre.france': 'Francia',
+    'franceangleterre.england': 'Inghilterra',
+    'franceangleterre.tournament': 'Sei Nazioni 2026',
+    'franceangleterre.time': '20:10',
+    'franceangleterre.venue': 'Stade de France',
+    'franceangleterre.travelTime': '~30 min',
+
+    'franceangleterre.offers.title': 'Le nostre offerte esclusive',
+    'franceangleterre.offers.subtitle': 'Per i tifosi del Crunch Francia - Inghilterra',
+    'franceangleterre.offers.parking.title': 'Parcheggio privato',
+    'franceangleterre.offers.parking.desc': 'Parcheggia in sicurezza durante il soggiorno',
+    'franceangleterre.offers.taxi.title': 'Servizio taxi',
+    'franceangleterre.offers.taxi.desc': 'Andata e ritorno allo Stade de France',
+    'franceangleterre.offers.notePrefix': 'Offerte riservate agli ospiti che soggiornano durante il weekend della partita.',
+
+    'franceangleterre.cta.title': 'Prenota il tuo soggiorno per il Crunch',
+    'franceangleterre.cta.subtitle': 'Approfitta delle migliori condizioni per vivere questa partita leggendaria tra Francia e Inghilterra',
+    'franceangleterre.cta.bookNow': 'Prenota ora',
+    'franceangleterre.cta.contact': 'Contattaci',
+
+    'franceangleterre.match.title': 'Il Crunch: una rivalità leggendaria',
+    'franceangleterre.match.p1': 'Il <strong>"Crunch"</strong> è il nome dato a questa sfida mitica tra <strong>Francia</strong> e <strong>Inghilterra</strong>. Da oltre un secolo, queste due nazioni si affrontano in partite di intensità senza pari, rendendo questo incontro uno dei più attesi del rugby mondiale.',
+    'franceangleterre.match.p2': 'Con 104 confronti all\'attivo, Francia e Inghilterra hanno scritto alcune delle pagine più belle della storia del rugby. Questa partita allo Stade de France promette ancora una volta uno spettacolo eccezionale.',
+    'franceangleterre.match.supporters': '🏨 Tifosi francesi e inglesi, il nostro hotel vi accoglie a braccia aperte!',
+
+    'franceangleterre.teams.title': 'Le squadre',
+    'franceangleterre.teams.subtitle': 'Scopri le due nazioni che si affronteranno',
+    'franceangleterre.teams.stats.grandSlams': 'Grand Slam',
+    'franceangleterre.teams.stats.sixNationsTitles': 'Titoli Sei Nazioni',
+    'franceangleterre.teams.france.title': 'XV di Francia',
+    'franceangleterre.teams.france.org': 'Federazione Francese di Rugby',
+    'franceangleterre.teams.france.desc': 'Guidata da Antoine Dupont, considerato uno dei migliori giocatori al mondo, la Francia arriva con grandi ambizioni e punta al Grand Slam.',
+    'franceangleterre.teams.england.title': 'XV della Rosa',
+    'franceangleterre.teams.england.org': 'Rugby Football Union',
+    'franceangleterre.teams.england.desc': 'L\'Inghilterra, nazione storica del rugby e campione del mondo 2003, resta una squadra temibile guidata da Maro Itoje e Marcus Smith.',
+
+    'franceangleterre.lineups.title': 'Formazioni probabili',
+    'franceangleterre.lineups.subtitle': 'I XV attesi per questo Crunch',
+
+    'franceangleterre.history.title': 'Ultimi 10 scontri',
+    'franceangleterre.history.subtitle': 'La storia di una rivalità intensa',
+    'franceangleterre.history.summaryLabel': 'Bilancio su 10 partite:',
+    'franceangleterre.history.summaryText': 'Francia 5 vittorie - Inghilterra 5 vittorie',
+
+    'franceangleterre.paris.title': 'Goditi Parigi',
+    'franceangleterre.paris.subtitle': 'Prolunga il tuo weekend di rugby con una visita alla capitale',
+    'franceangleterre.paris.attractions.montmartre': 'Montmartre & Sacré-Cœur',
+    'franceangleterre.paris.attractions.champsElysees': 'Champs-Élysées',
+    'franceangleterre.paris.attractions.opera': 'Opéra Garnier',
+    'franceangleterre.paris.attractions.eiffel': 'Torre Eiffel',
+
+    'franceangleterre.hotelPromo.urgency': 'Offerta partita Il Crunch',
+
+    // Promo hotel evento (comune)
+    'eventHotelPromo.limitedOffer': 'Offerta limitata',
+    'eventHotelPromo.idealLocation': 'Posizione ideale a pochi minuti dall\'evento',
+    'eventHotelPromo.book': 'Prenota',
+    'eventHotelPromo.bookNow': 'Prenota ora',
+    'eventHotelPromo.viewRooms': 'Vedi le camere',
+    'eventHotelPromo.freeCancellation': 'Cancellazione gratuita',
+    'eventHotelPromo.bestPrice': 'Miglior prezzo garantito',
+
     'actualites.wutang.date': '11 marzo 2026',
     'wutang.tour': 'The Final Chamber Tour',
     'wutang.title': 'Wu-Tang Clan',
@@ -2791,6 +3054,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'easyAccess.travelTime': 'Tempo de trajeto',
     'easyAccess.destinationLabel': 'Destino do evento',
     'easyAccess.imageAlt': "Hotel Inn Paris - Metrô Place d'Italie",
+    'easyAccess.lines.line13': 'Linha 13',
+    'easyAccess.routes.stadeDeFrance': "Place d'Italie → Saint-Denis Porte de Paris (via linhas 7 e 13)",
 
     // Intro
     'intro.badge': 'Bem-vindo',
@@ -3100,6 +3365,70 @@ export const translations: Record<Language, Record<string, string>> = {
     'actualites.franceangleterre.title': 'França vs Inglaterra',
     'actualites.franceangleterre.subtitle': 'O Crunch - A rivalidade lendária do rugby',
     'actualites.franceangleterre.date': '14 março 2026',
+
+    // França vs Inglaterra (página)
+    'franceangleterre.france': 'França',
+    'franceangleterre.england': 'Inglaterra',
+    'franceangleterre.tournament': 'Seis Nações 2026',
+    'franceangleterre.time': '20:10',
+    'franceangleterre.venue': 'Stade de France',
+    'franceangleterre.travelTime': '~30 min',
+
+    'franceangleterre.offers.title': 'Nossas ofertas exclusivas',
+    'franceangleterre.offers.subtitle': 'Para os torcedores do Crunch França - Inglaterra',
+    'franceangleterre.offers.parking.title': 'Estacionamento privativo',
+    'franceangleterre.offers.parking.desc': 'Estacione com segurança durante a sua estadia',
+    'franceangleterre.offers.taxi.title': 'Serviço de táxi',
+    'franceangleterre.offers.taxi.desc': 'Ida e volta ao Stade de France',
+    'franceangleterre.offers.notePrefix': 'Ofertas reservadas aos hóspedes hospedados durante o fim de semana do jogo.',
+
+    'franceangleterre.cta.title': 'Reserve sua estadia para o Crunch',
+    'franceangleterre.cta.subtitle': 'Aproveite as melhores condições para viver este jogo lendário entre França e Inglaterra',
+    'franceangleterre.cta.bookNow': 'Reservar agora',
+    'franceangleterre.cta.contact': 'Fale conosco',
+
+    'franceangleterre.match.title': 'O Crunch: uma rivalidade lendária',
+    'franceangleterre.match.p1': 'O <strong>"Crunch"</strong> é o nome dado a este confronto mítico entre <strong>França</strong> e <strong>Inglaterra</strong>. Há mais de um século, essas duas nações se enfrentam em jogos de intensidade incomparável, tornando este encontro um dos mais aguardados do rugby mundial.',
+    'franceangleterre.match.p2': 'Com 104 confrontos no histórico, França e Inglaterra escreveram algumas das mais belas páginas da história do rugby. Este jogo no Stade de France promete mais uma vez um espetáculo excepcional.',
+    'franceangleterre.match.supporters': '🏨 Torcedores franceses e ingleses, nosso hotel recebe vocês de braços abertos!',
+
+    'franceangleterre.teams.title': 'As equipes',
+    'franceangleterre.teams.subtitle': 'Conheça as duas nações que irão se enfrentar',
+    'franceangleterre.teams.stats.grandSlams': 'Grand Slams',
+    'franceangleterre.teams.stats.sixNationsTitles': 'Títulos do Seis Nações',
+    'franceangleterre.teams.france.title': 'XV da França',
+    'franceangleterre.teams.france.org': 'Federação Francesa de Rugby',
+    'franceangleterre.teams.france.desc': 'Liderada por Antoine Dupont, considerado um dos melhores jogadores do mundo, a França chega com grandes ambições e mira o Grand Slam.',
+    'franceangleterre.teams.england.title': 'XV da Rosa',
+    'franceangleterre.teams.england.org': 'Rugby Football Union',
+    'franceangleterre.teams.england.desc': 'A Inglaterra, nação histórica do rugby e campeã do mundo em 2003, segue sendo uma equipe temível liderada por Maro Itoje e Marcus Smith.',
+
+    'franceangleterre.lineups.title': 'Escalações prováveis',
+    'franceangleterre.lineups.subtitle': 'Os XV esperados para este Crunch',
+
+    'franceangleterre.history.title': 'Últimos 10 confrontos',
+    'franceangleterre.history.subtitle': 'A história de uma rivalidade intensa',
+    'franceangleterre.history.summaryLabel': 'Balanço em 10 jogos:',
+    'franceangleterre.history.summaryText': 'França 5 vitórias - Inglaterra 5 vitórias',
+
+    'franceangleterre.paris.title': 'Aproveite Paris',
+    'franceangleterre.paris.subtitle': 'Estenda seu fim de semana de rugby com uma visita à capital',
+    'franceangleterre.paris.attractions.montmartre': 'Montmartre & Sacré-Cœur',
+    'franceangleterre.paris.attractions.champsElysees': 'Champs-Élysées',
+    'franceangleterre.paris.attractions.opera': 'Opéra Garnier',
+    'franceangleterre.paris.attractions.eiffel': 'Torre Eiffel',
+
+    'franceangleterre.hotelPromo.urgency': 'Oferta Jogo O Crunch',
+
+    // Promo do hotel (comum)
+    'eventHotelPromo.limitedOffer': 'Oferta limitada',
+    'eventHotelPromo.idealLocation': 'Localização ideal a poucos minutos do evento',
+    'eventHotelPromo.book': 'Reservar',
+    'eventHotelPromo.bookNow': 'Reservar agora',
+    'eventHotelPromo.viewRooms': 'Ver quartos',
+    'eventHotelPromo.freeCancellation': 'Cancelamento grátis',
+    'eventHotelPromo.bestPrice': 'Melhor preço garantido',
+
     'actualites.wutang.date': '11 março 2026',
     'wutang.tour': 'The Final Chamber Tour',
     'wutang.title': 'Wu-Tang Clan',
