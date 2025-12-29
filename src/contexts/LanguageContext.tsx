@@ -530,6 +530,12 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Contactez-nous',
     
+    // Contact Page
+    'contactPage.heroAlt': "Contactez-nous - Hôtel Inn Design Paris",
+    'contactPage.formTitle': 'Formulaire de contact',
+    'contactPage.hotelName': "Hôtel Inn Design Paris Place d'Italie",
+    'contactPage.mapTitle': 'Localisation Hôtel Inn Design Paris',
+    
     // Footer
     'footer.description': 'Hôtel 3 étoiles au cœur du 13ème arrondissement, à deux pas de la Place d\'Italie.',
     'footer.navigation': 'Navigation',
@@ -1059,6 +1065,12 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Contact us',
+    
+    // Contact Page
+    'contactPage.heroAlt': "Contact us - Hôtel Inn Design Paris",
+    'contactPage.formTitle': 'Contact form',
+    'contactPage.hotelName': "Hôtel Inn Design Paris Place d'Italie",
+    'contactPage.mapTitle': 'Hôtel Inn Design Paris location',
     
     // Footer
     'footer.description': '3-star hotel in the heart of the 13th arrondissement, steps from Place d\'Italie.',
@@ -1817,6 +1829,12 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Contáctenos',
+    
+    // Contact Page
+    'contactPage.heroAlt': "Contáctenos - Hôtel Inn Design Paris",
+    'contactPage.formTitle': 'Formulario de contacto',
+    'contactPage.hotelName': "Hôtel Inn Design Paris Place d'Italie",
+    'contactPage.mapTitle': 'Ubicación Hôtel Inn Design Paris',
     
     // Footer
     'footer.description': 'Hotel de 3 estrellas en el corazón del distrito 13, a pasos de Place d\'Italie.',
@@ -2577,6 +2595,12 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Contattaci',
     
+    // Contact Page
+    'contactPage.heroAlt': "Contattaci - Hôtel Inn Design Paris",
+    'contactPage.formTitle': 'Modulo di contatto',
+    'contactPage.hotelName': "Hôtel Inn Design Paris Place d'Italie",
+    'contactPage.mapTitle': 'Posizione Hôtel Inn Design Paris',
+    
     // Footer
     'footer.description': 'Hotel 3 stelle nel cuore del 13° arrondissement, a due passi da Place d\'Italie.',
     'footer.navigation': 'Navigazione',
@@ -3335,6 +3359,12 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Fale conosco',
+    
+    // Contact Page
+    'contactPage.heroAlt': "Fale conosco - Hôtel Inn Design Paris",
+    'contactPage.formTitle': 'Formulário de contato',
+    'contactPage.hotelName': "Hôtel Inn Design Paris Place d'Italie",
+    'contactPage.mapTitle': 'Localização Hôtel Inn Design Paris',
     
     // Footer
     'footer.description': 'Hotel 3 estrelas no coração do 13º arrondissement, a poucos passos da Place d\'Italie.',

@@ -4,8 +4,11 @@ import { Footer } from "@/components/Footer";
 import { Phone, Mail, MapPin } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     // Load Tally embed script
     const script = document.createElement('script');
@@ -26,7 +29,7 @@ const Contact = () => {
       <section className="relative h-[50vh] min-h-[350px]">
         <img 
           src={heroContact} 
-          alt="Contactez-nous - Hôtel Inn Design Paris" 
+          alt={t('contactPage.heroAlt')} 
           className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -38,11 +41,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left: Form */}
             <div>
-              <h1 className="font-display text-4xl md:text-5xl text-foreground mb-8">
-                Contactez-nous
-              </h1>
-
-              {/* Tally Form Embed */}
+              {/* Tally Form Embed - title is inside the form */}
               <div className="rounded-lg overflow-hidden">
                 <iframe 
                   data-tally-src="https://tally.so/embed/vGraVd?alignLeft=1&transparentBackground=1&dynamicHeight=1"
@@ -50,7 +49,7 @@ const Contact = () => {
                   width="100%" 
                   height="600"
                   frameBorder="0" 
-                  title="Formulaire de contact"
+                  title={t('contactPage.formTitle')}
                   className="w-full"
                 />
               </div>
@@ -60,7 +59,7 @@ const Contact = () => {
             <div>
               <div className="bg-charcoal p-8 mb-8">
                 <h2 className="font-display text-2xl text-burgundy mb-6">
-                  Hôtel Inn Design Paris Place d'Italie
+                  {t('contactPage.hotelName')}
                 </h2>
                 
                 <div className="space-y-5">
@@ -117,7 +116,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localisation Hôtel Inn Design Paris"
+                  title={t('contactPage.mapTitle')}
                 />
               </div>
             </div>
