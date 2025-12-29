@@ -203,6 +203,43 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsPage.uShape': 'En U',
     'seminarsPage.classroom': 'Classe',
     'seminarsPage.theatre': 'Théâtre',
+    'seminarsPage.heroAlt': 'Salle de séminaire Hôtel Inn Design Paris',
+    'seminarsPage.videoIframeTitle': 'Visite de nos salles de séminaires',
+    'seminarsPage.surface': 'Surface',
+    'seminarsPage.modularSpace': 'Espace modulable',
+    
+    // Salon BOSE
+    'seminarsPage.bose.name': 'Salon BOSE',
+    'seminarsPage.bose.description': 'Découvrez notre nouvelle salle de séminaire BOSE, conçue pour allier confort et haute technologie. Écrans interactifs, système audio-vidéo de pointe et connexion wifi ultra-rapide : tout est là pour vos réunions, formations ou conférences, sur place ou en lien avec l\'international. Avec ses 40 m², cet espace garantit le succès de vos événements dans un cadre moderne et performant.',
+    'seminarsPage.bose.alt1': 'Salon BOSE - Vue d\'ensemble',
+    'seminarsPage.bose.alt2': 'Salon BOSE - Détail des sièges',
+    'seminarsPage.bose.alt3': 'Salon BOSE - Configuration classe',
+    'seminarsPage.bose.alt4': 'Salon BOSE - Vue avec écran',
+    
+    // Salon FENDER
+    'seminarsPage.fender.name': 'Salon FENDER',
+    'seminarsPage.fender.description': 'Spacieuse et baignée de lumière naturelle, notre salle FENDER de 70 m² est parfaite pour vos réunions et événements professionnels. Équipée d\'un écran HD, d\'un rétroprojecteur, d\'un système vidéo performant et du Wi-Fi haut débit, elle combine confort et technologie pour des présentations réussies. Un espace lumineux et convivial qui favorise la concentration et la collaboration de tous vos participants.',
+    'seminarsPage.fender.alt1': 'Salon FENDER - Vue en U',
+    'seminarsPage.fender.alt2': 'Salon FENDER - Vue avec écran',
+    'seminarsPage.fender.alt3': 'Salon FENDER - Configuration classe',
+    'seminarsPage.fender.alt4': 'Salon FENDER - Vue d\'ensemble',
+    
+    // Salon MARSHALL
+    'seminarsPage.marshall.name': 'Salon MARSHALL',
+    'seminarsPage.marshall.description': 'Spacieuse et baignée de lumière grâce à son patio intérieur, notre salle MARSHALL de 117 m² est idéale pour vos assemblées générales et séminaires. Équipée d\'un système audiovisuel de pointe, écran tactile, rétroprojecteur HD et Wi-Fi haut débit, elle garantit des présentations réussies. Avec un accès direct au patio, vos pauses et discussions informelles se font dans un cadre élégant et agréable, alliant professionnalisme et convivialité.',
+    'seminarsPage.marshall.alt1': 'Salon MARSHALL - Vue d\'ensemble',
+    'seminarsPage.marshall.alt2': 'Salon MARSHALL - Configuration classe',
+    'seminarsPage.marshall.alt3': 'Salon MARSHALL - Vue avec écran',
+    'seminarsPage.marshall.alt4': 'Salon MARSHALL - Patio',
+    
+    // Espace Coworking
+    'seminarsPage.coworking.name': 'Espace Coworking',
+    'seminarsPage.coworking.subtitle': 'Un espace de coworking inspirant',
+    'seminarsPage.coworking.description': 'Calme, élégant et pensé pour la productivité, notre espace de coworking offre un cadre idéal pour travailler en toute sérénité. Design épuré, mobilier soigné et ambiance apaisante créent une atmosphère propice à la concentration, seul ou en équipe. Réunions, sessions de travail ou moments de réflexion : tout est réuni pour mener vos projets à bien dans un environnement professionnel et inspirant.',
+    'seminarsPage.coworking.alt1': 'Espace Coworking - Vue d\'ensemble',
+    'seminarsPage.coworking.alt2': 'Espace Coworking - Table de travail',
+    'seminarsPage.coworking.alt3': 'Espace Coworking - Banquette et décoration',
+    'seminarsPage.coworking.alt4': 'Espace Coworking - Détails déco',
     
     // Events
     'events.badge': 'Événements & Offres',
@@ -1008,6 +1045,43 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsPage.uShape': 'U-shape',
     'seminarsPage.classroom': 'Classroom',
     'seminarsPage.theatre': 'Theatre',
+    'seminarsPage.heroAlt': 'Seminar room Hotel Inn Design Paris',
+    'seminarsPage.videoIframeTitle': 'Tour of our seminar rooms',
+    'seminarsPage.surface': 'Surface',
+    'seminarsPage.modularSpace': 'Modular space',
+    
+    // Salon BOSE
+    'seminarsPage.bose.name': 'BOSE Lounge',
+    'seminarsPage.bose.description': 'Discover our new BOSE seminar room, designed to combine comfort and high technology. Interactive screens, state-of-the-art audio-video system and ultra-fast wifi connection: everything is there for your meetings, training sessions or conferences, on-site or connected internationally. With its 40 m², this space guarantees the success of your events in a modern and high-performance setting.',
+    'seminarsPage.bose.alt1': 'BOSE Lounge - Overview',
+    'seminarsPage.bose.alt2': 'BOSE Lounge - Seat details',
+    'seminarsPage.bose.alt3': 'BOSE Lounge - Classroom configuration',
+    'seminarsPage.bose.alt4': 'BOSE Lounge - View with screen',
+    
+    // Salon FENDER
+    'seminarsPage.fender.name': 'FENDER Lounge',
+    'seminarsPage.fender.description': 'Spacious and bathed in natural light, our 70 m² FENDER room is perfect for your meetings and professional events. Equipped with an HD screen, overhead projector, high-performance video system and high-speed Wi-Fi, it combines comfort and technology for successful presentations. A bright and friendly space that promotes concentration and collaboration for all your participants.',
+    'seminarsPage.fender.alt1': 'FENDER Lounge - U-shape view',
+    'seminarsPage.fender.alt2': 'FENDER Lounge - View with screen',
+    'seminarsPage.fender.alt3': 'FENDER Lounge - Classroom configuration',
+    'seminarsPage.fender.alt4': 'FENDER Lounge - Overview',
+    
+    // Salon MARSHALL
+    'seminarsPage.marshall.name': 'MARSHALL Lounge',
+    'seminarsPage.marshall.description': 'Spacious and bathed in light thanks to its interior patio, our 117 m² MARSHALL room is ideal for your general assemblies and seminars. Equipped with a state-of-the-art audiovisual system, touch screen, HD overhead projector and high-speed Wi-Fi, it guarantees successful presentations. With direct access to the patio, your breaks and informal discussions take place in an elegant and pleasant setting, combining professionalism and conviviality.',
+    'seminarsPage.marshall.alt1': 'MARSHALL Lounge - Overview',
+    'seminarsPage.marshall.alt2': 'MARSHALL Lounge - Classroom configuration',
+    'seminarsPage.marshall.alt3': 'MARSHALL Lounge - View with screen',
+    'seminarsPage.marshall.alt4': 'MARSHALL Lounge - Patio',
+    
+    // Coworking Space
+    'seminarsPage.coworking.name': 'Coworking Space',
+    'seminarsPage.coworking.subtitle': 'An inspiring coworking space',
+    'seminarsPage.coworking.description': 'Calm, elegant and designed for productivity, our coworking space offers an ideal setting for working in complete serenity. Clean design, refined furniture and soothing atmosphere create an atmosphere conducive to concentration, alone or as a team. Meetings, work sessions or moments of reflection: everything is there to carry out your projects in a professional and inspiring environment.',
+    'seminarsPage.coworking.alt1': 'Coworking Space - Overview',
+    'seminarsPage.coworking.alt2': 'Coworking Space - Work table',
+    'seminarsPage.coworking.alt3': 'Coworking Space - Bench and decoration',
+    'seminarsPage.coworking.alt4': 'Coworking Space - Decoration details',
     
     // Events
     'events.badge': 'Events & Offers',
@@ -1772,6 +1846,43 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsPage.uShape': 'En U',
     'seminarsPage.classroom': 'Clase',
     'seminarsPage.theatre': 'Teatro',
+    'seminarsPage.heroAlt': 'Sala de seminarios Hotel Inn Design París',
+    'seminarsPage.videoIframeTitle': 'Visita de nuestras salas de seminarios',
+    'seminarsPage.surface': 'Superficie',
+    'seminarsPage.modularSpace': 'Espacio modular',
+    
+    // Salon BOSE
+    'seminarsPage.bose.name': 'Salón BOSE',
+    'seminarsPage.bose.description': 'Descubra nuestra nueva sala de seminarios BOSE, diseñada para combinar confort y alta tecnología. Pantallas interactivas, sistema audiovisual de última generación y conexión wifi ultrarrápida: todo está ahí para sus reuniones, formaciones o conferencias, in situ o conectados internacionalmente. Con sus 40 m², este espacio garantiza el éxito de sus eventos en un entorno moderno y de alto rendimiento.',
+    'seminarsPage.bose.alt1': 'Salón BOSE - Vista general',
+    'seminarsPage.bose.alt2': 'Salón BOSE - Detalle de los asientos',
+    'seminarsPage.bose.alt3': 'Salón BOSE - Configuración clase',
+    'seminarsPage.bose.alt4': 'Salón BOSE - Vista con pantalla',
+    
+    // Salon FENDER
+    'seminarsPage.fender.name': 'Salón FENDER',
+    'seminarsPage.fender.description': 'Espacioso y bañado de luz natural, nuestra sala FENDER de 70 m² es perfecta para sus reuniones y eventos profesionales. Equipada con pantalla HD, retroproyector, sistema de vídeo de alto rendimiento y Wi-Fi de alta velocidad, combina confort y tecnología para presentaciones exitosas. Un espacio luminoso y acogedor que favorece la concentración y la colaboración de todos sus participantes.',
+    'seminarsPage.fender.alt1': 'Salón FENDER - Vista en U',
+    'seminarsPage.fender.alt2': 'Salón FENDER - Vista con pantalla',
+    'seminarsPage.fender.alt3': 'Salón FENDER - Configuración clase',
+    'seminarsPage.fender.alt4': 'Salón FENDER - Vista general',
+    
+    // Salon MARSHALL
+    'seminarsPage.marshall.name': 'Salón MARSHALL',
+    'seminarsPage.marshall.description': 'Espacioso y bañado de luz gracias a su patio interior, nuestra sala MARSHALL de 117 m² es ideal para sus asambleas generales y seminarios. Equipada con un sistema audiovisual de última generación, pantalla táctil, retroproyector HD y Wi-Fi de alta velocidad, garantiza presentaciones exitosas. Con acceso directo al patio, sus pausas y conversaciones informales se realizan en un entorno elegante y agradable, combinando profesionalismo y convivialidad.',
+    'seminarsPage.marshall.alt1': 'Salón MARSHALL - Vista general',
+    'seminarsPage.marshall.alt2': 'Salón MARSHALL - Configuración clase',
+    'seminarsPage.marshall.alt3': 'Salón MARSHALL - Vista con pantalla',
+    'seminarsPage.marshall.alt4': 'Salón MARSHALL - Patio',
+    
+    // Espacio Coworking
+    'seminarsPage.coworking.name': 'Espacio Coworking',
+    'seminarsPage.coworking.subtitle': 'Un espacio de coworking inspirador',
+    'seminarsPage.coworking.description': 'Tranquilo, elegante y pensado para la productividad, nuestro espacio de coworking ofrece un entorno ideal para trabajar con total serenidad. Diseño depurado, mobiliario cuidado y ambiente relajante crean una atmósfera propicia para la concentración, solo o en equipo. Reuniones, sesiones de trabajo o momentos de reflexión: todo está ahí para llevar a cabo sus proyectos en un entorno profesional e inspirador.',
+    'seminarsPage.coworking.alt1': 'Espacio Coworking - Vista general',
+    'seminarsPage.coworking.alt2': 'Espacio Coworking - Mesa de trabajo',
+    'seminarsPage.coworking.alt3': 'Espacio Coworking - Banqueta y decoración',
+    'seminarsPage.coworking.alt4': 'Espacio Coworking - Detalles decorativos',
     
     // Events
     'events.badge': 'Eventos y Ofertas',
@@ -2537,6 +2648,43 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsPage.uShape': 'A U',
     'seminarsPage.classroom': 'Classe',
     'seminarsPage.theatre': 'Teatro',
+    'seminarsPage.heroAlt': 'Sala seminari Hotel Inn Design Paris',
+    'seminarsPage.videoIframeTitle': 'Visita delle nostre sale seminari',
+    'seminarsPage.surface': 'Superficie',
+    'seminarsPage.modularSpace': 'Spazio modulabile',
+    
+    // Salone BOSE
+    'seminarsPage.bose.name': 'Salone BOSE',
+    'seminarsPage.bose.description': 'Scopri la nostra nuova sala seminari BOSE, progettata per combinare comfort e alta tecnologia. Schermi interattivi, sistema audio-video all\'avanguardia e connessione wifi ultraveloce: tutto è pronto per le tue riunioni, formazioni o conferenze, in loco o connessi a livello internazionale. Con i suoi 40 m², questo spazio garantisce il successo dei tuoi eventi in un ambiente moderno e performante.',
+    'seminarsPage.bose.alt1': 'Salone BOSE - Vista d\'insieme',
+    'seminarsPage.bose.alt2': 'Salone BOSE - Dettaglio sedili',
+    'seminarsPage.bose.alt3': 'Salone BOSE - Configurazione classe',
+    'seminarsPage.bose.alt4': 'Salone BOSE - Vista con schermo',
+    
+    // Salone FENDER
+    'seminarsPage.fender.name': 'Salone FENDER',
+    'seminarsPage.fender.description': 'Spaziosa e inondata di luce naturale, la nostra sala FENDER di 70 m² è perfetta per le tue riunioni e eventi professionali. Dotata di schermo HD, retroproiettore, sistema video performante e Wi-Fi ad alta velocità, combina comfort e tecnologia per presentazioni di successo. Uno spazio luminoso e accogliente che favorisce la concentrazione e la collaborazione di tutti i partecipanti.',
+    'seminarsPage.fender.alt1': 'Salone FENDER - Vista a U',
+    'seminarsPage.fender.alt2': 'Salone FENDER - Vista con schermo',
+    'seminarsPage.fender.alt3': 'Salone FENDER - Configurazione classe',
+    'seminarsPage.fender.alt4': 'Salone FENDER - Vista d\'insieme',
+    
+    // Salone MARSHALL
+    'seminarsPage.marshall.name': 'Salone MARSHALL',
+    'seminarsPage.marshall.description': 'Spaziosa e inondata di luce grazie al suo patio interno, la nostra sala MARSHALL di 117 m² è ideale per le tue assemblee generali e seminari. Dotata di un sistema audiovisivo all\'avanguardia, schermo touch, retroproiettore HD e Wi-Fi ad alta velocità, garantisce presentazioni di successo. Con accesso diretto al patio, le tue pause e discussioni informali si svolgono in un ambiente elegante e piacevole, combinando professionalità e convivialità.',
+    'seminarsPage.marshall.alt1': 'Salone MARSHALL - Vista d\'insieme',
+    'seminarsPage.marshall.alt2': 'Salone MARSHALL - Configurazione classe',
+    'seminarsPage.marshall.alt3': 'Salone MARSHALL - Vista con schermo',
+    'seminarsPage.marshall.alt4': 'Salone MARSHALL - Patio',
+    
+    // Spazio Coworking
+    'seminarsPage.coworking.name': 'Spazio Coworking',
+    'seminarsPage.coworking.subtitle': 'Uno spazio coworking ispirante',
+    'seminarsPage.coworking.description': 'Tranquillo, elegante e pensato per la produttività, il nostro spazio coworking offre un ambiente ideale per lavorare in totale serenità. Design pulito, arredamento curato e atmosfera rilassante creano un\'atmosfera favorevole alla concentrazione, da soli o in team. Riunioni, sessioni di lavoro o momenti di riflessione: tutto è pronto per portare avanti i tuoi progetti in un ambiente professionale e ispirante.',
+    'seminarsPage.coworking.alt1': 'Spazio Coworking - Vista d\'insieme',
+    'seminarsPage.coworking.alt2': 'Spazio Coworking - Tavolo di lavoro',
+    'seminarsPage.coworking.alt3': 'Spazio Coworking - Panchina e decorazione',
+    'seminarsPage.coworking.alt4': 'Spazio Coworking - Dettagli decorativi',
     
     // Events
     'events.badge': 'Eventi e Offerte',
@@ -3302,6 +3450,43 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsPage.uShape': 'Em U',
     'seminarsPage.classroom': 'Classe',
     'seminarsPage.theatre': 'Teatro',
+    'seminarsPage.heroAlt': 'Sala de seminário Hotel Inn Design Paris',
+    'seminarsPage.videoIframeTitle': 'Visita das nossas salas de seminário',
+    'seminarsPage.surface': 'Superfície',
+    'seminarsPage.modularSpace': 'Espaço modular',
+    
+    // Salão BOSE
+    'seminarsPage.bose.name': 'Salão BOSE',
+    'seminarsPage.bose.description': 'Descubra nossa nova sala de seminário BOSE, projetada para combinar conforto e alta tecnologia. Telas interativas, sistema audiovisual de última geração e conexão wifi ultrarrápida: tudo está pronto para suas reuniões, treinamentos ou conferências, no local ou conectados internacionalmente. Com seus 40 m², este espaço garante o sucesso dos seus eventos em um ambiente moderno e de alto desempenho.',
+    'seminarsPage.bose.alt1': 'Salão BOSE - Vista geral',
+    'seminarsPage.bose.alt2': 'Salão BOSE - Detalhe dos assentos',
+    'seminarsPage.bose.alt3': 'Salão BOSE - Configuração classe',
+    'seminarsPage.bose.alt4': 'Salão BOSE - Vista com tela',
+    
+    // Salão FENDER
+    'seminarsPage.fender.name': 'Salão FENDER',
+    'seminarsPage.fender.description': 'Espaçosa e banhada de luz natural, nossa sala FENDER de 70 m² é perfeita para suas reuniões e eventos profissionais. Equipada com tela HD, retroprojetor, sistema de vídeo de alto desempenho e Wi-Fi de alta velocidade, combina conforto e tecnologia para apresentações bem-sucedidas. Um espaço luminoso e acolhedor que favorece a concentração e a colaboração de todos os participantes.',
+    'seminarsPage.fender.alt1': 'Salão FENDER - Vista em U',
+    'seminarsPage.fender.alt2': 'Salão FENDER - Vista com tela',
+    'seminarsPage.fender.alt3': 'Salão FENDER - Configuração classe',
+    'seminarsPage.fender.alt4': 'Salão FENDER - Vista geral',
+    
+    // Salão MARSHALL
+    'seminarsPage.marshall.name': 'Salão MARSHALL',
+    'seminarsPage.marshall.description': 'Espaçosa e banhada de luz graças ao seu pátio interno, nossa sala MARSHALL de 117 m² é ideal para suas assembleias gerais e seminários. Equipada com sistema audiovisual de última geração, tela touch, retroprojetor HD e Wi-Fi de alta velocidade, garante apresentações bem-sucedidas. Com acesso direto ao pátio, suas pausas e conversas informais acontecem em um ambiente elegante e agradável, combinando profissionalismo e convivialidade.',
+    'seminarsPage.marshall.alt1': 'Salão MARSHALL - Vista geral',
+    'seminarsPage.marshall.alt2': 'Salão MARSHALL - Configuração classe',
+    'seminarsPage.marshall.alt3': 'Salão MARSHALL - Vista com tela',
+    'seminarsPage.marshall.alt4': 'Salão MARSHALL - Pátio',
+    
+    // Espaço Coworking
+    'seminarsPage.coworking.name': 'Espaço Coworking',
+    'seminarsPage.coworking.subtitle': 'Um espaço de coworking inspirador',
+    'seminarsPage.coworking.description': 'Calmo, elegante e pensado para a produtividade, nosso espaço de coworking oferece um ambiente ideal para trabalhar com total serenidade. Design limpo, mobiliário cuidado e atmosfera relaxante criam uma atmosfera propícia à concentração, sozinho ou em equipe. Reuniões, sessões de trabalho ou momentos de reflexão: tudo está pronto para realizar seus projetos em um ambiente profissional e inspirador.',
+    'seminarsPage.coworking.alt1': 'Espaço Coworking - Vista geral',
+    'seminarsPage.coworking.alt2': 'Espaço Coworking - Mesa de trabalho',
+    'seminarsPage.coworking.alt3': 'Espaço Coworking - Banco e decoração',
+    'seminarsPage.coworking.alt4': 'Espaço Coworking - Detalhes decorativos',
     
     // Events
     'events.badge': 'Eventos e Ofertas',

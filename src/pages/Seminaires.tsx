@@ -36,14 +36,14 @@ const Seminaires = () => {
 
   const salonsData = [
     {
-      name: "Salon BOSE",
-      description: "Découvrez notre nouvelle salle de séminaire BOSE, conçue pour allier confort et haute technologie. Écrans interactifs, système audio-vidéo de pointe et connexion wifi ultra-rapide : tout est là pour vos réunions, formations ou conférences, sur place ou en lien avec l'international. Avec ses 40 m², cet espace garantit le succès de vos événements dans un cadre moderne et performant.",
+      name: t('seminarsPage.bose.name'),
+      description: t('seminarsPage.bose.description'),
       surface: "40 m²",
       images: [
-        { src: salonBose1, alt: "Salon BOSE - Vue d'ensemble" },
-        { src: salonBose2, alt: "Salon BOSE - Détail des sièges" },
-        { src: salonBose3, alt: "Salon BOSE - Configuration classe" },
-        { src: salonBose4, alt: "Salon BOSE - Vue avec écran" },
+        { src: salonBose1, alt: t('seminarsPage.bose.alt1') },
+        { src: salonBose2, alt: t('seminarsPage.bose.alt2') },
+        { src: salonBose3, alt: t('seminarsPage.bose.alt3') },
+        { src: salonBose4, alt: t('seminarsPage.bose.alt4') },
       ],
       capacities: [
         { icon: "u-shape" as const, count: 20, label: t('seminarsPage.uShape') },
@@ -52,14 +52,14 @@ const Seminaires = () => {
       ],
     },
     {
-      name: "Salon FENDER",
-      description: "Spacieuse et baignée de lumière naturelle, notre salle FENDER de 70 m² est parfaite pour vos réunions et événements professionnels. Équipée d'un écran HD, d'un rétroprojecteur, d'un système vidéo performant et du Wi-Fi haut débit, elle combine confort et technologie pour des présentations réussies. Un espace lumineux et convivial qui favorise la concentration et la collaboration de tous vos participants.",
+      name: t('seminarsPage.fender.name'),
+      description: t('seminarsPage.fender.description'),
       surface: "70 m²",
       images: [
-        { src: salonFender1, alt: "Salon FENDER - Vue en U" },
-        { src: salonFender2, alt: "Salon FENDER - Vue avec écran" },
-        { src: salonFender3, alt: "Salon FENDER - Configuration classe" },
-        { src: salonFender4, alt: "Salon FENDER - Vue d'ensemble" },
+        { src: salonFender1, alt: t('seminarsPage.fender.alt1') },
+        { src: salonFender2, alt: t('seminarsPage.fender.alt2') },
+        { src: salonFender3, alt: t('seminarsPage.fender.alt3') },
+        { src: salonFender4, alt: t('seminarsPage.fender.alt4') },
       ],
       capacities: [
         { icon: "u-shape" as const, count: 33, label: t('seminarsPage.uShape') },
@@ -68,14 +68,14 @@ const Seminaires = () => {
       ],
     },
     {
-      name: "Salon MARSHALL",
-      description: "Spacieuse et baignée de lumière grâce à son patio intérieur, notre salle MARSHALL de 117 m² est idéale pour vos assemblées générales et séminaires. Équipée d'un système audiovisuel de pointe, écran tactile, rétroprojecteur HD et Wi-Fi haut débit, elle garantit des présentations réussies. Avec un accès direct au patio, vos pauses et discussions informelles se font dans un cadre élégant et agréable, alliant professionnalisme et convivialité.",
+      name: t('seminarsPage.marshall.name'),
+      description: t('seminarsPage.marshall.description'),
       surface: "117 m²",
       images: [
-        { src: salonMarshall1, alt: "Salon MARSHALL - Vue d'ensemble" },
-        { src: salonMarshall2, alt: "Salon MARSHALL - Configuration classe" },
-        { src: salonMarshall3, alt: "Salon MARSHALL - Vue avec écran" },
-        { src: salonMarshall4, alt: "Salon MARSHALL - Patio" },
+        { src: salonMarshall1, alt: t('seminarsPage.marshall.alt1') },
+        { src: salonMarshall2, alt: t('seminarsPage.marshall.alt2') },
+        { src: salonMarshall3, alt: t('seminarsPage.marshall.alt3') },
+        { src: salonMarshall4, alt: t('seminarsPage.marshall.alt4') },
       ],
       capacities: [
         { icon: "u-shape" as const, count: 42, label: t('seminarsPage.uShape') },
@@ -84,15 +84,15 @@ const Seminaires = () => {
       ],
     },
     {
-      name: "Espace Coworking",
-      subtitle: "Un espace de coworking inspirant",
-      description: "Calme, élégant et pensé pour la productivité, notre espace de coworking offre un cadre idéal pour travailler en toute sérénité. Design épuré, mobilier soigné et ambiance apaisante créent une atmosphère propice à la concentration, seul ou en équipe. Réunions, sessions de travail ou moments de réflexion : tout est réuni pour mener vos projets à bien dans un environnement professionnel et inspirant.",
-      surface: "Espace modulable",
+      name: t('seminarsPage.coworking.name'),
+      subtitle: t('seminarsPage.coworking.subtitle'),
+      description: t('seminarsPage.coworking.description'),
+      surface: t('seminarsPage.modularSpace'),
       images: [
-        { src: coworking1, alt: "Espace Coworking - Vue d'ensemble" },
-        { src: coworking2, alt: "Espace Coworking - Table de travail" },
-        { src: coworking3, alt: "Espace Coworking - Banquette et décoration" },
-        { src: coworking4, alt: "Espace Coworking - Détails déco" },
+        { src: coworking1, alt: t('seminarsPage.coworking.alt1') },
+        { src: coworking2, alt: t('seminarsPage.coworking.alt2') },
+        { src: coworking3, alt: t('seminarsPage.coworking.alt3') },
+        { src: coworking4, alt: t('seminarsPage.coworking.alt4') },
       ],
       capacities: [],
     },
@@ -106,7 +106,7 @@ const Seminaires = () => {
       <section className="relative h-[60vh] min-h-[400px]">
         <img 
           src={heroSeminaire} 
-          alt="Salle de séminaire Hôtel Inn Design Paris" 
+          alt={t('seminarsPage.heroAlt')} 
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -137,7 +137,7 @@ const Seminaires = () => {
             <div className="relative aspect-video overflow-hidden shadow-2xl border border-border/30">
               <iframe
                 src="https://www.youtube.com/embed/6VK-aPuljJY"
-                title="Visite de nos salles de séminaires"
+                title={t('seminarsPage.videoIframeTitle')}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
