@@ -18,7 +18,7 @@ export const languages: { code: Language; name: string; flag: string }[] = [
   { code: 'pt', name: 'Português', flag: '🇧🇷' },
 ];
 
-const translations: Record<Language, Record<string, string>> = {
+export const translations: Record<Language, Record<string, string>> = {
   fr: {
     // Navigation
     'nav.hotel': "L'Hôtel",
@@ -35,7 +35,16 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.welcome': 'Bienvenue',
     'hero.name': 'Hôtel Inn Design',
     'hero.location': "Place d'Italie",
-    
+
+    // Easy access (Event pages)
+    'easyAccess.badge': "Accès facile depuis l'Hôtel Inn Paris",
+    'easyAccess.title': 'Idéalement situé',
+    'easyAccess.subtitle': 'Rejoignez {venue} rapidement depuis notre hôtel',
+    'easyAccess.byMetro': 'En métro',
+    'easyAccess.travelTime': 'Temps de trajet',
+    'easyAccess.destinationLabel': "Destination de l'événement",
+    'easyAccess.imageAlt': "Hôtel Inn Paris - Métro Place d'Italie",
+
     // Intro
     'intro.badge': 'Bienvenue',
     'intro.title': 'Un hôtel bien placé pour tout faire !',
@@ -743,7 +752,16 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.welcome': 'Welcome',
     'hero.name': 'Hotel Inn Design',
     'hero.location': "Place d'Italie",
-    
+
+    // Easy access (Event pages)
+    'easyAccess.badge': 'Easy access from Hotel Inn Paris',
+    'easyAccess.title': 'Ideally located',
+    'easyAccess.subtitle': 'Reach {venue} quickly from our hotel',
+    'easyAccess.byMetro': 'By metro',
+    'easyAccess.travelTime': 'Travel time',
+    'easyAccess.destinationLabel': 'Event destination',
+    'easyAccess.imageAlt': "Hotel Inn Paris - Place d'Italie metro",
+
     // Intro
     'intro.badge': 'Welcome',
     'intro.title': 'A well-located hotel for everything!',
@@ -1402,7 +1420,16 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.welcome': 'Bienvenido',
     'hero.name': 'Hotel Inn Design',
     'hero.location': "Place d'Italie",
-    
+
+    // Easy access (Event pages)
+    'easyAccess.badge': 'Acceso fácil desde el Hotel Inn París',
+    'easyAccess.title': 'Ubicación ideal',
+    'easyAccess.subtitle': 'Llegue a {venue} rápidamente desde nuestro hotel',
+    'easyAccess.byMetro': 'En metro',
+    'easyAccess.travelTime': 'Tiempo de trayecto',
+    'easyAccess.destinationLabel': 'Destino del evento',
+    'easyAccess.imageAlt': "Hotel Inn París - Metro Place d'Italie",
+
     // Intro
     'intro.badge': 'Bienvenido',
     'intro.title': '¡Un hotel bien ubicado para todo!',
@@ -2056,7 +2083,16 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.welcome': 'Benvenuto',
     'hero.name': 'Hotel Inn Design',
     'hero.location': "Place d'Italie",
-    
+
+    // Easy access (Event pages)
+    'easyAccess.badge': "Facile accesso dall'Hotel Inn Paris",
+    'easyAccess.title': 'Posizione ideale',
+    'easyAccess.subtitle': 'Raggiungi {venue} rapidamente dal nostro hotel',
+    'easyAccess.byMetro': 'In metro',
+    'easyAccess.travelTime': 'Tempo di percorrenza',
+    'easyAccess.destinationLabel': "Destinazione dell'evento",
+    'easyAccess.imageAlt': "Hotel Inn Paris - Metro Place d'Italie",
+
     // Intro
     'intro.badge': 'Benvenuto',
     'intro.title': 'Un hotel ben posizionato per tutto!',
@@ -2710,7 +2746,16 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.welcome': 'Bem-vindo',
     'hero.name': 'Hotel Inn Design',
     'hero.location': "Place d'Italie",
-    
+
+    // Easy access (Event pages)
+    'easyAccess.badge': 'Acesso fácil do Hotel Inn Paris',
+    'easyAccess.title': 'Localização ideal',
+    'easyAccess.subtitle': 'Chegue a {venue} rapidamente do nosso hotel',
+    'easyAccess.byMetro': 'De metrô',
+    'easyAccess.travelTime': 'Tempo de trajeto',
+    'easyAccess.destinationLabel': 'Destino do evento',
+    'easyAccess.imageAlt': "Hotel Inn Paris - Metrô Place d'Italie",
+
     // Intro
     'intro.badge': 'Bem-vindo',
     'intro.title': 'Um hotel bem localizado para tudo!',
