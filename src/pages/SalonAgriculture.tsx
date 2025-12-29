@@ -63,20 +63,22 @@ const SalonAgriculture = () => {
             <p className="text-green-800 text-lg md:text-xl mb-6 font-medium">{t('agriculture.biggestFarm')}</p>
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-sm border border-green-200">
-                <Calendar className="w-5 h-5 text-green-600" /><span className="text-green-800 font-medium">21 Février - 1 Mars 2026</span>
+                <Calendar className="w-5 h-5 text-green-600" />
+                <span className="text-green-800 font-medium">{t("agriculture.dateRangeDisplay")}</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-sm border border-green-200">
-                <MapPin className="w-5 h-5 text-green-600" /><span className="text-green-800 font-medium">Porte de Versailles</span>
+                <MapPin className="w-5 h-5 text-green-600" />
+                <span className="text-green-800 font-medium">{t("agriculture.venueDisplay")}</span>
               </div>
             </div>
             
             {/* Countdown */}
             <div className="flex flex-wrap gap-3 mb-6">
               {[
-                { value: countdown.days, label: 'Jours' },
-                { value: countdown.hours, label: 'Heures' },
-                { value: countdown.minutes, label: 'Min' },
-                { value: countdown.seconds, label: 'Sec' }
+                { value: countdown.days, label: t("agriculture.countdown.days") },
+                { value: countdown.hours, label: t("agriculture.countdown.hours") },
+                { value: countdown.minutes, label: t("agriculture.countdown.minutes") },
+                { value: countdown.seconds, label: t("agriculture.countdown.seconds") },
               ].map((item, index) => (
                 <div key={index} className="bg-white border-2 border-green-200 rounded-xl px-4 py-2 text-center min-w-[70px] shadow-sm">
                   <div className="text-2xl md:text-3xl font-bold text-green-700">{item.value}</div>
@@ -96,23 +98,23 @@ const SalonAgriculture = () => {
         {/* Exclusive Offers Section - Right after hero */}
         <section className="py-12 bg-gradient-to-br from-green-50 via-amber-50 to-green-50 dark:from-green-950/30 dark:via-amber-950/20 dark:to-green-950/30">
           <div className="container mx-auto px-4">
-            <h2 className="font-display text-3xl md:text-4xl text-center text-foreground mb-8">Nos offres exclusives</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-center text-foreground mb-8">{t("agriculture.exclusiveOffers")}</h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-green-200 dark:border-green-800/50 hover:scale-105 transition-transform duration-300 text-center">
                 <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Car className="w-7 h-7 text-green-600" />
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-2">Parking Sécurisé</h3>
-                <p className="text-muted-foreground text-sm mb-4">Place de parking privée à 50m de l'hôtel</p>
-                <div className="inline-block bg-green-600 text-white font-bold px-4 py-2 rounded-full">15€/nuit</div>
+                <h3 className="font-display text-xl text-foreground mb-2">{t("agriculture.offers.parking.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-4">{t("agriculture.offers.parking.desc")}</p>
+                <div className="inline-block bg-green-600 text-white font-bold px-4 py-2 rounded-full">{t("agriculture.offers.parking.price")}</div>
               </div>
               <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-amber-200 dark:border-amber-800/50 hover:scale-105 transition-transform duration-300 text-center">
                 <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Car className="w-7 h-7 text-amber-600" />
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-2">Taxi Partenaire</h3>
-                <p className="text-muted-foreground text-sm mb-4">Réservation taxi vers le salon avec tarif préférentiel</p>
-                <div className="inline-block bg-amber-600 text-white font-bold px-4 py-2 rounded-full">-10%</div>
+                <h3 className="font-display text-xl text-foreground mb-2">{t("agriculture.offers.taxi.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-4">{t("agriculture.offers.taxi.desc")}</p>
+                <div className="inline-block bg-amber-600 text-white font-bold px-4 py-2 rounded-full">{t("agriculture.offers.taxi.discount")}</div>
               </div>
             </div>
           </div>
@@ -120,10 +122,10 @@ const SalonAgriculture = () => {
 
         {/* Easy Access Section */}
         <EasyAccessSection 
-          venue="Porte de Versailles"
-          travelTime="~25 min"
-          metroLine="Ligne 12"
-          metroRoute="Place d'Italie → Porte de Versailles (via Ligne 7 puis 12)"
+          venue={t("agriculture.venueDisplay")}
+          travelTime={t("agriculture.travelTimeShort")}
+          metroLineKey="easyAccess.lines.line12"
+          metroRouteKey="easyAccess.routes.porteDeVersailles"
           accentColor="from-green-600 via-green-700 to-amber-600"
         />
 
@@ -250,9 +252,9 @@ const SalonAgriculture = () => {
 
         {/* Hotel Promo Section - Compact */}
         <EventHotelPromo 
-          eventName="Salon Agriculture" 
+          eventName={t("agriculture.eventName")}
           accentColor="from-green-600 via-green-700 to-amber-600"
-          urgencyMessage="Offre Salon de l'Agriculture"
+          urgencyMessage={t("agriculture.urgencyMessage")}
           compact
         />
 
