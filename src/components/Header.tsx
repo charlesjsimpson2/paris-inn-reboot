@@ -1,5 +1,5 @@
 import { useState, useEffect, memo, useMemo } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -38,6 +38,48 @@ export const Header = memo(() => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Top contact bar */}
+      <div className={`transition-all duration-300 ${
+        isScrolled ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
+      } ${isHeroPage || isScrolled ? "bg-primary text-primary-foreground" : "bg-black/40 backdrop-blur-sm text-white"}`}>
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 py-1.5 text-[10px] sm:text-xs">
+            <Link 
+              to="/contact" 
+              className="flex items-center gap-1.5 hover:text-gold transition-colors font-medium"
+            >
+              <Mail className="w-3 h-3" />
+              <span className="hidden sm:inline">{t('nav.contact')}</span>
+            </Link>
+            <span className="hidden md:inline text-white/40">|</span>
+            <Link 
+              to="/localisation" 
+              className="flex items-center gap-1.5 hover:text-gold transition-colors"
+            >
+              <MapPin className="w-3 h-3" />
+              <span className="hidden lg:inline">178 boulevard Vincent Auriol – 75013 Paris</span>
+              <span className="lg:hidden hidden sm:inline">Paris 13ème</span>
+            </Link>
+            <span className="hidden md:inline text-white/40">|</span>
+            <a 
+              href="tel:+33144240101" 
+              className="flex items-center gap-1.5 hover:text-gold transition-colors"
+            >
+              <Phone className="w-3 h-3" />
+              <span>+33 (0)1 44 24 01 01</span>
+            </a>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <a 
+              href="mailto:hid.paris13@gmail.com" 
+              className="hidden sm:flex items-center gap-1.5 hover:text-gold transition-colors"
+            >
+              <Mail className="w-3 h-3" />
+              <span>hid.paris13@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Main navigation */}
       <div
         className={`transition-all duration-500 ${
