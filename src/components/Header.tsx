@@ -43,7 +43,7 @@ export const Header = memo(() => {
         isScrolled ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
       } bg-primary`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-2 text-xs text-primary-foreground">
+          <div className="flex items-center justify-between py-1 text-xs text-primary-foreground">
             {/* Left - Email */}
             <a 
               href="mailto:hid.paris13@gmail.com" 
