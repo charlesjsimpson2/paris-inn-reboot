@@ -7,7 +7,18 @@ import { useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Map language to Tally form URLs
+  const tallyFormUrls: Record<string, string> = {
+    fr: 'https://tally.so/embed/vGraVd',
+    en: 'https://tally.so/embed/b59bO0',
+    es: 'https://tally.so/embed/LZzRXz',
+    it: 'https://tally.so/embed/pbd8Gy',
+    pt: 'https://tally.so/embed/jab1WY'
+  };
+
+  const currentFormUrl = tallyFormUrls[language] || tallyFormUrls.fr;
 
   useEffect(() => {
     // Load Tally embed script
@@ -44,13 +55,14 @@ const Contact = () => {
               {/* Tally Form Embed - title is inside the form */}
               <div className="rounded-lg overflow-hidden">
                 <iframe 
-                  data-tally-src="https://tally.so/embed/vGraVd?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+                  data-tally-src={`${currentFormUrl}?alignLeft=1&transparentBackground=1&dynamicHeight=1`}
                   loading="lazy" 
                   width="100%" 
                   height="600"
                   frameBorder="0" 
                   title={t('contactPage.formTitle')}
                   className="w-full"
+                  key={language}
                 />
               </div>
             </div>
