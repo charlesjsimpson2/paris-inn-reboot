@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ContactBubble } from "@/components/ContactBubble";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { logEventI18nAudit } from "@/lib/i18nAudit";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -36,41 +37,47 @@ const PageLoader = () => (
   </div>
 );
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/nos-chambres" element={<NosChambres />} />
-              <Route path="/seminaires" element={<Seminaires />} />
-              <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
-              <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
-              <Route path="/actualites" element={<Actualites />} />
-              <Route path="/enfoires-2026" element={<Enfoires2026 />} />
-              <Route path="/tournoi-6-nations" element={<Tournoi6Nations />} />
-              <Route path="/salon-agriculture" element={<SalonAgriculture />} />
-              <Route path="/mika-concert" element={<MikaConcert />} />
-              <Route path="/clara-luciani-concert" element={<ClaraLucianiConcert />} />
-              <Route path="/semi-marathon-paris" element={<SemiMarathonParis />} />
-              <Route path="/wu-tang-concert" element={<WuTangConcert />} />
-              <Route path="/france-angleterre" element={<FranceAngleterre />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/localisation" element={<Localisation />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-          <ContactBubble />
-        </BrowserRouter>
-      </TooltipProvider>
-    </LanguageProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    logEventI18nAudit();
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/nos-chambres" element={<NosChambres />} />
+                <Route path="/seminaires" element={<Seminaires />} />
+                <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
+                <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
+                <Route path="/actualites" element={<Actualites />} />
+                <Route path="/enfoires-2026" element={<Enfoires2026 />} />
+                <Route path="/tournoi-6-nations" element={<Tournoi6Nations />} />
+                <Route path="/salon-agriculture" element={<SalonAgriculture />} />
+                <Route path="/mika-concert" element={<MikaConcert />} />
+                <Route path="/clara-luciani-concert" element={<ClaraLucianiConcert />} />
+                <Route path="/semi-marathon-paris" element={<SemiMarathonParis />} />
+                <Route path="/wu-tang-concert" element={<WuTangConcert />} />
+                <Route path="/france-angleterre" element={<FranceAngleterre />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/localisation" element={<Localisation />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+            <ContactBubble />
+          </BrowserRouter>
+        </TooltipProvider>
+      </LanguageProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
