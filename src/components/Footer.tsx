@@ -106,7 +106,7 @@ export const Footer = memo(() => {
         {/* Bottom bar */}
         <div className="border-t border-border/50 mt-8 sm:mt-10 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-muted-foreground text-[10px] sm:text-xs text-center sm:text-left">
-            © 2024 Hôtel Inn Design Paris. {t('footer.rights')}
+            © 2025 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
           <div className="flex gap-4 text-[10px] sm:text-xs">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-2">
