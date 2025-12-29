@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { useState, useEffect, memo, useMemo } from "react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -16,13 +16,13 @@ const getNavItems = (t: (key: string) => string) => [
   { name: t('nav.contact'), href: "/contact" },
 ];
 
-export const Header = () => {
+export const Header = memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { t } = useLanguage();
   
-  const navItems = getNavItems(t);
+  const navItems = useMemo(() => getNavItems(t), [t]);
   
   // Check if we're on homepage or a page with hero image
   const isHomePage = location.pathname === "/";
@@ -164,4 +164,6 @@ export const Header = () => {
       )}
     </header>
   );
-};
+});
+
+Header.displayName = 'Header';

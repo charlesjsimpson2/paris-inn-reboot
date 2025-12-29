@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en' | 'es' | 'it' | 'pt';
 
@@ -3888,12 +3888,20 @@ export const translations: Record<Language, Record<string, string>> = {
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('fr');
 
-  const t = (key: string): string => {
+  // Memoize the translation function to prevent unnecessary re-renders
+  const t = useCallback((key: string): string => {
     return translations[language]?.[key] ?? translations.fr?.[key] ?? key;
-  };
+  }, [language]);
+
+  // Memoize the context value to prevent unnecessary re-renders
+  const contextValue = useMemo(() => ({
+    language,
+    setLanguage,
+    t
+  }), [language, t]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );

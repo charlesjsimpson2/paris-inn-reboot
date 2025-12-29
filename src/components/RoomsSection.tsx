@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -7,11 +7,11 @@ import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
 import chambre4 from "@/assets/gallery/chambre-4.jpg";
 
-export const RoomsSection = () => {
+export const RoomsSection = memo(() => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useLanguage();
 
-  const rooms = [
+  const rooms = useMemo(() => [
     {
       name: t('rooms.double'),
       description: t('rooms.double.desc'),
@@ -36,19 +36,19 @@ export const RoomsSection = () => {
       capacity: "4 personnes",
       image: chambre4,
     },
-  ];
+  ], [t]);
 
   // On desktop, we show 2 cards at a time, so max index is ceil(length/2) - 1
   const maxIndex = Math.ceil(rooms.length / 2) - 1;
 
-  const equipment = [
+  const equipment = useMemo(() => [
     { icon: Bath, label: t('rooms.bathroom') },
     { icon: Tv, label: t('rooms.tv') },
     { icon: Briefcase, label: t('rooms.desk') },
     { icon: Wifi, label: t('rooms.wifi') },
     { icon: CupSoda, label: t('rooms.courtesy') },
     { icon: Snowflake, label: t('rooms.ac') },
-  ];
+  ], [t]);
 
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
@@ -207,4 +207,6 @@ export const RoomsSection = () => {
       </div>
     </section>
   );
-};
+});
+
+RoomsSection.displayName = 'RoomsSection';

@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { MessageCircle } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export const ContactBubble = () => {
+export const ContactBubble = memo(() => {
   const location = useLocation();
   const { t } = useLanguage();
   
@@ -20,4 +21,6 @@ export const ContactBubble = () => {
       <span className="font-medium text-xs sm:text-sm md:text-base">{t('contact.bubble')}</span>
     </Link>
   );
-};
+});
+
+ContactBubble.displayName = 'ContactBubble';
