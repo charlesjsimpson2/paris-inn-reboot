@@ -7,6 +7,10 @@ interface EasyAccessSectionProps {
   travelTime: string;
   metroLine?: string;
   metroRoute?: string;
+  /** i18n key, e.g. "easyAccess.routes.accorArena" */
+  metroRouteKey?: string;
+  /** i18n key, e.g. "easyAccess.lines.line14" */
+  metroLineKey?: string;
   accentColor?: string;
 }
 
@@ -15,13 +19,19 @@ export const EasyAccessSection = ({
   travelTime,
   metroLine = "Ligne 7",
   metroRoute = "Place d'Italie → destination",
+  metroRouteKey,
+  metroLineKey,
   accentColor = "from-primary via-primary/80 to-primary",
 }: EasyAccessSectionProps) => {
   const { t } = useLanguage();
 
-  const subtitle = t("easyAccess.subtitle").includes("{venue}")
-    ? t("easyAccess.subtitle").replace("{venue}", venue)
-    : `${t("easyAccess.subtitle")} ${venue}`;
+  const subtitleTemplate = t("easyAccess.subtitle");
+  const subtitle = subtitleTemplate.includes("{venue}")
+    ? subtitleTemplate.replace("{venue}", venue)
+    : `${subtitleTemplate} ${venue}`;
+
+  const metroLineLabel = metroLineKey ? t(metroLineKey) : metroLine;
+  const metroRouteLabel = metroRouteKey ? t(metroRouteKey) : metroRoute;
 
   return (
     <section className={`py-12 bg-gradient-to-r ${accentColor} text-white`}>
@@ -54,10 +64,10 @@ export const EasyAccessSection = ({
                   </div>
                   <div>
                     <h3 className="font-display text-xl">{t("easyAccess.byMetro")}</h3>
-                    <p className="text-white/80 text-sm">{metroLine}</p>
+                    <p className="text-white/80 text-sm">{metroLineLabel}</p>
                   </div>
                 </div>
-                <p className="text-white/90 leading-relaxed">{metroRoute}</p>
+                <p className="text-white/90 leading-relaxed">{metroRouteLabel}</p>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl">

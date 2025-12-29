@@ -65,7 +65,13 @@ export function auditEventI18nKeys(): AuditResult {
 }
 
 export function logEventI18nAudit() {
-  if (!import.meta.env.DEV) return;
+  const enabled =
+    import.meta.env.DEV ||
+    (typeof window !== "undefined" &&
+      (new URLSearchParams(window.location.search).get("i18nAudit") === "1" ||
+        window.localStorage?.getItem("i18nAudit") === "1"));
+
+  if (!enabled) return;
 
   const { usedKeys, missingByLanguage } = auditEventI18nKeys();
 
