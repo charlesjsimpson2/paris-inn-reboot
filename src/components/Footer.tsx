@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
-export const Footer = () => {
+export const Footer = memo(() => {
   const { t } = useLanguage();
 
   return (
@@ -119,4 +120,6 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
