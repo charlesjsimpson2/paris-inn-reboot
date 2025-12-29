@@ -30,7 +30,7 @@ const capacityIcons = {
   "theatre": pictoTheatre,
 };
 
-const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) => {
+const ImageCarousel = ({ images, t }: { images: { src: string; alt: string }[], t: (key: string) => string }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-play slideshow
@@ -63,7 +63,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
         type="button"
         onClick={goToPrev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
-        aria-label="Image précédente"
+        aria-label={t('seminarsPage.prevImage')}
       >
         <ChevronLeft className="w-5 h-5 text-charcoal" />
       </button>
@@ -71,7 +71,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
         type="button"
         onClick={goToNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
-        aria-label="Image suivante"
+        aria-label={t('seminarsPage.nextImage')}
       >
         <ChevronRight className="w-5 h-5 text-charcoal" />
       </button>
@@ -87,7 +87,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
                 ? "bg-burgundy scale-125"
                 : "bg-white/80 hover:bg-white"
             }`}
-            aria-label={`Aller à l'image ${index + 1}`}
+            aria-label={`${t('seminarsPage.goToImage')} ${index + 1}`}
           />
         ))}
       </div>
@@ -102,7 +102,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
     <div className="relative min-h-[500px] lg:min-h-[550px]">
       {/* Image - Full width on one side */}
       <div className={`absolute inset-y-0 ${reverse ? 'right-0' : 'left-0'} w-full lg:w-[55%]`}>
-        <ImageCarousel images={salon.images} />
+        <ImageCarousel images={salon.images} t={t} />
       </div>
 
       {/* Content Card - Overlapping */}
@@ -124,7 +124,7 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
             
             {salon.capacities.length > 0 && (
               <p className="text-muted-foreground text-sm mb-5">
-                Jusqu'à <span className="text-burgundy font-semibold">{Math.max(...salon.capacities.map(c => c.count))}</span> personnes
+                {t('seminarsPage.upTo')} <span className="text-burgundy font-semibold">{Math.max(...salon.capacities.map(c => c.count))}</span> {t('seminarsPage.people')}
               </p>
             )}
 

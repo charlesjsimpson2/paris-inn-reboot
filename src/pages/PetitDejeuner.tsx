@@ -27,12 +27,12 @@ const PetitDejeuner = () => {
   ];
 
   const galleryImages = [
-    { src: tablePetitDejeuner, alt: "Petit déjeuner complet" },
-    { src: buffet1, alt: "Buffet petit déjeuner" },
-    { src: salle1, alt: "Salle petit déjeuner" },
-    { src: salle2, alt: "Espace petit déjeuner" },
-    { src: balcon, alt: "Petit déjeuner sur balcon" },
-    { src: petitDejeuner, alt: "Buffet varié" },
+    { src: tablePetitDejeuner, alt: t('breakfastPage.gallery.complete') },
+    { src: buffet1, alt: t('breakfastPage.gallery.buffet') },
+    { src: salle1, alt: t('breakfastPage.gallery.room1') },
+    { src: salle2, alt: t('breakfastPage.gallery.room2') },
+    { src: balcon, alt: t('breakfastPage.gallery.balcony') },
+    { src: petitDejeuner, alt: t('breakfastPage.gallery.variety') },
   ];
 
   // Intersection Observer for scroll animations
@@ -78,7 +78,7 @@ const PetitDejeuner = () => {
       <section className="relative h-[60vh] min-h-[400px]">
         <img 
           src={heroPetitDejeuner} 
-          alt="Petit déjeuner à l'hôtel" 
+          alt={t('breakfastPage.heroAlt')} 
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -122,11 +122,11 @@ const PetitDejeuner = () => {
                 </div>
                 <div className="space-y-3 ml-13">
                   <div className="flex justify-between items-center py-2 border-b border-border/30">
-                    <span className="text-muted-foreground">Lundi – Vendredi</span>
+                    <span className="text-muted-foreground">{t('breakfastPage.mondayFriday')}</span>
                     <span className="font-medium text-foreground">06:30 – 10:00</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-border/30">
-                    <span className="text-muted-foreground">Samedi – Dimanche</span>
+                    <span className="text-muted-foreground">{t('breakfastPage.saturdaySunday')}</span>
                     <span className="font-medium text-foreground">07:00 – 10:30</span>
                   </div>
                 </div>
@@ -148,8 +148,8 @@ const PetitDejeuner = () => {
                     <span className="text-primary font-bold text-lg">🎁</span>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Enfants</p>
-                    <p className="font-medium text-primary">Gratuit – de 12 ans</p>
+                    <p className="text-sm text-muted-foreground">{t('breakfastPage.children')}</p>
+                    <p className="font-medium text-primary">{t('breakfastPage.childrenFree')}</p>
                   </div>
                 </div>
               </div>
@@ -175,7 +175,7 @@ const PetitDejeuner = () => {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src={buffet1}
-                  alt="Petit déjeuner buffet à l'hôtel"
+                  alt={t('breakfastPage.buffetAlt')}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -235,7 +235,7 @@ const PetitDejeuner = () => {
           <button
             onClick={closeLightbox}
             className="absolute top-4 right-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
-            aria-label="Fermer"
+            aria-label={t('breakfastPage.close')}
           >
             <X className="w-8 h-8" />
           </button>
@@ -243,7 +243,7 @@ const PetitDejeuner = () => {
           <button
             onClick={prevImage}
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-3 hover:bg-white/10 rounded-full transition-colors"
-            aria-label="Image précédente"
+            aria-label={t('breakfastPage.prevImage')}
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
@@ -257,7 +257,7 @@ const PetitDejeuner = () => {
           <button
             onClick={nextImage}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-3 hover:bg-white/10 rounded-full transition-colors"
-            aria-label="Image suivante"
+            aria-label={t('breakfastPage.nextImage')}
           >
             <ChevronRight className="w-8 h-8" />
           </button>
