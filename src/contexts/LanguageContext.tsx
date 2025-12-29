@@ -586,6 +586,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Contactez-nous',
+    'contact.title': 'Nous contacter',
     
     // Contact Page
     'contactPage.heroAlt': "Contactez-nous - Hôtel Inn Design Paris",
@@ -1179,6 +1180,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Contact us',
+    'contact.title': 'Contact us',
     
     // Contact Page
     'contactPage.heroAlt': "Contact us - Hôtel Inn Design Paris",
@@ -2000,6 +2002,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Contáctenos',
+    'contact.title': 'Contáctenos',
     
     // Contact Page
     'contactPage.heroAlt': "Contáctenos - Hôtel Inn Design Paris",
@@ -2822,6 +2825,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Contattaci',
+    'contact.title': 'Contattaci',
     
     // Contact Page
     'contactPage.heroAlt': "Contattaci - Hôtel Inn Design Paris",
@@ -3644,6 +3648,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Bubble
     'contact.bubble': 'Fale conosco',
+    'contact.title': 'Fale conosco',
     
     // Contact Page
     'contactPage.heroAlt': "Fale conosco - Hôtel Inn Design Paris",

@@ -48,7 +48,7 @@ const Tournoi6Nations = () => {
     { name: "Montmartre & Sacré-Cœur", time: "25 min", image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=400&h=300&fit=crop" },
     { name: "Champs-Élysées", time: "30 min", image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=300&fit=crop" },
     { name: "Opéra Garnier", time: "20 min", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=400&h=300&fit=crop" },
-    { name: "Tour Eiffel", time: "26 min", image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce65f4?w=400&h=300&fit=crop" },
+    { name: "Tour Eiffel", time: "26 min", image: "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=400&h=300&fit=crop" },
   ];
 
   return (
