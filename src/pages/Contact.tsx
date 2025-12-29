@@ -1,13 +1,14 @@
 // Contact page
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { t, language } = useLanguage();
+  const [isLoading, setIsLoading] = useState(true);
 
   // Map language to Tally form URLs
   const tallyFormUrls: Record<string, string> = {
@@ -21,16 +22,31 @@ const Contact = () => {
   const currentFormUrl = tallyFormUrls[language] || tallyFormUrls.fr;
 
   useEffect(() => {
+    setIsLoading(true);
+    
+    // Remove existing Tally script if present
+    const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
     // Load Tally embed script
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
     script.async = true;
+    script.onload = () => {
+      // Give Tally time to initialize
+      setTimeout(() => setIsLoading(false), 500);
+    };
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      const scriptToRemove = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
     };
-  }, []);
+  }, [language]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -53,7 +69,12 @@ const Contact = () => {
             {/* Left: Form */}
             <div>
               {/* Tally Form Embed - title is inside the form */}
-              <div className="rounded-lg overflow-hidden">
+              <div className="rounded-lg overflow-hidden relative min-h-[600px]">
+                {isLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/50">
+                    <Loader2 className="w-8 h-8 text-burgundy animate-spin" />
+                  </div>
+                )}
                 <iframe 
                   data-tally-src={`${currentFormUrl}?alignLeft=1&transparentBackground=1&dynamicHeight=1`}
                   loading="lazy" 
