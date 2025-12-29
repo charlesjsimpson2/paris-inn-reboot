@@ -169,23 +169,38 @@ export const Header = memo(() => {
             ))}
           </div>
 
-          {/* Contact Info */}
-          <div className="mt-12 pt-8 border-t border-border">
-            <div className="flex flex-col gap-4 text-sm text-muted-foreground">
+          {/* Contact Info - Styled */}
+          <div className="mt-8 pt-6 border-t border-border">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-medium">{t('footer.contact')}</p>
+            <div className="flex flex-col gap-3">
               <a
                 href="tel:+33144240101"
-                className="flex items-center gap-3 hover:text-primary transition-colors"
+                className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors group"
               >
-                <Phone className="w-4 h-4" />
-                +33 (0)1 44 24 01 01
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm text-foreground">+33 (0)1 44 24 01 01</span>
               </a>
               <a
                 href="mailto:hid.paris13@gmail.com"
-                className="flex items-center gap-3 hover:text-primary transition-colors"
+                className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors group"
               >
-                <Mail className="w-4 h-4" />
-                hid.paris13@gmail.com
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm text-foreground">hid.paris13@gmail.com</span>
               </a>
+              <Link
+                to="/localisation"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors group"
+              >
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm text-foreground">178 bd Vincent Auriol, 75013</span>
+              </Link>
             </div>
           </div>
         </div>
