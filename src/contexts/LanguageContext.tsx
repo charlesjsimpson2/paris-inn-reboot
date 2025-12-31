@@ -811,6 +811,28 @@ export const translations: Record<Language, Record<string, string>> = {
     'clara.bookNow': 'Réserver maintenant',
     'actualites.clara.date': '18 & 19 février 2026',
     
+    // Guns N' Roses Concert
+    'gunsnroses.subtitle': 'Le groupe légendaire de hard rock américain',
+    'mika.july': 'juillet',
+    
+    // Scorpions Concert
+    'scorpions.subtitle': '60 ans de carrière - Groupe légendaire',
+    
+    // Meryl Concert
+    'meryl.subtitle': 'Premier concert à l\'Accor Arena',
+    'mika.october': 'octobre',
+    
+    // Kery James Concert
+    'keryjames.subtitle': 'Retour à Bercy après 7 ans',
+    'mika.november': 'novembre',
+    
+    // Orelsan Concert
+    'orelsan.subtitle': 'Le rappeur normand à l\'Accor Arena',
+    'mika.december': 'décembre',
+    
+    // Indochine Concert
+    'indochine.subtitle': 'Arena Tour - 4 dates exceptionnelles',
+
     // Related Events Component
     'relatedEvents.title': 'Autres événements à venir',
     'relatedEvents.subtitle': 'Découvrez nos offres pour les prochains événements parisiens',
@@ -1418,6 +1440,29 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.careerYears': 'Career years',
 
     // Related Events Component
+    
+    // Guns N' Roses Concert
+    'gunsnroses.subtitle': 'The legendary American hard rock band',
+    'mika.july': 'July',
+    
+    // Scorpions Concert
+    'scorpions.subtitle': '60 years of career - Legendary band',
+    
+    // Meryl Concert
+    'meryl.subtitle': 'First concert at Accor Arena',
+    'mika.october': 'October',
+    
+    // Kery James Concert
+    'keryjames.subtitle': 'Back at Bercy after 7 years',
+    'mika.november': 'November',
+    
+    // Orelsan Concert
+    'orelsan.subtitle': 'The Norman rapper at Accor Arena',
+    'mika.december': 'December',
+    
+    // Indochine Concert
+    'indochine.subtitle': 'Arena Tour - 4 exceptional dates',
+
     'relatedEvents.title': 'Other upcoming events',
     'relatedEvents.subtitle': 'Discover our offers for upcoming Parisian events',
     'relatedEvents.viewAll': 'View all events',
@@ -2247,6 +2292,29 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.careerYears': 'Años de carrera',
 
     // Related Events Component
+    
+    // Guns N' Roses Concert
+    'gunsnroses.subtitle': 'El legendario grupo de hard rock americano',
+    'mika.july': 'julio',
+    
+    // Scorpions Concert
+    'scorpions.subtitle': '60 años de carrera - Grupo legendario',
+    
+    // Meryl Concert
+    'meryl.subtitle': 'Primer concierto en Accor Arena',
+    'mika.october': 'octubre',
+    
+    // Kery James Concert
+    'keryjames.subtitle': 'Regreso a Bercy después de 7 años',
+    'mika.november': 'noviembre',
+    
+    // Orelsan Concert
+    'orelsan.subtitle': 'El rapero normando en Accor Arena',
+    'mika.december': 'diciembre',
+    
+    // Indochine Concert
+    'indochine.subtitle': 'Arena Tour - 4 fechas excepcionales',
+
     'relatedEvents.title': 'Otros eventos próximos',
     'relatedEvents.subtitle': 'Descubra nuestras ofertas para los próximos eventos parisinos',
     'relatedEvents.viewAll': 'Ver todos los eventos',
@@ -3090,6 +3158,29 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.careerYears': 'Anni di carriera',
 
     // Related Events Component
+    
+    // Guns N' Roses Concert
+    'gunsnroses.subtitle': 'Il leggendario gruppo hard rock americano',
+    'mika.july': 'luglio',
+    
+    // Scorpions Concert
+    'scorpions.subtitle': '60 anni di carriera - Gruppo leggendario',
+    
+    // Meryl Concert
+    'meryl.subtitle': 'Primo concerto all\'Accor Arena',
+    'mika.october': 'ottobre',
+    
+    // Kery James Concert
+    'keryjames.subtitle': 'Ritorno a Bercy dopo 7 anni',
+    'mika.november': 'novembre',
+    
+    // Orelsan Concert
+    'orelsan.subtitle': 'Il rapper normanno all\'Accor Arena',
+    'mika.december': 'dicembre',
+    
+    // Indochine Concert
+    'indochine.subtitle': 'Arena Tour - 4 date eccezionali',
+
     'relatedEvents.title': 'Altri eventi in arrivo',
     'relatedEvents.subtitle': 'Scopri le nostre offerte per i prossimi eventi parigini',
     'relatedEvents.viewAll': 'Vedi tutti gli eventi',
@@ -3933,6 +4024,29 @@ export const translations: Record<Language, Record<string, string>> = {
     'wutang.careerYears': 'Anos de carreira',
 
     // Related Events Component
+    
+    // Guns N' Roses Concert
+    'gunsnroses.subtitle': 'O lendário grupo de hard rock americano',
+    'mika.july': 'julho',
+    
+    // Scorpions Concert
+    'scorpions.subtitle': '60 anos de carreira - Grupo lendário',
+    
+    // Meryl Concert
+    'meryl.subtitle': 'Primeiro concerto no Accor Arena',
+    'mika.october': 'outubro',
+    
+    // Kery James Concert
+    'keryjames.subtitle': 'Retorno a Bercy após 7 anos',
+    'mika.november': 'novembro',
+    
+    // Orelsan Concert
+    'orelsan.subtitle': 'O rapper normando no Accor Arena',
+    'mika.december': 'dezembro',
+    
+    // Indochine Concert
+    'indochine.subtitle': 'Arena Tour - 4 datas excepcionais',
+
     'relatedEvents.title': 'Outros eventos em breve',
     'relatedEvents.subtitle': 'Descubra nossas ofertas para os próximos eventos parisienses',
     'relatedEvents.viewAll': 'Ver todos os eventos',
