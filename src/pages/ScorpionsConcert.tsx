@@ -7,7 +7,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
-import heroImage from "@/assets/scorpions-hero-gen.jpg";
+import heroImage from "@/assets/scorpions-tour-2026.jpg";
+import bandImage from "@/assets/scorpions-band.webp";
 
 const ScorpionsConcert = () => {
   const { t } = useLanguage();
@@ -237,11 +238,21 @@ const ScorpionsConcert = () => {
                 <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('scorpions.uniqueShow')}</h2>
               </div>
               
-              <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-yellow-200 dark:border-yellow-800/50 overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-red-400/20 rounded-full blur-3xl" />
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
-                  <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('scorpions.showIntro') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('scorpions.showDesc') }} />
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-yellow-500 via-red-500 to-yellow-600 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+                  <img 
+                    src={bandImage} 
+                    alt="Scorpions band 2026" 
+                    className="relative w-full rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 border-2 border-yellow-200 dark:border-yellow-800/50 overflow-hidden relative">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-red-400/20 rounded-full blur-3xl" />
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
+                    <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('scorpions.showIntro') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('scorpions.showDesc') }} />
+                  </div>
                 </div>
               </div>
             </div>
