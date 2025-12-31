@@ -9,7 +9,8 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import japanExpoHero from "@/assets/japan-expo-hero.jpg";
+import japanExpoEvent from "@/assets/japan-expo-event.webp";
 import { useState, useEffect } from "react";
 
 const JapanExpo = () => {
@@ -38,7 +39,7 @@ const JapanExpo = () => {
       <Header />
       <main>
         <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="Japan Expo" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src={japanExpoHero} alt="Japan Expo 2026" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -131,7 +132,7 @@ const JapanExpo = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('japanExpo.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={heroSeminaire} alt="Japan Expo" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={japanExpoEvent} alt="Japan Expo - Ambiance du salon" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
