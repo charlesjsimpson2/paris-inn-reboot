@@ -45,7 +45,7 @@ const TexWorld = () => {
                 <img 
                   src={texworldHero} 
                   alt="Texworld Paris 2026" 
-                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover"
+                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover aspect-[4/3]"
                 />
               </div>
               
