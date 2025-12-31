@@ -23,6 +23,8 @@ import indochineHero from "@/assets/indochine-hero-gen.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
 import foireParisHero from "@/assets/foire-paris-hero.jpg";
 import santeExpoHero from "@/assets/sante-expo-hero.jpg";
+import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
+import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -212,9 +214,9 @@ const Actualites = () => {
       location: t('euroPCR.venue'),
       category: t('actualites.congres'),
       link: "/evenements/euro-pcr",
-      image: heroSeminaire,
+      image: euroPcrHero,
       icon: HeartPulse,
-      badgeColor: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
+      badgeColor: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
     },
     {
       id: "eurosatory",
@@ -226,9 +228,9 @@ const Actualites = () => {
       location: t('eurosatory.venue'),
       category: t('actualites.salon'),
       link: "/evenements/eurosatory",
-      image: heroSeminaire,
+      image: eurosatoryHero,
       icon: Shield,
-      badgeColor: "bg-slate-100 dark:bg-slate-900/30 text-slate-600 dark:text-slate-400",
+      badgeColor: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
     },
     {
       id: "japan-expo",
