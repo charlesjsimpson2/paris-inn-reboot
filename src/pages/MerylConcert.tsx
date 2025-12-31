@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History } from "lucide-react";
+import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History, Hotel } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
@@ -34,70 +35,59 @@ const MerylConcert = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">
-          <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="Meryl Concert Accor Arena 2026" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
-          </div>
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl animate-float" />
-            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl animate-float animation-delay-400" />
-          </div>
-          
+        {/* Hero Section with Sidebar Info */}
+        <section className="relative py-24 overflow-hidden">
+          <img src={heroImage} alt="Meryl Concert Accor Arena 2026" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="animate-fade-up">
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full mb-6 border border-white/30">
-                  <Mic className="w-5 h-5 text-pink-300 animate-bounce-subtle" />
-                  <span className="text-white uppercase tracking-widest text-sm font-bold">{t('meryl.tour')}</span>
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              {/* Texte à gauche */}
+              <div className="text-left">
+                <div className="inline-flex items-center gap-2 bg-pink-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
+                  <Mic className="w-4 h-4" />
+                  <span className="font-medium text-sm uppercase tracking-wider">{t('meryl.tour')}</span>
                 </div>
+                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">
+                  <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent">
+                    {t('meryl.title')}
+                  </span>
+                </h1>
+                <p className="text-white/90 text-lg md:text-xl">{t('meryl.subtitle')}</p>
               </div>
-              
-              <h1 className="font-display text-5xl md:text-7xl text-white mb-4 drop-shadow-2xl animate-fade-up animation-delay-200">
-                <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent">
-                  {t('meryl.title')}
-                </span>
-              </h1>
-              
-              <p className="text-2xl md:text-3xl text-pink-200 font-display mb-8 animate-fade-up animation-delay-400">
-                {t('meryl.subtitle')}
-              </p>
-              
-              <div className="flex flex-wrap items-center justify-center gap-3 mb-10 animate-fade-up animation-delay-600">
-                <div className="flex items-center gap-2 bg-white/25 backdrop-blur-md px-5 py-3 rounded-full text-white font-bold text-sm border border-white/30">
-                  <Calendar className="w-5 h-5 text-pink-300" />{t('meryl.dateInfo')}
+
+              {/* Info sidebar à droite */}
+              <div className="bg-pink-50/95 dark:bg-pink-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-pink-200/50 dark:border-pink-800/50">
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-pink-200 dark:border-pink-800">
+                    <Calendar className="w-5 h-5 text-pink-600" />
+                    <span className="text-pink-800 dark:text-pink-200 font-medium">{t('meryl.dateInfo')}</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-pink-200 dark:border-pink-800">
+                    <MapPin className="w-5 h-5 text-pink-600" />
+                    <span className="text-pink-800 dark:text-pink-200 font-medium">Accor Arena Paris</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 bg-white/25 backdrop-blur-md px-5 py-3 rounded-full text-white font-bold text-sm border border-white/30">
-                  <MapPin className="w-5 h-5 text-purple-300" />Accor Arena Paris
-                </div>
-              </div>
-              
-              {/* Countdown */}
-              <div className="inline-block bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/20 animate-fade-up animation-delay-600">
-                <div className="flex items-center justify-center gap-2 mb-4 text-pink-300">
-                  <Clock className="w-5 h-5 animate-pulse" />
-                  <span className="text-sm uppercase tracking-widest font-bold">{t('meryl.countdown')}</span>
-                </div>
-                <div className="grid grid-cols-4 gap-3 md:gap-5 text-center">
+
+                {/* Countdown */}
+                <div className="grid grid-cols-4 gap-2 mb-6">
                   {[
                     { value: countdown.days, label: t('meryl.days') },
                     { value: countdown.hours, label: t('meryl.hours') },
                     { value: countdown.minutes, label: t('meryl.min') },
-                    { value: countdown.seconds, label: t('meryl.sec') }
-                  ].map((item, idx) => (
-                    <div key={idx} className="group">
-                      <div className="bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-600 rounded-2xl px-3 md:px-5 py-3 shadow-lg">
-                        <span className="font-display text-2xl md:text-4xl text-white font-bold drop-shadow-lg">{item.value}</span>
-                      </div>
-                      <p className="text-pink-200 text-xs mt-2 uppercase font-bold tracking-wide">{item.label}</p>
+                    { value: countdown.seconds, label: t('meryl.sec') },
+                  ].map((item, index) => (
+                    <div key={index} className="bg-white dark:bg-card border-2 border-pink-200 dark:border-pink-700 rounded-xl p-3 text-center shadow-sm">
+                      <div className="text-2xl md:text-3xl font-bold text-pink-700 dark:text-pink-400">{item.value}</div>
+                      <div className="text-xs text-pink-600 dark:text-pink-500 uppercase tracking-wide">{item.label}</div>
                     </div>
                   ))}
                 </div>
+
+                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button size="lg" className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold shadow-lg">
+                    <Hotel className="w-5 h-5 mr-2" />{t('meryl.bookAccommodation')}
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
