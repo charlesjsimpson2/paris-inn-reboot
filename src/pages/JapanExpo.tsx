@@ -38,29 +38,40 @@ const JapanExpo = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="relative py-24 overflow-hidden">
-          <img src={japanExpoHero} alt="Japan Expo 2026" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <section className="relative py-16 md:py-24 bg-gradient-to-br from-pink-600 via-fuchsia-600 to-pink-700 overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-40 h-40 bg-pink-400 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-10 right-10 w-60 h-60 bg-fuchsia-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="text-left">
-                <div className="inline-flex items-center gap-2 bg-pink-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
+              <div className="flex justify-center md:justify-start">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-pink-400/30 to-fuchsia-600/30 rounded-2xl blur-xl" />
+                  <img 
+                    src={japanExpoHero} 
+                    alt="Japan Expo 2026" 
+                    className="relative rounded-xl shadow-2xl max-w-sm md:max-w-md w-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="text-center md:text-left">
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <Sparkles className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('japanExpo.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('japanExpo.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('japanExpo.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-3xl md:text-5xl text-white drop-shadow-lg mb-4">{t('japanExpo.title')}</h1>
+                <p className="text-white/90 text-lg md:text-xl mb-6">{t('japanExpo.subtitle')}</p>
 
-              <div className="bg-pink-50/95 dark:bg-pink-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-pink-200/50 dark:border-pink-800/50">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-pink-200 dark:border-pink-800">
-                    <Calendar className="w-5 h-5 text-pink-600" />
-                    <span className="text-pink-800 dark:text-pink-200 font-medium">{t("japanExpo.dateDisplay")}</span>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-center md:justify-start gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl">
+                    <Calendar className="w-5 h-5 text-pink-200" />
+                    <span className="text-white font-medium">{t("japanExpo.dateDisplay")}</span>
                   </div>
-                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-pink-200 dark:border-pink-800">
-                    <MapPin className="w-5 h-5 text-pink-600" />
-                    <span className="text-pink-800 dark:text-pink-200 font-medium">{t("japanExpo.venue")}</span>
+                  <div className="flex items-center justify-center md:justify-start gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl">
+                    <MapPin className="w-5 h-5 text-pink-200" />
+                    <span className="text-white font-medium">{t("japanExpo.venue")}</span>
                   </div>
                 </div>
 
@@ -71,18 +82,12 @@ const JapanExpo = () => {
                     { value: countdown.minutes, label: t("agriculture.countdown.minutes") },
                     { value: countdown.seconds, label: t("agriculture.countdown.seconds") },
                   ].map((item, index) => (
-                    <div key={index} className="bg-white dark:bg-card border-2 border-pink-200 dark:border-pink-700 rounded-xl p-3 text-center shadow-sm">
-                      <div className="text-2xl md:text-3xl font-bold text-pink-700 dark:text-pink-400">{item.value}</div>
-                      <div className="text-xs text-pink-600 dark:text-pink-500 uppercase tracking-wide">{item.label}</div>
+                    <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-white">{item.value}</div>
+                      <div className="text-xs text-pink-200 uppercase tracking-wide">{item.label}</div>
                     </div>
                   ))}
                 </div>
-
-                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button size="lg" className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold shadow-lg">
-                    <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
-                  </Button>
-                </a>
               </div>
             </div>
           </div>
