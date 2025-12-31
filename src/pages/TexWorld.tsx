@@ -42,11 +42,14 @@ const TexWorld = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="order-2 md:order-1">
-                <img 
-                  src={texworldHero} 
-                  alt="Texworld Paris 2026" 
-                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover aspect-[4/3]"
-                />
+                <div className="w-full max-w-md mx-auto rounded-2xl shadow-2xl overflow-hidden aspect-[4/3]">
+                  <img 
+                    src={texworldHero} 
+                    alt="Texworld Paris 2026" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
               
               <div className="order-1 md:order-2 text-left">
