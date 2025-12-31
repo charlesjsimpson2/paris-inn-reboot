@@ -9,7 +9,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import santeExpoHero from "@/assets/sante-expo-hero.jpg";
 import { useState, useEffect } from "react";
 
 const SanteExpo = () => {
@@ -37,21 +37,21 @@ const SanteExpo = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="Santé Expo" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="py-24 bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-50 dark:from-teal-950/30 dark:via-cyan-950/20 dark:to-teal-950/30">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="text-left">
+              <div className="order-2 md:order-1">
+                <img src={santeExpoHero} alt="Santé Expo" className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto object-cover" />
+              </div>
+
+              <div className="order-1 md:order-2">
                 <div className="inline-flex items-center gap-2 bg-teal-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <Heart className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('santeExpo.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('santeExpo.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('santeExpo.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-4xl md:text-6xl text-foreground mb-4">{t('santeExpo.title')}</h1>
+                <p className="text-muted-foreground text-lg md:text-xl mb-6">{t('santeExpo.subtitle')}</p>
 
-              <div className="bg-teal-50/95 dark:bg-teal-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-teal-200/50 dark:border-teal-800/50">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-teal-200 dark:border-teal-800">
                     <Calendar className="w-5 h-5 text-teal-600" />
@@ -76,12 +76,6 @@ const SanteExpo = () => {
                     </div>
                   ))}
                 </div>
-
-                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button size="lg" className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold shadow-lg">
-                    <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
-                  </Button>
-                </a>
               </div>
             </div>
           </div>
@@ -131,7 +125,7 @@ const SanteExpo = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('santeExpo.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={heroSeminaire} alt="Santé Expo" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={santeExpoHero} alt="Santé Expo" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
@@ -176,6 +170,7 @@ const SanteExpo = () => {
           eventName={t("santeExpo.eventName")}
           accentColor="from-teal-600 via-teal-700 to-cyan-600"
           urgencyMessage={t("santeExpo.urgencyMessage")}
+          eventType="salon"
           compact
         />
 
