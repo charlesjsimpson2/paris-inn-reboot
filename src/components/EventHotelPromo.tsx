@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import hotelChambre from "@/assets/hotel-chambre.jpg";
 
+export type EventType = 'concert' | 'salon' | 'sport' | 'marathon' | 'rugby';
+
 interface EventHotelPromoProps {
   eventName: string;
   accentColor?: string;
   urgencyMessage?: string;
   compact?: boolean;
   hideBookButton?: boolean;
+  eventType?: EventType;
 }
 
 export const EventHotelPromo = ({ 
@@ -17,9 +20,41 @@ export const EventHotelPromo = ({
   accentColor = "from-primary via-burgundy to-primary",
   urgencyMessage,
   compact = false,
-  hideBookButton = false
+  hideBookButton = false,
+  eventType = 'concert'
 }: EventHotelPromoProps) => {
   const { t } = useLanguage();
+
+  // Get event-type specific translations
+  const getPromoTitle = () => {
+    switch (eventType) {
+      case 'salon':
+        return t('eventHotelPromo.title.salon');
+      case 'sport':
+        return t('eventHotelPromo.title.sport');
+      case 'marathon':
+        return t('eventHotelPromo.title.marathon');
+      case 'rugby':
+        return t('eventHotelPromo.title.rugby');
+      default:
+        return t('enfoires.hotelPromo.title');
+    }
+  };
+
+  const getPromoSubtitle = () => {
+    switch (eventType) {
+      case 'salon':
+        return t('eventHotelPromo.subtitle.salon');
+      case 'sport':
+        return t('eventHotelPromo.subtitle.sport');
+      case 'marathon':
+        return t('eventHotelPromo.subtitle.marathon');
+      case 'rugby':
+        return t('eventHotelPromo.subtitle.rugby');
+      default:
+        return t('enfoires.hotelPromo.subtitle');
+    }
+  };
 
   const advantages = [
     { icon: Train, text: t('enfoires.hotelPromo.location'), highlight: true },
@@ -45,7 +80,7 @@ export const EventHotelPromo = ({
                       <Clock className="w-4 h-4" />
                       <span className="text-xs font-medium uppercase tracking-wider opacity-90">{t("eventHotelPromo.limitedOffer")}</span>
                     </div>
-                    <h3 className="font-display text-lg md:text-xl">{t('enfoires.hotelPromo.title')}</h3>
+                    <h3 className="font-display text-lg md:text-xl">{getPromoTitle()}</h3>
                     <p className="text-white/80 text-sm hidden md:block">{t("eventHotelPromo.idealLocation")}</p>
                   </div>
                 </div>
@@ -86,7 +121,7 @@ export const EventHotelPromo = ({
             </div>
             <div className="hidden md:block w-px h-6 bg-white/30" />
             <p className="text-white/90 text-sm">
-              {t('enfoires.hotelPromo.subtitle')}
+              {getPromoSubtitle()}
             </p>
           </div>
         </div>
@@ -132,7 +167,7 @@ export const EventHotelPromo = ({
                         </span>
                       </div>
                       <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">
-                        {t('enfoires.hotelPromo.title')}
+                        {getPromoTitle()}
                       </h2>
                       <p className="text-muted-foreground">
                         {t("eventHotelPromo.idealLocation")}
