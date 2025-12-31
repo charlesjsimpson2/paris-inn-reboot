@@ -1,11 +1,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin, Music, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic } from "lucide-react";
+import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import heroImage from "@/assets/indochine-hero-gen.jpg";
 
 const IndochineConcert = () => {
   const { t } = useLanguage();
@@ -35,13 +36,17 @@ const IndochineConcert = () => {
       <main>
         {/* Hero Section */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700 via-black to-red-900" />
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-red-500/30 rounded-full blur-3xl animate-float" />
-            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-red-600/40 rounded-full blur-3xl animate-float animation-delay-400" />
+          <div className="absolute inset-0">
+            <img 
+              src={heroImage} 
+              alt="Indochine Arena Tour 2026" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
           </div>
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_2px,transparent_2px)] bg-[length:60px_60px]" />
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-20 -left-20 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-float" />
+            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-red-600/30 rounded-full blur-3xl animate-float animation-delay-400" />
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
@@ -171,31 +176,46 @@ const IndochineConcert = () => {
           accentColor="from-red-700 via-black to-red-900"
         />
 
-        {/* About Section */}
+        {/* About Section - Band History */}
         <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 via-black to-red-600" />
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-gray-100 dark:from-red-900/40 dark:to-gray-900/40 text-red-700 dark:text-red-300 px-6 py-3 rounded-full mb-4 shadow-lg">
-                <Sparkles className="w-5 h-5 animate-pulse" />
-                <span className="font-bold text-sm uppercase tracking-wider">{t('indochine.arenaTour')}</span>
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-gray-100 dark:from-red-900/40 dark:to-gray-900/40 text-red-700 dark:text-red-300 px-6 py-3 rounded-full mb-4 shadow-lg">
+                  <History className="w-5 h-5" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('indochine.bandHistory')}</span>
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl text-foreground">{t('indochine.legendTitle')}</h2>
               </div>
-              <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('indochine.uniqueShow')}</h2>
-              <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">{t('indochine.showDesc')}</p>
+              
+              <div className="space-y-6 text-muted-foreground max-w-4xl mx-auto">
+                <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history1') }} />
+                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history2') }} />
+                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history3') }} />
+                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history4') }} />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Description Section */}
+        {/* Show Description Section */}
         <section className="py-20 bg-gradient-to-br from-red-50 via-gray-50 to-red-50 dark:from-red-950/20 dark:via-gray-950/20 dark:to-red-950/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-black text-white px-6 py-3 rounded-full mb-4 shadow-lg">
+                  <Sparkles className="w-5 h-5 animate-pulse" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('indochine.arenaTour')}</span>
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('indochine.uniqueShow')}</h2>
+              </div>
+              
               <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-red-200 dark:border-red-800/50 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-400/20 to-gray-400/20 rounded-full blur-3xl" />
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
-                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.aboutText1') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.aboutText2') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.aboutText3') }} />
+                  <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('indochine.showIntro') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.showDesc') }} />
                 </div>
               </div>
             </div>
