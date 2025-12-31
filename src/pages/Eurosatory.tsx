@@ -10,6 +10,7 @@ import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
+import eurosatoryEvent from "@/assets/eurosatory-event.jpg";
 import eurosatoryLogo from "@/assets/eurosatory-logo.svg";
 import { useState, useEffect } from "react";
 
@@ -156,7 +157,7 @@ const Eurosatory = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('eurosatory.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={eurosatoryHero} alt="Eurosatory" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={eurosatoryEvent} alt="Eurosatory" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
