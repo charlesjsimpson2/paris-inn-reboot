@@ -13,6 +13,7 @@ import claraHero from "@/assets/clara-luciani-portrait.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import wutangHero from "@/assets/wu-tang-concert.jpg";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import texworldHero from "@/assets/texworld-hero.jpg";
 import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
 import scorpionsHero from "@/assets/scorpions-hero.jpg";
 import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
@@ -285,7 +286,7 @@ const Actualites = () => {
       location: t('texWorld.venue'),
       category: t('actualites.salon'),
       link: "/evenements/tex-world",
-      image: heroSeminaire,
+      image: texworldHero,
       icon: Scissors,
       badgeColor: "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
     },
