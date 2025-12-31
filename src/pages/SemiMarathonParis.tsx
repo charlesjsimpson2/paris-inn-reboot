@@ -152,77 +152,7 @@ const SemiMarathonParis = () => {
           accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
         />
 
-
-        {/* Description Section */}
-        <section className="py-16 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-[#3BB5DC]/20 dark:border-[#3BB5DC]/10 mb-8">
-                <div className="grid md:grid-cols-2 gap-8 items-start">
-                  <img 
-                    src={semiMarathonCoureurs} 
-                    alt="Coureurs du Semi-Marathon de Paris" 
-                    className="w-full h-auto rounded-xl shadow-lg object-cover" 
-                  />
-                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
-                    <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText1') }} />
-                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText2') }} />
-                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText3') }} />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 text-center mb-8">
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
-                  <Timer className="w-10 h-10 text-[#E94E4B] mx-auto mb-2" />
-                  <p className="font-display text-3xl text-foreground">21.1 km</p>
-                  <p className="text-muted-foreground text-sm">{t('semimarathon.distance')}</p>
-                </div>
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
-                  <Users className="w-10 h-10 text-[#3BB5DC] mx-auto mb-2" />
-                  <p className="font-display text-3xl text-foreground">40 000+</p>
-                  <p className="text-muted-foreground text-sm">{t('semimarathon.runners')}</p>
-                </div>
-                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
-                  <Trophy className="w-10 h-10 text-[#F9C74F] mx-auto mb-2" />
-                  <p className="font-display text-3xl text-foreground">1992</p>
-                  <p className="text-muted-foreground text-sm">{t('semimarathon.since')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Parcours Section - Style HOKA */}
-        <section className="py-16 bg-gradient-to-br from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7] text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
-          </div>
-          {/* Bande jaune */}
-          <div className="absolute top-0 left-0 w-1/4 h-20 bg-[#F9C74F] transform skew-y-[6deg] origin-top-left opacity-80" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <MapPin className="w-12 h-12 text-[#F9C74F] mx-auto mb-3" />
-                <h2 className="font-display text-3xl md:text-4xl mb-2">{t('semimarathon.course')}</h2>
-                <p className="text-white/80">{t('semimarathon.courseSubtitle')}</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6 mb-10">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-[#F9C74F]">{t('semimarathon.start')}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">{t('semimarathon.startDesc')}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <h3 className="font-display text-xl mb-3 text-[#F9C74F]">{t('semimarathon.highlights')}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">{t('semimarathon.highlightsDesc')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Exclusive Runner Offers Section */}
+        {/* Pack Coureur Section - Moved up */}
         <section className="py-16 bg-gradient-to-br from-[#F9C74F]/20 via-white to-[#3BB5DC]/20 dark:from-[#F9C74F]/10 dark:via-background dark:to-[#3BB5DC]/10">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
@@ -294,6 +224,75 @@ const SemiMarathonParis = () => {
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('semimarathon.offersNote')}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Description Section */}
+        <section className="py-16 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-white dark:bg-charcoal rounded-2xl shadow-lg p-8 md:p-10 border border-[#3BB5DC]/20 dark:border-[#3BB5DC]/10 mb-8">
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                  <img 
+                    src={semiMarathonCoureurs} 
+                    alt="Coureurs du Semi-Marathon de Paris" 
+                    className="w-full h-auto rounded-xl shadow-lg object-cover" 
+                  />
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
+                    <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText1') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText2') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('semimarathon.aboutText3') }} />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 text-center mb-8">
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
+                  <Timer className="w-10 h-10 text-[#E94E4B] mx-auto mb-2" />
+                  <p className="font-display text-3xl text-foreground">21.1 km</p>
+                  <p className="text-muted-foreground text-sm">{t('semimarathon.distance')}</p>
+                </div>
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
+                  <Users className="w-10 h-10 text-[#3BB5DC] mx-auto mb-2" />
+                  <p className="font-display text-3xl text-foreground">40 000+</p>
+                  <p className="text-muted-foreground text-sm">{t('semimarathon.runners')}</p>
+                </div>
+                <div className="bg-white dark:bg-card rounded-xl p-6 shadow-lg border border-border/50">
+                  <Trophy className="w-10 h-10 text-[#F9C74F] mx-auto mb-2" />
+                  <p className="font-display text-3xl text-foreground">1992</p>
+                  <p className="text-muted-foreground text-sm">{t('semimarathon.since')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Parcours Section - Style HOKA */}
+        <section className="py-16 bg-gradient-to-br from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7] text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] bg-[length:40px_40px]" />
+          </div>
+          {/* Bande jaune */}
+          <div className="absolute top-0 left-0 w-1/4 h-20 bg-[#F9C74F] transform skew-y-[6deg] origin-top-left opacity-80" />
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <MapPin className="w-12 h-12 text-[#F9C74F] mx-auto mb-3" />
+                <h2 className="font-display text-3xl md:text-4xl mb-2">{t('semimarathon.course')}</h2>
+                <p className="text-white/80">{t('semimarathon.courseSubtitle')}</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6 mb-10">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <h3 className="font-display text-xl mb-3 text-[#F9C74F]">{t('semimarathon.start')}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">{t('semimarathon.startDesc')}</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                  <h3 className="font-display text-xl mb-3 text-[#F9C74F]">{t('semimarathon.highlights')}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">{t('semimarathon.highlightsDesc')}</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
