@@ -1,16 +1,18 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin, Music, Clock, Gift, Car, Shirt, Trophy, Zap, Guitar } from "lucide-react";
+import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Zap, Guitar, History } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import heroImage from "@/assets/guns-n-roses-hero.webp";
+import portraitImage from "@/assets/guns-n-roses-portrait.jpg";
 
 const GunsNRosesConcert = () => {
   const { t } = useLanguage();
   
-  const targetDate = new Date('2026-07-15T20:00:00').getTime();
+  const targetDate = new Date('2026-07-01T19:00:00').getTime();
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -35,13 +37,17 @@ const GunsNRosesConcert = () => {
       <main>
         {/* Hero Section */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-red-900 to-yellow-900" />
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-red-500/30 rounded-full blur-3xl animate-float" />
-            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-yellow-500/40 rounded-full blur-3xl animate-float animation-delay-400" />
+          <div className="absolute inset-0">
+            <img 
+              src={heroImage} 
+              alt="Guns N' Roses World Tour 2026" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
           </div>
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_2px,transparent_2px)] bg-[length:60px_60px]" />
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-20 -left-20 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-float" />
+            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-yellow-500/30 rounded-full blur-3xl animate-float animation-delay-400" />
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
@@ -171,31 +177,63 @@ const GunsNRosesConcert = () => {
           accentColor="from-red-600 via-red-700 to-yellow-600"
         />
 
-        {/* About Section */}
+        {/* About Section - Band Story */}
         <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600" />
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-yellow-100 dark:from-red-900/40 dark:to-yellow-900/40 text-red-700 dark:text-red-300 px-6 py-3 rounded-full mb-4 shadow-lg">
-                <Zap className="w-5 h-5 animate-pulse" />
-                <span className="font-bold text-sm uppercase tracking-wider">{t('gunsnroses.legendary')}</span>
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-yellow-100 dark:from-red-900/40 dark:to-yellow-900/40 text-red-700 dark:text-red-300 px-6 py-3 rounded-full mb-4 shadow-lg">
+                  <History className="w-5 h-5" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('gunsnroses.bandHistory')}</span>
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl text-foreground">{t('gunsnroses.legendTitle')}</h2>
               </div>
-              <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('gunsnroses.uniqueShow')}</h2>
-              <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">{t('gunsnroses.showDesc')}</p>
+              
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                <div className="relative">
+                  <img 
+                    src={portraitImage} 
+                    alt="Guns N' Roses" 
+                    className="w-full rounded-2xl shadow-2xl"
+                  />
+                  <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-red-600 to-yellow-600 text-white px-6 py-3 rounded-xl shadow-xl font-bold">
+                    1985 - {t('gunsnroses.present')}
+                  </div>
+                </div>
+                
+                <div className="space-y-5 text-muted-foreground">
+                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.history1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.history2') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.history3') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.history4') }} />
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Description Section */}
+        {/* Show Description Section */}
         <section className="py-20 bg-gradient-to-br from-red-50 via-yellow-50 to-red-50 dark:from-red-950/20 dark:via-yellow-950/20 dark:to-red-950/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-yellow-600 text-white px-6 py-3 rounded-full mb-4 shadow-lg">
+                  <Zap className="w-5 h-5 animate-pulse" />
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('gunsnroses.legendary')}</span>
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('gunsnroses.uniqueShow')}</h2>
+              </div>
+              
               <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-red-200 dark:border-red-800/50 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-400/20 to-yellow-400/20 rounded-full blur-3xl" />
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
-                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.aboutText1') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.aboutText2') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.aboutText3') }} />
+                  <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('gunsnroses.showIntro') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('gunsnroses.showDesc') }} />
+                  <div className="bg-gradient-to-r from-red-100 to-yellow-100 dark:from-red-900/30 dark:to-yellow-900/30 rounded-xl p-6 mt-6">
+                    <p className="font-bold text-foreground mb-2">{t('gunsnroses.firstPart')}</p>
+                    <p className="text-muted-foreground">{t('gunsnroses.mamoth')}</p>
+                  </div>
                 </div>
               </div>
             </div>
