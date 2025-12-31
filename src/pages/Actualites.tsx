@@ -25,6 +25,7 @@ import foireParisHero from "@/assets/foire-paris-hero.jpg";
 import santeExpoHero from "@/assets/sante-expo-hero.jpg";
 import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
 import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
+import japanExpoHero from "@/assets/japan-expo-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -242,7 +243,7 @@ const Actualites = () => {
       location: t('japanExpo.venue'),
       category: t('actualites.salon'),
       link: "/evenements/japan-expo",
-      image: heroSeminaire,
+      image: japanExpoHero,
       icon: Sparkles,
       badgeColor: "bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400",
     },
