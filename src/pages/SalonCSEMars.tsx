@@ -197,6 +197,7 @@ const SalonCSEMars = () => {
           eventName={t("salonCSE.eventName")}
           accentColor="from-blue-600 via-blue-700 to-slate-600"
           urgencyMessage={t("salonCSE.urgencyMessage")}
+          eventType="salon"
           compact
         />
 
