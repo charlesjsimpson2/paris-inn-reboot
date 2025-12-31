@@ -9,7 +9,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import foireParisHero from "@/assets/foire-paris-hero.jpg";
 import { useState, useEffect } from "react";
 
 const FoireDeParis = () => {
@@ -38,7 +38,7 @@ const FoireDeParis = () => {
       <Header />
       <main>
         <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="Foire de Paris" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src={foireParisHero} alt="Foire de Paris" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -131,7 +131,7 @@ const FoireDeParis = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('foireParis.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={heroSeminaire} alt="Foire de Paris" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={foireParisHero} alt="Foire de Paris" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
@@ -176,6 +176,7 @@ const FoireDeParis = () => {
           eventName={t("foireParis.eventName")}
           accentColor="from-rose-600 via-rose-700 to-amber-600"
           urgencyMessage={t("foireParis.urgencyMessage")}
+          eventType="salon"
           compact
         />
 
