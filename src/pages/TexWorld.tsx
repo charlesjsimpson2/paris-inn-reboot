@@ -9,7 +9,8 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import texworldHero from "@/assets/texworld-hero.jpg";
+import texworldEvent from "@/assets/texworld-event.jpg";
 import { useState, useEffect } from "react";
 
 const TexWorld = () => {
@@ -37,22 +38,26 @@ const TexWorld = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="Tex World" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <section className="relative py-24 overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-pink-50 dark:from-violet-950/30 dark:via-purple-950/20 dark:to-pink-950/30">
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="text-left">
+              <div className="order-2 md:order-1">
+                <img 
+                  src={texworldHero} 
+                  alt="Texworld Paris 2026" 
+                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl object-cover"
+                />
+              </div>
+              
+              <div className="order-1 md:order-2 text-left">
                 <div className="inline-flex items-center gap-2 bg-violet-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <Scissors className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('texWorld.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('texWorld.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('texWorld.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('texWorld.title')}</h1>
+                <p className="text-muted-foreground text-lg md:text-xl mb-6">{t('texWorld.subtitle')}</p>
 
-              <div className="bg-violet-50/95 dark:bg-violet-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-violet-200/50 dark:border-violet-800/50">
-                <div className="space-y-4 mb-6">
+                <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-violet-200 dark:border-violet-800">
                     <Calendar className="w-5 h-5 text-violet-600" />
                     <span className="text-violet-800 dark:text-violet-200 font-medium">{t("texWorld.dateDisplay")}</span>
@@ -76,12 +81,6 @@ const TexWorld = () => {
                     </div>
                   ))}
                 </div>
-
-                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button size="lg" className="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold shadow-lg">
-                    <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
-                  </Button>
-                </a>
               </div>
             </div>
           </div>
@@ -131,7 +130,7 @@ const TexWorld = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('texWorld.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={heroSeminaire} alt="Tex World" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={texworldEvent} alt="Texworld Paris Exhibition Hall" className="w-full rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
