@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Timer, Trophy, Heart, Clock, Utensils, Droplets, Sun, Star, Train, Coffee, Users, Tv, Wifi, Car, Gift, Shirt, Ticket } from "lucide-react";
+import { Calendar, MapPin, Timer, Trophy, Clock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { RunnerOffersSection } from "@/components/RunnerOffersSection";
 
 const SemiMarathonParis = () => {
   const { t } = useLanguage();
@@ -96,52 +97,8 @@ const SemiMarathonParis = () => {
           </div>
         </section>
 
-        {/* Exclusive Offers - 2 columns */}
-        <section className="py-10 bg-gradient-to-br from-[#E94E4B]/10 via-white to-[#3BB5DC]/10 dark:from-[#E94E4B]/5 dark:via-background dark:to-[#3BB5DC]/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#E94E4B] to-[#3BB5DC] text-white px-5 py-2 rounded-full mb-2 shadow-lg">
-                  <Gift className="w-4 h-4" />
-                  <span className="font-bold text-sm uppercase tracking-wider">{t('semimarathon.exclusiveOffers')}</span>
-                </div>
-                <p className="text-muted-foreground text-sm">{t('semimarathon.offersSubtitle')}</p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-5">
-                {/* Parking */}
-                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-[#E94E4B]/30 dark:border-[#E94E4B]/20 hover:scale-[1.02] transition-transform duration-300 group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#E94E4B] to-[#E94E4B]/80 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <Car className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-foreground">{t('semimarathon.parking')}</h3>
-                      <div className="inline-block bg-[#E94E4B] text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('semimarathon.parkingPrice')}</div>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{t('semimarathon.parkingDesc')}</p>
-                </div>
-
-                {/* Taxi */}
-                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-[#3BB5DC]/30 dark:border-[#3BB5DC]/20 hover:scale-[1.02] transition-transform duration-300 group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#3BB5DC] to-[#2A9BC7] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <Ticket className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-foreground">{t('semimarathon.taxi')}</h3>
-                      <div className="inline-block bg-[#3BB5DC] text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('semimarathon.taxiDiscount')}</div>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{t('semimarathon.taxiDesc')}</p>
-                </div>
-              </div>
-              
-              <p className="text-center text-xs text-muted-foreground mt-4 italic">{t('semimarathon.offersNote')}</p>
-            </div>
-          </div>
-        </section>
+        {/* Runner Offers Section - Right after hero */}
+        <RunnerOffersSection eventName="Semi-Marathon" />
 
         {/* Easy Access Section */}
         <EasyAccessSection 
@@ -151,82 +108,6 @@ const SemiMarathonParis = () => {
           metroRoute="Place d'Italie → Porte Dorée (accès Bois de Vincennes)"
           accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
         />
-
-        {/* Pack Coureur Section - Moved up */}
-        <section className="py-16 bg-gradient-to-br from-[#F9C74F]/20 via-white to-[#3BB5DC]/20 dark:from-[#F9C74F]/10 dark:via-background dark:to-[#3BB5DC]/10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 text-[#E94E4B] px-4 py-2 rounded-full mb-4">
-                  <Heart className="w-4 h-4" />
-                  <span className="font-medium text-sm">{t('semimarathon.runnerPackage')}</span>
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-3">{t('semimarathon.exclusiveOffers')}</h2>
-                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t('semimarathon.offersSubtitle')}</p>
-              </div>
-
-              {/* Runner Special Offers */}
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-[#E94E4B]/30 dark:border-[#E94E4B]/20 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 rounded-full flex items-center justify-center mb-4">
-                    <Sun className="w-7 h-7 text-[#E94E4B]" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">{t('semimarathon.earlyBreakfast')}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">{t('semimarathon.earlyBreakfastDesc')}</p>
-                  <div className="inline-flex items-center gap-2 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 text-[#E94E4B] px-3 py-1.5 rounded-full text-sm font-medium">
-                    <Utensils className="w-4 h-4" />
-                    {t('semimarathon.pastaSalad')}
-                  </div>
-                </div>
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-[#3BB5DC]/30 dark:border-[#3BB5DC]/20 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/20 rounded-full flex items-center justify-center mb-4">
-                    <Droplets className="w-7 h-7 text-[#3BB5DC]" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">{t('semimarathon.lateCheckout')}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">{t('semimarathon.lateCheckoutDesc')}</p>
-                  <div className="inline-block bg-[#3BB5DC] text-white font-bold text-sm px-3 py-1.5 rounded-full">{t('semimarathon.showerAccess')}</div>
-                </div>
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-xl border-2 border-[#F9C74F]/50 dark:border-[#F9C74F]/30 hover:scale-105 transition-transform duration-300">
-                  <div className="w-14 h-14 bg-[#F9C74F]/20 dark:bg-[#F9C74F]/10 rounded-full flex items-center justify-center mb-4">
-                    <Coffee className="w-7 h-7 text-[#D4A843]" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">{t('semimarathon.happyHour')}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">{t('semimarathon.happyHourDesc')}</p>
-                  <div className="inline-block bg-[#F9C74F] text-black font-bold text-sm px-3 py-1.5 rounded-full">{t('semimarathon.happyHourDiscount')}</div>
-                </div>
-              </div>
-
-              {/* Standard Offers */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-lg border border-border/50">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#E94E4B]/10 dark:bg-[#E94E4B]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Car className="w-6 h-6 text-[#E94E4B]" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-foreground mb-1">{t('semimarathon.parking')}</h3>
-                      <p className="text-muted-foreground text-sm mb-2">{t('semimarathon.parkingDesc')}</p>
-                      <div className="inline-block bg-[#E94E4B] text-white font-bold text-sm px-3 py-1 rounded-full">{t('semimarathon.parkingPrice')}</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-lg border border-border/50">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Train className="w-6 h-6 text-[#3BB5DC]" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-foreground mb-1">{t('semimarathon.taxi')}</h3>
-                      <p className="text-muted-foreground text-sm mb-2">{t('semimarathon.taxiDesc')}</p>
-                      <div className="inline-block bg-[#3BB5DC] text-white font-bold text-sm px-3 py-1 rounded-full">{t('semimarathon.taxiDiscount')}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p className="text-center text-sm text-muted-foreground mt-6 italic">{t('semimarathon.offersNote')}</p>
-            </div>
-          </div>
-        </section>
 
         {/* Description Section */}
         <section className="py-16 bg-[#3BB5DC]/10 dark:bg-[#3BB5DC]/5">
