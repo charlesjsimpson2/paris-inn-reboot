@@ -21,6 +21,7 @@ import keryjamesHero from "@/assets/keryjames-hero-gen.jpg";
 import orelsanHero from "@/assets/orelsan-hero-gen.jpg";
 import indochineHero from "@/assets/indochine-hero-gen.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
+import foireParisHero from "@/assets/foire-paris-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -182,7 +183,7 @@ const Actualites = () => {
       location: t('foireParis.venue'),
       category: t('actualites.salon'),
       link: "/evenements/foire-de-paris",
-      image: heroSeminaire,
+      image: foireParisHero,
       icon: ShoppingBag,
       badgeColor: "bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400",
     },
