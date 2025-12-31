@@ -11,6 +11,7 @@ import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
 import euroPcrLogo from "@/assets/euro-pcr-logo.png";
+import euroPcrEvent from "@/assets/euro-pcr-event.jpg";
 import { useState, useEffect } from "react";
 
 const EuroPCR = () => {
@@ -140,7 +141,7 @@ const EuroPCR = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('euroPCR.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={euroPcrLogo} alt="Euro PCR" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-contain bg-white p-6" />
+                <img src={euroPcrEvent} alt="Euro PCR Event" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
