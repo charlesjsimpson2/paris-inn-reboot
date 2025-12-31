@@ -32,6 +32,20 @@ const MerylConcert = lazy(() => import("./pages/MerylConcert"));
 const KeryJamesConcert = lazy(() => import("./pages/KeryJamesConcert"));
 const OrelsanConcert = lazy(() => import("./pages/OrelsanConcert"));
 const IndochineConcert = lazy(() => import("./pages/IndochineConcert"));
+const SalonCSEMars = lazy(() => import("./pages/SalonCSEMars"));
+const SalonCSESeptembre = lazy(() => import("./pages/SalonCSESeptembre"));
+const FoireDeParis = lazy(() => import("./pages/FoireDeParis"));
+const SanteExpo = lazy(() => import("./pages/SanteExpo"));
+const EuroPCR = lazy(() => import("./pages/EuroPCR"));
+const Eurosatory = lazy(() => import("./pages/Eurosatory"));
+const JapanExpo = lazy(() => import("./pages/JapanExpo"));
+const TexWorld = lazy(() => import("./pages/TexWorld"));
+const SIAL = lazy(() => import("./pages/SIAL"));
+const VingtKmParis = lazy(() => import("./pages/VingtKmParis"));
+const MarathonParis = lazy(() => import("./pages/MarathonParis"));
+const Equiphotel = lazy(() => import("./pages/Equiphotel"));
+const CongresACCDOM = lazy(() => import("./pages/CongresACCDOM"));
+const CongresMaires = lazy(() => import("./pages/CongresMaires"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -78,6 +92,20 @@ const App = () => {
                 <Route path="/evenements/kery-james-concert" element={<KeryJamesConcert />} />
                 <Route path="/evenements/orelsan-concert" element={<OrelsanConcert />} />
                 <Route path="/evenements/indochine-concert" element={<IndochineConcert />} />
+                <Route path="/evenements/salon-cse-mars" element={<SalonCSEMars />} />
+                <Route path="/evenements/salon-cse-septembre" element={<SalonCSESeptembre />} />
+                <Route path="/evenements/foire-de-paris" element={<FoireDeParis />} />
+                <Route path="/evenements/sante-expo" element={<SanteExpo />} />
+                <Route path="/evenements/euro-pcr" element={<EuroPCR />} />
+                <Route path="/evenements/eurosatory" element={<Eurosatory />} />
+                <Route path="/evenements/japan-expo" element={<JapanExpo />} />
+                <Route path="/evenements/tex-world" element={<TexWorld />} />
+                <Route path="/evenements/sial" element={<SIAL />} />
+                <Route path="/evenements/20-km-paris" element={<VingtKmParis />} />
+                <Route path="/evenements/marathon-paris" element={<MarathonParis />} />
+                <Route path="/evenements/equiphotel" element={<Equiphotel />} />
+                <Route path="/evenements/congres-accdom" element={<CongresACCDOM />} />
+                <Route path="/evenements/congres-maires" element={<CongresMaires />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
