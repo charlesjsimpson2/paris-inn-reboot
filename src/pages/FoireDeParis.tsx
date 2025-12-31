@@ -37,21 +37,21 @@ const FoireDeParis = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="relative py-24 overflow-hidden">
-          <img src={foireParisHero} alt="Foire de Paris" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="py-24 bg-gradient-to-br from-rose-50 via-amber-50 to-rose-50 dark:from-rose-950/30 dark:via-amber-950/20 dark:to-rose-950/30">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="text-left">
+              <div className="order-2 md:order-1">
+                <img src={foireParisHero} alt="Foire de Paris" className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto object-cover" />
+              </div>
+
+              <div className="order-1 md:order-2">
                 <div className="inline-flex items-center gap-2 bg-rose-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <ShoppingBag className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('foireParis.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('foireParis.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('foireParis.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-4xl md:text-6xl text-foreground mb-4">{t('foireParis.title')}</h1>
+                <p className="text-muted-foreground text-lg md:text-xl mb-6">{t('foireParis.subtitle')}</p>
 
-              <div className="bg-rose-50/95 dark:bg-rose-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-rose-200/50 dark:border-rose-800/50">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-rose-200 dark:border-rose-800">
                     <Calendar className="w-5 h-5 text-rose-600" />
@@ -76,12 +76,6 @@ const FoireDeParis = () => {
                     </div>
                   ))}
                 </div>
-
-                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button size="lg" className="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold shadow-lg">
-                    <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
-                  </Button>
-                </a>
               </div>
             </div>
           </div>
