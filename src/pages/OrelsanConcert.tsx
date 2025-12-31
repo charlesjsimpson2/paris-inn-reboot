@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History, Hotel } from "lucide-react";
+import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History, Zap, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -35,59 +35,95 @@ const OrelsanConcert = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section with Sidebar Info */}
-        <section className="relative py-24 overflow-hidden">
-          <img src={heroImage} alt="Orelsan Concert Accor Arena 2026" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        {/* Hero Section - Style MIKA */}
+        <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">
+          {/* Animated gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-700 via-teal-800 to-cyan-900 animate-gradient" />
+          
+          {/* Animated circles */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-20 -left-20 w-96 h-96 bg-emerald-400/30 rounded-full blur-3xl animate-float" />
+            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-teal-500/40 rounded-full blur-3xl animate-float animation-delay-400" />
+            <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-cyan-600/30 rounded-full blur-3xl animate-float animation-delay-600" />
+          </div>
+          
+          {/* Sparkle pattern */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,white_2px,transparent_2px),radial-gradient(circle_at_80%_70%,white_1px,transparent_1px),radial-gradient(circle_at_50%_50%,white_1.5px,transparent_1.5px)] bg-[length:60px_60px,40px_40px,80px_80px]" />
+          </div>
+          
           <div className="container mx-auto px-4 relative z-10">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              {/* Texte à gauche */}
-              <div className="text-left">
-                <div className="inline-flex items-center gap-2 bg-emerald-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
-                  <Mic className="w-4 h-4" />
-                  <span className="font-medium text-sm uppercase tracking-wider">{t('orelsan.tour')}</span>
-                </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">
-                  <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
-                    {t('orelsan.title')}
-                  </span>
-                </h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('orelsan.subtitle')}</p>
-              </div>
-
-              {/* Info sidebar à droite */}
-              <div className="bg-emerald-50/95 dark:bg-emerald-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-emerald-200/50 dark:border-emerald-800/50">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-800">
-                    <Calendar className="w-5 h-5 text-emerald-600" />
-                    <span className="text-emerald-800 dark:text-emerald-200 font-medium">{t('orelsan.dateInfo')}</span>
-                  </div>
-                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-800">
-                    <MapPin className="w-5 h-5 text-emerald-600" />
-                    <span className="text-emerald-800 dark:text-emerald-200 font-medium">Accor Arena Paris</span>
-                  </div>
-                </div>
-
-                {/* Countdown */}
-                <div className="grid grid-cols-4 gap-2 mb-6">
-                  {[
-                    { value: countdown.days, label: t('orelsan.days') },
-                    { value: countdown.hours, label: t('orelsan.hours') },
-                    { value: countdown.minutes, label: t('orelsan.min') },
-                    { value: countdown.seconds, label: t('orelsan.sec') },
-                  ].map((item, index) => (
-                    <div key={index} className="bg-white dark:bg-card border-2 border-emerald-200 dark:border-emerald-700 rounded-xl p-3 text-center shadow-sm">
-                      <div className="text-2xl md:text-3xl font-bold text-emerald-700 dark:text-emerald-400">{item.value}</div>
-                      <div className="text-xs text-emerald-600 dark:text-emerald-500 uppercase tracking-wide">{item.label}</div>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                {/* Affiche avec effet glow */}
+                <div className="flex justify-center order-2 md:order-1 animate-fade-up">
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse-glow" />
+                    <img 
+                      src={heroImage} 
+                      alt="Orelsan Concert Accor Arena 2026" 
+                      className="relative w-full max-w-md md:max-w-lg rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500" 
+                    />
+                    {/* Badge flottant */}
+                    <div className="absolute -top-4 -right-4 bg-emerald-400 text-white font-bold px-4 py-2 rounded-full shadow-xl animate-bounce-subtle">
+                      <span className="flex items-center gap-1">
+                        <Zap className="w-4 h-4" /> LIVE
+                      </span>
                     </div>
-                  ))}
+                  </div>
                 </div>
-
-                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button size="lg" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg">
-                    <Hotel className="w-5 h-5 mr-2" />{t('orelsan.bookAccommodation')}
-                  </Button>
-                </a>
+                
+                {/* Texte avec animations */}
+                <div className="text-center md:text-left order-1 md:order-2">
+                  <div className="animate-fade-up">
+                    <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full mb-6 border border-white/30">
+                      <Mic className="w-5 h-5 text-emerald-300 animate-bounce-subtle" />
+                      <span className="text-white uppercase tracking-widest text-sm font-bold">{t('orelsan.tour')}</span>
+                    </div>
+                  </div>
+                  
+                  <h1 className="font-display text-5xl md:text-7xl text-white mb-4 drop-shadow-2xl animate-fade-up animation-delay-200">
+                    <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-white bg-clip-text text-transparent">
+                      {t('orelsan.title')}
+                    </span>
+                  </h1>
+                  
+                  <p className="text-2xl md:text-3xl text-emerald-200 font-display mb-8 animate-fade-up animation-delay-400">
+                    {t('orelsan.subtitle')}
+                  </p>
+                  
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-10 animate-fade-up animation-delay-600">
+                    <div className="flex items-center gap-2 bg-white/25 backdrop-blur-md px-5 py-3 rounded-full text-white font-bold text-sm border border-white/30 hover:bg-white/35 transition-colors">
+                      <Calendar className="w-5 h-5 text-emerald-300" />{t('orelsan.dateInfo')}
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/25 backdrop-blur-md px-5 py-3 rounded-full text-white font-bold text-sm border border-white/30 hover:bg-white/35 transition-colors">
+                      <MapPin className="w-5 h-5 text-teal-300" />Accor Arena Paris
+                    </div>
+                  </div>
+                  
+                  {/* Countdown PUNCHY */}
+                  <div className="inline-block bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/20 animate-fade-up animation-delay-600">
+                    <div className="flex items-center justify-center gap-2 mb-4 text-emerald-300">
+                      <Clock className="w-5 h-5 animate-pulse" />
+                      <span className="text-sm uppercase tracking-widest font-bold">{t('orelsan.countdown')}</span>
+                    </div>
+                    <div className="grid grid-cols-4 gap-3 md:gap-5 text-center">
+                      {[
+                        { value: countdown.days, label: t('orelsan.days') },
+                        { value: countdown.hours, label: t('orelsan.hours') },
+                        { value: countdown.minutes, label: t('orelsan.min') },
+                        { value: countdown.seconds, label: t('orelsan.sec') }
+                      ].map((item, idx) => (
+                        <div key={idx} className="group">
+                          <div className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 rounded-2xl px-3 md:px-5 py-3 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                            <span className="font-display text-2xl md:text-4xl text-white font-bold drop-shadow-lg">{item.value}</span>
+                          </div>
+                          <p className="text-emerald-200 text-xs mt-2 uppercase font-bold tracking-wide">{item.label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
