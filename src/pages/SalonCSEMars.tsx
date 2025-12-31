@@ -9,7 +9,8 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import salonCSEHero from "@/assets/salon-cse-hero.png";
+import salonCSEElus from "@/assets/salon-cse-elus.png";
 import { useState, useEffect } from "react";
 
 const SalonCSEMars = () => {
@@ -37,49 +38,65 @@ const SalonCSEMars = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="Salon CSE" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        {/* Hero Section - Sidebar Layout */}
+        <section className="relative py-16 md:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-48 h-48 bg-slate-400 rounded-full blur-3xl"></div>
+          </div>
+          
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
+              {/* Image Side */}
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-slate-500/30 rounded-2xl blur-xl"></div>
+                  <img 
+                    src={salonCSEHero} 
+                    alt="Salon CSE Paris" 
+                    className="relative max-w-xs md:max-w-sm rounded-2xl shadow-2xl border-4 border-white/20"
+                  />
+                </div>
+              </div>
+
+              {/* Content Side */}
               <div className="text-left">
-                <div className="inline-flex items-center gap-2 bg-blue-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
+                <div className="inline-flex items-center gap-2 bg-blue-500/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <Briefcase className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('salonCSE.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('salonCSE.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('salonCSE.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-4">{t('salonCSE.title')}</h1>
+                <p className="text-white/90 text-lg md:text-xl mb-8">{t('salonCSE.subtitle')}</p>
 
-              <div className="bg-blue-50/95 dark:bg-blue-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-blue-200/50 dark:border-blue-800/50">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-blue-200 dark:border-blue-800">
-                    <Calendar className="w-5 h-5 text-blue-600" />
-                    <span className="text-blue-800 dark:text-blue-200 font-medium">{t("salonCSE.mars.dateDisplay")}</span>
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/20">
+                    <Calendar className="w-5 h-5 text-blue-300" />
+                    <span className="text-white font-medium">{t("salonCSE.mars.dateDisplay")}</span>
                   </div>
-                  <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-blue-200 dark:border-blue-800">
-                    <MapPin className="w-5 h-5 text-blue-600" />
-                    <span className="text-blue-800 dark:text-blue-200 font-medium">{t("salonCSE.venue")}</span>
+                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/20">
+                    <MapPin className="w-5 h-5 text-blue-300" />
+                    <span className="text-white font-medium">{t("salonCSE.venue")}</span>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-4 gap-2 mb-6">
+                {/* Countdown */}
+                <div className="grid grid-cols-4 gap-2 mb-8">
                   {[
                     { value: countdown.days, label: t("agriculture.countdown.days") },
                     { value: countdown.hours, label: t("agriculture.countdown.hours") },
                     { value: countdown.minutes, label: t("agriculture.countdown.minutes") },
                     { value: countdown.seconds, label: t("agriculture.countdown.seconds") },
                   ].map((item, index) => (
-                    <div key={index} className="bg-white dark:bg-card border-2 border-blue-200 dark:border-blue-700 rounded-xl p-3 text-center shadow-sm">
-                      <div className="text-2xl md:text-3xl font-bold text-blue-700 dark:text-blue-400">{item.value}</div>
-                      <div className="text-xs text-blue-600 dark:text-blue-500 uppercase tracking-wide">{item.label}</div>
+                    <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-white">{item.value}</div>
+                      <div className="text-xs text-blue-200 uppercase tracking-wide">{item.label}</div>
                     </div>
                   ))}
                 </div>
 
                 <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg">
+                  <Button size="lg" className="w-full bg-white text-blue-800 hover:bg-blue-50 font-bold shadow-lg">
                     <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
                   </Button>
                 </a>
@@ -134,7 +151,7 @@ const SalonCSEMars = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('salonCSE.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={heroSeminaire} alt="Salon CSE" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={salonCSEElus} alt="Élus CSE" className="max-w-full rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
