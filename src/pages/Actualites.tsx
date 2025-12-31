@@ -15,7 +15,7 @@ import wutangHero from "@/assets/wu-tang-concert.jpg";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
 import texworldHero from "@/assets/texworld-hero.jpg";
 import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
-import scorpionsHero from "@/assets/scorpions-hero.jpg";
+import scorpionsHero from "@/assets/scorpions-tour-2026.jpg";
 import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
 import merylHero from "@/assets/meryl-hero-gen.jpg";
 import keryjamesHero from "@/assets/keryjames-hero-gen.jpg";
@@ -488,7 +488,15 @@ const Actualites = () => {
                     <Link key={event.id} to={event.link} className="group h-full">
                       <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
                         <div className="aspect-[3/4] overflow-hidden relative">
-                          <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                          <img
+                            src={event.image}
+                            alt={event.title}
+                            loading="lazy"
+                            onError={(e) => {
+                              e.currentTarget.src = heroSeminaire;
+                            }}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
                           {event.hasFlags && (
                             <div className="absolute bottom-2 left-2 right-2 flex items-center justify-center gap-2 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-1.5 px-3">
                               <img src={drapeauFrance} alt="France" loading="lazy" className="w-6 h-4 object-cover rounded shadow-sm" />
@@ -544,7 +552,15 @@ const Actualites = () => {
                       <article className="bg-card/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border/30 relative">
                         <div className="absolute inset-0 bg-black/20 z-10" />
                         <div className="aspect-[4/3] overflow-hidden relative">
-                          <img src={event.image} alt={event.title} loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                          <img
+                            src={event.image}
+                            alt={event.title}
+                            loading="lazy"
+                            onError={(e) => {
+                              e.currentTarget.src = heroSeminaire;
+                            }}
+                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                          />
                           {event.hasFlags && (
                             <div className="absolute bottom-2 left-2 right-2 flex items-center justify-center gap-2 bg-white/80 dark:bg-card/80 backdrop-blur-sm rounded-lg py-1 px-2 z-20">
                               <img src={drapeauFrance} alt="France" loading="lazy" className="w-5 h-3 object-cover rounded shadow-sm" />
