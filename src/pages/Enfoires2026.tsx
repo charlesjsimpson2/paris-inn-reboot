@@ -184,12 +184,7 @@ const Enfoires2026 = () => {
                 <span className="font-medium text-sm">{t('enfoires.edition2026')}</span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{t('enfoires.uniqueShow')}</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-2xl mx-auto">{t('enfoires.showDesc')}</p>
-              <Link to="/reservation-seminaire">
-                <Button className="bg-pink-600 hover:bg-pink-700 text-white">
-                  <Heart className="w-4 h-4 mr-2" fill="currentColor" />{t('enfoires.contactUs')}
-                </Button>
-              </Link>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">{t('enfoires.showDesc')}</p>
             </div>
           </div>
         </section>

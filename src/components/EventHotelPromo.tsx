@@ -9,13 +9,15 @@ interface EventHotelPromoProps {
   accentColor?: string;
   urgencyMessage?: string;
   compact?: boolean;
+  hideBookButton?: boolean;
 }
 
 export const EventHotelPromo = ({ 
   eventName, 
   accentColor = "from-primary via-burgundy to-primary",
   urgencyMessage,
-  compact = false
+  compact = false,
+  hideBookButton = false
 }: EventHotelPromoProps) => {
   const { t } = useLanguage();
 
@@ -59,15 +61,17 @@ export const EventHotelPromo = ({
                       );
                     })}
                   </div>
-                  <Link to="/reservation-seminaire">
-                    <Button
-                      size="sm"
-                      className="bg-white text-foreground hover:bg-white/90 font-bold shadow-lg"
-                    >
-                      {t("eventHotelPromo.book")}
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
+                  {!hideBookButton && (
+                    <Link to="/reservation-seminaire">
+                      <Button
+                        size="sm"
+                        className="bg-white text-foreground hover:bg-white/90 font-bold shadow-lg"
+                      >
+                        {t("eventHotelPromo.book")}
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
