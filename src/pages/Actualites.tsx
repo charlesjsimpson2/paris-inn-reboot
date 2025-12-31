@@ -22,6 +22,7 @@ import orelsanHero from "@/assets/orelsan-hero-gen.jpg";
 import indochineHero from "@/assets/indochine-hero-gen.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
 import foireParisHero from "@/assets/foire-paris-hero.jpg";
+import santeExpoHero from "@/assets/sante-expo-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -197,7 +198,7 @@ const Actualites = () => {
       location: t('santeExpo.venue'),
       category: t('actualites.salon'),
       link: "/evenements/sante-expo",
-      image: heroSeminaire,
+      image: santeExpoHero,
       icon: Heart,
       badgeColor: "bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400",
     },
