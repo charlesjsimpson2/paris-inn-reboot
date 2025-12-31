@@ -14,6 +14,13 @@ import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import wutangHero from "@/assets/wu-tang-concert.jpg";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
 import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
+import scorpionsHero from "@/assets/scorpions-hero.jpg";
+import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
+import merylHero from "@/assets/meryl-hero-gen.jpg";
+import keryjamesHero from "@/assets/keryjames-hero-gen.jpg";
+import orelsanHero from "@/assets/orelsan-hero-gen.jpg";
+import indochineHero from "@/assets/indochine-hero-gen.jpg";
+import salonCseHero from "@/assets/salon-cse-hero.png";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -147,7 +154,7 @@ const Actualites = () => {
       location: t('salonCSE.venue'),
       category: t('actualites.salon'),
       link: "/evenements/salon-cse-mars",
-      image: heroSeminaire,
+      image: salonCseHero,
       icon: Briefcase,
       badgeColor: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
     },
@@ -161,7 +168,7 @@ const Actualites = () => {
       location: "Paris",
       category: t('actualites.sport'),
       link: "/evenements/marathon-paris",
-      image: semiMarathonHero,
+      image: marathonParisHero,
       icon: Timer,
       badgeColor: "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400",
     },
@@ -259,7 +266,7 @@ const Actualites = () => {
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/scorpions-concert",
-      image: mikaHero,
+      image: scorpionsHero,
       icon: Mic,
       badgeColor: "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
     },
@@ -287,7 +294,7 @@ const Actualites = () => {
       location: t('salonCSE.venue'),
       category: t('actualites.salon'),
       link: "/evenements/salon-cse-septembre",
-      image: heroSeminaire,
+      image: salonCseHero,
       icon: Briefcase,
       badgeColor: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400",
     },
@@ -329,7 +336,7 @@ const Actualites = () => {
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/meryl-concert",
-      image: mikaHero,
+      image: merylHero,
       icon: Mic,
       badgeColor: "bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400",
     },
@@ -371,7 +378,7 @@ const Actualites = () => {
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/kery-james-concert",
-      image: mikaHero,
+      image: keryjamesHero,
       icon: Mic,
       badgeColor: "bg-slate-100 dark:bg-slate-900/30 text-slate-600 dark:text-slate-400",
     },
@@ -399,7 +406,7 @@ const Actualites = () => {
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/orelsan-concert",
-      image: mikaHero,
+      image: orelsanHero,
       icon: Mic,
       badgeColor: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400",
     },
@@ -413,7 +420,7 @@ const Actualites = () => {
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/indochine-concert",
-      image: mikaHero,
+      image: indochineHero,
       icon: Mic,
       badgeColor: "bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400",
     },
