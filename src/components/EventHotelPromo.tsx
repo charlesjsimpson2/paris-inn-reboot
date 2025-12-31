@@ -61,17 +61,6 @@ export const EventHotelPromo = ({
                       );
                     })}
                   </div>
-                  {!hideBookButton && (
-                    <Link to="/reservation-seminaire">
-                      <Button
-                        size="sm"
-                        className="bg-white text-foreground hover:bg-white/90 font-bold shadow-lg"
-                      >
-                        {t("eventHotelPromo.book")}
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Button>
-                    </Link>
-                  )}
                 </div>
               </div>
             </div>
@@ -176,24 +165,15 @@ export const EventHotelPromo = ({
                       })}
                     </div>
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Link to="/reservation-seminaire" className="flex-1">
-                        <Button
-                          size="lg"
-                          className="w-full bg-gradient-to-r from-primary to-burgundy hover:from-primary/90 hover:to-burgundy/90 text-primary-foreground font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
-                        >
-                          {t("eventHotelPromo.bookNow")}
-                          <ArrowRight className="w-5 h-5 ml-2" />
-                        </Button>
-                      </Link>
+                    {/* CTA Button */}
+                    <div className="flex justify-center">
                       <Link to="/nos-chambres">
                         <Button
                           size="lg"
-                          variant="outline"
-                          className="w-full border-primary/30 hover:bg-primary/5"
+                          className="bg-gradient-to-r from-primary to-burgundy hover:from-primary/90 hover:to-burgundy/90 text-primary-foreground font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
                         >
                           {t("eventHotelPromo.viewRooms")}
+                          <ArrowRight className="w-5 h-5 ml-2" />
                         </Button>
                       </Link>
                     </div>
