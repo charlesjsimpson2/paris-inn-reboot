@@ -304,6 +304,7 @@ const SemiMarathonParis = () => {
           accentColor="from-[#E94E4B] via-[#3BB5DC] to-[#2A9BC7]"
           urgencyMessage="Offre Semi-Marathon Paris"
           compact
+          hideBookButton
         />
 
         {/* Related Events */}
