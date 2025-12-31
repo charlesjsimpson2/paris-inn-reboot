@@ -13,6 +13,7 @@ import claraHero from "@/assets/clara-luciani-portrait.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import wutangHero from "@/assets/wu-tang-concert.jpg";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -238,13 +239,13 @@ const Actualites = () => {
       id: "guns-n-roses",
       title: "Guns N' Roses",
       subtitle: t('gunsnroses.subtitle'),
-      date: "15 " + t('mika.july') + " 2026",
-      sortDate: "2026-07-15",
-      endDate: "2026-07-15",
+      date: "1 & 3 " + t('mika.july') + " 2026",
+      sortDate: "2026-07-01",
+      endDate: "2026-07-03",
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/guns-n-roses-concert",
-      image: mikaHero,
+      image: gunsNRosesHero,
       icon: Mic,
       badgeColor: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
     },
