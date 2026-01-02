@@ -38,21 +38,21 @@ const CongresMaires = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="relative py-24 overflow-hidden">
-          <img src={congresHero} alt="Congrès des Maires" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-blue-950/30 dark:via-background dark:to-indigo-950/30">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="text-left">
+              <div className="order-2 md:order-1">
+                <img src={congresHero} alt="Congrès des Maires" className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]" />
+              </div>
+              
+              <div className="order-1 md:order-2">
                 <div className="inline-flex items-center gap-2 bg-blue-700/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <Building className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('congresMaires.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('congresMaires.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('congresMaires.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('congresMaires.title')}</h1>
+                <p className="text-muted-foreground text-lg md:text-xl mb-6">{t('congresMaires.subtitle')}</p>
 
-              <div className="bg-blue-50/95 dark:bg-blue-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-blue-200/50 dark:border-blue-800/50">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-blue-200 dark:border-blue-800">
                     <Calendar className="w-5 h-5 text-blue-700" />
