@@ -2316,6 +2316,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'clara.hotelPromo.location': 'Direct access to Accor Arena',
     'clara.hotelPromo.locationDesc': 'Close to Place d\'Italie metro station, reach the Accor Arena in 20 minutes via line 14.',
     'actualites.claraluciani.date': 'February 18-19, 2026',
+
+    // Congrès des Maires
+    'congresMaires.badge': 'Congress',
+    'congresMaires.title': 'Congress of Mayors',
+    'congresMaires.subtitle': 'The annual meeting of local elected officials',
+    'congresMaires.dateDisplay': 'November 22, 2026',
+    'congresMaires.venue': 'Porte de Versailles',
+    'congresMaires.about': 'About the Congress of Mayors',
+    'congresMaires.desc1': 'The Congress of Mayors of France brings together more than 10,000 local elected officials each year to discuss the major issues facing local authorities.',
+    'congresMaires.desc2': 'Local finances, ecological transition, public services: three days of conferences, meetings and exhibitions serving French municipalities.',
+    'congresMaires.eventName': 'the Congress of Mayors',
+    'congresMaires.urgencyMessage': 'Congress of Mayors Offer',
   },
   es: {
     // Navigation
@@ -3360,6 +3372,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'runnerOffers.taxiDesc': 'Servicio de taxi para llevarle a la salida de la carrera.',
     'runnerOffers.taxiDiscount': '-10% taxi',
     'runnerOffers.note': '*Ofertas reservadas a clientes del hotel participantes en el evento',
+
+    // Congreso de Alcaldes
+    'congresMaires.badge': 'Congreso',
+    'congresMaires.title': 'Congreso de Alcaldes',
+    'congresMaires.subtitle': 'El encuentro anual de los cargos electos locales',
+    'congresMaires.dateDisplay': '22 de noviembre de 2026',
+    'congresMaires.venue': 'Porte de Versailles',
+    'congresMaires.about': 'Acerca del Congreso de Alcaldes',
+    'congresMaires.desc1': 'El Congreso de Alcaldes de Francia reúne cada año a más de 10.000 cargos electos locales para debatir los grandes desafíos de las entidades territoriales.',
+    'congresMaires.desc2': 'Finanzas locales, transición ecológica, servicios públicos: tres días de conferencias, encuentros y exposiciones al servicio de los municipios franceses.',
+    'congresMaires.eventName': 'el Congreso de Alcaldes',
+    'congresMaires.urgencyMessage': 'Oferta Congreso de Alcaldes',
   },
   it: {
     // Navigation
@@ -4404,6 +4428,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'runnerOffers.taxiDesc': 'Servizio taxi per portarvi alla partenza della gara.',
     'runnerOffers.taxiDiscount': '-10% taxi',
     'runnerOffers.note': '*Offerte riservate agli ospiti dell\'hotel partecipanti all\'evento',
+
+    // Congresso dei Sindaci
+    'congresMaires.badge': 'Congresso',
+    'congresMaires.title': 'Congresso dei Sindaci',
+    'congresMaires.subtitle': 'L\'incontro annuale degli eletti locali',
+    'congresMaires.dateDisplay': '22 novembre 2026',
+    'congresMaires.venue': 'Porte de Versailles',
+    'congresMaires.about': 'Informazioni sul Congresso dei Sindaci',
+    'congresMaires.desc1': 'Il Congresso dei Sindaci di Francia riunisce ogni anno più di 10.000 eletti locali per discutere le grandi sfide delle collettività territoriali.',
+    'congresMaires.desc2': 'Finanze locali, transizione ecologica, servizi pubblici: tre giorni di conferenze, incontri ed esposizioni al servizio dei comuni francesi.',
+    'congresMaires.eventName': 'il Congresso dei Sindaci',
+    'congresMaires.urgencyMessage': 'Offerta Congresso dei Sindaci',
   },
   pt: {
     // Navigation
@@ -5448,6 +5484,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'runnerOffers.taxiDesc': 'Serviço de táxi para levá-lo à largada da corrida.',
     'runnerOffers.taxiDiscount': '-10% táxi',
     'runnerOffers.note': '*Ofertas reservadas aos hóspedes do hotel participantes do evento',
+
+    // Congresso dos Prefeitos
+    'congresMaires.badge': 'Congresso',
+    'congresMaires.title': 'Congresso dos Prefeitos',
+    'congresMaires.subtitle': 'O encontro anual dos eleitos locais',
+    'congresMaires.dateDisplay': '22 de novembro de 2026',
+    'congresMaires.venue': 'Porte de Versailles',
+    'congresMaires.about': 'Sobre o Congresso dos Prefeitos',
+    'congresMaires.desc1': 'O Congresso dos Prefeitos da França reúne todos os anos mais de 10.000 eleitos locais para discutir os grandes desafios das coletividades territoriais.',
+    'congresMaires.desc2': 'Finanças locais, transição ecológica, serviços públicos: três dias de conferências, encontros e exposições a serviço dos municípios franceses.',
+    'congresMaires.eventName': 'o Congresso dos Prefeitos',
+    'congresMaires.urgencyMessage': 'Oferta Congresso dos Prefeitos',
   },
 };
 
