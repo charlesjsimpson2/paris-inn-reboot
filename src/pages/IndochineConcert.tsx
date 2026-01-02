@@ -13,7 +13,7 @@ import heroImage from "@/assets/indochine-hero-gen.jpg";
 const IndochineConcert = () => {
   const { t } = useLanguage();
   
-  const targetDate = new Date('2026-12-16T20:00:00').getTime();
+  const targetDate = new Date('2026-02-24T20:00:00').getTime();
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -34,11 +34,11 @@ const IndochineConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Concert Indochine Paris 2026 - Accor Arena Décembre"
-        description="Indochine en concert à Paris du 16 au 20 décembre 2026 à l'Accor Arena. 5 dates exceptionnelles. Réservez votre hôtel."
-        canonical="/evenements/indochine-concert"
-      />
+        <SEO 
+          title="Concert Indochine Paris 2026 - Accor Arena Février-Mars"
+          description="Indochine en concert à Paris les 24-28 février et 3-7 mars 2026 à l'Accor Arena. 8 dates Arena Tour. Réservez votre hôtel."
+          canonical="/evenements/indochine-concert"
+        />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}
