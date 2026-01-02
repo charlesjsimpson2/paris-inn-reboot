@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { EventBackButton } from "@/components/EventBackButton";
 import { SEO } from "@/components/SEO";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
@@ -43,6 +44,7 @@ const Equiphotel = () => {
         canonical="/evenements/equiphotel"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Sidebar layout (image gauche, texte droite) */}
         <section className="relative py-24 bg-gradient-to-br from-stone-900 via-neutral-900 to-stone-800 overflow-hidden">

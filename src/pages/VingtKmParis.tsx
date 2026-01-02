@@ -7,6 +7,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
+import { EventBackButton } from "@/components/EventBackButton";
 import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
 import { useState, useEffect } from "react";
 
@@ -34,6 +35,7 @@ const VingtKmParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <EventBackButton />
       <main>
         <section className="relative py-24 overflow-hidden">
           <img src={semiMarathonHero} alt="20 km de Paris" className="absolute inset-0 w-full h-full object-cover object-center" />
