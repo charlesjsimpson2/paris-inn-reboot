@@ -21,7 +21,7 @@ import scorpionsHero from "@/assets/scorpions-tour-2026.jpg";
 import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
 import merylHero from "@/assets/meryl-affiche.jpg";
 import keryjamesHero from "@/assets/kery-james-affiche.jpg";
-import orelsanHero from "@/assets/orelsan-hero-gen.jpg";
+import orelsanHero from "@/assets/orelsan-hero.jpg";
 import indochineHero from "@/assets/indochine-hero-gen.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
 import foireParisHero from "@/assets/foire-paris-hero.jpg";
