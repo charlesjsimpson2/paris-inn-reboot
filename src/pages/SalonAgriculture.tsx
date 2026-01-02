@@ -8,6 +8,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
@@ -47,6 +48,7 @@ const SalonAgriculture = () => {
         canonical="/evenements/salon-agriculture"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section with Sidebar Info */}
         <section className="relative py-24 overflow-hidden">

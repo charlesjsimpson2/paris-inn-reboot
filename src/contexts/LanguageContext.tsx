@@ -265,6 +265,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Événements & Offres',
     'events.title': 'Découvrez notre agenda et offres',
     'events.cta': 'Voir tous les événements',
+    'events.backToEvents': 'Retour aux événements',
     
     // Actualites Page
     'actualites.hero.badge': 'Événements & Offres',
@@ -1520,7 +1521,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Events & Offers',
     'events.title': 'Discover our agenda and offers',
     'events.cta': 'See all events',
-    
+    'events.backToEvents': 'Back to events',
+
     // Actualites Page
     'actualites.hero.badge': 'Events & Offers',
     'actualites.hero.title': 'Our events and exclusive offers',
@@ -2575,7 +2577,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Eventos y Ofertas',
     'events.title': 'Descubra nuestra agenda y ofertas',
     'events.cta': 'Ver todos los eventos',
-    
+    'events.backToEvents': 'Volver a eventos',
+
     // Actualites Page
     'actualites.hero.badge': 'Eventos y Ofertas',
     'actualites.hero.title': 'Nuestros eventos y ofertas exclusivas',
@@ -3631,7 +3634,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Eventi e Offerte',
     'events.title': 'Scopri la nostra agenda e offerte',
     'events.cta': 'Vedi tutti gli eventi',
-    
+    'events.backToEvents': 'Torna agli eventi',
+
     // Actualites Page
     'actualites.hero.badge': 'Eventi e Offerte',
     'actualites.hero.title': 'I nostri eventi e offerte esclusive',
@@ -4687,7 +4691,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'events.badge': 'Eventos e Ofertas',
     'events.title': 'Descubra nossa agenda e ofertas',
     'events.cta': 'Ver todos os eventos',
-    
+    'events.backToEvents': 'Voltar aos eventos',
+
     // Actualites Page
     'actualites.hero.badge': 'Eventos e Ofertas',
     'actualites.hero.title': 'Nossos eventos e ofertas exclusivas',

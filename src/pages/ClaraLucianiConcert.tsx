@@ -13,6 +13,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 
 const ClaraLucianiConcert = () => {
   const { t } = useLanguage();
@@ -46,6 +47,7 @@ const ClaraLucianiConcert = () => {
         canonical="/evenements/clara-luciani-concert"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden">

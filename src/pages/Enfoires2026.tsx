@@ -10,6 +10,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 
 const Enfoires2026 = () => {
   const { t } = useLanguage();
@@ -52,6 +53,7 @@ const Enfoires2026 = () => {
         canonical="/evenements/enfoires-2026"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden bg-gradient-to-br from-pink-600 via-fuchsia-600 to-purple-700">

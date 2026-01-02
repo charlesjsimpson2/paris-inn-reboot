@@ -7,6 +7,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
+import { EventBackButton } from "@/components/EventBackButton";
 import marathonHero from "@/assets/marathon-paris-hero.jpg";
 import marathonCoureurs from "@/assets/marathon-paris-coureurs.jpg";
 import { useState, useEffect } from "react";
@@ -35,6 +36,7 @@ const MarathonParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Sidebar Layout */}
         <section className="relative py-16 md:py-24 bg-gradient-to-br from-yellow-900 via-orange-900 to-yellow-800 overflow-hidden">

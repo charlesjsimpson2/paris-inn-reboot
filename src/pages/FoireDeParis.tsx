@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
@@ -36,6 +37,7 @@ const FoireDeParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <EventBackButton />
       <main>
         <section className="py-24 bg-gradient-to-br from-rose-50 via-amber-50 to-rose-50 dark:from-rose-950/30 dark:via-amber-950/20 dark:to-rose-950/30">
           <div className="container mx-auto px-4">

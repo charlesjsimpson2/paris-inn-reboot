@@ -9,6 +9,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -60,6 +61,7 @@ const Tournoi6Nations = () => {
         canonical="/evenements/tournoi-6-nations"
       />
       <Header />
+      <EventBackButton />
       <main>
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
           <img src={rugbyHero} alt="Match France - Irlande" className="absolute inset-0 w-full h-full object-cover" />
