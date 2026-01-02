@@ -2415,6 +2415,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'congresACCDOM.desc2': 'Economic development, ecological transition, territorial continuity: a day of debates and proposals for overseas territories.',
     'congresACCDOM.eventName': 'ACCDOM Congress',
     'congresACCDOM.urgencyMessage': 'ACCDOM Congress Offer',
+
+    // Japan Expo
+    'japanExpo.badge': 'Japanese culture',
+    'japanExpo.title': 'Japan Expo',
+    'japanExpo.subtitle': 'The Japanese culture festival',
+    'japanExpo.dateDisplay': 'July 9-12, 2026',
+    'japanExpo.venue': 'Villepinte Exhibition Center',
+    'japanExpo.about': 'About Japan Expo',
+    'japanExpo.desc1': 'Japan Expo is the largest European festival dedicated to Japanese culture. Manga, anime, video games, music, martial arts, gastronomy: 250,000 visitors celebrate their passion for Japan every year.',
+    'japanExpo.desc2': 'Meet Japanese artists, participate in cosplay contests, discover the latest manga releases and experience an immersive journey to the Land of the Rising Sun.',
+    'japanExpo.eventName': 'Japan Expo',
+    'japanExpo.urgencyMessage': 'Japan Expo Offer',
   },
   es: {
     // Navigation
@@ -3557,6 +3569,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'congresACCDOM.desc2': 'Desarrollo económico, transición ecológica, continuidad territorial: una jornada de debates y propuestas para los territorios de ultramar.',
     'congresACCDOM.eventName': 'el Congreso ACCDOM',
     'congresACCDOM.urgencyMessage': 'Oferta Congreso ACCDOM',
+
+    // Japan Expo
+    'japanExpo.badge': 'Cultura japonesa',
+    'japanExpo.title': 'Japan Expo',
+    'japanExpo.subtitle': 'El festival de la cultura japonesa',
+    'japanExpo.dateDisplay': '9-12 julio 2026',
+    'japanExpo.venue': 'Parque de Exposiciones de Villepinte',
+    'japanExpo.about': 'Sobre Japan Expo',
+    'japanExpo.desc1': 'Japan Expo es el mayor festival europeo dedicado a la cultura japonesa. Manga, anime, videojuegos, música, artes marciales, gastronomía: 250.000 visitantes celebran cada año su pasión por Japón.',
+    'japanExpo.desc2': 'Conoce a artistas japoneses, participa en concursos de cosplay, descubre los últimos lanzamientos de manga y vive una experiencia inmersiva en el País del Sol Naciente.',
+    'japanExpo.eventName': 'Japan Expo',
+    'japanExpo.urgencyMessage': 'Oferta Japan Expo',
   },
   it: {
     // Navigation
@@ -4699,6 +4723,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'congresACCDOM.desc2': 'Sviluppo economico, transizione ecologica, continuità territoriale: una giornata di dibattiti e proposte per i territori d\'oltremare.',
     'congresACCDOM.eventName': 'il Congresso ACCDOM',
     'congresACCDOM.urgencyMessage': 'Offerta Congresso ACCDOM',
+
+    // Japan Expo
+    'japanExpo.badge': 'Cultura giapponese',
+    'japanExpo.title': 'Japan Expo',
+    'japanExpo.subtitle': 'Il festival della cultura giapponese',
+    'japanExpo.dateDisplay': '9-12 luglio 2026',
+    'japanExpo.venue': 'Parco Esposizioni di Villepinte',
+    'japanExpo.about': 'Informazioni su Japan Expo',
+    'japanExpo.desc1': 'Japan Expo è il più grande festival europeo dedicato alla cultura giapponese. Manga, anime, videogiochi, musica, arti marziali, gastronomia: 250.000 visitatori celebrano ogni anno la loro passione per il Giappone.',
+    'japanExpo.desc2': 'Incontra artisti giapponesi, partecipa a concorsi cosplay, scopri le ultime uscite manga e vivi un\'esperienza immersiva nel Paese del Sol Levante.',
+    'japanExpo.eventName': 'Japan Expo',
+    'japanExpo.urgencyMessage': 'Offerta Japan Expo',
   },
   pt: {
     // Navigation
@@ -5841,6 +5877,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'congresACCDOM.desc2': 'Desenvolvimento econômico, transição ecológica, continuidade territorial: uma jornada de debates e propostas para os territórios ultramarinos.',
     'congresACCDOM.eventName': 'o Congresso ACCDOM',
     'congresACCDOM.urgencyMessage': 'Oferta Congresso ACCDOM',
+
+    // Japan Expo
+    'japanExpo.badge': 'Cultura japonesa',
+    'japanExpo.title': 'Japan Expo',
+    'japanExpo.subtitle': 'O festival da cultura japonesa',
+    'japanExpo.dateDisplay': '9-12 julho 2026',
+    'japanExpo.venue': 'Parque de Exposições de Villepinte',
+    'japanExpo.about': 'Sobre Japan Expo',
+    'japanExpo.desc1': 'Japan Expo é o maior festival europeu dedicado à cultura japonesa. Mangá, anime, videogames, música, artes marciais, gastronomia: 250.000 visitantes celebram sua paixão pelo Japão todos os anos.',
+    'japanExpo.desc2': 'Conheça artistas japoneses, participe de concursos de cosplay, descubra os últimos lançamentos de mangá e viva uma experiência imersiva na Terra do Sol Nascente.',
+    'japanExpo.eventName': 'Japan Expo',
+    'japanExpo.urgencyMessage': 'Oferta Japan Expo',
   },
 };
 
