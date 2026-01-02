@@ -9,7 +9,8 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import sialHero from "@/assets/sial-hero.jpeg";
+import sialEvent from "@/assets/sial-event.webp";
 import { useState, useEffect } from "react";
 
 const SIAL = () => {
@@ -38,7 +39,7 @@ const SIAL = () => {
       <Header />
       <main>
         <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="SIAL" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src={sialHero} alt="SIAL Paris 2026" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -131,7 +132,9 @@ const SIAL = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('sial.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={heroSeminaire} alt="SIAL" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <div className="aspect-[4/3] w-full max-w-md overflow-hidden rounded-xl shadow-xl">
+                  <img src={sialEvent} alt="SIAL Paris Event" className="w-full h-full object-cover" />
+                </div>
               </div>
             </div>
           </div>
