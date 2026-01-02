@@ -12,6 +12,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 
 const MikaConcert = () => {
   const { t } = useLanguage();
@@ -45,6 +46,7 @@ const MikaConcert = () => {
         canonical="/evenements/mika-concert"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - PUNCHY */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">

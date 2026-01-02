@@ -8,6 +8,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { useState, useEffect } from "react";
+import { EventBackButton } from "@/components/EventBackButton";
 
 import franceAngleterreHero from "@/assets/france-angleterre-match.png";
 
@@ -89,6 +90,7 @@ const FranceAngleterre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 overflow-hidden">

@@ -11,6 +11,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
+import { EventBackButton } from "@/components/EventBackButton";
 
 const SemiMarathonParis = () => {
   const { t } = useLanguage();
@@ -39,6 +40,7 @@ const SemiMarathonParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Couleurs HOKA */}
         <section className="relative pt-24 pb-16 overflow-hidden">

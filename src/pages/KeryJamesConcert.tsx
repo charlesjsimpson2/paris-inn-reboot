@@ -7,6 +7,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 import heroAffiche from "@/assets/kery-james-affiche.jpg";
 import heroPortrait from "@/assets/kery-james-portrait.jpg";
 
@@ -40,6 +41,7 @@ const KeryJamesConcert = () => {
         canonical="/evenements/kery-james-concert"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Style MIKA */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">

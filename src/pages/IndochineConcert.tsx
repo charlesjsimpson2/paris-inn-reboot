@@ -8,6 +8,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 import heroImage from "@/assets/indochine-hero.jpg";
 import portraitImage from "@/assets/indochine-portrait.jpg";
 
@@ -41,6 +42,7 @@ const IndochineConcert = () => {
           canonical="/evenements/indochine-concert"
         />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Style MIKA */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">

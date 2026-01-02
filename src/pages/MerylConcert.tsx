@@ -8,6 +8,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 import heroImage from "@/assets/meryl-affiche.jpg";
 import concertPortrait from "@/assets/meryl-portrait.webp";
 
@@ -41,6 +42,7 @@ const MerylConcert = () => {
         canonical="/evenements/meryl-concert"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Style MIKA avec couleurs bordeaux/marron */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">

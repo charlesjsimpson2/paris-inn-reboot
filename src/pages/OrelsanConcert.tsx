@@ -8,6 +8,7 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
+import { EventBackButton } from "@/components/EventBackButton";
 import heroImage from "@/assets/orelsan-hero.jpg";
 import orelsanPortrait from "@/assets/orelsan-portrait.jpg";
 
@@ -41,6 +42,7 @@ const OrelsanConcert = () => {
         canonical="/evenements/orelsan-concert"
       />
       <Header />
+      <EventBackButton />
       <main>
         {/* Hero Section - Style MIKA */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">
