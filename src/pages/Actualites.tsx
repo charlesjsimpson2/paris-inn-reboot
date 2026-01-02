@@ -22,7 +22,7 @@ import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
 import merylHero from "@/assets/meryl-affiche.jpg";
 import keryjamesHero from "@/assets/kery-james-affiche.jpg";
 import orelsanHero from "@/assets/orelsan-hero.jpg";
-import indochineHero from "@/assets/indochine-hero-gen.jpg";
+import indochineHero from "@/assets/indochine-hero.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
 import foireParisHero from "@/assets/foire-paris-hero.jpg";
 import santeExpoHero from "@/assets/sante-expo-hero.jpg";
@@ -424,9 +424,9 @@ const Actualites = () => {
       id: "indochine",
       title: "Indochine",
       subtitle: t('indochine.subtitle'),
-      date: "16-20 " + t('mika.december') + " 2026",
-      sortDate: "2026-12-16",
-      endDate: "2026-12-20",
+      date: "24-28 " + t('mika.february') + " & 3-7 " + t('mika.march') + " 2026",
+      sortDate: "2026-02-24",
+      endDate: "2026-03-07",
       location: "Accor Arena Paris",
       category: t('actualites.concert'),
       link: "/evenements/indochine-concert",
