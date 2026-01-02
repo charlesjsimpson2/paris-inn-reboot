@@ -14,6 +14,7 @@ import claraHero from "@/assets/clara-luciani-portrait.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import wutangHero from "@/assets/wu-tang-concert.jpg";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import sialHero from "@/assets/sial-hero.jpeg";
 import texworldHero from "@/assets/texworld-hero.jpg";
 import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
 import scorpionsHero from "@/assets/scorpions-tour-2026.jpg";
@@ -329,7 +330,7 @@ const Actualites = () => {
       location: t('sial.venue'),
       category: t('actualites.salon'),
       link: "/evenements/sial",
-      image: heroSeminaire,
+      image: sialHero,
       icon: UtensilsCrossed,
       badgeColor: "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400",
     },
