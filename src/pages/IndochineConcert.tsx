@@ -8,7 +8,8 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
-import heroImage from "@/assets/indochine-hero-gen.jpg";
+import heroImage from "@/assets/indochine-hero.jpg";
+import portraitImage from "@/assets/indochine-portrait.jpg";
 
 const IndochineConcert = () => {
   const { t } = useLanguage();
@@ -221,11 +222,20 @@ const IndochineConcert = () => {
                 <h2 className="font-display text-4xl md:text-5xl text-foreground">{t('indochine.legendTitle')}</h2>
               </div>
               
-              <div className="space-y-6 text-muted-foreground max-w-4xl mx-auto">
-                <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history1') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history2') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history3') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history4') }} />
+              <div className="grid md:grid-cols-2 gap-10 items-start">
+                <div className="space-y-6 text-muted-foreground">
+                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history2') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history3') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('indochine.history4') }} />
+                </div>
+                <div className="flex justify-center">
+                  <img 
+                    src={portraitImage} 
+                    alt="Indochine groupe rock" 
+                    className="rounded-2xl shadow-xl max-w-sm w-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
