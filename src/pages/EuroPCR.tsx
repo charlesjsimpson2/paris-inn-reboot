@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
@@ -38,6 +39,7 @@ const EuroPCR = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <EventBackButton />
       <main>
         <section className="relative py-16 md:py-24 bg-gradient-to-br from-purple-900 via-purple-800 to-amber-600 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
