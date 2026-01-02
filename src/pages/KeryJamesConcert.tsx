@@ -1,14 +1,14 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History, Zap, Music } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Calendar, MapPin, Clock, Gift, Car, Shirt, Trophy, Sparkles, Mic, History, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
-import heroImage from "@/assets/keryjames-hero-gen.jpg";
+import heroAffiche from "@/assets/kery-james-affiche.jpg";
+import heroPortrait from "@/assets/kery-james-portrait.jpg";
 
 const KeryJamesConcert = () => {
   const { t } = useLanguage();
@@ -43,14 +43,14 @@ const KeryJamesConcert = () => {
       <main>
         {/* Hero Section - Style MIKA */}
         <section className="relative pt-20 pb-20 overflow-hidden min-h-[90vh] flex items-center">
-          {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 animate-gradient" />
+          {/* Animated gradient background - Rouge intense */}
+          <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-rose-950 to-red-800 animate-gradient" />
           
           {/* Animated circles */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-20 -left-20 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-float" />
-            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-slate-500/40 rounded-full blur-3xl animate-float animation-delay-400" />
-            <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-blue-600/30 rounded-full blur-3xl animate-float animation-delay-600" />
+            <div className="absolute -top-20 -left-20 w-96 h-96 bg-red-500/30 rounded-full blur-3xl animate-float" />
+            <div className="absolute top-1/2 -right-32 w-80 h-80 bg-rose-500/40 rounded-full blur-3xl animate-float animation-delay-400" />
+            <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-red-600/30 rounded-full blur-3xl animate-float animation-delay-600" />
           </div>
           
           {/* Sparkle pattern */}
@@ -64,14 +64,14 @@ const KeryJamesConcert = () => {
                 {/* Affiche avec effet glow */}
                 <div className="flex justify-center order-2 md:order-1 animate-fade-up">
                   <div className="relative group">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-slate-500 to-blue-600 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse-glow" />
+                    <div className="absolute -inset-4 bg-gradient-to-r from-red-500 via-rose-500 to-red-600 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse-glow" />
                     <img 
-                      src={heroImage} 
+                      src={heroAffiche} 
                       alt="Kery James Concert Accor Arena 2026" 
                       className="relative w-full max-w-md md:max-w-lg rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                     {/* Badge flottant */}
-                    <div className="absolute -top-4 -right-4 bg-blue-400 text-white font-bold px-4 py-2 rounded-full shadow-xl animate-bounce-subtle">
+                    <div className="absolute -top-4 -right-4 bg-red-500 text-white font-bold px-4 py-2 rounded-full shadow-xl animate-bounce-subtle">
                       <span className="flex items-center gap-1">
                         <Zap className="w-4 h-4" /> LIVE
                       </span>
@@ -83,33 +83,33 @@ const KeryJamesConcert = () => {
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="animate-fade-up">
                     <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full mb-6 border border-white/30">
-                      <Mic className="w-5 h-5 text-blue-300 animate-bounce-subtle" />
+                      <Mic className="w-5 h-5 text-red-300 animate-bounce-subtle" />
                       <span className="text-white uppercase tracking-widest text-sm font-bold">{t('keryjames.tour')}</span>
                     </div>
                   </div>
                   
                   <h1 className="font-display text-5xl md:text-7xl text-white mb-4 drop-shadow-2xl animate-fade-up animation-delay-200">
-                    <span className="bg-gradient-to-r from-blue-300 via-slate-200 to-white bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-red-300 via-rose-200 to-white bg-clip-text text-transparent">
                       {t('keryjames.title')}
                     </span>
                   </h1>
                   
-                  <p className="text-2xl md:text-3xl text-blue-200 font-display mb-8 animate-fade-up animation-delay-400">
+                  <p className="text-2xl md:text-3xl text-red-200 font-display mb-8 animate-fade-up animation-delay-400">
                     {t('keryjames.subtitle')}
                   </p>
                   
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-10 animate-fade-up animation-delay-600">
                     <div className="flex items-center gap-2 bg-white/25 backdrop-blur-md px-5 py-3 rounded-full text-white font-bold text-sm border border-white/30 hover:bg-white/35 transition-colors">
-                      <Calendar className="w-5 h-5 text-blue-300" />{t('keryjames.dateInfo')}
+                      <Calendar className="w-5 h-5 text-red-300" />{t('keryjames.dateInfo')}
                     </div>
                     <div className="flex items-center gap-2 bg-white/25 backdrop-blur-md px-5 py-3 rounded-full text-white font-bold text-sm border border-white/30 hover:bg-white/35 transition-colors">
-                      <MapPin className="w-5 h-5 text-slate-300" />Accor Arena Paris
+                      <MapPin className="w-5 h-5 text-rose-300" />Accor Arena Paris
                     </div>
                   </div>
                   
                   {/* Countdown PUNCHY */}
                   <div className="inline-block bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/20 animate-fade-up animation-delay-600">
-                    <div className="flex items-center justify-center gap-2 mb-4 text-blue-300">
+                    <div className="flex items-center justify-center gap-2 mb-4 text-red-300">
                       <Clock className="w-5 h-5 animate-pulse" />
                       <span className="text-sm uppercase tracking-widest font-bold">{t('keryjames.countdown')}</span>
                     </div>
@@ -121,10 +121,10 @@ const KeryJamesConcert = () => {
                         { value: countdown.seconds, label: t('keryjames.sec') }
                       ].map((item, idx) => (
                         <div key={idx} className="group">
-                          <div className="bg-gradient-to-br from-blue-500 via-slate-500 to-blue-600 rounded-2xl px-3 md:px-5 py-3 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                          <div className="bg-gradient-to-br from-red-500 via-rose-500 to-red-600 rounded-2xl px-3 md:px-5 py-3 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                             <span className="font-display text-2xl md:text-4xl text-white font-bold drop-shadow-lg">{item.value}</span>
                           </div>
-                          <p className="text-blue-200 text-xs mt-2 uppercase font-bold tracking-wide">{item.label}</p>
+                          <p className="text-red-200 text-xs mt-2 uppercase font-bold tracking-wide">{item.label}</p>
                         </div>
                       ))}
                     </div>
@@ -136,11 +136,11 @@ const KeryJamesConcert = () => {
         </section>
 
         {/* Exclusive Offers - 3 columns */}
-        <section className="py-10 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/20 dark:via-background dark:to-slate-950/20">
+        <section className="py-10 bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-red-950/20 dark:via-background dark:to-rose-950/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-slate-700 text-white px-5 py-2 rounded-full mb-2 shadow-lg">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-rose-700 text-white px-5 py-2 rounded-full mb-2 shadow-lg">
                   <Gift className="w-4 h-4" />
                   <span className="font-bold text-sm uppercase tracking-wider">{t('keryjames.exclusiveOffers')}</span>
                 </div>
@@ -149,45 +149,45 @@ const KeryJamesConcert = () => {
               
               <div className="grid md:grid-cols-3 gap-5">
                 {/* Parking */}
-                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-[1.02] transition-transform duration-300 group">
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-red-200 dark:border-red-800/50 hover:scale-[1.02] transition-transform duration-300 group">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Car className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-display text-lg text-foreground">{t('keryjames.parking')}</h3>
-                      <div className="inline-block bg-blue-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('keryjames.parkingPrice')}</div>
+                      <div className="inline-block bg-red-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('keryjames.parkingPrice')}</div>
                     </div>
                   </div>
                   <p className="text-muted-foreground text-sm">{t('keryjames.parkingDesc')}</p>
                 </div>
 
                 {/* Taxi */}
-                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-slate-200 dark:border-slate-800/50 hover:scale-[1.02] transition-transform duration-300 group">
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-rose-200 dark:border-rose-800/50 hover:scale-[1.02] transition-transform duration-300 group">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Car className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-display text-lg text-foreground">{t('keryjames.taxi')}</h3>
-                      <div className="inline-block bg-slate-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('keryjames.taxiDiscount')}</div>
+                      <div className="inline-block bg-rose-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('keryjames.taxiDiscount')}</div>
                     </div>
                   </div>
                   <p className="text-muted-foreground text-sm">{t('keryjames.taxiDesc')}</p>
                 </div>
 
                 {/* T-shirt Raffle */}
-                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-blue-200 dark:border-blue-800/50 hover:scale-[1.02] transition-transform duration-300 group relative overflow-hidden">
+                <div className="bg-white dark:bg-card rounded-2xl p-5 shadow-xl border-2 border-red-200 dark:border-red-800/50 hover:scale-[1.02] transition-transform duration-300 group relative overflow-hidden">
                   <div className="absolute top-2 right-2">
-                    <Trophy className="w-4 h-4 text-blue-400" />
+                    <Trophy className="w-4 h-4 text-red-400" />
                   </div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-slate-800 to-blue-900 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-800 to-rose-900 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <Shirt className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-display text-lg text-foreground">{t('concert.raffle.title').replace('!', '')}</h3>
-                      <span className="text-xs text-blue-600 dark:text-blue-400 font-medium uppercase tracking-wide">{t('concert.raffle.badge')}</span>
+                      <span className="text-xs text-red-600 dark:text-red-400 font-medium uppercase tracking-wide">{t('concert.raffle.badge')}</span>
                     </div>
                   </div>
                   <p className="text-muted-foreground text-sm">{t('concert.raffle.subtitle')}</p>
@@ -205,46 +205,55 @@ const KeryJamesConcert = () => {
           travelTime="~25 min"
           metroLine="Ligne 14"
           metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
-          accentColor="from-slate-900 via-blue-900 to-slate-800"
+          accentColor="from-red-900 via-rose-900 to-red-800"
         />
 
         {/* About Section - Artist History */}
         <section className="py-16 bg-white dark:bg-background relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-slate-600 to-blue-600" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 via-rose-600 to-red-600" />
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-slate-100 dark:from-blue-900/40 dark:to-slate-900/40 text-blue-700 dark:text-blue-300 px-6 py-3 rounded-full mb-4 shadow-lg">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-rose-100 dark:from-red-900/40 dark:to-rose-900/40 text-red-700 dark:text-red-300 px-6 py-3 rounded-full mb-4 shadow-lg">
                   <History className="w-5 h-5" />
                   <span className="font-bold text-sm uppercase tracking-wider">{t('keryjames.artistHistory')}</span>
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl text-foreground">{t('keryjames.legendTitle')}</h2>
               </div>
               
-              <div className="space-y-6 text-muted-foreground max-w-4xl mx-auto">
-                <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history1') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history2') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history3') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history4') }} />
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                <div className="order-2 md:order-1">
+                  <img 
+                    src={heroPortrait} 
+                    alt="Kery James Portrait" 
+                    className="w-full rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="space-y-6 text-muted-foreground order-1 md:order-2">
+                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history2') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history3') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.history4') }} />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Show Description Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 via-slate-50 to-blue-50 dark:from-blue-950/20 dark:via-slate-950/20 dark:to-blue-950/20">
+        <section className="py-20 bg-gradient-to-br from-red-50 via-rose-50 to-red-50 dark:from-red-950/20 dark:via-rose-950/20 dark:to-red-950/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-slate-700 text-white px-6 py-3 rounded-full mb-4 shadow-lg">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-rose-700 text-white px-6 py-3 rounded-full mb-4 shadow-lg">
                   <Sparkles className="w-5 h-5 animate-pulse" />
                   <span className="font-bold text-sm uppercase tracking-wider">{t('keryjames.returnToBercy')}</span>
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('keryjames.uniqueShow')}</h2>
               </div>
               
-              <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-blue-200 dark:border-blue-800/50 overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-400/20 to-slate-400/20 rounded-full blur-3xl" />
+              <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-red-200 dark:border-red-800/50 overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-400/20 to-rose-400/20 rounded-full blur-3xl" />
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
                   <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('keryjames.showIntro') }} />
                   <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('keryjames.showDesc') }} />
@@ -257,7 +266,7 @@ const KeryJamesConcert = () => {
         {/* Hotel Promo Section - Compact */}
         <EventHotelPromo 
           eventName={t("keryjames.title")}
-          accentColor="from-slate-900 via-blue-900 to-slate-800"
+          accentColor="from-red-900 via-rose-900 to-red-800"
           urgencyMessage={t("keryjames.urgencyMessage")}
           compact
         />

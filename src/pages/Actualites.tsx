@@ -20,7 +20,7 @@ import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
 import scorpionsHero from "@/assets/scorpions-tour-2026.jpg";
 import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
 import merylHero from "@/assets/meryl-affiche.jpg";
-import keryjamesHero from "@/assets/keryjames-hero-gen.jpg";
+import keryjamesHero from "@/assets/kery-james-affiche.jpg";
 import orelsanHero from "@/assets/orelsan-hero-gen.jpg";
 import indochineHero from "@/assets/indochine-hero-gen.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
@@ -390,7 +390,7 @@ const Actualites = () => {
       link: "/evenements/kery-james-concert",
       image: keryjamesHero,
       icon: Mic,
-      badgeColor: "bg-slate-100 dark:bg-slate-900/30 text-slate-600 dark:text-slate-400",
+      badgeColor: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
     },
     {
       id: "congres-maires",
