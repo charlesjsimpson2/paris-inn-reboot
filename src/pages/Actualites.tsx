@@ -30,6 +30,7 @@ import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
 import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
 import japanExpoHero from "@/assets/japan-expo-hero.jpg";
 import equiphotelHero from "@/assets/equiphotel-hero.png";
+import congresAccdomHero from "@/assets/congres-accdom-hero.png";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -367,15 +368,15 @@ const Actualites = () => {
       id: "congres-accdom",
       title: t('congresACCDOM.title'),
       subtitle: t('congresACCDOM.subtitle'),
-      date: "15 " + t('mika.november') + " 2026",
-      sortDate: "2026-11-15",
-      endDate: "2026-11-15",
-      location: t('congresACCDOM.venue'),
+      date: "12-14 " + t('mika.november') + " 2026",
+      sortDate: "2026-11-12",
+      endDate: "2026-11-14",
+      location: "Mercure Porte de Versailles",
       category: t('actualites.congres'),
       link: "/evenements/congres-accdom",
-      image: heroSeminaire,
+      image: congresAccdomHero,
       icon: Landmark,
-      badgeColor: "bg-sky-100 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400",
+      badgeColor: "bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400",
     },
     {
       id: "kery-james",
