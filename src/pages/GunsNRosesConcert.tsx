@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import heroImage from "@/assets/guns-n-roses-hero.webp";
 import portraitImage from "@/assets/guns-n-roses-portrait.jpg";
 
@@ -34,6 +35,11 @@ const GunsNRosesConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Guns N' Roses Paris 2026 - Accor Arena Juillet"
+        description="Guns N' Roses en concert à Paris les 1er et 3 juillet 2026 à l'Accor Arena. World Tour 2026. Réservez votre hôtel."
+        canonical="/evenements/guns-n-roses-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}

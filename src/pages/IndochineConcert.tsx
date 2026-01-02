@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import heroImage from "@/assets/indochine-hero-gen.jpg";
 
 const IndochineConcert = () => {
@@ -33,6 +34,11 @@ const IndochineConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Indochine Paris 2026 - Accor Arena Décembre"
+        description="Indochine en concert à Paris du 16 au 20 décembre 2026 à l'Accor Arena. 5 dates exceptionnelles. Réservez votre hôtel."
+        canonical="/evenements/indochine-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}

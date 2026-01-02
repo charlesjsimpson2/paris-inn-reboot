@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import heroImage from "@/assets/meryl-hero-gen.jpg";
 
 const MerylConcert = () => {
@@ -33,6 +34,11 @@ const MerylConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Meryl Paris 2026 - Accor Arena Octobre"
+        description="Meryl en concert à Paris le 27 octobre 2026 à l'Accor Arena. Réservez votre hébergement près du métro Place d'Italie."
+        canonical="/evenements/meryl-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}

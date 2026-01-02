@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import heroImage from "@/assets/orelsan-hero-gen.jpg";
 
 const OrelsanConcert = () => {
@@ -33,6 +34,11 @@ const OrelsanConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Orelsan Paris 2026 - Accor Arena Décembre"
+        description="Orelsan en concert à Paris le 9 décembre 2026 à l'Accor Arena. Réservez votre hébergement près du métro Place d'Italie."
+        canonical="/evenements/orelsan-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}

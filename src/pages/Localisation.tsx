@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MapPin, Plane, Building2, Landmark, Train, Car, Clock, Phone, TrainFront, Bus, TramFront } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
 
 const Localisation = () => {
@@ -24,6 +25,11 @@ const Localisation = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Localisation - Hôtel Inn Design Paris Place d'Italie"
+        description="Hôtel idéalement situé à 2 min du métro Place d'Italie (lignes 5, 6, 7). Accès direct Tour Eiffel, Louvre, Champs-Élysées. Paris 13ème."
+        canonical="/localisation"
+      />
       <Header />
 
       {/* Map Section - Side by side */}

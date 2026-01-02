@@ -12,6 +12,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 
 const ClaraLucianiConcert = () => {
   const { t } = useLanguage();
@@ -39,6 +40,11 @@ const ClaraLucianiConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Clara Luciani Paris 2026 - Accor Arena"
+        description="Clara Luciani en concert à Paris les 18 et 19 février 2026 à l'Accor Arena. Réservez votre hôtel près du métro Place d'Italie."
+        canonical="/evenements/clara-luciani-concert"
+      />
       <Header />
       <main>
         {/* Hero Section */}

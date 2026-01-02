@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
@@ -40,6 +41,11 @@ const SalonAgriculture = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Salon de l'Agriculture Paris 2026 - Hébergement Porte de Versailles"
+        description="Salon de l'Agriculture 2026 du 21 février au 1er mars. Hôtel proche Porte de Versailles, accès métro direct. Réservez."
+        canonical="/evenements/salon-agriculture"
+      />
       <Header />
       <main>
         {/* Hero Section with Sidebar Info */}
