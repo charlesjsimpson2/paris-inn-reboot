@@ -56,7 +56,7 @@ const Tournoi6Nations = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="France vs Irlande - Tournoi 6 Nations 2026 Stade de France"
-        description="Match France-Irlande du Tournoi des 6 Nations le 22 février 2026 au Stade de France. Réservez votre hôtel à Paris."
+        description="Match France-Irlande du Tournoi des 6 Nations le 5 février 2026 au Stade de France. Réservez votre hôtel à Paris."
         canonical="/evenements/tournoi-6-nations"
       />
       <Header />
@@ -84,7 +84,7 @@ const Tournoi6Nations = () => {
                 <p className="text-white/90 text-lg md:text-xl mb-6">{t('rugby.subtitle')}</p>
                 <div className="flex flex-wrap gap-4 text-white/90">
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <Calendar className="w-4 h-4" /><span>22 Février 2026</span>
+                    <Calendar className="w-4 h-4" /><span>5 Février 2026</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                     <Clock className="w-4 h-4" /><span>21h00</span>
