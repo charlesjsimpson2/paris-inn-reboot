@@ -8,7 +8,8 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
-import heroImage from "@/assets/orelsan-hero-gen.jpg";
+import heroImage from "@/assets/orelsan-hero.jpg";
+import orelsanPortrait from "@/assets/orelsan-portrait.jpg";
 
 const OrelsanConcert = () => {
   const { t } = useLanguage();
@@ -243,11 +244,20 @@ const OrelsanConcert = () => {
                 <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">{t('orelsan.uniqueShow')}</h2>
               </div>
               
-              <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-emerald-200 dark:border-emerald-800/50 overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-emerald-400/20 to-cyan-400/20 rounded-full blur-3xl" />
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
-                  <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('orelsan.showIntro') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('orelsan.showDesc') }} />
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <img 
+                    src={orelsanPortrait} 
+                    alt="Orelsan portrait" 
+                    className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]" 
+                  />
+                </div>
+                <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 border-2 border-emerald-200 dark:border-emerald-800/50 overflow-hidden relative">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-emerald-400/20 to-cyan-400/20 rounded-full blur-3xl" />
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
+                    <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('orelsan.showIntro') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('orelsan.showDesc') }} />
+                  </div>
                 </div>
               </div>
             </div>
