@@ -31,6 +31,7 @@ import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
 import japanExpoHero from "@/assets/japan-expo-hero.jpg";
 import equiphotelHero from "@/assets/equiphotel-hero.png";
 import congresAccdomHero from "@/assets/congres-accdom-hero.png";
+import congresMairesHero from "@/assets/congres-maires-hero.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -402,7 +403,7 @@ const Actualites = () => {
       location: t('congresMaires.venue'),
       category: t('actualites.congres'),
       link: "/evenements/congres-maires",
-      image: heroSeminaire,
+      image: congresMairesHero,
       icon: Building,
       badgeColor: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
     },
