@@ -8,8 +8,8 @@ import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
-import heroImage from "@/assets/meryl-arena-hero.jpg";
-import concertPortrait from "@/assets/meryl-concert-portrait.jpg";
+import heroImage from "@/assets/meryl-affiche.jpg";
+import concertPortrait from "@/assets/meryl-portrait.webp";
 
 const MerylConcert = () => {
   const { t } = useLanguage();
