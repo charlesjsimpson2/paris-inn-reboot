@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import heroImage from "@/assets/scorpions-tour-2026.jpg";
 import bandImage from "@/assets/scorpions-band.webp";
 
@@ -34,6 +35,11 @@ const ScorpionsConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Scorpions Paris 2026 - 60th Anniversary Tour Accor Arena"
+        description="Scorpions en concert à Paris le 17 juillet 2026 à l'Accor Arena. 60th Anniversary Tour. Réservez votre hébergement."
+        canonical="/evenements/scorpions-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}

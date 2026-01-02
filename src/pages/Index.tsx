@@ -11,10 +11,16 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { CTASection } from "@/components/CTASection";
 import { LocationSection } from "@/components/LocationSection";
 import { NewsSection } from "@/components/NewsSection";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème"
+        description="Hôtel 3 étoiles à Paris 13ème, proche métro Place d'Italie. Chambres confortables, salles de séminaires, petit-déjeuner buffet. Réservez au meilleur prix !"
+        canonical="/"
+      />
       <Header />
       <main>
         <HeroSection />

@@ -11,6 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 
 const MikaConcert = () => {
   const { t } = useLanguage();
@@ -38,6 +39,11 @@ const MikaConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert MIKA Paris 2026 - Spinning Out Tour Accor Arena"
+        description="MIKA en concert à Paris le 16 février 2026. Spinning Out Tour à l'Accor Arena. Réservez votre hébergement près du métro Place d'Italie."
+        canonical="/evenements/mika-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - PUNCHY */}

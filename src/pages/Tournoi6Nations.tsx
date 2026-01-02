@@ -8,6 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
+import { SEO } from "@/components/SEO";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -53,6 +54,11 @@ const Tournoi6Nations = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="France vs Irlande - Tournoi 6 Nations 2026 Stade de France"
+        description="Match France-Irlande du Tournoi des 6 Nations le 22 février 2026 au Stade de France. Réservez votre hôtel à Paris."
+        canonical="/evenements/tournoi-6-nations"
+      />
       <Header />
       <main>
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Camera, Music, Trophy, Leaf, Mic, Clock, Timer, Briefcase, ShoppingBag, Heart, HeartPulse, Shield, Sparkles, Scissors, UtensilsCrossed, Building2, Landmark, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import franceAngleterreMatch from "@/assets/france-angleterre-match.png";
@@ -460,6 +461,11 @@ const Actualites = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Événements Paris 2026 - Concerts, Salons, Sports"
+        description="Découvrez les événements 2026 à Paris : concerts Accor Arena, salons professionnels, marathons. Réservez votre hébergement près du métro Place d'Italie."
+        canonical="/evenements"
+      />
       <Header />
       <main>
         <section className="pt-32 pb-16 bg-charcoal">

@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 
 const WuTangConcert = () => {
   const { t } = useLanguage();
@@ -37,6 +38,11 @@ const WuTangConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Wu-Tang Clan Paris 2026 - Accor Arena"
+        description="Wu-Tang Clan en concert à Paris le 11 mars 2026 à l'Accor Arena. Réservez votre hébergement près du métro Place d'Italie."
+        canonical="/evenements/wu-tang-concert"
+      />
       <Header />
       <main>
         {/* Hero Section */}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { RoomSection } from "@/components/RoomSection";
 import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
@@ -126,6 +127,11 @@ const NosChambres = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Nos Chambres - Hôtel Inn Design Paris"
+        description="Découvrez nos chambres confortables à Paris 13ème : chambre double, twin, supérieure avec balcon. WiFi gratuit, climatisation, TV écran plat."
+        canonical="/nos-chambres"
+      />
       <Header />
       
       {/* Hero Section with Image */}

@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Coffee, Croissant, Apple, Egg, Clock, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 import salle1 from "@/assets/breakfast/salle-1.jpg";
 import salle2 from "@/assets/breakfast/salle-2.jpg";
@@ -72,6 +73,11 @@ const PetitDejeuner = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Petit-déjeuner Buffet - Hôtel Inn Design Paris"
+        description="Petit-déjeuner buffet varié à l'Hôtel Inn Design Paris. Produits frais, viennoiseries, boissons chaudes. Gratuit pour les enfants de moins de 10 ans."
+        canonical="/petit-dejeuner"
+      />
       <Header />
       
       {/* Hero Section */}

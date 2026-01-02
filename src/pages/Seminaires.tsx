@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SalonSection } from "@/components/SalonSection";
 import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
 import salonBose1 from "@/assets/salon-bose-1.jpg";
 import salonBose2 from "@/assets/salon-bose-2.jpg";
@@ -100,6 +101,11 @@ const Seminaires = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Salles de Séminaires Paris - Hôtel Inn Design Paris"
+        description="3 salles de réunion modulables de 40 à 117m² au cœur de Paris 13ème. Équipement complet, WiFi, vidéoprojecteur. Idéal séminaires et formations."
+        canonical="/seminaires"
+      />
       <Header />
       
       {/* Hero Section */}

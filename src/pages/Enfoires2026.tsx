@@ -9,6 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 
 const Enfoires2026 = () => {
   const { t } = useLanguage();
@@ -45,6 +46,11 @@ const Enfoires2026 = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Les Enfoirés 2026 Paris - Concert Accor Arena Janvier"
+        description="Les Enfoirés en concert à Paris du 13 au 19 janvier 2026 à l'Accor Arena. 7 dates exceptionnelles pour les Restos du Cœur."
+        canonical="/evenements/enfoires-2026"
+      />
       <Header />
       <main>
         {/* Hero Section */}

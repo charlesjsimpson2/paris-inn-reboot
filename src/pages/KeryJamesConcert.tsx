@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
+import { SEO } from "@/components/SEO";
 import heroImage from "@/assets/keryjames-hero-gen.jpg";
 
 const KeryJamesConcert = () => {
@@ -33,6 +34,11 @@ const KeryJamesConcert = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Concert Kery James Paris 2026 - Accor Arena Novembre"
+        description="Kery James en concert à Paris le 15 novembre 2026 à l'Accor Arena. Réservez votre hébergement près du métro Place d'Italie."
+        canonical="/evenements/kery-james-concert"
+      />
       <Header />
       <main>
         {/* Hero Section - Style MIKA */}
