@@ -29,6 +29,7 @@ import santeExpoHero from "@/assets/sante-expo-hero.jpg";
 import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
 import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
 import japanExpoHero from "@/assets/japan-expo-hero.jpg";
+import equiphotelHero from "@/assets/equiphotel-hero.png";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauIrlande = "https://flagcdn.com/w80/ie.png";
@@ -358,7 +359,7 @@ const Actualites = () => {
       location: t('equiphotel.venue'),
       category: t('actualites.salon'),
       link: "/evenements/equiphotel",
-      image: heroSeminaire,
+      image: equiphotelHero,
       icon: Building2,
       badgeColor: "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
     },
