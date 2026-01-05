@@ -41,11 +41,11 @@ const VingtKmParis = () => {
         <section className="relative py-16 md:py-24 bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-background dark:to-teal-950/30 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-2xl">
+              <div className="order-2 md:order-1">
                 <img 
                   src={vingtKmHero} 
                   alt="Harmonie Mutuelle 20 km de Paris 2026" 
-                  className="w-full h-full object-cover object-right scale-150 origin-right"
+                  className="w-full rounded-2xl shadow-2xl object-cover object-right"
                   loading="eager"
                   fetchPriority="high"
                 />
