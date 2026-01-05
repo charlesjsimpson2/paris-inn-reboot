@@ -73,21 +73,21 @@ const CongresACCDOM = () => {
                   <span className="font-medium text-sm uppercase tracking-wider">{t('congresACCDOM.badge')}</span>
                 </div>
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-4">
-                  33<sup className="text-xl">e</sup> Congrès de l'ACCDOM
+                  {t('congresACCDOM.title')}
                 </h1>
                 <p className="text-white/90 text-lg md:text-xl mb-2 font-medium">
-                  "Les Outre-Mer : La force d'inventer l'avenir"
+                  {t('congresACCDOM.theme')}
                 </p>
                 <p className="text-white/80 text-base mb-6">{t('congresACCDOM.subtitle')}</p>
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/20">
                     <Calendar className="w-5 h-5 text-teal-200" />
-                    <span className="text-white font-medium">12-14 novembre 2026</span>
+                    <span className="text-white font-medium">{t('congresACCDOM.dateDisplay')}</span>
                   </div>
                   <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/20">
                     <MapPin className="w-5 h-5 text-teal-200" />
-                    <span className="text-white font-medium">Mercure Porte de Versailles, Paris</span>
+                    <span className="text-white font-medium">{t('congresACCDOM.venue')}</span>
                   </div>
                 </div>
 
@@ -159,13 +159,13 @@ const CongresACCDOM = () => {
                   <h2 className="font-display text-3xl md:text-4xl text-foreground">{t('congresACCDOM.about')}</h2>
                 </div>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  L'ACCDOM (Association des Communes et Collectivités d'Outre-Mer) organise son 33e Congrès annuel à Paris, réunissant les élus et décideurs des territoires ultramarins français : Guadeloupe, Martinique, Guyane, La Réunion, Mayotte, et les collectivités du Pacifique.
+                  {t('congresACCDOM.desc1')}
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Sous le thème "Les Outre-Mer : La force d'inventer l'avenir", ce congrès sera l'occasion d'échanger sur les défis et opportunités des territoires ultramarins : transition écologique, développement économique, coopération régionale et innovation sociale.
+                  {t('congresACCDOM.desc2')}
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Trois jours de débats, conférences et networking entre maires, présidents de collectivités et acteurs du développement ultramarin.
+                  {t('congresACCDOM.desc3')}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -214,7 +214,7 @@ const CongresACCDOM = () => {
         </section>
 
         <EventHotelPromo 
-          eventName="Congrès de l'ACCDOM"
+          eventName={t("congresACCDOM.eventName")}
           accentColor="from-teal-600 via-emerald-600 to-sky-600"
           urgencyMessage={t("congresACCDOM.urgencyMessage")}
           eventType="salon"
