@@ -19,6 +19,7 @@ import texworldHero from "@/assets/texworld-hero.jpg";
 import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
 import scorpionsHero from "@/assets/scorpions-tour-2026.jpg";
 import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
+import vingtKmHero from "@/assets/20km-paris-hero.jpg";
 import merylHero from "@/assets/meryl-affiche.jpg";
 import keryjamesHero from "@/assets/kery-james-affiche.jpg";
 import orelsanHero from "@/assets/orelsan-hero.jpg";
@@ -319,7 +320,7 @@ const Actualites = () => {
       location: "Paris",
       category: t('actualites.sport'),
       link: "/evenements/20-km-paris",
-      image: semiMarathonHero,
+      image: vingtKmHero,
       icon: Timer,
       badgeColor: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400",
     },

@@ -8,6 +8,7 @@ import salonAgricultureHero from "@/assets/salon-agriculture-hero.jpg";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
 import wutangHero from "@/assets/wu-tang-concert.jpg";
+import vingtKmHero from "@/assets/20km-paris-hero.jpg";
 
 interface RelatedEventsProps {
   currentEventId: string;
@@ -120,6 +121,19 @@ export const RelatedEvents = ({ currentEventId }: RelatedEventsProps) => {
       color: "from-blue-600 to-red-600",
       bgColor: "bg-purple-100 dark:bg-purple-900/30",
       textColor: "text-purple-600 dark:text-purple-400",
+    },
+    {
+      id: "20-km-paris",
+      title: t('vingtKm.title'),
+      date: "11 " + t('mika.october') + " 2026",
+      sortDate: "2026-10-11",
+      endDate: "2026-10-11",
+      link: "/evenements/20-km-paris",
+      image: vingtKmHero,
+      icon: Timer,
+      color: "from-emerald-500 to-teal-600",
+      bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
+      textColor: "text-emerald-600 dark:text-emerald-400",
     },
   ];
 
