@@ -9,7 +9,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
 import { EventBackButton } from "@/components/EventBackButton";
 import vingtKmHero from "@/assets/20km-paris-hero.jpg";
-import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
+import vingtKmCoureurs from "@/assets/20km-paris-coureurs.jpg";
 import { useState, useEffect } from "react";
 
 const VingtKmParis = () => {
@@ -116,7 +116,7 @@ const VingtKmParis = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('vingtKm.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={semiMarathonHero} alt="20 km de Paris" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
+                <img src={vingtKmCoureurs} alt="Coureurs 20 km de Paris" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
