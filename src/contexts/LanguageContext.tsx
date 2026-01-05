@@ -2428,6 +2428,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'japanExpo.eventName': 'Japan Expo',
     'japanExpo.urgencyMessage': 'Japan Expo Offer',
 
+    // Marathon de Paris
+    'marathonParis.badge': 'Sporting event',
+    'marathonParis.title': 'Paris Marathon',
+    'marathonParis.subtitle': 'Schneider Electric Paris Marathon - 42.195 km',
+    'marathonParis.dateDisplay': 'April 5, 2026',
+    'marathonParis.venue': 'Champs-Élysées → Bois de Vincennes',
+    'marathonParis.about': 'About the Marathon',
+    'marathonParis.desc1': 'The Schneider Electric Paris Marathon is one of the most prestigious marathons in the world. Every year, over 50,000 runners from 150 different nationalities run through the most beautiful avenues of the French capital.',
+    'marathonParis.desc2': 'From the start on the Champs-Élysées to the finish in the Bois de Vincennes, the course passes through iconic Parisian landmarks: Place de la Concorde, the Eiffel Tower, Les Invalides, Notre-Dame and many more.',
+    'marathonParis.eventName': 'the Paris Marathon',
+    'marathonParis.urgencyMessage': 'Marathon Offer',
+
     // Foire de Paris
     'foireParis.badge': 'Trade fair',
     'foireParis.title': 'Foire de Paris',
@@ -3622,6 +3634,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'japanExpo.desc2': 'Conoce a artistas japoneses, participa en concursos de cosplay, descubre los últimos lanzamientos de manga y vive una experiencia inmersiva en el País del Sol Naciente.',
     'japanExpo.eventName': 'Japan Expo',
     'japanExpo.urgencyMessage': 'Oferta Japan Expo',
+
+    // Marathon de Paris
+    'marathonParis.badge': 'Evento deportivo',
+    'marathonParis.title': 'Maratón de París',
+    'marathonParis.subtitle': 'Schneider Electric Maratón de París - 42,195 km',
+    'marathonParis.dateDisplay': '5 abril 2026',
+    'marathonParis.venue': 'Champs-Élysées → Bois de Vincennes',
+    'marathonParis.about': 'Sobre el Maratón',
+    'marathonParis.desc1': 'El Schneider Electric Maratón de París es uno de los maratones más prestigiosos del mundo. Cada año, más de 50.000 corredores de 150 nacionalidades diferentes recorren las avenidas más bellas de la capital francesa.',
+    'marathonParis.desc2': 'Desde la salida en los Campos Elíseos hasta la llegada al Bois de Vincennes, el recorrido atraviesa los lugares emblemáticos de París: la Plaza de la Concordia, la Torre Eiffel, Los Inválidos, Notre-Dame y muchos más.',
+    'marathonParis.eventName': 'el Maratón de París',
+    'marathonParis.urgencyMessage': 'Oferta Maratón',
 
     // Foire de Paris
     'foireParis.badge': 'Feria exposición',
@@ -4818,6 +4842,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'japanExpo.eventName': 'Japan Expo',
     'japanExpo.urgencyMessage': 'Offerta Japan Expo',
 
+    // Marathon de Paris
+    'marathonParis.badge': 'Evento sportivo',
+    'marathonParis.title': 'Maratona di Parigi',
+    'marathonParis.subtitle': 'Schneider Electric Maratona di Parigi - 42,195 km',
+    'marathonParis.dateDisplay': '5 aprile 2026',
+    'marathonParis.venue': 'Champs-Élysées → Bois de Vincennes',
+    'marathonParis.about': 'Informazioni sulla Maratona',
+    'marathonParis.desc1': 'La Schneider Electric Maratona di Parigi è una delle maratone più prestigiose al mondo. Ogni anno, più di 50.000 corridori di 150 nazionalità diverse percorrono i viali più belli della capitale francese.',
+    'marathonParis.desc2': 'Dalla partenza sugli Champs-Élysées all\'arrivo al Bois de Vincennes, il percorso attraversa i luoghi iconici di Parigi: Place de la Concorde, la Torre Eiffel, Les Invalides, Notre-Dame e molti altri.',
+    'marathonParis.eventName': 'la Maratona di Parigi',
+    'marathonParis.urgencyMessage': 'Offerta Maratona',
+
     // Foire de Paris
     'foireParis.badge': 'Fiera esposizione',
     'foireParis.title': 'Foire de Paris',
@@ -6012,6 +6048,18 @@ export const translations: Record<Language, Record<string, string>> = {
     'japanExpo.desc2': 'Conheça artistas japoneses, participe de concursos de cosplay, descubra os últimos lançamentos de mangá e viva uma experiência imersiva na Terra do Sol Nascente.',
     'japanExpo.eventName': 'Japan Expo',
     'japanExpo.urgencyMessage': 'Oferta Japan Expo',
+
+    // Marathon de Paris
+    'marathonParis.badge': 'Evento esportivo',
+    'marathonParis.title': 'Maratona de Paris',
+    'marathonParis.subtitle': 'Schneider Electric Maratona de Paris - 42,195 km',
+    'marathonParis.dateDisplay': '5 abril 2026',
+    'marathonParis.venue': 'Champs-Élysées → Bois de Vincennes',
+    'marathonParis.about': 'Sobre a Maratona',
+    'marathonParis.desc1': 'A Schneider Electric Maratona de Paris é uma das maratonas mais prestigiosas do mundo. Todos os anos, mais de 50.000 corredores de 150 nacionalidades diferentes percorrem as avenidas mais bonitas da capital francesa.',
+    'marathonParis.desc2': 'Da partida nos Champs-Élysées à chegada no Bois de Vincennes, o percurso atravessa os locais emblemáticos de Paris: Place de la Concorde, a Torre Eiffel, Les Invalides, Notre-Dame e muitos outros.',
+    'marathonParis.eventName': 'a Maratona de Paris',
+    'marathonParis.urgencyMessage': 'Oferta Maratona',
 
     // Foire de Paris
     'foireParis.badge': 'Feira exposição',
