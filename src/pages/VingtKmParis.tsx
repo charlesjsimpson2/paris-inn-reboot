@@ -8,6 +8,7 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
 import { EventBackButton } from "@/components/EventBackButton";
+import vingtKmHero from "@/assets/20km-paris-hero.jpg";
 import semiMarathonHero from "@/assets/semi-marathon-hero.jpg";
 import { useState, useEffect } from "react";
 
@@ -37,21 +38,27 @@ const VingtKmParis = () => {
       <Header />
       <EventBackButton />
       <main>
-        <section className="relative py-24 overflow-hidden">
-          <img src={semiMarathonHero} alt="20 km de Paris" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="text-left">
+        <section className="relative py-16 md:py-24 bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-background dark:to-teal-950/30 overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <img 
+                  src={vingtKmHero} 
+                  alt="Harmonie Mutuelle 20 km de Paris 2026" 
+                  className="w-full rounded-2xl shadow-2xl object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
+
+              <div className="order-1 md:order-2">
                 <div className="inline-flex items-center gap-2 bg-emerald-600/90 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <Timer className="w-4 h-4" />
                   <span className="font-medium text-sm uppercase tracking-wider">{t('vingtKm.badge')}</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl text-white drop-shadow-lg mb-4">{t('vingtKm.title')}</h1>
-                <p className="text-white/90 text-lg md:text-xl">{t('vingtKm.subtitle')}</p>
-              </div>
+                <h1 className="font-display text-3xl md:text-5xl text-foreground mb-4">{t('vingtKm.title')}</h1>
+                <p className="text-muted-foreground text-lg md:text-xl mb-6">{t('vingtKm.subtitle')}</p>
 
-              <div className="bg-emerald-50/95 dark:bg-emerald-950/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-emerald-200/50 dark:border-emerald-800/50">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3 bg-white dark:bg-card px-4 py-3 rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-800">
                     <Calendar className="w-5 h-5 text-emerald-600" />
