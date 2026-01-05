@@ -1135,13 +1135,13 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // 20 km de Paris
     'vingtKm.badge': 'Course à pied',
-    'vingtKm.title': '20 km de Paris',
-    'vingtKm.subtitle': 'La course mythique au cœur de la capitale',
+    'vingtKm.title': 'Harmonie Mutuelle 20 km de Paris',
+    'vingtKm.subtitle': 'La classique parisienne fait son grand retour !',
     'vingtKm.dateDisplay': '11 octobre 2026',
-    'vingtKm.venue': 'Tour Eiffel → Porte d\'Auteuil',
+    'vingtKm.venue': 'Pont d\'Iéna → Tour Eiffel',
     'vingtKm.about': 'À propos des 20 km de Paris',
-    'vingtKm.desc1': 'Les 20 km de Paris sont l\'une des courses les plus populaires de France. Chaque année, plus de 25 000 coureurs traversent les plus beaux quartiers de la capitale.',
-    'vingtKm.desc2': 'Du Trocadéro à la Porte d\'Auteuil, le parcours offre des vues imprenables sur la Tour Eiffel et longe les quais de Seine dans une ambiance festive.',
+    'vingtKm.desc1': 'L\'Harmonie Mutuelle 20 km de Paris revient le dimanche 11 octobre 2026 pour sa 48ᵉ édition. Participer à cette course, c\'est vivre une expérience sportive unique en foulant les lieux emblématiques de l\'Ouest parisien.',
+    'vingtKm.desc2': 'Le départ sera donné sur le majestueux Pont d\'Iéna, et la Tour Eiffel accueillera les finishers dans un final grandiose. Sur votre parcours : le Trocadéro, l\'Arc de Triomphe, le Bois de Boulogne, Roland-Garros, la Maison de la Radio et bien d\'autres sites mythiques.',
     'vingtKm.eventName': 'les 20 km de Paris',
     'vingtKm.urgencyMessage': 'Offre 20 km de Paris',
     'easyAccess.routes.trocadero': "Place d'Italie → Trocadéro (via Ligne 6)",
@@ -2382,13 +2382,13 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // 20 km de Paris
     'vingtKm.badge': 'Running race',
-    'vingtKm.title': '20 km de Paris',
-    'vingtKm.subtitle': 'The legendary race through the heart of the capital',
+    'vingtKm.title': 'Harmonie Mutuelle 20 km de Paris',
+    'vingtKm.subtitle': 'The Parisian classic is back!',
     'vingtKm.dateDisplay': 'October 11, 2026',
-    'vingtKm.venue': 'Eiffel Tower → Porte d\'Auteuil',
+    'vingtKm.venue': 'Pont d\'Iéna → Eiffel Tower',
     'vingtKm.about': 'About the 20 km de Paris',
-    'vingtKm.desc1': 'The 20 km de Paris is one of the most popular races in France. Every year, more than 25,000 runners cross the most beautiful neighborhoods of the capital.',
-    'vingtKm.desc2': 'From Trocadéro to Porte d\'Auteuil, the course offers breathtaking views of the Eiffel Tower and runs along the Seine riverbanks in a festive atmosphere.',
+    'vingtKm.desc1': 'The Harmonie Mutuelle 20 km de Paris returns on Sunday, October 11, 2026 for its 48th edition. Taking part in this race means experiencing a unique sporting adventure through the iconic landmarks of western Paris.',
+    'vingtKm.desc2': 'The start will be at the majestic Pont d\'Iéna, and the Eiffel Tower will welcome finishers in a grand finale. Along the route: Trocadéro, Arc de Triomphe, Bois de Boulogne, Roland-Garros, Maison de la Radio and many other legendary sites.',
     'vingtKm.eventName': 'the 20 km de Paris',
     'vingtKm.urgencyMessage': '20 km de Paris Offer',
 
@@ -3589,13 +3589,13 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // 20 km de Paris
     'vingtKm.badge': 'Carrera',
-    'vingtKm.title': '20 km de París',
-    'vingtKm.subtitle': 'La carrera legendaria por el corazón de la capital',
+    'vingtKm.title': 'Harmonie Mutuelle 20 km de Paris',
+    'vingtKm.subtitle': '¡El clásico parisino está de vuelta!',
     'vingtKm.dateDisplay': '11 octubre 2026',
-    'vingtKm.venue': 'Torre Eiffel → Porte d\'Auteuil',
+    'vingtKm.venue': 'Pont d\'Iéna → Torre Eiffel',
     'vingtKm.about': 'Sobre los 20 km de París',
-    'vingtKm.desc1': 'Los 20 km de París es una de las carreras más populares de Francia. Cada año, más de 25.000 corredores cruzan los barrios más bonitos de la capital.',
-    'vingtKm.desc2': 'Desde Trocadéro hasta Porte d\'Auteuil, el recorrido ofrece vistas impresionantes de la Torre Eiffel y bordea las orillas del Sena en un ambiente festivo.',
+    'vingtKm.desc1': 'El Harmonie Mutuelle 20 km de Paris regresa el domingo 11 de octubre de 2026 para su 48ª edición. Participar en esta carrera significa vivir una experiencia deportiva única recorriendo los lugares emblemáticos del oeste de París.',
+    'vingtKm.desc2': 'La salida será en el majestuoso Pont d\'Iéna, y la Torre Eiffel recibirá a los corredores en un final grandioso. En el recorrido: Trocadéro, Arco del Triunfo, Bois de Boulogne, Roland-Garros, Maison de la Radio y muchos otros sitios míticos.',
     'vingtKm.eventName': 'los 20 km de París',
     'vingtKm.urgencyMessage': 'Oferta 20 km de París',
 
@@ -4796,13 +4796,13 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // 20 km de Paris
     'vingtKm.badge': 'Corsa',
-    'vingtKm.title': '20 km de Paris',
-    'vingtKm.subtitle': 'La corsa leggendaria nel cuore della capitale',
+    'vingtKm.title': 'Harmonie Mutuelle 20 km de Paris',
+    'vingtKm.subtitle': 'Il classico parigino è tornato!',
     'vingtKm.dateDisplay': '11 ottobre 2026',
-    'vingtKm.venue': 'Torre Eiffel → Porte d\'Auteuil',
+    'vingtKm.venue': 'Pont d\'Iéna → Torre Eiffel',
     'vingtKm.about': 'Informazioni sui 20 km de Paris',
-    'vingtKm.desc1': 'I 20 km de Paris sono una delle gare più popolari di Francia. Ogni anno, più di 25.000 corridori attraversano i quartieri più belli della capitale.',
-    'vingtKm.desc2': 'Dal Trocadéro a Porte d\'Auteuil, il percorso offre viste mozzafiato sulla Torre Eiffel e costeggia le rive della Senna in un\'atmosfera festiva.',
+    'vingtKm.desc1': 'L\'Harmonie Mutuelle 20 km de Paris torna domenica 11 ottobre 2026 per la sua 48ª edizione. Partecipare a questa gara significa vivere un\'esperienza sportiva unica percorrendo i luoghi emblematici dell\'ovest di Parigi.',
+    'vingtKm.desc2': 'La partenza sarà sul maestoso Pont d\'Iéna, e la Torre Eiffel accoglierà i finisher in un gran finale. Sul percorso: Trocadéro, Arco di Trionfo, Bois de Boulogne, Roland-Garros, Maison de la Radio e molti altri siti mitici.',
     'vingtKm.eventName': 'i 20 km de Paris',
     'vingtKm.urgencyMessage': 'Offerta 20 km de Paris',
 
@@ -6003,13 +6003,13 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // 20 km de Paris
     'vingtKm.badge': 'Corrida',
-    'vingtKm.title': '20 km de Paris',
-    'vingtKm.subtitle': 'A corrida lendária pelo coração da capital',
+    'vingtKm.title': 'Harmonie Mutuelle 20 km de Paris',
+    'vingtKm.subtitle': 'O clássico parisiense está de volta!',
     'vingtKm.dateDisplay': '11 outubro 2026',
-    'vingtKm.venue': 'Torre Eiffel → Porte d\'Auteuil',
+    'vingtKm.venue': 'Pont d\'Iéna → Torre Eiffel',
     'vingtKm.about': 'Sobre os 20 km de Paris',
-    'vingtKm.desc1': 'Os 20 km de Paris são uma das corridas mais populares da França. Todos os anos, mais de 25.000 corredores atravessam os bairros mais bonitos da capital.',
-    'vingtKm.desc2': 'Do Trocadéro a Porte d\'Auteuil, o percurso oferece vistas deslumbrantes da Torre Eiffel e margeia o Sena em uma atmosfera festiva.',
+    'vingtKm.desc1': 'O Harmonie Mutuelle 20 km de Paris regressa no domingo, 11 de outubro de 2026 para a sua 48ª edição. Participar nesta corrida significa viver uma experiência desportiva única percorrendo os locais emblemáticos do oeste de Paris.',
+    'vingtKm.desc2': 'A partida será na majestosa Pont d\'Iéna, e a Torre Eiffel receberá os finishers num grande final. No percurso: Trocadéro, Arco do Triunfo, Bois de Boulogne, Roland-Garros, Maison de la Radio e muitos outros locais míticos.',
     'vingtKm.eventName': 'os 20 km de Paris',
     'vingtKm.urgencyMessage': 'Oferta 20 km de Paris',
 
