@@ -22,7 +22,7 @@ const features = [
   { icon: FileText, label: "Paperboard" },
   { icon: Monitor, label: "Vidéoprojecteur" },
   { icon: Mic, label: "Micros" },
-  { icon: Wifi, label: "WiFi" },
+  { icon: Wifi, label: "WiFi très haut débit", highlight: true },
 ];
 
 export const SeminarSection = () => {
@@ -120,10 +120,14 @@ export const SeminarSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center p-4 bg-background border border-border/30"
+                  className={`flex flex-col items-center p-4 border ${
+                    feature.highlight 
+                      ? 'bg-primary/15 border-primary/40' 
+                      : 'bg-background border-border/30'
+                  }`}
                 >
-                  <feature.icon className="w-8 h-8 text-primary mb-2" />
-                  <span className="text-sm text-foreground font-medium">{feature.label}</span>
+                  <feature.icon className={`w-8 h-8 mb-2 ${feature.highlight ? 'text-primary' : 'text-primary'}`} />
+                  <span className={`text-sm font-medium text-center ${feature.highlight ? 'text-foreground' : 'text-foreground'}`}>{feature.label}</span>
                 </div>
               ))}
             </div>

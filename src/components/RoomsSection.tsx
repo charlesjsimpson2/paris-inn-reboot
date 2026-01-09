@@ -45,7 +45,7 @@ export const RoomsSection = memo(() => {
     { icon: Bath, label: t('rooms.bathroom') },
     { icon: Tv, label: t('rooms.tv') },
     { icon: Briefcase, label: t('rooms.desk') },
-    { icon: Wifi, label: t('rooms.wifi') },
+    { icon: Wifi, label: t('rooms.wifiHighSpeed'), highlight: true },
     { icon: CupSoda, label: t('rooms.courtesy') },
     { icon: Snowflake, label: t('rooms.ac') },
     { icon: Heater, label: t('rooms.heating') },
@@ -198,10 +198,14 @@ export const RoomsSection = memo(() => {
                 key={index}
                 className="flex flex-col items-center gap-1.5 xs:gap-2 md:gap-3 text-center group"
               >
-                <div className="w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className={`w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 flex items-center justify-center transition-colors ${
+                  item.highlight 
+                    ? 'bg-primary/25 group-hover:bg-primary/35' 
+                    : 'bg-primary/10 group-hover:bg-primary/20'
+                }`}>
                   <item.icon className="w-3.5 h-3.5 xs:w-4 xs:h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <span className="text-[10px] xs:text-xs md:text-sm text-muted-foreground">{item.label}</span>
+                <span className={`text-[10px] xs:text-xs md:text-sm ${item.highlight ? 'text-foreground font-medium' : 'text-muted-foreground'}`}>{item.label}</span>
               </div>
             ))}
           </div>
