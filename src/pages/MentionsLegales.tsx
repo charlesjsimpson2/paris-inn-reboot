@@ -38,9 +38,6 @@ const MentionsLegales = () => {
                 <p><strong className="text-foreground">{t('legal.editor.address')} :</strong> 178 Boulevard Vincent Auriol, 75013 Paris, France</p>
                 <p><strong className="text-foreground">{t('legal.editor.phone')} :</strong> +33 (0)1 44 24 01 01</p>
                 <p><strong className="text-foreground">{t('legal.editor.email')} :</strong> hid.paris13@gmail.com</p>
-                <p><strong className="text-foreground">{t('legal.editor.siret')} :</strong> [À compléter]</p>
-                <p><strong className="text-foreground">{t('legal.editor.tva')} :</strong> [À compléter]</p>
-                <p><strong className="text-foreground">{t('legal.editor.director')} :</strong> [À compléter]</p>
               </div>
             </section>
 
