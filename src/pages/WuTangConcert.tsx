@@ -5,7 +5,7 @@ import { Calendar, MapPin, Music, Mic, Sparkles, Clock, Zap, Heart, Shirt, Troph
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import wutangConcert from "@/assets/wu-tang-concert.jpg";
-import wutangLogo from "@/assets/wu-tang-logo.jpg";
+import wutangPortrait from "@/assets/wu-tang-portrait.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
@@ -212,11 +212,11 @@ const WuTangConcert = () => {
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl" />
                 <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start">
                   <div className="relative group flex-shrink-0 mx-auto md:mx-0">
-                    <div className="absolute -inset-3 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
+                    <div className="absolute -inset-3 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img 
-                      src={wutangLogo} 
-                      alt="Wu-Tang Clan Logo" 
-                      className="relative w-32 h-32 md:w-40 md:h-40 rounded-full shadow-xl object-contain bg-black p-3 transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      src={wutangPortrait} 
+                      alt="Wu-Tang Clan" 
+                      className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl shadow-xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                   </div>
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
