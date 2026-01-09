@@ -11,7 +11,7 @@ import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import santeExpoHero from "@/assets/sante-expo-logo-new.png";
-import santeExpoLogo from "@/assets/sante-expo-hero.jpg";
+import santeExpoEvent from "@/assets/sante-expo-event.jpg";
 import { useState, useEffect } from "react";
 
 const SanteExpo = () => {
@@ -128,7 +128,7 @@ const SanteExpo = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">{t('santeExpo.desc2')}</p>
               </div>
               <div className="flex justify-center">
-                <img src={santeExpoLogo} alt="Santé Expo" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-contain bg-white p-4" />
+                <img src={santeExpoEvent} alt="Santé Expo" className="max-w-xs md:max-w-sm rounded-xl shadow-xl object-cover" />
               </div>
             </div>
           </div>
