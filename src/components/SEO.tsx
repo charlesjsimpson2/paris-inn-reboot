@@ -22,13 +22,17 @@ export const SEO = ({
   const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   const canonicalUrl = canonical ? `${baseUrl}${canonical}` : undefined;
   const ogImageUrl = ogImage || `${baseUrl}/og-image.jpg`;
-
+  
+  // Block indexing on non-production domains (lovable.app, localhost, etc.)
+  const isProductionDomain = typeof window !== 'undefined' && 
+    window.location.hostname === 'hotel-inn-paris.fr';
+  const shouldNoIndex = noIndex || !isProductionDomain;
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      {shouldNoIndex && <meta name="robots" content="noindex, nofollow" />}
       
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
