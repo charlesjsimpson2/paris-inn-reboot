@@ -492,13 +492,15 @@ const Actualites = () => {
             </div>
             
             {upcomingEvents.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                 {upcomingEvents.map((event) => {
                   const Icon = event.icon;
+                  // Use object-contain for logos/posters, object-cover for photos
+                  const isLogoStyle = ['enfoires', 'sante-expo', 'euro-pcr', 'eurosatory', 'japan-expo', 'equiphotel', 'congres-accdom', 'salon-cse-mars', 'salon-cse-septembre'].includes(event.id);
                   return (
                     <Link key={event.id} to={event.link} className="group h-full">
-                      <article className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
-                        <div className="aspect-[3/4] overflow-hidden relative">
+                      <article className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-border/50 h-full flex flex-col">
+                        <div className="aspect-square overflow-hidden relative bg-muted/30">
                           <img
                             src={event.image}
                             alt={event.title}
@@ -506,7 +508,7 @@ const Actualites = () => {
                             onError={(e) => {
                               e.currentTarget.src = heroSeminaire;
                             }}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            className={`w-full h-full ${isLogoStyle ? 'object-contain p-2' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
                           />
                           {event.hasFlags && (
                             <div className="absolute bottom-2 left-2 right-2 flex items-center justify-center gap-2 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-1.5 px-3">
@@ -516,19 +518,17 @@ const Actualites = () => {
                             </div>
                           )}
                         </div>
-                        <div className="p-4 flex flex-col flex-1">
-                          <div className="flex items-center justify-center mb-2">
-                            <span className={`inline-flex items-center gap-1 ${event.badgeColor} px-2 py-0.5 rounded-full text-xs font-medium`}>
-                              <Icon className="w-3 h-3" />{event.category}
+                        <div className="p-3 flex flex-col flex-1">
+                          <div className="flex items-center justify-center mb-1.5">
+                            <span className={`inline-flex items-center gap-1 ${event.badgeColor} px-2 py-0.5 rounded-full text-[10px] font-medium`}>
+                              <Icon className="w-2.5 h-2.5" />{event.category}
                             </span>
                           </div>
-                          <h3 className="font-display text-lg text-foreground mb-2 group-hover:text-primary transition-colors text-center leading-tight min-h-[3rem] flex items-center justify-center">{event.title}</h3>
-                          <p className="text-muted-foreground text-xs mb-3 text-center leading-relaxed min-h-[3rem]">{event.subtitle}</p>
-                          <div className="mt-auto border-t border-border/30 pt-3">
-                            <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                              <Calendar className="w-3 h-3" /><span>{event.date}</span>
+                          <h3 className="font-display text-sm text-foreground mb-1 group-hover:text-primary transition-colors text-center leading-tight min-h-[2.5rem] flex items-center justify-center">{event.title}</h3>
+                          <div className="mt-auto pt-2 border-t border-border/30">
+                            <div className="flex items-center justify-center gap-1.5 text-[10px] text-muted-foreground">
+                              <Calendar className="w-2.5 h-2.5" /><span>{event.date}</span>
                             </div>
-                            <p className="text-xs text-muted-foreground mt-1 text-center">{event.location}</p>
                           </div>
                         </div>
                       </article>
