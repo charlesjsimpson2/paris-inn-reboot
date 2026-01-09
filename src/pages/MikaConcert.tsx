@@ -5,7 +5,7 @@ import { Calendar, MapPin, Music, Mic, Sparkles, Clock, Zap, Heart, Shirt, Troph
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import mikaAffiche from "@/assets/mika-spinning-out-tour.webp";
-import mikaHero from "@/assets/mika-concert-hero.jpg";
+import mikaPortrait from "@/assets/mika-portrait.webp";
 import mikaBanner from "@/assets/mika-spinning-tour-banner.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
@@ -269,7 +269,7 @@ const MikaConcert = () => {
                   <div className="relative group">
                     <div className="absolute -inset-2 bg-gradient-to-r from-pink-400 to-purple-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img 
-                      src={mikaHero} 
+                      src={mikaPortrait} 
                       alt="MIKA en concert" 
                       className="relative w-full h-auto rounded-2xl shadow-xl object-cover aspect-video transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
