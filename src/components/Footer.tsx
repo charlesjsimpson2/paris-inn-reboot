@@ -97,7 +97,7 @@ export const Footer = memo(() => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border/50 mt-4 xs:mt-5 sm:mt-6 pt-3 xs:pt-4 pb-16 sm:pb-0 flex flex-col sm:flex-row justify-between items-center sm:items-center gap-2">
+        <div className="border-t border-border/50 mt-4 xs:mt-5 sm:mt-6 pt-3 xs:pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 pr-0 sm:pr-40">
           <p className="text-muted-foreground text-[10px] xs:text-xs text-center sm:text-left">
             © 2025 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
