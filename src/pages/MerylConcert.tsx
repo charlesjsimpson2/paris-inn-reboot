@@ -9,7 +9,7 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
 import { EventBackButton } from "@/components/EventBackButton";
-import heroImage from "@/assets/meryl-hero-gen.jpg";
+import heroImage from "@/assets/meryl-hero-official.jpg";
 import concertPortrait from "@/assets/meryl-concert-gen.jpg";
 
 const MerylConcert = () => {
