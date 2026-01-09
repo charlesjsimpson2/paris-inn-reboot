@@ -37,6 +37,14 @@ export const BreakfastSection = () => {
               {t('breakfast.desc2')}
             </p>
 
+            <p className="text-muted-foreground leading-relaxed">
+              {t('breakfast.desc3')}
+            </p>
+
+            <p className="text-primary font-medium italic">
+              {t('breakfast.glutenFree')}
+            </p>
+
             <Button variant="gold" size="lg" asChild>
               <Link to="/petit-dejeuner">{t('breakfast.cta')}</Link>
             </Button>
