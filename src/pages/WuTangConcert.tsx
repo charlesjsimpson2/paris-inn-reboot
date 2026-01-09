@@ -5,7 +5,7 @@ import { Calendar, MapPin, Music, Mic, Sparkles, Clock, Zap, Heart, Shirt, Troph
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import wutangConcert from "@/assets/wu-tang-concert.jpg";
-import wutangPortrait from "@/assets/wu-tang-portrait.jpg";
+import wutangLogo from "@/assets/wu-tang-logo.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { RelatedEvents } from "@/components/RelatedEvents";
 import { EventHotelPromo } from "@/components/EventHotelPromo";
@@ -210,42 +210,32 @@ const WuTangConcert = () => {
             <div className="max-w-6xl mx-auto">
               <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-yellow-200 dark:border-yellow-800/50 mb-10 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl" />
-                <div className="grid md:grid-cols-2 gap-10 items-start relative">
+                <div className="flex justify-center mb-8">
                   <div className="relative group">
-                    <div className="absolute -inset-3 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
+                    <div className="absolute -inset-3 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img 
-                      src={wutangPortrait} 
-                      alt="Wu-Tang Clan" 
-                      className="relative w-full h-auto rounded-2xl shadow-xl object-cover transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      src={wutangLogo} 
+                      alt="Wu-Tang Clan Logo" 
+                      className="relative w-48 h-48 rounded-full shadow-xl object-contain bg-black p-4 transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                   </div>
-                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
-                    <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText1') }} />
-                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText2') }} />
-                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText3') }} />
-                  </div>
+                </div>
+                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 text-center">
+                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText2') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText3') }} />
                 </div>
               </div>
               
               {/* Biography */}
               <div className="bg-gradient-to-br from-yellow-200 via-amber-200 to-orange-200 dark:from-yellow-900/40 dark:via-amber-900/40 dark:to-orange-900/40 rounded-3xl p-8 border-2 border-yellow-300/50 dark:border-yellow-700/30 shadow-xl">
-                <div className="grid md:grid-cols-2 gap-8 items-start">
-                  <div>
-                    <h3 className="font-display text-2xl text-foreground mb-4 flex items-center gap-3">
-                      <Heart className="w-6 h-6 text-yellow-600" />
-                      {t('wutang.bio.title')}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: t('wutang.bio.text1') }} />
-                    <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.bio.text2') }} />
-                  </div>
-                  <div className="relative group">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
-                    <img 
-                      src={wutangConcert} 
-                      alt="Wu-Tang Clan en concert" 
-                      className="relative w-full h-auto rounded-2xl shadow-xl object-cover aspect-video transform group-hover:scale-[1.02] transition-transform duration-500" 
-                    />
-                  </div>
+                <h3 className="font-display text-2xl text-foreground mb-4 flex items-center gap-3">
+                  <Heart className="w-6 h-6 text-yellow-600" />
+                  {t('wutang.bio.title')}
+                </h3>
+                <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.bio.text1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.bio.text2') }} />
                 </div>
               </div>
             </div>
