@@ -10,8 +10,8 @@ import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import santeExpoHero from "@/assets/sante-expo-hero.jpg";
-import santeExpoLogo from "@/assets/sante-expo-logo.png";
+import santeExpoHero from "@/assets/sante-expo-logo-new.png";
+import santeExpoLogo from "@/assets/sante-expo-hero.jpg";
 import { useState, useEffect } from "react";
 
 const SanteExpo = () => {
