@@ -10,7 +10,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
 import { EventBackButton } from "@/components/EventBackButton";
 import heroImage from "@/assets/meryl-affiche.jpg";
-import concertPortrait from "@/assets/meryl-portrait.webp";
+import concertPortrait from "@/assets/meryl-concert-portrait.jpg";
 
 const MerylConcert = () => {
   const { t } = useLanguage();
@@ -224,10 +224,19 @@ const MerylConcert = () => {
                 <h2 className="font-display text-4xl md:text-5xl text-foreground">{t('meryl.legendTitle')}</h2>
               </div>
               
-              <div className="space-y-6 text-muted-foreground max-w-4xl mx-auto">
-                <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.history1') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.history2') }} />
-                <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.history3') }} />
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div>
+                  <img 
+                    src={concertPortrait} 
+                    alt="Meryl en concert" 
+                    className="w-full max-h-[350px] rounded-2xl shadow-2xl object-cover object-top" 
+                  />
+                </div>
+                <div className="space-y-6 text-muted-foreground">
+                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.history1') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.history2') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.history3') }} />
+                </div>
               </div>
             </div>
           </div>
@@ -247,19 +256,9 @@ const MerylConcert = () => {
               
               <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-red-200 dark:border-red-800/50 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-400/20 to-amber-400/20 rounded-full blur-3xl" />
-                <div className="grid md:grid-cols-2 gap-8 items-center relative">
-                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
-                    <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('meryl.showIntro') }} />
-                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.showDesc') }} />
-                  </div>
-                  <div className="relative group">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-red-700 to-amber-700 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-                    <img 
-                      src={concertPortrait} 
-                      alt="Meryl en concert" 
-                      className="relative w-full rounded-2xl shadow-xl transform group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                  </div>
+                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 relative">
+                  <p className="text-xl leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: t('meryl.showIntro') }} />
+                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('meryl.showDesc') }} />
                 </div>
               </div>
             </div>
