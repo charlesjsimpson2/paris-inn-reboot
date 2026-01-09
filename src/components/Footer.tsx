@@ -27,34 +27,34 @@ export const Footer = memo(() => {
           {/* Navigation - Single column on mobile */}
           <div>
             <h4 className="font-display text-xs uppercase tracking-wider text-foreground mb-2 xs:mb-3">{t('footer.navigation')}</h4>
-            <ul className="space-y-1 xs:space-y-1.5">
+            <ul className="space-y-0.5 xs:space-y-1">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm py-0.5 inline-block">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm leading-tight inline-block">
                   {t('nav.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm py-0.5 inline-block">
+                <Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm leading-tight inline-block">
                   {t('nav.rooms')}
                 </Link>
               </li>
               <li>
-                <Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm py-0.5 inline-block">
+                <Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm leading-tight inline-block">
                   {t('nav.breakfast')}
                 </Link>
               </li>
               <li>
-                <Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm py-0.5 inline-block">
+                <Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm leading-tight inline-block">
                   {t('nav.seminars')}
                 </Link>
               </li>
               <li>
-                <Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm py-0.5 inline-block">
+                <Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm leading-tight inline-block">
                   {t('nav.location')}
                 </Link>
               </li>
               <li>
-                <Link to="/evenements" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm py-0.5 inline-block">
+                <Link to="/evenements" className="text-muted-foreground hover:text-primary transition-colors text-xs xs:text-sm leading-tight inline-block">
                   {t('nav.events')}
                 </Link>
               </li>
@@ -97,11 +97,11 @@ export const Footer = memo(() => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border/50 mt-4 xs:mt-5 sm:mt-6 pt-3 xs:pt-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="border-t border-border/50 mt-4 xs:mt-5 sm:mt-6 pt-3 xs:pt-4 pb-16 sm:pb-0 flex flex-col sm:flex-row justify-between items-center sm:items-center gap-2">
           <p className="text-muted-foreground text-[10px] xs:text-xs text-center sm:text-left">
             © 2025 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
-          <div className="flex gap-4 text-[10px] xs:text-xs">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-x-4 gap-y-1 text-[10px] xs:text-xs">
             <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors">
               {t('footer.legal')}
             </Link>
