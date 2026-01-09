@@ -12,7 +12,7 @@ import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
 import euroPcrLogo from "@/assets/euro-pcr-logo.png";
-import euroPcrEvent from "@/assets/euro-pcr-event.jpg";
+import euroPcrEvent from "@/assets/euro-pcr-event-gen.jpg";
 import { useState, useEffect } from "react";
 
 const EuroPCR = () => {

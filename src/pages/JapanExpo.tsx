@@ -11,7 +11,7 @@ import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import japanExpoHero from "@/assets/japan-expo-hero.jpg";
-import japanExpoEvent from "@/assets/japan-expo-event.webp";
+import japanExpoEvent from "@/assets/japan-expo-event-gen.jpg";
 import { useState, useEffect } from "react";
 
 const JapanExpo = () => {
