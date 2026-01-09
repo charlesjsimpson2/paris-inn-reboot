@@ -109,12 +109,12 @@ export const Footer = memo(() => {
             © 2025 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
           <div className="flex gap-3 xs:gap-4 text-[9px] xs:text-[10px] sm:text-xs">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-1.5 xs:py-2">
+            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors py-1.5 xs:py-2">
               {t('footer.legal')}
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors py-1.5 xs:py-2">
+            </Link>
+            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors py-1.5 xs:py-2">
               {t('footer.privacy')}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
