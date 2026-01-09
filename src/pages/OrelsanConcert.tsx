@@ -224,12 +224,12 @@ const OrelsanConcert = () => {
                 <h2 className="font-display text-4xl md:text-5xl text-foreground">{t('orelsan.legendTitle')}</h2>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div>
+              <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                <div className="h-full">
                   <img 
                     src={orelsanConcertLive} 
                     alt="Orelsan en concert" 
-                    className="w-full rounded-2xl shadow-2xl object-cover aspect-[3/4]" 
+                    className="w-full h-full min-h-[300px] rounded-2xl shadow-2xl object-cover object-top" 
                   />
                 </div>
                 <div className="space-y-6 text-muted-foreground">
