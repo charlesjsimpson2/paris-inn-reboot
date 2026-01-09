@@ -8,60 +8,68 @@ export const Footer = memo(() => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-charcoal">
-      {/* Accent line */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent" />
-      
-      <div className="container mx-auto px-4 py-8">
-        {/* Top section - Logo centered */}
-        <div className="text-center mb-6">
-          <img 
-            src={logoHotel} 
-            alt="Hôtel Inn Design Paris" 
-            loading="lazy"
-            className="h-10 w-auto mx-auto mb-3"
-          />
-          <p className="text-muted-foreground text-sm max-w-md mx-auto">
-            {t('footer.description')}
-          </p>
-        </div>
+    <footer className="bg-charcoal border-t border-border">
+      <div className="container mx-auto px-4 py-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          {/* Logo & Description */}
+          <div className="col-span-2 lg:col-span-1">
+            <img 
+              src={logoHotel} 
+              alt="Hôtel Inn Design Paris" 
+              loading="lazy"
+              className="h-8 w-auto mb-2"
+            />
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              {t('footer.description')}
+            </p>
+          </div>
 
-        {/* Contact info - elegant horizontal */}
-        <div className="flex flex-wrap justify-center items-center gap-6 text-sm mb-6 pb-6 border-b border-border/30">
-          <a href="tel:+33144240101" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors group">
-            <Phone className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-            <span>+33 (0)1 44 24 01 01</span>
-          </a>
-          <span className="hidden sm:block w-px h-4 bg-border/50" />
-          <a href="mailto:hid.paris13@gmail.com" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors group">
-            <Mail className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-            <span>hid.paris13@gmail.com</span>
-          </a>
-          <span className="hidden sm:block w-px h-4 bg-border/50" />
-          <span className="flex items-center gap-2 text-muted-foreground">
-            <MapPin className="w-4 h-4 text-primary" />
-            <span>178 Bd Vincent Auriol, 75013 Paris</span>
-          </span>
-        </div>
+          {/* Navigation */}
+          <div>
+            <h4 className="font-display text-xs uppercase tracking-wider text-foreground mb-2">{t('footer.navigation')}</h4>
+            <ul className="space-y-0.5 text-xs">
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.home')}</Link></li>
+              <li><Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.rooms')}</Link></li>
+              <li><Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.breakfast')}</Link></li>
+              <li><Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.seminars')}</Link></li>
+              <li><Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.location')}</Link></li>
+              <li><Link to="/evenements" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.events')}</Link></li>
+            </ul>
+          </div>
 
-        {/* Navigation - elegant inline */}
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm mb-6">
-          <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.home')}</Link>
-          <Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.rooms')}</Link>
-          <Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.breakfast')}</Link>
-          <Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.seminars')}</Link>
-          <Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.location')}</Link>
-          <Link to="/evenements" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.events')}</Link>
-          <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.contact')}</Link>
-        </nav>
+          {/* Contact */}
+          <div>
+            <h4 className="font-display text-xs uppercase tracking-wider text-foreground mb-2">{t('footer.contact')}</h4>
+            <ul className="space-y-1 text-xs">
+              <li className="flex items-start gap-1.5 text-muted-foreground">
+                <MapPin className="w-3 h-3 text-primary shrink-0 mt-0.5" />
+                <span>178 Bd Vincent Auriol, 75013 Paris</span>
+              </li>
+              <li>
+                <a href="tel:+33144240101" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
+                  <Phone className="w-3 h-3 text-primary" />
+                  +33 (0)1 44 24 01 01
+                </a>
+              </li>
+              <li>
+                <a href="mailto:hid.paris13@gmail.com" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="w-3 h-3 text-primary" />
+                  hid.paris13@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-xs text-muted-foreground">
-          <span>© 2025 Hôtel Inn Design Paris</span>
-          <span className="hidden sm:inline">•</span>
-          <Link to="/mentions-legales" className="hover:text-primary transition-colors">{t('footer.legal')}</Link>
-          <span className="hidden sm:inline">•</span>
-          <Link to="/mentions-legales" className="hover:text-primary transition-colors">{t('footer.privacy')}</Link>
+        <div className="border-t border-border/50 mt-4 pt-3 flex flex-col sm:flex-row justify-between items-center gap-1 sm:pr-36">
+          <p className="text-muted-foreground text-[10px]">
+            © 2025 Hôtel Inn Design Paris. {t('footer.rights')}
+          </p>
+          <div className="flex gap-3 text-[10px]">
+            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.legal')}</Link>
+            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.privacy')}</Link>
+          </div>
         </div>
       </div>
     </footer>
