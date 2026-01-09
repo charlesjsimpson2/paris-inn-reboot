@@ -216,7 +216,7 @@ const WuTangConcert = () => {
                     <img 
                       src={wutangPortrait} 
                       alt="Wu-Tang Clan" 
-                      className="relative w-auto h-auto max-w-[200px] md:max-w-[280px] rounded-2xl shadow-xl object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      className="relative w-[200px] md:w-[280px] h-[120px] md:h-[160px] rounded-2xl shadow-xl object-cover object-top transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                   </div>
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
