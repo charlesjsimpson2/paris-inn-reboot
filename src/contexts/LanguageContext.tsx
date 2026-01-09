@@ -233,7 +233,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Salon FENDER
     'seminarsPage.fender.name': 'Salon FENDER',
-    'seminarsPage.fender.description': 'Spacieuse et baignée de lumière naturelle, notre salle FENDER de 70 m² est parfaite pour vos réunions et événements professionnels. Équipée d\'un écran HD, d\'un rétroprojecteur, d\'un système vidéo performant et du Wi-Fi haut débit, elle combine confort et technologie pour des présentations réussies. Un espace lumineux et convivial qui favorise la concentration et la collaboration de tous vos participants.',
+    'seminarsPage.fender.description': 'Spacieuse et baignée de lumière naturelle, notre salle FENDER de 77 m² est parfaite pour vos réunions et événements professionnels. Équipée d\'un écran HD, d\'un rétroprojecteur, d\'un système vidéo performant et du Wi-Fi haut débit, elle combine confort et technologie pour des présentations réussies. Un espace lumineux et convivial qui favorise la concentration et la collaboration de tous vos participants.',
     'seminarsPage.fender.alt1': 'Salon FENDER - Vue en U',
     'seminarsPage.fender.alt2': 'Salon FENDER - Vue avec écran',
     'seminarsPage.fender.alt3': 'Salon FENDER - Configuration classe',
@@ -1522,7 +1522,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Salon FENDER
     'seminarsPage.fender.name': 'FENDER Lounge',
-    'seminarsPage.fender.description': 'Spacious and bathed in natural light, our 70 m² FENDER room is perfect for your meetings and professional events. Equipped with an HD screen, overhead projector, high-performance video system and high-speed Wi-Fi, it combines comfort and technology for successful presentations. A bright and friendly space that promotes concentration and collaboration for all your participants.',
+    'seminarsPage.fender.description': 'Spacious and bathed in natural light, our 77 m² FENDER room is perfect for your meetings and professional events. Equipped with an HD screen, overhead projector, high-performance video system and high-speed Wi-Fi, it combines comfort and technology for successful presentations. A bright and friendly space that promotes concentration and collaboration for all your participants.',
     'seminarsPage.fender.alt1': 'FENDER Lounge - U-shape view',
     'seminarsPage.fender.alt2': 'FENDER Lounge - View with screen',
     'seminarsPage.fender.alt3': 'FENDER Lounge - Classroom configuration',
@@ -2761,7 +2761,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Salon FENDER
     'seminarsPage.fender.name': 'Salón FENDER',
-    'seminarsPage.fender.description': 'Espacioso y bañado de luz natural, nuestra sala FENDER de 70 m² es perfecta para sus reuniones y eventos profesionales. Equipada con pantalla HD, retroproyector, sistema de vídeo de alto rendimiento y Wi-Fi de alta velocidad, combina confort y tecnología para presentaciones exitosas. Un espacio luminoso y acogedor que favorece la concentración y la colaboración de todos sus participantes.',
+    'seminarsPage.fender.description': 'Espacioso y bañado de luz natural, nuestra sala FENDER de 77 m² es perfecta para sus reuniones y eventos profesionales. Equipada con pantalla HD, retroproyector, sistema de vídeo de alto rendimiento y Wi-Fi de alta velocidad, combina confort y tecnología para presentaciones exitosas. Un espacio luminoso y acogedor que favorece la concentración y la colaboración de todos sus participantes.',
     'seminarsPage.fender.alt1': 'Salón FENDER - Vista en U',
     'seminarsPage.fender.alt2': 'Salón FENDER - Vista con pantalla',
     'seminarsPage.fender.alt3': 'Salón FENDER - Configuración clase',
@@ -4001,7 +4001,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Salone FENDER
     'seminarsPage.fender.name': 'Salone FENDER',
-    'seminarsPage.fender.description': 'Spaziosa e inondata di luce naturale, la nostra sala FENDER di 70 m² è perfetta per le tue riunioni e eventi professionali. Dotata di schermo HD, retroproiettore, sistema video performante e Wi-Fi ad alta velocità, combina comfort e tecnologia per presentazioni di successo. Uno spazio luminoso e accogliente che favorisce la concentrazione e la collaborazione di tutti i partecipanti.',
+    'seminarsPage.fender.description': 'Spaziosa e inondata di luce naturale, la nostra sala FENDER di 77 m² è perfetta per le tue riunioni e eventi professionali. Dotata di schermo HD, retroproiettore, sistema video performante e Wi-Fi ad alta velocità, combina comfort e tecnologia per presentazioni di successo. Uno spazio luminoso e accogliente che favorisce la concentrazione e la collaborazione di tutti i partecipanti.',
     'seminarsPage.fender.alt1': 'Salone FENDER - Vista a U',
     'seminarsPage.fender.alt2': 'Salone FENDER - Vista con schermo',
     'seminarsPage.fender.alt3': 'Salone FENDER - Configurazione classe',
@@ -5241,7 +5241,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Salão FENDER
     'seminarsPage.fender.name': 'Salão FENDER',
-    'seminarsPage.fender.description': 'Espaçosa e banhada de luz natural, nossa sala FENDER de 70 m² é perfeita para suas reuniões e eventos profissionais. Equipada com tela HD, retroprojetor, sistema de vídeo de alto desempenho e Wi-Fi de alta velocidade, combina conforto e tecnologia para apresentações bem-sucedidas. Um espaço luminoso e acolhedor que favorece a concentração e a colaboração de todos os participantes.',
+    'seminarsPage.fender.description': 'Espaçosa e banhada de luz natural, nossa sala FENDER de 77 m² é perfeita para suas reuniões e eventos profissionais. Equipada com tela HD, retroprojetor, sistema de vídeo de alto desempenho e Wi-Fi de alta velocidade, combina conforto e tecnologia para apresentações bem-sucedidas. Um espaço luminoso e acolhedor que favorece a concentração e a colaboração de todos os participantes.',
     'seminarsPage.fender.alt1': 'Salão FENDER - Vista em U',
     'seminarsPage.fender.alt2': 'Salão FENDER - Vista com tela',
     'seminarsPage.fender.alt3': 'Salão FENDER - Configuração classe',
