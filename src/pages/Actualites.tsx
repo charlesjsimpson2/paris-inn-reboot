@@ -26,10 +26,10 @@ import orelsanHero from "@/assets/orelsan-hero.jpg";
 import indochineHero from "@/assets/indochine-hero.jpg";
 import salonCseHero from "@/assets/salon-cse-hero.png";
 import foireParisHero from "@/assets/foire-paris-hero-new.webp";
-import santeExpoHero from "@/assets/sante-expo-event.jpg";
-import euroPcrHero from "@/assets/euro-pcr-event-gen.jpg";
-import eurosatoryHero from "@/assets/eurosatory-event-gen.jpg";
-import japanExpoHero from "@/assets/japan-expo-event-gen.jpg";
+import santeExpoHero from "@/assets/sante-expo-logo-new.png";
+import euroPcrHero from "@/assets/euro-pcr-hero.jpg";
+import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
+import japanExpoHero from "@/assets/japan-expo-hero.jpg";
 import equiphotelHero from "@/assets/equiphotel-hero.png";
 import congresAccdomHero from "@/assets/congres-accdom-hero.png";
 import congresMairesHero from "@/assets/congres-maires-hero-gen.jpg";
@@ -500,7 +500,7 @@ const Actualites = () => {
                   return (
                     <Link key={event.id} to={event.link} className="group h-full">
                       <article className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-border/50 h-full flex flex-col">
-                        <div className="aspect-square overflow-hidden relative bg-muted/30">
+                        <div className={`aspect-square overflow-hidden relative ${isLogoStyle ? 'bg-gradient-to-br from-muted/50 to-muted border-b border-border/30' : 'bg-muted/30'}`}>
                           <img
                             src={event.image}
                             alt={event.title}
@@ -508,7 +508,7 @@ const Actualites = () => {
                             onError={(e) => {
                               e.currentTarget.src = heroSeminaire;
                             }}
-                            className={`w-full h-full ${isLogoStyle ? 'object-contain p-2' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
+                            className={`w-full h-full ${isLogoStyle ? 'object-contain p-4' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
                           />
                           {event.hasFlags && (
                             <div className="absolute bottom-2 left-2 right-2 flex items-center justify-center gap-2 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-lg py-1.5 px-3">
