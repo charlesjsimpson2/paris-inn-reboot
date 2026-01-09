@@ -10,7 +10,7 @@ import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
-import foireParisHero from "@/assets/foire-paris-hero.jpg";
+import foireParisHero from "@/assets/foire-paris-hero-new.webp";
 import { useState, useEffect } from "react";
 
 const FoireDeParis = () => {
