@@ -10,7 +10,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
 import { EventBackButton } from "@/components/EventBackButton";
 import heroImage from "@/assets/orelsan-hero.jpg";
-import orelsanConcertLive from "@/assets/orelsan-concert-live.jpg";
+import orelsanConcertLive from "@/assets/orelsan-portrait-spotify.jpg";
 
 const OrelsanConcert = () => {
   const { t } = useLanguage();
