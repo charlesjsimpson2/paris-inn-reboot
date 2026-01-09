@@ -1341,7 +1341,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Intro
     'intro.badge': 'Welcome',
     'intro.title': 'A well-located hotel for everything!',
-    'intro.description': "Located in the heart of the 13th arrondissement, Hotel Inn Design Paris enjoys an ideal location, close to Butte-aux-Cailles, parks and the quays. Our hotel offers 70 comfortable rooms, a private and secure car park, as well as a friendly bar and a reception area conducive to relaxation or professional exchanges.",
+    'intro.description': "Located in the heart of the 13th arrondissement, Hotel Inn Design Paris enjoys an ideal location, close to Butte-aux-Cailles, parks and the quays. Our hotel offers 70 comfortable rooms, a paid private and secure car park, as well as a friendly bar and a reception area conducive to relaxation or professional exchanges.",
     'intro.cta': 'Book your room and enjoy your stay in Paris!',
     'intro.button': 'Book a room',
     'intro.stars': '3 stars',
@@ -2580,7 +2580,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Intro
     'intro.badge': 'Bienvenido',
     'intro.title': '¡Un hotel bien ubicado para todo!',
-    'intro.description': "Situado en el corazón del distrito 13, Hotel Inn Design París disfruta de una ubicación ideal, cerca de Butte-aux-Cailles, parques y muelles. Nuestro hotel ofrece 70 habitaciones confortables, un aparcamiento privado y seguro, así como un bar acogedor y una zona de recepción propicia para el relax o los intercambios profesionales.",
+    'intro.description': "Situado en el corazón del distrito 13, Hotel Inn Design París disfruta de una ubicación ideal, cerca de Butte-aux-Cailles, parques y muelles. Nuestro hotel ofrece 70 habitaciones confortables, un aparcamiento privado de pago y seguro, así como un bar acogedor y una zona de recepción propicia para el relax o los intercambios profesionales.",
     'intro.cta': '¡Reserve su habitación y disfrute de su estancia en París!',
     'intro.button': 'Reservar habitación',
     'intro.stars': '3 estrellas',
@@ -3820,7 +3820,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Intro
     'intro.badge': 'Benvenuto',
     'intro.title': 'Un hotel ben posizionato per tutto!',
-    'intro.description': "Situato nel cuore del 13° arrondissement, l'Hotel Inn Design Paris gode di una posizione ideale, vicino a Butte-aux-Cailles, parchi e banchine. Il nostro hotel offre 70 camere confortevoli, un parcheggio privato e sicuro, nonché un bar accogliente e un'area reception propizia al relax o agli scambi professionali.",
+    'intro.description': "Situato nel cuore del 13° arrondissement, l'Hotel Inn Design Paris gode di una posizione ideale, vicino a Butte-aux-Cailles, parchi e banchine. Il nostro hotel offre 70 camere confortevoli, un parcheggio privato a pagamento e sicuro, nonché un bar accogliente e un'area reception propizia al relax o agli scambi professionali.",
     'intro.cta': 'Prenota la tua camera e goditi il tuo soggiorno a Parigi!',
     'intro.button': 'Prenota una camera',
     'intro.stars': '3 stelle',
@@ -5060,7 +5060,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Intro
     'intro.badge': 'Bem-vindo',
     'intro.title': 'Um hotel bem localizado para tudo!',
-    'intro.description': "Situado no coração do 13º arrondissement, o Hotel Inn Design Paris desfruta de uma localização ideal, perto da Butte-aux-Cailles, parques e cais. Nosso hotel oferece 70 quartos confortáveis, um estacionamento privado e seguro, bem como um bar acolhedor e uma área de recepção propícia ao relaxamento ou trocas profissionais.",
+    'intro.description': "Situado no coração do 13º arrondissement, o Hotel Inn Design Paris desfruta de uma localização ideal, perto da Butte-aux-Cailles, parques e cais. Nosso hotel oferece 70 quartos confortáveis, um estacionamento privado pago e seguro, bem como um bar acolhedor e uma área de recepção propícia ao relaxamento ou trocas profissionais.",
     'intro.cta': 'Reserve seu quarto e aproveite sua estadia em Paris!',
     'intro.button': 'Reservar um quarto',
     'intro.stars': '3 estrelas',
