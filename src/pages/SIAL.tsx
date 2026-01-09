@@ -11,7 +11,7 @@ import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import sialHero from "@/assets/sial-hero.jpeg";
-import sialEvent from "@/assets/sial-event.webp";
+import sialEvent from "@/assets/sial-event-gen.jpg";
 import { useState, useEffect } from "react";
 
 const SIAL = () => {
