@@ -12,7 +12,7 @@ const Localisation = () => {
     { icon: Plane, time: "1h", label: t('locationPage.airport.cdg') },
     { icon: Plane, time: "45 min", label: t('locationPage.airport.orly') },
     { icon: Building2, time: "26 min", label: t('locationPage.eiffel') },
-    { icon: Landmark, time: "8 min", label: t('locationPage.louvre') },
+    { icon: Landmark, time: "20 min", label: t('locationPage.louvre') },
     { icon: MapPin, time: "30 min", label: t('locationPage.champs') },
     { icon: Landmark, time: "20 min", label: t('locationPage.pantheon') },
   ];
