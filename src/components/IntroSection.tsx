@@ -30,7 +30,7 @@ export const IntroSection = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 xs:gap-10 sm:gap-12 items-center mb-8 xs:mb-10">
           {/* Left: Text + Stats */}
           <div>
-            <p className="text-muted-foreground text-sm xs:text-base sm:text-lg leading-relaxed mb-4 xs:mb-6">
+            <p className="text-muted-foreground text-base xs:text-lg sm:text-xl leading-relaxed mb-4 xs:mb-6">
               {t('intro.description')}
             </p>
 

@@ -88,7 +88,7 @@ export const ServicesSection = () => {
                 </div>
                 <h3 className="font-display text-lg sm:text-xl text-foreground">{t('services.restaurant.title')}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-sm">
+              <p className="text-muted-foreground leading-relaxed text-base">
                 {t('services.restaurant.desc')}
               </p>
             </div>
@@ -110,7 +110,7 @@ export const ServicesSection = () => {
                 </div>
                 <h3 className="font-display text-lg sm:text-xl text-foreground">{t('services.tourism.title')}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-sm">
+              <p className="text-muted-foreground leading-relaxed text-base">
                 {t('services.tourism.desc')}
               </p>
             </div>
