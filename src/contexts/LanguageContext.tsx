@@ -52,7 +52,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Intro
     'intro.badge': 'Bienvenue',
     'intro.title': 'Un hôtel bien placé pour tout faire !',
-    'intro.description': "Situé au cœur du 13ᵉ arrondissement, l'Hôtel Inn Design Paris bénéficie d'un emplacement idéal, à proximité de la Butte-aux-Cailles, des parcs et des quais. Notre hôtel propose 70 chambres confortables, un parking privé et sécurisé, ainsi qu'un bar convivial et un espace d'accueil propice à la détente ou aux échanges professionnels.",
+    'intro.description': "Situé au cœur du 13ᵉ arrondissement, l'Hôtel Inn Design Paris bénéficie d'un emplacement idéal, à proximité de la Butte-aux-Cailles, des parcs et des quais. Notre hôtel propose 70 chambres confortables, un parking privé payant et sécurisé, ainsi qu'un bar convivial et un espace d'accueil propice à la détente ou aux échanges professionnels.",
     'intro.cta': 'Réservez votre chambre et profitez de votre séjour à Paris !',
     'intro.button': 'Réserver une chambre',
     'intro.stars': '3 étoiles',
