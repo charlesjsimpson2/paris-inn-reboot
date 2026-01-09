@@ -20,7 +20,7 @@ import gunsNRosesHero from "@/assets/guns-n-roses-portrait.jpg";
 import scorpionsHero from "@/assets/scorpions-tour-2026.jpg";
 import marathonParisHero from "@/assets/marathon-paris-hero.jpg";
 import vingtKmHero from "@/assets/20km-paris-hero.jpg";
-import merylHero from "@/assets/meryl-affiche.jpg";
+import merylHero from "@/assets/meryl-hero-official.jpg";
 import keryjamesHero from "@/assets/kery-james-affiche.jpg";
 import orelsanHero from "@/assets/orelsan-hero.jpg";
 import indochineHero from "@/assets/indochine-hero.jpg";
