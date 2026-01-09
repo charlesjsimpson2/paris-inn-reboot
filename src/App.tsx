@@ -46,6 +46,7 @@ const MarathonParis = lazy(() => import("./pages/MarathonParis"));
 const Equiphotel = lazy(() => import("./pages/Equiphotel"));
 const CongresACCDOM = lazy(() => import("./pages/CongresACCDOM"));
 const CongresMaires = lazy(() => import("./pages/CongresMaires"));
+const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -108,6 +109,7 @@ const App = () => {
                 <Route path="/evenements/congres-maires" element={<CongresMaires />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
+                <Route path="/mentions-legales" element={<MentionsLegales />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
