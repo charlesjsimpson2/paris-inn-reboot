@@ -66,9 +66,8 @@ export const Footer = memo(() => {
           <p className="text-muted-foreground text-[10px]">
             © 2025 Hôtel Inn Design Paris. {t('footer.rights')}
           </p>
-          <div className="flex gap-3 text-[10px]">
+          <div className="text-[10px]">
             <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.legal')}</Link>
-            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.privacy')}</Link>
           </div>
         </div>
       </div>
