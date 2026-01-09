@@ -29,15 +29,15 @@ export const BreakfastSection = () => {
               {t('breakfast.subtitle')}
             </h3>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               {t('breakfast.desc1')}
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               {t('breakfast.desc2')}
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               {t('breakfast.desc3')}
             </p>
 
@@ -88,11 +88,11 @@ export const BreakfastSection = () => {
               </h3>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               {t('breakfast.bar.desc1')}
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               {t('breakfast.bar.desc2')}
             </p>
           </div>

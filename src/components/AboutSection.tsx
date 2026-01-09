@@ -25,7 +25,7 @@ export const AboutSection = () => {
           <h2 className="font-display text-4xl md:text-5xl text-foreground mb-4">
             {t('about.title')}
           </h2>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
             {t('about.description')}
           </p>
         </div>

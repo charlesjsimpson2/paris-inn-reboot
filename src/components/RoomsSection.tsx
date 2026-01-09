@@ -81,7 +81,7 @@ export const RoomsSection = memo(() => {
           <p className="text-base xs:text-lg sm:text-xl text-primary font-medium mb-3 xs:mb-4 sm:mb-6">
             {t('rooms.subtitle')}
           </p>
-          <p className="text-muted-foreground leading-relaxed text-xs xs:text-sm sm:text-base">
+          <p className="text-muted-foreground leading-relaxed text-sm xs:text-base sm:text-lg">
             {t('rooms.description')}<br className="hidden sm:block" />
             {t('rooms.description2')}
           </p>
