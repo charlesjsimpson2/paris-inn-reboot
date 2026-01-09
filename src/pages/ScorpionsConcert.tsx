@@ -205,9 +205,9 @@ const ScorpionsConcert = () => {
         {/* Easy Access Section */}
         <EasyAccessSection 
           venue="Accor Arena Paris"
-          travelTime="~25 min"
-          metroLine="Ligne 14"
-          metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
+          travelTime="~15 min"
+          metroLine="Ligne 6"
+          metroRoute="Place d'Italie → Bercy"
           accentColor="from-yellow-600 via-yellow-700 to-red-600"
         />
 

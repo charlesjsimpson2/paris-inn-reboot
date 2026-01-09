@@ -205,9 +205,9 @@ const GunsNRosesConcert = () => {
         {/* Easy Access Section */}
         <EasyAccessSection 
           venue="Accor Arena Paris"
-          travelTime="~25 min"
-          metroLine="Ligne 14"
-          metroRoute="Place d'Italie → Bercy (correspondance Ligne 6 ou 14)"
+          travelTime="~15 min"
+          metroLine="Ligne 6"
+          metroRoute="Place d'Italie → Bercy"
           accentColor="from-red-600 via-red-700 to-yellow-600"
         />
 
