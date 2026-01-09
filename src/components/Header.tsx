@@ -99,18 +99,18 @@ export const Header = memo(() => {
             </button>
 
             {/* Logo - Center */}
-            <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center max-w-[120px] xs:max-w-[140px] sm:max-w-none">
               <img 
                 src={logoHotel} 
                 alt="Hotel Inn Paris" 
                 loading="eager"
                 fetchPriority="high"
-                className="h-8 sm:h-10 md:h-12 w-auto"
+                className="h-6 xs:h-8 sm:h-10 md:h-12 w-auto"
               />
             </Link>
 
             {/* Right side: Language + Réserver Button */}
-            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 z-10">
+            <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4 z-10">
               {/* Language Switcher */}
               <div className={`relative z-50 ${isScrolled || isHeroPage ? 'text-foreground' : 'text-white'}`}>
                 <LanguageSwitcher />
