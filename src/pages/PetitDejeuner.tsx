@@ -118,6 +118,10 @@ const PetitDejeuner = () => {
                 {t('breakfastPage.enjoy')}
               </p>
 
+              <p className="text-primary font-medium italic">
+                {t('breakfastPage.glutenFree')}
+              </p>
+
               {/* Info boxes - Horaires */}
               <div className="bg-secondary/30 rounded-xl border border-border/50 p-6 pt-4">
                 <div className="flex items-center gap-3 mb-4">
