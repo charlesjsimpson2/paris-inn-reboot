@@ -9,7 +9,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
 import { EventBackButton } from "@/components/EventBackButton";
 import heroAffiche from "@/assets/kery-james-affiche.jpg";
-import heroPortrait from "@/assets/kery-james-portrait.jpg";
+import heroPortrait from "@/assets/kery-james-concert-gen.jpg";
 
 const KeryJamesConcert = () => {
   const { t } = useLanguage();
