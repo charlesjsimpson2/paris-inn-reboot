@@ -83,10 +83,10 @@ export const Header = memo(() => {
         }`}
       >
         <div className="container mx-auto px-3 sm:px-4">
-          <nav className="flex items-center justify-between relative">
+          <nav className="grid grid-cols-[auto_1fr_auto] items-center relative gap-2">
             {/* Burger Menu - Left */}
             <button
-              className={`group px-3 py-2 sm:px-5 sm:py-2.5 border-2 transition-all duration-300 flex items-center gap-2 sm:gap-3 z-10 shadow-md hover:shadow-lg active:scale-95 ${
+              className={`group px-3 py-2 sm:px-5 sm:py-2.5 border-2 transition-all duration-300 flex items-center gap-2 sm:gap-3 z-20 shadow-md hover:shadow-lg active:scale-95 justify-self-start whitespace-nowrap ${
                 isHeroPage || isScrolled
                   ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
                   : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
@@ -99,26 +99,34 @@ export const Header = memo(() => {
             </button>
 
             {/* Logo - Center */}
-            <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center max-w-[120px] xs:max-w-[140px] sm:max-w-none">
-              <img 
-                src={logoHotel} 
-                alt="Hotel Inn Paris" 
-                loading="eager"
-                fetchPriority="high"
-                className="h-6 xs:h-8 sm:h-10 md:h-12 w-auto"
-              />
-            </Link>
+            <div className="flex justify-center min-w-0 z-30">
+              <Link
+                to="/"
+                className="flex items-center justify-center w-full max-w-[120px] xs:max-w-[150px] sm:max-w-none"
+                aria-label="Accueil"
+              >
+                <span className="inline-flex items-center justify-center rounded-md bg-background/70 backdrop-blur-sm px-1 py-0.5">
+                  <img
+                    src={logoHotel}
+                    alt="Hotel Inn Paris"
+                    loading="eager"
+                    fetchPriority="high"
+                    className="h-7 xs:h-9 sm:h-10 md:h-12 w-auto object-contain drop-shadow-sm"
+                  />
+                </span>
+              </Link>
+            </div>
 
             {/* Right side: Language + Réserver Button */}
-            <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4 z-10">
+            <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4 z-20 justify-self-end whitespace-nowrap">
               {/* Language Switcher */}
               <div className={`relative z-50 ${isScrolled || isHeroPage ? 'text-foreground' : 'text-white'}`}>
                 <LanguageSwitcher />
               </div>
-              
-              <Button 
-                variant="gold" 
-                size="lg" 
+
+              <Button
+                variant="gold"
+                size="lg"
                 className="px-2.5 py-2 sm:px-4 md:px-6 md:py-5 text-xs sm:text-sm md:text-base font-bold tracking-wide shadow-lg hover:shadow-xl active:scale-95 transition-all duration-300 bg-burgundy hover:bg-burgundy/90 border-burgundy relative overflow-hidden group"
                 asChild
               >
