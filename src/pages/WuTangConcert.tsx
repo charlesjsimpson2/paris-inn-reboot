@@ -210,20 +210,20 @@ const WuTangConcert = () => {
             <div className="max-w-6xl mx-auto">
               <div className="bg-white dark:bg-charcoal rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-yellow-200 dark:border-yellow-800/50 mb-10 overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl" />
-                <div className="flex justify-center mb-8">
-                  <div className="relative group">
+                <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start">
+                  <div className="relative group flex-shrink-0 mx-auto md:mx-0">
                     <div className="absolute -inset-3 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img 
                       src={wutangLogo} 
                       alt="Wu-Tang Clan Logo" 
-                      className="relative w-48 h-48 rounded-full shadow-xl object-contain bg-black p-4 transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      className="relative w-32 h-32 md:w-40 md:h-40 rounded-full shadow-xl object-contain bg-black p-3 transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                   </div>
-                </div>
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-5 text-center">
-                  <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText1') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText2') }} />
-                  <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText3') }} />
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
+                    <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText1') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText2') }} />
+                    <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t('wutang.aboutText3') }} />
+                  </div>
                 </div>
               </div>
               
