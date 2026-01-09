@@ -6,7 +6,7 @@ const destinations = [
   { icon: Plane, time: "1h", label: "Aéroport de Paris-Charles de Gaulle" },
   { icon: Plane, time: "45 min", label: "Aéroport de Paris-Orly" },
   { icon: Building2, time: "26 min", label: "Tour Eiffel" },
-  { icon: Landmark, time: "8 min", label: "Musée du Louvre" },
+  { icon: Landmark, time: "20 min", label: "Musée du Louvre" },
   { icon: MapPin, time: "30 min", label: "Les Champs-Élysées" },
   { icon: Landmark, time: "20 min", label: "Le Panthéon" },
 ];
@@ -64,7 +64,7 @@ export const AboutSection = () => {
             {/* Metro line */}
             <div className="flex items-center justify-center gap-3 p-3 bg-card border border-border">
               <div className="flex items-center gap-1">
-                <span className="w-6 h-6 rounded-full bg-[#BB4D98] flex items-center justify-center text-white font-bold text-xs">5</span>
+                <span className="w-6 h-6 rounded-full bg-[#F28E00] flex items-center justify-center text-white font-bold text-xs">5</span>
                 <span className="w-6 h-6 rounded-full bg-[#7EC083] flex items-center justify-center text-white font-bold text-xs">6</span>
                 <span className="w-6 h-6 rounded-full bg-[#F3A4BA] flex items-center justify-center text-foreground font-bold text-xs">7</span>
               </div>
