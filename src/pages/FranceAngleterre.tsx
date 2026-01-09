@@ -10,7 +10,7 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { useState, useEffect } from "react";
 import { EventBackButton } from "@/components/EventBackButton";
 
-import franceAngleterreHero from "@/assets/france-angleterre-match.png";
+import franceAngleterreHero from "@/assets/france-angleterre-hero-gen.jpg";
 
 const drapeauFrance = "https://flagcdn.com/w80/fr.png";
 const drapeauAngleterre = "https://flagcdn.com/w80/gb-eng.png";
