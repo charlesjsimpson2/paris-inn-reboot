@@ -1,6 +1,6 @@
 import { useState, useEffect, memo, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight } from "lucide-react";
+import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight, Accessibility, Heater } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import chambreTwin from "@/assets/chambre-twin.jpg";
@@ -48,6 +48,8 @@ export const RoomsSection = memo(() => {
     { icon: Wifi, label: t('rooms.wifi') },
     { icon: CupSoda, label: t('rooms.courtesy') },
     { icon: Snowflake, label: t('rooms.ac') },
+    { icon: Heater, label: t('rooms.heating') },
+    { icon: Accessibility, label: t('rooms.pmr') },
   ], [t]);
 
   const goToPrev = () => {
@@ -190,7 +192,7 @@ export const RoomsSection = memo(() => {
 
         {/* Bottom: Equipment */}
         <div className="border-t border-border/30 pt-6 xs:pt-8">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 xs:gap-4 md:gap-6">
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-3 xs:gap-4 md:gap-6">
             {equipment.map((item, index) => (
               <div
                 key={index}

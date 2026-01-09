@@ -82,6 +82,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.wifi': 'Wi-Fi gratuit',
     'rooms.courtesy': 'Plateau de courtoisie',
     'rooms.ac': 'Climatisation',
+    'rooms.heating': 'Chauffage',
+    'rooms.pmr': 'Chambres PMR',
     
     // Rooms Page
     'roomsPage.badge': 'Nos Hébergements',
@@ -1371,6 +1373,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.wifi': 'Free Wi-Fi',
     'rooms.courtesy': 'Courtesy tray',
     'rooms.ac': 'Air conditioning',
+    'rooms.heating': 'Heating',
+    'rooms.pmr': 'Accessible rooms',
     
     // Rooms Page
     'roomsPage.badge': 'Our Accommodations',
@@ -2610,6 +2614,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.wifi': 'Wi-Fi gratis',
     'rooms.courtesy': 'Bandeja de cortesía',
     'rooms.ac': 'Aire acondicionado',
+    'rooms.heating': 'Calefacción',
+    'rooms.pmr': 'Habitaciones accesibles',
     
     // Rooms Page
     'roomsPage.badge': 'Nuestros Alojamientos',
@@ -3850,6 +3856,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.wifi': 'Wi-Fi gratuito',
     'rooms.courtesy': 'Vassoio di cortesia',
     'rooms.ac': 'Aria condizionata',
+    'rooms.heating': 'Riscaldamento',
+    'rooms.pmr': 'Camere accessibili',
     
     // Rooms Page
     'roomsPage.badge': 'I Nostri Alloggi',
@@ -5090,6 +5098,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.wifi': 'Wi-Fi grátis',
     'rooms.courtesy': 'Bandeja de cortesia',
     'rooms.ac': 'Ar condicionado',
+    'rooms.heating': 'Aquecimento',
+    'rooms.pmr': 'Quartos acessíveis',
     
     // Rooms Page
     'roomsPage.badge': 'Nossos Alojamentos',

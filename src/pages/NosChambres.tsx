@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { RoomSection } from "@/components/RoomSection";
-import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda, X, Accessibility, Heater } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
 import chambreDouble from "@/assets/chambre-double.jpg";
@@ -88,6 +88,8 @@ const NosChambres = () => {
     { icon: Wifi, label: t('rooms.wifi') },
     { icon: CupSoda, label: t('rooms.courtesy') },
     { icon: Snowflake, label: t('rooms.ac') },
+    { icon: Heater, label: t('rooms.heating') },
+    { icon: Accessibility, label: t('rooms.pmr') },
   ];
 
   // Intersection Observer for scroll animations
