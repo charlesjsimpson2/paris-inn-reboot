@@ -55,7 +55,7 @@ const Seminaires = () => {
     {
       name: t('seminarsPage.fender.name'),
       description: t('seminarsPage.fender.description'),
-      surface: "70 m²",
+      surface: "77 m²",
       images: [
         { src: salonFender1, alt: t('seminarsPage.fender.alt1') },
         { src: salonFender2, alt: t('seminarsPage.fender.alt2') },
