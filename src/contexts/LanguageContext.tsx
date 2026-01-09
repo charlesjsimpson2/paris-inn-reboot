@@ -57,6 +57,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'intro.button': 'Réserver une chambre',
     'intro.stars': '3 étoiles',
     'intro.rooms': '70 chambres',
+    'intro.wifi': 'WiFi très haut débit',
     'intro.parking': 'Parking privé',
     'intro.bar': 'Bar convivial',
     
@@ -1351,6 +1352,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'intro.button': 'Book a room',
     'intro.stars': '3 stars',
     'intro.rooms': '70 rooms',
+    'intro.wifi': 'Ultra-fast WiFi',
     'intro.parking': 'Private parking',
     'intro.bar': 'Friendly bar',
     
@@ -2595,6 +2597,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'intro.button': 'Reservar habitación',
     'intro.stars': '3 estrellas',
     'intro.rooms': '70 habitaciones',
+    'intro.wifi': 'WiFi ultrarrápido',
     'intro.parking': 'Parking privado',
     'intro.bar': 'Bar acogedor',
     
@@ -3840,6 +3843,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'intro.button': 'Prenota una camera',
     'intro.stars': '3 stelle',
     'intro.rooms': '70 camere',
+    'intro.wifi': 'WiFi ultraveloce',
     'intro.parking': 'Parcheggio privato',
     'intro.bar': 'Bar accogliente',
     
@@ -5085,6 +5089,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'intro.button': 'Reservar um quarto',
     'intro.stars': '3 estrelas',
     'intro.rooms': '70 quartos',
+    'intro.wifi': 'WiFi ultrarrápido',
     'intro.parking': 'Estacionamento privado',
     'intro.bar': 'Bar acolhedor',
     

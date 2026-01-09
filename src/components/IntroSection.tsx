@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Star, BedDouble, Car, Wine } from "lucide-react";
+import { Star, BedDouble, Car, Wine, Wifi } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 
@@ -9,6 +9,7 @@ export const IntroSection = () => {
   const features = [
     { icon: Star, label: t('intro.stars'), stars: true },
     { icon: BedDouble, label: t('intro.rooms') },
+    { icon: Wifi, label: t('intro.wifi'), highlight: true },
     { icon: Car, label: t('intro.parking') },
     { icon: Wine, label: t('intro.bar') },
   ];
@@ -39,7 +40,11 @@ export const IntroSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 sm:px-4 py-1.5 xs:py-2 bg-charcoal/50 border border-border/30"
+                  className={`flex items-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 sm:px-4 py-1.5 xs:py-2 border ${
+                    feature.highlight 
+                      ? 'bg-primary/20 border-primary/50' 
+                      : 'bg-charcoal/50 border-border/30'
+                  }`}
                 >
                   {feature.stars ? (
                     <div className="flex items-center gap-0.5 text-primary">
@@ -48,9 +53,9 @@ export const IntroSection = () => {
                       <Star className="w-3 h-3 xs:w-3.5 xs:h-3.5 fill-primary" />
                     </div>
                   ) : (
-                    <feature.icon className="w-3.5 h-3.5 xs:w-4 xs:h-4 text-primary" />
+                    <feature.icon className={`w-3.5 h-3.5 xs:w-4 xs:h-4 ${feature.highlight ? 'text-primary' : 'text-primary'}`} />
                   )}
-                  <span className="text-foreground text-[11px] xs:text-xs sm:text-sm">{feature.label}</span>
+                  <span className={`text-[11px] xs:text-xs sm:text-sm ${feature.highlight ? 'text-foreground font-medium' : 'text-foreground'}`}>{feature.label}</span>
                 </div>
               ))}
             </div>
