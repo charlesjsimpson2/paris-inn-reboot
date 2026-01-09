@@ -11,7 +11,7 @@ import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.jpg";
 import chambreDouble from "@/assets/chambre-double.jpg";
 import eurosatoryHero from "@/assets/eurosatory-hero.jpg";
-import eurosatoryEvent from "@/assets/eurosatory-event.jpg";
+import eurosatoryEvent from "@/assets/eurosatory-event-gen.jpg";
 import eurosatoryLogo from "@/assets/eurosatory-logo.svg";
 import { useState, useEffect } from "react";
 
