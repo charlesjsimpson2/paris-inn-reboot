@@ -10,7 +10,7 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { SEO } from "@/components/SEO";
 import { EventBackButton } from "@/components/EventBackButton";
 import heroImage from "@/assets/meryl-affiche.jpg";
-import concertPortrait from "@/assets/meryl-concert-portrait.jpg";
+import concertPortrait from "@/assets/meryl-portrait-tm.jpg";
 
 const MerylConcert = () => {
   const { t } = useLanguage();
