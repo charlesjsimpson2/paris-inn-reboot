@@ -8,6 +8,7 @@ import flagEn from '@/assets/flags/flag-en.png';
 import flagEs from '@/assets/flags/flag-es.png';
 import flagIt from '@/assets/flags/flag-it.png';
 import flagPt from '@/assets/flags/flag-pt.png';
+import flagDe from '@/assets/flags/flag-de.png';
 
 const flagImages: Record<Language, string> = {
   fr: flagFr,
@@ -15,6 +16,7 @@ const flagImages: Record<Language, string> = {
   es: flagEs,
   it: flagIt,
   pt: flagPt,
+  de: flagDe,
 };
 
 export const LanguageSwitcher = () => {
