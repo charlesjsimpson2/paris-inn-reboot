@@ -17,7 +17,8 @@ const Contact = () => {
     en: 'https://tally.so/embed/b59bO0',
     es: 'https://tally.so/embed/LZzRXz',
     it: 'https://tally.so/embed/pbd8Gy',
-    pt: 'https://tally.so/embed/jab1WY'
+    pt: 'https://tally.so/embed/jab1WY',
+    de: 'https://tally.so/embed/LZK7dp'
   };
 
   const currentFormUrl = tallyFormUrls[language] || tallyFormUrls.fr;
