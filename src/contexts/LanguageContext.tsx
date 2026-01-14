@@ -7001,10 +7001,59 @@ export const translations: Record<Language, Record<string, string>> = {
     'clara.urgencyMessage': 'Clara Luciani Angebot',
     'actualites.claraluciani.date': '18.-19. Februar 2026',
 
-    // MIKA Concert (additional keys)
+    // MIKA Concert
     'mika.seoTitle': 'MIKA Konzert Paris 2026 – Accor Arena',
     'mika.seoDescription': 'MIKA live in Paris am 16. Februar 2026 (Accor Arena). Übernachten Sie nahe der Metro Place d\'Italie.',
     'mika.urgencyMessage': 'MIKA-Konzertangebot',
+
+    'mika.tour': 'Spinning Out Tour',
+    'mika.title': 'MIKA',
+    'mika.subtitle': 'Spinning Out Tour 2026',
+    'mika.dateInfo': 'Montag, 16. Februar 2026 – 20:00 Uhr',
+    'mika.monday': 'Montag',
+    'mika.february': 'Februar',
+    'mika.time': '20:00 Uhr',
+
+    'mika.countdown': 'Countdown',
+    'mika.days': 'Tage',
+    'mika.hours': 'Stunden',
+    'mika.min': 'Min',
+    'mika.sec': 'Sek',
+
+    'mika.exclusiveOffers': 'Exklusive Angebote',
+    'mika.offersSubtitle': 'Nutzen Sie unsere Services für Ihren Abend',
+    'mika.parking': 'Sicherer Parkplatz',
+    'mika.parkingDesc': 'Nutzen Sie unseren privaten und sicheren Parkplatz während des Konzerts.',
+    'mika.parkingPrice': '15€ / Nacht',
+    'mika.taxi': 'Taxi-Shuttle',
+    'mika.taxiDesc': 'Buchen Sie Ihr Taxi im Voraus und profitieren Sie von Vorzugspreisen zur Accor Arena.',
+    'mika.taxiDiscount': '-10% Taxi',
+    'mika.offersNote': '*Angebote nur für Hotelgäste',
+
+    'mika.edition2026': 'Spinning Out Tour 2026',
+    'mika.uniqueShow': 'Eine unvergessliche Show',
+    'mika.showDesc': 'MIKA kommt zurück nach Paris mit seiner neuen Show „Spinning Out Tour“! Freuen Sie sich auf eine außergewöhnliche Nacht voller ikonischer Hits und neuer Songs.',
+
+    'mika.aboutText1': '<strong>MIKA</strong>, der facettenreiche Pop-Künstler, kehrt mit der <strong>„Spinning Out Tour“</strong> triumphal auf die Bühne zurück. Nach weltweiten Erfolgen verspricht er eine atemberaubende Show.',
+    'mika.aboutText2': 'Mit Hits wie <em>„Grace Kelly“</em>, <em>„Relax, Take It Easy“</em> und <em>„Love Today“</em> entführt Sie MIKA in ein farbenfrohes, festliches Universum. Seine außergewöhnliche Stimme und Energie garantieren einen unvergesslichen Abend.',
+    'mika.aboutText3': 'Die <strong>Accor Arena (Paris-Bercy)</strong> ist Gastgeber dieses einzigartigen Events. Verpassen Sie dieses außergewöhnliche Musikerlebnis nicht!',
+
+    'mika.bio.title': 'Wer ist MIKA?',
+    'mika.bio.text1': 'MIKA ist ein internationaler Popstar, bekannt für seinen mehrsprachigen Stil, seine Bühnenenergie und seine unverwechselbare Stimme. Seit seinem Durchbruch begeistert er ein weltweites Publikum.',
+    'mika.bio.text2': 'Zwischen Pop, Glam und orchestralen Einflüssen schafft er Konzerte, die ebenso visuell wie musikalisch spektakulär sind.',
+
+    'mika.concertParis': 'Konzert in Paris',
+    'mika.exceptionalArtist': 'Ein außergewöhnlicher Künstler',
+    'mika.internationalCareer': 'Eine beeindruckende internationale Karriere',
+    'mika.musicalPath': 'Musikalischer Werdegang',
+    'mika.musicalPathDesc': 'Seit seinem Debütalbum „Life in Cartoon Motion“ (2007) hat MIKA weltweit über 10 Millionen Alben verkauft. Sein einzigartiger Stil begeistert Fans auf der ganzen Welt.',
+    'mika.legendaryShows': 'Legendäre Shows',
+    'mika.legendaryShowsDesc': 'Seine Konzerte sind echte visuelle und musikalische Feiern: extravagante Kostüme, farbenfrohe Bühnenbilder und mitreißende Choreografien – jede Show ist ein Erlebnis.',
+    'mika.albumsSold': 'Verkaufte Alben',
+    'mika.studioAlbums': 'Studioalben',
+    'mika.careerYears': 'Jahre Karriere',
+
+    'mika.watchVideo': 'MIKA live entdecken',
 
     // Scorpions Concert
     'scorpions.tour': 'Love At First Sting Tour',
