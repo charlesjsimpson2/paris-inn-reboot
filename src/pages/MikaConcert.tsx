@@ -15,7 +15,7 @@ import { SEO } from "@/components/SEO";
 import { EventBackButton } from "@/components/EventBackButton";
 
 const MikaConcert = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   // Date confirmée : 16 février 2026 à 20h00
   const targetDate = new Date('2026-02-16T20:00:00').getTime();
@@ -209,8 +209,8 @@ const MikaConcert = () => {
         {/* Easy Access Section */}
         <EasyAccessSection 
           venue="Accor Arena Paris"
-          travelTime="~15 min"
-          metroLine="Ligne 6"
+          travelTime={language === 'de' ? "~15 Min" : "~15 min"}
+          metroLine={language === 'de' ? "Linie 6" : "Ligne 6"}
           metroRoute="Place d'Italie → Bercy"
           accentColor="from-orange-500 via-pink-600 to-purple-700"
         />
@@ -297,7 +297,7 @@ const MikaConcert = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity animate-pulse-glow" />
                   <div className="relative bg-gradient-to-br from-orange-500 via-pink-600 to-purple-600 rounded-2xl p-8 text-center shadow-2xl">
                     <p className="font-display text-3xl md:text-4xl text-white font-bold">{t('mika.monday')} 16 {t('mika.february')} 2026</p>
-                    <p className="text-yellow-200 text-xl mt-2 font-bold">20h00</p>
+                    <p className="text-yellow-200 text-xl mt-2 font-bold">{t('mika.time')}</p>
                   </div>
                 </div>
               </div>
