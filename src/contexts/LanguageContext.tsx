@@ -6328,8 +6328,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'sial.eventName': 'o SIAL',
     'sial.urgencyMessage': 'Oferta SIAL',
   },
-  de: {
-    // Navigation
+  de: Object.assign(
+    {},
+    {
     'nav.hotel': 'Das Hotel',
     'nav.home': 'Startseite',
     'nav.rooms': 'Unsere Zimmer',
@@ -7047,6 +7048,59 @@ export const translations: Record<Language, Record<string, string>> = {
     'clara.hotelPromo.subtitle': 'Übernachten Sie nahe der Metro und erreichen Sie die Accor Arena bequem.',
     'clara.urgencyMessage': 'Clara Luciani Angebot',
     'actualites.claraluciani.date': '18.-19. Februar 2026',
+
+  }, {
+
+    // Wu-Tang Clan Concert
+    'actualites.wutang.date': '11. März 2026',
+    'wutang.seoTitle': 'Wu-Tang Clan Konzert Paris 2026 – Accor Arena',
+    'wutang.seoDescription': 'Wu-Tang Clan live in Paris am 11. März 2026 (Accor Arena). Übernachten Sie nahe der Metro Place d\'Italie.',
+    'wutang.urgencyMessage': 'Wu‑Tang‑Konzertangebot',
+
+    'wutang.tour': 'The Final Chamber Tour',
+    'wutang.title': 'Wu-Tang Clan',
+    'wutang.subtitle': 'Ikonische US‑Hip‑Hop‑Gruppe',
+    'wutang.dateInfo': 'Mittwoch, 11. März 2026 – 20:00 Uhr',
+
+    'wutang.countdown': 'Countdown',
+    'wutang.days': 'Tage',
+    'wutang.hours': 'Stunden',
+    'wutang.min': 'Min',
+    'wutang.sec': 'Sek',
+
+    'wutang.legendary': 'Hip‑Hop‑Legenden',
+    'wutang.uniqueShow': 'Eine legendäre Show',
+    'wutang.showDesc': 'Wu‑Tang Clan, die ikonische amerikanische Hip‑Hop‑Gruppe, kehrt für ein außergewöhnliches Konzert in die Accor Arena zurück!',
+
+    'wutang.aboutText1': '<strong>Wu‑Tang Clan</strong> ist eine US‑amerikanische Hip‑Hop‑Gruppe, gegründet <strong>1992</strong>, aus <strong>Staten Island</strong> und <strong>Brooklyn</strong> (New York). Die Mitglieder prägten eine ganze Generation des Rap.',
+    'wutang.aboutText2': 'Bekannt durch Alben wie <em>"Enter the Wu‑Tang (36 Chambers)"</em> (1993) und <em>"Wu‑Tang Forever"</em> (1997), verkauften sie weltweit über <strong>40 Millionen Alben</strong>.',
+    'wutang.aboutText3': 'Ihr Stil – Kung‑Fu‑Samples, harte Beats und messerscharfe Lyrics – beeinflusst bis heute Künstler weltweit.',
+
+    'wutang.bio.title': 'Wer ist Wu‑Tang Clan?',
+    'wutang.bio.text1': 'Gegründet von <strong>RZA</strong>, umfasst das Kollektiv Legenden: <em>GZA, Method Man, Raekwon, Ghostface Killah, Inspectah Deck, U‑God, Masta Killa</em> und den verstorbenen <em>Ol\' Dirty Bastard</em>.',
+    'wutang.bio.text2': 'Ihr Debütalbum gilt als eines der einflussreichsten der Hip‑Hop‑Geschichte. Das „W“-Logo wurde zu einem weltweiten Kultsymbol.',
+
+    'wutang.concertParis': 'Konzert in Paris',
+    'wutang.wednesday': 'Mittwoch',
+    'wutang.march': 'März',
+    'wutang.time': '20:00 Uhr',
+    'wutang.prices': 'Preise',
+    'wutang.priceRange': 'Von 65€ bis 150€',
+    'wutang.doorsOpen': 'Einlass',
+    'wutang.venue': 'Veranstaltungsort',
+
+    'wutang.internationalCareer': 'Über 30 Jahre Karriere',
+    'wutang.musicalPath': 'Musikalischer Weg',
+    'wutang.musicalPathDesc': 'Seit „Enter the Wu‑Tang“ (1993) hat die Gruppe die Codes des Hip‑Hop neu definiert – mit unverwechselbarer Produktion und ikonischen Flows.',
+    'wutang.legendaryShows': 'Legendäre Live‑Shows',
+    'wutang.legendaryShowsDesc': 'Ihre Konzerte sind echte Hip‑Hop‑Zeremonien: rohe Energie, unvergessliche Atmosphäre.',
+
+    'wutang.albumsSold': 'Alben verkauft',
+    'wutang.studioAlbums': 'Studioalben',
+    'wutang.careerYears': 'Jahre Karriere',
+    'wutang.watchVideo': 'Wu‑Tang Clan entdecken',
+    'wutang.bookStay': 'Aufenthalt buchen',
+    'wutang.bestConditions': 'Genießen Sie die besten Bedingungen',
 
     // MIKA Concert
     'mika.seoTitle': 'MIKA Konzert Paris 2026 – Accor Arena',
