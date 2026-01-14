@@ -6702,7 +6702,25 @@ export const translations: Record<Language, Record<string, string>> = {
     'hotelPromo.discoverRooms': 'Entdecken Sie unsere Zimmer',
     'hotelPromo.book': 'Ihren Aufenthalt buchen',
     'hotelPromo.bookNow': 'Jetzt buchen',
-    
+
+    // Enfoirés hotel promo keys (used as default "concert" copy in EventHotelPromo)
+    'enfoires.hotelPromo.badge': 'Ihre ideale Unterkunft',
+    'enfoires.hotelPromo.title': 'Genießen Sie Ihren Konzertabend optimal',
+    'enfoires.hotelPromo.subtitle': 'Übernachten Sie nahe der Metro und erreichen Sie die Accor Arena bequem für ein unvergessliches Erlebnis.',
+    'enfoires.hotelPromo.whyUs': 'Warum unser Hotel wählen?',
+    'enfoires.hotelPromo.location': 'Direkter Zugang zur Accor Arena',
+    'enfoires.hotelPromo.locationDesc': 'In der Nähe der Metro Place d\'Italie: erreichen Sie die Accor Arena in ca. 15 Minuten mit der Linie 6.',
+    'enfoires.hotelPromo.breakfast': 'Genussvolles Frühstück',
+    'enfoires.hotelPromo.breakfastDesc': 'Tanken Sie am nächsten Morgen Energie mit unserem süßen & herzhaften All-you-can-eat-Buffet.',
+    'enfoires.hotelPromo.reception': 'Persönlicher Empfang 24/7',
+    'enfoires.hotelPromo.receptionDesc': 'Unser Team ist rund um die Uhr für Sie da – auch nach dem Konzert.',
+    'enfoires.hotelPromo.comfort': 'Komfortable Zimmer',
+    'enfoires.hotelPromo.tv': 'Flachbildfernseher mit Canal+',
+    'enfoires.hotelPromo.wifi': 'Kostenloses Highspeed-WLAN',
+    'enfoires.hotelPromo.buffet': 'Frühstücksbuffet inklusive',
+    'enfoires.hotelPromo.parkingOption': 'Privater, sicherer Parkplatz (15€/Tag)',
+    'enfoires.hotelPromo.discoverRooms': 'Unsere Zimmer ansehen',
+
     // Event Hotel Promo (shared)
     'eventHotelPromo.limitedOffer': 'Begrenztes Angebot',
     'eventHotelPromo.idealLocation': 'Ideale Lage nur wenige Minuten von der Veranstaltung entfernt',
