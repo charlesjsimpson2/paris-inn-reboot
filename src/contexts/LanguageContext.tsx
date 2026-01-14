@@ -6719,7 +6719,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'eventHotelPromo.subtitle.sport': 'Übernachten Sie nahe der Metro und erreichen Sie das Stadion bequem für ein unvergessliches Erlebnis.',
     'eventHotelPromo.subtitle.marathon': 'Übernachten Sie nahe der Metro und bereiten Sie sich entspannt auf Ihr Rennen vor.',
     'eventHotelPromo.subtitle.rugby': 'Übernachten Sie nahe der Metro und erreichen Sie das Stade de France bequem.',
-    
+    // (intentionally no extra overrides here; event-specific DE strings are defined in their own sections below)
+
     // Runner Offers Section
     'runnerOffers.title': 'Unsere Sonderangebote für Läufer',
     'runnerOffers.subtitle': 'Das Hotel Inn Design begleitet Läufer mit angepassten Services',
