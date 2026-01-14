@@ -6688,7 +6688,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'relatedEvents.title': 'Weitere kommende Veranstaltungen',
     'relatedEvents.subtitle': 'Entdecken Sie unsere Angebote für die nächsten Pariser Veranstaltungen',
     'relatedEvents.viewAll': 'Alle Veranstaltungen ansehen',
-    
+
+  }, {
+
     // Hotel Promo (generic)
     'hotelPromo.badge': 'Ihre ideale Unterkunft',
     'hotelPromo.title': 'Genießen Sie Ihre Veranstaltung optimal',
@@ -6816,7 +6818,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'sixnations.desc1': 'Das Sechs-Nationen-Turnier ist das prestigeträchtigste Rugby-Turnier Europas. Erleben Sie die französische Mannschaft live im Stade de France.',
     'sixnations.eventName': 'das Sechs-Nationen-Turnier',
     'sixnations.urgencyMessage': 'Rugby-Angebot',
-    
+
+  }, {
+
     // Salons & Foires - Agriculture (DE)
     'agriculture.badge': 'Landwirtschaftsmesse',
     'agriculture.title': 'Landwirtschaftsmesse Paris',
@@ -6978,6 +6982,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'congresACCDOM.eventName': 'den ACCDOM-Kongress',
     'congresACCDOM.urgencyMessage': 'ACCDOM-Kongress Angebot',
 
+  }, {
+
     // T-shirt raffle (all concerts)
     'concert.raffle.badge': 'Exklusives Gewinnspiel',
     'concert.raffle.title': 'Gewinnen Sie ein offizielles T-Shirt!',
@@ -7125,6 +7131,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'scorpions.offersNote': '*Angebote nur für Hotelgäste',
     'scorpions.urgencyMessage': 'Scorpions Konzert Angebot',
     'actualites.scorpions.date': '26. Mai 2026',
+
+  }, {
 
     // Guns N' Roses Concert
     'gunsNRoses.tour': 'World Tour 2026',
@@ -7344,6 +7352,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'actualites.allEvents': 'Alle Veranstaltungen',
     'actualites.loadMore': 'Mehr Veranstaltungen anzeigen',
 
+  }, {
+
     // Countdown labels (agriculture)
     'agriculture.countdown.days': 'Tage',
     'agriculture.countdown.hours': 'Stunden',
@@ -7396,7 +7406,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'easyAccess.routes.trocadero': "Place d'Italie → Trocadéro (über Linie 6)",
     'easyAccess.routes.champsElysees': "Place d'Italie → Champs-Élysées (über Linie 1)",
     'easyAccess.routes.palaisDesCongres': "Place d'Italie → Palais des Congrès (über Linie 6)",
-  },
+  }),
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
