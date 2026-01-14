@@ -41,8 +41,8 @@ const MikaConcert = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Concert MIKA Paris 2026 - Spinning Out Tour Accor Arena"
-        description="MIKA en concert à Paris le 16 février 2026. Spinning Out Tour à l'Accor Arena. Réservez votre hébergement près du métro Place d'Italie."
+        title={t('mika.seoTitle')}
+        description={t('mika.seoDescription')}
         canonical="/evenements/mika-concert"
       />
       <Header />
@@ -149,9 +149,9 @@ const MikaConcert = () => {
               <div className="text-center mb-6">
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white px-5 py-2 rounded-full mb-2 shadow-lg">
                   <Gift className="w-4 h-4" />
-                  <span className="font-bold text-sm uppercase tracking-wider">{t('clara.exclusiveOffers')}</span>
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('mika.exclusiveOffers')}</span>
                 </div>
-                <p className="text-muted-foreground text-sm">{t('clara.offersSubtitle')}</p>
+                <p className="text-muted-foreground text-sm">{t('mika.offersSubtitle')}</p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-5">
@@ -162,11 +162,11 @@ const MikaConcert = () => {
                       <Car className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg text-foreground">{t('clara.parking')}</h3>
-                      <div className="inline-block bg-orange-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('clara.parkingPrice')}</div>
+                      <h3 className="font-display text-lg text-foreground">{t('mika.parking')}</h3>
+                      <div className="inline-block bg-orange-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('mika.parkingPrice')}</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">{t('clara.parkingDesc')}</p>
+                  <p className="text-muted-foreground text-sm">{t('mika.parkingDesc')}</p>
                 </div>
 
                 {/* Taxi */}
@@ -176,11 +176,11 @@ const MikaConcert = () => {
                       <Car className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg text-foreground">{t('clara.taxi')}</h3>
-                      <div className="inline-block bg-pink-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('clara.taxiDiscount')}</div>
+                      <h3 className="font-display text-lg text-foreground">{t('mika.taxi')}</h3>
+                      <div className="inline-block bg-pink-600 text-white font-bold text-base px-2.5 py-0.5 rounded-full">{t('mika.taxiDiscount')}</div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">{t('clara.taxiDesc')}</p>
+                  <p className="text-muted-foreground text-sm">{t('mika.taxiDesc')}</p>
                 </div>
 
                 {/* T-shirt Raffle */}
@@ -201,7 +201,7 @@ const MikaConcert = () => {
                 </div>
               </div>
               
-              <p className="text-center text-xs text-muted-foreground mt-4 italic">{t('clara.offersNote')} {t('concert.raffle.note')}</p>
+              <p className="text-center text-xs text-muted-foreground mt-4 italic">{t('mika.offersNote')} {t('concert.raffle.note')}</p>
             </div>
           </div>
         </section>
@@ -391,7 +391,7 @@ const MikaConcert = () => {
         <EventHotelPromo 
           eventName="MIKA Live" 
           accentColor="from-orange-500 via-pink-600 to-purple-700"
-          urgencyMessage="Offre Concert MIKA"
+          urgencyMessage={t('mika.urgencyMessage')}
           compact
         />
 
