@@ -183,8 +183,8 @@ const WuTangConcert = () => {
         <EasyAccessSection 
           venue="Accor Arena Paris"
           travelTime="~15 min"
-          metroLine="Ligne 6"
-          metroRoute="Place d'Italie → Bercy"
+          metroLine={t('easyAccess.lines.line6')}
+          metroRoute={t('easyAccess.routes.bercy')}
           accentColor="from-yellow-500 via-amber-600 to-orange-600"
         />
 
@@ -374,7 +374,7 @@ const WuTangConcert = () => {
         <EventHotelPromo 
           eventName="Wu-Tang Clan" 
           accentColor="from-yellow-500 via-amber-600 to-orange-600"
-          urgencyMessage="Offre Concert Wu-Tang"
+          urgencyMessage={t('wutang.urgencyMessage')}
           compact
         />
 
