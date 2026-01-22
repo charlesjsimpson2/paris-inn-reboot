@@ -106,7 +106,7 @@ const SIAL = () => {
                     ))}
                   </div>
 
-                  <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block animate-fade-up animation-delay-600">
+                  <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer" className="block animate-fade-up animation-delay-600">
                     <Button size="lg" className="w-full bg-white text-orange-600 hover:bg-white/90 font-bold shadow-lg">
                       <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
                     </Button>

@@ -79,7 +79,7 @@ const SalonCSESeptembre = () => {
                   ))}
                 </div>
 
-                <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection" target="_blank" rel="noopener noreferrer" className="block">
                   <Button size="lg" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold shadow-lg">
                     <Hotel className="w-5 h-5 mr-2" />{t('agriculture.bookAccommodation')}
                   </Button>
