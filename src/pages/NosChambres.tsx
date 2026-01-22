@@ -307,7 +307,7 @@ const NosChambres = () => {
             {t('roomsPage.cta.subtitle')}
           </p>
           <a
-            href="https://www.booking.com/hotel/fr/inn-design-paris.fr.html"
+            href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection"
             target="_blank"
             rel="noopener noreferrer"
           >
