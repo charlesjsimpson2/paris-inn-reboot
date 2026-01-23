@@ -18,7 +18,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème"
-        description="Hôtel 3 étoiles à Paris 13ème, proche métro Place d'Italie. Chambres confortables, salles de séminaires, petit-déjeuner buffet. Réservez au meilleur prix !"
+        description="Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner."
         canonical="/"
       />
       <Header />
