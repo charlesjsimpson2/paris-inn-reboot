@@ -2,11 +2,11 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import hotelReception from "@/assets/hotel-reception.jpg";
-import hotelChambre from "@/assets/hotel-chambre.jpg";
-import hotelSalleDeBain from "@/assets/hotel-salle-de-bain.jpg";
-import hotelSalon from "@/assets/hotel-salon.jpg";
-import hotelSeminaire from "@/assets/hotel-seminaire.jpg";
+import hotelReception from "@/assets/hotel-reception.webp";
+import hotelChambre from "@/assets/hotel-chambre.webp";
+import hotelSalleDeBain from "@/assets/hotel-salle-de-bain.webp";
+import hotelSalon from "@/assets/hotel-salon.webp";
+import hotelSeminaire from "@/assets/hotel-seminaire.webp";
 
 const heroImages = [
   { src: hotelReception, alt: "Réception de l'hôtel" },
