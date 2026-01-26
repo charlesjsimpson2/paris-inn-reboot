@@ -22,6 +22,11 @@ import gallery7 from "@/assets/gallery/chambre-6.jpg";
 import gallery8 from "@/assets/gallery/plateau-courtoisie.jpg";
 import gallery9 from "@/assets/gallery/coin-salon.jpg";
 
+// Chambre Supérieure images
+import superieure1 from "@/assets/gallery/superieure-1.webp";
+import superieure2 from "@/assets/gallery/superieure-2.webp";
+import superieure3 from "@/assets/gallery/superieure-3.webp";
+
 const NosChambres = () => {
   const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -65,9 +70,9 @@ const NosChambres = () => {
       details: t('roomsPage.superior.details'),
       description: t('roomsPage.superior.desc'),
       images: [
-        { src: chambreSuperieureBalcon, alt: "Chambre Supérieure - Vue balcon" },
-        { src: gallery3, alt: "Chambre Supérieure - Balcon" },
-        { src: gallery1, alt: "Chambre Supérieure - Intérieur" },
+        { src: superieure1, alt: "Chambre Supérieure - Vue balcon" },
+        { src: superieure2, alt: "Chambre Supérieure - Détail" },
+        { src: superieure3, alt: "Chambre Supérieure - Intérieur" },
       ],
     },
     {
@@ -75,8 +80,8 @@ const NosChambres = () => {
       details: t('roomsPage.connecting.details'),
       description: t('roomsPage.connecting.desc'),
       images: [
-        { src: gallery6, alt: "Chambres Communicantes - Vue" },
-        { src: gallery7, alt: "Chambres Communicantes - Détail" },
+        { src: gallery2, alt: "Chambres Communicantes - Vue 1" },
+        { src: gallery4, alt: "Chambres Communicantes - Vue 2" },
       ],
     },
   ];
