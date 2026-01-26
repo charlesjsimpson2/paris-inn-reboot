@@ -14,8 +14,8 @@ import salonAgricultureImage from "@/assets/salon-agriculture.webp";
 import salonAgricultureVaches from "@/assets/salon-agriculture-vaches.jpg";
 import salonAgricultureEnfantAne from "@/assets/salon-agriculture-enfant-ane.jpg";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
-import petitDejeuner from "@/assets/petit-dejeuner.jpg";
-import chambreDouble from "@/assets/chambre-double.jpg";
+import petitDejeuner from "@/assets/petit-dejeuner.webp";
+import chambreDouble from "@/assets/chambre-double.webp";
 import { useState, useEffect } from "react";
 
 const SalonAgriculture = () => {

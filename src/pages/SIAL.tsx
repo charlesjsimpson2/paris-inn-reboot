@@ -8,9 +8,9 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
-import petitDejeuner from "@/assets/petit-dejeuner.jpg";
-import chambreDouble from "@/assets/chambre-double.jpg";
-import sialHero from "@/assets/sial-hero.jpeg";
+import petitDejeuner from "@/assets/petit-dejeuner.webp";
+import chambreDouble from "@/assets/chambre-double.webp";
+import sialHero from "@/assets/sial-event.webp";
 import sialEvent from "@/assets/sial-event-gen.jpg";
 import { useState, useEffect } from "react";
 

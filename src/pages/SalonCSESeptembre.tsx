@@ -8,9 +8,9 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
-import petitDejeuner from "@/assets/petit-dejeuner.jpg";
-import chambreDouble from "@/assets/chambre-double.jpg";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import petitDejeuner from "@/assets/petit-dejeuner.webp";
+import chambreDouble from "@/assets/chambre-double.webp";
+import heroSeminaire from "@/assets/salon-marshall-1.webp";
 import { useState, useEffect } from "react";
 
 const SalonCSESeptembre = () => {

@@ -8,9 +8,9 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventBackButton } from "@/components/EventBackButton";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
-import petitDejeuner from "@/assets/petit-dejeuner.jpg";
-import chambreDouble from "@/assets/chambre-double.jpg";
-import japanExpoHero from "@/assets/japan-expo-hero.jpg";
+import petitDejeuner from "@/assets/petit-dejeuner.webp";
+import chambreDouble from "@/assets/chambre-double.webp";
+import japanExpoHero from "@/assets/japan-expo-event.webp";
 import japanExpoEvent from "@/assets/japan-expo-event-gen.jpg";
 import { useState, useEffect } from "react";
 
