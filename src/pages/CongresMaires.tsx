@@ -10,8 +10,8 @@ import { EasyAccessSection } from "@/components/EasyAccessSection";
 import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
 import petitDejeuner from "@/assets/petit-dejeuner.webp";
 import chambreDouble from "@/assets/chambre-double.webp";
-import congresHero from "@/assets/congres-maires-hero-gen.jpg";
-import congresStand from "@/assets/congres-maires-stand-gen.jpg";
+import congresHero from "@/assets/congres-maires-hero-gen.webp";
+import congresStand from "@/assets/congres-maires-stand-gen.webp";
 import { useState, useEffect } from "react";
 
 const CongresMaires = () => {
