@@ -6,10 +6,10 @@ import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
 import heroSeminaire from "@/assets/hero-seminaire.jpg";
-import salonBose1 from "@/assets/salon-bose-1.jpg";
-import salonBose2 from "@/assets/salon-bose-2.jpg";
-import salonBose3 from "@/assets/salon-bose-3.jpg";
-import salonBose4 from "@/assets/salon-bose-4.jpg";
+import salonBose1 from "@/assets/salon-bose-1.webp";
+import salonBose2 from "@/assets/salon-bose-2.webp";
+import salonBose3 from "@/assets/salon-bose-3.webp";
+import salonBose4 from "@/assets/salon-bose-4.webp";
 import salonFender1 from "@/assets/salon-fender-1.jpg";
 import salonFender2 from "@/assets/salon-fender-2.jpg";
 import salonFender3 from "@/assets/salon-fender-3.jpg";
