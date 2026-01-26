@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import seminaire1 from "@/assets/seminaire-1.jpg";
-import seminaire2 from "@/assets/seminaire-2.jpg";
-import seminaire3 from "@/assets/seminaire-3.jpg";
-import seminaire4 from "@/assets/seminaire-4.jpg";
-import seminaire5 from "@/assets/seminaire-5.jpg";
+import seminaire1 from "@/assets/seminaire-1.webp";
+import seminaire2 from "@/assets/seminaire-2.webp";
+import seminaire3 from "@/assets/seminaire-3.webp";
+import seminaire4 from "@/assets/seminaire-4.webp";
+import seminaire5 from "@/assets/seminaire-5.webp";
 
 const images = [
   { src: seminaire1, alt: "Salle de séminaire - Configuration U" },
