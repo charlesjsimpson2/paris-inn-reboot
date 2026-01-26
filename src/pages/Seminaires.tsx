@@ -5,7 +5,7 @@ import { SalonSection } from "@/components/SalonSection";
 import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
-import heroSeminaire from "@/assets/hero-seminaire.jpg";
+import heroSeminaire from "@/assets/salon-marshall-1.webp";
 import salonBose1 from "@/assets/salon-bose-1.webp";
 import salonBose2 from "@/assets/salon-bose-2.webp";
 import salonBose3 from "@/assets/salon-bose-3.webp";
