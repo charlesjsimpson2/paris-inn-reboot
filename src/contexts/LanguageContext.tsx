@@ -629,7 +629,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.seo.title': 'Mentions légales - Hôtel Inn Design Paris',
     'legal.seo.description': 'Mentions légales de l\'Hôtel Inn Design Paris Place d\'Italie. Informations sur l\'éditeur, l\'hébergement et la protection des données.',
     'legal.title': 'Mentions légales',
-    'legal.lastUpdate': 'Dernière mise à jour : Janvier 2025',
+    'legal.lastUpdate': 'Dernière mise à jour : Janvier 2026',
     'legal.editor.title': 'Éditeur du site',
     'legal.editor.name': 'Raison sociale',
     'legal.editor.legalForm': 'Forme juridique',
@@ -655,6 +655,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.liability.content': 'L\'Hôtel Inn Design Paris s\'efforce d\'assurer l\'exactitude des informations diffusées sur ce site. Toutefois, il ne peut être tenu responsable des omissions, inexactitudes ou erreurs contenues dans ces informations.',
     'legal.law.title': 'Droit applicable',
     'legal.law.content': 'Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents.',
+    'legal.mediation.title': 'Litiges - Médiation',
+    'legal.mediation.content1': 'En cas de litige entre un voyageur et l\'hôtel à propos des contestations relatives aux présentes CGV, le voyageur a la possibilité de recourir à une procédure de médiation conventionnelle ou à tout autre mode alternatif de règlement des différends, dans les conditions prévues par la législation applicable.',
+    'legal.mediation.content2': 'Après avoir saisi le service client HOTEL INN via le courriel contact@hotel-inn.fr pour tenter de résoudre le litige à l\'amiable, et en cas de réponse négative ou de l\'absence de réponse dans un délai de soixante (60) jours à compter de la saisine, le voyageur peut saisir le Médiateur du Tourisme et du Voyage – BP 80303 – 75823 Paris Cedex 17.',
+    'legal.mediation.content3': 'Les modalités de saisine du Médiateur et ses coordonnées sont disponibles sur le site mtv.travel',
+    'legal.mediation.content4': 'La saisine du Médiateur peut se faire dans un délai de douze (12) mois après la première réclamation.',
     
     // MIKA Concert Page
     'mika.tour': 'Spinning Out Tour',
@@ -1652,7 +1657,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.seo.title': 'Legal Notice - Hotel Inn Design Paris',
     'legal.seo.description': 'Legal notice for Hotel Inn Design Paris Place d\'Italie. Information about the publisher, hosting and data protection.',
     'legal.title': 'Legal Notice',
-    'legal.lastUpdate': 'Last updated: January 2025',
+    'legal.lastUpdate': 'Last updated: January 2026',
     'legal.editor.title': 'Website Publisher',
     'legal.editor.name': 'Company name',
     'legal.editor.legalForm': 'Legal form',
@@ -1678,6 +1683,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.liability.content': 'Hotel Inn Design Paris strives to ensure the accuracy of information published on this website. However, it cannot be held responsible for omissions, inaccuracies or errors contained in this information.',
     'legal.law.title': 'Applicable Law',
     'legal.law.content': 'These legal notices are subject to French law. In case of dispute, French courts shall have sole jurisdiction.',
+    'legal.mediation.title': 'Disputes - Mediation',
+    'legal.mediation.content1': 'In case of dispute between a traveler and the hotel regarding contestations related to these T&Cs, the traveler has the possibility to resort to a conventional mediation procedure or any other alternative dispute resolution method, under the conditions provided by applicable legislation.',
+    'legal.mediation.content2': 'After contacting HOTEL INN customer service via email at contact@hotel-inn.fr to try to resolve the dispute amicably, and in case of a negative response or no response within sixty (60) days from the request, the traveler may contact the Tourism and Travel Mediator – BP 80303 – 75823 Paris Cedex 17.',
+    'legal.mediation.content3': 'The terms for contacting the Mediator and their contact details are available on the website mtv.travel',
+    'legal.mediation.content4': 'The Mediator can be contacted within twelve (12) months after the first complaint.',
     
     // MIKA Concert Page
     'mika.tour': 'Spinning Out Tour',
@@ -2929,6 +2939,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.liability.content': 'El Hotel Inn Design París se esfuerza por garantizar la exactitud de la información publicada en este sitio. Sin embargo, no se hace responsable de las omisiones, inexactitudes o errores contenidos en esta información.',
     'legal.law.title': 'Legislación aplicable',
     'legal.law.content': 'Estas menciones legales están sujetas a la legislación francesa. En caso de litigio, los tribunales franceses serán los únicos competentes.',
+    'legal.mediation.title': 'Litigios - Mediación',
+    'legal.mediation.content1': 'En caso de litigio entre un viajero y el hotel sobre las reclamaciones relativas a las presentes CGV, el viajero tiene la posibilidad de recurrir a un procedimiento de mediación convencional o a cualquier otro modo alternativo de resolución de conflictos, en las condiciones previstas por la legislación aplicable.',
+    'legal.mediation.content2': 'Tras contactar con el servicio de atención al cliente de HOTEL INN a través del correo electrónico contact@hotel-inn.fr para intentar resolver el litigio de forma amistosa, y en caso de respuesta negativa o ausencia de respuesta en un plazo de sesenta (60) días desde la solicitud, el viajero puede dirigirse al Mediador de Turismo y Viajes – BP 80303 – 75823 París Cedex 17.',
+    'legal.mediation.content3': 'Las modalidades de contacto con el Mediador y sus datos están disponibles en el sitio mtv.travel',
+    'legal.mediation.content4': 'El Mediador puede ser contactado en un plazo de doce (12) meses después de la primera reclamación.',
     
     // MIKA Concert Page
     'mika.tour': 'Spinning Out Tour',
@@ -4181,6 +4196,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.liability.content': 'L\'Hotel Inn Design Parigi si impegna a garantire l\'accuratezza delle informazioni pubblicate su questo sito. Tuttavia, non può essere ritenuto responsabile per omissioni, inesattezze o errori contenuti in queste informazioni.',
     'legal.law.title': 'Legge applicabile',
     'legal.law.content': 'Le presenti note legali sono soggette alla legge francese. In caso di controversia, i tribunali francesi saranno gli unici competenti.',
+    'legal.mediation.title': 'Controversie - Mediazione',
+    'legal.mediation.content1': 'In caso di controversia tra un viaggiatore e l\'hotel riguardo alle contestazioni relative alle presenti CGV, il viaggiatore ha la possibilità di ricorrere a una procedura di mediazione convenzionale o a qualsiasi altro metodo alternativo di risoluzione delle controversie, alle condizioni previste dalla legislazione applicabile.',
+    'legal.mediation.content2': 'Dopo aver contattato il servizio clienti HOTEL INN tramite email a contact@hotel-inn.fr per tentare di risolvere la controversia in via amichevole, e in caso di risposta negativa o assenza di risposta entro sessanta (60) giorni dalla richiesta, il viaggiatore può contattare il Mediatore del Turismo e dei Viaggi – BP 80303 – 75823 Parigi Cedex 17.',
+    'legal.mediation.content3': 'Le modalità di contatto del Mediatore e i suoi recapiti sono disponibili sul sito mtv.travel',
+    'legal.mediation.content4': 'Il Mediatore può essere contattato entro dodici (12) mesi dalla prima reclamo.',
     
     // MIKA Concert Page
     'mika.tour': 'Spinning Out Tour',
@@ -5433,6 +5453,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.liability.content': 'O Hotel Inn Design Paris se esforça para garantir a precisão das informações publicadas neste site. No entanto, não pode ser responsabilizado por omissões, imprecisões ou erros contidos nessas informações.',
     'legal.law.title': 'Legislação aplicável',
     'legal.law.content': 'Estes avisos legais estão sujeitos à legislação francesa. Em caso de litígio, os tribunais franceses serão os únicos competentes.',
+    'legal.mediation.title': 'Litígios - Mediação',
+    'legal.mediation.content1': 'Em caso de litígio entre um viajante e o hotel sobre as contestações relativas às presentes CGV, o viajante tem a possibilidade de recorrer a um procedimento de mediação convencional ou a qualquer outro modo alternativo de resolução de conflitos, nas condições previstas pela legislação aplicável.',
+    'legal.mediation.content2': 'Após contactar o serviço de apoio ao cliente HOTEL INN através do email contact@hotel-inn.fr para tentar resolver o litígio de forma amigável, e em caso de resposta negativa ou ausência de resposta num prazo de sessenta (60) dias a partir da solicitação, o viajante pode contactar o Mediador do Turismo e das Viagens – BP 80303 – 75823 Paris Cedex 17.',
+    'legal.mediation.content3': 'As modalidades de contacto com o Mediador e os seus dados estão disponíveis no site mtv.travel',
+    'legal.mediation.content4': 'O Mediador pode ser contactado num prazo de doze (12) meses após a primeira reclamação.',
     
     // MIKA Concert Page
     'mika.tour': 'Spinning Out Tour',
@@ -6665,6 +6690,11 @@ export const translations: Record<Language, Record<string, string>> = {
     'legal.liability.content': 'Das Hotel Inn Design Paris bemüht sich, die Richtigkeit der auf dieser Website veröffentlichten Informationen sicherzustellen. Es kann jedoch nicht für Auslassungen, Ungenauigkeiten oder Fehler in diesen Informationen verantwortlich gemacht werden.',
     'legal.law.title': 'Anwendbares Recht',
     'legal.law.content': 'Dieses Impressum unterliegt französischem Recht. Im Streitfall sind ausschließlich französische Gerichte zuständig.',
+    'legal.mediation.title': 'Streitigkeiten - Mediation',
+    'legal.mediation.content1': 'Im Falle eines Streits zwischen einem Reisenden und dem Hotel über Beanstandungen im Zusammenhang mit diesen AGB hat der Reisende die Möglichkeit, ein konventionelles Mediationsverfahren oder ein anderes alternatives Streitbeilegungsverfahren in Anspruch zu nehmen, unter den in der geltenden Gesetzgebung vorgesehenen Bedingungen.',
+    'legal.mediation.content2': 'Nach Kontaktaufnahme mit dem HOTEL INN Kundenservice per E-Mail an contact@hotel-inn.fr, um den Streit gütlich beizulegen, und im Falle einer negativen Antwort oder fehlender Antwort innerhalb von sechzig (60) Tagen nach der Anfrage, kann sich der Reisende an den Mediator für Tourismus und Reisen wenden – BP 80303 – 75823 Paris Cedex 17.',
+    'legal.mediation.content3': 'Die Kontaktmodalitäten des Mediators und seine Kontaktdaten sind auf der Website mtv.travel verfügbar',
+    'legal.mediation.content4': 'Der Mediator kann innerhalb von zwölf (12) Monaten nach der ersten Beschwerde kontaktiert werden.',
     
     // Services Section
     'services.badge': 'Zu Ihren Diensten',

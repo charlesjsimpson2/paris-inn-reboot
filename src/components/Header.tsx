@@ -24,9 +24,10 @@ export const Header = memo(() => {
   
   const navItems = useMemo(() => getNavItems(t), [t]);
   
-  // Check if we're on homepage or a page with hero image
+  // Check if we're on homepage or a page with hero image or internal page
   const isHomePage = location.pathname === "/";
   const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/evenements" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner";
+  const isInternalPage = location.pathname === "/mentions-legales";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +48,7 @@ export const Header = memo(() => {
             {/* Left - Email */}
             <a 
               href="mailto:hid.paris13@gmail.com" 
-              className="flex items-center gap-2 hover:text-gold transition-colors group"
+              className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors group"
             >
               <Mail className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>hid.paris13@gmail.com</span>
@@ -56,7 +57,7 @@ export const Header = memo(() => {
             {/* Center - Address */}
             <Link 
               to="/localisation" 
-              className="flex items-center gap-2 hover:text-gold transition-colors group"
+              className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors group"
             >
               <MapPin className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>178 boulevard Vincent Auriol – 75013 Paris</span>
@@ -65,7 +66,7 @@ export const Header = memo(() => {
             {/* Right - Phone */}
             <a 
               href="tel:+33144240101" 
-              className="flex items-center gap-2 hover:text-gold transition-colors group"
+              className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors group"
             >
               <Phone className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>+33 (0)1 44 24 01 01</span>
@@ -77,7 +78,7 @@ export const Header = memo(() => {
       {/* Main navigation */}
       <div
         className={`transition-all duration-500 ${
-          isScrolled || isHeroPage
+          isScrolled || isHeroPage || isInternalPage
             ? "bg-background/95 backdrop-blur-md shadow-elegant py-2"
             : "bg-transparent py-4"
         }`}
@@ -87,7 +88,7 @@ export const Header = memo(() => {
             {/* Burger Menu - Left */}
             <button
               className={`group px-3 py-2 sm:px-5 sm:py-2.5 border-2 transition-all duration-300 flex items-center gap-2 sm:gap-3 z-20 shadow-md hover:shadow-lg active:scale-95 justify-self-start whitespace-nowrap ${
-                isHeroPage || isScrolled
+                isHeroPage || isScrolled || isInternalPage
                   ? "border-primary bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
                   : "border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-foreground"
               }`}
@@ -120,7 +121,7 @@ export const Header = memo(() => {
             {/* Right side: Language + Réserver Button */}
             <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4 z-20 justify-self-end whitespace-nowrap">
               {/* Language Switcher */}
-              <div className={`relative z-50 ${isScrolled || isHeroPage ? 'text-foreground' : 'text-white'}`}>
+              <div className={`relative z-50 ${isScrolled || isHeroPage || isInternalPage ? 'text-foreground' : 'text-white'}`}>
                 <LanguageSwitcher />
               </div>
 

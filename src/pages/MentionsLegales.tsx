@@ -38,6 +38,7 @@ const MentionsLegales = () => {
                 <p><strong className="text-foreground">{t('legal.editor.address')} :</strong> 178 Boulevard Vincent Auriol, 75013 Paris, France</p>
                 <p><strong className="text-foreground">{t('legal.editor.phone')} :</strong> +33 (0)1 44 24 01 01</p>
                 <p><strong className="text-foreground">{t('legal.editor.email')} :</strong> hid.paris13@gmail.com</p>
+                <p><strong className="text-foreground">{t('legal.editor.director')} :</strong> Charles SIMPSON</p>
               </div>
             </section>
 
@@ -84,6 +85,19 @@ const MentionsLegales = () => {
               <p className="text-sm sm:text-base leading-relaxed">
                 {t('legal.liability.content')}
               </p>
+            </section>
+
+            {/* Litiges - Médiation */}
+            <section>
+              <h2 className="font-display text-xl sm:text-2xl text-foreground mb-4">{t('legal.mediation.title')}</h2>
+              <div className="space-y-4 text-sm sm:text-base leading-relaxed">
+                <p>{t('legal.mediation.content1')}</p>
+                <p>{t('legal.mediation.content2')}</p>
+                <p>
+                  {t('legal.mediation.content3')} : <a href="https://www.mtv.travel" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">mtv.travel</a>
+                </p>
+                <p>{t('legal.mediation.content4')}</p>
+              </div>
             </section>
 
             {/* Droit applicable */}
