@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import chambreDouble from "@/assets/chambre-double.webp";
 import chambreTwin from "@/assets/chambre-twin.webp";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";
-import chambre4 from "@/assets/gallery/chambre-4.jpg";
+import chambre4 from "@/assets/gallery/chambre-4.webp";
 
 export const RoomsSection = memo(() => {
   const [currentIndex, setCurrentIndex] = useState(0);

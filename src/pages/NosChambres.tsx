@@ -13,9 +13,9 @@ import heroChambres from "@/assets/hero-chambres.jpg";
 
 // Gallery images
 import gallery1 from "@/assets/gallery/chambre-1.jpg";
-import gallery2 from "@/assets/gallery/chambre-2.jpg";
+import gallery2 from "@/assets/gallery/chambre-2.webp";
 import gallery3 from "@/assets/gallery/chambre-3.jpg";
-import gallery4 from "@/assets/gallery/chambre-4.jpg";
+import gallery4 from "@/assets/gallery/chambre-4.webp";
 import gallery5 from "@/assets/gallery/salle-de-bain.jpg";
 import gallery6 from "@/assets/gallery/chambre-5.jpg";
 import gallery7 from "@/assets/gallery/chambre-6.jpg";
