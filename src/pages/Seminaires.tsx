@@ -18,9 +18,9 @@ import salonMarshall1 from "@/assets/salon-marshall-1.jpg";
 import salonMarshall2 from "@/assets/salon-marshall-2.jpg";
 import salonMarshall3 from "@/assets/salon-marshall-3.jpg";
 import salonMarshall4 from "@/assets/salon-marshall-4.jpg";
-import coworking1 from "@/assets/coworking-1.jpg";
-import coworking2 from "@/assets/coworking-2.jpg";
-import coworking3 from "@/assets/coworking-3.jpg";
+import coworking1 from "@/assets/coworking-1.webp";
+import coworking2 from "@/assets/coworking-2.webp";
+import coworking3 from "@/assets/coworking-3.webp";
 import coworking4 from "@/assets/coworking-4.jpg";
 
 const Seminaires = () => {
