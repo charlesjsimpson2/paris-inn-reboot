@@ -8,7 +8,7 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
 import { EventBackButton } from "@/components/EventBackButton";
-import vingtKmHero from "@/assets/20km-paris-hero.jpg";
+import vingtKmHero from "@/assets/20km-paris-hero-cropped.jpg";
 import vingtKmCoureurs from "@/assets/20km-paris-coureurs-gen.jpg";
 import { useState, useEffect } from "react";
 
