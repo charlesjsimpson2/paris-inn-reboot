@@ -2,9 +2,9 @@ import { useState, useEffect, memo, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight, Accessibility, Heater } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import chambreDouble from "@/assets/chambre-double.jpg";
-import chambreTwin from "@/assets/chambre-twin.jpg";
-import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.jpg";
+import chambreDouble from "@/assets/chambre-double.webp";
+import chambreTwin from "@/assets/chambre-twin.webp";
+import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";
 import chambre4 from "@/assets/gallery/chambre-4.jpg";
 
 export const RoomsSection = memo(() => {
