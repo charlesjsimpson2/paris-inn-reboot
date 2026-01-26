@@ -9,7 +9,7 @@ import { SEO } from "@/components/SEO";
 import chambreDouble from "@/assets/chambre-double.webp";
 import chambreTwin from "@/assets/chambre-twin.webp";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";
-import heroChambres from "@/assets/hero-chambres.jpg";
+import heroChambres from "@/assets/chambre-superieure-balcon.webp";
 
 // Gallery images
 import gallery1 from "@/assets/gallery/chambre-1.jpg";
