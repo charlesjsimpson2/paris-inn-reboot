@@ -7,7 +7,7 @@ import franceAngleterreMatch from "@/assets/france-angleterre-match.png";
 import salonAgricultureHero from "@/assets/salon-agriculture.webp";
 import mikaAffiche from "@/assets/mika-spinning-out-tour.webp";
 import claraHero from "@/assets/clara-luciani-portrait.jpg";
-import semiMarathonHero from "@/assets/semi-marathon-course.jpg";
+import semiMarathonHero from "@/assets/semi-marathon-hero-gen.webp";
 import wutangHero from "@/assets/wu-tang-concert.jpg";
 import {
   Carousel,

@@ -8,8 +8,8 @@ import { EventHotelPromo } from "@/components/EventHotelPromo";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { RunnerOffersSection } from "@/components/RunnerOffersSection";
 import { EventBackButton } from "@/components/EventBackButton";
-import marathonHero from "@/assets/marathon-paris-hero-gen.jpg";
-import marathonCoureurs from "@/assets/marathon-paris-coureurs-gen.jpg";
+import marathonHero from "@/assets/marathon-paris-hero-gen.webp";
+import marathonCoureurs from "@/assets/marathon-paris-coureurs-gen.webp";
 import { useState, useEffect } from "react";
 
 const MarathonParis = () => {
