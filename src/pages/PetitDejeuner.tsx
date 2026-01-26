@@ -5,13 +5,13 @@ import { Coffee, Croissant, Apple, Egg, Clock, Users, ChevronLeft, ChevronRight,
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
 
-import salle1 from "@/assets/breakfast/salle-1.jpg";
-import salle2 from "@/assets/breakfast/salle-2.jpg";
-import buffet1 from "@/assets/breakfast/buffet-1.jpg";
-import balcon from "@/assets/breakfast/balcon.jpg";
-import petitDejeuner from "@/assets/petit-dejeuner.jpg";
-import tablePetitDejeuner from "@/assets/breakfast/table-petit-dejeuner.jpg";
-import heroPetitDejeuner from "@/assets/breakfast/hero-petit-dejeuner.jpg";
+import salle1 from "@/assets/breakfast/salle-1.webp";
+import salle2 from "@/assets/breakfast/salle-2.webp";
+import buffet1 from "@/assets/breakfast/buffet-1.webp";
+import balcon from "@/assets/breakfast/balcon.webp";
+import petitDejeuner from "@/assets/breakfast/petit-dejeuner.webp";
+import tablePetitDejeuner from "@/assets/breakfast/table-petit-dejeuner.webp";
+import heroPetitDejeuner from "@/assets/breakfast/hero-petit-dejeuner.webp";
 
 const PetitDejeuner = () => {
   const { t } = useLanguage();
