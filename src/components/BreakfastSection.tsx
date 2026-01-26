@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import breakfastImage from "@/assets/petit-dejeuner.webp";
-import barImage from "@/assets/bar-hotel.jpg";
+import barImage from "@/assets/bar-hotel.webp";
 
 export const BreakfastSection = () => {
   const { t } = useLanguage();
