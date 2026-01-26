@@ -19,8 +19,8 @@ import gallery4 from "@/assets/gallery/chambre-4.webp";
 import gallery5 from "@/assets/gallery/salle-de-bain.jpg";
 import gallery6 from "@/assets/gallery/chambre-5.jpg";
 import gallery7 from "@/assets/gallery/chambre-6.jpg";
-import gallery8 from "@/assets/gallery/plateau-courtoisie.jpg";
-import gallery9 from "@/assets/gallery/coin-salon.jpg";
+import gallery8 from "@/assets/gallery/plateau-courtoisie.webp";
+import gallery9 from "@/assets/gallery/coffre-fort.webp";
 
 // Chambre Supérieure images
 import superieure1 from "@/assets/gallery/superieure-1.webp";
@@ -43,7 +43,7 @@ const NosChambres = () => {
     { src: gallery6, alt: "Chambre supérieure" },
     { src: gallery7, alt: "Chambre twin confort" },
     { src: gallery8, alt: "Plateau de courtoisie" },
-    { src: gallery9, alt: "Coin salon" },
+    { src: gallery9, alt: "Coffre-fort" },
   ];
 
   const roomsData = [
