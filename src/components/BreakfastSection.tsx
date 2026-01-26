@@ -2,7 +2,7 @@ import { Wine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import breakfastImage from "@/assets/petit-dejeuner.jpg";
+import breakfastImage from "@/assets/petit-dejeuner.webp";
 import barImage from "@/assets/bar-hotel.jpg";
 
 export const BreakfastSection = () => {
