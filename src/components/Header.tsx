@@ -39,16 +39,14 @@ export const Header = memo(() => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top contact bar - Desktop only */}
-      <div className={`hidden md:block transition-all duration-300 ${
-        isScrolled ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
-      } bg-primary`}>
+      {/* Top contact bar - Desktop only - Always visible */}
+      <div className="hidden md:block bg-primary">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-1 text-xs text-primary-foreground">
             {/* Left - Email */}
             <a 
               href="mailto:hid.paris13@gmail.com" 
-              className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors group"
+              className="flex items-center gap-2 hover:underline transition-colors group"
             >
               <Mail className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>hid.paris13@gmail.com</span>
@@ -57,7 +55,7 @@ export const Header = memo(() => {
             {/* Center - Address */}
             <Link 
               to="/localisation" 
-              className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors group"
+              className="flex items-center gap-2 hover:underline transition-colors group"
             >
               <MapPin className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>178 boulevard Vincent Auriol – 75013 Paris</span>
@@ -66,7 +64,7 @@ export const Header = memo(() => {
             {/* Right - Phone */}
             <a 
               href="tel:+33144240101" 
-              className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors group"
+              className="flex items-center gap-2 hover:underline transition-colors group"
             >
               <Phone className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>+33 (0)1 44 24 01 01</span>
