@@ -77,7 +77,7 @@ export const Header = memo(() => {
       <div
         className={`transition-all duration-500 ${
           isScrolled || isHeroPage || isInternalPage
-            ? "bg-background/95 backdrop-blur-md shadow-elegant py-2"
+            ? "bg-background shadow-elegant py-2"
             : "bg-transparent py-4"
         }`}
       >
