@@ -22,7 +22,7 @@ export const Footer = memo(() => {
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t('footer.description')}
             </p>
-            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors text-sm mt-1 inline-block">{t('footer.legal')}</Link>
+            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors text-sm mt-3 inline-block">{t('footer.legal')}</Link>
           </div>
 
           {/* Navigation */}
