@@ -110,7 +110,7 @@ export const Header = memo(() => {
                     alt="Hotel Inn Paris"
                     loading="eager"
                     fetchPriority="high"
-                    className="h-7 xs:h-9 sm:h-10 md:h-12 w-auto object-contain drop-shadow-sm"
+                    className="h-9 xs:h-11 sm:h-12 md:h-14 w-auto object-contain drop-shadow-sm"
                   />
                 </span>
               </Link>
