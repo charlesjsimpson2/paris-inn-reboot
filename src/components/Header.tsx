@@ -104,15 +104,13 @@ export const Header = memo(() => {
                 className="flex items-center justify-center w-full max-w-[120px] xs:max-w-[150px] sm:max-w-none"
                 aria-label="Accueil"
               >
-                <span className="inline-flex items-center justify-center rounded-md bg-background/70 backdrop-blur-sm px-1 py-0.5">
-                  <img
-                    src={logoHotel}
-                    alt="Hotel Inn Paris"
-                    loading="eager"
-                    fetchPriority="high"
-                    className="h-9 xs:h-11 sm:h-12 md:h-14 w-auto object-contain drop-shadow-sm"
-                  />
-                </span>
+                <img
+                  src={logoHotel}
+                  alt="Hotel Inn Paris"
+                  loading="eager"
+                  fetchPriority="high"
+                  className="h-9 xs:h-11 sm:h-12 md:h-14 w-auto object-contain drop-shadow-sm"
+                />
               </Link>
             </div>
 
