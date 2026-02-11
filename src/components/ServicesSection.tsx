@@ -3,6 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import receptionHotel from "@/assets/reception-hotel.jpg";
 import restaurantPlat from "@/assets/restaurant-plat.jpg";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
+import wifiCoworking from "@/assets/wifi-coworking-hotel.webp";
 
 export const ServicesSection = () => {
   const { t } = useLanguage();
@@ -101,12 +102,13 @@ export const ServicesSection = () => {
 
           {/* WiFi Très Haut Débit */}
           <div className="bg-primary/10 border border-primary/30 overflow-hidden">
-            <div className="w-full h-40 sm:h-52 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-              <div className="text-center">
-                <Wifi className="w-16 h-16 text-primary mx-auto mb-2" />
-                <span className="text-primary font-display text-lg">{t('services.wifi.speed')}</span>
-              </div>
-            </div>
+            <img 
+              src={wifiCoworking} 
+              alt="WiFi très haut débit - Télétravail à l'hôtel" 
+              loading="lazy"
+              decoding="async"
+              className="w-full h-40 sm:h-52 object-cover"
+            />
             <div className="p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/20">
