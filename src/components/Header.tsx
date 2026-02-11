@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logoHotel from "@/assets/logo-hotel-inn-paris.png";
+import logoHotel from "@/assets/logo-hotel-inn-valentine.png";
 
 const getNavItems = (t: (key: string) => string) => [
   { name: t('nav.hotel'), href: "/" },
