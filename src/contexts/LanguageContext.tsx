@@ -792,15 +792,15 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Tirage au sort T-shirt (tous concerts)
     'concert.raffle.badge': 'Jeu-concours exclusif',
-    'concert.raffle.title': 'Gagnez un T-shirt officiel !',
+    'concert.raffle.title': 'T-shirt et poster à gagner !',
     'concert.raffle.subtitle': 'Tirage au sort réservé aux clients de l\'hôtel',
-    'concert.raffle.desc': 'Participez à notre tirage au sort exclusif et tentez de remporter un T-shirt officiel de la tournée ! Chaque client séjournant à l\'hôtel à l\'occasion du concert est automatiquement inscrit.',
+    'concert.raffle.desc': 'Participez à notre tirage au sort exclusif et tentez de remporter un T-shirt officiel et un poster de la tournée ! Chaque client séjournant à l\'hôtel à l\'occasion du concert est automatiquement inscrit.',
     'concert.raffle.howTo': 'Comment participer ?',
     'concert.raffle.step1': 'Réservez votre chambre pour la date du concert',
     'concert.raffle.step2': 'Inscrivez-vous à la réception à votre arrivée',
     'concert.raffle.step3': 'Le tirage au sort a lieu le jour du concert à 18h',
     'concert.raffle.winner': 'Le gagnant est annoncé à la réception',
-    'concert.raffle.note': '*Un T-shirt officiel à gagner par concert. Voir conditions à la réception.',
+    'concert.raffle.note': '*Un T-shirt officiel et un poster à gagner par concert. Voir conditions à la réception.',
     
 
     // Clara Luciani Concert Page
@@ -1754,15 +1754,15 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // T-shirt raffle (all concerts)
     'concert.raffle.badge': 'Exclusive contest',
-    'concert.raffle.title': 'Win an official T-shirt!',
+    'concert.raffle.title': 'Win a T-shirt and poster!',
     'concert.raffle.subtitle': 'Raffle reserved for hotel guests',
-    'concert.raffle.desc': 'Enter our exclusive raffle and try to win an official tour T-shirt! Every guest staying at the hotel for the concert is automatically entered.',
+    'concert.raffle.desc': 'Enter our exclusive raffle and try to win an official tour T-shirt and poster! Every guest staying at the hotel for the concert is automatically entered.',
     'concert.raffle.howTo': 'How to participate?',
     'concert.raffle.step1': 'Book your room for the concert date',
     'concert.raffle.step2': 'Register at reception upon arrival',
     'concert.raffle.step3': 'The draw takes place on concert day at 6 PM',
     'concert.raffle.winner': 'The winner is announced at reception',
-    'concert.raffle.note': '*One official T-shirt to win per concert. See conditions at reception.',
+    'concert.raffle.note': '*One official T-shirt and one poster to win per concert. See conditions at reception.',
     
 
     // Actualites Page - Events
@@ -3577,15 +3577,15 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Sorteo de camiseta (todos los conciertos)
     'concert.raffle.badge': 'Concurso exclusivo',
-    'concert.raffle.title': '¡Gana una camiseta oficial!',
+    'concert.raffle.title': '¡Gana una camiseta y un póster!',
     'concert.raffle.subtitle': 'Sorteo reservado a los clientes del hotel',
-    'concert.raffle.desc': 'Participa en nuestro sorteo exclusivo e intenta ganar una camiseta oficial de la gira. Todos los clientes que se alojen en el hotel con motivo del concierto quedan inscritos automáticamente.',
+    'concert.raffle.desc': 'Participa en nuestro sorteo exclusivo e intenta ganar una camiseta oficial y un póster de la gira. Todos los clientes que se alojen en el hotel con motivo del concierto quedan inscritos automáticamente.',
     'concert.raffle.howTo': '¿Cómo participar?',
     'concert.raffle.step1': 'Reserva tu habitación para la fecha del concierto',
-    'concert.raffle.step2': 'Inscríbete en recepción a tu llegada',
+    'concert.raffle.step2': 'Inscríbete en recepción al llegar',
     'concert.raffle.step3': 'El sorteo se realiza el día del concierto a las 18:00',
     'concert.raffle.winner': 'El ganador se anuncia en recepción',
-    'concert.raffle.note': '*Una camiseta oficial para ganar por concierto. Consulta las condiciones en recepción.',
+    'concert.raffle.note': '*Una camiseta oficial y un póster para ganar por concierto. Consulta las condiciones en recepción.',
 
     'actualites.claraluciani.date': '18-19 febrero 2026',
     
@@ -4834,15 +4834,15 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Estrazione maglietta (tutti i concerti)
     'concert.raffle.badge': 'Concorso esclusivo',
-    'concert.raffle.title': 'Vinci una maglietta ufficiale!',
+    'concert.raffle.title': 'Vinci una maglietta e un poster!',
     'concert.raffle.subtitle': 'Estrazione riservata agli ospiti dell\'hotel',
-    'concert.raffle.desc': 'Partecipa alla nostra estrazione esclusiva e prova a vincere una maglietta ufficiale del tour! Ogni ospite che soggiorna in hotel per il concerto viene iscritto automaticamente.',
+    'concert.raffle.desc': 'Partecipa alla nostra estrazione esclusiva e prova a vincere una maglietta ufficiale e un poster del tour! Ogni ospite che soggiorna in hotel per il concerto viene iscritto automaticamente.',
     'concert.raffle.howTo': 'Come partecipare?',
     'concert.raffle.step1': 'Prenota la tua camera per la data del concerto',
-    'concert.raffle.step2': 'Registrati in reception al tuo arrivo',
+    'concert.raffle.step2': 'Iscriviti in reception al tuo arrivo',
     'concert.raffle.step3': 'L\'estrazione si svolge il giorno del concerto alle 18:00',
     'concert.raffle.winner': 'Il vincitore viene annunciato in reception',
-    'concert.raffle.note': '*Una maglietta ufficiale in palio per concerto. Vedi condizioni in reception.',
+    'concert.raffle.note': '*Una maglietta ufficiale e un poster in palio per concerto. Vedi condizioni in reception.',
 
     'actualites.claraluciani.date': '18-19 febbraio 2026',
     
@@ -6091,15 +6091,15 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Sorteio de camiseta (todos os concertos)
     'concert.raffle.badge': 'Concurso exclusivo',
-    'concert.raffle.title': 'Ganhe uma camiseta oficial!',
+    'concert.raffle.title': 'Ganhe uma camiseta e um pôster!',
     'concert.raffle.subtitle': 'Sorteio reservado aos hóspedes do hotel',
-    'concert.raffle.desc': 'Participe do nosso sorteio exclusivo e tente ganhar uma camiseta oficial da turnê! Todo hóspede que se hospedar no hotel por causa do concerto é inscrito automaticamente.',
+    'concert.raffle.desc': 'Participe do nosso sorteio exclusivo e tente ganhar uma camiseta oficial e um pôster da turnê! Todo hóspede que se hospedar no hotel por causa do concerto é inscrito automaticamente.',
     'concert.raffle.howTo': 'Como participar?',
     'concert.raffle.step1': 'Reserve seu quarto para a data do concerto',
     'concert.raffle.step2': 'Inscreva-se na recepção ao chegar',
     'concert.raffle.step3': 'O sorteio acontece no dia do concerto às 18:00',
     'concert.raffle.winner': 'O vencedor é anunciado na recepção',
-    'concert.raffle.note': '*Uma camiseta oficial para ganhar por concerto. Consulte as condições na recepção.',
+    'concert.raffle.note': '*Uma camiseta oficial e um pôster para ganhar por concerto. Consulte as condições na recepção.',
 
     'actualites.claraluciani.date': '18-19 fevereiro 2026',
     
@@ -7017,15 +7017,15 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // T-shirt raffle (all concerts)
     'concert.raffle.badge': 'Exklusives Gewinnspiel',
-    'concert.raffle.title': 'Gewinnen Sie ein offizielles T-Shirt!',
+    'concert.raffle.title': 'T-Shirt und Poster zu gewinnen!',
     'concert.raffle.subtitle': 'Verlosung nur für Hotelgäste',
-    'concert.raffle.desc': 'Nehmen Sie an unserer exklusiven Verlosung teil und gewinnen Sie ein offizielles Tour-T-Shirt! Jeder Gast, der zum Konzert im Hotel übernachtet, ist automatisch dabei.',
+    'concert.raffle.desc': 'Nehmen Sie an unserer exklusiven Verlosung teil und gewinnen Sie ein offizielles Tour-T-Shirt und ein Poster! Jeder Gast, der zum Konzert im Hotel übernachtet, ist automatisch dabei.',
     'concert.raffle.howTo': 'So nehmen Sie teil',
     'concert.raffle.step1': 'Buchen Sie Ihr Zimmer für den Konzerttermin',
-    'concert.raffle.step2': 'Melden Sie sich bei Ihrer Ankunft an der Rezeption an',
+    'concert.raffle.step2': 'Melden Sie sich bei der Ankunft an der Rezeption an',
     'concert.raffle.step3': 'Die Ziehung findet am Konzerttag um 18:00 Uhr statt',
     'concert.raffle.winner': 'Der Gewinner wird an der Rezeption bekannt gegeben',
-    'concert.raffle.note': '*Pro Konzert wird ein offizielles T-Shirt verlost. Bedingungen an der Rezeption.',
+    'concert.raffle.note': '*Pro Konzert werden ein offizielles T-Shirt und ein Poster verlost. Bedingungen an der Rezeption.',
 
     // Clara Luciani Concert (clara.* keys used by ClaraLucianiConcert.tsx)
     'clara.tour': 'Tournee 2026',
