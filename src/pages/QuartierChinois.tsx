@@ -7,6 +7,10 @@ import {
   MapPin, Utensils, ShoppingBag, Landmark, PartyPopper, 
   Navigation, ChevronRight, Clock, Footprints
 } from "lucide-react";
+import chinatownHero from "@/assets/chinatown-hero.webp";
+import chinatownFood from "@/assets/chinatown-food.webp";
+import chinatownNouvelAn from "@/assets/chinatown-nouvel-an.webp";
+import chinatownSupermarche from "@/assets/chinatown-supermarche.webp";
 
 const QuartierChinois = () => {
   const { t } = useLanguage();
@@ -17,18 +21,21 @@ const QuartierChinois = () => {
       title: t('chinatown.food.title'),
       desc: t('chinatown.food.desc'),
       picks: t('chinatown.food.picks'),
+      image: chinatownFood,
     },
     {
       icon: ShoppingBag,
       title: t('chinatown.shopping.title'),
       desc: t('chinatown.shopping.desc'),
       picks: t('chinatown.shopping.picks'),
+      image: chinatownSupermarche,
     },
     {
       icon: PartyPopper,
       title: t('chinatown.events.title'),
       desc: t('chinatown.events.desc'),
       picks: t('chinatown.events.picks'),
+      image: chinatownNouvelAn,
     },
     {
       icon: Landmark,
@@ -60,6 +67,9 @@ const QuartierChinois = () => {
 
       {/* Hero */}
       <section className="relative pt-32 md:pt-40 pb-20 bg-gradient-to-b from-charcoal to-background overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <img src={chinatownHero} alt="" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <Link to="/decouvrir-paris" className="inline-flex items-center gap-2 text-burgundy hover:text-burgundy/80 transition-colors text-sm font-medium">
             ← {t('chinatown.back')}
@@ -85,16 +95,21 @@ const QuartierChinois = () => {
       {/* Introduction */}
       <section className="py-24 bg-charcoal">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-              {t('chinatown.intro.title')}
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              {t('chinatown.intro.p1')}
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {t('chinatown.intro.p2')}
-            </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <div>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
+                {t('chinatown.intro.title')}
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                {t('chinatown.intro.p1')}
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {t('chinatown.intro.p2')}
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img src={chinatownHero} alt="Quartier Chinois Paris 13ème" className="w-full h-80 object-cover" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
@@ -115,18 +130,23 @@ const QuartierChinois = () => {
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="group p-6 rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl"
+                className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
               >
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                    <item.icon className="w-6 h-6 text-burgundy" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
-                    <div className="flex items-center gap-2 text-burgundy text-sm">
-                      <ChevronRight className="w-4 h-4" />
-                      <span className="font-medium">{item.picks}</span>
+                {item.image && (
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
+                )}
+                <div className="p-6">
+                  <div className="flex items-start gap-5">
+                    <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                      <item.icon className="w-6 h-6 text-burgundy" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
+                      <div className="flex items-center gap-2 text-burgundy text-sm">
+                        <ChevronRight className="w-4 h-4" />
+                        <span className="font-medium">{item.picks}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
