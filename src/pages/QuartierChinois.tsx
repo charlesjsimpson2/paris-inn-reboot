@@ -11,6 +11,7 @@ import chinatownHero from "@/assets/chinatown-hero.webp";
 import chinatownFood from "@/assets/chinatown-food.webp";
 import chinatownNouvelAn from "@/assets/chinatown-nouvel-an.webp";
 import chinatownSupermarche from "@/assets/chinatown-supermarche.webp";
+import chinatownTemple from "@/assets/chinatown-temple.webp";
 
 const QuartierChinois = () => {
   const { t } = useLanguage();
@@ -42,6 +43,7 @@ const QuartierChinois = () => {
       title: t('chinatown.culture.title'),
       desc: t('chinatown.culture.desc'),
       picks: t('chinatown.culture.picks'),
+      image: chinatownTemple,
     },
   ];
 
