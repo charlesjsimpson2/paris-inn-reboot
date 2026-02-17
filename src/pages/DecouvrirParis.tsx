@@ -6,9 +6,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   MapPin, Utensils, Landmark, Ship, Columns, TreePine, 
   ExternalLink, Clock, Navigation, ShoppingBag, Baby,
-  Palette, ChevronRight
+  Palette, ChevronRight, ArrowRight
 } from "lucide-react";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
+import chinatownImg from "@/assets/wikimedia/chinatown-avenue-choisy.jpg";
+import butteImg from "@/assets/butte-cailles-hero.webp";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -20,6 +22,7 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.quartier.chinatownDesc'),
       distance: "5 min à pied",
       link: "/decouvrir-paris/quartier-chinois",
+      image: chinatownImg,
     },
     {
       icon: Palette,
@@ -27,6 +30,7 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.quartier.butteDesc'),
       distance: "10 min à pied",
       link: "/decouvrir-paris/butte-aux-cailles",
+      image: butteImg,
     },
     {
       icon: Landmark,
@@ -134,25 +138,38 @@ const DecouvrirParis = () => {
                 <CardWrapper
                   key={index}
                   {...cardProps as any}
-                  className="group p-6 rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl flex gap-5 no-underline"
+                  className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl no-underline overflow-hidden"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                    <spot.icon className="w-6 h-6 text-burgundy" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-display text-xl text-foreground">{spot.title}</h3>
-                      <span className="flex items-center gap-1 text-burgundy text-sm font-medium">
-                        <Navigation className="w-3.5 h-3.5" />
-                        {spot.distance}
-                      </span>
+                  {spot.image && (
+                    <div className="overflow-hidden">
+                      <img
+                        src={spot.image}
+                        alt={spot.title}
+                        className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{spot.desc}</p>
-                    {spot.link && (
-                      <span className="inline-flex items-center gap-1 mt-2 text-burgundy text-sm font-medium group-hover:gap-2 transition-all">
-                        {t('discoverPage.quartier.readMore')} <ChevronRight className="w-4 h-4" />
-                      </span>
-                    )}
+                  )}
+                  <div className="p-6 flex gap-5">
+                    <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                      <spot.icon className="w-6 h-6 text-burgundy" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="font-display text-xl text-foreground">{spot.title}</h3>
+                        <span className="flex items-center gap-1 text-burgundy text-sm font-medium">
+                          <Navigation className="w-3.5 h-3.5" />
+                          {spot.distance}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{spot.desc}</p>
+                      {spot.link && (
+                        <span className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-burgundy/10 text-burgundy text-sm font-semibold group-hover:bg-burgundy group-hover:text-white transition-all duration-300">
+                          {t('discoverPage.quartier.readMore')}
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </CardWrapper>
               );
