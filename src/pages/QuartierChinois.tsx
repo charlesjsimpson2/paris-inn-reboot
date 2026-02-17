@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import chinatownHero from "@/assets/chinatown-hero.webp";
 import chinatownFood from "@/assets/chinatown-food.webp";
-import chinatownNouvelAn from "@/assets/wikimedia/chinatown-nouvel-an.jpg";
+import chinatownNouvelAn from "@/assets/wikimedia/chinatown-nouvel-an-gen.webp";
 import chinatownSupermarche from "@/assets/wikimedia/chinatown-tang-freres.jpg";
 import chinatownTemple from "@/assets/chinatown-temple.webp";
 import chinatownAvenueChoisy from "@/assets/wikimedia/chinatown-avenue-choisy.jpg";
@@ -61,7 +61,6 @@ const QuartierChinois = () => {
       desc: t('chinatown.events.desc'),
       picks: t('chinatown.events.picks'),
       image: chinatownNouvelAn,
-      creditKey: "nouvelAn",
     },
     {
       icon: Landmark,
