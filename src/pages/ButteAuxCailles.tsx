@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import ImageCredit from "@/components/ImageCredit";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import {
@@ -8,10 +9,25 @@ import {
   Navigation, ChevronRight, Footprints, BookOpen
 } from "lucide-react";
 import heroImg from "@/assets/butte-cailles-hero.webp";
-import streetartImg from "@/assets/butte-cailles-streetart.webp";
+import streetartImg from "@/assets/wikimedia/butte-cailles-streetart.jpg";
 import bistrotImg from "@/assets/butte-cailles-bistrot.webp";
-import piscineImg from "@/assets/butte-cailles-piscine.webp";
+import piscineImg from "@/assets/wikimedia/butte-cailles-piscine.jpg";
 import parcImg from "@/assets/butte-cailles-parc.webp";
+
+const wikimediaCredits: Record<string, { author: string; license: string; licenseUrl: string; sourceUrl: string }> = {
+  streetart: {
+    author: "Fred Romero",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/deed.fr",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Paris_-_Rue_du_Moulinet_(27136583070).jpg",
+  },
+  piscine: {
+    author: "Chabe01",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Piscine_Butte_Cailles_-_Paris_XIII_(FR75)_-_2024-06-23_-_1.jpg",
+  },
+};
 
 const ButteAuxCailles = () => {
   const { t } = useLanguage();
@@ -23,6 +39,7 @@ const ButteAuxCailles = () => {
       desc: t('butte.streetart.desc'),
       picks: t('butte.streetart.picks'),
       image: streetartImg,
+      creditKey: "streetart",
     },
     {
       icon: Utensils,
@@ -37,6 +54,7 @@ const ButteAuxCailles = () => {
       desc: t('butte.piscine.desc'),
       picks: t('butte.piscine.picks'),
       image: piscineImg,
+      creditKey: "piscine",
     },
     {
       icon: TreePine,
@@ -158,29 +176,43 @@ const ButteAuxCailles = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
-              >
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
-                <div className="p-6">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-burgundy" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
-                      <div className="flex items-center gap-2 text-burgundy text-sm">
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="font-medium">{item.picks}</span>
+            {highlights.map((item, index) => {
+              const credit = item.creditKey ? wikimediaCredits[item.creditKey] : null;
+              return (
+                <div
+                  key={index}
+                  className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                >
+                  {credit ? (
+                    <ImageCredit
+                      src={item.image}
+                      alt={item.title}
+                      author={credit.author}
+                      license={credit.license}
+                      licenseUrl={credit.licenseUrl}
+                      sourceUrl={credit.sourceUrl}
+                    />
+                  ) : (
+                    <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-start gap-5">
+                      <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                        <item.icon className="w-6 h-6 text-burgundy" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
+                        <div className="flex items-center gap-2 text-burgundy text-sm">
+                          <ChevronRight className="w-4 h-4" />
+                          <span className="font-medium">{item.picks}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

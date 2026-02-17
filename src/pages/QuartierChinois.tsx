@@ -1,17 +1,40 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import ImageCredit from "@/components/ImageCredit";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { 
   MapPin, Utensils, ShoppingBag, Landmark, PartyPopper, 
-  Navigation, ChevronRight, Clock, Footprints, BookOpen
+  Navigation, ChevronRight, Footprints, BookOpen
 } from "lucide-react";
 import chinatownHero from "@/assets/chinatown-hero.webp";
 import chinatownFood from "@/assets/chinatown-food.webp";
-import chinatownNouvelAn from "@/assets/chinatown-nouvel-an.webp";
-import chinatownSupermarche from "@/assets/chinatown-supermarche.webp";
+import chinatownNouvelAn from "@/assets/wikimedia/chinatown-nouvel-an.jpg";
+import chinatownSupermarche from "@/assets/wikimedia/chinatown-tang-freres.jpg";
 import chinatownTemple from "@/assets/chinatown-temple.webp";
+import chinatownAvenueChoisy from "@/assets/wikimedia/chinatown-avenue-choisy.jpg";
+
+const wikimediaCredits: Record<string, { author: string; license: string; licenseUrl: string; sourceUrl: string }> = {
+  nouvelAn: {
+    author: "Myrabella",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Nouvel_an_chinois_2015_Paris_13_autel.jpg",
+  },
+  tangFreres: {
+    author: "Shihchuan",
+    license: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/deed.fr",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Tang_Fr%C3%A8res_24_August_2012.jpg",
+  },
+  avenueChoisy: {
+    author: "besopha",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/deed.fr",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Avenue_de_Choisy,_75013_Paris,_France_August_2013.jpg",
+  },
+};
 
 const QuartierChinois = () => {
   const { t } = useLanguage();
@@ -30,6 +53,7 @@ const QuartierChinois = () => {
       desc: t('chinatown.shopping.desc'),
       picks: t('chinatown.shopping.picks'),
       image: chinatownSupermarche,
+      creditKey: "tangFreres",
     },
     {
       icon: PartyPopper,
@@ -37,6 +61,7 @@ const QuartierChinois = () => {
       desc: t('chinatown.events.desc'),
       picks: t('chinatown.events.picks'),
       image: chinatownNouvelAn,
+      creditKey: "nouvelAn",
     },
     {
       icon: Landmark,
@@ -48,8 +73,6 @@ const QuartierChinois = () => {
   ];
 
   const addresses = [
-    { name: t('chinatown.addresses.tang'), address: "48 avenue d'Ivry", type: t('chinatown.addresses.tangType') },
-    { name: t('chinatown.addresses.paristore'), address: "44 avenue d'Ivry", type: t('chinatown.addresses.paristoreType') },
     { name: t('chinatown.addresses.tang'), address: "48 avenue d'Ivry", type: t('chinatown.addresses.tangType'), walk: "6 min", transport: "Ligne 7" },
     { name: t('chinatown.addresses.paristore'), address: "44 avenue d'Ivry", type: t('chinatown.addresses.paristoreType'), walk: "6 min", transport: "Ligne 7" },
     { name: t('chinatown.addresses.pho14'), address: "129 avenue de Choisy", type: t('chinatown.addresses.pho14Type'), walk: "8 min", transport: "Ligne 7" },
@@ -94,7 +117,7 @@ const QuartierChinois = () => {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* Introduction with Wikimedia image */}
       <section className="py-24 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
@@ -110,7 +133,15 @@ const QuartierChinois = () => {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img src={chinatownHero} alt="Quartier Chinois Paris 13ème" className="w-full h-80 object-cover" loading="lazy" />
+              <ImageCredit
+                src={chinatownAvenueChoisy}
+                alt="Avenue de Choisy, Quartier Chinois Paris 13ème"
+                author={wikimediaCredits.avenueChoisy.author}
+                license={wikimediaCredits.avenueChoisy.license}
+                licenseUrl={wikimediaCredits.avenueChoisy.licenseUrl}
+                sourceUrl={wikimediaCredits.avenueChoisy.sourceUrl}
+                imgClassName="w-full h-80 object-cover"
+              />
             </div>
           </div>
         </div>
@@ -160,31 +191,43 @@ const QuartierChinois = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
-              >
-                {item.image && (
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
-                )}
-                <div className="p-6">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-burgundy" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
-                      <div className="flex items-center gap-2 text-burgundy text-sm">
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="font-medium">{item.picks}</span>
+            {highlights.map((item, index) => {
+              const credit = item.creditKey ? wikimediaCredits[item.creditKey] : null;
+              return (
+                <div
+                  key={index}
+                  className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                >
+                  {credit ? (
+                    <ImageCredit
+                      src={item.image}
+                      alt={item.title}
+                      author={credit.author}
+                      license={credit.license}
+                      licenseUrl={credit.licenseUrl}
+                      sourceUrl={credit.sourceUrl}
+                    />
+                  ) : (
+                    <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-start gap-5">
+                      <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                        <item.icon className="w-6 h-6 text-burgundy" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
+                        <div className="flex items-center gap-2 text-burgundy text-sm">
+                          <ChevronRight className="w-4 h-4" />
+                          <span className="font-medium">{item.picks}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
