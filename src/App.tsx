@@ -48,6 +48,7 @@ const CongresACCDOM = lazy(() => import("./pages/CongresACCDOM"));
 const CongresMaires = lazy(() => import("./pages/CongresMaires"));
 const DecouvrirParis = lazy(() => import("./pages/DecouvrirParis"));
 const QuartierChinois = lazy(() => import("./pages/QuartierChinois"));
+const ButteAuxCailles = lazy(() => import("./pages/ButteAuxCailles"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -111,6 +112,7 @@ const App = () => {
                 <Route path="/evenements/congres-maires" element={<CongresMaires />} />
                 <Route path="/decouvrir-paris" element={<DecouvrirParis />} />
                 <Route path="/decouvrir-paris/quartier-chinois" element={<QuartierChinois />} />
+                <Route path="/decouvrir-paris/butte-aux-cailles" element={<ButteAuxCailles />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
                 <Route path="/mentions-legales" element={<MentionsLegales />} />

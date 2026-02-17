@@ -26,6 +26,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.quartier.butte'),
       desc: t('discoverPage.quartier.butteDesc'),
       distance: "10 min à pied",
+      link: "/decouvrir-paris/butte-aux-cailles",
     },
     {
       icon: Landmark,
