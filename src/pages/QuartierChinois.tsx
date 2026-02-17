@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { 
   MapPin, Utensils, ShoppingBag, Landmark, PartyPopper, 
-  Navigation, ChevronRight, Clock, Footprints
+  Navigation, ChevronRight, Clock, Footprints, BookOpen
 } from "lucide-react";
 import chinatownHero from "@/assets/chinatown-hero.webp";
 import chinatownFood from "@/assets/chinatown-food.webp";
@@ -116,7 +116,38 @@ const QuartierChinois = () => {
         </div>
       </section>
 
-      {/* Highlights */}
+      {/* Histoire */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="text-burgundy font-medium text-sm uppercase tracking-[0.3em] mb-4 block">
+                {t('chinatown.history.badge')}
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+                {t('chinatown.history.title')}
+              </h2>
+            </div>
+            <div className="space-y-6">
+              <div className="flex gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 mt-1">
+                  <BookOpen className="w-5 h-5 text-burgundy" />
+                </div>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {t('chinatown.history.p1')}
+                </p>
+              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed pl-[4.25rem]">
+                {t('chinatown.history.p2')}
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed pl-[4.25rem]">
+                {t('chinatown.history.p3')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
