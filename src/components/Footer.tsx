@@ -35,6 +35,7 @@ export const Footer = memo(() => {
               <li><Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.seminars')}</Link></li>
               <li><Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.location')}</Link></li>
               <li><Link to="/evenements" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.events')}</Link></li>
+              <li><Link to="/decouvrir-paris" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.discover')}</Link></li>
             </ul>
           </div>
 
