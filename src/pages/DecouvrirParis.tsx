@@ -266,19 +266,19 @@ const DecouvrirParis = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 bg-gradient-to-r from-burgundy to-burgundy/90">
+      <section className="py-16 bg-gradient-to-r from-burgundy to-burgundy/80">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
+          <h2 className="font-display text-3xl md:text-4xl text-white mb-4 drop-shadow-md">
             {t('discoverPage.cta.title')}
           </h2>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
             {t('discoverPage.cta.desc')}
           </p>
           <a
             href="https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-white text-charcoal font-medium text-base hover:bg-white/90 transition-colors shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-white text-foreground font-semibold text-base hover:bg-white/95 transition-colors shadow-lg hover:shadow-xl"
           >
             {t('discoverPage.cta.button')}
             <MapPin className="w-4 h-4" />
