@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { 
   MapPin, Utensils, ShoppingBag, Landmark, PartyPopper, 
-  Navigation, ChevronRight, ExternalLink
+  Navigation, ChevronRight, Clock, Footprints
 } from "lucide-react";
 
 const QuartierChinois = () => {
@@ -41,10 +41,12 @@ const QuartierChinois = () => {
   const addresses = [
     { name: t('chinatown.addresses.tang'), address: "48 avenue d'Ivry", type: t('chinatown.addresses.tangType') },
     { name: t('chinatown.addresses.paristore'), address: "44 avenue d'Ivry", type: t('chinatown.addresses.paristoreType') },
-    { name: t('chinatown.addresses.pho14'), address: "129 avenue de Choisy", type: t('chinatown.addresses.pho14Type') },
-    { name: t('chinatown.addresses.lao'), address: "102 avenue d'Ivry", type: t('chinatown.addresses.laoType') },
-    { name: t('chinatown.addresses.temple'), address: "37 rue du Disque", type: t('chinatown.addresses.templeType') },
-    { name: t('chinatown.addresses.bobun'), address: "Avenue de Choisy", type: t('chinatown.addresses.bobunType') },
+    { name: t('chinatown.addresses.tang'), address: "48 avenue d'Ivry", type: t('chinatown.addresses.tangType'), walk: "6 min", transport: "Ligne 7" },
+    { name: t('chinatown.addresses.paristore'), address: "44 avenue d'Ivry", type: t('chinatown.addresses.paristoreType'), walk: "6 min", transport: "Ligne 7" },
+    { name: t('chinatown.addresses.pho14'), address: "129 avenue de Choisy", type: t('chinatown.addresses.pho14Type'), walk: "8 min", transport: "Ligne 7" },
+    { name: t('chinatown.addresses.lao'), address: "102 avenue d'Ivry", type: t('chinatown.addresses.laoType'), walk: "7 min", transport: "Ligne 7" },
+    { name: t('chinatown.addresses.temple'), address: "37 rue du Disque", type: t('chinatown.addresses.templeType'), walk: "5 min", transport: "Ligne 7" },
+    { name: t('chinatown.addresses.bobun'), address: "Avenue de Choisy", type: t('chinatown.addresses.bobunType'), walk: "8 min", transport: "Ligne 7" },
   ];
 
   return (
@@ -156,8 +158,16 @@ const QuartierChinois = () => {
                   <MapPin className="w-5 h-5 text-burgundy" />
                 </div>
                 <h3 className="font-display text-lg text-foreground mb-1">{item.name}</h3>
-                <p className="text-muted-foreground text-sm mb-1">{item.address}</p>
-                <span className="text-burgundy text-xs font-medium uppercase tracking-wider">{item.type}</span>
+                <p className="text-muted-foreground text-sm mb-2">{item.address}</p>
+                <span className="text-burgundy text-xs font-medium uppercase tracking-wider block mb-3">{item.type}</span>
+                <div className="flex items-center justify-center gap-3 text-muted-foreground text-xs">
+                  <span className="flex items-center gap-1">
+                    <Footprints className="w-3.5 h-3.5 text-burgundy" />
+                    {item.walk}
+                  </span>
+                  <span className="text-border">•</span>
+                  <span>{item.transport}</span>
+                </div>
               </div>
             ))}
           </div>
