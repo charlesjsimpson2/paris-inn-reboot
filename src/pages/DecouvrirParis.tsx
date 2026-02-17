@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   MapPin, Utensils, Landmark, Ship, Columns, TreePine, 
@@ -18,6 +19,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.quartier.chinatown'),
       desc: t('discoverPage.quartier.chinatownDesc'),
       distance: "5 min à pied",
+      link: "/decouvrir-paris/quartier-chinois",
     },
     {
       icon: Palette,
@@ -124,26 +126,36 @@ const DecouvrirParis = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {quartierSpots.map((spot, index) => (
-              <div
-                key={index}
-                className="group p-6 rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl flex gap-5"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                  <spot.icon className="w-6 h-6 text-burgundy" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-display text-xl text-foreground">{spot.title}</h3>
-                    <span className="flex items-center gap-1 text-burgundy text-sm font-medium">
-                      <Navigation className="w-3.5 h-3.5" />
-                      {spot.distance}
-                    </span>
+            {quartierSpots.map((spot, index) => {
+              const CardWrapper = spot.link ? Link : 'div';
+              const cardProps = spot.link ? { to: spot.link } : {};
+              return (
+                <CardWrapper
+                  key={index}
+                  {...cardProps as any}
+                  className="group p-6 rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl flex gap-5 no-underline"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                    <spot.icon className="w-6 h-6 text-burgundy" />
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{spot.desc}</p>
-                </div>
-              </div>
-            ))}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-display text-xl text-foreground">{spot.title}</h3>
+                      <span className="flex items-center gap-1 text-burgundy text-sm font-medium">
+                        <Navigation className="w-3.5 h-3.5" />
+                        {spot.distance}
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{spot.desc}</p>
+                    {spot.link && (
+                      <span className="inline-flex items-center gap-1 mt-2 text-burgundy text-sm font-medium group-hover:gap-2 transition-all">
+                        {t('discoverPage.quartier.readMore')} <ChevronRight className="w-4 h-4" />
+                      </span>
+                    )}
+                  </div>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
