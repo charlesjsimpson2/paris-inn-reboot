@@ -27,7 +27,7 @@ export const Header = memo(() => {
   
   // Check if we're on homepage or a page with hero image or internal page
   const isHomePage = location.pathname === "/";
-  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/evenements" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner" || location.pathname === "/decouvrir-paris";
+  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/evenements" || location.pathname === "/seminaires" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner" || location.pathname.startsWith("/decouvrir-paris");
   const isInternalPage = location.pathname === "/mentions-legales";
 
   useEffect(() => {
