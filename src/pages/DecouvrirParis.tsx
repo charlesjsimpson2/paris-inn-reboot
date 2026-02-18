@@ -13,6 +13,7 @@ import tourEiffel from "@/assets/tour-eiffel.jpg";
 import chinatownImg from "@/assets/wikimedia/chinatown-avenue-choisy-new.jpg";
 import butteImg from "@/assets/wikimedia/butte-cailles-piscine-celette.jpg";
 import bnfImg from "@/assets/wikimedia/bnf-francois-mitterrand.jpg";
+import avenueItalieImg from "@/assets/wikimedia/avenue-italie-paris.jpg";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -51,6 +52,8 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.quartier.italie2Desc'),
       distance: "8 min à pied",
       link: "/decouvrir-paris/centre-italie-2",
+      image: avenueItalieImg,
+      credit: { author: "Tangopaso", license: "Public domain", licenseUrl: "https://en.wikipedia.org/wiki/Public_domain", sourceUrl: "https://commons.wikimedia.org/wiki/File:Avenue_d%27Italie,_2-12_(Paris).jpg" },
     },
   ];
 
