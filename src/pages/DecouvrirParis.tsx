@@ -8,10 +8,11 @@ import {
   ExternalLink, Clock, Navigation, ShoppingBag, Baby,
   Palette, ChevronRight, ArrowRight
 } from "lucide-react";
+import ImageCredit from "@/components/ImageCredit";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
-import chinatownImg from "@/assets/wikimedia/chinatown-avenue-choisy.jpg";
-import butteImg from "@/assets/butte-cailles-hero.webp";
-import bnfImg from "@/assets/bnf/bnf-hero.webp";
+import chinatownImg from "@/assets/wikimedia/chinatown-avenue-choisy-new.jpg";
+import butteImg from "@/assets/wikimedia/butte-cailles-piscine-celette.jpg";
+import bnfImg from "@/assets/wikimedia/bnf-francois-mitterrand.jpg";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -24,6 +25,7 @@ const DecouvrirParis = () => {
       distance: "5 min à pied",
       link: "/decouvrir-paris/quartier-chinois",
       image: chinatownImg,
+      credit: { author: "Chabe01", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Avenue_Choisy_-_Paris_XIII_(FR75)_-_2021-06-29_-_2.jpg" },
     },
     {
       icon: Palette,
@@ -32,6 +34,7 @@ const DecouvrirParis = () => {
       distance: "10 min à pied",
       link: "/decouvrir-paris/butte-aux-cailles",
       image: butteImg,
+      credit: { author: "Celette", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Piscine_de_la_Butte-aux-Cailles,_5_place_Paul-Verlaine,_Paris_13e.jpg" },
     },
     {
       icon: Landmark,
@@ -40,6 +43,7 @@ const DecouvrirParis = () => {
       distance: "12 min à pied",
       link: "/decouvrir-paris/bnf-francois-mitterrand",
       image: bnfImg,
+      credit: { author: "Vincent Desjardins", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Paris_BNF_Biblioth%C3%A8que_nationale_de_France,_site_Fran%C3%A7ois_Mitterrand_-_Rez-de-Jardin.jpg" },
     },
     {
       icon: ShoppingBag,
@@ -143,15 +147,17 @@ const DecouvrirParis = () => {
                   {...cardProps as any}
                   className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl no-underline overflow-hidden"
                 >
-                  {spot.image && (
-                    <div className="overflow-hidden">
-                      <img
-                        src={spot.image}
-                        alt={spot.title}
-                        className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
+                  {spot.image && spot.credit && (
+                    <ImageCredit
+                      src={spot.image}
+                      alt={spot.title}
+                      author={spot.credit.author}
+                      license={spot.credit.license}
+                      licenseUrl={spot.credit.licenseUrl}
+                      sourceUrl={spot.credit.sourceUrl}
+                      className="overflow-hidden"
+                      imgClassName="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   )}
                   <div className="p-6 flex gap-5">
                     <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
