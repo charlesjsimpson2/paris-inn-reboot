@@ -84,6 +84,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.restaurants.streetfood'),
       desc: t('discoverPage.restaurants.streetfoodDesc'),
       picks: t('discoverPage.restaurants.streetfoodPicks'),
+      link: "/decouvrir-paris/street-food",
     },
   ];
 
