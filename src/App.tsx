@@ -50,6 +50,7 @@ const DecouvrirParis = lazy(() => import("./pages/DecouvrirParis"));
 const QuartierChinois = lazy(() => import("./pages/QuartierChinois"));
 const ButteAuxCailles = lazy(() => import("./pages/ButteAuxCailles"));
 const BnfFrancoisMitterrand = lazy(() => import("./pages/BnfFrancoisMitterrand"));
+const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -82,6 +83,7 @@ const App = () => {
                 <Route path="/seminaires" element={<Seminaires />} />
                 <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
                 <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
+                <Route path="/validation-reservation-seminaire" element={<ValidationReservationSeminaire />} />
                 <Route path="/evenements" element={<Actualites />} />
                 <Route path="/evenements/enfoires-2026" element={<Enfoires2026 />} />
                 <Route path="/evenements/tournoi-6-nations" element={<Tournoi6Nations />} />
