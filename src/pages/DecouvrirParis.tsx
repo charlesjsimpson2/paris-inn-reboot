@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   MapPin, Utensils, Landmark, Ship, Columns, TreePine, 
   ExternalLink, Clock, Navigation, ShoppingBag, Baby,
-  Palette, ChevronRight, ArrowRight
+  Palette, ChevronRight, ArrowRight, Star, Euro, Ticket
 } from "lucide-react";
 import ImageCredit from "@/components/ImageCredit";
 import tourEiffel from "@/assets/tour-eiffel.jpg";
@@ -18,6 +18,12 @@ import italianImg from "@/assets/cuisine-italienne-hero.webp";
 import asianImg from "@/assets/cuisine-asiatique-hero.webp";
 import frenchImg from "@/assets/cuisine-francaise-hero.webp";
 import streetfoodImg from "@/assets/streetfood-hero.webp";
+import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.jpg";
+import louvreImg from "@/assets/wikimedia/louvre-pyramide.jpg";
+import notreDameImg from "@/assets/wikimedia/notre-dame-paris.jpg";
+import pantheonImg from "@/assets/wikimedia/pantheon-paris.jpg";
+import jardinImg from "@/assets/wikimedia/jardin-des-plantes.jpg";
+import galeriesImg from "@/assets/wikimedia/galeries-avenue-italie.jpg";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -97,12 +103,72 @@ const DecouvrirParis = () => {
   ];
 
   const monuments = [
-    { icon: Landmark, name: t('discoverPage.monuments.eiffel'), time: "26 min", transport: "Ligne 6" },
-    { icon: Columns, name: t('discoverPage.monuments.louvre'), time: "20 min", transport: "Ligne 7" },
-    { icon: Landmark, name: t('discoverPage.monuments.notredame'), time: "15 min", transport: "Bus 27" },
-    { icon: Landmark, name: t('discoverPage.monuments.pantheon'), time: "20 min", transport: "Ligne 7" },
-    { icon: TreePine, name: t('discoverPage.monuments.jardin'), time: "10 min", transport: "Ligne 5" },
-    { icon: Baby, name: t('discoverPage.monuments.galerie'), time: "10 min", transport: "Ligne 5" },
+    {
+      icon: Landmark,
+      name: t('discoverPage.monuments.eiffel'),
+      time: "26 min",
+      transport: t('discoverPage.monuments.eiffelRoute'),
+      price: t('discoverPage.monuments.eiffelPrice'),
+      hours: t('discoverPage.monuments.eiffelHours'),
+      tip: t('discoverPage.monuments.eiffelTip'),
+      image: tourEiffelMonument,
+      credit: { author: "Benh LIEU SONG", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg" },
+    },
+    {
+      icon: Columns,
+      name: t('discoverPage.monuments.louvre'),
+      time: "20 min",
+      transport: t('discoverPage.monuments.louvreRoute'),
+      price: t('discoverPage.monuments.louvrePrice'),
+      hours: t('discoverPage.monuments.louvreHours'),
+      tip: t('discoverPage.monuments.louvreTip'),
+      image: louvreImg,
+      credit: { author: "Benh LIEU SONG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg" },
+    },
+    {
+      icon: Landmark,
+      name: t('discoverPage.monuments.notredame'),
+      time: "15 min",
+      transport: t('discoverPage.monuments.notredameRoute'),
+      price: t('discoverPage.monuments.notredamePrice'),
+      hours: t('discoverPage.monuments.notredameHours'),
+      tip: t('discoverPage.monuments.notredameTip'),
+      image: notreDameImg,
+      credit: { author: "Rainer Lück", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Notre_Dame_Paris_04_2024_1985.jpg" },
+    },
+    {
+      icon: Landmark,
+      name: t('discoverPage.monuments.pantheon'),
+      time: "20 min",
+      transport: t('discoverPage.monuments.pantheonRoute'),
+      price: t('discoverPage.monuments.pantheonPrice'),
+      hours: t('discoverPage.monuments.pantheonHours'),
+      tip: t('discoverPage.monuments.pantheonTip'),
+      image: pantheonImg,
+      credit: { author: "Diego Delso", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Pante%C3%B3n,_Par%C3%ADs,_Francia,_2022-11-01,_DD_84-86_HDR.jpg" },
+    },
+    {
+      icon: TreePine,
+      name: t('discoverPage.monuments.jardin'),
+      time: "10 min",
+      transport: t('discoverPage.monuments.jardinRoute'),
+      price: t('discoverPage.monuments.jardinPrice'),
+      hours: t('discoverPage.monuments.jardinHours'),
+      tip: t('discoverPage.monuments.jardinTip'),
+      image: jardinImg,
+      credit: { author: "Mbzt", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Paris_75005_Grande_Galerie_de_l%27Evolution_20110707.jpg" },
+    },
+    {
+      icon: Baby,
+      name: t('discoverPage.monuments.galerie'),
+      time: "10 min",
+      transport: t('discoverPage.monuments.galerieRoute'),
+      price: t('discoverPage.monuments.galeriePrice'),
+      hours: t('discoverPage.monuments.galerieHours'),
+      tip: t('discoverPage.monuments.galerieTip'),
+      image: galeriesImg,
+      credit: { author: "Tangopaso", license: "Public domain", licenseUrl: "https://en.wikipedia.org/wiki/Public_domain", sourceUrl: "https://commons.wikimedia.org/wiki/File:Avenue_d%27Italie,_2-12_(Paris).jpg" },
+    },
   ];
 
   const activities = [
@@ -272,21 +338,58 @@ const DecouvrirParis = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {monuments.map((item, index) => (
               <div
                 key={index}
-                className="group p-6 rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 text-center hover:shadow-xl"
+                className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
               >
-                <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-burgundy/20 transition-colors">
-                  <item.icon className="w-6 h-6 text-burgundy" />
-                </div>
-                <h3 className="font-display text-lg text-foreground mb-2">{item.name}</h3>
-                <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
-                  <Clock className="w-3.5 h-3.5 text-burgundy" />
-                  <span>{item.time}</span>
-                  <span className="text-border">•</span>
-                  <span>{item.transport}</span>
+                {item.image && item.credit && (
+                  <ImageCredit
+                    src={item.image}
+                    alt={item.name}
+                    author={item.credit.author}
+                    license={item.credit.license}
+                    licenseUrl={item.credit.licenseUrl}
+                    sourceUrl={item.credit.sourceUrl}
+                    className="overflow-hidden"
+                    imgClassName="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                )}
+                <div className="p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                      <item.icon className="w-5 h-5 text-burgundy" />
+                    </div>
+                    <h3 className="font-display text-lg text-foreground">{item.name}</h3>
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Navigation className="w-3.5 h-3.5 text-burgundy shrink-0" />
+                      <span>{item.transport}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Clock className="w-3.5 h-3.5 text-burgundy shrink-0" />
+                      <span>{item.hours}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Ticket className="w-3.5 h-3.5 text-burgundy shrink-0" />
+                      <span>{item.price}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-sm bg-burgundy/5 border border-burgundy/10 rounded-lg p-3">
+                    <Star className="w-4 h-4 text-burgundy shrink-0" />
+                    <p className="text-foreground italic text-xs leading-relaxed">{item.tip}</p>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2 mt-4 pt-3 border-t border-border/30 text-muted-foreground text-sm">
+                    <Clock className="w-3.5 h-3.5 text-burgundy" />
+                    <span className="font-medium">{item.time}</span>
+                    <span className="text-border">•</span>
+                    <span>{t('discoverPage.monuments.fromHotel')}</span>
+                  </div>
                 </div>
               </div>
             ))}
