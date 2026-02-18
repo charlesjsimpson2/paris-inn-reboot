@@ -184,7 +184,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.restaurants.french': 'Bistrots français',
     'discoverPage.restaurants.frenchDesc': 'Cuisine traditionnelle revisitée, terrasses ombragées et ambiance parisienne authentique.',
     'discoverPage.restaurants.frenchPicks': 'Nos favoris : Chez Gladines, L\'Avant-Goût',
-    'discoverPage.restaurants.streetfood': 'Street food & rapide',
+    'discoverPage.restaurants.streetfood': 'Street Food & Fast Food',
     'discoverPage.restaurants.streetfoodDesc': 'Bobun à emporter, crêpes, sandwiches artisanaux et spécialités du monde entier.',
     'discoverPage.restaurants.streetfoodPicks': 'Nos favoris : Bobun Saigon, Chez Nathalie',
     'discoverPage.monuments.badge': 'Paris à portée de métro',
@@ -566,7 +566,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Street food guide
     'streetfood.back': 'Retour à Découvrir Paris',
     'streetfood.badge': 'Guide gastronomique',
-    'streetfood.title': 'Street food & rapide',
+    'streetfood.title': 'Street Food & Fast Food',
     'streetfood.subtitle': 'Burgers gourmets, poke bowls, crêpes et kebabs : les meilleures adresses pour manger vite et bien près de l\'hôtel.',
     'streetfood.distance': 'De 3 à 13 min à pied depuis l\'hôtel',
     'streetfood.intro.title': 'Manger sur le pouce dans le 13ème',
