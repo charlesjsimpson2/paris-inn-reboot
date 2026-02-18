@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import ImageCredit from "@/components/ImageCredit";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import {
@@ -9,9 +10,11 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/bnf/bnf-hero.webp";
 import lectureImg from "@/assets/bnf/bnf-lecture.webp";
-import bergesImg from "@/assets/bnf/bnf-berges.webp";
 import jardinImg from "@/assets/bnf/bnf-jardin.webp";
 import expoImg from "@/assets/bnf/bnf-expo.webp";
+import bnfRezDeJardinImg from "@/assets/wikimedia/bnf-francois-mitterrand.jpg";
+import passerelleImg from "@/assets/wikimedia/passerelle-simone-beauvoir.jpg";
+import metroImg from "@/assets/wikimedia/metro-bnf-mitterrand.jpg";
 
 const BnfFrancoisMitterrand = () => {
   const { t } = useLanguage();
@@ -43,7 +46,13 @@ const BnfFrancoisMitterrand = () => {
       title: t('bnf.berges.title'),
       desc: t('bnf.berges.desc'),
       picks: t('bnf.berges.picks'),
-      image: bergesImg,
+      image: passerelleImg,
+      credit: {
+        author: "Chabe01",
+        license: "CC BY-SA 4.0",
+        licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Passerelle_Simone_Beauvoir_-_Paris_XIII_(FR75)_-_2024-06-04_-_1.jpg",
+      },
     },
   ];
 
@@ -107,9 +116,16 @@ const BnfFrancoisMitterrand = () => {
                 {t('bnf.intro.p2')}
               </p>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img src={heroImg} alt="BnF François Mitterrand Paris 13ème" className="w-full h-80 object-cover" loading="lazy" />
-            </div>
+            <ImageCredit
+              src={bnfRezDeJardinImg}
+              alt="BnF François Mitterrand Rez-de-Jardin Paris 13ème"
+              author="Vincent Desjardins"
+              license="CC BY 2.0"
+              licenseUrl="https://creativecommons.org/licenses/by/2.0/deed.en"
+              sourceUrl="https://commons.wikimedia.org/wiki/File:Paris_BNF_Biblioth%C3%A8que_nationale_de_France,_site_Fran%C3%A7ois_Mitterrand_-_Rez-de-Jardin.jpg"
+              className="rounded-2xl overflow-hidden shadow-xl"
+              imgClassName="w-full h-80 object-cover"
+            />
           </div>
         </div>
       </section>
@@ -163,7 +179,19 @@ const BnfFrancoisMitterrand = () => {
                 key={index}
                 className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
               >
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
+                {item.credit ? (
+                  <ImageCredit
+                    src={item.image}
+                    alt={item.title}
+                    author={item.credit.author}
+                    license={item.credit.license}
+                    licenseUrl={item.credit.licenseUrl}
+                    sourceUrl={item.credit.sourceUrl}
+                    imgClassName="w-full h-48 object-cover"
+                  />
+                ) : (
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
+                )}
                 <div className="p-6">
                   <div className="flex items-start gap-5">
                     <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
@@ -213,6 +241,19 @@ const BnfFrancoisMitterrand = () => {
               <h3 className="font-display text-lg text-foreground mb-2">{t('bnf.practical.price')}</h3>
               <p className="text-muted-foreground text-sm">{t('bnf.practical.priceValue')}</p>
             </div>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <ImageCredit
+              src={metroImg}
+              alt="Entrée station métro Bibliothèque François Mitterrand Paris"
+              author="Chabe01"
+              license="CC BY-SA 4.0"
+              licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+              sourceUrl="https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_M%C3%A9tro_Biblioth%C3%A8que_Fran%C3%A7ois_Mitterrand_Paris_1.jpg"
+              className="rounded-2xl overflow-hidden shadow-xl"
+              imgClassName="w-full h-64 object-cover"
+            />
           </div>
         </div>
       </section>
