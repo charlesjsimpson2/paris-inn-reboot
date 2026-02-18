@@ -11,6 +11,7 @@ import {
 import tourEiffel from "@/assets/tour-eiffel.jpg";
 import chinatownImg from "@/assets/wikimedia/chinatown-avenue-choisy.jpg";
 import butteImg from "@/assets/butte-cailles-hero.webp";
+import bnfImg from "@/assets/bnf/bnf-hero.webp";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -37,6 +38,8 @@ const DecouvrirParis = () => {
       title: t('discoverPage.quartier.bnf'),
       desc: t('discoverPage.quartier.bnfDesc'),
       distance: "12 min à pied",
+      link: "/decouvrir-paris/bnf-francois-mitterrand",
+      image: bnfImg,
     },
     {
       icon: ShoppingBag,
