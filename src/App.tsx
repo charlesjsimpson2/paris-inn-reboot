@@ -54,6 +54,7 @@ const CentreItalie2 = lazy(() => import("./pages/CentreItalie2"));
 const CuisineItalienne = lazy(() => import("./pages/CuisineItalienne"));
 const CuisineAsiatique = lazy(() => import("./pages/CuisineAsiatique"));
 const CuisineFrancaise = lazy(() => import("./pages/CuisineFrancaise"));
+const StreetFood = lazy(() => import("./pages/StreetFood"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -125,6 +126,7 @@ const App = () => {
                 <Route path="/decouvrir-paris/cuisine-italienne" element={<CuisineItalienne />} />
                 <Route path="/decouvrir-paris/cuisine-asiatique" element={<CuisineAsiatique />} />
                 <Route path="/decouvrir-paris/cuisine-francaise" element={<CuisineFrancaise />} />
+                <Route path="/decouvrir-paris/street-food" element={<StreetFood />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
                 <Route path="/mentions-legales" element={<MentionsLegales />} />
