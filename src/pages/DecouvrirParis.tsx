@@ -77,6 +77,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.restaurants.french'),
       desc: t('discoverPage.restaurants.frenchDesc'),
       picks: t('discoverPage.restaurants.frenchPicks'),
+      link: "/decouvrir-paris/cuisine-francaise",
     },
     {
       cuisine: "🍕",
