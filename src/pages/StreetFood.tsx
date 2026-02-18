@@ -12,6 +12,10 @@ import burgerImg from "@/assets/streetfood-burger.webp";
 import crepeImg from "@/assets/streetfood-crepe.webp";
 import pokeImg from "@/assets/streetfood-poke.webp";
 import kebabImg from "@/assets/streetfood-kebab.webp";
+import baoImg from "@/assets/streetfood-bao.webp";
+import thaiImg from "@/assets/streetfood-thai.webp";
+import fastfoodImg from "@/assets/streetfood-fastfood.webp";
+import pizzaImg from "@/assets/streetfood-pizza.webp";
 
 const StreetFood = () => {
   const { t } = useLanguage();
@@ -41,7 +45,7 @@ const StreetFood = () => {
       budget: "€",
       hours: "11h30–22h (7j/7)",
       phone: "01 45 82 73 90",
-      image: pokeImg,
+      image: baoImg,
       type: t('streetfood.guide.baofamily.type'),
       desc: t('streetfood.guide.baofamily.desc'),
       specialties: t('streetfood.guide.baofamily.specialties'),
@@ -101,11 +105,41 @@ const StreetFood = () => {
       budget: "€€",
       hours: "11h30–22h30 (7j/7)",
       phone: "01 43 31 80 50",
-      image: pokeImg,
+      image: thaiImg,
       type: t('streetfood.guide.pitaya.type'),
       desc: t('streetfood.guide.pitaya.desc'),
       specialties: t('streetfood.guide.pitaya.specialties'),
       tip: t('streetfood.guide.pitaya.tip'),
+    },
+    {
+      name: "McDonald's Place d'Italie",
+      address: "Centre Italie 2, 30 avenue d'Italie, 75013",
+      walk: "8 min",
+      transport: "Ligne 5, 6, 7 — Place d'Italie",
+      rating: "3.5",
+      budget: "€",
+      hours: "7h–1h (7j/7)",
+      phone: "",
+      image: fastfoodImg,
+      type: t('streetfood.guide.mcdonalds.type'),
+      desc: t('streetfood.guide.mcdonalds.desc'),
+      specialties: t('streetfood.guide.mcdonalds.specialties'),
+      tip: t('streetfood.guide.mcdonalds.tip'),
+    },
+    {
+      name: "Domino's Pizza",
+      address: "110 avenue d'Italie, 75013",
+      walk: "4 min",
+      transport: "Ligne 7 — Tolbiac",
+      rating: "3.8",
+      budget: "€€",
+      hours: "11h–23h (7j/7)",
+      phone: "01 45 82 00 00",
+      image: pizzaImg,
+      type: t('streetfood.guide.dominos.type'),
+      desc: t('streetfood.guide.dominos.desc'),
+      specialties: t('streetfood.guide.dominos.specialties'),
+      tip: t('streetfood.guide.dominos.tip'),
     },
   ];
 
