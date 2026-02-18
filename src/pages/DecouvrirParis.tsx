@@ -70,6 +70,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.restaurants.asian'),
       desc: t('discoverPage.restaurants.asianDesc'),
       picks: t('discoverPage.restaurants.asianPicks'),
+      link: "/decouvrir-paris/cuisine-asiatique",
     },
     {
       cuisine: "🇫🇷",
