@@ -135,7 +135,7 @@ const CuisineItalienne = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
               {t('italian.title')}
             </h1>
-            <p className="text-white/90 text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium">
+            <p className="text-foreground text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium">
               {t('italian.subtitle')}
             </p>
             <div className="flex items-center justify-center gap-2 mt-4 text-burgundy text-sm font-medium bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full mx-auto w-fit">
