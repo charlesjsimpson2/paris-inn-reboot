@@ -24,6 +24,9 @@ import notreDameImg from "@/assets/wikimedia/notre-dame-paris.jpg";
 import pantheonImg from "@/assets/wikimedia/pantheon-paris.jpg";
 import jardinImg from "@/assets/wikimedia/jardin-des-plantes.jpg";
 import galeriesImg from "@/assets/wikimedia/galeries-avenue-italie.jpg";
+import bateauxImg from "@/assets/wikimedia/bateaux-mouches-seine.jpg";
+import museeOrsayImg from "@/assets/wikimedia/musee-orsay.jpg";
+import arcTriompheImg from "@/assets/wikimedia/arc-de-triomphe.jpg";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -172,9 +175,27 @@ const DecouvrirParis = () => {
   ];
 
   const activities = [
-    { icon: Ship, title: t('discoverPage.activities.cruises'), desc: t('discoverPage.activities.cruisesDesc') },
-    { icon: Columns, title: t('discoverPage.activities.museums'), desc: t('discoverPage.activities.museumsDesc') },
-    { icon: Landmark, title: t('discoverPage.activities.monuments'), desc: t('discoverPage.activities.monumentsDesc') },
+    {
+      icon: Ship,
+      title: t('discoverPage.activities.cruises'),
+      desc: t('discoverPage.activities.cruisesDesc'),
+      image: bateauxImg,
+      credit: { author: "Aconcagua", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Pont_Neuf_with_Bateaux_Mouches.jpg" },
+    },
+    {
+      icon: Columns,
+      title: t('discoverPage.activities.museums'),
+      desc: t('discoverPage.activities.museumsDesc'),
+      image: museeOrsayImg,
+      credit: { author: "Jean-Pierre Dalbéra", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Le_mus%C3%A9e_dOrsay_(Paris)_(4725795882).jpg" },
+    },
+    {
+      icon: Landmark,
+      title: t('discoverPage.activities.monuments'),
+      desc: t('discoverPage.activities.monumentsDesc'),
+      image: arcTriompheImg,
+      credit: { author: "Benh LIEU SONG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Arc_Triomphe.jpg" },
+    },
   ];
 
   return (
@@ -416,13 +437,27 @@ const DecouvrirParis = () => {
             {activities.map((item, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl text-center"
+                className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
               >
-                <div className="w-16 h-16 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-burgundy/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-burgundy" />
+                {item.image && item.credit && (
+                  <ImageCredit
+                    src={item.image}
+                    alt={item.title}
+                    author={item.credit.author}
+                    license={item.credit.license}
+                    licenseUrl={item.credit.licenseUrl}
+                    sourceUrl={item.credit.sourceUrl}
+                    className="overflow-hidden"
+                    imgClassName="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                )}
+                <div className="p-6 text-center">
+                  <div className="w-12 h-12 rounded-xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-burgundy/20 transition-colors">
+                    <item.icon className="w-6 h-6 text-burgundy" />
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
