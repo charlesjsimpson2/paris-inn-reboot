@@ -14,6 +14,10 @@ import chinatownImg from "@/assets/wikimedia/chinatown-avenue-choisy-new.jpg";
 import butteImg from "@/assets/wikimedia/butte-cailles-piscine-celette.jpg";
 import bnfImg from "@/assets/wikimedia/bnf-francois-mitterrand.jpg";
 import avenueItalieImg from "@/assets/wikimedia/avenue-italie-paris.jpg";
+import italianImg from "@/assets/cuisine-italienne-hero.webp";
+import asianImg from "@/assets/cuisine-asiatique-hero.webp";
+import frenchImg from "@/assets/cuisine-francaise-hero.webp";
+import streetfoodImg from "@/assets/streetfood-hero.webp";
 
 const DecouvrirParis = () => {
   const { t } = useLanguage();
@@ -64,6 +68,7 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.restaurants.italianDesc'),
       picks: t('discoverPage.restaurants.italianPicks'),
       link: "/decouvrir-paris/cuisine-italienne",
+      image: italianImg,
     },
     {
       cuisine: "🇯🇵",
@@ -71,6 +76,7 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.restaurants.asianDesc'),
       picks: t('discoverPage.restaurants.asianPicks'),
       link: "/decouvrir-paris/cuisine-asiatique",
+      image: asianImg,
     },
     {
       cuisine: "🇫🇷",
@@ -78,6 +84,7 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.restaurants.frenchDesc'),
       picks: t('discoverPage.restaurants.frenchPicks'),
       link: "/decouvrir-paris/cuisine-francaise",
+      image: frenchImg,
     },
     {
       cuisine: "🍕",
@@ -85,6 +92,7 @@ const DecouvrirParis = () => {
       desc: t('discoverPage.restaurants.streetfoodDesc'),
       picks: t('discoverPage.restaurants.streetfoodPicks'),
       link: "/decouvrir-paris/street-food",
+      image: streetfoodImg,
     },
   ];
 
@@ -218,23 +226,30 @@ const DecouvrirParis = () => {
                 <CardEl
                   key={index}
                   {...cardProps as any}
-                  className="group p-6 rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl no-underline"
+                  className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl no-underline overflow-hidden"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-3xl">{resto.cuisine}</span>
-                    <h3 className="font-display text-xl text-foreground">{resto.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">{resto.desc}</p>
-                  <div className="flex items-center gap-2 text-burgundy text-sm">
-                    <ChevronRight className="w-4 h-4" />
-                    <span className="font-medium">{resto.picks}</span>
-                  </div>
-                  {resto.link && (
-                    <span className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-burgundy/10 text-burgundy text-sm font-semibold group-hover:bg-burgundy group-hover:text-white transition-all duration-300">
-                      {t('discoverPage.quartier.readMore')}
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
+                  {resto.image && (
+                    <div className="overflow-hidden">
+                      <img src={resto.image} alt={resto.title} className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
                   )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-3xl">{resto.cuisine}</span>
+                      <h3 className="font-display text-xl text-foreground">{resto.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{resto.desc}</p>
+                    <div className="flex items-center gap-2 text-burgundy text-sm">
+                      <ChevronRight className="w-4 h-4" />
+                      <span className="font-medium">{resto.picks}</span>
+                    </div>
+                    {resto.link && (
+                      <span className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-burgundy/10 text-burgundy text-sm font-semibold group-hover:bg-burgundy group-hover:text-white transition-all duration-300">
+                        {t('discoverPage.quartier.readMore')}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    )}
+                  </div>
                 </CardEl>
               );
             })}
