@@ -50,6 +50,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.quartier.italie2'),
       desc: t('discoverPage.quartier.italie2Desc'),
       distance: "8 min à pied",
+      link: "/decouvrir-paris/centre-italie-2",
     },
   ];
 
