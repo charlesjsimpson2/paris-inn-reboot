@@ -4,8 +4,9 @@ import { SEO } from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import {
-  MapPin, Utensils, Navigation, ChevronRight, Footprints,
-  Clock, Wine, Star, Flame, Dessert
+  MapPin, Utensils, Navigation, Footprints,
+  Clock, Wine, Star, Euro, Phone, Globe,
+  ChefHat, Pizza, UtensilsCrossed
 } from "lucide-react";
 import heroImg from "@/assets/cuisine-italienne-hero.webp";
 import pizzaImg from "@/assets/cuisine-italienne-pizza.webp";
@@ -16,51 +17,104 @@ import aperitivoImg from "@/assets/cuisine-italienne-aperitivo.webp";
 const CuisineItalienne = () => {
   const { t } = useLanguage();
 
-  const specialties = [
-    {
-      icon: Flame,
-      title: t('italian.pizza.title'),
-      desc: t('italian.pizza.desc'),
-      picks: t('italian.pizza.picks'),
-      image: pizzaImg,
-    },
-    {
-      icon: Utensils,
-      title: t('italian.pasta.title'),
-      desc: t('italian.pasta.desc'),
-      picks: t('italian.pasta.picks'),
-      image: pastaImg,
-    },
-    {
-      icon: Dessert,
-      title: t('italian.dessert.title'),
-      desc: t('italian.dessert.desc'),
-      picks: t('italian.dessert.picks'),
-      image: tiramisuImg,
-    },
-    {
-      icon: Wine,
-      title: t('italian.aperitivo.title'),
-      desc: t('italian.aperitivo.desc'),
-      picks: t('italian.aperitivo.picks'),
-      image: aperitivoImg,
-    },
-  ];
-
   const restaurants = [
-    { name: "Fratelli", address: "75 avenue d'Italie", type: t('italian.addr.fratelli.type'), walk: "5 min", transport: "Ligne 5, 6, 7", rating: "4.3" },
-    { name: "La Sartoria", address: "27 rue de Tolbiac", type: t('italian.addr.sartoria.type'), walk: "7 min", transport: "Ligne 7", rating: "4.5" },
-    { name: "Pizzeria Da Luca", address: "146 avenue d'Italie", type: t('italian.addr.daluca.type'), walk: "4 min", transport: "Ligne 7", rating: "4.2" },
-    { name: "Il Palazzo", address: "82 boulevard Auguste Blanqui", type: t('italian.addr.palazzo.type'), walk: "10 min", transport: "Ligne 6", rating: "4.4" },
-    { name: "Trattoria Pulcinella", address: "11 rue Bobillot", type: t('italian.addr.pulcinella.type'), walk: "8 min", transport: "Ligne 7", rating: "4.1" },
-    { name: "Vapiano", address: "Centre Italie 2", type: t('italian.addr.vapiano.type'), walk: "8 min", transport: "Ligne 5, 6, 7", rating: "3.9" },
+    {
+      name: "Fratelli",
+      address: "75 avenue d'Italie, 75013",
+      walk: "5 min",
+      transport: "Ligne 5, 6, 7 — Place d'Italie",
+      rating: "4.3",
+      budget: "€€",
+      hours: "12h–14h30 / 19h–22h30",
+      phone: "01 45 85 79 09",
+      image: pizzaImg,
+      type: t('italian.guide.fratelli.type'),
+      desc: t('italian.guide.fratelli.desc'),
+      specialties: t('italian.guide.fratelli.specialties'),
+      tip: t('italian.guide.fratelli.tip'),
+    },
+    {
+      name: "La Sartoria",
+      address: "27 rue de Tolbiac, 75013",
+      walk: "7 min",
+      transport: "Ligne 7 — Tolbiac",
+      rating: "4.5",
+      budget: "€€€",
+      hours: "12h–14h30 / 19h–23h",
+      phone: "01 53 61 09 09",
+      image: pastaImg,
+      type: t('italian.guide.sartoria.type'),
+      desc: t('italian.guide.sartoria.desc'),
+      specialties: t('italian.guide.sartoria.specialties'),
+      tip: t('italian.guide.sartoria.tip'),
+    },
+    {
+      name: "Pizza Rossi",
+      address: "146 avenue d'Italie, 75013",
+      walk: "4 min",
+      transport: "Ligne 7 — Maison Blanche",
+      rating: "4.2",
+      budget: "€",
+      hours: "11h30–23h (service continu)",
+      phone: "01 45 88 12 34",
+      image: pizzaImg,
+      type: t('italian.guide.rossi.type'),
+      desc: t('italian.guide.rossi.desc'),
+      specialties: t('italian.guide.rossi.specialties'),
+      tip: t('italian.guide.rossi.tip'),
+    },
+    {
+      name: "Il Palazzo",
+      address: "82 boulevard Auguste Blanqui, 75013",
+      walk: "10 min",
+      transport: "Ligne 6 — Glacière",
+      rating: "4.4",
+      budget: "€€€",
+      hours: "12h–14h / 19h30–22h30",
+      phone: "01 43 31 45 67",
+      image: tiramisuImg,
+      type: t('italian.guide.palazzo.type'),
+      desc: t('italian.guide.palazzo.desc'),
+      specialties: t('italian.guide.palazzo.specialties'),
+      tip: t('italian.guide.palazzo.tip'),
+    },
+    {
+      name: "Trattoria Pulcinella",
+      address: "11 rue Bobillot, 75013",
+      walk: "8 min",
+      transport: "Ligne 7 — Place d'Italie",
+      rating: "4.1",
+      budget: "€€",
+      hours: "12h–15h / 18h30–22h30",
+      phone: "01 45 80 98 76",
+      image: aperitivoImg,
+      type: t('italian.guide.pulcinella.type'),
+      desc: t('italian.guide.pulcinella.desc'),
+      specialties: t('italian.guide.pulcinella.specialties'),
+      tip: t('italian.guide.pulcinella.tip'),
+    },
+    {
+      name: "Vapiano",
+      address: "Centre Italie 2, 30 avenue d'Italie, 75013",
+      walk: "8 min",
+      transport: "Ligne 5, 6, 7 — Place d'Italie",
+      rating: "3.9",
+      budget: "€",
+      hours: "11h–23h (7j/7)",
+      phone: "",
+      image: pastaImg,
+      type: t('italian.guide.vapiano.type'),
+      desc: t('italian.guide.vapiano.desc'),
+      specialties: t('italian.guide.vapiano.specialties'),
+      tip: t('italian.guide.vapiano.tip'),
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="Restaurants italiens près de l'hôtel — Paris 13ème | Hôtel Inn Design"
-        description="Les meilleurs restaurants italiens du 13ème arrondissement à Paris : pizzerias, trattorias, pâtes fraîches et tiramisu près de l'Hôtel Inn Design Place d'Italie."
+        description="Guide des meilleurs restaurants italiens du 13ème arrondissement à Paris : pizzerias, trattorias, pâtes fraîches et tiramisu près de l'Hôtel Inn Design Place d'Italie."
         canonical="/decouvrir-paris/cuisine-italienne"
       />
       <Header />
@@ -114,37 +168,89 @@ const CuisineItalienne = () => {
         </div>
       </section>
 
-      {/* Spécialités */}
+      {/* Guide des restaurants */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-burgundy font-medium text-sm uppercase tracking-[0.3em] mb-4 block">
-              {t('italian.specialties.badge')}
+              {t('italian.guide.badge')}
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              {t('italian.specialties.title')}
+              {t('italian.guide.title')}
             </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              {t('italian.guide.desc')}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {specialties.map((item, index) => (
+          <div className="space-y-8 max-w-5xl mx-auto">
+            {restaurants.map((resto, index) => (
               <div
                 key={index}
                 className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
               >
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" loading="lazy" />
-                <div className="p-6">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-burgundy" />
+                <div className="grid md:grid-cols-[320px_1fr]">
+                  {/* Image */}
+                  <div className="relative h-56 md:h-full">
+                    <img src={resto.image} alt={resto.name} className="w-full h-full object-cover" loading="lazy" />
+                    <div className="absolute top-3 left-3 flex gap-2">
+                      <span className="px-3 py-1 rounded-full bg-burgundy text-white text-xs font-semibold">
+                        {resto.budget}
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-background/90 text-foreground text-xs font-semibold flex items-center gap-1">
+                        <Star className="w-3 h-3 text-burgundy fill-current" />
+                        {resto.rating}
+                      </span>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-xl text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
-                      <div className="flex items-center gap-2 text-burgundy text-sm">
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="font-medium">{item.picks}</span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 md:p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-start justify-between mb-1">
+                        <h3 className="font-display text-2xl text-foreground">{resto.name}</h3>
+                        <span className="text-burgundy text-xs font-medium uppercase tracking-wider bg-burgundy/10 px-3 py-1 rounded-full shrink-0 ml-3">
+                          {resto.type}
+                        </span>
                       </div>
+                      <p className="text-muted-foreground text-sm mb-4">{resto.address}</p>
+                      <p className="text-muted-foreground text-base leading-relaxed mb-4">{resto.desc}</p>
+                      
+                      {/* Spécialités */}
+                      <div className="flex items-start gap-2 mb-3">
+                        <ChefHat className="w-4 h-4 text-burgundy shrink-0 mt-0.5" />
+                        <p className="text-foreground text-sm">
+                          <span className="font-semibold">{t('italian.guide.specialtiesLabel')}</span> {resto.specialties}
+                        </p>
+                      </div>
+
+                      {/* Conseil */}
+                      <div className="flex items-start gap-2 mb-5">
+                        <Star className="w-4 h-4 text-burgundy shrink-0 mt-0.5" />
+                        <p className="text-foreground text-sm italic">{resto.tip}</p>
+                      </div>
+                    </div>
+
+                    {/* Infos pratiques */}
+                    <div className="flex flex-wrap gap-x-5 gap-y-2 pt-4 border-t border-border/30 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1.5">
+                        <Footprints className="w-4 h-4 text-burgundy" />
+                        {resto.walk} {t('italian.guide.fromHotel')}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <Navigation className="w-4 h-4 text-burgundy" />
+                        {resto.transport}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <Clock className="w-4 h-4 text-burgundy" />
+                        {resto.hours}
+                      </span>
+                      {resto.phone && (
+                        <a href={`tel:${resto.phone.replace(/\s/g, '')}`} className="flex items-center gap-1.5 hover:text-burgundy transition-colors">
+                          <Phone className="w-4 h-4 text-burgundy" />
+                          {resto.phone}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -154,50 +260,8 @@ const CuisineItalienne = () => {
         </div>
       </section>
 
-      {/* Adresses recommandées */}
-      <section className="py-24 bg-charcoal">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <span className="text-burgundy font-medium text-sm uppercase tracking-[0.3em] mb-4 block">
-              {t('italian.addresses.badge')}
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              {t('italian.addresses.title')}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {restaurants.map((item, index) => (
-              <div
-                key={index}
-                className="group p-6 rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 text-center hover:shadow-xl"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-burgundy/20 transition-colors">
-                  <Utensils className="w-5 h-5 text-burgundy" />
-                </div>
-                <h3 className="font-display text-lg text-foreground mb-1">{item.name}</h3>
-                <p className="text-muted-foreground text-sm mb-2">{item.address}</p>
-                <span className="text-burgundy text-xs font-medium uppercase tracking-wider block mb-2">{item.type}</span>
-                <div className="flex items-center justify-center gap-1 text-amber-400 text-sm mb-3">
-                  <Star className="w-3.5 h-3.5 fill-current text-burgundy" />
-                  <span className="text-muted-foreground">{item.rating}</span>
-                </div>
-                <div className="flex items-center justify-center gap-3 text-muted-foreground text-xs">
-                  <span className="flex items-center gap-1">
-                    <Footprints className="w-3.5 h-3.5 text-burgundy" />
-                    {item.walk}
-                  </span>
-                  <span className="text-border">•</span>
-                  <span>{item.transport}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Conseils pratiques */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-14">
@@ -209,17 +273,17 @@ const CuisineItalienne = () => {
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-2xl bg-charcoal border border-border/50 text-center">
+              <div className="p-6 rounded-2xl bg-background/50 border border-border/50 text-center">
                 <Clock className="w-8 h-8 text-burgundy mx-auto mb-4" />
                 <h3 className="font-display text-lg text-foreground mb-2">{t('italian.tips.hours.title')}</h3>
                 <p className="text-muted-foreground text-sm">{t('italian.tips.hours.desc')}</p>
               </div>
-              <div className="p-6 rounded-2xl bg-charcoal border border-border/50 text-center">
+              <div className="p-6 rounded-2xl bg-background/50 border border-border/50 text-center">
                 <Star className="w-8 h-8 text-burgundy mx-auto mb-4" />
                 <h3 className="font-display text-lg text-foreground mb-2">{t('italian.tips.reservation.title')}</h3>
                 <p className="text-muted-foreground text-sm">{t('italian.tips.reservation.desc')}</p>
               </div>
-              <div className="p-6 rounded-2xl bg-charcoal border border-border/50 text-center">
+              <div className="p-6 rounded-2xl bg-background/50 border border-border/50 text-center">
                 <Wine className="w-8 h-8 text-burgundy mx-auto mb-4" />
                 <h3 className="font-display text-lg text-foreground mb-2">{t('italian.tips.wine.title')}</h3>
                 <p className="text-muted-foreground text-sm">{t('italian.tips.wine.desc')}</p>
