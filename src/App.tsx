@@ -50,6 +50,7 @@ const DecouvrirParis = lazy(() => import("./pages/DecouvrirParis"));
 const QuartierChinois = lazy(() => import("./pages/QuartierChinois"));
 const ButteAuxCailles = lazy(() => import("./pages/ButteAuxCailles"));
 const BnfFrancoisMitterrand = lazy(() => import("./pages/BnfFrancoisMitterrand"));
+const CentreItalie2 = lazy(() => import("./pages/CentreItalie2"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -117,6 +118,7 @@ const App = () => {
                 <Route path="/decouvrir-paris/quartier-chinois" element={<QuartierChinois />} />
                 <Route path="/decouvrir-paris/butte-aux-cailles" element={<ButteAuxCailles />} />
                 <Route path="/decouvrir-paris/bnf-francois-mitterrand" element={<BnfFrancoisMitterrand />} />
+                <Route path="/decouvrir-paris/centre-italie-2" element={<CentreItalie2 />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
                 <Route path="/mentions-legales" element={<MentionsLegales />} />
