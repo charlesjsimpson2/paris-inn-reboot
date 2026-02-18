@@ -146,8 +146,8 @@ const StreetFood = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Street food & rapide près de l'hôtel — Paris 13ème | Hôtel Inn Design"
-        description="Guide des meilleurs restaurants rapides et street food du 13ème arrondissement à Paris : burgers, poke bowls, crêpes, kebabs près de l'Hôtel Inn Design Place d'Italie."
+        title="Street Food & Fast Food près de l'hôtel — Paris 13ème | Hôtel Inn Design"
+        description="Guide des meilleurs restaurants rapides, street food et fast food du 13ème arrondissement à Paris : burgers, poke bowls, crêpes, kebabs, pizza près de l'Hôtel Inn Design Place d'Italie."
         canonical="/decouvrir-paris/street-food"
       />
       <Header />
