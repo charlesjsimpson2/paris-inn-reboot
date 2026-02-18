@@ -63,6 +63,7 @@ const DecouvrirParis = () => {
       title: t('discoverPage.restaurants.italian'),
       desc: t('discoverPage.restaurants.italianDesc'),
       picks: t('discoverPage.restaurants.italianPicks'),
+      link: "/decouvrir-paris/cuisine-italienne",
     },
     {
       cuisine: "🇯🇵",
@@ -207,22 +208,33 @@ const DecouvrirParis = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {restaurants.map((resto, index) => (
-              <div
-                key={index}
-                className="group p-6 rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-3xl">{resto.cuisine}</span>
-                  <h3 className="font-display text-xl text-foreground">{resto.title}</h3>
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-3">{resto.desc}</p>
-                <div className="flex items-center gap-2 text-burgundy text-sm">
-                  <ChevronRight className="w-4 h-4" />
-                  <span className="font-medium">{resto.picks}</span>
-                </div>
-              </div>
-            ))}
+            {restaurants.map((resto, index) => {
+              const CardEl = resto.link ? Link : 'div';
+              const cardProps = resto.link ? { to: resto.link } : {};
+              return (
+                <CardEl
+                  key={index}
+                  {...cardProps as any}
+                  className="group p-6 rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl no-underline"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-3xl">{resto.cuisine}</span>
+                    <h3 className="font-display text-xl text-foreground">{resto.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">{resto.desc}</p>
+                  <div className="flex items-center gap-2 text-burgundy text-sm">
+                    <ChevronRight className="w-4 h-4" />
+                    <span className="font-medium">{resto.picks}</span>
+                  </div>
+                  {resto.link && (
+                    <span className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-burgundy/10 text-burgundy text-sm font-semibold group-hover:bg-burgundy group-hover:text-white transition-all duration-300">
+                      {t('discoverPage.quartier.readMore')}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  )}
+                </CardEl>
+              );
+            })}
           </div>
         </div>
       </section>
