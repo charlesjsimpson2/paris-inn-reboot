@@ -115,7 +115,7 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.eiffelHours'),
       tip: t('discoverPage.monuments.eiffelTip'),
       image: tourEiffelMonument,
-      credit: { author: "Benh LIEU SONG", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg" },
+      credit: { author: "Alexis Minchella", license: "Unsplash", licenseUrl: "https://unsplash.com/license", sourceUrl: "https://unsplash.com/photos/wTSXKJBtznA" },
     },
     {
       icon: Columns,
