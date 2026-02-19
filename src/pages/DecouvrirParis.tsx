@@ -433,29 +433,17 @@ const DecouvrirParis = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
             {activities.map((item, index) => (
               <div
                 key={index}
-                className="group rounded-2xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                className="group flex items-start gap-4 rounded-xl bg-charcoal border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-lg p-5"
               >
-                {item.image && item.credit && (
-                  <ImageCredit
-                    src={item.image}
-                    alt={item.title}
-                    author={item.credit.author}
-                    license={item.credit.license}
-                    licenseUrl={item.credit.licenseUrl}
-                    sourceUrl={item.credit.sourceUrl}
-                    className="overflow-hidden"
-                    imgClassName="w-full aspect-[2/1] object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                )}
-                <div className="p-6 text-center">
-                  <div className="w-12 h-12 rounded-xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-burgundy/20 transition-colors">
-                    <item.icon className="w-6 h-6 text-burgundy" />
-                  </div>
-                  <h3 className="font-display text-xl text-foreground mb-3">{item.title}</h3>
+                <div className="w-12 h-12 rounded-xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                  <item.icon className="w-6 h-6 text-burgundy" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg text-foreground mb-1.5">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
