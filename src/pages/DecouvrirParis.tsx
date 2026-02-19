@@ -19,7 +19,7 @@ import asianImg from "@/assets/cuisine-asiatique-hero.webp";
 import frenchImg from "@/assets/cuisine-francaise-hero.webp";
 import streetfoodImg from "@/assets/streetfood-hero.webp";
 import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.webp";
-import louvreImg from "@/assets/wikimedia/louvre-pyramide.jpg";
+import louvreImg from "@/assets/wikimedia/louvre-pyramide.webp";
 import notreDameImg from "@/assets/wikimedia/notre-dame-paris.jpg";
 import pantheonImg from "@/assets/wikimedia/pantheon-paris.jpg";
 import jardinImg from "@/assets/wikimedia/jardin-des-plantes.jpg";
@@ -125,7 +125,6 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.louvreHours'),
       tip: t('discoverPage.monuments.louvreTip'),
       image: louvreImg,
-      credit: { author: "Benh LIEU SONG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg" },
     },
     {
       icon: Landmark,
