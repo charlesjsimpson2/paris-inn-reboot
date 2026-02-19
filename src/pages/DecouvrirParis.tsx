@@ -304,7 +304,7 @@ const DecouvrirParis = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {restaurants.map((resto, index) => {
               const CardEl = resto.link ? Link : 'div';
               const cardProps = resto.link ? { to: resto.link } : {};
