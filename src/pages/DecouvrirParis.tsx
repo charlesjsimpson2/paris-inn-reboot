@@ -115,7 +115,6 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.eiffelHours'),
       tip: t('discoverPage.monuments.eiffelTip'),
       image: tourEiffelMonument,
-      credit: { author: "Alexis Minchella", license: "Unsplash", licenseUrl: "https://unsplash.com/license", sourceUrl: "https://unsplash.com/photos/wTSXKJBtznA" },
     },
     {
       icon: Columns,
@@ -365,7 +364,7 @@ const DecouvrirParis = () => {
                 key={index}
                 className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden flex flex-col"
               >
-                {item.image && item.credit && (
+                {item.image && item.credit ? (
                   <ImageCredit
                     src={item.image}
                     alt={item.name}
@@ -376,7 +375,11 @@ const DecouvrirParis = () => {
                     className="overflow-hidden"
                     imgClassName="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                )}
+                ) : item.image ? (
+                  <div className="overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                ) : null}
                 <div className="p-4 flex-1 flex flex-col">
                   <div className="flex items-center gap-2.5 mb-3">
                     <div className="w-9 h-9 rounded-lg bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
