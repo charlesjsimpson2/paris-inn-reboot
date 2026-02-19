@@ -21,7 +21,7 @@ import streetfoodImg from "@/assets/streetfood-hero.webp";
 import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.webp";
 import louvreImg from "@/assets/wikimedia/louvre-pyramide.webp";
 import notreDameImg from "@/assets/wikimedia/notre-dame-paris.webp";
-import pantheonImg from "@/assets/wikimedia/pantheon-paris.jpg";
+import pantheonImg from "@/assets/wikimedia/pantheon-paris.webp";
 import jardinImg from "@/assets/wikimedia/jardin-des-plantes.jpg";
 import galeriesImg from "@/assets/wikimedia/galeries-avenue-italie.jpg";
 import bateauxImg from "@/assets/wikimedia/bateaux-mouches-seine.jpg";
@@ -145,7 +145,6 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.pantheonHours'),
       tip: t('discoverPage.monuments.pantheonTip'),
       image: pantheonImg,
-      credit: { author: "Diego Delso", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Pante%C3%B3n,_Par%C3%ADs,_Francia,_2022-11-01,_DD_84-86_HDR.jpg" },
     },
     {
       icon: TreePine,
