@@ -22,7 +22,7 @@ import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.webp";
 import louvreImg from "@/assets/wikimedia/louvre-pyramide.webp";
 import notreDameImg from "@/assets/wikimedia/notre-dame-paris.webp";
 import pantheonImg from "@/assets/wikimedia/pantheon-paris.webp";
-import jardinImg from "@/assets/wikimedia/jardin-des-plantes.jpg";
+import jardinImg from "@/assets/wikimedia/jardin-des-plantes.webp";
 import galeriesImg from "@/assets/wikimedia/galeries-avenue-italie.jpg";
 import bateauxImg from "@/assets/wikimedia/bateaux-mouches-seine.jpg";
 import museeOrsayImg from "@/assets/wikimedia/musee-orsay.jpg";
@@ -155,7 +155,6 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.jardinHours'),
       tip: t('discoverPage.monuments.jardinTip'),
       image: jardinImg,
-      credit: { author: "Mbzt", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Paris_75005_Grande_Galerie_de_l%27Evolution_20110707.jpg" },
     },
     {
       icon: Baby,
