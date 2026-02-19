@@ -18,7 +18,7 @@ import italianImg from "@/assets/cuisine-italienne-hero.webp";
 import asianImg from "@/assets/cuisine-asiatique-hero.webp";
 import frenchImg from "@/assets/cuisine-francaise-hero.webp";
 import streetfoodImg from "@/assets/streetfood-hero.webp";
-import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.jpg";
+import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.webp";
 import louvreImg from "@/assets/wikimedia/louvre-pyramide.jpg";
 import notreDameImg from "@/assets/wikimedia/notre-dame-paris.jpg";
 import pantheonImg from "@/assets/wikimedia/pantheon-paris.jpg";
