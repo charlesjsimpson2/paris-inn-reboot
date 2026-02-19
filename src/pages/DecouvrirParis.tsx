@@ -258,7 +258,7 @@ const DecouvrirParis = () => {
                       licenseUrl={spot.credit.licenseUrl}
                       sourceUrl={spot.credit.sourceUrl}
                       className="overflow-hidden"
-                      imgClassName="w-full aspect-[2/1] object-cover group-hover:scale-105 transition-transform duration-500"
+                      imgClassName="w-full aspect-[3/2] object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   )}
                   <div className="p-6 flex gap-5">
@@ -316,7 +316,7 @@ const DecouvrirParis = () => {
                 >
                   {resto.image && (
                     <div className="overflow-hidden">
-                      <img src={resto.image} alt={resto.title} className="w-full aspect-[2/1] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                      <img src={resto.image} alt={resto.title} className="w-full aspect-[3/2] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                     </div>
                   )}
                   <div className="p-6">
