@@ -23,7 +23,7 @@ import louvreImg from "@/assets/wikimedia/louvre-pyramide.webp";
 import notreDameImg from "@/assets/wikimedia/notre-dame-paris.webp";
 import pantheonImg from "@/assets/wikimedia/pantheon-paris.webp";
 import jardinImg from "@/assets/wikimedia/jardin-des-plantes.webp";
-import galeriesImg from "@/assets/wikimedia/galeries-avenue-italie.jpg";
+import galeriesImg from "@/assets/wikimedia/galeries-evolution.webp";
 import bateauxImg from "@/assets/wikimedia/bateaux-mouches-seine.jpg";
 import museeOrsayImg from "@/assets/wikimedia/musee-orsay.jpg";
 import arcTriompheImg from "@/assets/wikimedia/arc-de-triomphe.jpg";
@@ -165,7 +165,6 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.galerieHours'),
       tip: t('discoverPage.monuments.galerieTip'),
       image: galeriesImg,
-      credit: { author: "Tangopaso", license: "Public domain", licenseUrl: "https://en.wikipedia.org/wiki/Public_domain", sourceUrl: "https://commons.wikimedia.org/wiki/File:Avenue_d%27Italie,_2-12_(Paris).jpg" },
     },
   ];
 
@@ -360,22 +359,11 @@ const DecouvrirParis = () => {
                 key={index}
                 className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden flex flex-col"
               >
-                {item.image && item.credit ? (
-                  <ImageCredit
-                    src={item.image}
-                    alt={item.name}
-                    author={item.credit.author}
-                    license={item.credit.license}
-                    licenseUrl={item.credit.licenseUrl}
-                    sourceUrl={item.credit.sourceUrl}
-                    className="overflow-hidden"
-                    imgClassName="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : item.image ? (
+                {item.image && (
                   <div className="overflow-hidden">
-                    <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   </div>
-                ) : null}
+                )}
                 <div className="p-4 flex-1 flex flex-col">
                   <div className="flex items-center gap-2.5 mb-3">
                     <div className="w-9 h-9 rounded-lg bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
