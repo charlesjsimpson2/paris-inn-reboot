@@ -359,56 +359,50 @@ const DecouvrirParis = () => {
             </p>
           </div>
 
-          <div className="space-y-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {monuments.map((item, index) => (
               <div
                 key={index}
-                className="group flex flex-col md:flex-row rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden flex flex-col"
               >
                 {item.image && item.credit && (
-                  <div className="md:w-72 lg:w-80 shrink-0">
-                    <ImageCredit
-                      src={item.image}
-                      alt={item.name}
-                      author={item.credit.author}
-                      license={item.credit.license}
-                      licenseUrl={item.credit.licenseUrl}
-                      sourceUrl={item.credit.sourceUrl}
-                      className="overflow-hidden h-full"
-                      imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
+                  <ImageCredit
+                    src={item.image}
+                    alt={item.name}
+                    author={item.credit.author}
+                    license={item.credit.license}
+                    licenseUrl={item.credit.licenseUrl}
+                    sourceUrl={item.credit.sourceUrl}
+                    className="overflow-hidden"
+                    imgClassName="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 )}
-                <div className="p-5 flex-1 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
-                      <item.icon className="w-5 h-5 text-burgundy" />
+                <div className="p-4 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="w-9 h-9 rounded-lg bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
+                      <item.icon className="w-4 h-4 text-burgundy" />
                     </div>
-                    <h3 className="font-display text-lg text-foreground">{item.name}</h3>
+                    <h3 className="font-display text-base text-foreground leading-tight">{item.name}</h3>
                   </div>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Navigation className="w-3.5 h-3.5 text-burgundy shrink-0" />
+                  <div className="space-y-1.5 mb-3 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Navigation className="w-3 h-3 text-burgundy shrink-0" />
                       <span>{item.transport}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Clock className="w-3.5 h-3.5 text-burgundy shrink-0" />
-                      <span>{item.hours}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Ticket className="w-3.5 h-3.5 text-burgundy shrink-0" />
+                    <div className="flex items-center gap-2">
+                      <Ticket className="w-3 h-3 text-burgundy shrink-0" />
                       <span>{item.price}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm bg-burgundy/5 border border-burgundy/10 rounded-lg p-3">
-                    <Star className="w-4 h-4 text-burgundy shrink-0" />
-                    <p className="text-foreground italic text-xs leading-relaxed">{item.tip}</p>
+                  <div className="flex items-start gap-2 text-xs bg-burgundy/5 border border-burgundy/10 rounded-lg p-2.5 mb-3">
+                    <Star className="w-3.5 h-3.5 text-burgundy shrink-0 mt-0.5" />
+                    <p className="text-foreground italic leading-relaxed">{item.tip}</p>
                   </div>
 
-                  <div className="flex items-center gap-2 mt-4 pt-3 border-t border-border/30 text-muted-foreground text-sm">
-                    <Clock className="w-3.5 h-3.5 text-burgundy" />
+                  <div className="flex items-center gap-2 mt-auto pt-2.5 border-t border-border/30 text-muted-foreground text-xs">
+                    <Clock className="w-3 h-3 text-burgundy" />
                     <span className="font-medium">{item.time}</span>
                     <span className="text-border">•</span>
                     <span>{t('discoverPage.monuments.fromHotel')}</span>
