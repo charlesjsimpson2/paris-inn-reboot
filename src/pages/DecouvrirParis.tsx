@@ -20,7 +20,7 @@ import frenchImg from "@/assets/cuisine-francaise-hero.webp";
 import streetfoodImg from "@/assets/streetfood-hero.webp";
 import tourEiffelMonument from "@/assets/wikimedia/tour-eiffel.webp";
 import louvreImg from "@/assets/wikimedia/louvre-pyramide.webp";
-import notreDameImg from "@/assets/wikimedia/notre-dame-paris.jpg";
+import notreDameImg from "@/assets/wikimedia/notre-dame-paris.webp";
 import pantheonImg from "@/assets/wikimedia/pantheon-paris.jpg";
 import jardinImg from "@/assets/wikimedia/jardin-des-plantes.jpg";
 import galeriesImg from "@/assets/wikimedia/galeries-avenue-italie.jpg";
@@ -135,7 +135,6 @@ const DecouvrirParis = () => {
       hours: t('discoverPage.monuments.notredameHours'),
       tip: t('discoverPage.monuments.notredameTip'),
       image: notreDameImg,
-      credit: { author: "Rainer Lück", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.en", sourceUrl: "https://commons.wikimedia.org/wiki/File:Notre_Dame_Paris_04_2024_1985.jpg" },
     },
     {
       icon: Landmark,
