@@ -72,7 +72,8 @@ const DecouvrirParis = () => {
 
   const restaurants = [
     {
-      cuisine: "🇮🇹",
+      flag: "https://flagcdn.com/w40/it.png",
+      flagAlt: "Italie",
       title: t('discoverPage.restaurants.italian'),
       desc: t('discoverPage.restaurants.italianDesc'),
       picks: t('discoverPage.restaurants.italianPicks'),
@@ -80,7 +81,8 @@ const DecouvrirParis = () => {
       image: italianImg,
     },
     {
-      cuisine: "🇯🇵",
+      flag: "https://flagcdn.com/w40/jp.png",
+      flagAlt: "Japon",
       title: t('discoverPage.restaurants.asian'),
       desc: t('discoverPage.restaurants.asianDesc'),
       picks: t('discoverPage.restaurants.asianPicks'),
@@ -88,7 +90,8 @@ const DecouvrirParis = () => {
       image: asianImg,
     },
     {
-      cuisine: "🇫🇷",
+      flag: "https://flagcdn.com/w40/fr.png",
+      flagAlt: "France",
       title: t('discoverPage.restaurants.french'),
       desc: t('discoverPage.restaurants.frenchDesc'),
       picks: t('discoverPage.restaurants.frenchPicks'),
@@ -96,7 +99,9 @@ const DecouvrirParis = () => {
       image: frenchImg,
     },
     {
-      cuisine: "🍕",
+      flag: "https://flagcdn.com/w40/un.png",
+      flagAlt: "Street Food",
+      emoji: "🍕",
       title: t('discoverPage.restaurants.streetfood'),
       desc: t('discoverPage.restaurants.streetfoodDesc'),
       picks: t('discoverPage.restaurants.streetfoodPicks'),
@@ -316,7 +321,11 @@ const DecouvrirParis = () => {
                   )}
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="text-3xl">{resto.cuisine}</span>
+                      {resto.emoji ? (
+                        <span className="text-3xl">{resto.emoji}</span>
+                      ) : (
+                        <img src={resto.flag} alt={resto.flagAlt} className="w-8 h-6 object-cover rounded-sm shadow-sm" />
+                      )}
                       <h3 className="font-display text-xl text-foreground">{resto.title}</h3>
                     </div>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">{resto.desc}</p>
