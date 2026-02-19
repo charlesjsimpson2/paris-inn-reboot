@@ -359,25 +359,27 @@ const DecouvrirParis = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-5">
             {monuments.map((item, index) => (
               <div
                 key={index}
-                className="group rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                className="group flex flex-col md:flex-row rounded-2xl bg-background/50 border border-border/50 hover:border-burgundy/40 transition-all duration-300 hover:shadow-xl overflow-hidden"
               >
                 {item.image && item.credit && (
-                  <ImageCredit
-                    src={item.image}
-                    alt={item.name}
-                    author={item.credit.author}
-                    license={item.credit.license}
-                    licenseUrl={item.credit.licenseUrl}
-                    sourceUrl={item.credit.sourceUrl}
-                    className="overflow-hidden"
-                    imgClassName="w-full aspect-[2/1] object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <div className="md:w-72 lg:w-80 shrink-0">
+                    <ImageCredit
+                      src={item.image}
+                      alt={item.name}
+                      author={item.credit.author}
+                      license={item.credit.license}
+                      licenseUrl={item.credit.licenseUrl}
+                      sourceUrl={item.credit.sourceUrl}
+                      className="overflow-hidden h-full"
+                      imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 )}
-                <div className="p-5">
+                <div className="p-5 flex-1 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-xl bg-burgundy/10 border border-burgundy/20 flex items-center justify-center shrink-0 group-hover:bg-burgundy/20 transition-colors">
                       <item.icon className="w-5 h-5 text-burgundy" />
@@ -405,7 +407,7 @@ const DecouvrirParis = () => {
                     <p className="text-foreground italic text-xs leading-relaxed">{item.tip}</p>
                   </div>
 
-                  <div className="flex items-center justify-center gap-2 mt-4 pt-3 border-t border-border/30 text-muted-foreground text-sm">
+                  <div className="flex items-center gap-2 mt-4 pt-3 border-t border-border/30 text-muted-foreground text-sm">
                     <Clock className="w-3.5 h-3.5 text-burgundy" />
                     <span className="font-medium">{item.time}</span>
                     <span className="text-border">•</span>
