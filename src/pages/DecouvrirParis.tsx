@@ -101,6 +101,7 @@ const DecouvrirParis = () => {
     {
       flag: "https://flagcdn.com/w40/un.png",
       flagAlt: "Street Food",
+      emoji: "🍕",
       title: t('discoverPage.restaurants.streetfood'),
       desc: t('discoverPage.restaurants.streetfoodDesc'),
       picks: t('discoverPage.restaurants.streetfoodPicks'),
@@ -238,7 +239,7 @@ const DecouvrirParis = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {quartierSpots.map((spot, index) => {
               const CardWrapper = spot.link ? Link : 'div';
               const cardProps = spot.link ? { to: spot.link } : {};
@@ -320,7 +321,11 @@ const DecouvrirParis = () => {
                   )}
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <img src={resto.flag} alt={resto.flagAlt} className="w-8 h-6 object-cover rounded-sm shadow-sm" />
+                      {resto.emoji ? (
+                        <span className="text-3xl">{resto.emoji}</span>
+                      ) : (
+                        <img src={resto.flag} alt={resto.flagAlt} className="w-8 h-6 object-cover rounded-sm shadow-sm" />
+                      )}
                       <h3 className="font-display text-xl text-foreground">{resto.title}</h3>
                     </div>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">{resto.desc}</p>
