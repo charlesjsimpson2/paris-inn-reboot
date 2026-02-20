@@ -47,8 +47,8 @@ export const NewsSection = () => {
       subtitle: t('rugby.tournament'),
       subtitleWithFlags: true,
       dateStart: t('actualites.rugby.date'),
-      sortDate: "2026-02-22",
-      endDate: "2026-02-22", // Match France-Irlande
+      sortDate: "2026-02-05",
+      endDate: "2026-02-05", // Match France-Irlande
       category: t('rugby.tournament'),
       link: "/evenements/tournoi-6-nations",
       bgColor: "bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700",
