@@ -13,7 +13,6 @@ import { LocationSection } from "@/components/LocationSection";
 import { NewsSection } from "@/components/NewsSection";
 import { SEO } from "@/components/SEO";
 import { EventBanner } from "@/components/EventBanner";
-import { FloatingNatureElements } from "@/components/FloatingNatureElements";
 import { SalonCountdown } from "@/components/SalonCountdown";
 import { useEventTheme } from "@/hooks/useEventTheme";
 
@@ -27,7 +26,7 @@ const Index = () => {
         description="Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner."
         canonical="/"
       />
-      <FloatingNatureElements />
+      
       <EventBanner />
       <Header />
       <main>
