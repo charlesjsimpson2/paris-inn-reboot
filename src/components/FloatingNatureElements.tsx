@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getActiveEventTheme } from "@/config/eventThemes";
 
 interface FloatingElement {
   id: number;
@@ -11,16 +12,11 @@ interface FloatingElement {
 
 export const FloatingNatureElements = () => {
   const [elements, setElements] = useState<FloatingElement[]>([]);
-
-  // Only show between Feb 21 and Mar 1, 2026
-  const now = new Date();
-  const start = new Date("2026-02-21T00:00:00");
-  const end = new Date("2026-03-01T23:59:59");
-  const isActive = now >= start && now <= end;
+  const theme = getActiveEventTheme();
 
   useEffect(() => {
-    if (!isActive) return;
-    const emojis = ["🐄", "🐔", "🐷", "🐑", "🐴", "🐐", "🐰", "🐣", "🌾", "🍃"];
+    if (!theme?.floatingEmojis) return;
+    const emojis = theme.floatingEmojis;
     const els: FloatingElement[] = Array.from({ length: 12 }, (_, i) => ({
       id: i,
       emoji: emojis[i % emojis.length],
@@ -30,9 +26,9 @@ export const FloatingNatureElements = () => {
       size: 16 + Math.random() * 14,
     }));
     setElements(els);
-  }, [isActive]);
+  }, [theme?.id]);
 
-  if (!isActive || elements.length === 0) return null;
+  if (!theme?.floatingEmojis || elements.length === 0) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[5] overflow-hidden" aria-hidden="true">

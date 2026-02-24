@@ -1,0 +1,106 @@
+// Event Theme Configuration - "Google Doodle" style theming system
+// Each event defines its active dates, color palette (HSL), logo decorations, and optional floating elements.
+
+export interface EventTheme {
+  id: string;
+  name: string;
+  startDate: string; // ISO date
+  endDate: string;   // ISO date
+  colors: {
+    primary: string;        // HSL values e.g. "152 45% 28%"
+    primaryForeground: string;
+    accent: string;
+    gold: string;
+    goldLight: string;
+    goldDark: string;
+    burgundy: string;
+    ring: string;
+  };
+  logoDecorations: {
+    left: string;   // emoji(s) displayed to the left of the logo
+    right: string;  // emoji(s) displayed to the right of the logo
+  };
+  bannerGradient: string; // Tailwind gradient classes for the banner
+  bannerText: string;
+  bannerLink: string;
+  bannerEmoji: string;
+  floatingEmojis?: string[];
+}
+
+export const EVENT_THEMES: EventTheme[] = [
+  {
+    id: "salon-agriculture-2026",
+    name: "Salon de l'Agriculture 2026",
+    startDate: "2026-02-21T00:00:00",
+    endDate: "2026-03-01T23:59:59",
+    colors: {
+      primary: "152 45% 28%",
+      primaryForeground: "0 0% 98%",
+      accent: "152 45% 28%",
+      gold: "152 45% 28%",
+      goldLight: "145 35% 38%",
+      goldDark: "155 50% 18%",
+      burgundy: "152 55% 30%",
+      ring: "152 45% 28%",
+    },
+    logoDecorations: {
+      left: "🐄",
+      right: "🌾",
+    },
+    bannerGradient: "from-green-700 via-emerald-600 to-green-700",
+    bannerText: "Salon de l'Agriculture — Du 21 février au 1er mars 2026 • Réservez votre séjour !",
+    bannerLink: "/evenements/salon-agriculture",
+    bannerEmoji: "🐄",
+    floatingEmojis: ["🐄", "🐔", "🐷", "🐑", "🐴", "🐐", "🐰", "🐣", "🌾", "🍃"],
+  },
+  // Template for future events:
+  // {
+  //   id: "paques-2026",
+  //   name: "Pâques 2026",
+  //   startDate: "2026-03-30T00:00:00",
+  //   endDate: "2026-04-06T23:59:59",
+  //   colors: {
+  //     primary: "280 60% 55%",
+  //     primaryForeground: "0 0% 98%",
+  //     accent: "45 90% 60%",
+  //     gold: "280 60% 55%",
+  //     goldLight: "270 50% 65%",
+  //     goldDark: "285 65% 40%",
+  //     burgundy: "280 65% 50%",
+  //     ring: "280 60% 55%",
+  //   },
+  //   logoDecorations: {
+  //     left: "🥚",
+  //     right: "🐰",
+  //   },
+  //   bannerGradient: "from-purple-600 via-pink-500 to-yellow-400",
+  //   bannerText: "Joyeuses Pâques ! Offre spéciale séjour pascal 🐣",
+  //   bannerLink: "/",
+  //   bannerEmoji: "🐣",
+  //   floatingEmojis: ["🥚", "🐰", "🐣", "🌸", "🌷", "🦋"],
+  // },
+];
+
+// Default (neutral) theme colors - classic hotel elegant style
+export const DEFAULT_COLORS = {
+  primary: "35 55% 52%",
+  primaryForeground: "0 0% 98%",
+  accent: "35 55% 52%",
+  gold: "35 55% 52%",
+  goldLight: "38 50% 62%",
+  goldDark: "32 60% 38%",
+  burgundy: "345 65% 35%",
+  ring: "35 55% 52%",
+};
+
+/**
+ * Returns the currently active event theme, or null if no event is active.
+ */
+export function getActiveEventTheme(): EventTheme | null {
+  const now = new Date();
+  return EVENT_THEMES.find((theme) => {
+    const start = new Date(theme.startDate);
+    const end = new Date(theme.endDate);
+    return now >= start && now <= end;
+  }) || null;
+}

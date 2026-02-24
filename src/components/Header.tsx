@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getActiveEventTheme } from "@/config/eventThemes";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
 const getNavItems = (t: (key: string) => string) => [
@@ -22,6 +23,7 @@ export const Header = memo(() => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { t } = useLanguage();
+  const eventTheme = getActiveEventTheme();
   
   const navItems = useMemo(() => getNavItems(t), [t]);
   
@@ -98,13 +100,18 @@ export const Header = memo(() => {
               <span className="text-xs sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest hidden xs:inline">Menu</span>
             </button>
 
-            {/* Logo - Center */}
+            {/* Logo - Center with event decorations */}
             <div className="flex justify-center min-w-0 z-30">
               <Link
                 to="/"
-                className="flex items-center justify-center w-full max-w-[120px] xs:max-w-[150px] sm:max-w-none"
+                className="flex items-center justify-center gap-1.5 w-full max-w-[160px] xs:max-w-[200px] sm:max-w-none"
                 aria-label="Accueil"
               >
+                {eventTheme && (
+                  <span className="text-base xs:text-lg sm:text-xl md:text-2xl animate-bounce-subtle shrink-0" aria-hidden="true">
+                    {eventTheme.logoDecorations.left}
+                  </span>
+                )}
                 <img
                   src={logoHotel}
                   alt="Hotel Inn Paris"
@@ -112,6 +119,11 @@ export const Header = memo(() => {
                   fetchPriority="high"
                   className="h-9 xs:h-11 sm:h-12 md:h-14 w-auto object-contain drop-shadow-sm"
                 />
+                {eventTheme && (
+                  <span className="text-base xs:text-lg sm:text-xl md:text-2xl animate-bounce-subtle animation-delay-400 shrink-0" aria-hidden="true">
+                    {eventTheme.logoDecorations.right}
+                  </span>
+                )}
               </Link>
             </div>
 

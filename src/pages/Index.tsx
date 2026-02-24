@@ -12,11 +12,14 @@ import { CTASection } from "@/components/CTASection";
 import { LocationSection } from "@/components/LocationSection";
 import { NewsSection } from "@/components/NewsSection";
 import { SEO } from "@/components/SEO";
-import { SalonAgricultureBanner } from "@/components/SalonAgricultureBanner";
+import { EventBanner } from "@/components/EventBanner";
 import { FloatingNatureElements } from "@/components/FloatingNatureElements";
 import { SalonCountdown } from "@/components/SalonCountdown";
+import { useEventTheme } from "@/hooks/useEventTheme";
 
 const Index = () => {
+  useEventTheme();
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -25,7 +28,7 @@ const Index = () => {
         canonical="/"
       />
       <FloatingNatureElements />
-      <SalonAgricultureBanner />
+      <EventBanner />
       <Header />
       <main>
         <HeroSection />
