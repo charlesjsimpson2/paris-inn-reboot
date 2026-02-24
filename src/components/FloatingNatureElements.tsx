@@ -20,7 +20,7 @@ export const FloatingNatureElements = () => {
 
   useEffect(() => {
     if (!isActive) return;
-    const emojis = ["🌾", "🍃", "🌻", "🐄", "🌿", "🍂", "🌱"];
+    const emojis = ["🐄", "🐔", "🐷", "🐑", "🐴", "🐐", "🐰", "🐣", "🌾", "🍃"];
     const els: FloatingElement[] = Array.from({ length: 12 }, (_, i) => ({
       id: i,
       emoji: emojis[i % emojis.length],
