@@ -6,69 +6,69 @@
 
 @layer base {
   :root {
-    /* Salon de l'Agriculture - Green nature theme */
-    --background: 120 15% 96%;
-    --foreground: 150 10% 15%;
+    /* Neutral / Default elegant hotel theme */
+    --background: 40 15% 96%;
+    --foreground: 30 10% 15%;
 
-    --card: 120 10% 100%;
-    --card-foreground: 150 10% 15%;
+    --card: 40 10% 100%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 120 10% 100%;
-    --popover-foreground: 150 10% 15%;
+    --popover: 40 10% 100%;
+    --popover-foreground: 30 10% 15%;
 
-    /* Green accent */
-    --primary: 152 45% 28%;
+    /* Gold accent - default */
+    --primary: 35 55% 52%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 120 12% 92%;
-    --secondary-foreground: 150 10% 15%;
+    --secondary: 40 12% 92%;
+    --secondary-foreground: 30 10% 15%;
 
-    --muted: 120 10% 90%;
-    --muted-foreground: 150 5% 45%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 30 5% 45%;
 
-    --accent: 152 45% 28%;
+    --accent: 35 55% 52%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 120 8% 85%;
-    --input: 120 8% 85%;
-    --ring: 152 45% 28%;
+    --border: 40 8% 85%;
+    --input: 40 8% 85%;
+    --ring: 35 55% 52%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --gold: 152 45% 28%;
-    --gold-light: 145 35% 38%;
-    --gold-dark: 155 50% 18%;
-    --cream: 120 10% 98%;
-    --charcoal: 120 8% 92%;
-    --charcoal-light: 120 10% 96%;
-    --burgundy: 152 55% 30%;
+    --gold: 35 55% 52%;
+    --gold-light: 38 50% 62%;
+    --gold-dark: 32 60% 38%;
+    --cream: 40 10% 98%;
+    --charcoal: 40 8% 92%;
+    --charcoal-light: 40 10% 96%;
+    --burgundy: 345 65% 35%;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(152 45% 28%) 0%, hsl(155 50% 18%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(120 15% 96%) 0%, hsl(120 8% 92%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(120, 15%, 96%, 0.3) 0%, hsla(120, 15%, 96%, 0.8) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(35 55% 52%) 0%, hsl(32 60% 38%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(40 15% 96%) 0%, hsl(40 8% 92%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(40, 15%, 96%, 0.3) 0%, hsla(40, 15%, 96%, 0.8) 100%);
 
     /* Shadows */
-    --shadow-gold: 0 4px 30px hsla(152, 45%, 28%, 0.08);
-    --shadow-elegant: 0 25px 50px -12px hsla(152, 45%, 28%, 0.15);
+    --shadow-gold: 0 4px 30px hsla(35, 55%, 52%, 0.08);
+    --shadow-elegant: 0 25px 50px -12px hsla(35, 55%, 52%, 0.15);
 
     /* Fonts */
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
 
     /* Sidebar */
-    --sidebar-background: 120 10% 100%;
-    --sidebar-foreground: 150 10% 15%;
-    --sidebar-primary: 152 45% 28%;
+    --sidebar-background: 40 10% 100%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 35 55% 52%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 120 12% 92%;
-    --sidebar-accent-foreground: 150 10% 15%;
-    --sidebar-border: 120 8% 85%;
-    --sidebar-ring: 152 45% 28%;
+    --sidebar-accent: 40 12% 92%;
+    --sidebar-accent-foreground: 30 10% 15%;
+    --sidebar-border: 40 8% 85%;
+    --sidebar-ring: 35 55% 52%;
   }
 }
 
