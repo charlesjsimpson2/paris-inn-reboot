@@ -142,19 +142,21 @@ const NosChambres = () => {
       <Header />
       
       {/* Hero Section with Image */}
-      <section className="relative h-[60vh] min-h-[400px]">
+      <section className="relative h-[65vh] min-h-[420px]">
         <img 
           src={heroChambres} 
           alt="Chambre Hôtel Inn Design Paris" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,transparent_40%,rgba(0,0,0,0.3)_100%)]" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
           <div className="container mx-auto">
-            <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2 rounded-full mb-4">
+            <span className="inline-block bg-primary/90 backdrop-blur-sm text-primary-foreground font-body uppercase tracking-[0.2em] text-xs px-5 py-2 rounded-full mb-5 animate-fade-in shadow-lg">
               {t('roomsPage.badge')}
             </span>
-            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white animate-fade-in [animation-delay:200ms] drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
               {t('roomsPage.title')}
             </h1>
           </div>
@@ -162,11 +164,12 @@ const NosChambres = () => {
       </section>
 
       {/* Text + Equipment Section */}
-      <section className="py-16 bg-charcoal">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-charcoal relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.05),transparent_60%)]" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Left: Text */}
-            <div>
+            <div className="animate-fade-up">
               <p className="text-muted-foreground text-lg leading-relaxed">
                 {t('roomsPage.intro')}
               </p>
@@ -177,9 +180,10 @@ const NosChambres = () => {
               {equipments.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 text-foreground"
+                  className="flex items-center gap-3 text-foreground group hover:translate-x-1 transition-transform duration-300"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 shadow-sm">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <span className="text-sm font-medium">{item.label}</span>
@@ -229,8 +233,8 @@ const NosChambres = () => {
             </h2>
           </div>
 
-          {/* Gallery Grid */}
-          <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* Gallery Grid - Masonry style */}
+          <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
             {galleryImages.map((image, index) => (
               <button
                 key={index}
@@ -243,19 +247,24 @@ const NosChambres = () => {
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 translate-y-8 scale-95"
                 }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                style={{ transitionDelay: `${index * 80}ms` }}
               >
-                <div className={`${index === 0 ? "aspect-[4/3]" : "aspect-[4/3]"} h-full`}>
+                <div className="aspect-[4/3] h-full">
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                 </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-lg">
+                {/* Hover overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end justify-center pb-4">
+                  <span className="text-white font-medium text-sm tracking-wide translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
                     {t('roomsPage.view')}
                   </span>
+                </div>
+                {/* Shine effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
                 </div>
               </button>
             ))}
