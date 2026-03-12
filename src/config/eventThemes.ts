@@ -22,6 +22,8 @@ export interface EventTheme {
   };
   bannerGradient: string; // Tailwind gradient classes for the banner
   bannerText: string;
+  bannerTextHoliday?: string;      // Shown during the actual holiday dates
+  bannerHolidayStartDate?: string;  // ISO date when bannerTextHoliday kicks in
   bannerLink: string;
   bannerEmoji: string;
   floatingEmojis?: string[];
