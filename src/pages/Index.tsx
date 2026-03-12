@@ -12,6 +12,7 @@ import { CTASection } from "@/components/CTASection";
 import { LocationSection } from "@/components/LocationSection";
 import { NewsSection } from "@/components/NewsSection";
 import { SEO } from "@/components/SEO";
+import { EasterSectionDivider } from "@/components/EasterSectionDivider";
 import { EventBanner } from "@/components/EventBanner";
 import { SalonCountdown } from "@/components/SalonCountdown";
 import { useEventTheme } from "@/hooks/useEventTheme";
