@@ -136,6 +136,7 @@ const App = () => {
               </Routes>
             </Suspense>
             <ContactBubble />
+            <FloatingNatureElements />
           </BrowserRouter>
         </TooltipProvider>
       </LanguageProvider>
