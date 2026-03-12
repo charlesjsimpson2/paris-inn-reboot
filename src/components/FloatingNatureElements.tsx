@@ -5,9 +5,10 @@ interface FloatingElement {
   id: number;
   emoji: string;
   left: number;
-  delay: number;
-  duration: number;
+  top: number;
   size: number;
+  rotation: number;
+  opacity: number;
 }
 
 export const FloatingNatureElements = () => {
@@ -17,13 +18,14 @@ export const FloatingNatureElements = () => {
   useEffect(() => {
     if (!theme?.floatingEmojis) return;
     const emojis = theme.floatingEmojis;
-    const els: FloatingElement[] = Array.from({ length: 12 }, (_, i) => ({
+    const els: FloatingElement[] = Array.from({ length: 18 }, (_, i) => ({
       id: i,
       emoji: emojis[i % emojis.length],
-      left: Math.random() * 100,
-      delay: Math.random() * 8,
-      duration: 10 + Math.random() * 10,
-      size: 16 + Math.random() * 14,
+      left: 5 + Math.random() * 90,
+      top: 5 + Math.random() * 90,
+      size: 28 + Math.random() * 36,
+      rotation: Math.random() * 360,
+      opacity: 0.06 + Math.random() * 0.08,
     }));
     setElements(els);
   }, [theme?.id]);
@@ -31,16 +33,17 @@ export const FloatingNatureElements = () => {
   if (!theme?.floatingEmojis || elements.length === 0) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-[5] overflow-hidden" aria-hidden="true">
+    <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden" aria-hidden="true">
       {elements.map((el) => (
         <span
           key={el.id}
-          className="absolute animate-nature-fall opacity-60"
+          className="absolute select-none"
           style={{
             left: `${el.left}%`,
-            animationDelay: `${el.delay}s`,
-            animationDuration: `${el.duration}s`,
+            top: `${el.top}%`,
             fontSize: `${el.size}px`,
+            transform: `rotate(${el.rotation}deg)`,
+            opacity: el.opacity,
           }}
         >
           {el.emoji}
