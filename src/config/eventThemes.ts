@@ -56,7 +56,7 @@ export const EVENT_THEMES: EventTheme[] = [
   {
     id: "paques-2026",
     name: "Pâques 2026",
-    startDate: "2026-03-28T00:00:00",
+    startDate: "2026-03-12T00:00:00",
     endDate: "2026-04-07T23:59:59",
     colors: {
       primary: "280 50% 50%",
