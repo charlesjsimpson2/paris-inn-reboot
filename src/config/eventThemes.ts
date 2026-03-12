@@ -22,6 +22,8 @@ export interface EventTheme {
   };
   bannerGradient: string; // Tailwind gradient classes for the banner
   bannerText: string;
+  bannerTextHoliday?: string;      // Shown during the actual holiday dates
+  bannerHolidayStartDate?: string;  // ISO date when bannerTextHoliday kicks in
   bannerLink: string;
   bannerEmoji: string;
   floatingEmojis?: string[];
@@ -73,7 +75,9 @@ export const EVENT_THEMES: EventTheme[] = [
       right: "🐰",
     },
     bannerGradient: "from-emerald-400 via-pink-300 to-yellow-300",
-    bannerText: "Joyeuses Pâques ! Offre spéciale séjour pascal — Du 28 mars au 7 avril 🐣",
+    bannerText: "Passez les fêtes de Pâques chez nous — Du 28 mars au 7 avril • Réservez votre séjour !",
+    bannerTextHoliday: "Joyeuses Pâques ! Profitez de votre séjour pascal 🐣",
+    bannerHolidayStartDate: "2026-04-03T00:00:00",
     bannerLink: "/",
     bannerEmoji: "🐣",
     floatingEmojis: ["🥚", "🐰", "🐣", "🌸", "🌷", "🦋"],

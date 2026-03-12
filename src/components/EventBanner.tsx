@@ -16,12 +16,21 @@ export const EventBanner = () => {
           to={theme.bannerLink} 
           className="flex items-center gap-2 xs:gap-3 flex-1 group"
         >
-          <span className="text-[11px] xs:text-xs sm:text-sm font-bold uppercase tracking-wider">
-            {theme.bannerEmoji} {theme.name}
-          </span>
-          <span className="hidden sm:inline text-xs sm:text-sm text-white/80">
-            {theme.bannerText.includes("—") ? theme.bannerText.split("—")[1]?.trim() : theme.bannerText}
-          </span>
+          {(() => {
+            const now = new Date();
+            const isHoliday = theme.bannerHolidayStartDate && now >= new Date(theme.bannerHolidayStartDate);
+            const text = isHoliday && theme.bannerTextHoliday ? theme.bannerTextHoliday : theme.bannerText;
+            return (
+              <>
+                <span className="text-[11px] xs:text-xs sm:text-sm font-bold uppercase tracking-wider">
+                  {theme.bannerEmoji} {theme.name}
+                </span>
+                <span className="hidden sm:inline text-xs sm:text-sm text-white/80">
+                  {text.includes("—") ? text.split("—")[1]?.trim() : text}
+                </span>
+              </>
+            );
+          })()}
           <ArrowRight className="w-3.5 h-3.5 xs:w-4 xs:h-4 text-white/70 group-hover:translate-x-1 transition-transform shrink-0" />
         </Link>
         <button 
