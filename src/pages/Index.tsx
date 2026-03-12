@@ -34,11 +34,15 @@ const Index = () => {
         <HeroSection />
         <SalonCountdown />
         <NewsSection />
+        <EasterSectionDivider />
         <IntroSection />
+        <EasterSectionDivider />
         <AboutSection />
         <RoomsSection />
+        <EasterSectionDivider />
         <SeminarSection />
         <BreakfastSection />
+        <EasterSectionDivider />
         <ServicesSection />
         <CTASection />
         <LocationSection />
