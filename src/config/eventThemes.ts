@@ -53,32 +53,31 @@ export const EVENT_THEMES: EventTheme[] = [
     bannerEmoji: "🐄",
     floatingEmojis: ["🐄", "🐔", "🐷", "🐑", "🐴", "🐐", "🐰", "🐣", "🌾", "🍃"],
   },
-  // Template for future events:
-  // {
-  //   id: "paques-2026",
-  //   name: "Pâques 2026",
-  //   startDate: "2026-03-30T00:00:00",
-  //   endDate: "2026-04-06T23:59:59",
-  //   colors: {
-  //     primary: "280 60% 55%",
-  //     primaryForeground: "0 0% 98%",
-  //     accent: "45 90% 60%",
-  //     gold: "280 60% 55%",
-  //     goldLight: "270 50% 65%",
-  //     goldDark: "285 65% 40%",
-  //     burgundy: "280 65% 50%",
-  //     ring: "280 60% 55%",
-  //   },
-  //   logoDecorations: {
-  //     left: "🥚",
-  //     right: "🐰",
-  //   },
-  //   bannerGradient: "from-purple-600 via-pink-500 to-yellow-400",
-  //   bannerText: "Joyeuses Pâques ! Offre spéciale séjour pascal 🐣",
-  //   bannerLink: "/",
-  //   bannerEmoji: "🐣",
-  //   floatingEmojis: ["🥚", "🐰", "🐣", "🌸", "🌷", "🦋"],
-  // },
+  {
+    id: "paques-2026",
+    name: "Pâques 2026",
+    startDate: "2026-03-28T00:00:00",
+    endDate: "2026-04-07T23:59:59",
+    colors: {
+      primary: "280 50% 50%",
+      primaryForeground: "0 0% 98%",
+      accent: "45 85% 58%",
+      gold: "280 50% 50%",
+      goldLight: "270 40% 62%",
+      goldDark: "285 55% 38%",
+      burgundy: "330 50% 45%",
+      ring: "280 50% 50%",
+    },
+    logoDecorations: {
+      left: "🥚",
+      right: "🐰",
+    },
+    bannerGradient: "from-purple-600 via-pink-500 to-yellow-400",
+    bannerText: "Joyeuses Pâques ! Offre spéciale séjour pascal — Du 28 mars au 7 avril 🐣",
+    bannerLink: "/",
+    bannerEmoji: "🐣",
+    floatingEmojis: ["🥚", "🐰", "🐣", "🌸", "🌷", "🦋"],
+  },
 ];
 
 // Default (neutral) theme colors - classic hotel elegant style
