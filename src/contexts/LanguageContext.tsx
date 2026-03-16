@@ -2446,6 +2446,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'WiFi that meets your standards',
     'seminarsWifi.desc': 'Your meetings and presentations deserve a reliable connection. Our professional WiFi infrastructure guarantees smooth video conferences and flawless live demos.',
     'seminarsWifi.fullLoad': 'Full load, no slowdown',
+    'wifiSection.title': 'High-speed WiFi — throughout the hotel',
+    'wifiSection.desc': 'We want you to feel at home from the moment you arrive. That includes a connection that just works, in your room and in common areas, without a second thought. Work, streaming, video calls — we\'ve got you covered.',
     'services.tourism.title': 'Tourism',
     'services.tourism.desc': 'During your stay at Hotel Inn Design Place d\'Italie in Paris, you can immerse yourself in the history of the French capital: The Catacombs of Paris, The Eiffel Tower, Montparnasse Tower, Arab World Institute, Louvre Museum, Pantheon...',
     
