@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { SalonSection } from "@/components/SalonSection";
-import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils } from "lucide-react";
+import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils, Zap, Shield, Signal } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
 import heroSeminaire from "@/assets/salon-marshall-1.webp";
