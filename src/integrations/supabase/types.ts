@@ -105,25 +105,81 @@ export type Database = {
           },
         ]
       }
+      site_settings: {
+        Row: {
+          analytics_id: string | null
+          contact_email: string | null
+          contact_phone: string | null
+          hotel_name: string | null
+          id: string
+          og_image_url: string | null
+          robots_txt: string | null
+          site_description: string | null
+          site_title: string | null
+          updated_at: string
+          updated_by: string | null
+        }
+        Insert: {
+          analytics_id?: string | null
+          contact_email?: string | null
+          contact_phone?: string | null
+          hotel_name?: string | null
+          id?: string
+          og_image_url?: string | null
+          robots_txt?: string | null
+          site_description?: string | null
+          site_title?: string | null
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Update: {
+          analytics_id?: string | null
+          contact_email?: string | null
+          contact_phone?: string | null
+          hotel_name?: string | null
+          id?: string
+          og_image_url?: string | null
+          robots_txt?: string | null
+          site_description?: string | null
+          site_title?: string | null
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "site_settings_updated_by_fkey"
+            columns: ["updated_by"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_profiles: {
         Row: {
           created_at: string
+          email: string | null
           full_name: string | null
           id: string
+          is_active: boolean
           role: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Insert: {
           created_at?: string
+          email?: string | null
           full_name?: string | null
           id?: string
+          is_active?: boolean
           role?: Database["public"]["Enums"]["app_role"]
           user_id: string
         }
         Update: {
           created_at?: string
+          email?: string | null
           full_name?: string | null
           id?: string
+          is_active?: boolean
           role?: Database["public"]["Enums"]["app_role"]
           user_id?: string
         }
