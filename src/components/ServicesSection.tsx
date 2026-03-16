@@ -20,6 +20,7 @@ export const ServicesSection = () => {
   ];
 
   const wifiFeatures = [
+    { icon: Shield, text: t('services.wifi.redundancy') },
     { icon: Video, text: t('services.wifi.video') },
     { icon: Laptop, text: t('services.wifi.remote') },
   ];
