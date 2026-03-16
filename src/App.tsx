@@ -147,6 +147,12 @@ const App = () => {
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
                   <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+                  <Route path="/admin/articles" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />
+                  <Route path="/admin/articles/:id" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
+                  <Route path="/admin/media" element={<ProtectedRoute><AdminMedia /></ProtectedRoute>} />
+                  <Route path="/admin/seo" element={<ProtectedRoute><AdminSEO /></ProtectedRoute>} />
+                  <Route path="/admin/users" element={<ProtectedRoute><AdminUsers /></ProtectedRoute>} />
+                  <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
