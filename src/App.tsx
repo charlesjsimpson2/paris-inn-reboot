@@ -8,7 +8,9 @@ import { ContactBubble } from "@/components/ContactBubble";
 import { FloatingNatureElements } from "@/components/FloatingNatureElements";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { logEventI18nAudit } from "@/lib/i18nAudit";
+import ProtectedRoute from "@/components/admin/ProtectedRoute";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
