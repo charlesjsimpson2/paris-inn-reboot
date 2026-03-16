@@ -58,6 +58,7 @@ const CuisineFrancaise = lazy(() => import("./pages/CuisineFrancaise"));
 const StreetFood = lazy(() => import("./pages/StreetFood"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
+const WiFiPage = lazy(() => import("./pages/WiFi"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
