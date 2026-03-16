@@ -8890,6 +8890,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'WLAN auf höchstem Niveau',
     'seminarsWifi.desc': 'Ihre Meetings verdienen eine zuverlässige Verbindung. Unsere professionelle WLAN-Infrastruktur garantiert flüssige Videokonferenzen und makellose Live-Demos.',
     'seminarsWifi.fullLoad': 'Volle Auslastung ohne Verlangsamung',
+    'wifiSection.title': 'Highspeed-WLAN — im gesamten Hotel',
+    'wifiSection.desc': 'Wir möchten, dass Sie sich von Anfang an wie zu Hause fühlen. Dazu gehört eine Verbindung, die einfach funktioniert, im Zimmer und in den Gemeinschaftsbereichen. Arbeit, Streaming, Videoanrufe — wir haben an alles gedacht.',
     'services.tourism.title': 'Tourismus',
     'services.tourism.desc': 'Während Ihres Aufenthalts im Hotel Inn Design Place d\'Italie in Paris können Sie in die Geschichte der französischen Hauptstadt eintauchen: Pariser Katakomben, Eiffelturm, Tour Montparnasse, Institut du Monde Arabe, Louvre-Museum, Panthéon...',
     
