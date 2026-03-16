@@ -5633,6 +5633,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'Un WiFi all\'altezza delle vostre esigenze',
     'seminarsWifi.desc': 'Le vostre riunioni meritano una connessione affidabile. La nostra infrastruttura WiFi professionale garantisce videoconferenze fluide e demo dal vivo impeccabili.',
     'seminarsWifi.fullLoad': 'Pieno carico senza rallentamenti',
+    'wifiSection.title': 'WiFi ad alta velocità — in tutto l\'hotel',
+    'wifiSection.desc': 'Vogliamo che vi sentiate a casa dal momento del vostro arrivo. Questo include una connessione che funziona, in camera e negli spazi comuni. Lavoro, streaming, videochiamate — abbiamo pensato a tutto.',
     'services.tourism.title': 'Turismo',
     'services.tourism.desc': 'Durante il vostro soggiorno all\'Hotel Inn Design Place d\'Italie a Parigi, potrete immergervi nella storia della capitale francese: Le Catacombe di Parigi, La Torre Eiffel, Torre Montparnasse, Istituto del Mondo Arabo, Museo del Louvre, Pantheon...',
     
