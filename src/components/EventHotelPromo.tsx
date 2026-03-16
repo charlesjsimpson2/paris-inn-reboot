@@ -1,4 +1,5 @@
 import { Star, Train, Coffee, Wifi, Tv, Car, Users, Sparkles, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
+import { WiFiBanner } from "@/components/WiFiBanner";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -223,6 +224,11 @@ export const EventHotelPromo = ({
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                         {t("eventHotelPromo.bestPrice")}
                       </div>
+                    </div>
+
+                    {/* WiFi Banner */}
+                    <div className="mt-6">
+                      <WiFiBanner compact />
                     </div>
                   </div>
                 </div>

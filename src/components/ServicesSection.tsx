@@ -1,4 +1,4 @@
-import { Clock, Car, Briefcase, Plane, Utensils, MapPin, Wifi, Video, Laptop } from "lucide-react";
+import { Clock, Car, Briefcase, Plane, Utensils, MapPin, Wifi, Video, Laptop, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import receptionHotel from "@/assets/reception-hotel.jpg";
 import restaurantPlat from "@/assets/restaurant-plat.jpg";
@@ -20,6 +20,7 @@ export const ServicesSection = () => {
   ];
 
   const wifiFeatures = [
+    { icon: Shield, text: t('services.wifi.redundancy') },
     { icon: Video, text: t('services.wifi.video') },
     { icon: Laptop, text: t('services.wifi.remote') },
   ];
@@ -110,23 +111,37 @@ export const ServicesSection = () => {
               className="w-full h-40 sm:h-52 object-cover"
             />
             <div className="p-4 sm:p-6">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="p-2 bg-primary/20">
                   <Wifi className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="font-display text-lg sm:text-xl text-foreground">{t('services.wifi.title')}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-base mb-4">
+              <p className="text-muted-foreground leading-relaxed text-sm mb-3">
                 {t('services.wifi.desc')}
               </p>
-              <div className="space-y-2">
+              {/* Specs highlights */}
+              <div className="grid grid-cols-2 gap-2 mb-3">
+                <div className="bg-primary/15 px-2 py-1.5 text-center">
+                  <span className="font-display text-primary text-lg">3 Gbps</span>
+                  <p className="text-[10px] text-muted-foreground">{t('services.wifi.capacityLabel')}</p>
+                </div>
+                <div className="bg-primary/15 px-2 py-1.5 text-center">
+                  <span className="font-display text-primary text-lg">25</span>
+                  <p className="text-[10px] text-muted-foreground">{t('services.wifi.apLabel')}</p>
+                </div>
+              </div>
+              <div className="space-y-1.5">
                 {wifiFeatures.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2">
-                    <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="text-muted-foreground text-sm">{item.text}</span>
+                    <item.icon className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground text-xs">{item.text}</span>
                   </div>
                 ))}
               </div>
+              <a href="/wifi" className="text-primary text-xs font-medium hover:underline mt-3 inline-block">
+                {t('services.wifi.learnMore')} →
+              </a>
             </div>
           </div>
 
