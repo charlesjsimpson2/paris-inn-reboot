@@ -45,6 +45,7 @@ const Index = () => {
         <BreakfastSection />
         <EasterSectionDivider />
         <ServicesSection />
+        <WiFiSection />
         <CTASection />
         <LocationSection />
       </main>
