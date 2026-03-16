@@ -225,6 +225,11 @@ export const EventHotelPromo = ({
                         {t("eventHotelPromo.bestPrice")}
                       </div>
                     </div>
+
+                    {/* WiFi Banner */}
+                    <div className="mt-6">
+                      <WiFiBanner compact />
+                    </div>
                   </div>
                 </div>
               </div>
