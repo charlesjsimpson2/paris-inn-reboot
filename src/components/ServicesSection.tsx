@@ -1,4 +1,4 @@
-import { Clock, Car, Briefcase, Plane, Utensils, MapPin, Wifi, Video, Laptop } from "lucide-react";
+import { Clock, Car, Briefcase, Plane, Utensils, MapPin, Wifi, Video, Laptop, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import receptionHotel from "@/assets/reception-hotel.jpg";
 import restaurantPlat from "@/assets/restaurant-plat.jpg";
