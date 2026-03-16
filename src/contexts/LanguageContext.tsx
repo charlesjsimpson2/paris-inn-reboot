@@ -1135,6 +1135,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'Un WiFi à la hauteur de vos exigences',
     'seminarsWifi.desc': 'Vos réunions et présentations méritent une connexion fiable. Notre infrastructure WiFi professionnelle garantit des visioconférences fluides et des démos en direct sans accroc.',
     'seminarsWifi.fullLoad': 'Pleine charge sans ralentissement',
+    'wifiSection.title': 'WiFi haut débit — partout dans l\'hôtel',
+    'wifiSection.desc': 'Nous voulons que vous vous sentiez chez vous dès votre arrivée. Ça passe aussi par une connexion qui fonctionne, en chambre comme dans les espaces communs, sans y penser. Travail, streaming, appel vidéo — on a pensé à tout.',
     'services.tourism.title': 'Tourisme',
     'services.tourism.desc': 'Lors de votre séjour à l\'hôtel Inn Design Place d\'Italie à Paris, vous pourrez vous plonger dans l\'histoire de la capitale française : Les Catacombes de Paris, La Tour Eiffel, Tour Montparnasse, Institut du monde arabe, Musée du Louvres, Panthéon...',
     
@@ -2444,6 +2446,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'WiFi that meets your standards',
     'seminarsWifi.desc': 'Your meetings and presentations deserve a reliable connection. Our professional WiFi infrastructure guarantees smooth video conferences and flawless live demos.',
     'seminarsWifi.fullLoad': 'Full load, no slowdown',
+    'wifiSection.title': 'High-speed WiFi — throughout the hotel',
+    'wifiSection.desc': 'We want you to feel at home from the moment you arrive. That includes a connection that just works, in your room and in common areas, without a second thought. Work, streaming, video calls — we\'ve got you covered.',
     'services.tourism.title': 'Tourism',
     'services.tourism.desc': 'During your stay at Hotel Inn Design Place d\'Italie in Paris, you can immerse yourself in the history of the French capital: The Catacombs of Paris, The Eiffel Tower, Montparnasse Tower, Arab World Institute, Louvre Museum, Pantheon...',
     
@@ -4035,6 +4039,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'Un WiFi a la altura de sus exigencias',
     'seminarsWifi.desc': 'Sus reuniones merecen una conexión fiable. Nuestra infraestructura WiFi profesional garantiza videoconferencias fluidas y demos sin fallos.',
     'seminarsWifi.fullLoad': 'Plena carga sin ralentización',
+    'wifiSection.title': 'WiFi de alta velocidad — en todo el hotel',
+    'wifiSection.desc': 'Queremos que se sienta como en casa desde su llegada. Eso incluye una conexión que funcione, en la habitación y en los espacios comunes. Trabajo, streaming, videollamadas — hemos pensado en todo.',
     'services.tourism.title': 'Turismo',
     'services.tourism.desc': 'Durante su estancia en el Hotel Inn Design Place d\'Italie en París, podrá sumergirse en la historia de la capital francesa: Las Catacumbas de París, La Torre Eiffel, Torre Montparnasse, Instituto del Mundo Árabe, Museo del Louvre, Panteón...',
     
@@ -5627,6 +5633,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'Un WiFi all\'altezza delle vostre esigenze',
     'seminarsWifi.desc': 'Le vostre riunioni meritano una connessione affidabile. La nostra infrastruttura WiFi professionale garantisce videoconferenze fluide e demo dal vivo impeccabili.',
     'seminarsWifi.fullLoad': 'Pieno carico senza rallentamenti',
+    'wifiSection.title': 'WiFi ad alta velocità — in tutto l\'hotel',
+    'wifiSection.desc': 'Vogliamo che vi sentiate a casa dal momento del vostro arrivo. Questo include una connessione che funziona, in camera e negli spazi comuni. Lavoro, streaming, videochiamate — abbiamo pensato a tutto.',
     'services.tourism.title': 'Turismo',
     'services.tourism.desc': 'Durante il vostro soggiorno all\'Hotel Inn Design Place d\'Italie a Parigi, potrete immergervi nella storia della capitale francese: Le Catacombe di Parigi, La Torre Eiffel, Torre Montparnasse, Istituto del Mondo Arabo, Museo del Louvre, Pantheon...',
     
@@ -7219,6 +7227,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'Um WiFi à altura das suas exigências',
     'seminarsWifi.desc': 'Suas reuniões merecem uma conexão confiável. Nossa infraestrutura WiFi profissional garante videoconferências fluidas e demos ao vivo impecáveis.',
     'seminarsWifi.fullLoad': 'Carga total sem lentidão',
+    'wifiSection.title': 'WiFi de alta velocidade — em todo o hotel',
+    'wifiSection.desc': 'Queremos que se sinta em casa desde a sua chegada. Isso inclui uma conexão que funciona, no quarto e nos espaços comuns. Trabalho, streaming, videochamadas — pensámos em tudo.',
     'services.tourism.title': 'Turismo',
     'services.tourism.desc': 'Durante sua estadia no Hotel Inn Design Place d\'Italie em Paris, você poderá mergulhar na história da capital francesa: As Catacumbas de Paris, A Torre Eiffel, Torre Montparnasse, Instituto do Mundo Árabe, Museu do Louvre, Panteão...',
     
@@ -8880,6 +8890,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'seminarsWifi.title': 'WLAN auf höchstem Niveau',
     'seminarsWifi.desc': 'Ihre Meetings verdienen eine zuverlässige Verbindung. Unsere professionelle WLAN-Infrastruktur garantiert flüssige Videokonferenzen und makellose Live-Demos.',
     'seminarsWifi.fullLoad': 'Volle Auslastung ohne Verlangsamung',
+    'wifiSection.title': 'Highspeed-WLAN — im gesamten Hotel',
+    'wifiSection.desc': 'Wir möchten, dass Sie sich von Anfang an wie zu Hause fühlen. Dazu gehört eine Verbindung, die einfach funktioniert, im Zimmer und in den Gemeinschaftsbereichen. Arbeit, Streaming, Videoanrufe — wir haben an alles gedacht.',
     'services.tourism.title': 'Tourismus',
     'services.tourism.desc': 'Während Ihres Aufenthalts im Hotel Inn Design Place d\'Italie in Paris können Sie in die Geschichte der französischen Hauptstadt eintauchen: Pariser Katakomben, Eiffelturm, Tour Montparnasse, Institut du Monde Arabe, Louvre-Museum, Panthéon...',
     
