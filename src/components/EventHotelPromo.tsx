@@ -1,4 +1,5 @@
 import { Star, Train, Coffee, Wifi, Tv, Car, Users, Sparkles, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
+import { WiFiBanner } from "@/components/WiFiBanner";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
