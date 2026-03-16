@@ -61,6 +61,8 @@ const StreetFood = lazy(() => import("./pages/StreetFood"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const WiFiPage = lazy(() => import("./pages/WiFi"));
+const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
