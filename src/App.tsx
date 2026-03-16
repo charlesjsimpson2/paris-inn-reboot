@@ -132,6 +132,7 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/localisation" element={<Localisation />} />
                 <Route path="/mentions-legales" element={<MentionsLegales />} />
+                <Route path="/wifi" element={<WiFiPage />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

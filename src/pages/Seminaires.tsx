@@ -215,6 +215,47 @@ const Seminaires = () => {
             );
           })}
         </div>
+
+        {/* WiFi Section for Seminars */}
+        <div className="py-16 bg-primary/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 bg-primary/15 px-4 py-2 mb-4">
+                  <Wifi className="w-5 h-5 text-primary" />
+                  <span className="text-primary font-medium text-sm uppercase tracking-[0.15em]">{t('wifiPage.badge')}</span>
+                </div>
+                <h2 className="font-display text-2xl md:text-3xl text-foreground">
+                  {t('seminarsWifi.title')}
+                </h2>
+                <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+                  {t('seminarsWifi.desc')}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                {[
+                  { icon: Zap, value: "3 Gbps", label: t('wifi.spec.capacity') },
+                  { icon: Shield, value: "3×", label: t('wifi.spec.redundancy') },
+                  { icon: Signal, value: "25", label: t('wifi.spec.accessPoints') },
+                  { icon: Users, value: "100%", label: t('seminarsWifi.fullLoad') },
+                ].map((item, idx) => (
+                  <div key={idx} className="bg-background border border-primary/20 p-4 text-center">
+                    <item.icon className="w-5 h-5 text-primary mx-auto mb-2" />
+                    <div className="font-display text-xl text-primary">{item.value}</div>
+                    <p className="text-muted-foreground text-xs mt-1">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <a href="/wifi" className="text-primary text-sm font-medium hover:underline">
+                  {t('services.wifi.learnMore')} →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
 
