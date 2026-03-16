@@ -8,6 +8,7 @@ import { RoomsSection } from "@/components/RoomsSection";
 import { SeminarSection } from "@/components/SeminarSection";
 import { BreakfastSection } from "@/components/BreakfastSection";
 import { ServicesSection } from "@/components/ServicesSection";
+import { WiFiSection } from "@/components/WiFiSection";
 import { CTASection } from "@/components/CTASection";
 import { LocationSection } from "@/components/LocationSection";
 import { NewsSection } from "@/components/NewsSection";
