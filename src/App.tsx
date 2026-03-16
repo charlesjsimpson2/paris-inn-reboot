@@ -8,7 +8,9 @@ import { ContactBubble } from "@/components/ContactBubble";
 import { FloatingNatureElements } from "@/components/FloatingNatureElements";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { logEventI18nAudit } from "@/lib/i18nAudit";
+import ProtectedRoute from "@/components/admin/ProtectedRoute";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -59,6 +61,8 @@ const StreetFood = lazy(() => import("./pages/StreetFood"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const WiFiPage = lazy(() => import("./pages/WiFi"));
+const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -83,60 +87,65 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/nos-chambres" element={<NosChambres />} />
-                <Route path="/seminaires" element={<Seminaires />} />
-                <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
-                <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
-                <Route path="/validation-reservation-seminaire" element={<ValidationReservationSeminaire />} />
-                <Route path="/evenements" element={<Actualites />} />
-                <Route path="/evenements/enfoires-2026" element={<Enfoires2026 />} />
-                <Route path="/evenements/tournoi-6-nations" element={<Tournoi6Nations />} />
-                <Route path="/evenements/salon-agriculture" element={<SalonAgriculture />} />
-                <Route path="/evenements/mika-concert" element={<MikaConcert />} />
-                <Route path="/evenements/clara-luciani-concert" element={<ClaraLucianiConcert />} />
-                <Route path="/evenements/semi-marathon-paris" element={<SemiMarathonParis />} />
-                <Route path="/evenements/wu-tang-concert" element={<WuTangConcert />} />
-                <Route path="/evenements/france-angleterre" element={<FranceAngleterre />} />
-                <Route path="/evenements/guns-n-roses-concert" element={<GunsNRosesConcert />} />
-                <Route path="/evenements/scorpions-concert" element={<ScorpionsConcert />} />
-                <Route path="/evenements/meryl-concert" element={<MerylConcert />} />
-                <Route path="/evenements/kery-james-concert" element={<KeryJamesConcert />} />
-                <Route path="/evenements/orelsan-concert" element={<OrelsanConcert />} />
-                <Route path="/evenements/indochine-concert" element={<IndochineConcert />} />
-                <Route path="/evenements/salon-cse-mars" element={<SalonCSEMars />} />
-                <Route path="/evenements/salon-cse-septembre" element={<SalonCSESeptembre />} />
-                <Route path="/evenements/foire-de-paris" element={<FoireDeParis />} />
-                <Route path="/evenements/sante-expo" element={<SanteExpo />} />
-                <Route path="/evenements/euro-pcr" element={<EuroPCR />} />
-                <Route path="/evenements/eurosatory" element={<Eurosatory />} />
-                <Route path="/evenements/japan-expo" element={<JapanExpo />} />
-                <Route path="/evenements/tex-world" element={<TexWorld />} />
-                <Route path="/evenements/sial" element={<SIAL />} />
-                <Route path="/evenements/20-km-paris" element={<VingtKmParis />} />
-                <Route path="/evenements/marathon-paris" element={<MarathonParis />} />
-                <Route path="/evenements/equiphotel" element={<Equiphotel />} />
-                <Route path="/evenements/congres-accdom" element={<CongresACCDOM />} />
-                <Route path="/evenements/congres-maires" element={<CongresMaires />} />
-                <Route path="/decouvrir-paris" element={<DecouvrirParis />} />
-                <Route path="/decouvrir-paris/quartier-chinois" element={<QuartierChinois />} />
-                <Route path="/decouvrir-paris/butte-aux-cailles" element={<ButteAuxCailles />} />
-                <Route path="/decouvrir-paris/bnf-francois-mitterrand" element={<BnfFrancoisMitterrand />} />
-                <Route path="/decouvrir-paris/centre-italie-2" element={<CentreItalie2 />} />
-                <Route path="/decouvrir-paris/cuisine-italienne" element={<CuisineItalienne />} />
-                <Route path="/decouvrir-paris/cuisine-asiatique" element={<CuisineAsiatique />} />
-                <Route path="/decouvrir-paris/cuisine-francaise" element={<CuisineFrancaise />} />
-                <Route path="/decouvrir-paris/street-food" element={<StreetFood />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/localisation" element={<Localisation />} />
-                <Route path="/mentions-legales" element={<MentionsLegales />} />
-                <Route path="/wifi" element={<WiFiPage />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
+            <AuthProvider>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/nos-chambres" element={<NosChambres />} />
+                  <Route path="/seminaires" element={<Seminaires />} />
+                  <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
+                  <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
+                  <Route path="/validation-reservation-seminaire" element={<ValidationReservationSeminaire />} />
+                  <Route path="/evenements" element={<Actualites />} />
+                  <Route path="/evenements/enfoires-2026" element={<Enfoires2026 />} />
+                  <Route path="/evenements/tournoi-6-nations" element={<Tournoi6Nations />} />
+                  <Route path="/evenements/salon-agriculture" element={<SalonAgriculture />} />
+                  <Route path="/evenements/mika-concert" element={<MikaConcert />} />
+                  <Route path="/evenements/clara-luciani-concert" element={<ClaraLucianiConcert />} />
+                  <Route path="/evenements/semi-marathon-paris" element={<SemiMarathonParis />} />
+                  <Route path="/evenements/wu-tang-concert" element={<WuTangConcert />} />
+                  <Route path="/evenements/france-angleterre" element={<FranceAngleterre />} />
+                  <Route path="/evenements/guns-n-roses-concert" element={<GunsNRosesConcert />} />
+                  <Route path="/evenements/scorpions-concert" element={<ScorpionsConcert />} />
+                  <Route path="/evenements/meryl-concert" element={<MerylConcert />} />
+                  <Route path="/evenements/kery-james-concert" element={<KeryJamesConcert />} />
+                  <Route path="/evenements/orelsan-concert" element={<OrelsanConcert />} />
+                  <Route path="/evenements/indochine-concert" element={<IndochineConcert />} />
+                  <Route path="/evenements/salon-cse-mars" element={<SalonCSEMars />} />
+                  <Route path="/evenements/salon-cse-septembre" element={<SalonCSESeptembre />} />
+                  <Route path="/evenements/foire-de-paris" element={<FoireDeParis />} />
+                  <Route path="/evenements/sante-expo" element={<SanteExpo />} />
+                  <Route path="/evenements/euro-pcr" element={<EuroPCR />} />
+                  <Route path="/evenements/eurosatory" element={<Eurosatory />} />
+                  <Route path="/evenements/japan-expo" element={<JapanExpo />} />
+                  <Route path="/evenements/tex-world" element={<TexWorld />} />
+                  <Route path="/evenements/sial" element={<SIAL />} />
+                  <Route path="/evenements/20-km-paris" element={<VingtKmParis />} />
+                  <Route path="/evenements/marathon-paris" element={<MarathonParis />} />
+                  <Route path="/evenements/equiphotel" element={<Equiphotel />} />
+                  <Route path="/evenements/congres-accdom" element={<CongresACCDOM />} />
+                  <Route path="/evenements/congres-maires" element={<CongresMaires />} />
+                  <Route path="/decouvrir-paris" element={<DecouvrirParis />} />
+                  <Route path="/decouvrir-paris/quartier-chinois" element={<QuartierChinois />} />
+                  <Route path="/decouvrir-paris/butte-aux-cailles" element={<ButteAuxCailles />} />
+                  <Route path="/decouvrir-paris/bnf-francois-mitterrand" element={<BnfFrancoisMitterrand />} />
+                  <Route path="/decouvrir-paris/centre-italie-2" element={<CentreItalie2 />} />
+                  <Route path="/decouvrir-paris/cuisine-italienne" element={<CuisineItalienne />} />
+                  <Route path="/decouvrir-paris/cuisine-asiatique" element={<CuisineAsiatique />} />
+                  <Route path="/decouvrir-paris/cuisine-francaise" element={<CuisineFrancaise />} />
+                  <Route path="/decouvrir-paris/street-food" element={<StreetFood />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/localisation" element={<Localisation />} />
+                  <Route path="/mentions-legales" element={<MentionsLegales />} />
+                  <Route path="/wifi" element={<WiFiPage />} />
+                  {/* Admin routes */}
+                  <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </AuthProvider>
             <ContactBubble />
             <FloatingNatureElements />
           </BrowserRouter>
