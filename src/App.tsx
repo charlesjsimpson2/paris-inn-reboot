@@ -63,6 +63,12 @@ const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const WiFiPage = lazy(() => import("./pages/WiFi"));
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
+const AdminArticles = lazy(() => import("./pages/admin/Articles"));
+const AdminArticleEditor = lazy(() => import("./pages/admin/ArticleEditor"));
+const AdminMedia = lazy(() => import("./pages/admin/Media"));
+const AdminSEO = lazy(() => import("./pages/admin/SEO"));
+const AdminUsers = lazy(() => import("./pages/admin/Users"));
+const AdminSettings = lazy(() => import("./pages/admin/Settings"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
