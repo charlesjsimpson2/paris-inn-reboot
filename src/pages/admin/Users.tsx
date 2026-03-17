@@ -83,6 +83,25 @@ const UsersPage = () => {
     }
   };
 
+  const handleInvite = async () => {
+    if (!inviteEmail.trim()) {
+      toast({ title: 'Email requis', variant: 'destructive' });
+      return;
+    }
+    setInviting(true);
+    const { data, error } = await supabase.functions.invoke('invite-user', {
+      body: { email: inviteEmail.trim(), role: inviteRole },
+    });
+    setInviting(false);
+    if (error || data?.error) {
+      toast({ title: 'Erreur', description: error?.message || data?.error, variant: 'destructive' });
+    } else {
+      toast({ title: 'Invitation envoyée', description: `Un magic link a été envoyé à ${inviteEmail}` });
+      setInviteEmail('');
+      fetchUsers();
+    }
+  };
+
   const handleResetPassword = async () => {
     if (!newPassword || newPassword.length < 6) {
       toast({ title: 'Le mot de passe doit faire au moins 6 caractères', variant: 'destructive' });
