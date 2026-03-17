@@ -16,46 +16,85 @@ export type Database = {
     Tables: {
       articles: {
         Row: {
+          category: Database["public"]["Enums"]["article_category"] | null
           content: string | null
           cover_image_url: string | null
           created_at: string
           created_by: string
+          easy_access: Json | null
+          event_date: string | null
+          event_end_date: string | null
+          event_stats: Json | null
+          event_venue: string | null
+          event_venue_address: string | null
           excerpt: string | null
+          hero_image_url: string | null
           id: string
+          images: Json | null
+          is_featured: boolean | null
+          offers: Json | null
+          related_event_slugs: string[] | null
           seo_description: string | null
           seo_keywords: string | null
           seo_title: string | null
           slug: string
+          sort_order: number | null
           status: Database["public"]["Enums"]["article_status"]
           title: string
           updated_at: string
         }
         Insert: {
+          category?: Database["public"]["Enums"]["article_category"] | null
           content?: string | null
           cover_image_url?: string | null
           created_at?: string
           created_by: string
+          easy_access?: Json | null
+          event_date?: string | null
+          event_end_date?: string | null
+          event_stats?: Json | null
+          event_venue?: string | null
+          event_venue_address?: string | null
           excerpt?: string | null
+          hero_image_url?: string | null
           id?: string
+          images?: Json | null
+          is_featured?: boolean | null
+          offers?: Json | null
+          related_event_slugs?: string[] | null
           seo_description?: string | null
           seo_keywords?: string | null
           seo_title?: string | null
           slug: string
+          sort_order?: number | null
           status?: Database["public"]["Enums"]["article_status"]
           title: string
           updated_at?: string
         }
         Update: {
+          category?: Database["public"]["Enums"]["article_category"] | null
           content?: string | null
           cover_image_url?: string | null
           created_at?: string
           created_by?: string
+          easy_access?: Json | null
+          event_date?: string | null
+          event_end_date?: string | null
+          event_stats?: Json | null
+          event_venue?: string | null
+          event_venue_address?: string | null
           excerpt?: string | null
+          hero_image_url?: string | null
           id?: string
+          images?: Json | null
+          is_featured?: boolean | null
+          offers?: Json | null
+          related_event_slugs?: string[] | null
           seo_description?: string | null
           seo_keywords?: string | null
           seo_title?: string | null
           slug?: string
+          sort_order?: number | null
           status?: Database["public"]["Enums"]["article_status"]
           title?: string
           updated_at?: string
@@ -203,6 +242,13 @@ export type Database = {
     }
     Enums: {
       app_role: "super_admin" | "editor" | "viewer"
+      article_category:
+        | "concert"
+        | "salon"
+        | "sport"
+        | "congres"
+        | "guide"
+        | "actualite"
       article_status: "draft" | "published"
     }
     CompositeTypes: {
@@ -332,6 +378,14 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["super_admin", "editor", "viewer"],
+      article_category: [
+        "concert",
+        "salon",
+        "sport",
+        "congres",
+        "guide",
+        "actualite",
+      ],
       article_status: ["draft", "published"],
     },
   },
