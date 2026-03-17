@@ -228,7 +228,10 @@ const UsersPage = () => {
                         </SelectContent>
                       </Select>
                     </TableCell>
-                    <TableCell className="text-right">
+                    <TableCell className="text-right flex gap-1 justify-end">
+                      <Button variant="ghost" size="icon" title="Changer le mot de passe" onClick={() => openResetDialog(user.user_id, user.email || '')}>
+                        <KeyRound className="h-4 w-4" />
+                      </Button>
                       <AlertDialog>
                         <AlertDialogTrigger asChild>
                           <Button variant="ghost" size="icon" title={user.is_active ? 'Désactiver' : 'Réactiver'}>
