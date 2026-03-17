@@ -83,23 +83,37 @@ const UsersPage = () => {
     }
   };
 
-  const handleInvite = async () => {
-    if (!inviteEmail.trim()) {
-      toast({ title: 'Email requis', variant: 'destructive' });
+  const handleResetPassword = async () => {
+    if (!newPassword || newPassword.length < 6) {
+      toast({ title: 'Le mot de passe doit faire au moins 6 caractères', variant: 'destructive' });
       return;
     }
-    setInviting(true);
-    const { data, error } = await supabase.functions.invoke('invite-user', {
-      body: { email: inviteEmail.trim(), role: inviteRole },
+    if (newPassword !== confirmPassword) {
+      toast({ title: 'Les mots de passe ne correspondent pas', variant: 'destructive' });
+      return;
+    }
+    setResetting(true);
+    const { data, error } = await supabase.functions.invoke('reset-password', {
+      body: { user_id: resetUserId, new_password: newPassword },
     });
-    setInviting(false);
+    setResetting(false);
     if (error || data?.error) {
       toast({ title: 'Erreur', description: error?.message || data?.error, variant: 'destructive' });
     } else {
-      toast({ title: 'Invitation envoyée', description: `Un magic link a été envoyé à ${inviteEmail}` });
-      setInviteEmail('');
-      fetchUsers();
+      toast({ title: 'Mot de passe mis à jour', description: `Le mot de passe de ${resetUserEmail} a été changé.` });
+      setResetDialogOpen(false);
+      setNewPassword('');
+      setConfirmPassword('');
+      setResetUserId(null);
     }
+  };
+
+  const openResetDialog = (userId: string, email: string) => {
+    setResetUserId(userId);
+    setResetUserEmail(email);
+    setNewPassword('');
+    setConfirmPassword('');
+    setResetDialogOpen(true);
   };
 
   return (
