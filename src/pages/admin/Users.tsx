@@ -262,6 +262,32 @@ const UsersPage = () => {
             </Table>
           </div>
         )}
+
+        {/* Reset password dialog */}
+        <Dialog open={resetDialogOpen} onOpenChange={setResetDialogOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Changer le mot de passe</DialogTitle>
+              <DialogDescription>Définir un nouveau mot de passe pour {resetUserEmail}</DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <div>
+                <Label>Nouveau mot de passe</Label>
+                <Input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)} placeholder="••••••••" />
+              </div>
+              <div>
+                <Label>Confirmer le mot de passe</Label>
+                <Input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} placeholder="••••••••" />
+              </div>
+            </div>
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setResetDialogOpen(false)}>Annuler</Button>
+              <Button onClick={handleResetPassword} disabled={resetting}>
+                <KeyRound className="h-4 w-4 mr-2" /> {resetting ? 'Mise à jour...' : 'Mettre à jour'}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </AdminLayout>
   );
