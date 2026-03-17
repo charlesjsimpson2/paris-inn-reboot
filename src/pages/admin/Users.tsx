@@ -10,7 +10,8 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
-import { UserPlus, Shield, ShieldOff } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { UserPlus, Shield, ShieldOff, KeyRound } from 'lucide-react';
 import type { Database } from '@/integrations/supabase/types';
 
 type AppRole = Database['public']['Enums']['app_role'];
@@ -43,6 +44,12 @@ const UsersPage = () => {
   const [inviteEmail, setInviteEmail] = useState('');
   const [inviteRole, setInviteRole] = useState<AppRole>('viewer');
   const [inviting, setInviting] = useState(false);
+  const [resetUserId, setResetUserId] = useState<string | null>(null);
+  const [resetUserEmail, setResetUserEmail] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [resetting, setResetting] = useState(false);
+  const [resetDialogOpen, setResetDialogOpen] = useState(false);
   const { toast } = useToast();
 
   const fetchUsers = async () => {
@@ -93,6 +100,39 @@ const UsersPage = () => {
       setInviteEmail('');
       fetchUsers();
     }
+  };
+
+  const handleResetPassword = async () => {
+    if (!newPassword || newPassword.length < 6) {
+      toast({ title: 'Le mot de passe doit faire au moins 6 caractères', variant: 'destructive' });
+      return;
+    }
+    if (newPassword !== confirmPassword) {
+      toast({ title: 'Les mots de passe ne correspondent pas', variant: 'destructive' });
+      return;
+    }
+    setResetting(true);
+    const { data, error } = await supabase.functions.invoke('reset-password', {
+      body: { user_id: resetUserId, new_password: newPassword },
+    });
+    setResetting(false);
+    if (error || data?.error) {
+      toast({ title: 'Erreur', description: error?.message || data?.error, variant: 'destructive' });
+    } else {
+      toast({ title: 'Mot de passe mis à jour', description: `Le mot de passe de ${resetUserEmail} a été changé.` });
+      setResetDialogOpen(false);
+      setNewPassword('');
+      setConfirmPassword('');
+      setResetUserId(null);
+    }
+  };
+
+  const openResetDialog = (userId: string, email: string) => {
+    setResetUserId(userId);
+    setResetUserEmail(email);
+    setNewPassword('');
+    setConfirmPassword('');
+    setResetDialogOpen(true);
   };
 
   return (
@@ -188,7 +228,10 @@ const UsersPage = () => {
                         </SelectContent>
                       </Select>
                     </TableCell>
-                    <TableCell className="text-right">
+                    <TableCell className="text-right flex gap-1 justify-end">
+                      <Button variant="ghost" size="icon" title="Changer le mot de passe" onClick={() => openResetDialog(user.user_id, user.email || '')}>
+                        <KeyRound className="h-4 w-4" />
+                      </Button>
                       <AlertDialog>
                         <AlertDialogTrigger asChild>
                           <Button variant="ghost" size="icon" title={user.is_active ? 'Désactiver' : 'Réactiver'}>
@@ -219,6 +262,32 @@ const UsersPage = () => {
             </Table>
           </div>
         )}
+
+        {/* Reset password dialog */}
+        <Dialog open={resetDialogOpen} onOpenChange={setResetDialogOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Changer le mot de passe</DialogTitle>
+              <DialogDescription>Définir un nouveau mot de passe pour {resetUserEmail}</DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <div>
+                <Label>Nouveau mot de passe</Label>
+                <Input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)} placeholder="••••••••" />
+              </div>
+              <div>
+                <Label>Confirmer le mot de passe</Label>
+                <Input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} placeholder="••••••••" />
+              </div>
+            </div>
+            <DialogFooter>
+              <Button variant="outline" onClick={() => setResetDialogOpen(false)}>Annuler</Button>
+              <Button onClick={handleResetPassword} disabled={resetting}>
+                <KeyRound className="h-4 w-4 mr-2" /> {resetting ? 'Mise à jour...' : 'Mettre à jour'}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </AdminLayout>
   );
