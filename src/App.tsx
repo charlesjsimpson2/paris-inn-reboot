@@ -145,6 +145,7 @@ const App = () => {
                   <Route path="/localisation" element={<Localisation />} />
                   <Route path="/mentions-legales" element={<MentionsLegales />} />
                   <Route path="/wifi" element={<WiFiPage />} />
+                  <Route path="/blog/:slug" element={<BlogArticle />} />
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
                   <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
