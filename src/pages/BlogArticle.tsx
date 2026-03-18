@@ -182,7 +182,7 @@ const BlogArticle = () => {
           <div className="container mx-auto px-4 pb-16 pt-4 md:pb-24">
             <article className="mx-auto max-w-3xl">
               <div
-                className="prose prose-lg max-w-none prose-headings:font-display prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-a:text-primary"
+                className="prose prose-lg max-w-none prose-headings:font-display prose-h2:text-3xl prose-h3:text-2xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-strong:text-foreground prose-a:text-primary prose-a:underline prose-a:underline-offset-2"
                 dangerouslySetInnerHTML={{ __html: article.content || "" }}
               />
             </article>
