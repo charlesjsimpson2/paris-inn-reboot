@@ -50,7 +50,8 @@ interface EasyAccess {
 
 const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
   if (!slug) return null;
-  return category === 'guide' ? `/blog/${slug}` : `/evenements/${slug}`;
+  const isEventCategory = category === 'concert' || category === 'salon' || category === 'sport' || category === 'congres';
+  return isEventCategory ? `/evenements/${slug}` : `/blog/${slug}`;
 };
 
 const ArticleEditor = () => {
