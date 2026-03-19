@@ -48,6 +48,11 @@ interface EasyAccess {
   metroRoute: string;
 }
 
+const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
+  if (!slug) return null;
+  return category === 'guide' ? `/blog/${slug}` : `/evenements/${slug}`;
+};
+
 const ArticleEditor = () => {
   const { id } = useParams();
   const isNew = id === 'new';
