@@ -5,12 +5,16 @@ import Link from '@tiptap/extension-link';
 import Placeholder from '@tiptap/extension-placeholder';
 import { Button } from '@/components/ui/button';
 import { Bold, Italic, List, ListOrdered, Heading2, Heading3, Link as LinkIcon, ImageIcon, Undo, Redo, Quote } from 'lucide-react';
-import { useCallback, useEffect, useRef } from 'react';
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 
 interface RichTextEditorProps {
   content: string;
   onChange: (html: string) => void;
   onImageUpload?: () => Promise<string | null>;
+}
+
+export interface RichTextEditorHandle {
+  getHTML: () => string;
 }
 
 const normalizeHtml = (value: string) =>
@@ -26,7 +30,7 @@ const normalizeUrl = (value: string) => {
   return `https://${trimmed}`;
 };
 
-const RichTextEditor = ({ content, onChange, onImageUpload }: RichTextEditorProps) => {
+const RichTextEditor = forwardRef<RichTextEditorHandle, RichTextEditorProps>(({ content, onChange, onImageUpload }, ref) => {
   const isSyncingRef = useRef(false);
 
   const editor = useEditor({
@@ -46,6 +50,10 @@ const RichTextEditor = ({ content, onChange, onImageUpload }: RichTextEditorProp
       onChange(editor.getHTML());
     },
   });
+
+  useImperativeHandle(ref, () => ({
+    getHTML: () => editor?.getHTML() ?? '',
+  }), [editor]);
 
   useEffect(() => {
     if (!editor || editor.isFocused) return;
@@ -125,6 +133,8 @@ const RichTextEditor = ({ content, onChange, onImageUpload }: RichTextEditorProp
       />
     </div>
   );
-};
+});
+
+RichTextEditor.displayName = 'RichTextEditor';
 
 export default RichTextEditor;

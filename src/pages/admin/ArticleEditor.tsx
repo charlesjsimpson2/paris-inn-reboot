@@ -1,9 +1,9 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import AdminLayout from '@/components/admin/AdminLayout';
-import RichTextEditor from '@/components/admin/RichTextEditor';
+import RichTextEditor, { type RichTextEditorHandle } from '@/components/admin/RichTextEditor';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -70,6 +70,7 @@ const ArticleEditor = () => {
   const [saving, setSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [autoSlug, setAutoSlug] = useState(true);
+  const contentEditorRef = useRef<RichTextEditorHandle>(null);
 
   // Event fields
   const [category, setCategory] = useState<ArticleCategory | ''>('');
@@ -181,8 +182,14 @@ const ArticleEditor = () => {
     }
     setSaving(true);
     const finalStatus = newStatus ?? status;
+    const latestContent = contentEditorRef.current?.getHTML() ?? content;
+
+    if (latestContent !== content) {
+      setContent(latestContent);
+    }
+
     const payload = {
-      title, slug, content, excerpt,
+      title, slug, content: latestContent, excerpt,
       cover_image_url: coverImageUrl || null,
       hero_image_url: heroImageUrl || null,
       status: finalStatus,
@@ -440,7 +447,7 @@ const ArticleEditor = () => {
           {/* Content */}
           <div>
             <Label>Contenu</Label>
-            <RichTextEditor content={content} onChange={setContent} onImageUpload={handleImageUpload} />
+            <RichTextEditor ref={contentEditorRef} content={content} onChange={setContent} onImageUpload={handleImageUpload} />
           </div>
 
           {/* SEO */}
