@@ -150,6 +150,7 @@ const App = () => {
                   <Route path="/wifi" element={<WiFiPage />} />
                   <Route path="/blog" element={<BlogIndex />} />
                   <Route path="/blog/:slug" element={<BlogArticle />} />
+                  <Route path="/evenements/:slug" element={<BlogArticle canonicalBasePath="/evenements" />} />
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
                   <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
