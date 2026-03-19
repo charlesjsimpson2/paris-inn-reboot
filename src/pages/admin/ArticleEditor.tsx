@@ -70,6 +70,7 @@ const ArticleEditor = () => {
   const [saving, setSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [autoSlug, setAutoSlug] = useState(true);
+  const contentEditorRef = useRef<RichTextEditorHandle>(null);
 
   // Event fields
   const [category, setCategory] = useState<ArticleCategory | ''>('');
