@@ -35,7 +35,6 @@ const ScorpionsConcert = lazy(() => import("./pages/ScorpionsConcert"));
 const MerylConcert = lazy(() => import("./pages/MerylConcert"));
 const KeryJamesConcert = lazy(() => import("./pages/KeryJamesConcert"));
 const OrelsanConcert = lazy(() => import("./pages/OrelsanConcert"));
-const IndochineConcert = lazy(() => import("./pages/IndochineConcert"));
 const SalonCSEMars = lazy(() => import("./pages/SalonCSEMars"));
 const SalonCSESeptembre = lazy(() => import("./pages/SalonCSESeptembre"));
 const FoireDeParis = lazy(() => import("./pages/FoireDeParis"));
@@ -117,7 +116,10 @@ const App = () => {
                   <Route path="/evenements/meryl-concert" element={<MerylConcert />} />
                   <Route path="/evenements/kery-james-concert" element={<KeryJamesConcert />} />
                   <Route path="/evenements/orelsan-concert" element={<OrelsanConcert />} />
-                  <Route path="/evenements/indochine-concert" element={<IndochineConcert />} />
+                  <Route
+                    path="/evenements/indochine-concert"
+                    element={<BlogArticle forcedSlug="indochine-concert" canonicalBasePath="/evenements" />}
+                  />
                   <Route path="/evenements/salon-cse-mars" element={<SalonCSEMars />} />
                   <Route path="/evenements/salon-cse-septembre" element={<SalonCSESeptembre />} />
                   <Route path="/evenements/foire-de-paris" element={<FoireDeParis />} />
