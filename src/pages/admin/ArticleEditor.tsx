@@ -182,8 +182,14 @@ const ArticleEditor = () => {
     }
     setSaving(true);
     const finalStatus = newStatus ?? status;
+    const latestContent = contentEditorRef.current?.getHTML() ?? content;
+
+    if (latestContent !== content) {
+      setContent(latestContent);
+    }
+
     const payload = {
-      title, slug, content, excerpt,
+      title, slug, content: latestContent, excerpt,
       cover_image_url: coverImageUrl || null,
       hero_image_url: heroImageUrl || null,
       status: finalStatus,
