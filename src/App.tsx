@@ -15,6 +15,7 @@ import ProtectedRoute from "@/components/admin/ProtectedRoute";
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
 const Actualites = lazy(() => import("./pages/Actualites"));
+const BlogIndex = lazy(() => import("./pages/BlogIndex"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
 const NosChambres = lazy(() => import("./pages/NosChambres"));
 const Seminaires = lazy(() => import("./pages/Seminaires"));
