@@ -8,6 +8,11 @@ import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 
+interface BlogArticleProps {
+  forcedSlug?: string;
+  canonicalBasePath?: "/blog" | "/evenements";
+}
+
 const stripHtml = (html: string) =>
   html
     .replace(/<[^>]*>/g, " ")
@@ -25,8 +30,9 @@ const formatDate = (date: string | null) => {
   }).format(new Date(date));
 };
 
-const BlogArticle = () => {
-  const { slug } = useParams<{ slug: string }>();
+const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticleProps) => {
+  const { slug: routeSlug } = useParams<{ slug: string }>();
+  const slug = forcedSlug ?? routeSlug;
   const [article, setArticle] = useState<Tables<"articles"> | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -91,7 +97,7 @@ const BlogArticle = () => {
         <SEO
           title="Article introuvable"
           description="Cet article n'existe pas ou n'est pas encore publié."
-          canonical={slug ? `/blog/${slug}` : undefined}
+          canonical={slug ? `${canonicalBasePath}/${slug}` : undefined}
           noIndex
         />
         <Header />
@@ -117,7 +123,7 @@ const BlogArticle = () => {
       <SEO
         title={article.seo_title || article.title}
         description={description}
-        canonical={`/blog/${article.slug}`}
+        canonical={`${canonicalBasePath}/${article.slug}`}
         ogImage={heroImage}
         ogType="article"
       />
@@ -182,7 +188,7 @@ const BlogArticle = () => {
           <div className="container mx-auto px-4 pb-16 pt-4 md:pb-24">
             <article className="mx-auto max-w-3xl">
               <div
-                className="prose prose-lg max-w-none prose-headings:font-display prose-h2:text-3xl prose-h3:text-2xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-strong:text-foreground prose-a:text-primary prose-a:underline prose-a:underline-offset-2"
+                className="prose prose-lg max-w-none whitespace-pre-wrap prose-headings:font-display prose-h2:text-3xl prose-h3:text-2xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-strong:text-foreground prose-a:text-primary prose-a:underline prose-a:underline-offset-2"
                 dangerouslySetInnerHTML={{ __html: article.content || "" }}
               />
             </article>
