@@ -489,7 +489,14 @@ const ArticleEditor = () => {
           </Collapsible>
 
           {/* Actions */}
-          <div className="flex gap-3 pt-4 border-t">
+          <div className="flex flex-wrap gap-3 pt-4 border-t">
+            {getPreviewPath(slug, category) && (
+              <Button variant="outline" asChild>
+                <a href={getPreviewPath(slug, category) ?? '#'} target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" /> Preview
+                </a>
+              </Button>
+            )}
             <Button variant="outline" onClick={() => save('draft')} disabled={saving}>
               <Save className="h-4 w-4 mr-2" /> Sauvegarder brouillon
             </Button>
