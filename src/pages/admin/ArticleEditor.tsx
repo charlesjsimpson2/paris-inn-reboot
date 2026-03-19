@@ -14,7 +14,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useToast } from '@/hooks/use-toast';
-import { ChevronDown, Save, Send, ArrowLeft, CalendarIcon, Plus, Trash2, MapPin, Train } from 'lucide-react';
+import { ChevronDown, Save, Send, ArrowLeft, CalendarIcon, Plus, Trash2, MapPin, Train, ExternalLink } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import { cn } from '@/lib/utils';
@@ -47,6 +47,11 @@ interface EasyAccess {
   metroLine: string;
   metroRoute: string;
 }
+
+const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
+  if (!slug) return null;
+  return category === 'guide' ? `/blog/${slug}` : `/evenements/${slug}`;
+};
 
 const ArticleEditor = () => {
   const { id } = useParams();
@@ -484,7 +489,14 @@ const ArticleEditor = () => {
           </Collapsible>
 
           {/* Actions */}
-          <div className="flex gap-3 pt-4 border-t">
+          <div className="flex flex-wrap gap-3 pt-4 border-t">
+            {getPreviewPath(slug, category) && (
+              <Button variant="outline" asChild>
+                <a href={getPreviewPath(slug, category) ?? '#'} target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" /> Preview
+                </a>
+              </Button>
+            )}
             <Button variant="outline" onClick={() => save('draft')} disabled={saving}>
               <Save className="h-4 w-4 mr-2" /> Sauvegarder brouillon
             </Button>
