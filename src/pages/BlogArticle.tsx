@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ArrowLeft, CalendarDays } from "lucide-react";
+import { DynamicEventArticle } from "@/components/DynamicEventArticle";
 
 interface BlogArticleProps {
   forcedSlug?: string;
@@ -29,6 +30,9 @@ const formatDate = (date: string | null) => {
     year: "numeric",
   }).format(new Date(date));
 };
+
+const isEventCategory = (category: Tables<"articles">["category"]) =>
+  category === "concert" || category === "salon" || category === "sport" || category === "congres";
 
 const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticleProps) => {
   const { slug: routeSlug } = useParams<{ slug: string }>();
@@ -116,6 +120,10 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
         <Footer />
       </div>
     );
+  }
+
+  if (isEventCategory(article.category) && canonicalBasePath === "/evenements") {
+    return <DynamicEventArticle article={article} canonicalBasePath={canonicalBasePath} />;
   }
 
   return (
