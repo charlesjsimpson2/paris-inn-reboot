@@ -14,7 +14,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useToast } from '@/hooks/use-toast';
-import { ChevronDown, Save, Send, ArrowLeft, CalendarIcon, Plus, Trash2, MapPin, Train } from 'lucide-react';
+import { ChevronDown, Save, Send, ArrowLeft, CalendarIcon, Plus, Trash2, MapPin, Train, ExternalLink } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import { cn } from '@/lib/utils';
