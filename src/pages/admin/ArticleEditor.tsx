@@ -447,7 +447,7 @@ const ArticleEditor = () => {
           {/* Content */}
           <div>
             <Label>Contenu</Label>
-            <RichTextEditor content={content} onChange={setContent} onImageUpload={handleImageUpload} />
+            <RichTextEditor ref={contentEditorRef} content={content} onChange={setContent} onImageUpload={handleImageUpload} />
           </div>
 
           {/* SEO */}
