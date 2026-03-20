@@ -311,11 +311,10 @@ const ArticleEditor = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <h1 className="text-2xl font-bold">{isNew ? 'Nouvel article' : 'Modifier l\'article'}</h1>
-          {lastSaved && (
-            <span className="text-xs text-muted-foreground ml-auto">
-              Sauvegardé à {lastSaved.toLocaleTimeString('fr-FR')}
-            </span>
-          )}
+          <span className="text-xs text-muted-foreground ml-auto flex items-center gap-2">
+            {hasUnsavedChanges && <span className="inline-block h-2 w-2 rounded-full bg-amber-400" title="Modifications non sauvegardées" />}
+            {lastSaved ? `Sauvegardé à ${lastSaved.toLocaleTimeString('fr-FR')}` : hasUnsavedChanges ? 'Sauvegarde auto dans 30s…' : ''}
+          </span>
         </div>
 
         <div className="space-y-4">
