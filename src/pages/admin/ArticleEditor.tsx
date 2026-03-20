@@ -295,6 +295,7 @@ const ArticleEditor = () => {
     } else {
       setStatus(finalStatus);
       setLastSaved(new Date());
+      setHasUnsavedChanges(false);
       toast({ title: finalStatus === 'published' ? 'Article publié !' : 'Brouillon sauvegardé' });
     }
   };
