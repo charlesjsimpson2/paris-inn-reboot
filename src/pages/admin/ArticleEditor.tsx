@@ -98,6 +98,7 @@ const ArticleEditor = () => {
   const [easyAccess, setEasyAccess] = useState<EasyAccess>({ venue: '', travelTime: '', metroLine: '', metroRoute: '' });
   const [transportOpen, setTransportOpen] = useState(false);
 
+  // Mark initial load as done after data loads
   useEffect(() => {
     if (!isNew && id) {
       supabase.from('articles').select('*').eq('id', id).single().then(({ data }) => {
@@ -130,14 +131,75 @@ const ArticleEditor = () => {
             });
           }
           setAutoSlug(false);
+          // Mark load done after a tick so initial state changes don't trigger autosave
+          setTimeout(() => { initialLoadDoneRef.current = true; }, 500);
         }
       });
+    } else {
+      initialLoadDoneRef.current = true;
     }
   }, [id, isNew]);
 
   useEffect(() => {
     if (autoSlug) setSlug(slugify(title));
   }, [title, autoSlug]);
+
+  // Track unsaved changes
+  useEffect(() => {
+    if (initialLoadDoneRef.current) {
+      setHasUnsavedChanges(true);
+    }
+  }, [title, content, excerpt, coverImageUrl, heroImageUrl, category, eventDate, eventEndDate, eventVenue, eventVenueAddress, isFeatured, sortOrder, offers, easyAccess, seoTitle, seoDescription, seoKeywords]);
+
+  // Auto-save every 30 seconds when there are unsaved changes
+  useEffect(() => {
+    if (!hasUnsavedChanges || !title.trim() || !slug.trim()) return;
+
+    autoSaveTimerRef.current = setTimeout(async () => {
+      // Don't auto-save if already saving or if currently published (avoid overwriting published status)
+      if (saving) return;
+      
+      const latestContent = contentEditorRef.current?.getHTML() ?? content;
+      const payload = {
+        title, slug, content: latestContent, excerpt,
+        cover_image_url: coverImageUrl || null,
+        hero_image_url: heroImageUrl || null,
+        status: status as 'draft' | 'published',
+        seo_title: seoTitle || null,
+        seo_description: seoDescription || null,
+        seo_keywords: seoKeywords || null,
+        category: category || null,
+        event_date: eventDate?.toISOString() ?? null,
+        event_end_date: eventEndDate?.toISOString() ?? null,
+        event_venue: eventVenue || null,
+        event_venue_address: eventVenueAddress || null,
+        is_featured: isFeatured,
+        sort_order: sortOrder,
+        offers: offers.length > 0 ? offers : [],
+        easy_access: (easyAccess.venue || easyAccess.travelTime) ? easyAccess : null,
+      };
+
+      let error;
+      if (isNew) {
+        if (!userProfile) return;
+        const res = await supabase.from('articles').insert({ ...payload, status: 'draft', created_by: userProfile.id } as any).select().single();
+        error = res.error;
+        if (!error && res.data) navigate(`/admin/articles/${res.data.id}`, { replace: true });
+      } else {
+        const res = await supabase.from('articles').update(payload as any).eq('id', id!);
+        error = res.error;
+      }
+
+      if (!error) {
+        setHasUnsavedChanges(false);
+        setLastSaved(new Date());
+      }
+    }, 30000);
+
+    return () => {
+      if (autoSaveTimerRef.current) clearTimeout(autoSaveTimerRef.current);
+    };
+  }, [hasUnsavedChanges, title, slug, saving]);
 
   const handleImageUpload = useCallback(async (): Promise<string | null> => {
     const input = document.createElement('input');
