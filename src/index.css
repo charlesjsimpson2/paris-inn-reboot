@@ -145,6 +145,42 @@
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
+
+
+  /* Float image layout for articles */
+  .prose img[data-float="left"] {
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    border-radius: 0.75rem;
+  }
+  .prose img[data-float="right"] {
+    float: right;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    border-radius: 0.75rem;
+  }
+  .prose img[data-float]::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Clear float after paragraphs following floated images */
+  .prose > *:has(~ img[data-float]) + * + *:not(img) {
+    clear: both;
+  }
+
+  @media (max-width: 640px) {
+    .prose img[data-float="left"],
+    .prose img[data-float="right"] {
+      float: none;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 @layer utilities {
