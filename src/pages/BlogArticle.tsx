@@ -34,6 +34,13 @@ const formatDate = (date: string | null) => {
 const isEventCategory = (category: Tables<"articles">["category"]) =>
   category === "concert" || category === "salon" || category === "sport" || category === "congres";
 
+const getCategoryBasePath = (category: Tables<"articles">["category"]) => {
+  if (isEventCategory(category)) return "/evenements";
+  if (category === "seminaires") return "/seminaires";
+  if (category === "chambres") return "/nos-chambres";
+  return "/blog";
+};
+
 const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticleProps) => {
   const { slug: routeSlug } = useParams<{ slug: string }>();
   const slug = forcedSlug ?? routeSlug;

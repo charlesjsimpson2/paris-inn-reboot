@@ -55,8 +55,12 @@ interface EasyAccess {
 
 const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
   if (!slug) return null;
-  const isEventCategory = category === 'concert' || category === 'salon' || category === 'sport' || category === 'congres';
-  return isEventCategory ? `/evenements/${slug}` : `/blog/${slug}`;
+  if (category === 'concert' || category === 'salon' || category === 'sport' || category === 'congres') {
+    return `/evenements/${slug}`;
+  }
+  if (category === 'seminaires') return `/seminaires/${slug}`;
+  if (category === 'chambres') return `/nos-chambres/${slug}`;
+  return `/blog/${slug}`;
 };
 
 const ArticleEditor = () => {
