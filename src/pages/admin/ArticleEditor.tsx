@@ -37,6 +37,7 @@ const CATEGORIES: { value: ArticleCategory; label: string }[] = [
   { value: 'partenaires', label: '🤝 Partenaires' },
   { value: 'partenaires_gourmands', label: '🍽️ Partenaires gourmands' },
   { value: 'chambres', label: '🛏️ Chambres' },
+  { value: 'conseils', label: '💡 Conseils' },
 ];
 
 interface Offer {
