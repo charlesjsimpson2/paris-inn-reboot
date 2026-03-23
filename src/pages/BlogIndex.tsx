@@ -33,7 +33,7 @@ const BlogIndex = () => {
         .from("articles")
         .select("id, title, slug, excerpt, cover_image_url, hero_image_url, created_at, updated_at, category")
         .eq("status", "published")
-        .in("category", ["guide", "actualite"])
+        .in("category", ["guide", "actualite", "seminaires", "connectivite_equipement", "partenaires", "partenaires_gourmands", "chambres"])
         .order("created_at", { ascending: false });
 
       if (!error && data) {
@@ -92,7 +92,11 @@ const BlogIndex = () => {
                       key={article.id}
                       className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-transform duration-300 hover:-translate-y-1"
                     >
-                      <Link to={`/blog/${article.slug}`} className="block h-full">
+                      <Link to={(() => {
+                        if (article.category === 'seminaires') return `/seminaires/${article.slug}`;
+                        if (article.category === 'chambres') return `/nos-chambres/${article.slug}`;
+                        return `/blog/${article.slug}`;
+                      })()} className="block h-full">
                         {image && (
                           <div className="overflow-hidden border-b border-border">
                             <img
