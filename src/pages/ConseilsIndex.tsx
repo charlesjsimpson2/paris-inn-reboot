@@ -3,19 +3,17 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
-import { ArrowRight, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays, Lightbulb } from "lucide-react";
 
-type BlogListItem = Pick<
+type ConseilItem = Pick<
   Tables<"articles">,
-  "id" | "title" | "slug" | "excerpt" | "cover_image_url" | "hero_image_url" | "created_at" | "updated_at" | "category"
+  "id" | "title" | "slug" | "excerpt" | "cover_image_url" | "hero_image_url" | "created_at" | "updated_at"
 >;
 
 const formatDate = (date: string | null) => {
   if (!date) return null;
-
   return new Intl.DateTimeFormat("fr-FR", {
     day: "numeric",
     month: "long",
@@ -23,23 +21,20 @@ const formatDate = (date: string | null) => {
   }).format(new Date(date));
 };
 
-const BlogIndex = () => {
-  const [articles, setArticles] = useState<BlogListItem[]>([]);
+const ConseilsIndex = () => {
+  const [articles, setArticles] = useState<ConseilItem[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchArticles = async () => {
       const { data, error } = await supabase
         .from("articles")
-        .select("id, title, slug, excerpt, cover_image_url, hero_image_url, created_at, updated_at, category")
+        .select("id, title, slug, excerpt, cover_image_url, hero_image_url, created_at, updated_at")
         .eq("status", "published")
-        .in("category", ["guide", "actualite", "seminaires", "connectivite_equipement", "partenaires", "partenaires_gourmands", "chambres", "conseils"])
+        .eq("category", "conseils")
         .order("created_at", { ascending: false });
 
-      if (!error && data) {
-        setArticles(data);
-      }
-
+      if (!error && data) setArticles(data);
       setLoading(false);
     };
 
@@ -49,9 +44,9 @@ const BlogIndex = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Blog hôtel Paris 13"
-        description="Conseils, actualités et guides pratiques pour préparer votre séjour à Paris 13 autour de l’Hôtel Inn Design Paris Place d’Italie."
-        canonical="/blog"
+        title="Conseils séjour Paris 13 – Hôtel Inn Design"
+        description="Nos meilleurs conseils pour préparer votre séjour à Paris 13e : astuces pratiques, bons plans et recommandations autour de l'Hôtel Inn Design Place d'Italie."
+        canonical="/conseils"
       />
       <Header />
 
@@ -59,10 +54,15 @@ const BlogIndex = () => {
         <section className="border-b border-border bg-muted/30">
           <div className="container mx-auto px-4 py-14 md:py-20">
             <div className="mx-auto max-w-3xl space-y-5 text-center">
-              <p className="font-body text-sm uppercase tracking-[0.2em] text-primary">Blog</p>
-              <h1 className="font-display text-4xl text-foreground md:text-6xl">Conseils & actualités</h1>
+              <div className="flex items-center justify-center gap-2">
+                <Lightbulb className="h-5 w-5 text-primary" />
+                <p className="font-body text-sm uppercase tracking-[0.2em] text-primary">Conseils</p>
+              </div>
+              <h1 className="font-display text-4xl text-foreground md:text-6xl">
+                Nos conseils pour votre séjour
+              </h1>
               <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-                Retrouvez nos articles pour organiser votre séjour, découvrir le quartier et profiter au mieux de Paris.
+                Astuces pratiques, bons plans et recommandations pour profiter au mieux de votre passage à Paris.
               </p>
             </div>
           </div>
@@ -76,9 +76,9 @@ const BlogIndex = () => {
               </div>
             ) : articles.length === 0 ? (
               <div className="mx-auto max-w-2xl rounded-3xl border border-border bg-card px-6 py-12 text-center shadow-sm">
-                <h2 className="font-display text-3xl text-foreground">Aucun article publié</h2>
+                <h2 className="font-display text-3xl text-foreground">Aucun conseil publié</h2>
                 <p className="mt-3 text-muted-foreground">
-                  Les prochains contenus du blog apparaîtront ici automatiquement dès leur publication.
+                  Les prochains conseils apparaîtront ici dès leur publication.
                 </p>
               </div>
             ) : (
@@ -92,12 +92,7 @@ const BlogIndex = () => {
                       key={article.id}
                       className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-transform duration-300 hover:-translate-y-1"
                     >
-                      <Link to={(() => {
-                        if (article.category === 'seminaires') return `/seminaires/${article.slug}`;
-                        if (article.category === 'chambres') return `/nos-chambres/${article.slug}`;
-                        if (article.category === 'conseils') return `/conseils/${article.slug}`;
-                        return `/blog/${article.slug}`;
-                      })()} className="block h-full">
+                      <Link to={`/conseils/${article.slug}`} className="block h-full">
                         {image && (
                           <div className="overflow-hidden border-b border-border">
                             <img
@@ -110,12 +105,6 @@ const BlogIndex = () => {
                         )}
 
                         <div className="space-y-4 p-6">
-                          {article.category && (
-                            <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
-                              {article.category}
-                            </p>
-                          )}
-
                           <h2 className="font-display text-2xl leading-tight text-foreground">
                             {article.title}
                           </h2>
@@ -135,7 +124,7 @@ const BlogIndex = () => {
                             ) : <span />}
 
                             <span className="inline-flex items-center gap-2 font-medium text-foreground">
-                              Lire l’article
+                              Lire le conseil
                               <ArrowRight className="h-4 w-4 text-primary transition-transform duration-300 group-hover:translate-x-1" />
                             </span>
                           </div>
@@ -146,12 +135,6 @@ const BlogIndex = () => {
                 })}
               </div>
             )}
-
-            <div className="mt-12 flex justify-center">
-              <Button asChild variant="outline" size="lg">
-                <Link to="/evenements">Voir aussi les événements</Link>
-              </Button>
-            </div>
           </div>
         </section>
       </main>
@@ -161,4 +144,4 @@ const BlogIndex = () => {
   );
 };
 
-export default BlogIndex;
+export default ConseilsIndex;

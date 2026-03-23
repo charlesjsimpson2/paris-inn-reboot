@@ -254,6 +254,7 @@ export type Database = {
         | "partenaires"
         | "partenaires_gourmands"
         | "chambres"
+        | "conseils"
       article_status: "draft" | "published"
     }
     CompositeTypes: {
@@ -395,6 +396,7 @@ export const Constants = {
         "partenaires",
         "partenaires_gourmands",
         "chambres",
+        "conseils",
       ],
       article_status: ["draft", "published"],
     },

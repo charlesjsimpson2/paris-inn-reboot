@@ -17,6 +17,7 @@ const Index = lazy(() => import("./pages/Index"));
 const Actualites = lazy(() => import("./pages/Actualites"));
 const BlogIndex = lazy(() => import("./pages/BlogIndex"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
+const ConseilsIndex = lazy(() => import("./pages/ConseilsIndex"));
 const NosChambres = lazy(() => import("./pages/NosChambres"));
 const Seminaires = lazy(() => import("./pages/Seminaires"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -153,6 +154,8 @@ const App = () => {
                   <Route path="/evenements/:slug" element={<BlogArticle canonicalBasePath="/evenements" />} />
                   <Route path="/seminaires/:slug" element={<BlogArticle canonicalBasePath="/seminaires" />} />
                   <Route path="/nos-chambres/:slug" element={<BlogArticle canonicalBasePath="/nos-chambres" />} />
+                  <Route path="/conseils" element={<ConseilsIndex />} />
+                  <Route path="/conseils/:slug" element={<BlogArticle canonicalBasePath="/conseils" />} />
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
                   <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />

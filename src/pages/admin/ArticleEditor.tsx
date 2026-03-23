@@ -37,6 +37,7 @@ const CATEGORIES: { value: ArticleCategory; label: string }[] = [
   { value: 'partenaires', label: '🤝 Partenaires' },
   { value: 'partenaires_gourmands', label: '🍽️ Partenaires gourmands' },
   { value: 'chambres', label: '🛏️ Chambres' },
+  { value: 'conseils', label: '💡 Conseils' },
 ];
 
 interface Offer {
@@ -60,6 +61,7 @@ const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
   }
   if (category === 'seminaires') return `/seminaires/${slug}`;
   if (category === 'chambres') return `/nos-chambres/${slug}`;
+  if (category === 'conseils') return `/conseils/${slug}`;
   return `/blog/${slug}`;
 };
 
