@@ -217,40 +217,43 @@ const Seminaires = () => {
         </div>
 
         {/* WiFi Section for Seminars */}
-        <div className="py-16 bg-primary/5">
-          <div className="container mx-auto px-4">
+        <div className="py-20 bg-charcoal relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-burgundy/10" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 bg-primary/15 px-4 py-2 mb-4">
-                  <Wifi className="w-5 h-5 text-primary" />
-                  <span className="text-primary font-medium text-sm uppercase tracking-[0.15em]">{t('wifiPage.badge')}</span>
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 px-5 py-2.5 mb-5 rounded-full">
+                  <Wifi className="w-5 h-5 text-primary animate-pulse" />
+                  <span className="text-primary font-semibold text-sm uppercase tracking-[0.15em]">{t('wifiPage.badge')}</span>
                 </div>
-                <h2 className="font-display text-2xl md:text-3xl text-foreground">
+                <h2 className="font-display text-3xl md:text-4xl text-foreground">
                   {t('seminarsWifi.title')}
                 </h2>
-                <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+                <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
                   {t('seminarsWifi.desc')}
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mb-10">
                 {[
                   { icon: Zap, value: "3 Gbps", label: t('wifi.spec.capacity') },
                   { icon: Shield, value: "3×", label: t('wifi.spec.redundancy') },
                   { icon: Signal, value: "25", label: t('wifi.spec.accessPoints') },
                   { icon: Users, value: "100%", label: t('seminarsWifi.fullLoad') },
                 ].map((item, idx) => (
-                  <div key={idx} className="bg-background border border-primary/20 p-4 text-center">
-                    <item.icon className="w-5 h-5 text-primary mx-auto mb-2" />
-                    <div className="font-display text-xl text-primary">{item.value}</div>
-                    <p className="text-muted-foreground text-xs mt-1">{item.label}</p>
+                  <div key={idx} className="bg-background/80 backdrop-blur-sm border border-primary/25 p-5 text-center rounded-lg hover:border-primary/50 hover:scale-105 transition-all duration-300">
+                    <div className="w-10 h-10 bg-primary/15 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="font-display text-2xl text-primary font-bold">{item.value}</div>
+                    <p className="text-muted-foreground text-xs mt-1.5">{item.label}</p>
                   </div>
                 ))}
               </div>
 
               <div className="text-center">
-                <a href="/wifi" className="text-primary text-sm font-medium hover:underline">
-                  {t('services.wifi.learnMore')} →
+                <a href="/wifi" className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 text-primary font-semibold text-sm px-6 py-3 rounded-full hover:bg-primary/25 hover:gap-3 transition-all">
+                  {t('services.wifi.learnMore')} <span>→</span>
                 </a>
               </div>
             </div>
@@ -259,27 +262,33 @@ const Seminaires = () => {
       </section>
 
       {/* Related Articles */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">En savoir plus</span>
-            <h2 className="font-display text-2xl md:text-3xl text-foreground mt-2">Découvrez nos espaces & services</h2>
+      <section className="py-20 bg-burgundy/10 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-burgundy/5 to-transparent" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <span className="text-burgundy font-semibold text-sm uppercase tracking-[0.2em]">En savoir plus</span>
+            <h2 className="font-display text-3xl md:text-4xl text-foreground mt-3">Découvrez nos espaces & services</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { title: "Espace Coworking", desc: "Un espace de travail flexible au cœur de Paris 13", href: "/seminaires/espace-coworking-a-paris-13" },
-              { title: "Espace Extérieur", desc: "Une pause nature à Paris 13ème", href: "/seminaires/espace-exterieur-une-pause-a-paris-13" },
-              { title: "Connectivité & Équipements", desc: "Des outils professionnels pour vos séminaires", href: "/seminaires/connectivite-equipements-seminaire-a-paris-13" },
+              { title: "Espace Coworking", desc: "Un espace de travail flexible et inspirant au cœur du 13ème arrondissement", href: "/seminaires/espace-coworking-a-paris-13", icon: Users },
+              { title: "Espace Extérieur", desc: "Une parenthèse nature pour vos pauses et moments de détente", href: "/seminaires/espace-exterieur-une-pause-a-paris-13", icon: Coffee },
+              { title: "Connectivité & Équipements", desc: "Des outils professionnels haut de gamme pour vos séminaires", href: "/seminaires/connectivite-equipements-seminaire-a-paris-13", icon: Projector },
             ].map((item, idx) => (
-              <a key={idx} href={item.href} className="group bg-background border border-primary/20 p-6 hover:border-primary/50 hover:bg-primary/5 transition-all flex flex-col h-full">
-                <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors min-h-[3.5rem] flex items-center">{item.title}</h3>
-                <p className="text-muted-foreground text-sm flex-1 mt-2">{item.desc}</p>
-                <span className="text-primary text-sm font-semibold mt-4 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+              <a key={idx} href={item.href} className="group bg-background border-2 border-burgundy/20 p-8 hover:border-burgundy/60 hover:shadow-xl hover:shadow-burgundy/10 transition-all duration-300 flex flex-col h-full rounded-lg hover:-translate-y-1">
+                <div className="w-12 h-12 bg-burgundy/15 rounded-lg flex items-center justify-center mb-5 group-hover:bg-burgundy/25 transition-colors">
+                  <item.icon className="w-6 h-6 text-burgundy" />
+                </div>
+                <h3 className="font-display text-xl text-foreground group-hover:text-burgundy transition-colors min-h-[3rem] flex items-center">{item.title}</h3>
+                <p className="text-muted-foreground text-sm flex-1 mt-3 leading-relaxed">{item.desc}</p>
+                <span className="text-burgundy text-sm font-bold mt-5 inline-flex items-center gap-1.5 group-hover:gap-3 transition-all border-b-2 border-burgundy/30 pb-1 self-start group-hover:border-burgundy/60">
                   Voir la page <span className="transition-transform group-hover:translate-x-1">→</span>
                 </span>
               </a>
             ))}
           </div>
+        </div>
+      </section>
         </div>
       </section>
 
