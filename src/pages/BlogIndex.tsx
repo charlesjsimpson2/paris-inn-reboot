@@ -92,7 +92,11 @@ const BlogIndex = () => {
                       key={article.id}
                       className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-transform duration-300 hover:-translate-y-1"
                     >
-                      <Link to={`/blog/${article.slug}`} className="block h-full">
+                      <Link to={(() => {
+                        if (article.category === 'seminaires') return `/seminaires/${article.slug}`;
+                        if (article.category === 'chambres') return `/nos-chambres/${article.slug}`;
+                        return `/blog/${article.slug}`;
+                      })()} className="block h-full">
                         {image && (
                           <div className="overflow-hidden border-b border-border">
                             <img
