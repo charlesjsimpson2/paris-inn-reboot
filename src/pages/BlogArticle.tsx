@@ -11,7 +11,7 @@ import { DynamicEventArticle } from "@/components/DynamicEventArticle";
 
 interface BlogArticleProps {
   forcedSlug?: string;
-  canonicalBasePath?: "/blog" | "/evenements";
+  canonicalBasePath?: string;
 }
 
 const stripHtml = (html: string) =>
