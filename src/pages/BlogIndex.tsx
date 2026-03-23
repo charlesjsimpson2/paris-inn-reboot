@@ -33,7 +33,7 @@ const BlogIndex = () => {
         .from("articles")
         .select("id, title, slug, excerpt, cover_image_url, hero_image_url, created_at, updated_at, category")
         .eq("status", "published")
-        .in("category", ["guide", "actualite", "seminaires", "connectivite_equipement", "partenaires", "partenaires_gourmands", "chambres"])
+        .in("category", ["guide", "actualite", "seminaires", "connectivite_equipement", "partenaires", "partenaires_gourmands", "chambres", "conseils"])
         .order("created_at", { ascending: false });
 
       if (!error && data) {
