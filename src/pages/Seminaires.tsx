@@ -271,10 +271,12 @@ const Seminaires = () => {
               { title: "Espace Extérieur", desc: "Une pause nature à Paris 13ème", href: "/seminaires/espace-exterieur-une-pause-a-paris-13" },
               { title: "Connectivité & Équipements", desc: "Des outils professionnels pour vos séminaires", href: "/seminaires/connectivite-equipements-seminaire-a-paris-13" },
             ].map((item, idx) => (
-              <a key={idx} href={item.href} className="group bg-background border border-border/30 p-6 hover:border-primary/40 transition-colors">
-                <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
-                <span className="text-primary text-sm font-medium mt-3 inline-block">Voir la page →</span>
+              <a key={idx} href={item.href} className="group bg-background border border-primary/20 p-6 hover:border-primary/50 hover:bg-primary/5 transition-all flex flex-col h-full">
+                <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors min-h-[3.5rem] flex items-center">{item.title}</h3>
+                <p className="text-muted-foreground text-sm flex-1 mt-2">{item.desc}</p>
+                <span className="text-primary text-sm font-semibold mt-4 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Voir la page <span className="transition-transform group-hover:translate-x-1">→</span>
+                </span>
               </a>
             ))}
           </div>
