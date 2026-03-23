@@ -154,6 +154,8 @@ const App = () => {
                   <Route path="/evenements/:slug" element={<BlogArticle canonicalBasePath="/evenements" />} />
                   <Route path="/seminaires/:slug" element={<BlogArticle canonicalBasePath="/seminaires" />} />
                   <Route path="/nos-chambres/:slug" element={<BlogArticle canonicalBasePath="/nos-chambres" />} />
+                  <Route path="/conseils" element={<ConseilsIndex />} />
+                  <Route path="/conseils/:slug" element={<BlogArticle canonicalBasePath="/conseils" />} />
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
                   <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />

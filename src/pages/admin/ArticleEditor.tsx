@@ -61,6 +61,7 @@ const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
   }
   if (category === 'seminaires') return `/seminaires/${slug}`;
   if (category === 'chambres') return `/nos-chambres/${slug}`;
+  if (category === 'conseils') return `/conseils/${slug}`;
   return `/blog/${slug}`;
 };
 

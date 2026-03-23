@@ -38,6 +38,7 @@ const getCategoryBasePath = (category: Tables<"articles">["category"]) => {
   if (isEventCategory(category)) return "/evenements";
   if (category === "seminaires") return "/seminaires";
   if (category === "chambres") return "/nos-chambres";
+  if (category === "conseils") return "/conseils";
   return "/blog";
 };
 
