@@ -289,8 +289,6 @@ const Seminaires = () => {
           </div>
         </div>
       </section>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary">
