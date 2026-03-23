@@ -274,7 +274,7 @@ const Seminaires = () => {
               <a key={idx} href={item.href} className="group bg-background border border-border/30 p-6 hover:border-primary/40 transition-colors">
                 <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
-                <span className="text-primary text-sm font-medium mt-3 inline-block">Lire l'article →</span>
+                <span className="text-primary text-sm font-medium mt-3 inline-block">Voir la page →</span>
               </a>
             ))}
           </div>
