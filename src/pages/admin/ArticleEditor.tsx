@@ -32,6 +32,11 @@ const CATEGORIES: { value: ArticleCategory; label: string }[] = [
   { value: 'congres', label: '📋 Congrès' },
   { value: 'guide', label: '📖 Guide' },
   { value: 'actualite', label: '📰 Actualité' },
+  { value: 'seminaires', label: '🎤 Séminaires' },
+  { value: 'connectivite_equipement', label: '📡 Connectivité / Équipement' },
+  { value: 'partenaires', label: '🤝 Partenaires' },
+  { value: 'partenaires_gourmands', label: '🍽️ Partenaires gourmands' },
+  { value: 'chambres', label: '🛏️ Chambres' },
 ];
 
 interface Offer {
