@@ -17,6 +17,7 @@ const Index = lazy(() => import("./pages/Index"));
 const Actualites = lazy(() => import("./pages/Actualites"));
 const BlogIndex = lazy(() => import("./pages/BlogIndex"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
+const ConseilsIndex = lazy(() => import("./pages/ConseilsIndex"));
 const NosChambres = lazy(() => import("./pages/NosChambres"));
 const Seminaires = lazy(() => import("./pages/Seminaires"));
 const Contact = lazy(() => import("./pages/Contact"));
