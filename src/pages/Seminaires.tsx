@@ -258,6 +258,28 @@ const Seminaires = () => {
         </div>
       </section>
 
+      {/* Related Articles */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-primary font-medium text-sm uppercase tracking-[0.2em]">En savoir plus</span>
+            <h2 className="font-display text-2xl md:text-3xl text-foreground mt-2">Découvrez nos espaces & services</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { title: "Espace Coworking", desc: "Un espace de travail flexible au cœur de Paris 13", href: "/seminaires/espace-coworking-a-paris-13" },
+              { title: "Espace Extérieur", desc: "Une pause nature à Paris 13ème", href: "/seminaires/espace-exterieur-une-pause-a-paris-13" },
+              { title: "Connectivité & Équipements", desc: "Des outils professionnels pour vos séminaires", href: "/seminaires/connectivite-equipements-seminaire-a-paris-13" },
+            ].map((item, idx) => (
+              <a key={idx} href={item.href} className="group bg-background border border-border/30 p-6 hover:border-primary/40 transition-colors">
+                <h3 className="font-display text-lg text-foreground group-hover:text-primary transition-colors mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.desc}</p>
+                <span className="text-primary text-sm font-medium mt-3 inline-block">Lire l'article →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary">
