@@ -14,7 +14,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useToast } from '@/hooks/use-toast';
-import { ChevronDown, Save, Send, ArrowLeft, CalendarIcon, Plus, Trash2, MapPin, Train, ExternalLink } from 'lucide-react';
+import { ChevronDown, Save, Send, ArrowLeft, CalendarIcon, Plus, Trash2, MapPin, Train, ExternalLink, AlertTriangle } from 'lucide-react';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import { cn } from '@/lib/utils';
@@ -54,6 +54,27 @@ interface EasyAccess {
   metroRoute: string;
 }
 
+interface DraftData {
+  title: string;
+  slug: string;
+  content: string;
+  excerpt: string;
+  coverImageUrl: string;
+  heroImageUrl: string;
+  seoTitle: string;
+  seoDescription: string;
+  seoKeywords: string;
+  category: ArticleCategory | '';
+  eventDate: string | null;
+  eventEndDate: string | null;
+  eventVenue: string;
+  eventVenueAddress: string;
+  isFeatured: boolean;
+  sortOrder: number;
+  offers: Offer[];
+  easyAccess: EasyAccess;
+}
+
 const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
   if (!slug) return null;
   if (category === 'concert' || category === 'salon' || category === 'sport' || category === 'congres') {
@@ -64,6 +85,36 @@ const getPreviewPath = (slug: string, category: ArticleCategory | '') => {
   if (category === 'conseils') return `/conseils/${slug}`;
   return `/blog/${slug}`;
 };
+
+const buildDraftData = (fields: {
+  title: string; slug: string; content: string; excerpt: string;
+  coverImageUrl: string; heroImageUrl: string;
+  seoTitle: string; seoDescription: string; seoKeywords: string;
+  category: ArticleCategory | '';
+  eventDate: Date | undefined; eventEndDate: Date | undefined;
+  eventVenue: string; eventVenueAddress: string;
+  isFeatured: boolean; sortOrder: number;
+  offers: Offer[]; easyAccess: EasyAccess;
+}): DraftData => ({
+  title: fields.title,
+  slug: fields.slug,
+  content: fields.content,
+  excerpt: fields.excerpt,
+  coverImageUrl: fields.coverImageUrl,
+  heroImageUrl: fields.heroImageUrl,
+  seoTitle: fields.seoTitle,
+  seoDescription: fields.seoDescription,
+  seoKeywords: fields.seoKeywords,
+  category: fields.category,
+  eventDate: fields.eventDate?.toISOString() ?? null,
+  eventEndDate: fields.eventEndDate?.toISOString() ?? null,
+  eventVenue: fields.eventVenue,
+  eventVenueAddress: fields.eventVenueAddress,
+  isFeatured: fields.isFeatured,
+  sortOrder: fields.sortOrder,
+  offers: fields.offers,
+  easyAccess: fields.easyAccess,
+});
 
 const ArticleEditor = () => {
   const { id } = useParams();
@@ -91,6 +142,7 @@ const ArticleEditor = () => {
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
   const autoSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const initialLoadDoneRef = useRef(false);
+  const [hasDraftData, setHasDraftData] = useState(false);
 
   // Event fields
   const [category, setCategory] = useState<ArticleCategory | ''>('');
@@ -109,40 +161,67 @@ const ArticleEditor = () => {
   const [easyAccess, setEasyAccess] = useState<EasyAccess>({ venue: '', travelTime: '', metroLine: '', metroRoute: '' });
   const [transportOpen, setTransportOpen] = useState(false);
 
-  // Mark initial load as done after data loads
+  // Load article - prefer draft_data over published fields if it exists
   useEffect(() => {
     if (!isNew && id) {
       supabase.from('articles').select('*').eq('id', id).single().then(({ data }) => {
         if (data) {
-          setTitle(data.title);
-          setSlug(data.slug);
-          setContent(data.content ?? '');
-          setExcerpt(data.excerpt ?? '');
-          setCoverImageUrl(data.cover_image_url ?? '');
-          setHeroImageUrl(data.hero_image_url ?? '');
-          setStatus(data.status);
-          setSeoTitle(data.seo_title ?? '');
-          setSeoDescription(data.seo_description ?? '');
-          setSeoKeywords(data.seo_keywords ?? '');
-          setCategory(data.category ?? '');
-          setEventDate(data.event_date ? new Date(data.event_date) : undefined);
-          setEventEndDate(data.event_end_date ? new Date(data.event_end_date) : undefined);
-          setEventVenue(data.event_venue ?? '');
-          setEventVenueAddress(data.event_venue_address ?? '');
-          setIsFeatured(data.is_featured ?? false);
-          setSortOrder(data.sort_order ?? 0);
-          setOffers(Array.isArray(data.offers) ? (data.offers as unknown as Offer[]) : []);
-          if (data.easy_access && typeof data.easy_access === 'object' && !Array.isArray(data.easy_access)) {
-            const ea = data.easy_access as Record<string, unknown>;
-            setEasyAccess({
-              venue: (ea.venue as string) ?? '',
-              travelTime: (ea.travelTime as string) ?? '',
-              metroLine: (ea.metroLine as string) ?? '',
-              metroRoute: (ea.metroRoute as string) ?? '',
-            });
+          // Check if there's pending draft data
+          const draft = data.draft_data as unknown as DraftData | null;
+          const hasDraft = draft !== null && draft !== undefined;
+          setHasDraftData(hasDraft);
+
+          if (hasDraft && draft) {
+            // Load from draft_data (pending changes)
+            setTitle(draft.title ?? data.title);
+            setSlug(draft.slug ?? data.slug);
+            setContent(draft.content ?? data.content ?? '');
+            setExcerpt(draft.excerpt ?? data.excerpt ?? '');
+            setCoverImageUrl(draft.coverImageUrl ?? data.cover_image_url ?? '');
+            setHeroImageUrl(draft.heroImageUrl ?? data.hero_image_url ?? '');
+            setSeoTitle(draft.seoTitle ?? data.seo_title ?? '');
+            setSeoDescription(draft.seoDescription ?? data.seo_description ?? '');
+            setSeoKeywords(draft.seoKeywords ?? data.seo_keywords ?? '');
+            setCategory(draft.category ?? data.category ?? '');
+            setEventDate(draft.eventDate ? new Date(draft.eventDate) : undefined);
+            setEventEndDate(draft.eventEndDate ? new Date(draft.eventEndDate) : undefined);
+            setEventVenue(draft.eventVenue ?? data.event_venue ?? '');
+            setEventVenueAddress(draft.eventVenueAddress ?? data.event_venue_address ?? '');
+            setIsFeatured(draft.isFeatured ?? data.is_featured ?? false);
+            setSortOrder(draft.sortOrder ?? data.sort_order ?? 0);
+            setOffers(Array.isArray(draft.offers) ? draft.offers : []);
+            setEasyAccess(draft.easyAccess ?? { venue: '', travelTime: '', metroLine: '', metroRoute: '' });
+          } else {
+            // Load from published fields
+            setTitle(data.title);
+            setSlug(data.slug);
+            setContent(data.content ?? '');
+            setExcerpt(data.excerpt ?? '');
+            setCoverImageUrl(data.cover_image_url ?? '');
+            setHeroImageUrl(data.hero_image_url ?? '');
+            setSeoTitle(data.seo_title ?? '');
+            setSeoDescription(data.seo_description ?? '');
+            setSeoKeywords(data.seo_keywords ?? '');
+            setCategory(data.category ?? '');
+            setEventDate(data.event_date ? new Date(data.event_date) : undefined);
+            setEventEndDate(data.event_end_date ? new Date(data.event_end_date) : undefined);
+            setEventVenue(data.event_venue ?? '');
+            setEventVenueAddress(data.event_venue_address ?? '');
+            setIsFeatured(data.is_featured ?? false);
+            setSortOrder(data.sort_order ?? 0);
+            setOffers(Array.isArray(data.offers) ? (data.offers as unknown as Offer[]) : []);
+            if (data.easy_access && typeof data.easy_access === 'object' && !Array.isArray(data.easy_access)) {
+              const ea = data.easy_access as Record<string, unknown>;
+              setEasyAccess({
+                venue: (ea.venue as string) ?? '',
+                travelTime: (ea.travelTime as string) ?? '',
+                metroLine: (ea.metroLine as string) ?? '',
+                metroRoute: (ea.metroRoute as string) ?? '',
+              });
+            }
           }
+          setStatus(data.status);
           setAutoSlug(false);
-          // Mark load done after a tick so initial state changes don't trigger autosave
           setTimeout(() => { initialLoadDoneRef.current = true; }, 500);
         }
       });
@@ -162,47 +241,44 @@ const ArticleEditor = () => {
     }
   }, [title, content, excerpt, coverImageUrl, heroImageUrl, category, eventDate, eventEndDate, eventVenue, eventVenueAddress, isFeatured, sortOrder, offers, easyAccess, seoTitle, seoDescription, seoKeywords]);
 
-  // Auto-save every 30 seconds when there are unsaved changes
+  // Auto-save every 30 seconds - saves to draft_data only (never touches published fields)
   useEffect(() => {
     if (!hasUnsavedChanges || !title.trim() || !slug.trim()) return;
 
     autoSaveTimerRef.current = setTimeout(async () => {
-      // Don't auto-save if already saving or if currently published (avoid overwriting published status)
       if (saving) return;
       
       const latestContent = contentEditorRef.current?.getHTML() ?? content;
-      const payload = {
+      const draftPayload = buildDraftData({
         title, slug, content: latestContent, excerpt,
-        cover_image_url: coverImageUrl || null,
-        hero_image_url: heroImageUrl || null,
-        status: status as 'draft' | 'published',
-        seo_title: seoTitle || null,
-        seo_description: seoDescription || null,
-        seo_keywords: seoKeywords || null,
-        category: category || null,
-        event_date: eventDate?.toISOString() ?? null,
-        event_end_date: eventEndDate?.toISOString() ?? null,
-        event_venue: eventVenue || null,
-        event_venue_address: eventVenueAddress || null,
-        is_featured: isFeatured,
-        sort_order: sortOrder,
-        offers: offers.length > 0 ? offers : [],
-        easy_access: (easyAccess.venue || easyAccess.travelTime) ? easyAccess : null,
-      };
+        coverImageUrl, heroImageUrl,
+        seoTitle, seoDescription, seoKeywords,
+        category, eventDate, eventEndDate,
+        eventVenue, eventVenueAddress,
+        isFeatured, sortOrder, offers, easyAccess,
+      });
 
       let error;
       if (isNew) {
         if (!userProfile) return;
-        const res = await supabase.from('articles').insert({ ...payload, status: 'draft', created_by: userProfile.id } as any).select().single();
+        const res = await supabase.from('articles').insert({
+          title, slug, status: 'draft' as const,
+          created_by: userProfile.id,
+          draft_data: draftPayload as any,
+        } as any).select().single();
         error = res.error;
         if (!error && res.data) navigate(`/admin/articles/${res.data.id}`, { replace: true });
       } else {
-        const res = await supabase.from('articles').update(payload as any).eq('id', id!);
+        // Only save to draft_data, never touch live fields
+        const res = await supabase.from('articles').update({
+          draft_data: draftPayload as any,
+        } as any).eq('id', id!);
         error = res.error;
       }
 
       if (!error) {
         setHasUnsavedChanges(false);
+        setHasDraftData(true);
         setLastSaved(new Date());
       }
     }, 30000);
@@ -257,24 +333,68 @@ const ArticleEditor = () => {
     setOffers(updated);
   };
 
-  const save = async (newStatus?: 'draft' | 'published') => {
+  // Save draft manually (saves to draft_data only)
+  const saveDraft = async () => {
     if (!title.trim() || !slug.trim()) {
       toast({ title: 'Titre et slug requis', variant: 'destructive' });
       return;
     }
     setSaving(true);
-    const finalStatus = newStatus ?? status;
     const latestContent = contentEditorRef.current?.getHTML() ?? content;
+    if (latestContent !== content) setContent(latestContent);
 
-    if (latestContent !== content) {
-      setContent(latestContent);
+    const draftPayload = buildDraftData({
+      title, slug, content: latestContent, excerpt,
+      coverImageUrl, heroImageUrl,
+      seoTitle, seoDescription, seoKeywords,
+      category, eventDate, eventEndDate,
+      eventVenue, eventVenueAddress,
+      isFeatured, sortOrder, offers, easyAccess,
+    });
+
+    let error;
+    if (isNew) {
+      if (!userProfile) { setSaving(false); return; }
+      const res = await supabase.from('articles').insert({
+        title, slug, status: 'draft' as const,
+        created_by: userProfile.id,
+        draft_data: draftPayload as any,
+      } as any).select().single();
+      error = res.error;
+      if (!error && res.data) navigate(`/admin/articles/${res.data.id}`, { replace: true });
+    } else {
+      const res = await supabase.from('articles').update({
+        draft_data: draftPayload as any,
+      } as any).eq('id', id!);
+      error = res.error;
     }
+
+    setSaving(false);
+    if (error) {
+      toast({ title: 'Erreur', description: error.message, variant: 'destructive' });
+    } else {
+      setHasUnsavedChanges(false);
+      setHasDraftData(true);
+      setLastSaved(new Date());
+      toast({ title: 'Brouillon sauvegardé' });
+    }
+  };
+
+  // Publish: apply all changes to live fields AND clear draft_data
+  const publish = async () => {
+    if (!title.trim() || !slug.trim()) {
+      toast({ title: 'Titre et slug requis', variant: 'destructive' });
+      return;
+    }
+    setSaving(true);
+    const latestContent = contentEditorRef.current?.getHTML() ?? content;
+    if (latestContent !== content) setContent(latestContent);
 
     const payload = {
       title, slug, content: latestContent, excerpt,
       cover_image_url: coverImageUrl || null,
       hero_image_url: heroImageUrl || null,
-      status: finalStatus,
+      status: 'published' as const,
       seo_title: seoTitle || null,
       seo_description: seoDescription || null,
       seo_keywords: seoKeywords || null,
@@ -287,6 +407,7 @@ const ArticleEditor = () => {
       sort_order: sortOrder,
       offers: offers.length > 0 ? offers : [],
       easy_access: (easyAccess.venue || easyAccess.travelTime) ? easyAccess : null,
+      draft_data: null, // Clear draft on publish
     };
 
     let error;
@@ -304,10 +425,11 @@ const ArticleEditor = () => {
     if (error) {
       toast({ title: 'Erreur', description: error.message, variant: 'destructive' });
     } else {
-      setStatus(finalStatus);
+      setStatus('published');
       setLastSaved(new Date());
       setHasUnsavedChanges(false);
-      toast({ title: finalStatus === 'published' ? 'Article publié !' : 'Brouillon sauvegardé' });
+      setHasDraftData(false);
+      toast({ title: 'Article publié !' });
     }
   };
 
@@ -327,6 +449,14 @@ const ArticleEditor = () => {
             {lastSaved ? `Sauvegardé à ${lastSaved.toLocaleTimeString('fr-FR')}` : hasUnsavedChanges ? 'Sauvegarde auto dans 30s…' : ''}
           </span>
         </div>
+
+        {/* Draft indicator for published articles */}
+        {status === 'published' && hasDraftData && (
+          <div className="flex items-center gap-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800">
+            <AlertTriangle className="h-4 w-4 shrink-0" />
+            <span>Cet article a des <strong>modifications en brouillon</strong> non publiées. Cliquez sur « Publier » pour les rendre visibles sur le site.</span>
+          </div>
+        )}
 
         <div className="space-y-4">
           {/* Title + Slug */}
@@ -574,10 +704,10 @@ const ArticleEditor = () => {
                 </a>
               </Button>
             )}
-            <Button variant="outline" onClick={() => save('draft')} disabled={saving}>
+            <Button variant="outline" onClick={saveDraft} disabled={saving}>
               <Save className="h-4 w-4 mr-2" /> Sauvegarder brouillon
             </Button>
-            <Button onClick={() => save('published')} disabled={saving}>
+            <Button onClick={publish} disabled={saving}>
               <Send className="h-4 w-4 mr-2" /> Publier
             </Button>
           </div>
