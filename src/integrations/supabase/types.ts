@@ -21,6 +21,7 @@ export type Database = {
           cover_image_url: string | null
           created_at: string
           created_by: string
+          draft_data: Json | null
           easy_access: Json | null
           event_date: string | null
           event_end_date: string | null
@@ -49,6 +50,7 @@ export type Database = {
           cover_image_url?: string | null
           created_at?: string
           created_by: string
+          draft_data?: Json | null
           easy_access?: Json | null
           event_date?: string | null
           event_end_date?: string | null
@@ -77,6 +79,7 @@ export type Database = {
           cover_image_url?: string | null
           created_at?: string
           created_by?: string
+          draft_data?: Json | null
           easy_access?: Json | null
           event_date?: string | null
           event_end_date?: string | null
