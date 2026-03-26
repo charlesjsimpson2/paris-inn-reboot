@@ -262,34 +262,8 @@ const Seminaires = () => {
         </div>
       </section>
 
-      {/* Related Articles */}
-      <section className="py-20 bg-burgundy/10 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-burgundy/5 to-transparent" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <span className="text-burgundy font-semibold text-sm uppercase tracking-[0.2em]">En savoir plus</span>
-            <h2 className="font-display text-3xl md:text-4xl text-foreground mt-3">Découvrez nos espaces & services</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              { title: "Espace Coworking", desc: "Un espace de travail flexible et inspirant au cœur du 13ème arrondissement", href: "/seminaires/espace-coworking-a-paris-13", icon: Users },
-              { title: "Espace Extérieur", desc: "Une parenthèse nature pour vos pauses et moments de détente", href: "/seminaires/espace-exterieur-une-pause-a-paris-13", icon: Coffee },
-              { title: "Connectivité & Équipements", desc: "Des outils professionnels haut de gamme pour vos séminaires", href: "/seminaires/connectivite-equipements-seminaire-a-paris-13", icon: Projector },
-            ].map((item, idx) => (
-              <a key={idx} href={item.href} className="group bg-background border-2 border-burgundy/20 p-8 hover:border-burgundy/60 hover:shadow-xl hover:shadow-burgundy/10 transition-all duration-300 flex flex-col h-full rounded-lg hover:-translate-y-1">
-                <div className="w-12 h-12 bg-burgundy/15 rounded-lg flex items-center justify-center mb-5 group-hover:bg-burgundy/25 transition-colors">
-                  <item.icon className="w-6 h-6 text-burgundy" />
-                </div>
-                <h3 className="font-display text-xl text-foreground group-hover:text-burgundy transition-colors min-h-[3rem] flex items-center">{item.title}</h3>
-                <p className="text-muted-foreground text-sm flex-1 mt-3 leading-relaxed">{item.desc}</p>
-                <span className="text-burgundy text-sm font-bold mt-5 inline-flex items-center gap-1.5 group-hover:gap-3 transition-all border-b-2 border-burgundy/30 pb-1 self-start group-hover:border-burgundy/60">
-                  Voir la page <span className="transition-transform group-hover:translate-x-1">→</span>
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Articles dynamiques */}
+      <SeminarArticlesSection />
 
       {/* CTA Section */}
       <section className="py-16 bg-primary">
