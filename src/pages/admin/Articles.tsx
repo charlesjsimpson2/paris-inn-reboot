@@ -82,8 +82,10 @@ const ArticlesPage = () => {
                     {canManageArticles && (
                       <TableCell className="text-right">
                         <div className="flex justify-end gap-2">
-                          <Button variant="ghost" size="icon" onClick={() => navigate(`/admin/articles/${article.id}`)}>
-                            <Pencil className="h-4 w-4" />
+                          <Button variant="ghost" size="icon" asChild>
+                            <a href={`/admin/articles/${article.id}`}>
+                              <Pencil className="h-4 w-4" />
+                            </a>
                           </Button>
                           {article.status === 'published' && (
                             <Button variant="ghost" size="icon" asChild>
