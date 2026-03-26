@@ -68,6 +68,14 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
         setNotFound(true);
         setArticle(null);
       } else {
+        // Check if the article is being accessed via the correct URL prefix
+        const correctBasePath = getCategoryBasePath(data.category);
+        if (!forcedSlug && canonicalBasePath !== correctBasePath) {
+          // Wrong prefix — redirect to the correct one
+          setRedirectTo(`${correctBasePath}/${data.slug}`);
+          setLoading(false);
+          return;
+        }
         setArticle(data);
         setNotFound(false);
       }
@@ -76,7 +84,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
     };
 
     fetchArticle();
-  }, [slug]);
+  }, [slug, forcedSlug, canonicalBasePath]);
 
   const description = useMemo(() => {
     if (!article) return "";
