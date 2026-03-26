@@ -430,6 +430,21 @@ const ArticleEditor = () => {
       setHasUnsavedChanges(false);
       setHasDraftData(false);
       toast({ title: 'Article publié !' });
+
+      // Trigger automatic translation in background
+      const articleId = isNew ? undefined : id;
+      if (articleId) {
+        supabase.functions.invoke('translate-article', {
+          body: { article_id: articleId },
+        }).then(({ error: trErr }) => {
+          if (trErr) {
+            console.error('Translation error:', trErr);
+            toast({ title: 'Traduction en cours…', description: 'Certaines traductions peuvent prendre un moment.', variant: 'default' });
+          } else {
+            toast({ title: 'Traductions générées ✓', description: 'L\'article a été traduit dans 5 langues.' });
+          }
+        });
+      }
     }
   };
 

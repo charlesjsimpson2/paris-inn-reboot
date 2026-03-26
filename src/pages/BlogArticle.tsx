@@ -8,6 +8,15 @@ import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 import { DynamicEventArticle } from "@/components/DynamicEventArticle";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+interface Translation {
+  title: string | null;
+  excerpt: string | null;
+  content: string | null;
+  seo_title: string | null;
+  seo_description: string | null;
+}
 
 interface BlogArticleProps {
   forcedSlug?: string;
@@ -45,7 +54,9 @@ const getCategoryBasePath = (category: Tables<"articles">["category"]) => {
 const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticleProps) => {
   const { slug: routeSlug } = useParams<{ slug: string }>();
   const slug = forcedSlug ?? routeSlug;
+  const { language } = useLanguage();
   const [article, setArticle] = useState<Tables<"articles"> | null>(null);
+  const [translation, setTranslation] = useState<Translation | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [redirectTo, setRedirectTo] = useState<string | null>(null);
@@ -87,15 +98,39 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
     fetchArticle();
   }, [slug, forcedSlug, canonicalBasePath]);
 
+  // Fetch translation when article and language are ready
+  useEffect(() => {
+    if (!article || language === "fr") {
+      setTranslation(null);
+      return;
+    }
+    const fetchTranslation = async () => {
+      const { data } = await supabase
+        .from("article_translations")
+        .select("title, excerpt, content, seo_title, seo_description")
+        .eq("article_id", article.id)
+        .eq("language", language)
+        .maybeSingle();
+      setTranslation(data as Translation | null);
+    };
+    fetchTranslation();
+  }, [article, language]);
+
+  // Resolved fields (translation overrides original)
+  const displayTitle = translation?.title || article?.title || "";
+  const displayExcerpt = translation?.excerpt || article?.excerpt || null;
+  const displayContent = translation?.content || article?.content || "";
+  const displaySeoTitle = translation?.seo_title || article?.seo_title || displayTitle;
+  const displaySeoDescription = translation?.seo_description || article?.seo_description || null;
+
   const description = useMemo(() => {
     if (!article) return "";
-
     return (
-      article.seo_description ||
-      article.excerpt ||
-      stripHtml(article.content || "").slice(0, 155)
+      displaySeoDescription ||
+      displayExcerpt ||
+      stripHtml(displayContent).slice(0, 155)
     );
-  }, [article]);
+  }, [article, displaySeoDescription, displayExcerpt, displayContent]);
 
   const heroImage = article?.hero_image_url || article?.cover_image_url || undefined;
   const publishedDate = formatDate(article?.event_date ?? article?.created_at ?? null);
@@ -150,7 +185,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={article.seo_title || article.title}
+        title={displaySeoTitle}
         description={description}
         canonical={`${canonicalBasePath}/${article.slug}`}
         ogImage={heroImage}
@@ -176,14 +211,14 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
               )}
 
               <h1 className="font-display text-4xl leading-tight text-foreground md:text-6xl">
-                {article.title}
+                {displayTitle}
               </h1>
 
-              {(article.excerpt || publishedDate) && (
+              {(displayExcerpt || publishedDate) && (
                 <div className="space-y-3">
-                  {article.excerpt && (
+                  {displayExcerpt && (
                     <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                      {article.excerpt}
+                      {displayExcerpt}
                     </p>
                   )}
                   {publishedDate && (
@@ -204,7 +239,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
               <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border bg-card">
                 <img
                   src={heroImage}
-                  alt={article.title}
+                  alt={displayTitle}
                   className="h-[280px] w-full object-cover md:h-[480px]"
                   loading="eager"
                 />
@@ -218,7 +253,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
             <article className="mx-auto max-w-3xl">
               <div
                 className="prose prose-lg max-w-none whitespace-pre-wrap prose-headings:font-display prose-h2:text-3xl prose-h3:text-2xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-strong:text-foreground prose-a:text-primary prose-a:underline prose-a:underline-offset-2"
-                dangerouslySetInnerHTML={{ __html: article.content || "" }}
+                dangerouslySetInnerHTML={{ __html: displayContent }}
               />
             </article>
           </div>
