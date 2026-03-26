@@ -185,7 +185,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={article.seo_title || article.title}
+        title={displaySeoTitle}
         description={description}
         canonical={`${canonicalBasePath}/${article.slug}`}
         ogImage={heroImage}
@@ -211,14 +211,14 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
               )}
 
               <h1 className="font-display text-4xl leading-tight text-foreground md:text-6xl">
-                {article.title}
+                {displayTitle}
               </h1>
 
-              {(article.excerpt || publishedDate) && (
+              {(displayExcerpt || publishedDate) && (
                 <div className="space-y-3">
-                  {article.excerpt && (
+                  {displayExcerpt && (
                     <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                      {article.excerpt}
+                      {displayExcerpt}
                     </p>
                   )}
                   {publishedDate && (
@@ -239,7 +239,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
               <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border bg-card">
                 <img
                   src={heroImage}
-                  alt={article.title}
+                  alt={displayTitle}
                   className="h-[280px] w-full object-cover md:h-[480px]"
                   loading="eager"
                 />
@@ -253,7 +253,8 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
             <article className="mx-auto max-w-3xl">
               <div
                 className="prose prose-lg max-w-none whitespace-pre-wrap prose-headings:font-display prose-h2:text-3xl prose-h3:text-2xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-strong:text-foreground prose-a:text-primary prose-a:underline prose-a:underline-offset-2"
-                dangerouslySetInnerHTML={{ __html: article.content || "" }}
+                dangerouslySetInnerHTML={{ __html: displayContent }}
+              />
               />
             </article>
           </div>
