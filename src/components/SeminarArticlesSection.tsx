@@ -21,7 +21,7 @@ export const SeminarArticlesSection = () => {
     const fetchArticles = async () => {
       const { data } = await supabase
         .from("articles")
-        .select("id, title, slug, excerpt, cover_image_url")
+        .select("id, title, slug, excerpt, cover_image_url, hero_image_url")
         .eq("status", "published")
         .eq("category", "seminaires")
         .order("sort_order", { ascending: true, nullsFirst: false })
