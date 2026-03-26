@@ -100,6 +100,10 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
   const heroImage = article?.hero_image_url || article?.cover_image_url || undefined;
   const publishedDate = formatDate(article?.event_date ?? article?.created_at ?? null);
 
+  if (redirectTo) {
+    return <Navigate to={redirectTo} replace />;
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
