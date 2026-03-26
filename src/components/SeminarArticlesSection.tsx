@@ -10,6 +10,7 @@ interface ArticleSummary {
   slug: string;
   excerpt: string | null;
   cover_image_url: string | null;
+  hero_image_url: string | null;
 }
 
 export const SeminarArticlesSection = () => {
