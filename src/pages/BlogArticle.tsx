@@ -48,6 +48,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
   const [article, setArticle] = useState<Tables<"articles"> | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const [redirectTo, setRedirectTo] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchArticle = async () => {
