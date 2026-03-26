@@ -14,6 +14,53 @@ export type Database = {
   }
   public: {
     Tables: {
+      article_translations: {
+        Row: {
+          article_id: string
+          content: string | null
+          created_at: string
+          excerpt: string | null
+          id: string
+          language: string
+          seo_description: string | null
+          seo_title: string | null
+          title: string | null
+          updated_at: string
+        }
+        Insert: {
+          article_id: string
+          content?: string | null
+          created_at?: string
+          excerpt?: string | null
+          id?: string
+          language: string
+          seo_description?: string | null
+          seo_title?: string | null
+          title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          article_id?: string
+          content?: string | null
+          created_at?: string
+          excerpt?: string | null
+          id?: string
+          language?: string
+          seo_description?: string | null
+          seo_title?: string | null
+          title?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "article_translations_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       articles: {
         Row: {
           category: Database["public"]["Enums"]["article_category"] | null
