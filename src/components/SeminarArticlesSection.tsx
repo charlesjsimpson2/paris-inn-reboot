@@ -52,10 +52,10 @@ export const SeminarArticlesSection = () => {
               to={`/seminaires/${article.slug}`}
               className="group bg-background border-2 border-burgundy/20 overflow-hidden hover:border-burgundy/60 hover:shadow-xl hover:shadow-burgundy/10 transition-all duration-300 flex flex-col h-full rounded-lg hover:-translate-y-1"
             >
-              {article.cover_image_url ? (
+              {(article.cover_image_url || article.hero_image_url) ? (
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
-                    src={article.cover_image_url}
+                    src={article.cover_image_url || article.hero_image_url || ''}
                     alt={article.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
