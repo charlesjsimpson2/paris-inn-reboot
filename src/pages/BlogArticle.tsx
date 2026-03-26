@@ -8,8 +8,15 @@ import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 import { DynamicEventArticle } from "@/components/DynamicEventArticle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-interface BlogArticleProps {
+interface Translation {
+  title: string | null;
+  excerpt: string | null;
+  content: string | null;
+  seo_title: string | null;
+  seo_description: string | null;
+}
   forcedSlug?: string;
   canonicalBasePath?: string;
 }
