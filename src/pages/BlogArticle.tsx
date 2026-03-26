@@ -98,15 +98,39 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
     fetchArticle();
   }, [slug, forcedSlug, canonicalBasePath]);
 
+  // Fetch translation when article and language are ready
+  useEffect(() => {
+    if (!article || language === "fr") {
+      setTranslation(null);
+      return;
+    }
+    const fetchTranslation = async () => {
+      const { data } = await supabase
+        .from("article_translations")
+        .select("title, excerpt, content, seo_title, seo_description")
+        .eq("article_id", article.id)
+        .eq("language", language)
+        .maybeSingle();
+      setTranslation(data as Translation | null);
+    };
+    fetchTranslation();
+  }, [article, language]);
+
+  // Resolved fields (translation overrides original)
+  const displayTitle = translation?.title || article?.title || "";
+  const displayExcerpt = translation?.excerpt || article?.excerpt || null;
+  const displayContent = translation?.content || article?.content || "";
+  const displaySeoTitle = translation?.seo_title || article?.seo_title || displayTitle;
+  const displaySeoDescription = translation?.seo_description || article?.seo_description || null;
+
   const description = useMemo(() => {
     if (!article) return "";
-
     return (
-      article.seo_description ||
-      article.excerpt ||
-      stripHtml(article.content || "").slice(0, 155)
+      displaySeoDescription ||
+      displayExcerpt ||
+      stripHtml(displayContent).slice(0, 155)
     );
-  }, [article]);
+  }, [article, displaySeoDescription, displayExcerpt, displayContent]);
 
   const heroImage = article?.hero_image_url || article?.cover_image_url || undefined;
   const publishedDate = formatDate(article?.event_date ?? article?.created_at ?? null);
