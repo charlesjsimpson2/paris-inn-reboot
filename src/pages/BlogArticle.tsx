@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -48,6 +48,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
   const [article, setArticle] = useState<Tables<"articles"> | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const [redirectTo, setRedirectTo] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -68,6 +69,14 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
         setNotFound(true);
         setArticle(null);
       } else {
+        // Check if the article is being accessed via the correct URL prefix
+        const correctBasePath = getCategoryBasePath(data.category);
+        if (!forcedSlug && canonicalBasePath !== correctBasePath) {
+          // Wrong prefix — redirect to the correct one
+          setRedirectTo(`${correctBasePath}/${data.slug}`);
+          setLoading(false);
+          return;
+        }
         setArticle(data);
         setNotFound(false);
       }
@@ -76,7 +85,7 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
     };
 
     fetchArticle();
-  }, [slug]);
+  }, [slug, forcedSlug, canonicalBasePath]);
 
   const description = useMemo(() => {
     if (!article) return "";
@@ -90,6 +99,10 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
 
   const heroImage = article?.hero_image_url || article?.cover_image_url || undefined;
   const publishedDate = formatDate(article?.event_date ?? article?.created_at ?? null);
+
+  if (redirectTo) {
+    return <Navigate to={redirectTo} replace />;
+  }
 
   if (loading) {
     return (
