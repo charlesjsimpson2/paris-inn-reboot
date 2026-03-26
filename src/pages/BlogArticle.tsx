@@ -255,7 +255,6 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
                 className="prose prose-lg max-w-none whitespace-pre-wrap prose-headings:font-display prose-h2:text-3xl prose-h3:text-2xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-strong:text-foreground prose-a:text-primary prose-a:underline prose-a:underline-offset-2"
                 dangerouslySetInnerHTML={{ __html: displayContent }}
               />
-              />
             </article>
           </div>
         </section>
