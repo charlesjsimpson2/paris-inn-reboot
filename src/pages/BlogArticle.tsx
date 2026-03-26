@@ -17,6 +17,8 @@ interface Translation {
   seo_title: string | null;
   seo_description: string | null;
 }
+
+interface BlogArticleProps {
   forcedSlug?: string;
   canonicalBasePath?: string;
 }
