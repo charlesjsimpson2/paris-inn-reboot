@@ -2092,6 +2092,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Book your stay',
     'discoverPage.quartier.readMore': 'Read more',
     'nav.discover': 'Discover Paris',
+    'nav.tips': 'Our tips',
 
     'chinatown.back': 'Back to Discover Paris',
     'chinatown.badge': 'Paris 13th',
