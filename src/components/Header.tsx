@@ -16,6 +16,7 @@ const getNavItems = (t: (key: string) => string) => [
   { name: t('nav.location'), href: "/localisation" },
   { name: t('nav.discover'), href: "/decouvrir-paris" },
   { name: t('nav.events'), href: "/evenements" },
+  { name: t('nav.tips') || "Nos conseils", href: "/conseils" },
   { name: t('nav.contact'), href: "/contact" },
 ];
 
