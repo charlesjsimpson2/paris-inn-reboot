@@ -237,6 +237,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'En savoir plus',
     'nav.discover': 'Découvrir Paris',
     'nav.tips': 'Nos conseils',
+    'nav.wifi': 'Connectivité Premium',
 
     // Chinatown page
     'chinatown.back': 'Retour à Découvrir Paris',
@@ -2093,6 +2094,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Read more',
     'nav.discover': 'Discover Paris',
     'nav.tips': 'Our tips',
+    'nav.wifi': 'Premium Connectivity',
 
     'chinatown.back': 'Back to Discover Paris',
     'chinatown.badge': 'Paris 13th',
@@ -3687,6 +3689,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Saber más',
     'nav.discover': 'Descubrir París',
     'nav.tips': 'Nuestros consejos',
+    'nav.wifi': 'Conectividad Premium',
 
     'chinatown.back': 'Volver a Descubrir París',
     'chinatown.badge': 'París 13°',
@@ -5282,6 +5285,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Scopri di più',
     'nav.discover': 'Scoprire Parigi',
     'nav.tips': 'I nostri consigli',
+    'nav.wifi': 'Connettività Premium',
 
     'chinatown.back': 'Torna a Scoprire Parigi',
     'chinatown.badge': 'Parigi 13°',
@@ -6877,6 +6881,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Saiba mais',
     'nav.discover': 'Descobrir Paris',
     'nav.tips': 'Nossas dicas',
+    'nav.wifi': 'Conectividade Premium',
 
     'chinatown.back': 'Voltar a Descobrir Paris',
     'chinatown.badge': 'Paris 13°',
@@ -8478,6 +8483,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Mehr erfahren',
     'nav.discover': 'Paris entdecken',
     'nav.tips': 'Unsere Tipps',
+    'nav.wifi': 'Premium-Konnektivität',
 
     'chinatown.back': 'Zurück zu Paris entdecken',
     'chinatown.badge': 'Paris 13.',
