@@ -8477,6 +8477,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Ihren Aufenthalt buchen',
     'discoverPage.quartier.readMore': 'Mehr erfahren',
     'nav.discover': 'Paris entdecken',
+    'nav.tips': 'Unsere Tipps',
 
     'chinatown.back': 'Zurück zu Paris entdecken',
     'chinatown.badge': 'Paris 13.',
