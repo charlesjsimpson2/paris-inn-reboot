@@ -8483,6 +8483,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Mehr erfahren',
     'nav.discover': 'Paris entdecken',
     'nav.tips': 'Unsere Tipps',
+    'nav.wifi': 'Premium-Konnektivität',
 
     'chinatown.back': 'Zurück zu Paris entdecken',
     'chinatown.badge': 'Paris 13.',
