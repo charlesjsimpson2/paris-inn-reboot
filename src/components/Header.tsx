@@ -172,15 +172,15 @@ export const Header = memo(() => {
           </button>
 
           {/* Navigation Links */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-body text-lg uppercase tracking-wider py-3 px-4 transition-all hover:bg-muted hover:text-primary ${
+                className={`font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
                   location.pathname === item.href
-                    ? "text-primary bg-muted/50"
-                    : "text-foreground/80"
+                    ? "text-primary border-l-primary bg-primary/5 font-medium"
+                    : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
