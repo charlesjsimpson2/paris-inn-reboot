@@ -163,6 +163,9 @@ const ArticleEditor = () => {
 
   // Load article - prefer draft_data over published fields if it exists
   useEffect(() => {
+    // Reset tracking ref when article id changes to avoid false "unsaved" flags during load
+    initialLoadDoneRef.current = false;
+
     if (!isNew && id) {
       supabase.from('articles').select('*').eq('id', id).single().then(({ data }) => {
         if (data) {
@@ -173,6 +176,7 @@ const ArticleEditor = () => {
 
           if (hasDraft && draft) {
             // Load from draft_data (pending changes)
+            // Use || for category so empty string in draft falls back to DB value
             setTitle(draft.title ?? data.title);
             setSlug(draft.slug ?? data.slug);
             setContent(draft.content ?? data.content ?? '');
@@ -182,7 +186,7 @@ const ArticleEditor = () => {
             setSeoTitle(draft.seoTitle ?? data.seo_title ?? '');
             setSeoDescription(draft.seoDescription ?? data.seo_description ?? '');
             setSeoKeywords(draft.seoKeywords ?? data.seo_keywords ?? '');
-            setCategory(draft.category ?? data.category ?? '');
+            setCategory(draft.category || data.category || '');
             setEventDate(draft.eventDate ? new Date(draft.eventDate) : undefined);
             setEventEndDate(draft.eventEndDate ? new Date(draft.eventEndDate) : undefined);
             setEventVenue(draft.eventVenue ?? data.event_venue ?? '');
@@ -222,6 +226,7 @@ const ArticleEditor = () => {
           }
           setStatus(data.status);
           setAutoSlug(false);
+          setHasUnsavedChanges(false);
           setTimeout(() => { initialLoadDoneRef.current = true; }, 500);
         }
       });
