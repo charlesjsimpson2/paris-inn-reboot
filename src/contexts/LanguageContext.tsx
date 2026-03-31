@@ -236,6 +236,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Réserver votre séjour',
     'discoverPage.quartier.readMore': 'En savoir plus',
     'nav.discover': 'Découvrir Paris',
+    'nav.tips': 'Nos conseils',
 
     // Chinatown page
     'chinatown.back': 'Retour à Découvrir Paris',
@@ -2091,6 +2092,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Book your stay',
     'discoverPage.quartier.readMore': 'Read more',
     'nav.discover': 'Discover Paris',
+    'nav.tips': 'Our tips',
 
     'chinatown.back': 'Back to Discover Paris',
     'chinatown.badge': 'Paris 13th',
@@ -3684,6 +3686,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Reservar su estancia',
     'discoverPage.quartier.readMore': 'Saber más',
     'nav.discover': 'Descubrir París',
+    'nav.tips': 'Nuestros consejos',
 
     'chinatown.back': 'Volver a Descubrir París',
     'chinatown.badge': 'París 13°',
@@ -5278,6 +5281,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Prenota il tuo soggiorno',
     'discoverPage.quartier.readMore': 'Scopri di più',
     'nav.discover': 'Scoprire Parigi',
+    'nav.tips': 'I nostri consigli',
 
     'chinatown.back': 'Torna a Scoprire Parigi',
     'chinatown.badge': 'Parigi 13°',
@@ -6872,6 +6876,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Reservar sua estadia',
     'discoverPage.quartier.readMore': 'Saiba mais',
     'nav.discover': 'Descobrir Paris',
+    'nav.tips': 'Nossas dicas',
 
     'chinatown.back': 'Voltar a Descobrir Paris',
     'chinatown.badge': 'Paris 13°',
@@ -8472,6 +8477,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.cta.button': 'Ihren Aufenthalt buchen',
     'discoverPage.quartier.readMore': 'Mehr erfahren',
     'nav.discover': 'Paris entdecken',
+    'nav.tips': 'Unsere Tipps',
 
     'chinatown.back': 'Zurück zu Paris entdecken',
     'chinatown.badge': 'Paris 13.',
