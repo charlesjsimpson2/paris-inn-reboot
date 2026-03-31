@@ -182,7 +182,7 @@ const ArticleEditor = () => {
             setSeoTitle(draft.seoTitle ?? data.seo_title ?? '');
             setSeoDescription(draft.seoDescription ?? data.seo_description ?? '');
             setSeoKeywords(draft.seoKeywords ?? data.seo_keywords ?? '');
-            setCategory(draft.category ?? data.category ?? '');
+            setCategory(draft.category || data.category || '');
             setEventDate(draft.eventDate ? new Date(draft.eventDate) : undefined);
             setEventEndDate(draft.eventEndDate ? new Date(draft.eventEndDate) : undefined);
             setEventVenue(draft.eventVenue ?? data.event_venue ?? '');
