@@ -5285,6 +5285,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'discoverPage.quartier.readMore': 'Scopri di più',
     'nav.discover': 'Scoprire Parigi',
     'nav.tips': 'I nostri consigli',
+    'nav.wifi': 'Connettività Premium',
 
     'chinatown.back': 'Torna a Scoprire Parigi',
     'chinatown.badge': 'Parigi 13°',
