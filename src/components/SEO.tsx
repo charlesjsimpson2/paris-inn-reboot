@@ -17,6 +17,7 @@ export const SEO = ({
   ogImage,
   ogType = "website",
   noIndex = false,
+  jsonLd,
 }: SEOProps) => {
   const siteName = "Hôtel Inn Design Paris Place d'Italie";
   const baseUrl = "https://hotel-inn-paris.fr";
