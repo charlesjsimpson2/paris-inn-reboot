@@ -87,13 +87,13 @@ export const HeroSection = () => {
       
       {/* Hero Content - better mobile positioning */}
       <div className="absolute bottom-24 xs:bottom-20 sm:bottom-20 left-0 z-10 px-4 sm:px-6 md:px-12 lg:px-20 max-w-2xl">
-        <p className="text-white font-body uppercase tracking-[0.15em] xs:tracking-[0.2em] sm:tracking-[0.5em] text-[10px] xs:text-xs sm:text-base md:text-lg mb-1.5 xs:mb-2 sm:mb-4 animate-fade-in [animation-delay:200ms] font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+        <p className="text-white font-body uppercase tracking-[0.15em] xs:tracking-[0.2em] sm:tracking-[0.5em] text-[10px] xs:text-xs sm:text-base md:text-lg mb-1.5 xs:mb-2 sm:mb-4 font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
           {t('hero.welcome')}
         </p>
-        <h1 className="font-display text-xl xs:text-2xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-1.5 xs:mb-2 animate-fade-in [animation-delay:400ms] leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+        <h1 className="font-display text-xl xs:text-2xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-1.5 xs:mb-2 leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
           {t('hero.name')}
         </h1>
-        <p className="text-base xs:text-lg sm:text-3xl md:text-4xl text-white font-serif italic animate-fade-in [animation-delay:500ms] drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-2.5 xs:px-3 sm:px-4 py-0.5 xs:py-1">
+        <p className="text-base xs:text-lg sm:text-3xl md:text-4xl text-white font-serif italic drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)] bg-primary/80 inline-block px-2.5 xs:px-3 sm:px-4 py-0.5 xs:py-1">
           {t('hero.location')}
         </p>
       </div>
