@@ -7,6 +7,7 @@ interface SEOProps {
   ogImage?: string;
   ogType?: "website" | "article";
   noIndex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 export const SEO = ({
