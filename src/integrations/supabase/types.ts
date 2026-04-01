@@ -197,40 +197,91 @@ export type Database = {
       site_settings: {
         Row: {
           analytics_id: string | null
+          bing_verification_code: string | null
+          canonical_base_url: string | null
           contact_email: string | null
           contact_phone: string | null
+          default_language: string | null
+          default_og_type: string | null
+          facebook_app_id: string | null
+          facebook_pixel_id: string | null
+          favicon_url: string | null
+          gtm_id: string | null
           hotel_name: string | null
           id: string
+          jsonld_localbusiness: string | null
+          jsonld_organization: string | null
+          llms_txt: string | null
           og_image_url: string | null
           robots_txt: string | null
+          search_console_code: string | null
           site_description: string | null
           site_title: string | null
+          social_facebook: string | null
+          social_google_business: string | null
+          social_instagram: string | null
+          social_linkedin: string | null
+          twitter_handle: string | null
           updated_at: string
           updated_by: string | null
         }
         Insert: {
           analytics_id?: string | null
+          bing_verification_code?: string | null
+          canonical_base_url?: string | null
           contact_email?: string | null
           contact_phone?: string | null
+          default_language?: string | null
+          default_og_type?: string | null
+          facebook_app_id?: string | null
+          facebook_pixel_id?: string | null
+          favicon_url?: string | null
+          gtm_id?: string | null
           hotel_name?: string | null
           id?: string
+          jsonld_localbusiness?: string | null
+          jsonld_organization?: string | null
+          llms_txt?: string | null
           og_image_url?: string | null
           robots_txt?: string | null
+          search_console_code?: string | null
           site_description?: string | null
           site_title?: string | null
+          social_facebook?: string | null
+          social_google_business?: string | null
+          social_instagram?: string | null
+          social_linkedin?: string | null
+          twitter_handle?: string | null
           updated_at?: string
           updated_by?: string | null
         }
         Update: {
           analytics_id?: string | null
+          bing_verification_code?: string | null
+          canonical_base_url?: string | null
           contact_email?: string | null
           contact_phone?: string | null
+          default_language?: string | null
+          default_og_type?: string | null
+          facebook_app_id?: string | null
+          facebook_pixel_id?: string | null
+          favicon_url?: string | null
+          gtm_id?: string | null
           hotel_name?: string | null
           id?: string
+          jsonld_localbusiness?: string | null
+          jsonld_organization?: string | null
+          llms_txt?: string | null
           og_image_url?: string | null
           robots_txt?: string | null
+          search_console_code?: string | null
           site_description?: string | null
           site_title?: string | null
+          social_facebook?: string | null
+          social_google_business?: string | null
+          social_instagram?: string | null
+          social_linkedin?: string | null
+          twitter_handle?: string | null
           updated_at?: string
           updated_by?: string | null
         }
@@ -243,6 +294,39 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      static_page_seo: {
+        Row: {
+          created_at: string
+          id: string
+          og_image_url: string | null
+          page_name: string
+          page_slug: string
+          seo_description: string | null
+          seo_title: string | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          og_image_url?: string | null
+          page_name: string
+          page_slug: string
+          seo_description?: string | null
+          seo_title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          og_image_url?: string | null
+          page_name?: string
+          page_slug?: string
+          seo_description?: string | null
+          seo_title?: string | null
+          updated_at?: string
+        }
+        Relationships: []
       }
       user_profiles: {
         Row: {
