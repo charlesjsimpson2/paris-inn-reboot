@@ -55,6 +55,8 @@ export const HeroSection = () => {
               <img
                 src={image.src}
                 alt={image.alt}
+                width={1280}
+                height={853}
                 loading={index === 0 ? "eager" : "lazy"}
                 decoding={index === 0 ? "sync" : "async"}
                 fetchPriority={index === 0 ? "high" : "low"}
