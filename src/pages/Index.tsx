@@ -23,6 +23,50 @@ const SalonCountdown = lazy(() => import("@/components/SalonCountdown").then(m =
 
 const SectionFallback = () => <div className="min-h-[200px]" />;
 
+const hotelJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hôtel Inn Design Paris Place d'Italie",
+  "url": "https://hotel-inn-paris.fr",
+  "image": "https://hotel-inn-paris.fr/og-image.jpg",
+  "description": "Hôtel 3 étoiles à Paris 13e, 70 chambres lumineuses et insonorisées à 2 min du métro Place d'Italie (lignes 5, 6, 7). Wi-Fi gratuit, climatisation, chambres PMR disponibles.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "178 boulevard Vincent Auriol",
+    "addressLocality": "Paris",
+    "addressRegion": "Île-de-France",
+    "postalCode": "75013",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 48.8346, "longitude": 2.3612 },
+  "telephone": "+33144240101",
+  "email": "hid.paris13@gmail.com",
+  "starRating": { "@type": "Rating", "ratingValue": "3" },
+  "numberOfRooms": 70,
+  "priceRange": "€€",
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuit", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Climatisation", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Chauffage", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "TV écran plat", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Espace bureau", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Plateau de courtoisie", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Salle d'eau privative", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Chambres accessibles PMR", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Chambres insonorisées", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Chambres communicantes", "value": true }
+  ],
+  "publicAccess": true,
+  "isAccessibleForFree": false,
+  "hasMap": "https://www.google.com/maps/place/178+Boulevard+Vincent+Auriol,+75013+Paris",
+  "smokingAllowed": false,
+  "petsAllowed": false
+};
+
 const Index = () => {
   useEventTheme();
 
@@ -32,6 +76,7 @@ const Index = () => {
         title="Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème"
         description="Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner."
         canonical="/"
+        jsonLd={hotelJsonLd}
       />
       
       <EventBanner />

@@ -7,6 +7,7 @@ interface SEOProps {
   ogImage?: string;
   ogType?: "website" | "article";
   noIndex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 export const SEO = ({
@@ -16,6 +17,7 @@ export const SEO = ({
   ogImage,
   ogType = "website",
   noIndex = false,
+  jsonLd,
 }: SEOProps) => {
   const siteName = "Hôtel Inn Design Paris Place d'Italie";
   const baseUrl = "https://hotel-inn-paris.fr";
@@ -50,6 +52,12 @@ export const SEO = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImageUrl} />
+      
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd)}
+        </script>
+      )}
     </Helmet>
   );
 };
