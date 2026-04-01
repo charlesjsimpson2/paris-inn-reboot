@@ -1,6 +1,6 @@
 import { Plane, Building2, Landmark, MapPin, Train } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
+import proximiteMetro from "@/assets/proximite-metro-hotel-inn.webp";
 
 const destinations = [
   { icon: Plane, time: "1h", label: "Aéroport de Paris-Charles de Gaulle" },
