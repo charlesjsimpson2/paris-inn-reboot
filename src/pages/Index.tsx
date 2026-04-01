@@ -67,6 +67,18 @@ const hotelJsonLd = {
   "petsAllowed": false
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hôtel Inn Design Paris Place d'Italie",
+  "url": "https://hotel-inn-paris.fr",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://hotel-inn-paris.fr/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 const Index = () => {
   useEventTheme();
 
