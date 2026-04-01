@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Star, BedDouble, Car, Wine, Wifi } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import hotelMetroFacade from "@/assets/hotel-metro-facade.jpg";
+import hotelMetroFacade from "@/assets/hotel-metro-facade.webp";
 
 export const IntroSection = () => {
   const { t } = useLanguage();

@@ -1,8 +1,8 @@
 import { Clock, Car, Briefcase, Plane, Utensils, MapPin, Wifi, Video, Laptop, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import receptionHotel from "@/assets/reception-hotel.jpg";
-import restaurantPlat from "@/assets/restaurant-plat.jpg";
-import tourEiffel from "@/assets/tour-eiffel.jpg";
+import receptionHotel from "@/assets/reception-hotel.webp";
+import restaurantPlat from "@/assets/restaurant-plat.webp";
+import tourEiffel from "@/assets/tour-eiffel.webp";
 import wifiCoworking from "@/assets/wifi-coworking-hotel.webp";
 
 export const ServicesSection = () => {
@@ -43,6 +43,8 @@ export const ServicesSection = () => {
             <img 
               src={receptionHotel} 
               alt="Réception de l'hôtel" 
+              width={640}
+              height={416}
               loading="lazy"
               decoding="async"
               className="w-full h-40 sm:h-52 object-cover"
