@@ -53,6 +53,13 @@
     <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png" />
     
+    <!-- Critical inline CSS for instant first paint -->
+    <style>
+      #root{min-height:100vh}
+      body{margin:0;background:#f5f3ef;font-family:'DM Sans',system-ui,sans-serif;color:#2a2520}
+      .page-skeleton{min-height:100vh;background:#2a2520}
+    </style>
+    
     <!-- The Hotels Network — deferred after page load -->
     <script>
       window.addEventListener('load', function() {
