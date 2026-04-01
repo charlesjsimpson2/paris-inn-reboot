@@ -67,6 +67,18 @@ const hotelJsonLd = {
   "petsAllowed": false
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hôtel Inn Design Paris Place d'Italie",
+  "url": "https://hotel-inn-paris.fr",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://hotel-inn-paris.fr/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 const Index = () => {
   useEventTheme();
 
@@ -76,7 +88,7 @@ const Index = () => {
         title="Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème"
         description="Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner."
         canonical="/"
-        jsonLd={hotelJsonLd}
+        jsonLd={[hotelJsonLd, websiteJsonLd]}
       />
       
       <EventBanner />
