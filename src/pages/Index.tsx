@@ -88,7 +88,7 @@ const Index = () => {
         title="Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème"
         description="Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner."
         canonical="/"
-        jsonLd={hotelJsonLd}
+        jsonLd={[hotelJsonLd, websiteJsonLd]}
       />
       
       <EventBanner />
