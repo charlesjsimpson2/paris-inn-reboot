@@ -53,8 +53,15 @@
     <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png" />
     
-    <!-- The Hotels Network -->
-    <script src="https://www.thehotelsnetwork.com/js/loader.js?property_id=1164259" async></script>
+    <!-- The Hotels Network — deferred after page load -->
+    <script>
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.thehotelsnetwork.com/js/loader.js?property_id=1164259';
+        s.async = true;
+        document.head.appendChild(s);
+      });
+    </script>
   </head>
 
   <body>
