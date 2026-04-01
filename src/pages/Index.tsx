@@ -1,22 +1,27 @@
 // Hotel Inn Paris - Homepage
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
-import { IntroSection } from "@/components/IntroSection";
-import { AboutSection } from "@/components/AboutSection";
-import { RoomsSection } from "@/components/RoomsSection";
-import { SeminarSection } from "@/components/SeminarSection";
-import { BreakfastSection } from "@/components/BreakfastSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { WiFiSection } from "@/components/WiFiSection";
-import { CTASection } from "@/components/CTASection";
-import { LocationSection } from "@/components/LocationSection";
-import { NewsSection } from "@/components/NewsSection";
 import { SEO } from "@/components/SEO";
-import { EasterSectionDivider } from "@/components/EasterSectionDivider";
 import { EventBanner } from "@/components/EventBanner";
-import { SalonCountdown } from "@/components/SalonCountdown";
 import { useEventTheme } from "@/hooks/useEventTheme";
+
+// Lazy load below-the-fold sections
+const IntroSection = lazy(() => import("@/components/IntroSection").then(m => ({ default: m.IntroSection })));
+const AboutSection = lazy(() => import("@/components/AboutSection").then(m => ({ default: m.AboutSection })));
+const RoomsSection = lazy(() => import("@/components/RoomsSection").then(m => ({ default: m.RoomsSection })));
+const SeminarSection = lazy(() => import("@/components/SeminarSection").then(m => ({ default: m.SeminarSection })));
+const BreakfastSection = lazy(() => import("@/components/BreakfastSection").then(m => ({ default: m.BreakfastSection })));
+const ServicesSection = lazy(() => import("@/components/ServicesSection").then(m => ({ default: m.ServicesSection })));
+const WiFiSection = lazy(() => import("@/components/WiFiSection").then(m => ({ default: m.WiFiSection })));
+const CTASection = lazy(() => import("@/components/CTASection").then(m => ({ default: m.CTASection })));
+const LocationSection = lazy(() => import("@/components/LocationSection").then(m => ({ default: m.LocationSection })));
+const NewsSection = lazy(() => import("@/components/NewsSection").then(m => ({ default: m.NewsSection })));
+const EasterSectionDivider = lazy(() => import("@/components/EasterSectionDivider").then(m => ({ default: m.EasterSectionDivider })));
+const SalonCountdown = lazy(() => import("@/components/SalonCountdown").then(m => ({ default: m.SalonCountdown })));
+
+const SectionFallback = () => <div className="min-h-[200px]" />;
 
 const Index = () => {
   useEventTheme();
@@ -33,21 +38,23 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <SalonCountdown />
-        <NewsSection />
-        <EasterSectionDivider />
-        <IntroSection />
-        <EasterSectionDivider />
-        <AboutSection />
-        <RoomsSection />
-        <EasterSectionDivider />
-        <SeminarSection />
-        <BreakfastSection />
-        <EasterSectionDivider />
-        <ServicesSection />
-        <WiFiSection />
-        <CTASection />
-        <LocationSection />
+        <Suspense fallback={<SectionFallback />}>
+          <SalonCountdown />
+          <NewsSection />
+          <EasterSectionDivider />
+          <IntroSection />
+          <EasterSectionDivider />
+          <AboutSection />
+          <RoomsSection />
+          <EasterSectionDivider />
+          <SeminarSection />
+          <BreakfastSection />
+          <EasterSectionDivider />
+          <ServicesSection />
+          <WiFiSection />
+          <CTASection />
+          <LocationSection />
+        </Suspense>
       </main>
       <Footer />
     </div>
