@@ -43,6 +43,8 @@ export const ServicesSection = () => {
             <img 
               src={receptionHotel} 
               alt="Réception de l'hôtel" 
+              width={640}
+              height={416}
               loading="lazy"
               decoding="async"
               className="w-full h-40 sm:h-52 object-cover"
