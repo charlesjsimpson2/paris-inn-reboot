@@ -1,0 +1,1 @@
+UPDATE site_settings SET analytics_id = 'G-VS3G9CJVNG', gtm_id = 'GTM-P2JQL82K' WHERE id = '6f1550ba-da6e-40eb-b0f0-8df3b809f86d';
