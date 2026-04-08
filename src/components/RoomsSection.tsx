@@ -10,7 +10,7 @@ import chambre4 from "@/assets/gallery/chambre-4.webp";
 
 export const RoomsSection = memo(() => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   const rooms = useMemo(() => [
     {
