@@ -52,7 +52,7 @@ const ConseilsIndex = () => {
 
       <main>
         <section className="border-b border-border bg-muted/30">
-          <div className="container mx-auto px-4 py-14 md:py-20">
+          <div className="container mx-auto px-4 pt-24 pb-14 md:pt-32 md:pb-20">
             <div className="mx-auto max-w-3xl space-y-5 text-center">
               <div className="flex items-center justify-center gap-2">
                 <Lightbulb className="h-5 w-5 text-primary" />
