@@ -2,14 +2,16 @@ import { useState, useEffect, memo, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight, Accessibility, Heater } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 import chambreDouble from "@/assets/chambre-double.webp";
 import chambreTwin from "@/assets/chambre-twin.webp";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";
 import chambre4 from "@/assets/gallery/chambre-4.webp";
 
 export const RoomsSection = memo(() => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const isMobile = useIsMobile();
 
   const rooms = useMemo(() => [
     {
@@ -38,8 +40,7 @@ export const RoomsSection = memo(() => {
     },
   ], [t]);
 
-  // On desktop, we show 2 cards at a time, so max index is ceil(length/2) - 1
-  const maxIndex = Math.ceil(rooms.length / 2) - 1;
+  const maxIndex = isMobile ? rooms.length - 1 : Math.ceil(rooms.length / 2) - 1;
 
   const equipment = useMemo(() => [
     { icon: Bath, label: t('rooms.bathroom') },
@@ -59,6 +60,10 @@ export const RoomsSection = memo(() => {
   const goToNext = () => {
     setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
   };
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [isMobile]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -110,7 +115,9 @@ export const RoomsSection = memo(() => {
             <div 
               className="flex transition-transform duration-500 ease-out gap-3 xs:gap-4 md:gap-6"
               style={{ 
-                transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 16}px))`,
+                transform: isMobile 
+                  ? `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 12}px))`
+                  : `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 24}px))`,
               }}
             >
               {rooms.map((room, index) => (
