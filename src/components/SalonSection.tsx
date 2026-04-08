@@ -50,8 +50,8 @@ const ImageCarousel = ({ images, t }: { images: { src: string; alt: string }[], 
   };
 
   return (
-    <div className="relative group h-full">
-      <div className="aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden">
+    <div className="relative group h-full min-h-[280px] sm:min-h-[340px] lg:min-h-0">
+      <div className="h-full overflow-hidden">
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
@@ -62,21 +62,21 @@ const ImageCarousel = ({ images, t }: { images: { src: string; alt: string }[], 
       <button
         type="button"
         onClick={goToPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 flex h-9 w-9 items-center justify-center bg-background/90 backdrop-blur-sm transition-colors hover:bg-background md:left-4 md:h-10 md:w-10 shadow-lg"
         aria-label={t('seminarsPage.prevImage')}
       >
-        <ChevronLeft className="w-5 h-5 text-charcoal" />
+        <ChevronLeft className="h-5 w-5 text-foreground" />
       </button>
       <button
         type="button"
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 flex h-9 w-9 items-center justify-center bg-background/90 backdrop-blur-sm transition-colors hover:bg-background md:right-4 md:h-10 md:w-10 shadow-lg"
         aria-label={t('seminarsPage.nextImage')}
       >
-        <ChevronRight className="w-5 h-5 text-charcoal" />
+        <ChevronRight className="h-5 w-5 text-foreground" />
       </button>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2 md:bottom-6">
         {images.map((_, index) => (
           <button
             type="button"
@@ -99,23 +99,23 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
   const { t } = useLanguage();
   
   return (
-    <div className="relative min-h-[500px] lg:min-h-[550px]">
+    <div className="relative overflow-hidden lg:min-h-[550px]">
       {/* Image - Full width on one side */}
-      <div className={`absolute inset-y-0 ${reverse ? 'right-0' : 'left-0'} w-full lg:w-[55%]`}>
+      <div className={`relative h-[280px] w-full sm:h-[340px] lg:absolute lg:inset-y-0 lg:h-auto ${reverse ? 'lg:right-0' : 'lg:left-0'} lg:w-[55%]`}>
         <ImageCarousel images={salon.images} t={t} />
       </div>
 
       {/* Content Card - Overlapping */}
-      <div className={`relative z-10 min-h-[500px] lg:min-h-[550px] flex items-center ${reverse ? 'lg:justify-start' : 'lg:justify-end'}`}>
-        <div className={`w-full lg:w-[50%] bg-background/95 backdrop-blur-sm lg:bg-background p-8 lg:p-10 ${reverse ? 'lg:ml-8' : 'lg:mr-8'} lg:my-12 lg:shadow-2xl lg:rounded-sm relative`}>
+      <div className={`relative z-10 flex lg:min-h-[550px] lg:items-center ${reverse ? 'lg:justify-start' : 'lg:justify-end'}`}>
+        <div className={`w-full bg-background p-6 sm:p-8 lg:w-[50%] lg:bg-background/95 lg:backdrop-blur-sm lg:p-10 ${reverse ? 'lg:ml-8' : 'lg:mr-8'} lg:my-12 lg:shadow-2xl lg:rounded-sm relative`}>
           
           {/* Burgundy accent lines on both sides */}
           <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-burgundy" />
           <div className="absolute top-0 bottom-0 right-0 w-1.5 bg-burgundy" />
           
-          <div className="px-6">
+          <div className="px-2 sm:px-4 lg:px-6">
             {/* Name with Surface */}
-            <div className="flex items-baseline gap-3 mb-2">
+            <div className="mb-2 flex flex-wrap items-baseline gap-x-3 gap-y-2">
               <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground">
                 {salon.name}
               </h3>
