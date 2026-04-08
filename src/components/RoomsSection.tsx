@@ -62,6 +62,10 @@ export const RoomsSection = memo(() => {
   };
 
   useEffect(() => {
+    setCurrentIndex(0);
+  }, [isMobile]);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
     }, 7000);
