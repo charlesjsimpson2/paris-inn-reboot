@@ -111,7 +111,9 @@ export const RoomsSection = memo(() => {
             <div 
               className="flex transition-transform duration-500 ease-out gap-3 xs:gap-4 md:gap-6"
               style={{ 
-                transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 16}px))`,
+                transform: isMobile 
+                  ? `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 12}px))`
+                  : `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 24}px))`,
               }}
             >
               {rooms.map((room, index) => (
