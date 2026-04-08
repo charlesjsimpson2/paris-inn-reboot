@@ -40,10 +40,7 @@ export const RoomsSection = memo(() => {
     },
   ], [t]);
 
-  // Responsive: on mobile show 1 card at a time, on desktop show 2
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const cardsPerView = isMobile ? 1 : 2;
-  const maxIndex = cardsPerView === 1 ? rooms.length - 1 : Math.ceil(rooms.length / 2) - 1;
+  const maxIndex = isMobile ? rooms.length - 1 : Math.ceil(rooms.length / 2) - 1;
 
   const equipment = useMemo(() => [
     { icon: Bath, label: t('rooms.bathroom') },
