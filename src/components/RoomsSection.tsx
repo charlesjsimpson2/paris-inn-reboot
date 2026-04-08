@@ -38,8 +38,10 @@ export const RoomsSection = memo(() => {
     },
   ], [t]);
 
-  // On desktop, we show 2 cards at a time, so max index is ceil(length/2) - 1
-  const maxIndex = Math.ceil(rooms.length / 2) - 1;
+  // Responsive: on mobile show 1 card at a time, on desktop show 2
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const cardsPerView = isMobile ? 1 : 2;
+  const maxIndex = cardsPerView === 1 ? rooms.length - 1 : Math.ceil(rooms.length / 2) - 1;
 
   const equipment = useMemo(() => [
     { icon: Bath, label: t('rooms.bathroom') },
