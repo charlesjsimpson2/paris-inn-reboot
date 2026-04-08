@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Wifi, Tv, Briefcase, Snowflake, Bath, CupSoda, ChevronLeft, ChevronRight, Accessibility, Heater } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { useLanguage } from "@/contexts/LanguageContext";
 import chambreDouble from "@/assets/chambre-double.webp";
 import chambreTwin from "@/assets/chambre-twin.webp";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";
