@@ -34,27 +34,27 @@ const WiFiPage = () => {
       <Header />
 
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px]">
+      <section className="relative h-[60vh] min-h-[450px]">
         <img
           src={wifiCoworking}
           alt="WiFi haut débit - Espace de travail à l'hôtel"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-          <div className="container mx-auto">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-primary/30 backdrop-blur-sm">
-                <Wifi className="w-6 h-6 text-primary" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
+        <div className="absolute inset-0 flex items-end">
+          <div className="container mx-auto px-4 sm:px-6 md:px-12 pb-10 md:pb-14">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="p-2.5 bg-primary/20 backdrop-blur-sm rounded-sm">
+                <Wifi className="w-5 h-5 text-primary" />
               </div>
-              <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-sm px-4 py-2">
+              <span className="inline-block bg-primary text-primary-foreground font-body uppercase tracking-[0.15em] text-xs sm:text-sm px-4 py-1.5">
                 {t('wifiPage.badge')}
               </span>
             </div>
-            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               {t('wifiPage.hero.title')}
             </h1>
-            <p className="text-white/80 text-lg md:text-xl mt-3 max-w-2xl">
+            <p className="text-white/85 text-base sm:text-lg md:text-xl mt-3 max-w-2xl leading-relaxed drop-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
               {t('wifiPage.hero.subtitle')}
             </p>
           </div>
