@@ -9,6 +9,7 @@ import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";
 import chambre4 from "@/assets/gallery/chambre-4.webp";
 
 export const RoomsSection = memo(() => {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const isMobile = useIsMobile();
 
