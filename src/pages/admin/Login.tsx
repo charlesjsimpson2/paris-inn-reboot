@@ -60,42 +60,87 @@ const AdminLogin = () => {
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-bold text-foreground">Administration</h1>
-          <p className="text-sm text-muted-foreground">Connectez-vous pour accéder au backoffice</p>
+          <p className="text-sm text-muted-foreground">
+            {resetMode ? 'Entrez votre email pour réinitialiser votre mot de passe' : 'Connectez-vous pour accéder au backoffice'}
+          </p>
         </div>
 
-        <form onSubmit={handleLogin} className="space-y-4 bg-card p-6 rounded-lg border shadow-sm">
-          {error && (
-            <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">{error}</div>
-          )}
-
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@hotel-inn-paris.com"
-              required
-            />
+        {resetSent ? (
+          <div className="bg-card p-6 rounded-lg border shadow-sm text-center space-y-3">
+            <p className="text-sm font-medium text-foreground">Email envoyé !</p>
+            <p className="text-xs text-muted-foreground">
+              Si un compte existe pour <strong>{email}</strong>, vous recevrez un lien de réinitialisation.
+            </p>
+            <Button variant="outline" size="sm" onClick={() => { setResetMode(false); setResetSent(false); }}>
+              Retour à la connexion
+            </Button>
           </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="password">Mot de passe</Label>
-            <Input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
-              required
-            />
-          </div>
-
-          <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? 'Connexion...' : 'Se connecter'}
-          </Button>
-        </form>
+        ) : resetMode ? (
+          <form onSubmit={handleForgotPassword} className="space-y-4 bg-card p-6 rounded-lg border shadow-sm">
+            {error && (
+              <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">{error}</div>
+            )}
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="admin@hotel-inn-paris.com"
+                required
+              />
+            </div>
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading ? 'Envoi...' : 'Envoyer le lien de réinitialisation'}
+            </Button>
+            <button
+              type="button"
+              onClick={() => { setResetMode(false); setError(''); }}
+              className="text-xs text-muted-foreground hover:text-foreground w-full text-center"
+            >
+              Retour à la connexion
+            </button>
+          </form>
+        ) : (
+          <form onSubmit={handleLogin} className="space-y-4 bg-card p-6 rounded-lg border shadow-sm">
+            {error && (
+              <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">{error}</div>
+            )}
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="admin@hotel-inn-paris.com"
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password">Mot de passe</Label>
+              <Input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+                required
+              />
+            </div>
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading ? 'Connexion...' : 'Se connecter'}
+            </Button>
+            <button
+              type="button"
+              onClick={() => { setResetMode(true); setError(''); }}
+              className="text-xs text-muted-foreground hover:text-foreground w-full text-center"
+            >
+              Mot de passe oublié ?
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );
