@@ -64,6 +64,7 @@ const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationRese
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const WiFiPage = lazy(() => import("./pages/WiFi"));
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const AdminResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const AdminArticles = lazy(() => import("./pages/admin/Articles"));
 const AdminArticleEditor = lazy(() => import("./pages/admin/ArticleEditor"));
@@ -158,6 +159,7 @@ const App = () => {
                   <Route path="/conseils/:slug" element={<BlogArticle canonicalBasePath="/conseils" />} />
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route path="/admin/reset-password" element={<AdminResetPassword />} />
                   <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
                   <Route path="/admin/articles" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />
                   <Route path="/admin/articles/:id" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
