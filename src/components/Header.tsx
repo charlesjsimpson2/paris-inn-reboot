@@ -10,6 +10,7 @@ import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 interface SubItem {
   name: string;
   href: string;
+  external?: boolean;
 }
 
 interface NavItem {
