@@ -72,8 +72,10 @@ const ArticlesPage = () => {
           <div className="flex justify-center py-12">
             <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
-        ) : articles.length === 0 ? (
-          <p className="text-muted-foreground text-center py-12">Aucun article.</p>
+        ) : filteredArticles.length === 0 ? (
+          <p className="text-muted-foreground text-center py-12">
+            {search ? 'Aucun article trouvé.' : 'Aucun article.'}
+          </p>
         ) : (
           <div className="bg-card border rounded-lg">
             <Table>
