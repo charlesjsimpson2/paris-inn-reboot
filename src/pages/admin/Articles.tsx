@@ -13,10 +13,17 @@ import type { Tables } from '@/integrations/supabase/types';
 
 const ArticlesPage = () => {
   const [articles, setArticles] = useState<Tables<'articles'>[]>([]);
+  const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { canManageArticles } = useRoleAccess();
   const { toast } = useToast();
+
+  const filteredArticles = articles.filter(a =>
+    a.title.toLowerCase().includes(search.toLowerCase()) ||
+    (a.slug && a.slug.toLowerCase().includes(search.toLowerCase())) ||
+    (a.category && a.category.toLowerCase().includes(search.toLowerCase()))
+  );
 
   const fetchArticles = async () => {
     const { data, error } = await supabase
