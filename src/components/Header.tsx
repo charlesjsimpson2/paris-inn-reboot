@@ -1,5 +1,5 @@
 import { useState, useEffect, memo, useMemo } from "react";
-import { Menu, X, Phone, Mail, MapPin, ChevronRight } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -7,33 +7,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getActiveEventTheme } from "@/config/eventThemes";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
-interface SubItem {
-  name: string;
-  href: string;
-  external?: boolean;
-}
-
-interface NavItem {
-  name: string;
-  href: string;
-  subItems?: SubItem[];
-}
-
-const getNavItems = (t: (key: string) => string): NavItem[] => [
+const getNavItems = (t: (key: string) => string) => [
   { name: t('nav.hotel'), href: "/" },
-  { 
-    name: t('nav.rooms'), href: "/nos-chambres",
-    subItems: [
-      { name: t('nav.bookRoom') || 'Réserver une chambre', href: "https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection", external: true },
-    ]
-  },
-  { 
-    name: t('nav.seminars'), href: "/seminaires",
-    subItems: [
-      { name: t('nav.quoteRequest') || 'Demander un devis', href: "/reservation-seminaire" },
-      { name: t('seminarsPage.planning.link') || 'Planning', href: "/planning-seminaire" },
-    ]
-  },
+  { name: t('nav.rooms'), href: "/nos-chambres" },
+  { name: t('nav.seminars'), href: "/seminaires" },
   { name: t('nav.breakfast'), href: "/petit-dejeuner" },
   { name: t('nav.wifi'), href: "/wifi" },
   { name: t('nav.location'), href: "/localisation" },
@@ -197,55 +174,18 @@ export const Header = memo(() => {
           {/* Navigation Links */}
           <div className="flex flex-col">
             {navItems.map((item) => (
-              <div key={item.name} className="group/nav">
-                <div className="flex items-center">
-                  <Link
-                    to={item.href}
-                    className={`flex-1 font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
-                      location.pathname === item.href
-                        ? "text-primary border-l-primary bg-primary/5 font-medium"
-                        : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.subItems && (
-                    <ChevronRight className="w-3.5 h-3.5 text-muted-foreground mr-2 transition-transform duration-200 group-hover/nav:rotate-90 group-hover/nav:text-primary" />
-                  )}
-                </div>
-                {item.subItems && (
-                  <div className="max-h-0 overflow-hidden transition-all duration-300 group-hover/nav:max-h-40">
-                    {item.subItems.map((sub) => 
-                      sub.external ? (
-                        <a
-                          key={sub.href}
-                          href={sub.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {sub.name}
-                        </a>
-                      ) : (
-                        <Link
-                          key={sub.href}
-                          to={sub.href}
-                          className={`block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 ${
-                            location.pathname === sub.href
-                              ? "text-primary border-l-primary/50 bg-primary/5"
-                              : "text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
-                          }`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {sub.name}
-                        </Link>
-                      )
-                    )}
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
+                  location.pathname === item.href
+                    ? "text-primary border-l-primary bg-primary/5 font-medium"
+                    : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
           </div>
 
