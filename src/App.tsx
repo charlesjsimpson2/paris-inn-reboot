@@ -24,6 +24,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Localisation = lazy(() => import("./pages/Localisation"));
 const PetitDejeuner = lazy(() => import("./pages/PetitDejeuner"));
 const ReservationSeminaire = lazy(() => import("./pages/ReservationSeminaire"));
+const PlanningSeminaire = lazy(() => import("./pages/PlanningSeminaire"));
 const Enfoires2026 = lazy(() => import("./pages/Enfoires2026"));
 const Tournoi6Nations = lazy(() => import("./pages/Tournoi6Nations"));
 const SalonAgriculture = lazy(() => import("./pages/SalonAgriculture"));
@@ -104,6 +105,7 @@ const App = () => {
                   <Route path="/seminaires" element={<Seminaires />} />
                   <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
                   <Route path="/reservation-seminaire" element={<ReservationSeminaire />} />
+                  <Route path="/planning-seminaire" element={<PlanningSeminaire />} />
                   <Route path="/validation-reservation-seminaire" element={<ValidationReservationSeminaire />} />
                   <Route path="/evenements" element={<Actualites />} />
                   <Route path="/evenements/enfoires-2026" element={<Enfoires2026 />} />
