@@ -1,5 +1,5 @@
 import { useState, useEffect, memo, useMemo } from "react";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -7,10 +7,27 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getActiveEventTheme } from "@/config/eventThemes";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
-const getNavItems = (t: (key: string) => string) => [
+interface SubItem {
+  name: string;
+  href: string;
+}
+
+interface NavItem {
+  name: string;
+  href: string;
+  subItems?: SubItem[];
+}
+
+const getNavItems = (t: (key: string) => string): NavItem[] => [
   { name: t('nav.hotel'), href: "/" },
   { name: t('nav.rooms'), href: "/nos-chambres" },
-  { name: t('nav.seminars'), href: "/seminaires" },
+  { 
+    name: t('nav.seminars'), href: "/seminaires",
+    subItems: [
+      { name: t('seminarsPage.cta.button') || 'Demande de devis', href: "/reservation-seminaire" },
+      { name: t('seminarsPage.planning.link') || 'Planning', href: "/planning-seminaire" },
+    ]
+  },
   { name: t('nav.breakfast'), href: "/petit-dejeuner" },
   { name: t('nav.wifi'), href: "/wifi" },
   { name: t('nav.location'), href: "/localisation" },
