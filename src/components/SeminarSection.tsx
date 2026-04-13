@@ -139,6 +139,9 @@ export const SeminarSection = () => {
               <Button variant="elegant" size="lg" className="w-full sm:w-auto" asChild>
                 <Link to="/seminaires">{t('seminars.discover')}</Link>
               </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary/30 text-primary hover:bg-primary/10" asChild>
+                <Link to="/planning-seminaire">{t('seminarsPage.planning.link')}</Link>
+              </Button>
             </div>
           </div>
         </div>
