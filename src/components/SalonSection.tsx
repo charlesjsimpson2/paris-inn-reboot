@@ -152,13 +152,21 @@ export const SalonSection = ({ salon, reverse = false }: SalonSectionProps) => {
               </div>
             )}
 
-            {/* CTA Button */}
-            <a
-              href="/reservation-seminaire"
-              className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 font-medium transition-colors"
-            >
-              {t('seminars.quoteButton')}
-            </a>
+            {/* CTA Button + Planning link */}
+            <div className="flex flex-col items-start gap-2">
+              <a
+                href="/reservation-seminaire"
+                className="inline-block bg-burgundy hover:bg-burgundy/90 text-white px-6 py-3 font-medium transition-colors"
+              >
+                {t('seminars.quoteButton')}
+              </a>
+              <a
+                href="/planning-seminaire"
+                className="text-burgundy/70 hover:text-burgundy text-sm underline underline-offset-2 transition-colors"
+              >
+                {t('seminarsPage.planning.link')}
+              </a>
+            </div>
           </div>
         </div>
       </div>
