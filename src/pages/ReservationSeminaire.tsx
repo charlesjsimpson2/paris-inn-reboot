@@ -31,10 +31,8 @@ const ReservationSeminaire = () => {
             <iframe
               src="https://gustaves.ai/hid-paris-13/booking-embed"
               width="100%"
-              height="800"
-              frameBorder="0"
+              style={{ height: '2400px', border: 'none' }}
               title="Demande de devis séminaire"
-              className="min-h-[600px]"
               onLoad={() => setIsLoading(false)}
             />
           </div>
