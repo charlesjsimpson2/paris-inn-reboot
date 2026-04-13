@@ -216,20 +216,33 @@ export const Header = memo(() => {
                 </div>
                 {item.subItems && (
                   <div className="max-h-0 overflow-hidden transition-all duration-300 group-hover/nav:max-h-40">
-                    {item.subItems.map((sub) => (
-                      <Link
-                        key={sub.href}
-                        to={sub.href}
-                        className={`block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 ${
-                          location.pathname === sub.href
-                            ? "text-primary border-l-primary/50 bg-primary/5"
-                            : "text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
-                        }`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
+                    {item.subItems.map((sub) => 
+                      sub.external ? (
+                        <a
+                          key={sub.href}
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={sub.href}
+                          to={sub.href}
+                          className={`block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 ${
+                            location.pathname === sub.href
+                              ? "text-primary border-l-primary/50 bg-primary/5"
+                              : "text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
+                          }`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
