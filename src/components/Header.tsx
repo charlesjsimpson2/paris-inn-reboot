@@ -10,6 +10,7 @@ import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 interface SubItem {
   name: string;
   href: string;
+  external?: boolean;
 }
 
 interface NavItem {
@@ -20,11 +21,16 @@ interface NavItem {
 
 const getNavItems = (t: (key: string) => string): NavItem[] => [
   { name: t('nav.hotel'), href: "/" },
-  { name: t('nav.rooms'), href: "/nos-chambres" },
+  { 
+    name: t('nav.rooms'), href: "/nos-chambres",
+    subItems: [
+      { name: t('nav.bookRoom') || 'Réserver une chambre', href: "https://www.secure-hotel-booking.com/d-edge/Hotel-inn-Paris-Place-d-Italie/JJGV/fr-FR/DateSelection", external: true },
+    ]
+  },
   { 
     name: t('nav.seminars'), href: "/seminaires",
     subItems: [
-      { name: t('seminarsPage.cta.button') || 'Demande de devis', href: "/reservation-seminaire" },
+      { name: t('nav.quoteRequest') || 'Demander un devis', href: "/reservation-seminaire" },
       { name: t('seminarsPage.planning.link') || 'Planning', href: "/planning-seminaire" },
     ]
   },
@@ -210,20 +216,33 @@ export const Header = memo(() => {
                 </div>
                 {item.subItems && (
                   <div className="max-h-0 overflow-hidden transition-all duration-300 group-hover/nav:max-h-40">
-                    {item.subItems.map((sub) => (
-                      <Link
-                        key={sub.href}
-                        to={sub.href}
-                        className={`block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 ${
-                          location.pathname === sub.href
-                            ? "text-primary border-l-primary/50 bg-primary/5"
-                            : "text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
-                        }`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
+                    {item.subItems.map((sub) => 
+                      sub.external ? (
+                        <a
+                          key={sub.href}
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={sub.href}
+                          to={sub.href}
+                          className={`block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 ${
+                            location.pathname === sub.href
+                              ? "text-primary border-l-primary/50 bg-primary/5"
+                              : "text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
+                          }`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
