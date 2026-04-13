@@ -88,7 +88,7 @@ const ArticlesPage = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {articles.map(article => (
+                {filteredArticles.map(article => (
                   <TableRow key={article.id}>
                     <TableCell className="font-medium">{article.title}</TableCell>
                     <TableCell>
