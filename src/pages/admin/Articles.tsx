@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Plus, Pencil, Trash2, ExternalLink } from 'lucide-react';
+import { Plus, Pencil, Trash2, ExternalLink, Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 import { useRoleAccess } from '@/hooks/useRoleAccess';
 import { useToast } from '@/hooks/use-toast';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
@@ -12,10 +13,17 @@ import type { Tables } from '@/integrations/supabase/types';
 
 const ArticlesPage = () => {
   const [articles, setArticles] = useState<Tables<'articles'>[]>([]);
+  const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { canManageArticles } = useRoleAccess();
   const { toast } = useToast();
+
+  const filteredArticles = articles.filter(a =>
+    a.title.toLowerCase().includes(search.toLowerCase()) ||
+    (a.slug && a.slug.toLowerCase().includes(search.toLowerCase())) ||
+    (a.category && a.category.toLowerCase().includes(search.toLowerCase()))
+  );
 
   const fetchArticles = async () => {
     const { data, error } = await supabase
@@ -50,12 +58,24 @@ const ArticlesPage = () => {
           )}
         </div>
 
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            placeholder="Rechercher un article..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="pl-9 max-w-sm"
+          />
+        </div>
+
         {loading ? (
           <div className="flex justify-center py-12">
             <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
-        ) : articles.length === 0 ? (
-          <p className="text-muted-foreground text-center py-12">Aucun article.</p>
+        ) : filteredArticles.length === 0 ? (
+          <p className="text-muted-foreground text-center py-12">
+            {search ? 'Aucun article trouvé.' : 'Aucun article.'}
+          </p>
         ) : (
           <div className="bg-card border rounded-lg">
             <Table>
@@ -68,7 +88,7 @@ const ArticlesPage = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {articles.map(article => (
+                {filteredArticles.map(article => (
                   <TableRow key={article.id}>
                     <TableCell className="font-medium">{article.title}</TableCell>
                     <TableCell>
