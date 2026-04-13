@@ -12,6 +12,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.events': 'Événements',
     'nav.contact': 'Contact',
     'nav.book': 'Réserver',
+    'nav.bookRoom': 'Réserver une chambre',
+    'nav.quoteRequest': 'Demander un devis',
     
     // Hero
     'hero.welcome': 'Bienvenue',
@@ -1871,6 +1873,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.events': 'Events',
     'nav.contact': 'Contact',
     'nav.book': 'Book',
+    'nav.bookRoom': 'Book a room',
+    'nav.quoteRequest': 'Request a quote',
     
     // Hero
     'hero.welcome': 'Welcome',
@@ -3468,6 +3472,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.events': 'Eventos',
     'nav.contact': 'Contacto',
     'nav.book': 'Reservar',
+    'nav.bookRoom': 'Reservar una habitación',
+    'nav.quoteRequest': 'Solicitar un presupuesto',
     
     // Hero
     'hero.welcome': 'Bienvenido',
@@ -5066,6 +5072,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.events': 'Eventi',
     'nav.contact': 'Contatto',
     'nav.book': 'Prenota',
+    'nav.bookRoom': 'Prenota una camera',
+    'nav.quoteRequest': 'Richiedi un preventivo',
     
     // Hero
     'hero.welcome': 'Benvenuto',
@@ -6664,6 +6672,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.events': 'Eventos',
     'nav.contact': 'Contato',
     'nav.book': 'Reservar',
+    'nav.bookRoom': 'Reservar um quarto',
+    'nav.quoteRequest': 'Solicitar orçamento',
     
     // Hero
     'hero.welcome': 'Bem-vindo',
@@ -8263,6 +8273,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.events': 'Veranstaltungen',
     'nav.contact': 'Kontakt',
     'nav.book': 'Buchen',
+    'nav.bookRoom': 'Zimmer buchen',
+    'nav.quoteRequest': 'Angebot anfordern',
     
     // Hero
     'hero.welcome': 'Willkommen',
