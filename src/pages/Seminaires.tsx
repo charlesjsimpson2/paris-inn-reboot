@@ -168,6 +168,14 @@ const Seminaires = () => {
               <p className="text-muted-foreground text-lg leading-relaxed">
                 {t('seminarsPage.intro3')}
               </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a href="/reservation-seminaire">
+                  <Button variant="gold" size="lg">{t('seminarsPage.cta.button')}</Button>
+                </a>
+                <a href="/planning-seminaire">
+                  <Button variant="elegant" size="lg">{t('seminarsPage.planning.link')}</Button>
+                </a>
+              </div>
             </div>
 
             {/* Right: Equipment - Elegant burgundy style */}
@@ -282,7 +290,7 @@ const Seminaires = () => {
             </a>
             <a href="/planning-seminaire">
               <Button variant="outline" size="xl" className="bg-primary-foreground text-primary border-2 border-primary-foreground hover:bg-transparent hover:text-primary-foreground">
-                {t('seminarsPage.cta.planning') || 'Voir les disponibilités'}
+                {t('seminarsPage.cta.planning')}
               </Button>
             </a>
           </div>
