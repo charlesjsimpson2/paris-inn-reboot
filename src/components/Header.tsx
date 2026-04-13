@@ -191,18 +191,42 @@ export const Header = memo(() => {
           {/* Navigation Links */}
           <div className="flex flex-col">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
-                  location.pathname === item.href
-                    ? "text-primary border-l-primary bg-primary/5 font-medium"
-                    : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="group/nav">
+                <div className="flex items-center">
+                  <Link
+                    to={item.href}
+                    className={`flex-1 font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
+                      location.pathname === item.href
+                        ? "text-primary border-l-primary bg-primary/5 font-medium"
+                        : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.subItems && (
+                    <ChevronRight className="w-3.5 h-3.5 text-muted-foreground mr-2 transition-transform duration-200 group-hover/nav:rotate-90 group-hover/nav:text-primary" />
+                  )}
+                </div>
+                {item.subItems && (
+                  <div className="max-h-0 overflow-hidden transition-all duration-300 group-hover/nav:max-h-40">
+                    {item.subItems.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        to={sub.href}
+                        className={`block font-body text-xs uppercase tracking-[0.12em] py-2 pl-8 pr-4 transition-all duration-200 border-l-2 ${
+                          location.pathname === sub.href
+                            ? "text-primary border-l-primary/50 bg-primary/5"
+                            : "text-muted-foreground border-l-transparent hover:text-foreground hover:border-l-primary/30 hover:bg-muted/50"
+                        }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
