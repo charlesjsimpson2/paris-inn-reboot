@@ -274,11 +274,18 @@ const Seminaires = () => {
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
             {t('seminarsPage.cta.subtitle')}
           </p>
-          <a href="/reservation-seminaire">
-            <Button variant="outline" size="xl" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              {t('seminarsPage.cta.button')}
-            </Button>
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/reservation-seminaire">
+              <Button variant="outline" size="xl" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                {t('seminarsPage.cta.button')}
+              </Button>
+            </a>
+            <a href="/planning-seminaire">
+              <Button variant="outline" size="xl" className="bg-primary-foreground text-primary border-2 border-primary-foreground hover:bg-transparent hover:text-primary-foreground">
+                {t('seminarsPage.cta.planning') || 'Voir les disponibilités'}
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
