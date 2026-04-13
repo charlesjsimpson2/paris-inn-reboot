@@ -14,7 +14,7 @@ const ReservationSeminaire = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[45vh] min-h-[300px]">
+      <section className="relative h-[55vh] min-h-[400px]">
         <img 
           src={heroSeminaire} 
           alt="Salle de séminaire - Hôtel Inn Design Paris" 
