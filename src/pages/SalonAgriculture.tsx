@@ -52,7 +52,7 @@ const SalonAgriculture = () => {
       <main>
         {/* Hero Section with Sidebar Info */}
         <section className="relative py-24 overflow-hidden">
-          <img src={salonAgricultureHero} alt="Salon de l'Agriculture" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src={salonAgricultureHero} alt="Salon de l'Agriculture" loading="eager" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
