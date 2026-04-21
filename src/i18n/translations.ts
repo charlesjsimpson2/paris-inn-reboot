@@ -1146,6 +1146,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Contactez-nous',
     'contact.title': 'Nous contacter',
+    'notFound.title': 'Page introuvable',
+    'notFound.description': 'La page que vous recherchez n\'existe pas ou a été déplacée.',
+    'notFound.message': 'Oups ! Cette page n\'existe pas.',
+    'notFound.backHome': 'Retour à l\'accueil',
     
     // Contact Page
     'contactPage.heroAlt': "Contactez-nous - Hôtel Inn Design Paris",
@@ -2463,6 +2467,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Contact us',
     'contact.title': 'Contact us',
+    'notFound.title': 'Page not found',
+    'notFound.description': 'The page you are looking for does not exist or has been moved.',
+    'notFound.message': 'Oops! This page does not exist.',
+    'notFound.backHome': 'Back to home',
     
     // Contact Page
     'contactPage.heroAlt': "Contact us - Hôtel Inn Design Paris",
@@ -4062,6 +4070,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Contáctenos',
     'contact.title': 'Contáctenos',
+    'notFound.title': 'Página no encontrada',
+    'notFound.description': 'La página que busca no existe o ha sido movida.',
+    'notFound.message': '¡Ups! Esta página no existe.',
+    'notFound.backHome': 'Volver al inicio',
     
     // Contact Page
     'contactPage.heroAlt': "Contáctenos - Hôtel Inn Design Paris",
@@ -5662,6 +5674,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Contattaci',
     'contact.title': 'Contattaci',
+    'notFound.title': 'Pagina non trovata',
+    'notFound.description': 'La pagina che cerchi non esiste o è stata spostata.',
+    'notFound.message': 'Ops! Questa pagina non esiste.',
+    'notFound.backHome': 'Torna alla home',
     
     // Contact Page
     'contactPage.heroAlt': "Contattaci - Hôtel Inn Design Paris",
@@ -7262,6 +7278,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Fale conosco',
     'contact.title': 'Fale conosco',
+    'notFound.title': 'Página não encontrada',
+    'notFound.description': 'A página que você procura não existe ou foi movida.',
+    'notFound.message': 'Ops! Esta página não existe.',
+    'notFound.backHome': 'Voltar para o início',
     
     // Contact Page
     'contactPage.heroAlt': "Fale conosco - Hôtel Inn Design Paris",
@@ -8798,6 +8818,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Contact Bubble
     'contact.bubble': 'Kontaktieren Sie uns',
     'contact.title': 'Kontakt aufnehmen',
+    'notFound.title': 'Seite nicht gefunden',
+    'notFound.description': 'Die gesuchte Seite existiert nicht oder wurde verschoben.',
+    'notFound.message': 'Hoppla! Diese Seite existiert nicht.',
+    'notFound.backHome': 'Zurück zur Startseite',
     
     // Contact Page
     'contactPage.heroAlt': 'Kontaktieren Sie uns - Hôtel Inn Design Paris',
