@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Hotel, Timer } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -35,6 +36,11 @@ const VingtKmParis = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="20 km de Paris 2026 — Hôtel proche Tour Eiffel pour coureurs"
+        description="20 km de Paris 11 octobre 2026 : hébergement runner-friendly avec petit-déjeuner précoce et offres dédiées aux coureurs."
+        canonical="/evenements/20-km-paris"
+      />
       <Header />
       <EventBackButton />
       <main>

@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Building } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -37,6 +38,11 @@ const CongresMaires = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Congrès des Maires 2026 — Hôtel proche Porte de Versailles"
+        description="Congrès des Maires de France 2026 : hébergement à Paris avec offres parking et taxi pour les élus et délégations."
+        canonical="/evenements/congres-maires"
+      />
       <Header />
       <EventBackButton />
       <main>

@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, HeartPulse } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -38,6 +39,11 @@ const EuroPCR = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="EuroPCR 2026 — Hôtel proche Palais des Congrès pour cardiologues"
+        description="EuroPCR 2026 (19-22 mai) : hébergement à Paris pour le congrès mondial de cardiologie interventionnelle. Offres dédiées."
+        canonical="/evenements/euro-pcr"
+      />
       <Header />
       <EventBackButton />
       <main>
