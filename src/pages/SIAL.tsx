@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, UtensilsCrossed } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -37,6 +38,11 @@ const SIAL = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="SIAL Paris 2026 — Hôtel proche Paris Nord Villepinte"
+        description="SIAL Paris 2026 : salon mondial de l'alimentation. Réservez votre hôtel à proximité avec offres parking et taxi exclusives."
+        canonical="/evenements/sial"
+      />
       <Header />
       <EventBackButton />
       <main>
