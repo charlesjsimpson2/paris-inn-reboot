@@ -64,6 +64,7 @@ const StreetFood = lazy(() => import("./pages/StreetFood"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const WiFiPage = lazy(() => import("./pages/WiFi"));
+const THNConnectRedirect = lazy(() => import("./pages/THNConnectRedirect"));
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
 const AdminResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
@@ -155,6 +156,7 @@ const App = () => {
                   <Route path="/wifi" element={<WiFiPage />} />
                   <Route path="/blog" element={<BlogIndex />} />
                   <Route path="/blog/:slug" element={<BlogArticle />} />
+                  <Route path="/llms.txt" element={<THNConnectRedirect />} />
                   <Route path="/evenements/:slug" element={<BlogArticle canonicalBasePath="/evenements" />} />
                   <Route path="/seminaires/:slug" element={<BlogArticle canonicalBasePath="/seminaires" />} />
                   <Route path="/nos-chambres/:slug" element={<BlogArticle canonicalBasePath="/nos-chambres" />} />
