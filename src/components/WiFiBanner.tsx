@@ -1,6 +1,6 @@
 import { Wifi, Signal, Shield, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 
 interface WiFiBannerProps {
   compact?: boolean;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Monitor, Wifi, Mic, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 import seminaire1 from "@/assets/seminaire-1.webp";

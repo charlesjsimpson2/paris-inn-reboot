@@ -1,7 +1,7 @@
 import { Star, Train, Coffee, Wifi, Tv, Car, Users, Sparkles, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
 import { WiFiBanner } from "@/components/WiFiBanner";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { LocalizedLink } from "@/components/LocalizedLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import hotelChambre from "@/assets/hotel-chambre.jpg";
 
@@ -203,7 +203,7 @@ export const EventHotelPromo = ({
 
                     {/* CTA Button */}
                     <div className="flex justify-center">
-                      <Link to="/nos-chambres">
+                      <LocalizedLink to="/nos-chambres">
                         <Button
                           size="lg"
                           className="bg-gradient-to-r from-primary to-burgundy hover:from-primary/90 hover:to-burgundy/90 text-primary-foreground font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"

@@ -1,6 +1,6 @@
 import { Wine } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { LocalizedLink as Link } from "@/components/LocalizedLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import breakfastImage from "@/assets/petit-dejeuner.webp";
 import barImage from "@/assets/bar-hotel.webp";
