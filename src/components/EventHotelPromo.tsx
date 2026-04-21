@@ -211,7 +211,7 @@ export const EventHotelPromo = ({
                           {t("eventHotelPromo.viewRooms")}
                           <ArrowRight className="w-5 h-5 ml-2" />
                         </Button>
-                      </Link>
+                      </LocalizedLink>
                     </div>
 
                     {/* Trust badges */}
