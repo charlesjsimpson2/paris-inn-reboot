@@ -156,6 +156,7 @@ const App = () => {
                   <Route path="/wifi" element={<WiFiPage />} />
                   <Route path="/blog" element={<BlogIndex />} />
                   <Route path="/blog/:slug" element={<BlogArticle />} />
+                  <Route path="/llms.txt" element={<THNConnectRedirect />} />
                   <Route path="/evenements/:slug" element={<BlogArticle canonicalBasePath="/evenements" />} />
                   <Route path="/seminaires/:slug" element={<BlogArticle canonicalBasePath="/seminaires" />} />
                   <Route path="/nos-chambres/:slug" element={<BlogArticle canonicalBasePath="/nos-chambres" />} />
