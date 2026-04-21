@@ -52,6 +52,9 @@ const VingtKmParis = () => {
                   <img 
                     src={vingtKmHero} 
                     alt="Harmonie Mutuelle 20 km de Paris 2026" 
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     className="w-full object-contain"
                     loading="eager"
                     fetchPriority="high"

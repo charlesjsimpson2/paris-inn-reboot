@@ -50,7 +50,7 @@ const CongresMaires = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="order-2 md:order-1">
-                <img src={congresHero} alt="Congrès des Maires" className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]" />
+                <img src={congresHero} alt="Congrès des Maires" loading="eager" fetchPriority="high" decoding="async" className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]" />
               </div>
               
               <div className="order-1 md:order-2">
