@@ -56,8 +56,6 @@ const VingtKmParis = () => {
                     fetchPriority="high"
                     decoding="async"
                     className="w-full object-contain"
-                    loading="eager"
-                    fetchPriority="high"
                   />
                 </div>
               </div>
