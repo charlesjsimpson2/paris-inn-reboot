@@ -64,6 +64,7 @@ const StreetFood = lazy(() => import("./pages/StreetFood"));
 const ValidationReservationSeminaire = lazy(() => import("./pages/ValidationReservationSeminaire"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const WiFiPage = lazy(() => import("./pages/WiFi"));
+const THNConnectRedirect = lazy(() => import("./pages/THNConnectRedirect"));
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
 const AdminResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));

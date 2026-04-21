@@ -14,6 +14,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+Allow: /llms.txt
 Disallow: /admin/
 
 Sitemap: https://hotel-inn-paris.fr/sitemap.xml
