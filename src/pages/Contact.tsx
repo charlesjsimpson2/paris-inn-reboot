@@ -64,6 +64,9 @@ const Contact = () => {
         <img 
           src={heroContact} 
           alt={t('contactPage.heroAlt')} 
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

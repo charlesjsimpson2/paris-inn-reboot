@@ -44,7 +44,7 @@ const FoireDeParis = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="order-2 md:order-1">
-                <img src={foireParisHero} alt="Foire de Paris" className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto object-cover" />
+                <img src={foireParisHero} alt="Foire de Paris" loading="eager" fetchPriority="high" decoding="async" className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto object-cover" />
               </div>
 
               <div className="order-1 md:order-2">

@@ -40,7 +40,7 @@ const SalonCSESeptembre = () => {
       <EventBackButton />
       <main>
         <section className="relative py-24 overflow-hidden">
-          <img src={heroSeminaire} alt="Salon CSE" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src={heroSeminaire} alt="Salon CSE" loading="eager" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">

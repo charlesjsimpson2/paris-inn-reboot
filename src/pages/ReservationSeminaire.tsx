@@ -45,6 +45,9 @@ const ReservationSeminaire = () => {
         <img 
           src={heroSeminaire} 
           alt="Salle de séminaire - Hôtel Inn Design Paris" 
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />

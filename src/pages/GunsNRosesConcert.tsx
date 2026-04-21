@@ -71,6 +71,9 @@ const GunsNRosesConcert = () => {
                     <img 
                       src={heroImage} 
                       alt="Guns N' Roses World Tour" 
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="relative w-full max-w-md md:max-w-lg rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                     {/* Badge flottant */}

@@ -67,6 +67,9 @@ const SIAL = () => {
                     <img 
                       src={sialHero} 
                       alt="SIAL Paris 2026" 
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="relative w-full max-w-sm md:max-w-md rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500" 
                     />
                   </div>

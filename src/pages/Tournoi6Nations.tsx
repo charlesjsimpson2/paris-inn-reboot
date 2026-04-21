@@ -64,7 +64,7 @@ const Tournoi6Nations = () => {
       <EventBackButton />
       <main>
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-          <img src={rugbyHero} alt="Match France - Irlande" className="absolute inset-0 w-full h-full object-cover" />
+          <img src={rugbyHero} alt="Match France - Irlande" loading="eager" fetchPriority="high" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-black/50 to-green-900/70" />
           <div className="absolute inset-0 flex items-end">
             <div className="container mx-auto px-4 pb-16">

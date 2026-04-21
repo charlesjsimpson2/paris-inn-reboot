@@ -85,6 +85,9 @@ const PetitDejeuner = () => {
         <img 
           src={heroPetitDejeuner} 
           alt={t('breakfastPage.heroAlt')} 
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
