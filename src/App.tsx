@@ -91,16 +91,20 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <LanguageProvider>
             <ScrollToTop />
             <AuthProvider>
               <Suspense fallback={<PageLoader />}>
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  {/* English homepage — Stage 1 (Google Ads Performance Max) */}
+                  <Route path="/en" element={<Index />} />
+                  <Route path="/en/" element={<Index />} />
+                  <Route path="/en/homepage" element={<Index />} />
                   <Route path="/nos-chambres" element={<NosChambres />} />
                   <Route path="/seminaires" element={<Seminaires />} />
                   <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
@@ -176,9 +180,9 @@ const App = () => {
             </AuthProvider>
             <ContactBubble />
             <FloatingNatureElements />
-          </BrowserRouter>
-        </TooltipProvider>
-      </LanguageProvider>
+          </LanguageProvider>
+        </BrowserRouter>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 };

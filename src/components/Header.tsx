@@ -131,10 +131,12 @@ export const Header = memo(() => {
 
             {/* Right side: Language + Réserver Button */}
             <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-4 z-20 justify-self-end whitespace-nowrap">
-              {/* Language Switcher */}
-              <div className={`relative z-50 ${isScrolled || isHeroPage || isInternalPage ? 'text-foreground' : 'text-white'}`}>
-                <LanguageSwitcher />
-              </div>
+              {/* Language Switcher — hidden on /admin/* routes */}
+              {!location.pathname.startsWith("/admin") && (
+                <div className={`relative z-50 ${isScrolled || isHeroPage || isInternalPage ? 'text-foreground' : 'text-white'}`}>
+                  <LanguageSwitcher />
+                </div>
+              )}
 
               <Button
                 variant="gold"

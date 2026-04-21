@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { SEO } from "@/components/SEO";
 import { EventBanner } from "@/components/EventBanner";
 import { useEventTheme } from "@/hooks/useEventTheme";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Lazy load below-the-fold sections
 const IntroSection = lazy(() => import("@/components/IntroSection").then(m => ({ default: m.IntroSection })));
@@ -88,15 +89,44 @@ const breadcrumbJsonLd = {
   ]
 };
 
+const SEO_BY_LANG: Record<string, { title: string; description: string }> = {
+  fr: {
+    title: "Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème",
+    description: "Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner.",
+  },
+  en: {
+    title: "Hotel Inn Design Paris Place d'Italie — 3-star Hotel in Paris 13",
+    description: "3-star hotel in Paris 13th district, near Place d'Italie metro. Book direct on our official site for -15% off, exclusive deal! Rooms, seminars, breakfast.",
+  },
+  es: {
+    title: "Hotel Inn Design Paris Place d'Italie — Hotel 3 estrellas París 13",
+    description: "Hotel 3 estrellas en el distrito 13 de París, metro Place d'Italie. -15% reservando en nuestra web oficial, ¡exclusiva imbatible! Habitaciones, seminarios, desayuno.",
+  },
+  it: {
+    title: "Hotel Inn Design Paris Place d'Italie — Hotel 3 stelle Parigi 13",
+    description: "Hotel 3 stelle nel 13° arrondissement di Parigi, metro Place d'Italie. -15% prenotando sul sito ufficiale, esclusiva imbattibile! Camere, seminari, colazione.",
+  },
+  pt: {
+    title: "Hotel Inn Design Paris Place d'Italie — Hotel 3 estrelas Paris 13",
+    description: "Hotel 3 estrelas no 13º distrito de Paris, metrô Place d'Italie. -15% reservando no site oficial, oferta exclusiva! Quartos, seminários, café da manhã.",
+  },
+  de: {
+    title: "Hotel Inn Design Paris Place d'Italie — 3-Sterne-Hotel Paris 13",
+    description: "3-Sterne-Hotel im 13. Arrondissement von Paris, Metro Place d'Italie. -15% bei Direktbuchung auf unserer offiziellen Website, exklusives Angebot! Zimmer, Seminare, Frühstück.",
+  },
+};
+
 const Index = () => {
   useEventTheme();
+  const { language } = useLanguage();
+  const seoCopy = SEO_BY_LANG[language] ?? SEO_BY_LANG.fr;
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Hôtel Inn Design Paris Place d'Italie - Hôtel 3 étoiles Paris 13ème"
-        description="Hôtel 3 étoiles Paris 13ème, métro Place d'Italie. -15% en réservant sur notre site officiel, exclusivité introuvable ailleurs ! Chambres, séminaires, petit-déjeuner."
-        canonical="/"
+      <SEO
+        title={seoCopy.title}
+        description={seoCopy.description}
+        pageKey="home"
         jsonLd={[hotelJsonLd, websiteJsonLd, breadcrumbJsonLd]}
       />
       

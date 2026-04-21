@@ -1,5 +1,7 @@
-import React, { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
+import React, { createContext, useContext, useCallback, useMemo, useEffect, ReactNode } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { translations } from '@/i18n/translations';
+import { detectLanguageFromPath, switchPathLanguage } from '@/i18n/routes';
 
 export type Language = 'fr' | 'en' | 'es' | 'it' | 'pt' | 'de';
 
@@ -24,23 +26,51 @@ export const languages: { code: Language; name: string; flag: string }[] = [
 export { translations };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('fr');
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const t = useCallback((key: string): string => {
-    return translations[language]?.[key] ?? translations.fr?.[key] ?? key;
+  // Language is derived from the URL — single source of truth.
+  // FR URLs (no prefix) keep working exactly as before.
+  const language = useMemo<Language>(
+    () => detectLanguageFromPath(location.pathname),
+    [location.pathname]
+  );
+
+  // Keep <html lang="xx"> in sync with the detected language.
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language;
+    }
   }, [language]);
 
-  const contextValue = useMemo(() => ({
-    language,
-    setLanguage,
-    t
-  }), [language, t]);
-
-  return (
-    <LanguageContext.Provider value={contextValue}>
-      {children}
-    </LanguageContext.Provider>
+  // setLanguage now navigates to the equivalent URL in the target language.
+  const setLanguage = useCallback(
+    (lang: Language) => {
+      const targetPath = switchPathLanguage(location.pathname, lang);
+      if (targetPath !== location.pathname) {
+        navigate(targetPath);
+      }
+    },
+    [location.pathname, navigate]
   );
+
+  const t = useCallback(
+    (key: string): string => {
+      return translations[language]?.[key] ?? translations.fr?.[key] ?? key;
+    },
+    [language]
+  );
+
+  const contextValue = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      t,
+    }),
+    [language, setLanguage, t]
+  );
+
+  return <LanguageContext.Provider value={contextValue}>{children}</LanguageContext.Provider>;
 };
 
 export const useLanguage = () => {
