@@ -67,7 +67,7 @@ const EuroPCR = () => {
 
               <div className="text-center md:text-left">
                 <div className="flex justify-center md:justify-start mb-4">
-                  <img src={euroPcrLogo} alt="Euro PCR" className="h-16 md:h-20" />
+                  <img src={euroPcrLogo} alt="Euro PCR" loading="eager" fetchPriority="high" decoding="async" className="h-16 md:h-20" />
                 </div>
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-4 shadow-lg">
                   <HeartPulse className="w-4 h-4" />
