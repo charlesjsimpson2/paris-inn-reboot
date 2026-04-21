@@ -180,9 +180,9 @@ const App = () => {
             </AuthProvider>
             <ContactBubble />
             <FloatingNatureElements />
-          </BrowserRouter>
-        </TooltipProvider>
-      </LanguageProvider>
+          </LanguageProvider>
+        </BrowserRouter>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 };
