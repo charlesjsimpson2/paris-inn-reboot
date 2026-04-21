@@ -36,8 +36,10 @@ export const HeroSection = () => {
 
   return (
     <section className="relative h-[100svh] min-h-[480px] max-h-[900px] md:h-[85vh] overflow-hidden">
-      {/* Preload LCP image to improve Core Web Vitals */}
-      <link rel="preload" as="image" href={hotelReception} fetchPriority="high" />
+      {/* Preload LCP image in <head> for Core Web Vitals (LCP) */}
+      <Helmet>
+        <link rel="preload" as="image" href={hotelReception} fetchpriority="high" />
+      </Helmet>
       {/* Background Images - only render current and adjacent for performance */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => {
