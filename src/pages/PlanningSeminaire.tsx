@@ -1,16 +1,24 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { useState } from "react";
 import { Loader2, CalendarDays, Monitor, Users, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroSeminaire from "@/assets/salon-marshall-1.webp";
 
 const PlanningSeminaire = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={t('seo.planning.title')}
+        description={t('seo.planning.description')}
+        pageKey="planning"
+      />
       <Header />
       
       {/* Hero Section */}
