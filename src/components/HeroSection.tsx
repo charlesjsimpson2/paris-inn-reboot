@@ -1,5 +1,6 @@
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 import hotelReception from "@/assets/hotel-reception.webp";
