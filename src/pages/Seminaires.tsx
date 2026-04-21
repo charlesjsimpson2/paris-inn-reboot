@@ -102,10 +102,10 @@ const Seminaires = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Salles de Séminaires Paris - Hôtel Inn Design Paris"
-        description="3 salles de réunion modulables de 40 à 117m² au cœur de Paris 13ème. Équipement complet, WiFi, vidéoprojecteur. Idéal séminaires et formations."
-        canonical="/seminaires"
+      <SEO
+        title={t('seo.seminars.title')}
+        description={t('seo.seminars.description')}
+        pageKey="seminars"
       />
       <Header />
       

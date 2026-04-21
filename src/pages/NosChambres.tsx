@@ -134,10 +134,10 @@ const NosChambres = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Nos Chambres - Hôtel Inn Design Paris"
-        description="Découvrez nos chambres confortables à Paris 13ème : chambre double, twin, supérieure avec balcon. WiFi gratuit, climatisation, TV écran plat."
-        canonical="/nos-chambres"
+      <SEO
+        title={t('seo.rooms.title')}
+        description={t('seo.rooms.description')}
+        pageKey="rooms"
       />
       <Header />
       

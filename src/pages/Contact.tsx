@@ -52,10 +52,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Contact - Hôtel Inn Design Paris"
-        description="Contactez l'Hôtel Inn Design Paris Place d'Italie. Réservation, renseignements, demande de devis séminaire. Tél: +33 1 44 24 01 01"
-        canonical="/contact"
+      <SEO
+        title={t('seo.contact.title')}
+        description={t('seo.contact.description')}
+        pageKey="contact"
       />
       <Header />
       

@@ -10,7 +10,7 @@ const ValidationReservationSeminaire = () => {
       <SEO
         title="Demande envoyée — Séminaire | Hôtel Inn Design Paris"
         description="Votre demande de devis séminaire a bien été envoyée. Notre équipe vous recontactera dans les plus brefs délais."
-        canonical="/validation-reservation-seminaire"
+        pageKey="bookingConfirmation"
       />
       <Header />
 

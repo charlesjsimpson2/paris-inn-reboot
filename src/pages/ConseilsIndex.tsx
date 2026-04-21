@@ -46,7 +46,7 @@ const ConseilsIndex = () => {
       <SEO
         title="Conseils séjour Paris 13 – Hôtel Inn Design"
         description="Nos meilleurs conseils pour préparer votre séjour à Paris 13e : astuces pratiques, bons plans et recommandations autour de l'Hôtel Inn Design Place d'Italie."
-        canonical="/conseils"
+        pageKey="tips"
       />
       <Header />
 

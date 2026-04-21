@@ -200,9 +200,9 @@ const DecouvrirParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Autour de l'hôtel — Paris 13ème | Hôtel Inn Design"
-        description="Découvrez le quartier Place d'Italie : restaurants, monuments, activités et bonnes adresses autour de l'Hôtel Inn Design Paris 13ème."
-        canonical="/decouvrir-paris"
+        title={t('seo.discover.title')}
+        description={t('seo.discover.description')}
+        pageKey="discover"
       />
       <Header />
 

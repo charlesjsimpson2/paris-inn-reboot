@@ -466,10 +466,10 @@ const Actualites = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Événements Paris 2026 - Concerts, Salons, Sports"
-        description="Découvrez les événements 2026 à Paris : concerts Accor Arena, salons professionnels, marathons. Réservez votre hébergement près du métro Place d'Italie."
-        canonical="/evenements"
+      <SEO
+        title={t('seo.events.title')}
+        description={t('seo.events.description')}
+        pageKey="events"
       />
       <Header />
       <main>
