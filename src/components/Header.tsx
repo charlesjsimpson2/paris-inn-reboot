@@ -3,7 +3,9 @@ import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LocalizedLink } from "@/components/LocalizedLink";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { localizePath } from "@/i18n/routes";
 import { getActiveEventTheme } from "@/config/eventThemes";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
@@ -24,15 +26,35 @@ export const Header = memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const eventTheme = getActiveEventTheme();
-  
+
   const navItems = useMemo(() => getNavItems(t), [t]);
-  
-  // Check if we're on homepage or a page with hero image or internal page
-  const isHomePage = location.pathname === "/";
-  const isHeroPage = location.pathname === "/nos-chambres" || location.pathname === "/evenements" || location.pathname === "/seminaires" || location.pathname === "/reservation-seminaire" || location.pathname === "/planning-seminaire" || location.pathname === "/contact" || location.pathname === "/localisation" || location.pathname === "/petit-dejeuner" || location.pathname.startsWith("/decouvrir-paris");
-  const isInternalPage = location.pathname === "/mentions-legales";
+
+  // Resolve hero/internal-page detection in a language-aware way:
+  // compare the current pathname against the localized version of each FR canonical path.
+  const heroFrPaths = [
+    "/nos-chambres",
+    "/evenements",
+    "/seminaires",
+    "/reservation-seminaire",
+    "/planning-seminaire",
+    "/contact",
+    "/localisation",
+    "/petit-dejeuner",
+  ];
+  const localizedHeroPaths = heroFrPaths.map((p) => localizePath(p, language));
+  const localizedDiscoverPath = localizePath("/decouvrir-paris", language);
+  const localizedLegalPath = localizePath("/mentions-legales", language);
+
+  const isHomePage =
+    location.pathname === "/" ||
+    location.pathname === `/${language}` ||
+    location.pathname === `/${language}/`;
+  const isHeroPage =
+    localizedHeroPaths.includes(location.pathname) ||
+    location.pathname.startsWith(localizedDiscoverPath);
+  const isInternalPage = location.pathname === localizedLegalPath;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,13 +80,13 @@ export const Header = memo(() => {
             </a>
             
             {/* Center - Address */}
-            <Link 
-              to="/localisation" 
+            <LocalizedLink
+              to="/localisation"
               className="flex items-center gap-2 hover:underline transition-colors group"
             >
               <MapPin className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
               <span>178 boulevard Vincent Auriol – 75013 Paris</span>
-            </Link>
+            </LocalizedLink>
             
             {/* Right - Phone */}
             <a 
@@ -104,7 +126,7 @@ export const Header = memo(() => {
 
             {/* Logo - Center with event decorations */}
             <div className="flex justify-center min-w-0 z-30">
-              <Link
+              <LocalizedLink
                 to="/"
                 className="flex items-center justify-center gap-1.5 w-full max-w-[160px] xs:max-w-[200px] sm:max-w-none"
                 aria-label="Accueil"
@@ -126,7 +148,7 @@ export const Header = memo(() => {
                     {eventTheme.logoDecorations.right}
                   </span>
                 )}
-              </Link>
+              </LocalizedLink>
             </div>
 
             {/* Right side: Language + Réserver Button */}
@@ -175,20 +197,24 @@ export const Header = memo(() => {
 
           {/* Navigation Links */}
           <div className="flex flex-col">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
-                  location.pathname === item.href
-                    ? "text-primary border-l-primary bg-primary/5 font-medium"
-                    : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const localizedHref = localizePath(item.href, language);
+              const isActive = location.pathname === localizedHref;
+              return (
+                <LocalizedLink
+                  key={item.name}
+                  to={item.href}
+                  className={`font-body text-sm uppercase tracking-[0.15em] py-2.5 px-4 transition-all duration-200 border-l-2 ${
+                    isActive
+                      ? "text-primary border-l-primary bg-primary/5 font-medium"
+                      : "text-foreground/70 border-l-transparent hover:text-foreground hover:border-l-muted-foreground/30"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </LocalizedLink>
+              );
+            })}
           </div>
 
           {/* Contact Info - Styled */}
@@ -213,7 +239,7 @@ export const Header = memo(() => {
                 </div>
                 <span className="text-sm text-foreground">hid.paris13@gmail.com</span>
               </a>
-              <Link
+              <LocalizedLink
                 to="/localisation"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors group"
@@ -222,7 +248,7 @@ export const Header = memo(() => {
                   <MapPin className="w-4 h-4 text-primary" />
                 </div>
                 <span className="text-sm text-foreground">178 bd Vincent Auriol, 75013</span>
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </div>
