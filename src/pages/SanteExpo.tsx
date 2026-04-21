@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -37,6 +38,11 @@ const SanteExpo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Santé Expo 2026 — Hôtel proche Porte de Versailles"
+        description="Santé Expo / HealthCare Week Paris 2026 : hébergement à Paris pour le salon hospitalier. Offres parking et taxi exclusives."
+        canonical="/evenements/sante-expo"
+      />
       <Header />
       <EventBackButton />
       <main>
