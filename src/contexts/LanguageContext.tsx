@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useCallback, useMemo, useEffect, ReactNode } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { translations } from '@/i18n/translations';
+import { seoTranslations } from '@/i18n/seoTranslations';
 import { detectLanguageFromPath, switchPathLanguage } from '@/i18n/routes';
 
 export type Language = 'fr' | 'en' | 'es' | 'it' | 'pt' | 'de';
@@ -56,6 +57,16 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   const t = useCallback(
     (key: string): string => {
+      // SEO keys (seo.*) live in a separate file; check there first.
+      if (key.startsWith('seo.')) {
+        return (
+          seoTranslations[language]?.[key] ??
+          seoTranslations.fr?.[key] ??
+          translations[language]?.[key] ??
+          translations.fr?.[key] ??
+          key
+        );
+      }
       return translations[language]?.[key] ?? translations.fr?.[key] ?? key;
     },
     [language]
