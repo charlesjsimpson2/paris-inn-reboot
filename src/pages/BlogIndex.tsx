@@ -50,8 +50,8 @@ const BlogIndex = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Blog hôtel Paris 13"
-        description="Conseils, actualités et guides pratiques pour préparer votre séjour à Paris 13 autour de l’Hôtel Inn Design Paris Place d’Italie."
-        canonical="/blog"
+        description="Conseils, actualités et guides pratiques pour préparer votre séjour à Paris 13 autour de l'Hôtel Inn Design Paris Place d'Italie."
+        pageKey="blog"
       />
       <Header />
 

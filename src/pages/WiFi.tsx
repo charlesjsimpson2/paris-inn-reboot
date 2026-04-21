@@ -27,9 +27,9 @@ const WiFiPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="WiFi Haut Débit - Hôtel Inn Design Paris | 3 Gbps, 25 bornes WiFi"
-        description="WiFi professionnel haut débit dans tout l'hôtel : 3 Gbps de capacité, triple redondance, 25 points d'accès sur 7 étages. Idéal télétravail, visioconférences et séminaires."
-        canonical="/wifi"
+        title={t('seo.wifi.title')}
+        description={t('seo.wifi.description')}
+        pageKey="wifi"
       />
       <Header />
 

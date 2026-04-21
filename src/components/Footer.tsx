@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LocalizedLink } from "@/components/LocalizedLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logoHotel from "@/assets/logo-hotel-inn-paris.png";
 
@@ -22,20 +22,20 @@ export const Footer = memo(() => {
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t('footer.description')}
             </p>
-            <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors text-sm mt-3 inline-block">{t('footer.legal')}</Link>
+            <LocalizedLink to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors text-sm mt-3 inline-block">{t('footer.legal')}</LocalizedLink>
           </div>
 
           {/* Navigation */}
           <div>
             <h4 className="font-display text-sm uppercase tracking-wider text-foreground mb-2">{t('footer.navigation')}</h4>
             <ul className="space-y-0.5 text-sm">
-              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.home')}</Link></li>
-              <li><Link to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.rooms')}</Link></li>
-              <li><Link to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.breakfast')}</Link></li>
-              <li><Link to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.seminars')}</Link></li>
-              <li><Link to="/localisation" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.location')}</Link></li>
-              <li><Link to="/evenements" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.events')}</Link></li>
-              <li><Link to="/decouvrir-paris" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.discover')}</Link></li>
+              <li><LocalizedLink to="/" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.home')}</LocalizedLink></li>
+              <li><LocalizedLink to="/nos-chambres" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.rooms')}</LocalizedLink></li>
+              <li><LocalizedLink to="/petit-dejeuner" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.breakfast')}</LocalizedLink></li>
+              <li><LocalizedLink to="/seminaires" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.seminars')}</LocalizedLink></li>
+              <li><LocalizedLink to="/localisation" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.location')}</LocalizedLink></li>
+              <li><LocalizedLink to="/evenements" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.events')}</LocalizedLink></li>
+              <li><LocalizedLink to="/decouvrir-paris" className="text-muted-foreground hover:text-primary transition-colors">{t('nav.discover')}</LocalizedLink></li>
             </ul>
           </div>
 

@@ -8,10 +8,10 @@ const MentionsLegales = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title={t('legal.seo.title')}
         description={t('legal.seo.description')}
-        canonical="/mentions-legales"
+        pageKey="legal"
       />
       <Header />
       <main className="pt-20 pb-16">

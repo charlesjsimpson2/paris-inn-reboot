@@ -73,10 +73,10 @@ const PetitDejeuner = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Petit-déjeuner Buffet - Hôtel Inn Design Paris"
-        description="Petit-déjeuner buffet varié à l'Hôtel Inn Design Paris. Produits frais, viennoiseries, boissons chaudes. Gratuit pour les enfants de moins de 10 ans."
-        canonical="/petit-dejeuner"
+      <SEO
+        title={t('seo.breakfast.title')}
+        description={t('seo.breakfast.description')}
+        pageKey="breakfast"
       />
       <Header />
       

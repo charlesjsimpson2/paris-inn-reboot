@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { useState, useEffect, useRef } from "react";
 import { Loader2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -32,6 +33,11 @@ const ReservationSeminaire = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={t('seo.requestQuote.title')}
+        description={t('seo.requestQuote.description')}
+        pageKey="requestQuote"
+      />
       <Header />
       
       {/* Hero Section */}

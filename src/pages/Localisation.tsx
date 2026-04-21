@@ -25,10 +25,10 @@ const Localisation = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Localisation - Hôtel Inn Design Paris Place d'Italie"
-        description="Hôtel idéalement situé à 2 min du métro Place d'Italie (lignes 5, 6, 7). Accès direct Tour Eiffel, Louvre, Champs-Élysées. Paris 13ème."
-        canonical="/localisation"
+      <SEO
+        title={t('seo.location.title')}
+        description={t('seo.location.description')}
+        pageKey="location"
       />
       <Header />
 

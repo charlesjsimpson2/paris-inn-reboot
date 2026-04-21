@@ -100,11 +100,8 @@ const App = () => {
             <AuthProvider>
               <Suspense fallback={<PageLoader />}>
                 <Routes>
+                  {/* ===== FR routes (UNCHANGED — never touch) ===== */}
                   <Route path="/" element={<Index />} />
-                  {/* English homepage — Stage 1 (Google Ads Performance Max) */}
-                  <Route path="/en" element={<Index />} />
-                  <Route path="/en/" element={<Index />} />
-                  <Route path="/en/homepage" element={<Index />} />
                   <Route path="/nos-chambres" element={<NosChambres />} />
                   <Route path="/seminaires" element={<Seminaires />} />
                   <Route path="/petit-dejeuner" element={<PetitDejeuner />} />
@@ -163,6 +160,47 @@ const App = () => {
                   <Route path="/nos-chambres/:slug" element={<BlogArticle canonicalBasePath="/nos-chambres" />} />
                   <Route path="/conseils" element={<ConseilsIndex />} />
                   <Route path="/conseils/:slug" element={<BlogArticle canonicalBasePath="/conseils" />} />
+
+                  {/* ===== EN routes — translated slugs (Google Ads + SEO EN) ===== */}
+                  <Route path="/en" element={<Index />} />
+                  <Route path="/en/" element={<Index />} />
+                  <Route path="/en/homepage" element={<Index />} />
+                  <Route path="/en/rooms" element={<NosChambres />} />
+                  <Route path="/en/seminars" element={<Seminaires />} />
+                  <Route path="/en/breakfast" element={<PetitDejeuner />} />
+                  <Route path="/en/contact" element={<Contact />} />
+                  <Route path="/en/location" element={<Localisation />} />
+                  <Route path="/en/wifi" element={<WiFiPage />} />
+                  <Route path="/en/discover-paris" element={<DecouvrirParis />} />
+                  <Route path="/en/events" element={<Actualites />} />
+                  <Route path="/en/blog" element={<BlogIndex />} />
+                  <Route path="/en/tips" element={<ConseilsIndex />} />
+                  <Route path="/en/legal-notice" element={<MentionsLegales />} />
+                  <Route path="/en/request-quote" element={<ReservationSeminaire />} />
+                  <Route path="/en/seminar-planning" element={<PlanningSeminaire />} />
+                  <Route path="/en/booking-confirmation" element={<ValidationReservationSeminaire />} />
+
+                  {/* ===== ES/IT/PT/DE routes — FR slugs preserved under language prefix ===== */}
+                  {(['es', 'it', 'pt', 'de'] as const).map((lang) => (
+                    <Route key={`${lang}-group`} path={`/${lang}`}>
+                      <Route index element={<Index />} />
+                      <Route path="nos-chambres" element={<NosChambres />} />
+                      <Route path="seminaires" element={<Seminaires />} />
+                      <Route path="petit-dejeuner" element={<PetitDejeuner />} />
+                      <Route path="contact" element={<Contact />} />
+                      <Route path="localisation" element={<Localisation />} />
+                      <Route path="wifi" element={<WiFiPage />} />
+                      <Route path="decouvrir-paris" element={<DecouvrirParis />} />
+                      <Route path="evenements" element={<Actualites />} />
+                      <Route path="blog" element={<BlogIndex />} />
+                      <Route path="conseils" element={<ConseilsIndex />} />
+                      <Route path="mentions-legales" element={<MentionsLegales />} />
+                      <Route path="reservation-seminaire" element={<ReservationSeminaire />} />
+                      <Route path="planning-seminaire" element={<PlanningSeminaire />} />
+                      <Route path="validation-reservation-seminaire" element={<ValidationReservationSeminaire />} />
+                    </Route>
+                  ))}
+
                   {/* Admin routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
                   <Route path="/admin/reset-password" element={<AdminResetPassword />} />
