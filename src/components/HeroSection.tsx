@@ -38,7 +38,7 @@ export const HeroSection = () => {
     <section className="relative h-[100svh] min-h-[480px] max-h-[900px] md:h-[85vh] overflow-hidden">
       {/* Preload LCP image in <head> for Core Web Vitals (LCP) */}
       <Helmet>
-        <link rel="preload" as="image" href={hotelReception} fetchpriority="high" />
+        <link rel="preload" as="image" href={hotelReception} />
       </Helmet>
       {/* Background Images - only render current and adjacent for performance */}
       <div className="absolute inset-0">
