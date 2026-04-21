@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { SEO } from "@/components/SEO";
 import { EventBanner } from "@/components/EventBanner";
 import { useEventTheme } from "@/hooks/useEventTheme";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Lazy load below-the-fold sections
 const IntroSection = lazy(() => import("@/components/IntroSection").then(m => ({ default: m.IntroSection })));
