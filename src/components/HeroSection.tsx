@@ -1,13 +1,15 @@
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import hotelReception from "@/assets/hotel-reception.webp";
 import hotelChambre from "@/assets/hotel-chambre.webp";
 import hotelSalleDeBain from "@/assets/hotel-salle-de-bain.webp";
 import hotelSalon from "@/assets/hotel-salon.webp";
 import hotelSeminaire from "@/assets/hotel-seminaire.webp";
+
+// LCP image: served from /public with stable path so it can be preloaded
+// directly in index.html (before JS parses) for optimal Core Web Vitals.
+const hotelReception = "/hero/hotel-reception.webp";
 
 const heroImages = [
   { src: hotelReception, alt: "Réception de l'hôtel" },
@@ -36,10 +38,6 @@ export const HeroSection = () => {
 
   return (
     <section className="relative h-[100svh] min-h-[480px] max-h-[900px] md:h-[85vh] overflow-hidden">
-      {/* Preload LCP image in <head> for Core Web Vitals (LCP) */}
-      <Helmet>
-        <link rel="preload" as="image" href={hotelReception} />
-      </Helmet>
       {/* Background Images - only render current and adjacent for performance */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => {
