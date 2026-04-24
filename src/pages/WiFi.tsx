@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Wifi, Signal, Shield, Zap, Video, Laptop, Monitor, Users, Building } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";

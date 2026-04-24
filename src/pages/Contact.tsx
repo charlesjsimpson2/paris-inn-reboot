@@ -6,6 +6,7 @@ import heroContact from "@/assets/hero-contact.jpg";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const Contact = () => {
   const { t, language } = useLanguage();

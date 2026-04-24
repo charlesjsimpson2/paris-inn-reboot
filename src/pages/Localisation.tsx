@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { MapPin, Plane, Building2, Landmark, Train, Car, Clock, Phone, TrainFront, Bus, TramFront, Ship, Columns, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import proximiteMetro from "@/assets/proximite-metro-hotel-inn.jpg";
 
 const Localisation = () => {

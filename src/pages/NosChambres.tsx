@@ -6,6 +6,7 @@ import { RoomSection } from "@/components/RoomSection";
 import { ChevronLeft, ChevronRight, Wifi, Tv, Snowflake, Bath, Briefcase, CupSoda, X, Accessibility, Heater } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import chambreDouble from "@/assets/chambre-double.webp";
 import chambreTwin from "@/assets/chambre-twin.webp";
 import chambreSuperieureBalcon from "@/assets/chambre-superieure-balcon.webp";

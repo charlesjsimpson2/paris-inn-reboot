@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Coffee, Croissant, Apple, Egg, Clock, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import salle1 from "@/assets/breakfast/salle-1.webp";
 import salle2 from "@/assets/breakfast/salle-2.webp";

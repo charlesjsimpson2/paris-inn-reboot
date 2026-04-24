@@ -5,6 +5,7 @@ import { Calendar, Camera, Music, Trophy, Leaf, Mic, Clock, Timer, Briefcase, Sh
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import franceAngleterreMatch from "@/assets/france-angleterre-hero-gen.webp";
