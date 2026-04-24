@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs, type BreadcrumbItem } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
@@ -54,7 +55,7 @@ const getCategoryBasePath = (category: Tables<"articles">["category"]) => {
 const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticleProps) => {
   const { slug: routeSlug } = useParams<{ slug: string }>();
   const slug = forcedSlug ?? routeSlug;
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const [article, setArticle] = useState<Tables<"articles"> | null>(null);
   const [translation, setTranslation] = useState<Translation | null>(null);
   const [loading, setLoading] = useState(true);
@@ -194,22 +195,31 @@ const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticlePro
       <Header />
 
       <main>
+        {/* Breadcrumb bar — sits below the fixed header */}
+        <div className="pt-24 md:pt-28 bg-background border-b border-border">
+          <div className="container mx-auto px-4 py-3">
+            <Breadcrumbs
+              items={(() => {
+                const crumbs: BreadcrumbItem[] = [];
+                if (canonicalBasePath === "/seminaires") {
+                  crumbs.push({ label: t("nav.seminars"), pageKey: "seminars" });
+                } else if (canonicalBasePath === "/nos-chambres") {
+                  crumbs.push({ label: t("nav.rooms"), pageKey: "rooms" });
+                } else if (canonicalBasePath === "/conseils") {
+                  crumbs.push({ label: t("nav.tips") || "Nos conseils", pageKey: "tips" });
+                } else {
+                  crumbs.push({ label: t("nav.events"), pageKey: "events" });
+                }
+                crumbs.push({ label: displayTitle });
+                return crumbs;
+              })()}
+            />
+          </div>
+        </div>
+
         <section className="border-b border-border bg-muted/30">
           <div className="container mx-auto px-4 py-10 md:py-14">
-            <Button asChild variant="ghost" className="mb-6 px-0 hover:bg-transparent">
-              <Link to="/evenements">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Retour aux actualités
-              </Link>
-            </Button>
-
             <div className="mx-auto max-w-4xl space-y-6">
-              {article.category && (
-                <p className="font-body text-sm uppercase tracking-[0.2em] text-primary">
-                  {article.category}
-                </p>
-              )}
-
               <h1 className="font-display text-4xl leading-tight text-foreground md:text-6xl">
                 {displayTitle}
               </h1>

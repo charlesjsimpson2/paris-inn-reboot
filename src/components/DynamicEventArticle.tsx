@@ -4,6 +4,7 @@ import type { LucideIcon } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EventBackButton } from "@/components/EventBackButton";
 import { EasyAccessSection } from "@/components/EasyAccessSection";
 import { EventHotelPromo, type EventType } from "@/components/EventHotelPromo";
@@ -169,9 +170,22 @@ export const DynamicEventArticle = ({ article, canonicalBasePath }: DynamicEvent
         ogType="article"
       />
       <Header />
-      <EventBackButton />
 
       <main>
+        {/* Breadcrumb bar — sits below the fixed header */}
+        <div className="pt-24 md:pt-28 bg-background border-b border-border">
+          <div className="container mx-auto px-4 py-3">
+            <Breadcrumbs
+              items={[
+                { label: t("nav.events"), pageKey: "events" },
+                { label: article.title },
+              ]}
+            />
+          </div>
+        </div>
+
+        <EventBackButton />
+
         <section className="border-b border-border bg-gradient-to-b from-muted/60 via-background to-background">
           <div className="container mx-auto px-4 py-10 md:py-16">
             <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
