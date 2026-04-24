@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Wifi, Signal, Shield, Zap, Video, Laptop, Monitor, Users, Building } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -32,6 +33,11 @@ const WiFiPage = () => {
         pageKey="wifi"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.wifi'), pageKey: 'wifi' }]} />
+        </div>
+      </div>
 
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[450px]">

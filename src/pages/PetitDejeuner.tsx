@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Coffee, Croissant, Apple, Egg, Clock, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import salle1 from "@/assets/breakfast/salle-1.webp";
 import salle2 from "@/assets/breakfast/salle-2.webp";
@@ -79,6 +80,11 @@ const PetitDejeuner = () => {
         pageKey="breakfast"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.breakfast'), pageKey: 'breakfast' }]} />
+        </div>
+      </div>
       
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px]">

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { ArrowRight, CalendarDays, Lightbulb } from "lucide-react";
@@ -22,6 +24,7 @@ const formatDate = (date: string | null) => {
 };
 
 const ConseilsIndex = () => {
+  const { t } = useLanguage();
   const [articles, setArticles] = useState<ConseilItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -49,6 +52,11 @@ const ConseilsIndex = () => {
         pageKey="tips"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.tips') || 'Nos conseils', pageKey: 'tips' }]} />
+        </div>
+      </div>
 
       <main>
         <section className="border-b border-border bg-muted/30">

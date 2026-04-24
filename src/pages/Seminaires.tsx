@@ -6,6 +6,7 @@ import { Users, Projector, Wifi, Coffee, MonitorSpeaker, Utensils, Zap, Shield, 
 import { SeminarArticlesSection } from "@/components/SeminarArticlesSection";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import heroSeminaire from "@/assets/salon-marshall-1.webp";
 import salonBose1 from "@/assets/salon-bose-1.webp";
 import salonBose2 from "@/assets/salon-bose-2.webp";
@@ -108,6 +109,11 @@ const Seminaires = () => {
         pageKey="seminars"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.seminars'), pageKey: 'seminars' }]} />
+        </div>
+      </div>
       
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px]">

@@ -5,6 +5,7 @@ import { Calendar, Camera, Music, Trophy, Leaf, Mic, Clock, Timer, Briefcase, Sh
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import enfoiresLogo from "@/assets/enfoires-logo-new.png";
 import rugbyImage from "@/assets/rugby-france-irlande.jpg";
 import franceAngleterreMatch from "@/assets/france-angleterre-hero-gen.webp";
@@ -472,8 +473,13 @@ const Actualites = () => {
         pageKey="events"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.events'), pageKey: 'events' }]} />
+        </div>
+      </div>
       <main>
-        <section className="pt-32 pb-16 bg-charcoal">
+        <section className="pt-16 pb-16 bg-charcoal">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <p className="text-primary font-body uppercase tracking-[0.2em] text-sm mb-4">{t('actualites.hero.badge')}</p>

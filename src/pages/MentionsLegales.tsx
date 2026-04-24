@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const MentionsLegales = () => {
@@ -14,7 +15,12 @@ const MentionsLegales = () => {
         pageKey="legal"
       />
       <Header />
-      <main className="pt-20 pb-16">
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('legal.title') || 'Mentions légales', pageKey: 'legal' }]} />
+        </div>
+      </div>
+      <main className="pt-8 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Header */}
           <div className="text-center mb-12">
