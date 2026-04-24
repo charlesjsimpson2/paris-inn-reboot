@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ContactBubble } from "@/components/ContactBubble";
 import { FloatingNatureElements } from "@/components/FloatingNatureElements";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { TrailingSlashRedirect } from "@/components/TrailingSlashRedirect";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { logEventI18nAudit } from "@/lib/i18nAudit";
@@ -98,6 +99,7 @@ const App = () => {
         <BrowserRouter>
           <LanguageProvider>
             <ScrollToTop />
+            <TrailingSlashRedirect />
             <AuthProvider>
               <Suspense fallback={<PageLoader />}>
                 <Routes>
