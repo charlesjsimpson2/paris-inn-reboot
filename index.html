@@ -38,6 +38,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;700&display=swap" /></noscript>
 
+    <!-- LCP: preload hero image immediately (before JS parses) — critical for Core Web Vitals -->
+    <link rel="preload" as="image" href="/hero/hotel-reception.webp" type="image/webp" fetchpriority="high" />
+
     <!-- Open Graph -->
     <meta property="og:title" content="Hôtel Inn Design Paris Place d'Italie" />
     <meta property="og:description" content="Hôtel 3 étoiles à Paris 13ème, proche métro Place d'Italie. Chambres confortables et salles de séminaires." />
