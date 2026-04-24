@@ -58,6 +58,11 @@ const Contact = () => {
         pageKey="contact"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.contact'), pageKey: 'contact' }]} />
+        </div>
+      </div>
       
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[350px]">

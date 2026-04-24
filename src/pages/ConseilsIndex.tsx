@@ -49,6 +49,11 @@ const ConseilsIndex = () => {
         pageKey="tips"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.tips') || 'Nos conseils', pageKey: 'tips' }]} />
+        </div>
+      </div>
 
       <main>
         <section className="border-b border-border bg-muted/30">

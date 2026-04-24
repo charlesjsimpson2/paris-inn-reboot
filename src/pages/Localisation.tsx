@@ -31,6 +31,11 @@ const Localisation = () => {
         pageKey="location"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.location'), pageKey: 'location' }]} />
+        </div>
+      </div>
 
       {/* Map Section - Side by side */}
       <section className="pt-32 md:pt-40 pb-20 bg-gradient-to-b from-charcoal to-background">

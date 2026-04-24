@@ -140,6 +140,11 @@ const NosChambres = () => {
         pageKey="rooms"
       />
       <Header />
+      <div className="pt-24 md:pt-28 bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumbs items={[{ label: t('nav.rooms'), pageKey: 'rooms' }]} />
+        </div>
+      </div>
       
       {/* Hero Section with Image */}
       <section className="relative h-[65vh] min-h-[420px]">
