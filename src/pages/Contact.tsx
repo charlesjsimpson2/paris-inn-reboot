@@ -69,7 +69,14 @@ const Contact = () => {
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 flex items-end pb-12 md:pb-16">
+          <div className="container mx-auto px-4">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+              {t('seo.contact.title')}
+            </h1>
+          </div>
+        </div>
       </section>
 
       {/* Contact Content */}
