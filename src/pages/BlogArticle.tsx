@@ -55,7 +55,7 @@ const getCategoryBasePath = (category: Tables<"articles">["category"]) => {
 const BlogArticle = ({ forcedSlug, canonicalBasePath = "/blog" }: BlogArticleProps) => {
   const { slug: routeSlug } = useParams<{ slug: string }>();
   const slug = forcedSlug ?? routeSlug;
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const [article, setArticle] = useState<Tables<"articles"> | null>(null);
   const [translation, setTranslation] = useState<Translation | null>(null);
   const [loading, setLoading] = useState(true);
