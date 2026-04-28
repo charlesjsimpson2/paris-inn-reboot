@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Scissors } from "lucide-react";
@@ -38,6 +39,7 @@ const TexWorld = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Texworld Paris — Hôtel pour exposants et visiteurs" description="Hôtel 3 étoiles à Paris pour Texworld au Parc des Expositions. Tarifs préférentiels pour professionnels du textile." />
       <EventBackButton />
       <main>
         <section className="relative py-24 overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-pink-50 dark:from-violet-950/30 dark:via-purple-950/20 dark:to-pink-950/30">

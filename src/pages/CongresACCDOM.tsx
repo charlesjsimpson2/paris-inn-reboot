@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Landmark, Globe } from "lucide-react";
@@ -38,6 +39,7 @@ const CongresACCDOM = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Congrès ACCDOM 2026 — Hôtel à Paris pour élus d'Outre-mer" description="Hôtel pour le Congrès des Communes et Collectivités d'Outre-Mer. Confort et services adaptés aux élus." />
       <EventBackButton />
       <main>
         {/* Hero Section - Mika Style with tropical gradient */}

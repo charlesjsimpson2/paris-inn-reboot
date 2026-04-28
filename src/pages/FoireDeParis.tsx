@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, ShoppingBag } from "lucide-react";
@@ -38,6 +39,7 @@ const FoireDeParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Foire de Paris 2026 — Hôtel proche Porte de Versailles" description="Hôtel idéal pour la Foire de Paris 2026. Accès rapide à Porte de Versailles depuis Place d'Italie." />
       <EventBackButton />
       <main>
         <section className="py-24 bg-gradient-to-br from-rose-50 via-amber-50 to-rose-50 dark:from-rose-950/30 dark:via-amber-950/20 dark:to-rose-950/30">

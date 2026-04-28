@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Hotel, Timer } from "lucide-react";
@@ -36,6 +37,7 @@ const MarathonParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Marathon de Paris 2026 — Hôtel pour coureurs" description="Hôtel idéal pour le Marathon de Paris 2026. Petit-déjeuner adapté, parking, accès direct au départ. Réservez votre chambre." />
       <EventBackButton />
       <main>
         {/* Hero Section - Sidebar Layout */}

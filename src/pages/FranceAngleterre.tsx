@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Trophy, Clock, Car, Ticket, Hotel, Users, Gift, Shirt } from "lucide-react";
@@ -90,6 +91,7 @@ const FranceAngleterre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="France-Angleterre Tournoi 6 Nations — Hôtel à Paris" description="Hôtel proche du Stade de France pour France-Angleterre. Accès rapide en transport, tarifs préférentiels." />
       <EventBackButton />
       <main>
         {/* Hero Section */}
