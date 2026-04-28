@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Clock, Utensils, Hotel, Car, Briefcase } from "lucide-react";
@@ -38,6 +39,7 @@ const SalonCSEMars = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Salon des CSE Mars 2026 — Hôtel à Paris" description="Séjournez à l'Hôtel Inn Design Paris pour le Salon des CSE de mars. Accès direct Porte de Champerret." />
       <EventBackButton />
       <main>
         {/* Hero Section - Sidebar Layout */}

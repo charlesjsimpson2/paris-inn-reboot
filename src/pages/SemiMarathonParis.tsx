@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Timer, Trophy, Clock, Users } from "lucide-react";
@@ -40,6 +41,7 @@ const SemiMarathonParis = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Semi-Marathon de Paris 2026 — Hôtel pour coureurs" description="Hôtel proche du parcours du Semi-Marathon de Paris. Petit-déjeuner sportif, départ matinal facilité." />
       <EventBackButton />
       <main>
         {/* Hero Section - Couleurs HOKA */}

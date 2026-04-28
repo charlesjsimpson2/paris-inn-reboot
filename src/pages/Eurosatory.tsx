@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Shield } from "lucide-react";
@@ -39,6 +40,7 @@ const Eurosatory = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Eurosatory 2026 — Hôtel partenaire à Paris" description="Hôtel proche du Parc des Expositions de Villepinte pour Eurosatory 2026. Réservez votre séjour à l'Hôtel Inn Design Paris Place d'Italie." />
       <EventBackButton />
       <main>
         <section className="relative py-16 md:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-700 overflow-hidden">

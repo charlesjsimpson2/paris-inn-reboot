@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Briefcase } from "lucide-react";
@@ -37,6 +38,7 @@ const SalonCSESeptembre = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Salon des CSE Septembre 2026 — Hôtel à Paris" description="Hôtel partenaire du Salon des CSE de septembre à Paris. Tarifs négociés pour les professionnels." />
       <EventBackButton />
       <main>
         <section className="relative py-24 overflow-hidden">

@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Train, Users, Utensils, Hotel, Car, Sparkles } from "lucide-react";
@@ -38,6 +39,7 @@ const JapanExpo = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <SEO title="Japan Expo 2026 — Hôtel proche Villepinte" description="Séjournez à l'Hôtel Inn Design Paris pour Japan Expo 2026. Accès direct au Parc des Expositions, chambres confortables." />
       <EventBackButton />
       <main>
         <section className="relative py-16 md:py-24 bg-gradient-to-br from-pink-600 via-fuchsia-600 to-pink-700 overflow-hidden">
