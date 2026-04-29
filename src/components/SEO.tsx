@@ -53,9 +53,12 @@ export const SEO = ({
   const ogLocale = LOCALE_MAP[language] || "fr_FR";
 
   // Block indexing on non-production domains (lovable.app, localhost, etc.)
+  // Production = hotel-inn-paris.fr OR www.hotel-inn-paris.fr
+  const hostname =
+    typeof window !== "undefined" ? window.location.hostname : "";
   const isProductionDomain =
-    typeof window !== "undefined" &&
-    window.location.hostname === "hotel-inn-paris.fr";
+    hostname === "hotel-inn-paris.fr" ||
+    hostname === "www.hotel-inn-paris.fr";
   const shouldNoIndex = noIndex || !isProductionDomain;
 
   const hreflangAlternates = pageKey ? buildHreflangAlternates(pageKey) : [];
