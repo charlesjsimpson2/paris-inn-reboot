@@ -17,4 +17,7 @@ Allow: /
 Allow: /llms.txt
 Disallow: /admin/
 
-Sitemap: https://hotel-inn-paris.fr/sitemap.xml
+Sitemap: https://hotel-inn-paris.fr/sitemap-index.xml
+Sitemap: https://hotel-inn-paris.fr/sitemap-pages.xml
+Sitemap: https://hotel-inn-paris.fr/sitemap-events.xml
+Sitemap: https://hotel-inn-paris.fr/sitemap-guides.xml
