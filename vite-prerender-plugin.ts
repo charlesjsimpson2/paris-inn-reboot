@@ -295,6 +295,129 @@ export const seoPrerenderPlugin = (): Plugin => {
       }
 
       console.log(`[seo-prerender] ✓ Generated ${count} prerendered HTML files with unique titles & meta`);
+
+      // ========== Auto-generate sitemap.xml + sitemap-index.xml ==========
+      const today = new Date().toISOString().split("T")[0];
+      const langs: Lang[] = ["fr", "en", "es", "it", "pt", "de"];
+
+      // Map FR canonical paths → localized paths per language (mirrors src/i18n/routes.ts)
+      const LOCALIZED_PATHS: Record<string, Partial<Record<Lang, string>>> = {
+        "/": { fr: "/", en: "/en/", es: "/es/", it: "/it/", pt: "/pt/", de: "/de/" },
+        "/nos-chambres": { fr: "/nos-chambres", en: "/en/rooms", es: "/es/nos-chambres", it: "/it/nos-chambres", pt: "/pt/nos-chambres", de: "/de/nos-chambres" },
+        "/seminaires": { fr: "/seminaires", en: "/en/seminars", es: "/es/seminaires", it: "/it/seminaires", pt: "/pt/seminaires", de: "/de/seminaires" },
+        "/petit-dejeuner": { fr: "/petit-dejeuner", en: "/en/breakfast", es: "/es/petit-dejeuner", it: "/it/petit-dejeuner", pt: "/pt/petit-dejeuner", de: "/de/petit-dejeuner" },
+        "/contact": { fr: "/contact", en: "/en/contact", es: "/es/contact", it: "/it/contact", pt: "/pt/contact", de: "/de/contact" },
+        "/localisation": { fr: "/localisation", en: "/en/location", es: "/es/localisation", it: "/it/localisation", pt: "/pt/localisation", de: "/de/localisation" },
+        "/wifi": { fr: "/wifi", en: "/en/wifi", es: "/es/wifi", it: "/it/wifi", pt: "/pt/wifi", de: "/de/wifi" },
+        "/decouvrir-paris": { fr: "/decouvrir-paris", en: "/en/discover-paris", es: "/es/decouvrir-paris", it: "/it/decouvrir-paris", pt: "/pt/decouvrir-paris", de: "/de/decouvrir-paris" },
+        "/evenements": { fr: "/evenements", en: "/en/events", es: "/es/evenements", it: "/it/evenements", pt: "/pt/evenements", de: "/de/evenements" },
+        "/blog": { fr: "/blog", en: "/en/blog", es: "/es/blog", it: "/it/blog", pt: "/pt/blog", de: "/de/blog" },
+        "/conseils": { fr: "/conseils", en: "/en/tips", es: "/es/conseils", it: "/it/conseils", pt: "/pt/conseils", de: "/de/conseils" },
+        "/reservation-seminaire": { fr: "/reservation-seminaire", en: "/en/request-quote", es: "/es/reservation-seminaire", it: "/it/reservation-seminaire", pt: "/pt/reservation-seminaire", de: "/de/reservation-seminaire" },
+        "/planning-seminaire": { fr: "/planning-seminaire", en: "/en/seminar-planning", es: "/es/planning-seminaire", it: "/it/planning-seminaire", pt: "/pt/planning-seminaire", de: "/de/planning-seminaire" },
+        "/mentions-legales": { fr: "/mentions-legales", en: "/en/legal-notice", es: "/es/mentions-legales", it: "/it/mentions-legales", pt: "/pt/mentions-legales", de: "/de/mentions-legales" },
+      };
+
+      const PAGE_PRIORITIES: Record<string, { priority: string; changefreq: string }> = {
+        "/": { priority: "1.0", changefreq: "weekly" },
+        "/nos-chambres": { priority: "0.9", changefreq: "monthly" },
+        "/seminaires": { priority: "0.8", changefreq: "monthly" },
+        "/contact": { priority: "0.8", changefreq: "monthly" },
+        "/evenements": { priority: "0.8", changefreq: "weekly" },
+        "/blog": { priority: "0.7", changefreq: "weekly" },
+        "/conseils": { priority: "0.7", changefreq: "weekly" },
+        "/petit-dejeuner": { priority: "0.7", changefreq: "monthly" },
+        "/localisation": { priority: "0.7", changefreq: "monthly" },
+        "/decouvrir-paris": { priority: "0.7", changefreq: "monthly" },
+        "/reservation-seminaire": { priority: "0.7", changefreq: "monthly" },
+        "/planning-seminaire": { priority: "0.5", changefreq: "monthly" },
+        "/wifi": { priority: "0.4", changefreq: "monthly" },
+        "/mentions-legales": { priority: "0.3", changefreq: "yearly" },
+      };
+
+      // -------- sitemap-pages.xml (multilingual core pages with hreflang) --------
+      const pageEntries: string[] = [];
+      for (const [frPath, locales] of Object.entries(LOCALIZED_PATHS)) {
+        const cfg = PAGE_PRIORITIES[frPath] || { priority: "0.6", changefreq: "monthly" };
+        const altLinks = langs
+          .filter((l) => locales[l])
+          .map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${BASE_URL}${locales[l]}"/>`)
+          .join("\n");
+        const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${frPath}"/>`;
+        for (const l of langs) {
+          const loc = locales[l];
+          if (!loc) continue;
+          pageEntries.push(
+            `  <url>\n    <loc>${BASE_URL}${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${cfg.changefreq}</changefreq>\n    <priority>${cfg.priority}</priority>\n${altLinks}\n${xDefault}\n  </url>`
+          );
+        }
+      }
+
+      const sitemapPages = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${pageEntries.join("\n")}
+</urlset>
+`;
+      writeFileSync(join(distDir, "sitemap-pages.xml"), sitemapPages, "utf-8");
+
+      // -------- sitemap-events.xml (FR event detail pages) --------
+      const eventEntries = Object.keys(EVENT_PAGES).map(
+        (p) => `  <url>\n    <loc>${BASE_URL}/${p}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.6</priority>\n  </url>`
+      );
+      const sitemapEvents = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${eventEntries.join("\n")}
+</urlset>
+`;
+      writeFileSync(join(distDir, "sitemap-events.xml"), sitemapEvents, "utf-8");
+
+      // -------- sitemap-guides.xml (FR discover-paris sub-guides) --------
+      const guidePaths = [
+        "decouvrir-paris/quartier-chinois",
+        "decouvrir-paris/butte-aux-cailles",
+        "decouvrir-paris/bnf-francois-mitterrand",
+        "decouvrir-paris/centre-italie-2",
+        "decouvrir-paris/cuisine-italienne",
+        "decouvrir-paris/cuisine-asiatique",
+        "decouvrir-paris/cuisine-francaise",
+        "decouvrir-paris/street-food",
+      ];
+      const guideEntries = guidePaths.map(
+        (p) => `  <url>\n    <loc>${BASE_URL}/${p}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`
+      );
+      const sitemapGuides = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${guideEntries.join("\n")}
+</urlset>
+`;
+      writeFileSync(join(distDir, "sitemap-guides.xml"), sitemapGuides, "utf-8");
+
+      // -------- sitemap-index.xml (master index) --------
+      const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${BASE_URL}/sitemap-pages.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${BASE_URL}/sitemap-events.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${BASE_URL}/sitemap-guides.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+</sitemapindex>
+`;
+      writeFileSync(join(distDir, "sitemap-index.xml"), sitemapIndex, "utf-8");
+
+      // -------- sitemap.xml (legacy alias = sitemap-index for back-compat) --------
+      writeFileSync(join(distDir, "sitemap.xml"), sitemapIndex, "utf-8");
+
+      console.log(
+        `[seo-prerender] ✓ Generated sitemaps: ${pageEntries.length} page URLs, ${eventEntries.length} events, ${guideEntries.length} guides + sitemap-index`
+      );
     },
   };
 };
